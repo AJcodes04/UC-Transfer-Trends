@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from django.db.models import Sum, Avg, Count
 from django_filters import rest_framework as filters
 
-from .models import TransferData
+from .models import TransferData, CampusStats
 from .serializers import TransferDataSerializer
 
 
@@ -59,18 +59,19 @@ class DisciplineListView(APIView):
 
 
 class GeneralStatsView(APIView):
+    """Returns pre-computed campus-level stats from official UC data."""
     def get(self, request):
         stats = (
-            TransferData.objects
-            .values('year', 'university')
+            CampusStats.objects
+            .values('year', 'campus')
             .annotate(
-                total_applicants=Sum('applicants'),
-                total_admits=Sum('admits'),
-                total_enrolls=Sum('enrolls'),
-                avg_admit_rate=Avg('admit_rate'),
-                avg_yield_rate=Avg('yield_rate'),
+                applicants=Sum('applicants'),
+                admits=Sum('admits'),
+                enrolls=Sum('enrolls'),
+                admit_rate=Avg('admit_rate'),
+                yield_rate=Avg('yield_rate'),
             )
-            .order_by('year', 'university')
+            .order_by('year', 'campus')
         )
         return Response(list(stats))
 

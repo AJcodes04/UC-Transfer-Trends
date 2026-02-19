@@ -49,3 +49,44 @@ class TransferData(models.Model):
 
     def __str__(self):
         return f"{self.university} {self.year} - {self.major_name}"
+
+
+class CampusStats(models.Model):
+    """Pre-computed campus-level admission stats from official UC data."""
+    campus = models.CharField(max_length=10, db_index=True)
+    year = models.IntegerField(db_index=True)
+
+    applicants = models.IntegerField(validators=[MinValueValidator(0)])
+    admits = models.IntegerField(validators=[MinValueValidator(0)])
+    enrolls = models.IntegerField(validators=[MinValueValidator(0)])
+
+    admit_gpa_min = models.DecimalField(
+        max_digits=3, decimal_places=2, null=True, blank=True
+    )
+    admit_gpa_max = models.DecimalField(
+        max_digits=3, decimal_places=2, null=True, blank=True
+    )
+    enroll_gpa_min = models.DecimalField(
+        max_digits=3, decimal_places=2, null=True, blank=True
+    )
+    enroll_gpa_max = models.DecimalField(
+        max_digits=3, decimal_places=2, null=True, blank=True
+    )
+
+    admit_rate = models.IntegerField(
+        null=True, blank=True,
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+    )
+    yield_rate = models.IntegerField(
+        null=True, blank=True,
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+    )
+
+    class Meta:
+        ordering = ['-year', 'campus']
+        verbose_name = "Campus Stats"
+        verbose_name_plural = "Campus Stats"
+        unique_together = [['campus', 'year']]
+
+    def __str__(self):
+        return f"{self.campus} {self.year}"

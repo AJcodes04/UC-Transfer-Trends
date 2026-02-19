@@ -1,23 +1,19 @@
 import csv
-import os
 import re
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 from django.core.management.base import BaseCommand
 
-from api.models import TransferData
+from api.models import CampusStats
 
 
 class Command(BaseCommand):
-    # Import transfer data from CSV files in the data/csv.exports directory
+    # Import campus-level stats from CSV files in data/csv.exports/campusdata
 
     def add_arguments(self, parser):
-        default_dir = str(Path(__file__).resolve().parents[4] / 'data' / 'csv.exports' / 'majordata')
-        parser.add_argument(
-            '--data-dir',
-            default=default_dir,
-        )
+        default_dir = str(Path(__file__).resolve().parents[4] / 'data' / 'csv.exports' / 'campusdata')
+        parser.add_argument('--data-dir', default=default_dir)
 
     def handle(self, *args, **options):
         data_dir = Path(options['data_dir'])
@@ -35,52 +31,50 @@ class Command(BaseCommand):
         total_created = 0
 
         for csv_file in csv_files:
-            campus, year = self.parse_filename(csv_file.name)
-            if campus is None:
-                self.stderr.write(self.style.WARNING(f'Skipping {csv_file.name}: could not parse filename'))
+            year = self.parse_year(csv_file.name)
+            if year is None:
+                self.stderr.write(self.style.WARNING(f'Skipping {csv_file.name}: could not parse year'))
                 continue
 
-            rows = self.parse_csv(csv_file, campus, year)
-            created = TransferData.objects.bulk_create(rows, ignore_conflicts=True)
+            rows = self.parse_csv(csv_file, year)
+            created = CampusStats.objects.bulk_create(rows, ignore_conflicts=True)
             count = len(created)
             total_created += count
             self.stdout.write(f'  {csv_file.name}: {count} rows imported')
 
         self.stdout.write(self.style.SUCCESS(f'Done. {total_created} total rows imported.'))
 
-    def parse_filename(self, filename):
-        match = re.match(r'^([A-Z]+)-(\d{4})\.csv$', filename)
+    def parse_year(self, filename):
+        # Expected format: campus-2024.csv
+        match = re.match(r'^campus-(\d{4})\.csv$', filename)
         if not match:
-            return None, None
-        return match.group(1), int(match.group(2))
+            return None
+        return int(match.group(1))
 
-    def parse_csv(self, filepath, campus, year):
+    def parse_csv(self, filepath, year):
         rows = []
         with open(filepath, newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            # Strip whitespace from header names
             reader.fieldnames = [name.strip() for name in reader.fieldnames]
 
             for row in reader:
-                # Strip values and skip empty rows
                 row = {k: v.strip() if v else '' for k, v in row.items() if k}
 
-                major_name = row.get('Major name', '')
-                if not major_name:
+                campus = row.get('Campus', '')
+                if not campus:
                     continue
 
                 admit_gpa_min, admit_gpa_max = self.parse_gpa_range(row.get('Admit GPA range', ''))
-                enroll_gpa_min, enroll_gpa_max = self.parse_gpa_range(row.get('Enroll GPA range', ''))
+                enroll_gpa_min, enroll_gpa_max = self.parse_gpa_range(
+                    row.get('Enroll GPA range') or row.get('Enrollee GPA range', '')
+                )
 
-                rows.append(TransferData(
-                    university=campus,
+                rows.append(CampusStats(
+                    campus=campus,
                     year=year,
-                    broad_discipline=row.get('Broad discipline', ''),
-                    college_school=row.get('College/School', ''),
-                    major_name=major_name,
                     applicants=self.parse_int(row.get('Applicants', '0')),
                     admits=self.parse_int(row.get('Admits', '0')),
-                    enrolls=self.parse_int(row.get('Enrolls', '0')),
+                    enrolls=self.parse_int(row.get('Enrolls') or row.get('Enrollees', '0')),
                     admit_gpa_min=admit_gpa_min,
                     admit_gpa_max=admit_gpa_max,
                     enroll_gpa_min=enroll_gpa_min,
@@ -91,7 +85,6 @@ class Command(BaseCommand):
         return rows
 
     def parse_gpa_range(self, value):
-        #Parse "3.64 - 3.93" -> (Decimal('3.64'), Decimal('3.93'))
         if not value or value.lower() == 'masked':
             return None, None
         parts = value.split('-')
@@ -103,7 +96,6 @@ class Command(BaseCommand):
             return None, None
 
     def parse_rate(self, value):
-        # cleaning % sign then converting to int
         if not value:
             return None
         value = value.replace('%', '').strip()
