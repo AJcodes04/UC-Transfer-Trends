@@ -41,6 +41,61 @@ class UniversityListView(APIView):
 # Regex to detect sub-major delimiters (e.g., " - ", " (", "/", " with ", " :")
 _SUB_MAJOR_RE = re.compile(r'^(.+?)(\s*[-/(:]|\s+with\s|\s+w/)', re.IGNORECASE)
 
+# Explicit absorption rules: parent major → list of child majors that should
+# appear as specializations under the parent on the landing page.  These
+# override the regex-based grouping.  If a child major doesn't exist in the
+# database it is silently skipped.
+MAJOR_ABSORPTIONS = {
+    'Chemistry': [
+        'Chemical Biology',
+        'Biochemistry',
+        'Pharmaceutical Chemistry',
+        'Pharmacological Chemistry',
+        'Applied Chemistry',
+        'Chemical Physics',
+        'Molecular Synthesis',
+    ],
+    'Engineering': [
+        'Chemical Engineering and Materials Science and Engineering',
+        'Chemical Engineering and Nuclear Engineering',
+        'Mechanical Engineering and Nuclear Engineering',
+        'Materials Science and Engineering and Mechanical Engineering',
+        'Electrical Engineering & Computer Sciences & Materials Science and Engineering',
+        'Electrical Engineering and Computer Sciences and Nuclear Engineering',
+        'Energy Engineering',
+        'Engineering Mathematics',
+    ],
+    'Biology': [
+        'Molecular & Cell Biology',
+        'Cell Biology',
+        'Microbial Biology',
+        'Molecular Environmental Biology',
+        'Molecular Toxicology',
+        'Integrative Biology',
+        'Evolution, Ecology & Biodiversity',
+    ],
+    'Political Science': [
+        'Political Economy',
+        'Public Policy',
+        'History of Public Policy',
+        'History of Public Policy and Law',
+    ],
+    'Psychology': [
+        'Biopsychology',
+        'Psychological Science',
+        'Psychological and Brain Science',
+        'Psychology and Law & Society',
+        'Psychology & Social Behavior',
+    ],
+    'Asian Studies': [
+        'Asian Studies Area I',
+        'Asian Studies Area II',
+        'East Asian Studies',
+        'East Asian Cultures',
+        'East Asian Religion, Thought and Culture',
+    ],
+}
+
 
 class MajorListView(APIView):
     def get(self, request):
@@ -95,13 +150,45 @@ class GroupedMajorListView(APIView):
             if name not in groups:
                 groups[name] = []
 
+        # Apply explicit absorption rules — these override the regex grouping.
+        # For each parent→children mapping, move children under the parent
+        # and remove them as standalone top-level groups.
+        for parent, children in MAJOR_ABSORPTIONS.items():
+            # Ensure the parent exists as a group (it must exist in the DB)
+            if parent not in all_names:
+                continue
+            if parent not in groups:
+                groups[parent] = []
+            for child in children:
+                if child not in all_names:
+                    continue  # skip majors that don't exist in the DB
+                # Remove child from wherever it currently lives
+                if child in groups:
+                    # Child was a top-level group — move its own sub-majors
+                    # under the parent too, then delete the child group
+                    groups[parent].extend(groups.pop(child))
+                else:
+                    # Child might be a sub-major under a different parent
+                    for other_base, other_related in groups.items():
+                        if child in other_related:
+                            other_related.remove(child)
+                            break
+                # Add the child under the parent (avoid duplicates)
+                if child not in groups[parent]:
+                    groups[parent].append(child)
+                assigned.add(child)
+
         # Build response sorted by total applicants (most popular first)
         result = []
         for base, related in groups.items():
             result.append({
                 'name': base,
                 'total_applicants': major_apps.get(base, 0),
-                'related': sorted(related),
+                'related': sorted(
+                    [{'name': r, 'campuses': sorted(major_campuses.get(r, []))}
+                     for r in related],
+                    key=lambda x: x['name'],
+                ),
                 # Sorted list of campus codes that offer this base major
                 'campuses': sorted(major_campuses.get(base, [])),
             })

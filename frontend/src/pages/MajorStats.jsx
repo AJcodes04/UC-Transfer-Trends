@@ -38,9 +38,12 @@ export default function MajorStats() {
     const group = groupedMajors.find((g) => g.name === decodedMajor)
     if (group) return group.related
     // If the selected major is itself a sub-major, find its parent
-    const parent = groupedMajors.find((g) => g.related.includes(decodedMajor))
+    const parent = groupedMajors.find((g) => g.related.some((r) => r.name === decodedMajor))
     if (parent) {
-      return [parent.name, ...parent.related.filter((r) => r !== decodedMajor)]
+      return [
+        { name: parent.name, campuses: parent.campuses },
+        ...parent.related.filter((r) => r.name !== decodedMajor),
+      ]
     }
     return []
   }, [groupedMajors, decodedMajor])
@@ -193,6 +196,46 @@ export default function MajorStats() {
         &larr; Back to all majors
       </Text>
 
+      {relatedMajors.length > 0 && (
+        <>
+          <Title order={4} mb="sm">Related Specializations</Title>
+          <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} mb="lg">
+            {relatedMajors.map((rm) => (
+              <UnstyledButton key={rm.name} onClick={() => navigate(`/major/${encodeURIComponent(rm.name)}`)}>
+                <Paper
+                  withBorder
+                  p="sm"
+                  radius="md"
+                  style={{ cursor: 'pointer', transition: 'box-shadow 150ms' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)' }}
+                  onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '' }}
+                >
+                  <Text size="sm">{rm.name}</Text>
+                  {rm.campuses && rm.campuses.length > 0 && (
+                    <Group gap={4} mt={4}>
+                      {rm.campuses.map((c) => (
+                        <Badge
+                          key={c}
+                          size="xs"
+                          variant="light"
+                          style={{
+                            color: UC_COLORS[c] || '#666',
+                            borderColor: UC_COLORS[c] || '#666',
+                            backgroundColor: `${UC_COLORS[c] || '#666'}15`,
+                          }}
+                        >
+                          {c}
+                        </Badge>
+                      ))}
+                    </Group>
+                  )}
+                </Paper>
+              </UnstyledButton>
+            ))}
+          </SimpleGrid>
+        </>
+      )}
+
       {loading && <Loader m="xl" />}
       {error && <Alert color="red" title="Error">{error}</Alert>}
 
@@ -254,27 +297,6 @@ export default function MajorStats() {
         </>
       )}
 
-      {relatedMajors.length > 0 && (
-        <>
-          <Title order={4} mt="xl" mb="sm">Related Specializations</Title>
-          <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }}>
-            {relatedMajors.map((rm) => (
-              <UnstyledButton key={rm} onClick={() => navigate(`/major/${encodeURIComponent(rm)}`)}>
-                <Paper
-                  withBorder
-                  p="sm"
-                  radius="md"
-                  style={{ cursor: 'pointer', transition: 'box-shadow 150ms' }}
-                  onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)' }}
-                  onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '' }}
-                >
-                  <Text size="sm">{rm}</Text>
-                </Paper>
-              </UnstyledButton>
-            ))}
-          </SimpleGrid>
-        </>
-      )}
     </>
   )
 }
