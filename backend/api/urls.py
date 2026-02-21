@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('universities/', views.UniversityListView.as_view(), name='university-list'),
     path('majors/', views.MajorListView.as_view(), name='major-list'),
+    path('majors/grouped/', views.GroupedMajorListView.as_view(), name='major-list-grouped'),
     path('disciplines/', views.DisciplineListView.as_view(), name='discipline-list'),
     path('transfer-data/', views.TransferDataListView.as_view(), name='transfer-data-list'),
     path('stats/general/', views.GeneralStatsView.as_view(), name='general-stats'),

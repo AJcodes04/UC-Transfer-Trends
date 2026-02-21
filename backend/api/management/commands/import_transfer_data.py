@@ -9,6 +9,48 @@ from django.core.management.base import BaseCommand
 from api.models import TransferData
 
 
+# Words that stay lowercase in title case (unless they're the first word)
+SMALL_WORDS = {'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor',
+               'of', 'on', 'or', 'so', 'the', 'to', 'up', 'yet', 'with'}
+
+# Words that should always be uppercase
+UPPERCASE_WORDS = {'bs', 'ba', 'ii', 'iii', 'iv'}
+
+
+def _capitalize_word(word):
+    """Capitalize a single word, handling sub-delimiters like / - ("""
+    if not word:
+        return word
+    if word.lower() in UPPERCASE_WORDS:
+        return word.upper()
+    # Split on delimiters but keep them: "Pre-economics" -> ["Pre", "-", "economics"]
+    parts = re.split(r'([/\-(])', word)
+    result = []
+    for part in parts:
+        if not part or part in '/-(':
+            result.append(part)
+        else:
+            result.append(part[0].upper() + part[1:])
+    return ''.join(result)
+
+
+def title_case_major(name):
+    """Title-case a major name while keeping small words lowercase
+    and preserving special patterns like 'Pre-', 'BS', '&'."""
+    if not name:
+        return name
+    words = name.split()
+    result = []
+    for i, word in enumerate(words):
+        if i == 0:
+            result.append(_capitalize_word(word))
+        elif word.lower() in SMALL_WORDS:
+            result.append(word.lower())
+        else:
+            result.append(_capitalize_word(word))
+    return ' '.join(result)
+
+
 class Command(BaseCommand):
     # Import transfer data from CSV files in the data/csv.exports directory
 
@@ -65,7 +107,7 @@ class Command(BaseCommand):
                 # Strip values and skip empty rows
                 row = {k: v.strip() if v else '' for k, v in row.items() if k}
 
-                major_name = row.get('Major name', '')
+                major_name = title_case_major(row.get('Major name', ''))
                 if not major_name:
                     continue
 
