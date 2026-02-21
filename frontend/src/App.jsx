@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom'
-import { AppShell, NavLink as MantineNavLink, Title, Group } from '@mantine/core'
+import { AppShell, NavLink as MantineNavLink, Title, Group, Text } from '@mantine/core'
 import GeneralStats from './pages/GeneralStats.jsx'
 import SchoolStats from './pages/SchoolStats.jsx'
 import MajorStats from './pages/MajorStats.jsx'
@@ -16,10 +16,11 @@ export default function App() {
   return (
     <AppShell
       navbar={{ width: 220, breakpoint: 'sm' }}
+      footer={{ height: 50 }}
       padding="md"
     >
-      <AppShell.Navbar p="md">
-        <Title order={4} mb="md">UC Transfer Trends</Title>
+      <AppShell.Navbar p="md" style={{ backgroundColor: '#003262' }}>
+        <Title order={4} mb="md" c="white">UC Transfer Trends</Title>
         {NAV_ITEMS.map((item) => (
           <MantineNavLink
             key={item.path}
@@ -31,6 +32,11 @@ export default function App() {
                 ? location.pathname === '/'
                 : location.pathname.startsWith(item.path)
             }
+            styles={{
+              root: { borderRadius: 6 },
+              label: { color: 'white' },
+            }}
+            variant="filled"
           />
         ))}
       </AppShell.Navbar>
@@ -44,6 +50,12 @@ export default function App() {
           <Route path="/major/:major" element={<MajorStats />} />
         </Routes>
       </AppShell.Main>
+
+      <AppShell.Footer p="sm" style={{ backgroundColor: '#003262' }}>
+        <Text ta="center" c="white" size="sm">
+          Data sourced from the University of California
+        </Text>
+      </AppShell.Footer>
     </AppShell>
   )
 }

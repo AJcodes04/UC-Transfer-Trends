@@ -1,43 +1,66 @@
-import { useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Title, SimpleGrid, Table, Loader, Alert, Text } from '@mantine/core'
-import { useSchoolStats, useUniversities } from '../hooks/useApi'
+import { Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton } from '@mantine/core'
+import { useSchoolStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
-import FilterBar from '../components/FilterBar'
+
+const CAMPUSES = [
+  { code: 'UCB',  name: 'UC Berkeley',       logo: '/berkeleylogo.png' },
+  { code: 'UCD',  name: 'UC Davis',          logo: '/ucdlogo.png' },
+  { code: 'UCI',  name: 'UC Irvine',         logo: '/ucilogo.png' },
+  { code: 'UCLA', name: 'UCLA',              logo: '/uclalogo.png' },
+  { code: 'UCM',  name: 'UC Merced',         logo: '/ucmlogo.png' },
+  { code: 'UCR',  name: 'UC Riverside',      logo: '/ucrlogo.png' },
+  { code: 'UCSB', name: 'UC Santa Barbara',  logo: '/ucsblogo.png' },
+  { code: 'UCSC', name: 'UC Santa Cruz',     logo: '/ucsclogo.png' },
+  { code: 'UCSD', name: 'UC San Diego',      logo: '/ucsdlogo.png' },
+]
 
 export default function SchoolStats() {
   const { school } = useParams()
   const navigate = useNavigate()
-  const { data: universities } = useUniversities()
   const { data: stats, loading, error } = useSchoolStats(school)
 
-  // Get unique colleges within this school for the chart
-  const colleges = useMemo(() => {
+  const [selectedColleges, setSelectedColleges] = useState([])
+
+  // Reset college filter when school changes
+  const prevSchoolRef = useMemo(() => ({ current: school }), [])
+  if (prevSchoolRef.current !== school) {
+    prevSchoolRef.current = school
+    if (selectedColleges.length) setSelectedColleges([])
+  }
+
+  // Get unique colleges within this school
+  const allColleges = useMemo(() => {
     if (!stats) return []
     return [...new Set(stats.map((s) => s.college_school))].sort()
   }, [stats])
 
-  // Pivot for chart: one row per year, one column per college
+  const activeColleges = selectedColleges.length > 0 ? selectedColleges : allColleges
+
+  // Pivot for chart: one row per year, one column per college (filtered)
   const chartData = useMemo(() => {
     if (!stats) return []
     const byYear = {}
     stats.forEach((row) => {
+      if (!activeColleges.includes(row.college_school)) return
       if (!byYear[row.year]) byYear[row.year] = { year: row.year }
       byYear[row.year][row.college_school] = row.avg_admit_rate != null
         ? Math.round(row.avg_admit_rate * 10) / 10
         : null
     })
     return Object.values(byYear).sort((a, b) => a.year - b.year)
-  }, [stats])
+  }, [stats, activeColleges])
 
-  const chartSeries = colleges.map((c) => ({ key: c, label: c }))
+  const chartSeries = activeColleges.map((c) => ({ key: c, label: c }))
 
-  // Per-college aggregate stats
+  // Per-college aggregate stats (filtered)
   const collegeTotals = useMemo(() => {
     if (!stats) return []
     const totals = {}
     stats.forEach((row) => {
+      if (!activeColleges.includes(row.college_school)) return
       if (!totals[row.college_school]) {
         totals[row.college_school] = {
           applicants: 0, admits: 0, enrolls: 0,
@@ -62,7 +85,7 @@ export default function SchoolStats() {
         ? `${(t.gpaMinSum / t.gpaCount).toFixed(2)} - ${(t.gpaMaxSum / t.gpaCount).toFixed(2)}`
         : 'N/A',
     })).sort((a, b) => a.college.localeCompare(b.college))
-  }, [stats])
+  }, [stats, activeColleges])
 
   // Most / least competitive
   const validColleges = collegeTotals.filter((c) => c.avgRate !== 'N/A')
@@ -73,26 +96,55 @@ export default function SchoolStats() {
     ? validColleges.reduce((a, b) => (parseFloat(a.avgRate) > parseFloat(b.avgRate) ? a : b))
     : null
 
-  const ucOptions = (universities || []).map((u) => ({ value: u, label: u }))
+  // Landing view — no school selected yet
+  if (!school) {
+    return (
+      <>
+        <Title order={2} mb="md">By School</Title>
+        <Text c="dimmed" mb="lg">Select a campus to view college-level statistics.</Text>
+        <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }}>
+          {CAMPUSES.map((campus) => (
+            <UnstyledButton key={campus.code} onClick={() => navigate(`/school/${campus.code}`)}>
+              <Paper
+                withBorder
+                p="lg"
+                radius="md"
+                style={{ textAlign: 'center', cursor: 'pointer', transition: 'box-shadow 150ms' }}
+                onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)' }}
+                onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '' }}
+              >
+                <Image
+                  src={campus.logo}
+                  alt={campus.name}
+                  h={80}
+                  w="auto"
+                  fit="contain"
+                  mx="auto"
+                  mb="sm"
+                />
+                <Text fw={600} size="sm">{campus.name}</Text>
+              </Paper>
+            </UnstyledButton>
+          ))}
+        </SimpleGrid>
+      </>
+    )
+  }
 
+  // Detail view — school selected
   return (
     <>
-      <Title order={2} mb="md">School Stats{school ? `: ${school}` : ''}</Title>
+      <Title order={2} mb="md">School Stats: {school}</Title>
+      <Text
+        c="dimmed"
+        size="sm"
+        mb="md"
+        style={{ cursor: 'pointer' }}
+        onClick={() => navigate('/school')}
+      >
+        &larr; Back to all campuses
+      </Text>
 
-      <FilterBar
-        filters={[
-          {
-            type: 'select',
-            label: 'Select UC',
-            value: school || null,
-            onChange: (val) => navigate(val ? `/school/${val}` : '/school'),
-            data: ucOptions,
-            placeholder: 'Pick a UC',
-          },
-        ]}
-      />
-
-      {!school && <Text c="dimmed">Select a UC above to view college-level statistics.</Text>}
       {loading && <Loader m="xl" />}
       {error && <Alert color="red" title="Error">{error}</Alert>}
 
@@ -106,7 +158,7 @@ export default function SchoolStats() {
           />
 
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
-            <StatsCard title="Colleges / Schools" value={colleges.length} />
+            <StatsCard title="Colleges / Schools" value={activeColleges.length} />
             {mostCompetitive && (
               <StatsCard
                 title="Most Competitive"

@@ -1,67 +1,56 @@
-import { useState, useMemo } from 'react'
-import { Title, SimpleGrid, Table, Loader, Alert, Text } from '@mantine/core'
-import { useGeneralStats, useUniversities } from '../hooks/useApi'
+import { useMemo } from 'react'
+import { Title, SimpleGrid, Table, Loader, Alert } from '@mantine/core'
+import { useGeneralStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
-import FilterBar from '../components/FilterBar'
+import { UC_COLORS } from '../utils/ucColors'
 
 export default function GeneralStats() {
   const { data: stats, loading, error } = useGeneralStats()
-  const { data: universities } = useUniversities()
-  const [selectedUCs, setSelectedUCs] = useState([])
 
   // Get the list of unique UCs from the stats data
   const allUCs = useMemo(() => {
     if (!stats) return []
-    return [...new Set(stats.map((s) => s.university))].sort()
+    return [...new Set(stats.map((s) => s.campus))].sort()
   }, [stats])
-
-  // Which UCs to display — if none selected, show all
-  const activeUCs = selectedUCs.length > 0 ? selectedUCs : allUCs
 
   // Pivot data for the chart: one row per year, one column per UC
   const chartData = useMemo(() => {
     if (!stats) return []
-
     const byYear = {}
     stats.forEach((row) => {
-      if (!activeUCs.includes(row.university)) return
       if (!byYear[row.year]) byYear[row.year] = { year: row.year }
-      byYear[row.year][row.university] = row.avg_admit_rate != null
-        ? Math.round(row.avg_admit_rate * 10) / 10
-        : null
+      byYear[row.year][row.campus] = row.admit_rate
     })
-
     return Object.values(byYear).sort((a, b) => a.year - b.year)
-  }, [stats, activeUCs])
+  }, [stats])
 
-  // Series definitions for the chart (one line per UC)
-  const chartSeries = activeUCs.map((uc) => ({ key: uc, label: uc }))
+  const chartSeries = allUCs.map((uc) => ({ key: uc, label: uc }))
 
-  // Aggregate per-school totals for the stat cards
+  // Aggregate per-school totals across all years
   const schoolTotals = useMemo(() => {
     if (!stats) return []
     const totals = {}
     stats.forEach((row) => {
-      if (!totals[row.university]) {
-        totals[row.university] = { applicants: 0, admits: 0, enrolls: 0, count: 0, rateSum: 0 }
+      if (!totals[row.campus]) {
+        totals[row.campus] = { applicants: 0, admits: 0, enrolls: 0, count: 0, rateSum: 0 }
       }
-      const t = totals[row.university]
-      t.applicants += row.total_applicants || 0
-      t.admits += row.total_admits || 0
-      t.enrolls += row.total_enrolls || 0
-      if (row.avg_admit_rate != null) {
-        t.rateSum += row.avg_admit_rate
+      const t = totals[row.campus]
+      t.applicants += row.applicants || 0
+      t.admits += row.admits || 0
+      t.enrolls += row.enrolls || 0
+      if (row.admit_rate != null) {
+        t.rateSum += row.admit_rate
         t.count += 1
       }
     })
-    return Object.entries(totals).map(([uni, t]) => ({
-      university: uni,
+    return Object.entries(totals).map(([campus, t]) => ({
+      campus,
       applicants: t.applicants,
       admits: t.admits,
       enrolls: t.enrolls,
       avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
-    })).sort((a, b) => a.university.localeCompare(b.university))
+    })).sort((a, b) => a.campus.localeCompare(b.campus))
   }, [stats])
 
   // Overall average admit rate
@@ -80,24 +69,12 @@ export default function GeneralStats() {
     <>
       <Title order={2} mb="md">General UC Admission Rates</Title>
 
-      <FilterBar
-        filters={[
-          {
-            type: 'multiselect',
-            label: 'Filter UCs',
-            value: selectedUCs,
-            onChange: setSelectedUCs,
-            data: allUCs,
-            placeholder: 'All UCs shown',
-          },
-        ]}
-      />
-
       <TrendChart
         data={chartData}
         xKey="year"
         series={chartSeries}
-        yLabel="Avg Admit Rate (%)"
+        colorMap={UC_COLORS}
+        yLabel="Admit Rate (%)"
       />
 
       <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
@@ -129,8 +106,8 @@ export default function GeneralStats() {
         </Table.Thead>
         <Table.Tbody>
           {schoolTotals.map((row) => (
-            <Table.Tr key={row.university}>
-              <Table.Td>{row.university}</Table.Td>
+            <Table.Tr key={row.campus}>
+              <Table.Td>{row.campus}</Table.Td>
               <Table.Td>{row.applicants.toLocaleString()}</Table.Td>
               <Table.Td>{row.admits.toLocaleString()}</Table.Td>
               <Table.Td>{row.enrolls.toLocaleString()}</Table.Td>

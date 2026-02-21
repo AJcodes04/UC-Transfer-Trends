@@ -23,7 +23,7 @@ function useFetch(url) {
         if (!cancelled) setData(res.data)
       })
       .catch((err) => {
-        if (!cancelled) setError(err.message || 'Something went wrong')
+        if (!cancelled) setError(err.message || 'issue brah')
       })
       .finally(() => {
         if (!cancelled) setLoading(false)
@@ -37,7 +37,6 @@ function useFetch(url) {
   return { data, loading, error }
 }
 
-// Reference data hooks
 export function useUniversities() {
   return useFetch('/api/universities/')
 }
@@ -46,22 +45,23 @@ export function useMajors() {
   return useFetch('/api/majors/')
 }
 
+export function useGroupedMajors() {
+  return useFetch('/api/majors/grouped/')
+}
+
 export function useDisciplines() {
   return useFetch('/api/disciplines/')
 }
 
-// Stats hooks
 export function useGeneralStats() {
   return useFetch('/api/stats/general/')
 }
 
 export function useSchoolStats(school) {
-  // Only fetch when a school is selected
   return useFetch(school ? `/api/stats/by-school/${encodeURIComponent(school)}/` : null)
 }
 
 export function useMajorStats(major) {
-  // Only fetch when a major is selected
   return useFetch(major ? `/api/stats/by-major/${encodeURIComponent(major)}/` : null)
 }
 
