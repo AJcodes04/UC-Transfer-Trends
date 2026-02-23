@@ -34,7 +34,13 @@ admit rates, yield rates, and GPA ranges.
 **College/School Acceptance Rates Per UC Campus**
 <img width="1512" height="827" alt="Screenshot 2026-02-23 at 2 22 55 PM" src="https://github.com/user-attachments/assets/ed4cc1e4-0caa-4830-b110-52fdded09f56" />
 
+## Tech Stack
 
+| Layer | Technology |
+|-------|------------|
+| Frontend | React, Recharts, Mantine UI |
+| Backend | Django, Django REST Framework |
+| Database | PostgreSQL |
 
 ## Data Source
 
