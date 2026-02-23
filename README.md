@@ -1,8 +1,26 @@
-UC Transfer Trends is a fullstack application to visualize and analyze 12 years of transfer data from the 9 campuses in the University of California
+# UC Transfer Trends
 
-Tech Stack: Django, Postgres, React, Recharts, MantineUI
+A full-stack web app for exploring University of California transfer admission 
+data across all 9 campuses, 100+ majors, and 13 years (2012–2024).
 
-**Users can visualzie the following data: **
+## Overview
+
+UC Transfer Trends helps prospective transfer students and researchers explore 
+how competitive UC admissions are by campus, major, and year. Data is sourced 
+directly from official UC admissions reports and includes applicant counts, 
+admit rates, yield rates, and GPA ranges.
+
+## Features
+
+| View | Description |
+|------|-------------|
+| **General Stats** | Admission trends across all 9 campuses over time |
+| **By School** | Breakdown by college/school within a campus (e.g., College of Engineering at UC Berkeley) |
+| **By Major** | Compare how competitive a major is across different UCs |
+| **By Campus** | Explore all majors and their admit rates at a single campus |
+
+
+## Images 
 
 **General Transfer Acceptance Rates**
 <img width="1512" height="828" alt="Screenshot 2026-02-23 at 2 18 11 PM" src="https://github.com/user-attachments/assets/bc1fbd86-9f5a-4b98-8d95-e9afdf6eea4c" />
@@ -18,5 +36,7 @@ Tech Stack: Django, Postgres, React, Recharts, MantineUI
 
 
 
+## Data Source
 
+Data is sourced from the [Transfers by major | UC Admisisons](https://www.universityofcalifornia.edu/about-us/information-center/transfers-major).
 
