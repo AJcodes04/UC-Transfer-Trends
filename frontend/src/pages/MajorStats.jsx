@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Table, Loader, Alert, Text,
-  Paper, UnstyledButton, Group, Button, Stack, Badge,
+  Paper, UnstyledButton, Group, Button, Stack, Badge, Switch,
 } from '@mantine/core'
 import { useMajorStats, useGroupedMajors } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
@@ -10,17 +10,23 @@ import TrendChart from '../components/TrendChart'
 import { UC_COLORS } from '../utils/ucColors'
 
 export default function MajorStats() {
-  const { major } = useParams()
+  const { '*': splatParam } = useParams()
   const navigate = useNavigate()
   const { data: groupedMajors, loading: majorsLoading } = useGroupedMajors()
-  const decodedMajor = major ? decodeURIComponent(major) : null
+  // Splat param captures everything after /major/, including slashes
+  const decodedMajor = splatParam ? decodeURIComponent(splatParam) : null
   const { data: stats, loading, error } = useMajorStats(decodedMajor)
+  const [hideDiscontinued, setHideDiscontinued] = useState(true)
 
-  // Group base majors alphabetically by first letter
+  const DISCONTINUED_BEFORE = 2022
+
+  // Group base majors alphabetically by first letter, filtering out
+  // discontinued single-campus majors when the toggle is on.
   const groupedByLetter = useMemo(() => {
     if (!groupedMajors) return {}
     const groups = {}
     groupedMajors.forEach((m) => {
+      if (hideDiscontinued && m.latest_year < DISCONTINUED_BEFORE && m.campuses.length <= 1) return
       const letter = m.name[0].toUpperCase()
       if (!groups[letter]) groups[letter] = []
       groups[letter].push(m)
@@ -28,25 +34,26 @@ export default function MajorStats() {
     // Sort each letter group alphabetically
     Object.values(groups).forEach((arr) => arr.sort((a, b) => a.name.localeCompare(b.name)))
     return groups
-  }, [groupedMajors])
+  }, [groupedMajors, hideDiscontinued])
 
   const letters = Object.keys(groupedByLetter).sort()
 
   // Find related majors for the currently selected major
   const relatedMajors = useMemo(() => {
     if (!groupedMajors || !decodedMajor) return []
+    const isJunk = (r) => hideDiscontinued && r.latest_year < DISCONTINUED_BEFORE && (r.campuses?.length ?? 0) <= 1
     const group = groupedMajors.find((g) => g.name === decodedMajor)
-    if (group) return group.related
+    if (group) return group.related.filter((r) => !isJunk(r))
     // If the selected major is itself a sub-major, find its parent
     const parent = groupedMajors.find((g) => g.related.some((r) => r.name === decodedMajor))
     if (parent) {
       return [
-        { name: parent.name, campuses: parent.campuses },
-        ...parent.related.filter((r) => r.name !== decodedMajor),
+        { name: parent.name, campuses: parent.campuses, latest_year: parent.latest_year },
+        ...parent.related.filter((r) => r.name !== decodedMajor && !isJunk(r)),
       ]
     }
     return []
-  }, [groupedMajors, decodedMajor])
+  }, [groupedMajors, decodedMajor, hideDiscontinued])
 
   // --- Detail view state ---
   const [selectedUCs, setSelectedUCs] = useState([])
@@ -116,7 +123,15 @@ export default function MajorStats() {
   if (!decodedMajor) {
     return (
       <>
-        <Title order={2} mb="md">By Major</Title>
+        <Group justify="space-between" mb="md">
+          <Title order={2}>By Major</Title>
+          <Switch
+            label="Hide discontinued majors"
+            checked={hideDiscontinued}
+            onChange={(e) => setHideDiscontinued(e.currentTarget.checked)}
+            size="sm"
+          />
+        </Group>
 
         <Group gap={6} mb="lg">
           {letters.map((letter) => (
@@ -139,7 +154,11 @@ export default function MajorStats() {
             <div key={letter} id={`letter-${letter}`}>
               <Title order={4} mb="xs" c="blue">{letter}</Title>
               <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }}>
-                {groupedByLetter[letter].map((m) => (
+                {groupedByLetter[letter].map((m) => {
+                  const visibleRelated = hideDiscontinued
+                    ? m.related.filter((r) => !(r.latest_year < DISCONTINUED_BEFORE && r.campuses.length <= 1))
+                    : m.related
+                  return (
                   <UnstyledButton key={m.name} onClick={() => navigate(`/major/${encodeURIComponent(m.name)}`)}>
                     <Paper
                       withBorder
@@ -150,8 +169,8 @@ export default function MajorStats() {
                       onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '' }}
                     >
                       <Text size="sm" fw={500}>{m.name}</Text>
-                      {m.related.length > 0 && (
-                        <Text size="xs" c="dimmed" mb={4}>+{m.related.length} specialization{m.related.length > 1 ? 's' : ''}</Text>
+                      {visibleRelated.length > 0 && (
+                        <Text size="xs" c="dimmed" mb={4}>+{visibleRelated.length} specialization{visibleRelated.length > 1 ? 's' : ''}</Text>
                       )}
                       {m.campuses && m.campuses.length > 0 && (
                         <Group gap={4} mt={4}>
@@ -173,7 +192,8 @@ export default function MajorStats() {
                       )}
                     </Paper>
                   </UnstyledButton>
-                ))}
+                  )
+                })}
               </SimpleGrid>
             </div>
           ))}

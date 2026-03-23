@@ -65,6 +65,10 @@ export function useMajorStats(major) {
   return useFetch(major ? `/api/stats/by-major/${encodeURIComponent(major)}/` : null)
 }
 
+export function useCampusMajorStats(campus) {
+  return useFetch(campus ? `/api/stats/campus-majors/${encodeURIComponent(campus)}/` : null)
+}
+
 export function useTransferData(filters) {
   const params = new URLSearchParams()
   if (filters?.university) params.set('university', filters.university)

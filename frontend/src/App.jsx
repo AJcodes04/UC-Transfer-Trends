@@ -3,11 +3,13 @@ import { AppShell, NavLink as MantineNavLink, Title, Group, Text } from '@mantin
 import GeneralStats from './pages/GeneralStats.jsx'
 import SchoolStats from './pages/SchoolStats.jsx'
 import MajorStats from './pages/MajorStats.jsx'
+import CampusMajors from './pages/CampusMajors.jsx'
 
 const NAV_ITEMS = [
   { label: 'General Stats', path: '/' },
   { label: 'By School', path: '/school' },
   { label: 'By Major', path: '/major' },
+  { label: 'By Campus', path: '/campus' },
 ]
 
 export default function App() {
@@ -47,7 +49,9 @@ export default function App() {
           <Route path="/school" element={<SchoolStats />} />
           <Route path="/school/:school" element={<SchoolStats />} />
           <Route path="/major" element={<MajorStats />} />
-          <Route path="/major/:major" element={<MajorStats />} />
+          <Route path="/major/*" element={<MajorStats />} />
+          <Route path="/campus" element={<CampusMajors />} />
+          <Route path="/campus/:campus" element={<CampusMajors />} />
         </Routes>
       </AppShell.Main>
 
