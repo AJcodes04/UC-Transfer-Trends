@@ -1,4 +1,6 @@
+import json
 import re
+from pathlib import Path
 
 from rest_framework import generics
 from rest_framework.response import Response
@@ -8,6 +10,9 @@ from django_filters import rest_framework as filters
 
 from .models import TransferData, CampusStats
 from .serializers import TransferDataSerializer
+
+# Path to scraped articulation JSON files (produced by the scraper module)
+ARTICULATION_DIR = Path(__file__).resolve().parent.parent.parent / 'data' / 'articulation'
 
 
 class TransferDataFilter(filters.FilterSet):
@@ -37,20 +42,11 @@ class UniversityListView(APIView):
         )
         return Response(list(universities))
 
-
-# Regex to detect sub-major delimiters (e.g., " - ", " (", "/", " with ", " :")
 _SUB_MAJOR_RE = re.compile(r'^(.+?)(\s*[-/(:]|\s+with\s|\s+w/)', re.IGNORECASE)
-
-# Explicit absorption rules: parent major → list of child majors that should
-# appear as specializations under the parent on the landing page.  These
-# override the regex-based grouping.  If a child major doesn't exist in the
-# database it is silently skipped.
-# Aliases: majors that are the same program with different spelling.
-# The alias's data gets merged into the canonical name and the alias
-# is hidden everywhere (not shown as a specialization).
 MAJOR_ALIASES = {
     'Communication': ['Communication Studies', 'Communication Arts'],
     'African American Studies': ['African-American Studies'],
+    'Astrophysics' : ['Astronomy and Astrophysics'],
     'Asian Studies': [
         'Pre-Asian Studies',
     ],
@@ -104,6 +100,10 @@ MAJOR_ALIASES = {
     ],
     'Art': [
         'Art - Studio',
+    ],
+    'Linguistics':[
+        'Applied Linguistics',
+        'Applied Linguistics and Multilingualism',
     ],
     'Statistics': [
         'Pre-Statistics'
@@ -589,3 +589,119 @@ class MajorStatsView(APIView):
             .order_by('year', 'university')
         )
         return Response(list(stats))
+
+
+# ---------------------------------------------------------------------------
+# Articulation agreement views — serves scraped JSON from data/articulation/
+# ---------------------------------------------------------------------------
+
+# Maps CC codes to display names. Add more as you scrape new colleges.
+CC_NAMES = {
+    'sbcc': 'Santa Barbara City College',
+}
+
+# Maps UC codes to display names.
+UC_NAMES = {
+    'ucb': 'University of California, Berkeley',
+    'ucd': 'University of California, Davis',
+    'uci': 'University of California, Irvine',
+    'ucla': 'University of California, Los Angeles',
+    'ucm': 'University of California, Merced',
+    'ucr': 'University of California, Riverside',
+    'ucsb': 'University of California, Santa Barbara',
+    'ucsc': 'University of California, Santa Cruz',
+    'ucsd': 'University of California, San Diego',
+}
+
+
+class ArticulationCollegesView(APIView):
+    """List community colleges that have scraped articulation data."""
+
+    def get(self, request):
+        colleges = []
+        if ARTICULATION_DIR.is_dir():
+            for cc_dir in sorted(ARTICULATION_DIR.iterdir()):
+                if cc_dir.is_dir() and not cc_dir.name.startswith('_'):
+                    code = cc_dir.name
+                    colleges.append({
+                        'code': code,
+                        'name': CC_NAMES.get(code, code.upper()),
+                    })
+        return Response(colleges)
+
+
+class ArticulationUCsView(APIView):
+    """List UC campuses available for a given community college."""
+
+    def get(self, request, cc_code):
+        cc_dir = ARTICULATION_DIR / cc_code.lower()
+        campuses = []
+        if cc_dir.is_dir():
+            for uc_dir in sorted(cc_dir.iterdir()):
+                if uc_dir.is_dir():
+                    code = uc_dir.name
+                    campuses.append({
+                        'code': code,
+                        'name': UC_NAMES.get(code, code.upper()),
+                    })
+        return Response(campuses)
+
+
+class ArticulationMajorsView(APIView):
+    """List available majors for a CC → UC pair (most recent year)."""
+
+    def get(self, request, cc_code, uc_code):
+        uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
+        if not uc_dir.is_dir():
+            return Response([])
+
+        # Find the most recent year directory
+        year_dirs = sorted(
+            [d for d in uc_dir.iterdir() if d.is_dir()],
+            key=lambda d: d.name,
+            reverse=True,
+        )
+        if not year_dirs:
+            return Response([])
+
+        year_dir = year_dirs[0]
+        majors = []
+        for json_file in sorted(year_dir.glob('*.json')):
+            try:
+                data = json.loads(json_file.read_text())
+                row_count = sum(len(s.get('rows', [])) for s in data.get('sections', []))
+                majors.append({
+                    'slug': json_file.stem,
+                    'name': data.get('major', json_file.stem),
+                    'academic_year': data.get('academic_year', year_dir.name),
+                    'row_count': row_count,
+                })
+            except (json.JSONDecodeError, KeyError):
+                continue
+
+        return Response(majors)
+
+
+class ArticulationDetailView(APIView):
+    """Return the full articulation agreement for one major."""
+
+    def get(self, request, cc_code, uc_code, major_slug):
+        uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
+        if not uc_dir.is_dir():
+            return Response({'error': 'Not found'}, status=404)
+
+        # Find the most recent year
+        year_dirs = sorted(
+            [d for d in uc_dir.iterdir() if d.is_dir()],
+            key=lambda d: d.name,
+            reverse=True,
+        )
+        if not year_dirs:
+            return Response({'error': 'Not found'}, status=404)
+
+        json_file = year_dirs[0] / f'{major_slug}.json'
+        if not json_file.exists():
+            return Response({'error': 'Not found'}, status=404)
+
+        data = json.loads(json_file.read_text())
+        return Response(data)
