@@ -32,15 +32,17 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'uctransfer.urls'
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'uc_transfer'),
-        'USER': os.getenv('DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('DB_PASSWORD', ''),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '5432'),
-    }
+    'default': dj_database_url.config(
+        default=f"postgresql://{os.getenv('DB_USER', 'anthonycolin')}:"
+                f"{os.getenv('DB_PASSWORD', '')}@"
+                f"{os.getenv('DB_HOST', 'localhost')}:"
+                f"{os.getenv('DB_PORT', '5432')}/"
+                f"{os.getenv('DB_NAME', 'uc_transfer')}",
+        conn_max_age=600,
+    )
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -75,11 +77,10 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 # In production, also allow the Vercel frontend domain
-VERCEL_URL = os.getenv('VERCEL_URL')
-if VERCEL_URL:
-    CORS_ALLOWED_ORIGINS.append(f'https://{VERCEL_URL}')
-
-# Allow any custom domain set via env var (e.g. your-app.vercel.app)
-FRONTEND_URL = os.getenv('FRONTEND_URL')
-if FRONTEND_URL:
-    CORS_ALLOWED_ORIGINS.append(FRONTEND_URL)
+# Handles both "example.vercel.app" and "https://example.vercel.app"
+for _env_key in ('VERCEL_URL', 'FRONTEND_URL'):
+    _url = os.getenv(_env_key, '')
+    if _url:
+        if not _url.startswith('http'):
+            _url = f'https://{_url}'
+        CORS_ALLOWED_ORIGINS.append(_url)
