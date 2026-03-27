@@ -10,6 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-change-this-in-production'
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS += ['uc-transfer-trends.onrender.com', 'uctransfertrends.com', 'www.uctransfertrends.com']
 
 # On Render, allow the .onrender.com hostname
 RENDER_EXTERNAL_HOSTNAME = os.getenv('RENDER_EXTERNAL_HOSTNAME')
@@ -74,13 +75,16 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
+    'https://uctransfertrends.com',
+    'https://www.uctransfertrends.com',
+    'https://uctransfertrends-git-master-anthony-colins-projects.vercel.app',
 ]
 
-# In production, also allow the Vercel frontend domain
-# Handles both "example.vercel.app" and "https://example.vercel.app"
+# Also allow any domain set via env var
 for _env_key in ('VERCEL_URL', 'FRONTEND_URL'):
     _url = os.getenv(_env_key, '')
     if _url:
         if not _url.startswith('http'):
             _url = f'https://{_url}'
-        CORS_ALLOWED_ORIGINS.append(_url)
+        if _url not in CORS_ALLOWED_ORIGINS:
+            CORS_ALLOWED_ORIGINS.append(_url)
