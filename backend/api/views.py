@@ -143,6 +143,7 @@ MAJOR_ABSORPTIONS = {
         'Mathematical Sciences',
         'Pre-Applied Mathematics',
         'Applied Mathematics',
+        'Applied and Computational Mathematics',
     ],
     'Chemistry': [
         'Chemical Biology',
