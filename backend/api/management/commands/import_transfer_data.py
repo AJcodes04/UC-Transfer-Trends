@@ -51,6 +51,50 @@ def title_case_major(name):
     return ' '.join(result)
 
 
+# Maps (campus, shortened_name) -> canonical name so 2025+ data lines up
+# with earlier years that used "College Of …" / "School Of …" prefixes.
+COLLEGE_SCHOOL_ALIASES = {
+    # UCB
+    ('UCB', 'Business Administration'):      'School Of Business administration',
+    ('UCB', 'Chemistry'):                    'College Of Chemistry',
+    ('UCB', 'Engineering'):                  'College Of Engineering',
+    ('UCB', 'Environmental Design'):         'College Of Environmental design',
+    ('UCB', 'Letters & Science'):            'College Of Letters & science',
+    ('UCB', 'Natural Resources'):            'College Of Natural resources',
+    # UCD
+    ('UCD', 'Agric & Environ Sciences'):     'College Of Agric & environ sciences',
+    ('UCD', 'Biological Sciences'):          'College Of Biological sciences',
+    ('UCD', 'Engineering'):                  'College Of Engineering',
+    ('UCD', 'Letters & Science'):            'College Of Letters & science',
+    # UCI
+    ('UCI', 'Education'):                    'School Of Education',
+    ('UCI', 'Engineering'):                  'School Of Engineering',
+    ('UCI', 'Humanities'):                   'School Of Humanities',
+    ('UCI', 'Nursing'):                      'School Of Nursing',
+    ('UCI', 'Pharmacy & Pharm Sciences'):    'School Of Pharmacy & pharm sciences',
+    ('UCI', 'Physical Sciences'):            'School Of Physical sciences',
+    ('UCI', 'Population and Public Health'): 'School Of Public health',
+    ('UCI', 'Social Sciences'):              'School Of Social sciences',
+    ('UCI', 'The Arts'):                     'School Of The arts',
+    # UCLA
+    ('UCLA', 'Engineering & Applied Sci'):   'School Of Engineering & applied sci',
+    ('UCLA', 'Letters & Science'):           'College Of Letters & science',
+    ('UCLA', 'Music'):                       'School Of Music',
+    ('UCLA', 'Nursing'):                     'School Of Nursing',
+    ('UCLA', 'The Arts & Architecture'):     'School Of The arts & architecture',
+    ('UCLA', 'Theater, Film and Television'): 'School Of Theater, film and television',
+    # UCR
+    ('UCR', 'Education'):                    'School Of Education',
+    ('UCR', 'Engineering'):                  'College Of Engineering',
+    ('UCR', 'Humanities & Social Sci'):      'College Of Humanities & social sci',
+    ('UCR', 'Natural & Agricultural Sci'):   'College Of Natural & agricultural sci',
+    ('UCR', 'Public Policy'):                'School Of Public policy',
+    # UCSB
+    ('UCSB', 'Engineering'):                 'College Of Engineering',
+    ('UCSB', 'Letters & Science'):           'College Of Letters & science',
+}
+
+
 class Command(BaseCommand):
     # Import transfer data from CSV files in the data/csv.exports directory
 
@@ -98,8 +142,21 @@ class Command(BaseCommand):
 
     def parse_csv(self, filepath, campus, year):
         rows = []
-        with open(filepath, newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
+        # Try UTF-8 first; fall back to UTF-16 (2025 exports use UTF-16-LE with BOM)
+        try:
+            with open(filepath, newline='', encoding='utf-8') as f:
+                f.read(1)
+            encoding = 'utf-8'
+        except UnicodeDecodeError:
+            encoding = 'utf-16'
+
+        with open(filepath, newline='', encoding=encoding) as f:
+            # Detect delimiter: tab for UTF-16 exports, comma for legacy CSVs
+            sample = f.read(1024)
+            f.seek(0)
+            dialect_delimiter = '\t' if '\t' in sample else ','
+
+            reader = csv.DictReader(f, delimiter=dialect_delimiter)
             # Strip whitespace from header names
             reader.fieldnames = [name.strip() for name in reader.fieldnames]
 
@@ -112,17 +169,23 @@ class Command(BaseCommand):
                     continue
 
                 admit_gpa_min, admit_gpa_max = self.parse_gpa_range(row.get('Admit GPA range', ''))
-                enroll_gpa_min, enroll_gpa_max = self.parse_gpa_range(row.get('Enroll GPA range', ''))
+                # Handle both "Enroll GPA range" (old) and "Enrollee GPA range" (2025+)
+                enroll_gpa_raw = row.get('Enroll GPA range', '') or row.get('Enrollee GPA range', '')
+                enroll_gpa_min, enroll_gpa_max = self.parse_gpa_range(enroll_gpa_raw)
 
                 rows.append(TransferData(
                     university=campus,
                     year=year,
                     broad_discipline=row.get('Broad discipline', ''),
-                    college_school=row.get('College/School', ''),
+                    college_school=COLLEGE_SCHOOL_ALIASES.get(
+                        (campus, row.get('College/School', '')),
+                        row.get('College/School', ''),
+                    ),
                     major_name=major_name,
                     applicants=self.parse_int(row.get('Applicants', '0')),
                     admits=self.parse_int(row.get('Admits', '0')),
-                    enrolls=self.parse_int(row.get('Enrolls', '0')),
+                    # Handle both "Enrolls" (old) and "Enrollees" (2025+)
+                    enrolls=self.parse_int(row.get('Enrolls', '') or row.get('Enrollees', '0')),
                     admit_gpa_min=admit_gpa_min,
                     admit_gpa_max=admit_gpa_max,
                     enroll_gpa_min=enroll_gpa_min,

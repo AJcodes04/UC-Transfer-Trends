@@ -11,7 +11,6 @@ from django_filters import rest_framework as filters
 from .models import TransferData, CampusStats
 from .serializers import TransferDataSerializer
 
-# Path to scraped articulation JSON files (produced by the scraper module)
 ARTICULATION_DIR = Path(__file__).resolve().parent.parent.parent / 'data' / 'articulation'
 
 
@@ -58,6 +57,11 @@ MAJOR_ALIASES = {
     'Biology': [
         'Biological Sciences',
     ],
+    'Biochemistry' : [
+        'Chemistry - Biochemistry',
+        'Biochemistry- Molecular Biology'
+
+    ],
     'Cognitive Science': ['Cognitive Sciences'],
     'Chicano Studies': [
         'Chicana & Chicano Studies',
@@ -91,7 +95,6 @@ MAJOR_ALIASES = {
     'Dance': [
         'Dance & Performance Studies',
     ],
-    #! Might need to change later because Film is different at other schools
     'Film': [
         'Film & Television',
         'Film and Digital Media',
@@ -305,20 +308,10 @@ class MajorListView(APIView):
 
 
 class GroupedMajorListView(APIView):
-    """Returns majors grouped by base name with total applicants and campuses."""
-
-    # Majors with no data since this year are considered discontinued.
     DISCONTINUED_BEFORE = 2020
-    # Discontinued majors are still shown if they span at least this many years.
     MIN_HISTORY_YEARS = 6
 
     def get(self, request):
-        # Get all majors with their total applicants and year range.
-        # A major is kept if it is either:
-        #   1. Active — has data in DISCONTINUED_BEFORE or later, OR
-        #   2. Has significant history — spans MIN_HISTORY_YEARS+ years
-        # This hides short-lived discontinued programs while preserving
-        # ones with enough data to be useful.
         major_agg = {
             row['major_name']: row
             for row in (
@@ -338,21 +331,17 @@ class GroupedMajorListView(APIView):
             or (row['latest_year'] - row['earliest_year'] + 1) >= self.MIN_HISTORY_YEARS
         }
 
-        # Track latest_year per major so the frontend can flag discontinued ones.
         major_latest = {
             name: row['latest_year']
             for name, row in major_agg.items()
             if name in active_majors
         }
 
-        # Merge aliases: fold each alias's applicants into the canonical name
-        # and remove the alias from the active set entirely.
         for canonical, aliases in MAJOR_ALIASES.items():
             for alias in aliases:
                 if alias in active_majors:
                     active_majors.setdefault(canonical, 0)
                     active_majors[canonical] += active_majors.pop(alias)
-                    # Keep the most recent year across aliases
                     if alias in major_latest:
                         major_latest.setdefault(canonical, 0)
                         major_latest[canonical] = max(
@@ -363,16 +352,12 @@ class GroupedMajorListView(APIView):
         all_names = set(active_majors.keys())
         major_apps = active_majors
 
-        # Build a mapping of major_name  -> list of campus codes that offer it.
-        # Uses values() + distinct() so Django does one SQL query with
-        # SELECT DISTINCT major_name, university — much faster than N queries.
         major_campuses = {}
         for row in (
             TransferData.objects
             .values('major_name', 'university')
             .distinct()
         ):
-            # Map alias campus data to the canonical name
             name = row['major_name']
             for canonical, aliases in MAJOR_ALIASES.items():
                 if name in aliases:
@@ -381,7 +366,6 @@ class GroupedMajorListView(APIView):
             if name in all_names:
                 major_campuses.setdefault(name, set()).add(row['university'])
 
-        # Group sub-majors under their base if the base exists standalone
         groups = {}
         assigned = set()
 
@@ -398,35 +382,25 @@ class GroupedMajorListView(APIView):
             if name not in groups:
                 groups[name] = []
 
-        # Apply explicit absorption rules — these override the regex grouping.
-        # For each parent→children mapping, move children under the parent
-        # and remove them as standalone top-level groups.
         for parent, children in MAJOR_ABSORPTIONS.items():
-            # Ensure the parent exists as a group (it must exist in the DB)
             if parent not in all_names:
                 continue
             if parent not in groups:
                 groups[parent] = []
             for child in children:
                 if child not in all_names:
-                    continue  # skip majors that don't exist in the DB
-                # Remove child from wherever it currently lives
+                    continue
                 if child in groups:
-                    # Child was a top-level group — move its own sub-majors
-                    # under the parent too, then delete the child group
                     groups[parent].extend(groups.pop(child))
                 else:
-                    # Child might be a sub-major under a different parent
                     for other_base, other_related in groups.items():
                         if child in other_related:
                             other_related.remove(child)
                             break
-                # Add the child under the parent (avoid duplicates)
                 if child not in groups[parent]:
                     groups[parent].append(child)
                 assigned.add(child)
 
-        # Build response sorted by total applicants (most popular first)
         result = []
         for base, related in groups.items():
             result.append({
@@ -439,7 +413,6 @@ class GroupedMajorListView(APIView):
                      for r in related],
                     key=lambda x: x['name'],
                 ),
-                # Sorted list of campus codes that offer this base major
                 'campuses': sorted(major_campuses.get(base, [])),
             })
 
@@ -459,7 +432,6 @@ class DisciplineListView(APIView):
 
 
 class GeneralStatsView(APIView):
-    """Returns pre-computed campus-level stats from official UC data."""
     def get(self, request):
         stats = (
             CampusStats.objects
@@ -488,8 +460,8 @@ class SchoolStatsView(APIView):
                 total_enrolls=Sum('enrolls'),
                 avg_admit_rate=Avg('admit_rate'),
                 avg_yield_rate=Avg('yield_rate'),
-                avg_admit_gpa_min=Avg('admit_gpa_min'),
-                avg_admit_gpa_max=Avg('admit_gpa_max'),
+                avg_admit_gpa_min=Min('admit_gpa_min'),
+                avg_admit_gpa_max=Max('admit_gpa_max'),
             )
             .order_by('year', 'college_school')
         )
@@ -497,35 +469,16 @@ class SchoolStatsView(APIView):
 
 
 class CampusMajorStatsView(APIView):
-    """Per-major stats for a single campus, aggregated by year + major_name.
-
-    This is the mirror of MajorStatsView: instead of "one major across all
-    campuses" it returns "one campus across all its majors".  The frontend
-    uses it to draw a trend chart with one line per major.
-
-    Before aggregating, we use Case/When to rename alias and absorption
-    child majors to their canonical parent name.  This makes the DB-level
-    GROUP BY merge their rows automatically — sums get added up and
-    averages are computed across all contributing rows, which is more
-    accurate than trying to re-average in Python afterwards.
-    """
     def get(self, request, campus):
-        # Build Case/When rules: child name → parent name.
-        # The DB will rename matching rows before the GROUP BY, so
-        # "Computer Science with Business Applications" becomes
-        # "Computer Science" and their stats merge correctly.
+        # Only merge aliases (same major, different name), not absorptions
+        # (distinct majors grouped for navigation only).
         whens = []
         for canonical, aliases in MAJOR_ALIASES.items():
             for alias in aliases:
                 whens.append(When(major_name=alias, then=Value(canonical)))
-        for parent, children in MAJOR_ABSORPTIONS.items():
-            for child in children:
-                whens.append(When(major_name=child, then=Value(parent)))
 
         qs = TransferData.objects.filter(university=campus)
 
-        # If there are rename rules, annotate a normalized name and
-        # group by that instead of the raw major_name.
         if whens:
             qs = qs.annotate(
                 display_name=Case(
@@ -547,14 +500,12 @@ class CampusMajorStatsView(APIView):
                 total_enrolls=Sum('enrolls'),
                 avg_admit_rate=Avg('admit_rate'),
                 avg_yield_rate=Avg('yield_rate'),
-                avg_admit_gpa_min=Avg('admit_gpa_min'),
-                avg_admit_gpa_max=Avg('admit_gpa_max'),
+                avg_admit_gpa_min=Min('admit_gpa_min'),
+                avg_admit_gpa_max=Max('admit_gpa_max'),
             )
             .order_by('year', group_field)
         )
 
-        # Rename the group field back to major_name so the frontend
-        # doesn't need to know about the normalization.
         if group_field != 'major_name':
             for row in stats:
                 row['major_name'] = row.pop(group_field)
@@ -564,9 +515,6 @@ class CampusMajorStatsView(APIView):
 
 class MajorStatsView(APIView):
     def get(self, request, major):
-        # Collect all names that should be queried: the major itself plus
-        # any aliases that map to it (e.g. "African-American Studies" →
-        # "African American Studies").
         names = [major]
         for canonical, aliases in MAJOR_ALIASES.items():
             if major == canonical:
@@ -583,24 +531,18 @@ class MajorStatsView(APIView):
                 total_enrolls=Sum('enrolls'),
                 avg_admit_rate=Avg('admit_rate'),
                 avg_yield_rate=Avg('yield_rate'),
-                avg_admit_gpa_min=Avg('admit_gpa_min'),
-                avg_admit_gpa_max=Avg('admit_gpa_max'),
+                avg_admit_gpa_min=Min('admit_gpa_min'),
+                avg_admit_gpa_max=Max('admit_gpa_max'),
             )
             .order_by('year', 'university')
         )
         return Response(list(stats))
 
 
-# ---------------------------------------------------------------------------
-# Articulation agreement views — serves scraped JSON from data/articulation/
-# ---------------------------------------------------------------------------
-
-# Maps CC codes to display names. Add more as you scrape new colleges.
 CC_NAMES = {
     'sbcc': 'Santa Barbara City College',
 }
 
-# Maps UC codes to display names.
 UC_NAMES = {
     'ucb': 'University of California, Berkeley',
     'ucd': 'University of California, Davis',
@@ -615,8 +557,6 @@ UC_NAMES = {
 
 
 class ArticulationCollegesView(APIView):
-    """List community colleges that have scraped articulation data."""
-
     def get(self, request):
         colleges = []
         if ARTICULATION_DIR.is_dir():
@@ -631,8 +571,6 @@ class ArticulationCollegesView(APIView):
 
 
 class ArticulationUCsView(APIView):
-    """List UC campuses available for a given community college."""
-
     def get(self, request, cc_code):
         cc_dir = ARTICULATION_DIR / cc_code.lower()
         campuses = []
@@ -648,14 +586,11 @@ class ArticulationUCsView(APIView):
 
 
 class ArticulationMajorsView(APIView):
-    """List available majors for a CC → UC pair (most recent year)."""
-
     def get(self, request, cc_code, uc_code):
         uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
         if not uc_dir.is_dir():
             return Response([])
 
-        # Find the most recent year directory
         year_dirs = sorted(
             [d for d in uc_dir.iterdir() if d.is_dir()],
             key=lambda d: d.name,
@@ -683,14 +618,11 @@ class ArticulationMajorsView(APIView):
 
 
 class ArticulationDetailView(APIView):
-    """Return the full articulation agreement for one major."""
-
     def get(self, request, cc_code, uc_code, major_slug):
         uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
         if not uc_dir.is_dir():
             return Response({'error': 'Not found'}, status=404)
 
-        # Find the most recent year
         year_dirs = sorted(
             [d for d in uc_dir.iterdir() if d.is_dir()],
             key=lambda d: d.name,

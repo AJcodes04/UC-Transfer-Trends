@@ -1,17 +1,6 @@
 """
-Transcript PDF parsing endpoint.
-
-This is a stateless endpoint: it accepts a PDF file, extracts text using
-pdfplumber, runs regex patterns to find course rows, and returns the
-parsed courses as JSON. Nothing is stored on the server.
-
-Community college transcripts typically list courses in a tabular format:
-  PREFIX NUMBER   Title                    Units  Grade
-  MATH   101      Calculus I                5.0    A
-  ENGL   1A       English Composition       3.0    B+
-
-The regex is intentionally broad to handle variations in spacing and
-formatting across different community colleges.
+Stateless transcript PDF parsing endpoint. Accepts a PDF, extracts
+course rows via regex, and returns parsed courses as JSON.
 """
 
 import re
@@ -28,57 +17,39 @@ except ImportError:
     HAS_PDFPLUMBER = False
 
 
-# Matches lines like: "MATH 101  Calculus I  5.0  A"
-# Groups: prefix, number, title (optional), units, grade
-# The pattern is flexible about whitespace and handles various title formats.
 COURSE_LINE_RE = re.compile(
-    r'(?P<prefix>[A-Z]{2,6})\s+'          # Course prefix: 2-6 uppercase letters
-    r'(?P<number>\d{1,4}[A-Z]?)\s+'       # Course number: digits, optional letter suffix
-    r'(?P<title>.+?)\s+'                   # Title: non-greedy match
-    r'(?P<units>\d+\.?\d*)\s+'             # Units: number with optional decimal
-    r'(?P<grade>[A-F][+-]?|P|NP|W|CR|NC|I|IP)',  # Grade
+    r'(?P<prefix>[A-Z]{2,6})\s+'
+    r'(?P<number>\d{1,4}[A-Z]?)\s+'
+    r'(?P<title>.+?)\s+'
+    r'(?P<units>\d+\.?\d*)\s+'
+    r'(?P<grade>[A-F][+-]?|P|NP|W|CR|NC|I|IP)',
     re.IGNORECASE,
 )
 
 
 class TranscriptUploadView(APIView):
-    """
-    POST /api/transcript/upload/
-    Accepts a PDF file via multipart form data, extracts course information
-    using text parsing, and returns the courses as a JSON array.
-
-    This is completely stateless — the PDF is parsed in memory and nothing
-    is saved. The user reviews the results on the frontend before adding
-    courses to their localStorage-backed course list.
-    """
     parser_classes = [MultiPartParser]
 
     def post(self, request):
-        # Check that pdfplumber is installed
         if not HAS_PDFPLUMBER:
             return Response(
                 {'error': 'pdfplumber is not installed. Run: pip install pdfplumber'},
                 status=500,
             )
 
-        # Validate that a file was uploaded
         uploaded = request.FILES.get('file')
         if not uploaded:
             return Response({'error': 'No file uploaded'}, status=400)
 
-        # Validate file type
         if not uploaded.name.lower().endswith('.pdf'):
             return Response({'error': 'Only PDF files are accepted'}, status=400)
 
-        # Limit file size to 10MB to prevent abuse
         if uploaded.size > 10 * 1024 * 1024:
             return Response({'error': 'File too large (max 10MB)'}, status=400)
 
         try:
-            # Read the PDF and extract text from all pages
             pdf_bytes = uploaded.read()
-            courses = []
-            seen = set()  # Deduplicate by prefix+number+grade
+            raw_entries = []
 
             with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
                 for page in pdf.pages:
@@ -88,26 +59,31 @@ class TranscriptUploadView(APIView):
                         if not match:
                             continue
 
-                        prefix = match.group('prefix').upper()
-                        number = match.group('number').upper()
-                        title = match.group('title').strip()
-                        units = match.group('units')
-                        grade = match.group('grade').upper()
-
-                        # Deduplicate — same course+grade shouldn't appear twice
-                        dedup_key = f'{prefix} {number} {grade}'
-                        if dedup_key in seen:
-                            continue
-                        seen.add(dedup_key)
-
-                        courses.append({
-                            'prefix': prefix,
-                            'number': number,
-                            'title': title,
-                            'units': float(units),
-                            'grade': grade,
+                        raw_entries.append({
+                            'prefix': match.group('prefix').upper(),
+                            'number': match.group('number').upper(),
+                            'title': match.group('title').strip(),
+                            'units': float(match.group('units')),
+                            'grade': match.group('grade').upper(),
                         })
 
+            grade_rank = {
+                'F': 0, 'D-': 1, 'D': 2, 'D+': 3,
+                'C-': 4, 'C': 5, 'C+': 6,
+                'B-': 7, 'B': 8, 'B+': 9,
+                'A-': 10, 'A': 11, 'A+': 12,
+                'NP': -2, 'P': 13,
+                'W': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
+            }
+
+            best = {}
+            for entry in raw_entries:
+                key = f"{entry['prefix']} {entry['number']}"
+                rank = grade_rank.get(entry['grade'], -1)
+                if key not in best or rank > grade_rank.get(best[key]['grade'], -1):
+                    best[key] = entry
+
+            courses = list(best.values())
             return Response(courses)
 
         except Exception as e:

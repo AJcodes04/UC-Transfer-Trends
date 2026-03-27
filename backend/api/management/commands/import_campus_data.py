@@ -53,8 +53,21 @@ class Command(BaseCommand):
 
     def parse_csv(self, filepath, year):
         rows = []
-        with open(filepath, newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
+        # Try UTF-8 first; fall back to UTF-16 (2025 exports use UTF-16-LE with BOM)
+        try:
+            with open(filepath, newline='', encoding='utf-8') as f:
+                f.read(1)
+            encoding = 'utf-8'
+        except UnicodeDecodeError:
+            encoding = 'utf-16'
+
+        with open(filepath, newline='', encoding=encoding) as f:
+            # Detect delimiter: tab for UTF-16 exports, comma for legacy CSVs
+            sample = f.read(1024)
+            f.seek(0)
+            dialect_delimiter = '\t' if '\t' in sample else ','
+
+            reader = csv.DictReader(f, delimiter=dialect_delimiter)
             reader.fieldnames = [name.strip() for name in reader.fieldnames]
 
             for row in reader:
