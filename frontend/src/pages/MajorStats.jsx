@@ -2,9 +2,11 @@ import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Table, Loader, Alert, Text,
-  Paper, UnstyledButton, Group, Button, Stack, Badge, Switch,
+  Paper, UnstyledButton, Group, Button, Stack, Badge, Switch, ActionIcon,
 } from '@mantine/core'
+import { IconStar, IconStarFilled } from '@tabler/icons-react'
 import { useMajorStats, useGroupedMajors } from '../hooks/useApi'
+import { useSavedCombos } from '../hooks/useUserData'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
 import { UC_COLORS } from '../utils/ucColors'
@@ -13,15 +15,12 @@ export default function MajorStats() {
   const { '*': splatParam } = useParams()
   const navigate = useNavigate()
   const { data: groupedMajors, loading: majorsLoading } = useGroupedMajors()
-  // Splat param captures everything after /major/, including slashes
   const decodedMajor = splatParam ? decodeURIComponent(splatParam) : null
   const { data: stats, loading, error } = useMajorStats(decodedMajor)
   const [hideDiscontinued, setHideDiscontinued] = useState(true)
 
   const DISCONTINUED_BEFORE = 2022
 
-  // Group base majors alphabetically by first letter, filtering out
-  // discontinued single-campus majors when the toggle is on.
   const groupedByLetter = useMemo(() => {
     if (!groupedMajors) return {}
     const groups = {}
@@ -31,20 +30,17 @@ export default function MajorStats() {
       if (!groups[letter]) groups[letter] = []
       groups[letter].push(m)
     })
-    // Sort each letter group alphabetically
     Object.values(groups).forEach((arr) => arr.sort((a, b) => a.name.localeCompare(b.name)))
     return groups
   }, [groupedMajors, hideDiscontinued])
 
   const letters = Object.keys(groupedByLetter).sort()
 
-  // Find related majors for the currently selected major
   const relatedMajors = useMemo(() => {
     if (!groupedMajors || !decodedMajor) return []
     const isJunk = (r) => hideDiscontinued && r.latest_year < DISCONTINUED_BEFORE && (r.campuses?.length ?? 0) <= 1
     const group = groupedMajors.find((g) => g.name === decodedMajor)
     if (group) return group.related.filter((r) => !isJunk(r))
-    // If the selected major is itself a sub-major, find its parent
     const parent = groupedMajors.find((g) => g.related.some((r) => r.name === decodedMajor))
     if (parent) {
       return [
@@ -55,7 +51,6 @@ export default function MajorStats() {
     return []
   }, [groupedMajors, decodedMajor, hideDiscontinued])
 
-  // --- Detail view state ---
   const [selectedUCs, setSelectedUCs] = useState([])
 
   const allUniversities = useMemo(() => {
@@ -88,7 +83,8 @@ export default function MajorStats() {
       if (!totals[row.university]) {
         totals[row.university] = {
           applicants: 0, admits: 0, enrolls: 0,
-          rateSum: 0, count: 0, gpaMinSum: 0, gpaMaxSum: 0, gpaCount: 0,
+          rateSum: 0, count: 0,
+          latestGpaYear: 0, latestGpaMin: null, latestGpaMax: null,
         }
       }
       const t = totals[row.university]
@@ -96,8 +92,11 @@ export default function MajorStats() {
       t.admits += row.total_admits || 0
       t.enrolls += row.total_enrolls || 0
       if (row.avg_admit_rate != null) { t.rateSum += row.avg_admit_rate; t.count++ }
-      if (row.avg_admit_gpa_min != null) { t.gpaMinSum += parseFloat(row.avg_admit_gpa_min); t.gpaCount++ }
-      if (row.avg_admit_gpa_max != null) { t.gpaMaxSum += parseFloat(row.avg_admit_gpa_max) }
+      if (row.avg_admit_gpa_min != null && row.year > t.latestGpaYear) {
+        t.latestGpaYear = row.year
+        t.latestGpaMin = parseFloat(row.avg_admit_gpa_min)
+        t.latestGpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+      }
     })
     return Object.entries(totals).map(([uni, t]) => ({
       university: uni,
@@ -105,8 +104,8 @@ export default function MajorStats() {
       admits: t.admits,
       enrolls: t.enrolls,
       avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
-      gpaRange: t.gpaCount > 0
-        ? `${(t.gpaMinSum / t.gpaCount).toFixed(2)} - ${(t.gpaMaxSum / t.gpaCount).toFixed(2)}`
+      gpaRange: t.latestGpaMin != null
+        ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'} (${t.latestGpaYear})`
         : 'N/A',
     })).sort((a, b) => a.university.localeCompare(b.university))
   }, [stats, activeUCs])
@@ -119,7 +118,6 @@ export default function MajorStats() {
     ? validUnis.reduce((a, b) => (parseFloat(a.avgRate) > parseFloat(b.avgRate) ? a : b))
     : null
 
-  // Landing view — no major selected
   if (!decodedMajor) {
     return (
       <>
@@ -202,7 +200,20 @@ export default function MajorStats() {
     )
   }
 
-  // Detail view — major selected
+  return (
+    <MajorDetailView
+      decodedMajor={decodedMajor} navigate={navigate} relatedMajors={relatedMajors}
+      loading={loading} error={error} stats={stats} chartData={chartData} chartSeries={chartSeries}
+      activeUCs={activeUCs} mostCompetitive={mostCompetitive} leastCompetitive={leastCompetitive}
+      uniTotals={uniTotals}
+    />
+  )
+}
+
+function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error, stats,
+  chartData, chartSeries, activeUCs, mostCompetitive, leastCompetitive, uniTotals }) {
+  const { saveCombo, unsaveCombo, isComboSaved } = useSavedCombos()
+
   return (
     <>
       <Title order={2} mb="md">Major Stats: {decodedMajor}</Title>
@@ -295,23 +306,41 @@ export default function MajorStats() {
           <Table striped highlightOnHover>
             <Table.Thead>
               <Table.Tr>
+                <Table.Th></Table.Th>
                 <Table.Th>University</Table.Th>
                 <Table.Th>Applicants</Table.Th>
                 <Table.Th>Admits</Table.Th>
                 <Table.Th>Avg Admit Rate</Table.Th>
-                <Table.Th>GPA Range</Table.Th>
+                <Table.Th>GPA Range (25th-75th Percentile)</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
-              {uniTotals.map((row) => (
-                <Table.Tr key={row.university}>
-                  <Table.Td>{row.university}</Table.Td>
-                  <Table.Td>{row.applicants.toLocaleString()}</Table.Td>
-                  <Table.Td>{row.admits.toLocaleString()}</Table.Td>
-                  <Table.Td>{row.avgRate}%</Table.Td>
-                  <Table.Td>{row.gpaRange}</Table.Td>
-                </Table.Tr>
-              ))}
+              {uniTotals.map((row) => {
+                const saved = isComboSaved(decodedMajor, row.university)
+                return (
+                  <Table.Tr key={row.university}>
+                    <Table.Td>
+                      <ActionIcon
+                        variant="subtle"
+                        color="yellow"
+                        size="sm"
+                        onClick={() => saved
+                          ? unsaveCombo(decodedMajor, row.university)
+                          : saveCombo(decodedMajor, row.university)
+                        }
+                        title={saved ? 'Remove from saved' : `Save ${decodedMajor} @ ${row.university}`}
+                      >
+                        {saved ? <IconStarFilled size={16} /> : <IconStar size={16} />}
+                      </ActionIcon>
+                    </Table.Td>
+                    <Table.Td>{row.university}</Table.Td>
+                    <Table.Td>{row.applicants.toLocaleString()}</Table.Td>
+                    <Table.Td>{row.admits.toLocaleString()}</Table.Td>
+                    <Table.Td>{row.avgRate}%</Table.Td>
+                    <Table.Td>{row.gpaRange}</Table.Td>
+                  </Table.Tr>
+                )
+              })}
             </Table.Tbody>
           </Table>
         </>

@@ -27,7 +27,6 @@ export default function CampusMajors() {
 
   const DISCONTINUED_BEFORE = 2022
 
-  // Build per-major metadata: latest year, year count, total applicants
   const majorInfo = useMemo(() => {
     if (!stats) return {}
     const info = {}
@@ -41,13 +40,11 @@ export default function CampusMajors() {
     return info
   }, [stats])
 
-  // A major is "discontinued junk" if it has no data from 2020+ AND only 1 year of data
   const isDiscontinuedJunk = (name) => {
     const m = majorInfo[name]
     return m && m.latestYear < DISCONTINUED_BEFORE && m.years.size <= 1
   }
 
-  // All majors at this campus (filtered when toggle is on)
   const allMajors = useMemo(() => {
     if (!stats) return []
     const names = [...new Set(stats.map((s) => s.major_name))].sort()
@@ -55,7 +52,6 @@ export default function CampusMajors() {
     return names
   }, [stats, majorInfo, hideDiscontinued])
 
-  // Top 20 majors by total applicants for the chart (respects filter)
   const topMajors = useMemo(() => {
     const validSet = new Set(allMajors)
     return Object.entries(majorInfo)
@@ -65,7 +61,6 @@ export default function CampusMajors() {
       .map(([name]) => name)
   }, [allMajors, majorInfo])
 
-  // Pivot for chart: one row per year, one key per major (top 20 only)
   const chartData = useMemo(() => {
     if (!stats) return []
     const topSet = new Set(topMajors)
@@ -82,7 +77,6 @@ export default function CampusMajors() {
 
   const chartSeries = topMajors.map((m) => ({ key: m, label: m }))
 
-  // Per-major aggregate stats (filtered by toggle)
   const majorTotals = useMemo(() => {
     if (!stats) return []
     const validSet = new Set(allMajors)
@@ -92,7 +86,8 @@ export default function CampusMajors() {
       if (!totals[row.major_name]) {
         totals[row.major_name] = {
           applicants: 0, admits: 0, enrolls: 0,
-          rateSum: 0, count: 0, gpaMinSum: 0, gpaMaxSum: 0, gpaCount: 0,
+          rateSum: 0, count: 0,
+          latestGpaYear: 0, latestGpaMin: null, latestGpaMax: null,
         }
       }
       const t = totals[row.major_name]
@@ -100,8 +95,11 @@ export default function CampusMajors() {
       t.admits += row.total_admits || 0
       t.enrolls += row.total_enrolls || 0
       if (row.avg_admit_rate != null) { t.rateSum += row.avg_admit_rate; t.count++ }
-      if (row.avg_admit_gpa_min != null) { t.gpaMinSum += parseFloat(row.avg_admit_gpa_min); t.gpaCount++ }
-      if (row.avg_admit_gpa_max != null) { t.gpaMaxSum += parseFloat(row.avg_admit_gpa_max) }
+      if (row.avg_admit_gpa_min != null && row.year > t.latestGpaYear) {
+        t.latestGpaYear = row.year
+        t.latestGpaMin = parseFloat(row.avg_admit_gpa_min)
+        t.latestGpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+      }
     })
     return Object.entries(totals).map(([major, t]) => ({
       major,
@@ -109,13 +107,12 @@ export default function CampusMajors() {
       admits: t.admits,
       enrolls: t.enrolls,
       avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
-      gpaRange: t.gpaCount > 0
-        ? `${(t.gpaMinSum / t.gpaCount).toFixed(2)} - ${(t.gpaMaxSum / t.gpaCount).toFixed(2)}`
+      gpaRange: t.latestGpaMin != null
+        ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'} (${t.latestGpaYear})`
         : 'N/A',
     })).sort((a, b) => a.major.localeCompare(b.major))
   }, [stats, allMajors])
 
-  // Most / least competitive major
   const validMajors = majorTotals.filter((m) => m.avgRate !== 'N/A')
   const mostCompetitive = validMajors.length
     ? validMajors.reduce((a, b) => (parseFloat(a.avgRate) < parseFloat(b.avgRate) ? a : b))
@@ -126,7 +123,6 @@ export default function CampusMajors() {
 
   const campusName = CAMPUSES.find((c) => c.code === campus)?.name || campus
 
-  // Landing view — no campus selected
   if (!campus) {
     return (
       <>
@@ -161,7 +157,6 @@ export default function CampusMajors() {
     )
   }
 
-  // Detail view — campus selected
   return (
     <>
       <Title order={2} mb="md">Campus Majors: {campusName}</Title>
@@ -225,7 +220,7 @@ export default function CampusMajors() {
                 <Table.Th>Applicants</Table.Th>
                 <Table.Th>Admits</Table.Th>
                 <Table.Th>Avg Admit Rate</Table.Th>
-                <Table.Th>GPA Range</Table.Th>
+                <Table.Th>GPA Range (25th-75th Percentile)</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>

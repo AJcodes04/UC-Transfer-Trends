@@ -1,17 +1,23 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
-/**
- * Generic fetch hook — handles loading, error, and data states.
- * `url` can be null to skip fetching (useful when a param isn't ready yet).
- */
+const cache = new Map()
+
 function useFetch(url) {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(() => (url && cache.has(url) ? cache.get(url) : null))
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const prevUrl = useRef(url)
 
   useEffect(() => {
     if (!url) return
+
+    if (cache.has(url)) {
+      setData(cache.get(url))
+      setLoading(false)
+      setError(null)
+      return
+    }
 
     let cancelled = false
     setLoading(true)
@@ -20,6 +26,7 @@ function useFetch(url) {
     axios
       .get(url)
       .then((res) => {
+        cache.set(url, res.data)
         if (!cancelled) setData(res.data)
       })
       .catch((err) => {
@@ -67,6 +74,26 @@ export function useMajorStats(major) {
 
 export function useCampusMajorStats(campus) {
   return useFetch(campus ? `/api/stats/campus-majors/${encodeURIComponent(campus)}/` : null)
+}
+
+export function useArticulationColleges() {
+  return useFetch('/api/articulation/colleges/')
+}
+
+export function useArticulationCampuses(ccCode) {
+  return useFetch(ccCode ? `/api/articulation/${ccCode}/campuses/` : null)
+}
+
+export function useArticulationMajors(ccCode, ucCode) {
+  return useFetch(ccCode && ucCode ? `/api/articulation/${ccCode}/${ucCode}/majors/` : null)
+}
+
+export function useArticulationDetail(ccCode, ucCode, majorSlug) {
+  return useFetch(
+    ccCode && ucCode && majorSlug
+      ? `/api/articulation/${ccCode}/${ucCode}/${majorSlug}/`
+      : null
+  )
 }
 
 export function useTransferData(filters) {

@@ -1,12 +1,5 @@
 import { Group, MultiSelect, Select } from '@mantine/core'
 
-/**
- * Reusable filter bar — renders Select / MultiSelect controls in a row.
- *
- * Props:
- *  - filters: array of { type, label, value, onChange, data, searchable, clearable }
- *    type: "select" | "multiselect"
- */
 export default function FilterBar({ filters = [] }) {
   return (
     <Group mb="md">

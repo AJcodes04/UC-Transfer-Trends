@@ -4,6 +4,7 @@ import { MantineProvider, createTheme } from '@mantine/core'
 import { BrowserRouter } from 'react-router-dom'
 import '@mantine/core/styles.css'
 import App from './App.jsx'
+import { UserDataProvider } from './context/UserDataContext'
 
 const theme = createTheme({
   primaryColor: 'uc-blue',
@@ -21,7 +22,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <MantineProvider theme={theme} defaultColorScheme="light">
       <BrowserRouter>
-        <App />
+        <UserDataProvider>
+          <App />
+        </UserDataProvider>
       </BrowserRouter>
     </MantineProvider>
   </StrictMode>,

@@ -24,14 +24,12 @@ export default function SchoolStats() {
 
   const [selectedColleges, setSelectedColleges] = useState([])
 
-  // Reset college filter when school changes
   const prevSchoolRef = useMemo(() => ({ current: school }), [])
   if (prevSchoolRef.current !== school) {
     prevSchoolRef.current = school
     if (selectedColleges.length) setSelectedColleges([])
   }
 
-  // Get unique colleges within this school
   const allColleges = useMemo(() => {
     if (!stats) return []
     return [...new Set(stats.map((s) => s.college_school))].sort()
@@ -39,7 +37,6 @@ export default function SchoolStats() {
 
   const activeColleges = selectedColleges.length > 0 ? selectedColleges : allColleges
 
-  // Pivot for chart: one row per year, one column per college (filtered)
   const chartData = useMemo(() => {
     if (!stats) return []
     const byYear = {}
@@ -55,7 +52,6 @@ export default function SchoolStats() {
 
   const chartSeries = activeColleges.map((c) => ({ key: c, label: c }))
 
-  // Per-college aggregate stats (filtered)
   const collegeTotals = useMemo(() => {
     if (!stats) return []
     const totals = {}
@@ -64,7 +60,8 @@ export default function SchoolStats() {
       if (!totals[row.college_school]) {
         totals[row.college_school] = {
           applicants: 0, admits: 0, enrolls: 0,
-          rateSum: 0, count: 0, gpaMinSum: 0, gpaMaxSum: 0, gpaCount: 0,
+          rateSum: 0, count: 0,
+          latestGpaYear: 0, latestGpaMin: null, latestGpaMax: null,
         }
       }
       const t = totals[row.college_school]
@@ -72,8 +69,11 @@ export default function SchoolStats() {
       t.admits += row.total_admits || 0
       t.enrolls += row.total_enrolls || 0
       if (row.avg_admit_rate != null) { t.rateSum += row.avg_admit_rate; t.count++ }
-      if (row.avg_admit_gpa_min != null) { t.gpaMinSum += parseFloat(row.avg_admit_gpa_min); t.gpaCount++ }
-      if (row.avg_admit_gpa_max != null) { t.gpaMaxSum += parseFloat(row.avg_admit_gpa_max) }
+      if (row.avg_admit_gpa_min != null && row.year > t.latestGpaYear) {
+        t.latestGpaYear = row.year
+        t.latestGpaMin = parseFloat(row.avg_admit_gpa_min)
+        t.latestGpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+      }
     })
     return Object.entries(totals).map(([college, t]) => ({
       college,
@@ -81,13 +81,12 @@ export default function SchoolStats() {
       admits: t.admits,
       enrolls: t.enrolls,
       avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
-      gpaRange: t.gpaCount > 0
-        ? `${(t.gpaMinSum / t.gpaCount).toFixed(2)} - ${(t.gpaMaxSum / t.gpaCount).toFixed(2)}`
+      gpaRange: t.latestGpaMin != null
+        ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'} (${t.latestGpaYear})`
         : 'N/A',
     })).sort((a, b) => a.college.localeCompare(b.college))
   }, [stats, activeColleges])
 
-  // Most / least competitive
   const validColleges = collegeTotals.filter((c) => c.avgRate !== 'N/A')
   const mostCompetitive = validColleges.length
     ? validColleges.reduce((a, b) => (parseFloat(a.avgRate) < parseFloat(b.avgRate) ? a : b))
@@ -96,7 +95,6 @@ export default function SchoolStats() {
     ? validColleges.reduce((a, b) => (parseFloat(a.avgRate) > parseFloat(b.avgRate) ? a : b))
     : null
 
-  // Landing view — no school selected yet
   if (!school) {
     return (
       <>
@@ -131,7 +129,6 @@ export default function SchoolStats() {
     )
   }
 
-  // Detail view — school selected
   return (
     <>
       <Title order={2} mb="md">School Stats: {school}</Title>
@@ -187,7 +184,7 @@ export default function SchoolStats() {
                 <Table.Th>Applicants</Table.Th>
                 <Table.Th>Admits</Table.Th>
                 <Table.Th>Avg Admit Rate</Table.Th>
-                <Table.Th>GPA Range</Table.Th>
+                <Table.Th>GPA Range (25th-75th Percentile)</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>

@@ -8,13 +8,11 @@ import { UC_COLORS } from '../utils/ucColors'
 export default function GeneralStats() {
   const { data: stats, loading, error } = useGeneralStats()
 
-  // Get the list of unique UCs from the stats data
   const allUCs = useMemo(() => {
     if (!stats) return []
     return [...new Set(stats.map((s) => s.campus))].sort()
   }, [stats])
 
-  // Pivot data for the chart: one row per year, one column per UC
   const chartData = useMemo(() => {
     if (!stats) return []
     const byYear = {}
@@ -27,7 +25,6 @@ export default function GeneralStats() {
 
   const chartSeries = allUCs.map((uc) => ({ key: uc, label: uc }))
 
-  // Aggregate per-school totals across all years
   const schoolTotals = useMemo(() => {
     if (!stats) return []
     const totals = {}
@@ -53,7 +50,6 @@ export default function GeneralStats() {
     })).sort((a, b) => a.campus.localeCompare(b.campus))
   }, [stats])
 
-  // Overall average admit rate
   const overallAvg = useMemo(() => {
     if (!schoolTotals.length) return 'N/A'
     const valid = schoolTotals.filter((s) => s.avgRate !== 'N/A')

@@ -33,9 +33,7 @@ function PercentTooltip({ active, payload, label }) {
     </div>
   )
 }
-// takes in array of objects, each object has an xKey for the xAxis which is ALWAYS year
 export default function TrendChart({ data, xKey, series, type = 'line', yLabel, colorMap }) {
-  // selectedKeys: empty array = show all, otherwise only show those keys
   const [selectedKeys, setSelectedKeys] = useState([])
 
   const showAll = selectedKeys.length === 0
@@ -43,7 +41,6 @@ export default function TrendChart({ data, xKey, series, type = 'line', yLabel, 
   const toggleKey = useCallback((key) => {
     setSelectedKeys((prev) => {
       if (prev.includes(key)) {
-        // Removing last selected key goes back to show all
         return prev.filter((k) => k !== key)
       }
       return [...prev, key]
@@ -54,7 +51,6 @@ export default function TrendChart({ data, xKey, series, type = 'line', yLabel, 
 
   const ChartComponent = type === 'bar' ? BarChart : LineChart
 
-  // Build color lookup so the legend below uses the same colors as the chart
   const seriesColors = series.map((s, i) => ({
     ...s,
     color: colorMap?.[s.key] || getUCColor(s.key, i),
@@ -71,7 +67,6 @@ export default function TrendChart({ data, xKey, series, type = 'line', yLabel, 
             content={<PercentTooltip />}
             wrapperStyle={{ zIndex: 1000, pointerEvents: 'none' }}
           />
-          {/* Legend is rendered outside ResponsiveContainer below */}
           {series.map((s, i) => {
             const color = colorMap?.[s.key] || getUCColor(s.key, i)
             const hidden = !showAll && !selectedKeys.includes(s.key)
@@ -119,7 +114,6 @@ export default function TrendChart({ data, xKey, series, type = 'line', yLabel, 
         </ChartComponent>
       </ResponsiveContainer>
 
-      {/* Legend rendered outside the chart container so it never gets clipped */}
       <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 12, marginTop: 8 }}>
         <span
           onClick={() => setSelectedKeys([])}

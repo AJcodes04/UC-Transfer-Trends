@@ -1,6 +1,5 @@
 import { Paper, Text, Group } from '@mantine/core'
 
-// Stats card
 export default function StatsCard({ title, value, subtitle }) {
   return (
     <Paper withBorder p="md" radius="md">
