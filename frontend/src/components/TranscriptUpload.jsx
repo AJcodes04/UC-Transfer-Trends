@@ -5,6 +5,8 @@ import {
 import axios from 'axios'
 import { useCourses } from '../hooks/useUserData'
 
+const API_BASE = import.meta.env.VITE_API_URL || ''
+
 export default function TranscriptUpload() {
   const { addCourses } = useCourses()
   const [file, setFile] = useState(null)
@@ -22,7 +24,7 @@ export default function TranscriptUpload() {
     try {
       const formData = new FormData()
       formData.append('file', file)
-      const res = await axios.post('/api/transcript/upload/', formData, {
+      const res = await axios.post(`${API_BASE}/api/transcript/upload/`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
       setParsed(res.data)
