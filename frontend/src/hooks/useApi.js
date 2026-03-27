@@ -1,19 +1,21 @@
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
+const API_BASE = import.meta.env.VITE_API_URL || ''
 const cache = new Map()
 
 function useFetch(url) {
-  const [data, setData] = useState(() => (url && cache.has(url) ? cache.get(url) : null))
+  const fullUrl = url ? `${API_BASE}${url}` : null
+  const [data, setData] = useState(() => (fullUrl && cache.has(fullUrl) ? cache.get(fullUrl) : null))
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  const prevUrl = useRef(url)
+  const prevUrl = useRef(fullUrl)
 
   useEffect(() => {
-    if (!url) return
+    if (!fullUrl) return
 
-    if (cache.has(url)) {
-      setData(cache.get(url))
+    if (cache.has(fullUrl)) {
+      setData(cache.get(fullUrl))
       setLoading(false)
       setError(null)
       return
@@ -24,9 +26,9 @@ function useFetch(url) {
     setError(null)
 
     axios
-      .get(url)
+      .get(fullUrl)
       .then((res) => {
-        cache.set(url, res.data)
+        cache.set(fullUrl, res.data)
         if (!cancelled) setData(res.data)
       })
       .catch((err) => {
@@ -39,7 +41,7 @@ function useFetch(url) {
     return () => {
       cancelled = true
     }
-  }, [url])
+  }, [fullUrl])
 
   return { data, loading, error }
 }
