@@ -541,6 +541,10 @@ class MajorStatsView(APIView):
 
 
 CC_NAMES = {
+    'ahc': 'Allan Hancock College',
+    'alameda': 'College of Alameda',
+    'arc': 'American River College',
+    'avc': 'Antelope Valley College',
     'sbcc': 'Santa Barbara City College',
 }
 
