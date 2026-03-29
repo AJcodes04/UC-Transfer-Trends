@@ -6,6 +6,8 @@ import {
 import { IconX } from '@tabler/icons-react'
 import axios from 'axios'
 import { useSavedCombos, useGPA } from '../hooks/useUserData'
+
+const API_BASE = import.meta.env.VITE_API_URL || ''
 import { UC_COLORS } from '../utils/ucColors'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
@@ -29,7 +31,7 @@ export default function SavedItems() {
 
     Promise.all(
       uniqueMajors.map((major) =>
-        axios.get(`/api/stats/by-major/${encodeURIComponent(major)}/`)
+        axios.get(`${API_BASE}/api/stats/by-major/${encodeURIComponent(major)}/`)
           .then((res) => ({ major, data: res.data }))
           .catch(() => ({ major, data: [] }))
       )

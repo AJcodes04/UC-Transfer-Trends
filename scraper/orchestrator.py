@@ -23,6 +23,7 @@ WHY no Playwright needed:
   Plain HTTP is faster, more reliable, and has zero browser overhead.
 """
 
+import asyncio
 import logging
 import re
 from typing import Optional
@@ -104,8 +105,12 @@ async def _scrape_one_cc(
     target_year: str,
     year_id: int,
     major_filter: Optional[str] = None,
-) -> None:
-    """Scrape all UC targets for a single community college."""
+    semaphore: Optional[asyncio.Semaphore] = None,
+) -> dict:
+    """Scrape all UC targets for a single community college.
+    Returns a dict with success/failed/skipped counts for this CC."""
+    counts = {"success": 0, "failed": 0, "skipped": 0}
+
     for uc_code, uc_info in targets:
         logger.info(f"\n{'='*60}")
         logger.info(f"Scraping: {cc['name']} → {uc_info['name']} ({target_year})")
@@ -113,11 +118,19 @@ async def _scrape_one_cc(
 
         try:
             # Step 1: Get list of majors with agreements
-            data = await client.get_agreements_for_institution(
-                receiving_id=uc_info["id"],
-                sending_id=cc["id"],
-                year_id=year_id,
-            )
+            if semaphore:
+                async with semaphore:
+                    data = await client.get_agreements_for_institution(
+                        receiving_id=uc_info["id"],
+                        sending_id=cc["id"],
+                        year_id=year_id,
+                    )
+            else:
+                data = await client.get_agreements_for_institution(
+                    receiving_id=uc_info["id"],
+                    sending_id=cc["id"],
+                    year_id=year_id,
+                )
             reports = data.get("reports", []) if isinstance(data, dict) else data
 
             if not reports:
@@ -138,13 +151,18 @@ async def _scrape_one_cc(
                 # Skip if already scraped (resume support)
                 if tracker.is_already_scraped(sending_code, uc_code, target_year, major_name):
                     logger.info(f"  [{i+1}/{len(reports)}] Skipping (already scraped): {major_name}")
+                    counts["skipped"] += 1
                     continue
 
                 logger.info(f"  [{i+1}/{len(reports)}] Scraping: {major_name}")
 
                 try:
-                    # Fetch full agreement via HTTP
-                    detail = await client.get_agreement_detail(major_key)
+                    # Fetch full agreement via HTTP (rate-limited by semaphore)
+                    if semaphore:
+                        async with semaphore:
+                            detail = await client.get_agreement_detail(major_key)
+                    else:
+                        detail = await client.get_agreement_detail(major_key)
 
                     # Parse API response into Agreement model
                     agreement = parse_agreement_from_api(
@@ -164,6 +182,7 @@ async def _scrape_one_cc(
                             sending_code, uc_code, target_year, major_name,
                             reason="No articulation data found"
                         )
+                        counts["skipped"] += 1
                         continue
 
                     # Save as JSON
@@ -171,15 +190,19 @@ async def _scrape_one_cc(
                     tracker.mark_complete(
                         sending_code, uc_code, target_year, major_name, file_path
                     )
+                    counts["success"] += 1
 
                 except Exception as e:
                     logger.error(f"    Failed to scrape {major_name}: {e}")
                     tracker.mark_failed(
                         sending_code, uc_code, target_year, major_name, str(e)
                     )
+                    counts["failed"] += 1
 
         except Exception as e:
             logger.error(f"Failed to process {uc_code}: {e}")
+
+    return counts
 
 
 async def scrape_agreements(
@@ -189,6 +212,7 @@ async def scrape_agreements(
     major_filter: Optional[str] = None,
     headless: bool = True,
     debug: bool = False,
+    workers: int = 1,
 ) -> dict:
     """
     Main scraping orchestrator — fetches articulation data via pure HTTP.
@@ -199,6 +223,7 @@ async def scrape_agreements(
       target_year: Academic year string (e.g., "2024-25")
       major_filter: If set, only scrape majors containing this string (case-insensitive)
       headless/debug: Kept for CLI compatibility but unused (no browser needed)
+      workers: Number of CCs to scrape concurrently (default: 1)
 
     Returns a summary dict with counts of success/failed/skipped.
     """
@@ -237,19 +262,45 @@ async def scrape_agreements(
     tracker = ManifestTracker()
     tracker.load()
 
-    logger.info(f"Scraping {len(senders)} CC(s) → {len(targets)} UC(s) for {target_year}")
+    logger.info(f"Scraping {len(senders)} CC(s) → {len(targets)} UC(s) for {target_year} with {workers} worker(s)")
+
+    # Semaphore limits concurrent API requests across all workers.
+    # Each worker processes a different CC but they share the rate limit.
+    # workers=4 means up to 4 API calls can be in-flight at once.
+    semaphore = asyncio.Semaphore(workers) if workers > 1 else None
 
     # Single HTTP client for all requests (connection reuse = faster)
     async with AssistAPIClient() as client:
-        for cc_code, cc_info in senders:
-            logger.info(f"\n{'#'*60}")
-            logger.info(f"Community College: {cc_info['name']} ({cc_code})")
-            logger.info(f"{'#'*60}")
+        if workers <= 1:
+            # Sequential mode — same as before
+            for cc_code, cc_info in senders:
+                logger.info(f"\n{'#'*60}")
+                logger.info(f"Community College: {cc_info['name']} ({cc_code})")
+                logger.info(f"{'#'*60}")
 
-            await _scrape_one_cc(
-                client, tracker, cc_code, cc_info,
-                targets, target_year, year_id, major_filter,
-            )
+                await _scrape_one_cc(
+                    client, tracker, cc_code, cc_info,
+                    targets, target_year, year_id, major_filter,
+                )
+        else:
+            # Parallel mode — process multiple CCs concurrently
+            async def _worker(cc_code, cc_info):
+                logger.info(f"\n{'#'*60}")
+                logger.info(f"[WORKER] Community College: {cc_info['name']} ({cc_code})")
+                logger.info(f"{'#'*60}")
+                return await _scrape_one_cc(
+                    client, tracker, cc_code, cc_info,
+                    targets, target_year, year_id, major_filter,
+                    semaphore=semaphore,
+                )
+
+            # Process in batches of `workers` size to avoid spawning
+            # 116 coroutines at once
+            batch_size = workers
+            for i in range(0, len(senders), batch_size):
+                batch = senders[i:i + batch_size]
+                tasks = [_worker(code, info) for code, info in batch]
+                await asyncio.gather(*tasks, return_exceptions=True)
 
     # Print summary
     summary = tracker.summary()

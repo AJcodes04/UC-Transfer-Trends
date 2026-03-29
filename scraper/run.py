@@ -132,6 +132,7 @@ async def cmd_scrape(args: argparse.Namespace) -> None:
         major_filter=args.major,
         headless=not args.headful,
         debug=args.debug,
+        workers=args.workers,
     )
 
     print(f"\nResults: {summary}")
@@ -240,6 +241,10 @@ def build_parser() -> argparse.ArgumentParser:
     scrape_parser.add_argument(
         "--debug", action="store_true",
         help="Save screenshots and extra debug info",
+    )
+    scrape_parser.add_argument(
+        "--workers", type=int, default=1,
+        help="Number of CCs to scrape concurrently (default: 1)",
     )
 
     # --- list-institutions ---

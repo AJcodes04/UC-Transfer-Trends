@@ -175,8 +175,8 @@ UC_INSTITUTIONS: dict[str, dict] = {
 PAGE_DELAY = 2.0
 
 # Delay between API calls (seconds). assist.org returns 429 if we go too fast.
-# 2s between requests keeps us safely under their rate limit.
-API_DELAY = 2.0
+# 0.5s per request is safe when combined with the semaphore limiting concurrency.
+API_DELAY = 0.5
 
 # Retry settings for failed requests/navigations.
 # Uses exponential backoff: 2s → 4s → 8s
