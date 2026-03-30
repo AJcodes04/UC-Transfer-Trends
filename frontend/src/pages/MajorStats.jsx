@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Table, Loader, Alert, Text,
-  Paper, UnstyledButton, Group, Button, Stack, Badge, Switch, ActionIcon,
+  Paper, UnstyledButton, Group, Button, Stack, Badge, ActionIcon,
 } from '@mantine/core'
 import { IconStar, IconStarFilled } from '@tabler/icons-react'
 import { useMajorStats, useGroupedMajors } from '../hooks/useApi'
@@ -17,39 +17,33 @@ export default function MajorStats() {
   const { data: groupedMajors, loading: majorsLoading } = useGroupedMajors()
   const decodedMajor = splatParam ? decodeURIComponent(splatParam) : null
   const { data: stats, loading, error } = useMajorStats(decodedMajor)
-  const [hideDiscontinued, setHideDiscontinued] = useState(true)
-
-  const DISCONTINUED_BEFORE = 2022
-
   const groupedByLetter = useMemo(() => {
     if (!groupedMajors) return {}
     const groups = {}
     groupedMajors.forEach((m) => {
-      if (hideDiscontinued && m.latest_year < DISCONTINUED_BEFORE && m.campuses.length <= 1) return
       const letter = m.name[0].toUpperCase()
       if (!groups[letter]) groups[letter] = []
       groups[letter].push(m)
     })
     Object.values(groups).forEach((arr) => arr.sort((a, b) => a.name.localeCompare(b.name)))
     return groups
-  }, [groupedMajors, hideDiscontinued])
+  }, [groupedMajors])
 
   const letters = Object.keys(groupedByLetter).sort()
 
   const relatedMajors = useMemo(() => {
     if (!groupedMajors || !decodedMajor) return []
-    const isJunk = (r) => hideDiscontinued && r.latest_year < DISCONTINUED_BEFORE && (r.campuses?.length ?? 0) <= 1
     const group = groupedMajors.find((g) => g.name === decodedMajor)
-    if (group) return group.related.filter((r) => !isJunk(r))
+    if (group) return group.related
     const parent = groupedMajors.find((g) => g.related.some((r) => r.name === decodedMajor))
     if (parent) {
       return [
         { name: parent.name, campuses: parent.campuses, latest_year: parent.latest_year },
-        ...parent.related.filter((r) => r.name !== decodedMajor && !isJunk(r)),
+        ...parent.related.filter((r) => r.name !== decodedMajor),
       ]
     }
     return []
-  }, [groupedMajors, decodedMajor, hideDiscontinued])
+  }, [groupedMajors, decodedMajor])
 
   const [selectedUCs, setSelectedUCs] = useState([])
 
@@ -121,15 +115,7 @@ export default function MajorStats() {
   if (!decodedMajor) {
     return (
       <>
-        <Group justify="space-between" mb="md">
-          <Title order={2}>By Major</Title>
-          <Switch
-            label="Hide discontinued majors"
-            checked={hideDiscontinued}
-            onChange={(e) => setHideDiscontinued(e.currentTarget.checked)}
-            size="sm"
-          />
-        </Group>
+        <Title order={2} mb="md">By Major</Title>
 
         <Group gap={6} mb="lg">
           {letters.map((letter) => (
@@ -153,9 +139,7 @@ export default function MajorStats() {
               <Title order={4} mb="xs" c="blue">{letter}</Title>
               <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }}>
                 {groupedByLetter[letter].map((m) => {
-                  const visibleRelated = hideDiscontinued
-                    ? m.related.filter((r) => !(r.latest_year < DISCONTINUED_BEFORE && r.campuses.length <= 1))
-                    : m.related
+                  const visibleRelated = m.related
                   return (
                   <UnstyledButton key={m.name} onClick={() => navigate(`/major/${encodeURIComponent(m.name)}`)}>
                     <Paper

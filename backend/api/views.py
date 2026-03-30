@@ -279,6 +279,7 @@ MAJOR_ABSORPTIONS = {
         'Computer Science with Business Applications',
         'Software Engineering',
         'Linguistics & Computer Science',
+        'Computer Game Science',
     ],
     'Cognitive Science': [
         'Pre-Cognitive Science',

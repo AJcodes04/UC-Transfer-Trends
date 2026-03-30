@@ -98,8 +98,8 @@ export default function SchoolStats() {
   if (!school) {
     return (
       <>
-        <Title order={2} mb="md">By School</Title>
-        <Text c="dimmed" mb="lg">Select a campus to view college-level statistics.</Text>
+        <Title order={2} mb="md">By College/School</Title>
+        <Text c="dimmed" mb="lg">Select a campus to view college/school-level statistics.</Text>
         <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }}>
           {CAMPUSES.map((campus) => (
             <UnstyledButton key={campus.code} onClick={() => navigate(`/school/${campus.code}`)}>

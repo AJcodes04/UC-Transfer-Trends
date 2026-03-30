@@ -1,7 +1,7 @@
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
-  Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton, Switch, Group,
+  Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton, Group,
 } from '@mantine/core'
 import { useCampusMajorStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
@@ -23,10 +23,6 @@ export default function CampusMajors() {
   const { campus } = useParams()
   const navigate = useNavigate()
   const { data: stats, loading, error } = useCampusMajorStats(campus)
-  const [hideDiscontinued, setHideDiscontinued] = useState(true)
-
-  const DISCONTINUED_BEFORE = 2022
-
   const majorInfo = useMemo(() => {
     if (!stats) return {}
     const info = {}
@@ -40,17 +36,10 @@ export default function CampusMajors() {
     return info
   }, [stats])
 
-  const isDiscontinuedJunk = (name) => {
-    const m = majorInfo[name]
-    return m && m.latestYear < DISCONTINUED_BEFORE && m.years.size <= 1
-  }
-
   const allMajors = useMemo(() => {
     if (!stats) return []
-    const names = [...new Set(stats.map((s) => s.major_name))].sort()
-    if (hideDiscontinued) return names.filter((n) => !isDiscontinuedJunk(n))
-    return names
-  }, [stats, majorInfo, hideDiscontinued])
+    return [...new Set(stats.map((s) => s.major_name))].sort()
+  }, [stats])
 
   const topMajors = useMemo(() => {
     const validSet = new Set(allMajors)
@@ -160,22 +149,15 @@ export default function CampusMajors() {
   return (
     <>
       <Title order={2} mb="md">Campus Majors: {campusName}</Title>
-      <Group justify="space-between" mb="md">
-        <Text
-          c="dimmed"
-          size="sm"
-          style={{ cursor: 'pointer' }}
-          onClick={() => navigate('/campus')}
-        >
-          &larr; Back to all campuses
-        </Text>
-        <Switch
-          label="Hide discontinued majors"
-          checked={hideDiscontinued}
-          onChange={(e) => setHideDiscontinued(e.currentTarget.checked)}
-          size="sm"
-        />
-      </Group>
+      <Text
+        c="dimmed"
+        size="sm"
+        mb="md"
+        style={{ cursor: 'pointer' }}
+        onClick={() => navigate('/campus')}
+      >
+        &larr; Back to all campuses
+      </Text>
 
       {loading && <Loader m="xl" />}
       {error && <Alert color="red" title="Error">{error}</Alert>}

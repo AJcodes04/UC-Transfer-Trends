@@ -1,7 +1,8 @@
 import { Routes, Route, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import {
-  AppShell, NavLink as MantineNavLink, Title, Group, Text, Divider, ScrollArea,
+  AppShell, NavLink as MantineNavLink, Title, Group, Text, Divider, ScrollArea, Burger,
 } from '@mantine/core'
+import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import {
   IconChartBar, IconSchool, IconBook, IconBuildingCommunity,
   IconFileText, IconUser, IconBookmark,
@@ -19,7 +20,7 @@ const NAV_SECTIONS = [
     label: 'Stats Dashboard',
     items: [
       { label: 'General Stats', path: '/', icon: IconChartBar },
-      { label: 'By School', path: '/school', icon: IconSchool },
+      { label: 'By College/School', path: '/school', icon: IconSchool },
       { label: 'By Major', path: '/major', icon: IconBook },
       { label: 'By Campus', path: '/campus', icon: IconBuildingCommunity },
     ],
@@ -41,19 +42,39 @@ const NAV_SECTIONS = [
 
 export default function App() {
   const location = useLocation()
+  const [opened, { toggle, close }] = useDisclosure()
+  const isMobile = useMediaQuery('(max-width: 48em)')
 
   return (
     <AppShell
-      navbar={{ width: 240, breakpoint: 0 }}
+      header={isMobile ? { height: 60 } : undefined}
+      navbar={{ width: 240, breakpoint: 'sm', collapsed: { mobile: !opened } }}
       footer={{ height: 50 }}
       padding="md"
     >
+      <AppShell.Header hiddenFrom="sm" style={{ backgroundColor: '#003262' }}>
+        <Group h="100%" px="md">
+          <Burger opened={opened} onClick={toggle} color="white" size="sm" />
+          <Title
+            order={4} c="white"
+            style={{ cursor: 'pointer', textDecoration: 'none' }}
+            component={NavLink}
+            to="/"
+            onClick={close}
+          >
+            UC Transfer Trends
+          </Title>
+        </Group>
+      </AppShell.Header>
+
       <AppShell.Navbar p="xs" style={{ backgroundColor: '#003262' }}>
         <Title
           order={4} c="white" mb="md" px={4}
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer', textDecoration: 'none' }}
           component={NavLink}
           to="/"
+          onClick={close}
+          visibleFrom="sm"
         >
           UC Transfer Trends
         </Title>
@@ -77,6 +98,7 @@ export default function App() {
                     active={isActive}
                     component={NavLink}
                     to={item.path}
+                    onClick={close}
                     styles={{
                       root: { borderRadius: 6 },
                       label: { color: 'white' },
