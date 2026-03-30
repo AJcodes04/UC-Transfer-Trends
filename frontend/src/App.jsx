@@ -49,7 +49,7 @@ export default function App() {
     <AppShell
       header={isMobile ? { height: 60 } : undefined}
       navbar={{ width: 240, breakpoint: 'sm', collapsed: { mobile: !opened } }}
-      footer={{ height: 50 }}
+      footer={{ height: 70 }}
       padding="md"
     >
       <AppShell.Header hiddenFrom="sm" style={{ backgroundColor: '#003262' }}>
@@ -130,9 +130,12 @@ export default function App() {
         </Routes>
       </AppShell.Main>
 
-      <AppShell.Footer p="sm" style={{ backgroundColor: '#003262' }}>
+      <AppShell.Footer pt="sm" pb="md" px="sm" style={{ backgroundColor: '#003262' }}>
         <Text ta="center" c="white" size="sm">
           Data sourced from the University of California
+        </Text>
+        <Text ta="center" c="rgba(255,255,255,0.6)" size="xs">
+          Note: The UC system may not publish all transfer data. Some majors or years may be incomplete or missing.
         </Text>
       </AppShell.Footer>
     </AppShell>

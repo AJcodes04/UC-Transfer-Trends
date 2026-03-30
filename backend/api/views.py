@@ -546,6 +546,10 @@ CC_NAMES = {
     'alameda': 'College of Alameda',
     'arc': 'American River College',
     'avc': 'Antelope Valley College',
+    'bakerfld': 'Bakersfield College',
+    'barstow': 'Barstow Community College',
+    'butte': 'Butte College',
+    'cabrillo': 'Cabrillo College',
     'sbcc': 'Santa Barbara City College',
 }
 
