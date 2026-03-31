@@ -18,13 +18,14 @@ UC Transfer Trends helps future transfer students and researchers visualize how 
 ## Images
 
 **General Transfer Acceptance Rates**
-<img width="1512" height="828" alt="Screenshot 2026-02-23 at 2 18 11 PM" src="https://github.com/user-attachments/assets/bc1fbd86-9f5a-4b98-8d95-e9afdf6eea4c" />
+<img width="1512" height="860" alt="Screenshot 2026-03-31 at 1 27 51 PM" src="https://github.com/user-attachments/assets/019d152a-ff4b-4081-a222-7e1137fac6fe" />
 
 **Per Major Acceptance Rates**
-<img width="1512" height="827" alt="Screenshot 2026-02-23 at 2 12 52 PM" src="https://github.com/user-attachments/assets/d97aabb0-2b73-4562-b44f-d0c15d2801c5" />
+<img width="1511" height="861" alt="Screenshot 2026-03-31 at 1 30 08 PM" src="https://github.com/user-attachments/assets/a71eb08e-b090-4de7-b095-ec2cdc689d2a" />
 
-**Major Acceptance Rates Per UC Campus**
-<img width="1512" height="828" alt="Screenshot 2026-02-23 at 2 11 13 PM" src="https://github.com/user-attachments/assets/14bd2c36-4845-4962-a733-45c2367a73e8" />
+
+**Major GPA Ranges/Acceptance Rates Per UC Campus**
+<img width="1510" height="862" alt="Screenshot 2026-03-31 at 1 31 01 PM" src="https://github.com/user-attachments/assets/3721cc92-0664-4843-acf4-6d4f093e6a14" />
 
 **Transfer Requirments**
 <img width="1512" height="861" alt="Screenshot 2026-03-31 at 1 22 35 PM" src="https://github.com/user-attachments/assets/e5b909f8-8d28-415d-98bb-4bc41e7deaab" />
