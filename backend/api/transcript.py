@@ -17,7 +17,8 @@ except ImportError:
     HAS_PDFPLUMBER = False
 
 
-COURSE_LINE_RE = re.compile(
+# Format A: PREFIX NUMBER TITLE UNITS GRADE (units before grade, all one line)
+COURSE_LINE_RE_A = re.compile(
     r'(?P<prefix>[A-Z]{2,6})\s+'
     r'(?P<number>\d{1,4}[A-Z]?)\s+'
     r'(?P<title>.+?)\s+'
@@ -25,6 +26,18 @@ COURSE_LINE_RE = re.compile(
     r'(?P<grade>[A-F][+-]?|P|NP|W|CR|NC|I|IP)',
     re.IGNORECASE,
 )
+
+# Format B: PREFIX NUMBER CR TITLE GRADE (SBCC-style, units on next line)
+COURSE_LINE_RE_B = re.compile(
+    r'(?P<prefix>[A-Z]{2,6})\s+'
+    r'(?P<number>\d{1,4}[A-Z]?)\s+'
+    r'(?:CR\s+)'
+    r'(?P<title>.+?)\s+'
+    r'(?P<grade>[A-F][+-]?|P|NP|W|I|IP)$',
+)
+
+# Standalone units line (e.g. "4.000 10.80")
+UNITS_LINE_RE = re.compile(r'^\s*(?P<units>\d+\.\d{3})\s+\d+\.\d+\s*$')
 
 
 class TranscriptUploadView(APIView):
@@ -54,18 +67,35 @@ class TranscriptUploadView(APIView):
             with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
                 for page in pdf.pages:
                     text = page.extract_text() or ''
-                    for line in text.split('\n'):
-                        match = COURSE_LINE_RE.search(line)
-                        if not match:
+                    lines = text.split('\n')
+                    for idx, line in enumerate(lines):
+                        # Try format B first (SBCC-style: grade at end, units on next line)
+                        match = COURSE_LINE_RE_B.search(line.strip())
+                        if match:
+                            units = 0.0
+                            if idx + 1 < len(lines):
+                                units_match = UNITS_LINE_RE.match(lines[idx + 1])
+                                if units_match:
+                                    units = float(units_match.group('units'))
+                            raw_entries.append({
+                                'prefix': match.group('prefix').upper(),
+                                'number': match.group('number').upper(),
+                                'title': match.group('title').strip(),
+                                'units': units,
+                                'grade': match.group('grade').upper(),
+                            })
                             continue
 
-                        raw_entries.append({
-                            'prefix': match.group('prefix').upper(),
-                            'number': match.group('number').upper(),
-                            'title': match.group('title').strip(),
-                            'units': float(match.group('units')),
-                            'grade': match.group('grade').upper(),
-                        })
+                        # Fallback: format A (units before grade, one line)
+                        match = COURSE_LINE_RE_A.search(line)
+                        if match:
+                            raw_entries.append({
+                                'prefix': match.group('prefix').upper(),
+                                'number': match.group('number').upper(),
+                                'title': match.group('title').strip(),
+                                'units': float(match.group('units')),
+                                'grade': match.group('grade').upper(),
+                            })
 
             grade_rank = {
                 'F': 0, 'D-': 1, 'D': 2, 'D+': 3,
