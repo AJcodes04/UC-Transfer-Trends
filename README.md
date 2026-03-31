@@ -26,8 +26,10 @@ UC Transfer Trends helps future transfer students and researchers visualize how 
 **Major Acceptance Rates Per UC Campus**
 <img width="1512" height="828" alt="Screenshot 2026-02-23 at 2 11 13 PM" src="https://github.com/user-attachments/assets/14bd2c36-4845-4962-a733-45c2367a73e8" />
 
-**College/School Acceptance Rates Per UC Campus**
-<img width="1512" height="827" alt="Screenshot 2026-02-23 at 2 22 55 PM" src="https://github.com/user-attachments/assets/ed4cc1e4-0caa-4830-b110-52fdded09f56" />
+**Transfer Requirments**
+<img width="1512" height="861" alt="Screenshot 2026-03-31 at 1 22 35 PM" src="https://github.com/user-attachments/assets/e5b909f8-8d28-415d-98bb-4bc41e7deaab" />
+<img width="1512" height="861" alt="Screenshot 2026-03-31 at 1 23 07 PM" src="https://github.com/user-attachments/assets/87ef55e4-5314-4ea2-a8d1-aa40c3dfdd77" />
+
 
 ## Tech Stack
 
