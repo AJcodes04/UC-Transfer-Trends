@@ -58,6 +58,27 @@ export default function GeneralStats() {
     return avg.toFixed(1) + '%'
   }, [schoolTotals])
 
+  const yearlyTotals = useMemo(() => {
+    if (!stats) return { latest: null, prev: null }
+    const byYear = {}
+    stats.forEach((row) => {
+      if (!byYear[row.year]) byYear[row.year] = { applicants: 0, admits: 0, enrolls: 0 }
+      byYear[row.year].applicants += row.applicants || 0
+      byYear[row.year].admits += row.admits || 0
+      byYear[row.year].enrolls += row.enrolls || 0
+    })
+    const years = Object.keys(byYear).map(Number).sort((a, b) => b - a)
+    return {
+      latest: years[0] ? { year: years[0], ...byYear[years[0]] } : null,
+      prev: years[1] ? { year: years[1], ...byYear[years[1]] } : null,
+    }
+  }, [stats])
+
+  function yoyChange(latest, prev) {
+    if (!latest || !prev || prev === 0) return null
+    return ((latest - prev) / prev * 100).toFixed(1)
+  }
+
   if (loading) return <Loader m="xl" />
   if (error) return <Alert color="red" title="Error">{error}</Alert>
 
@@ -76,16 +97,22 @@ export default function GeneralStats() {
       <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
         <StatsCard title="Overall Avg Admit Rate" value={overallAvg} />
         <StatsCard
-          title="Total Applicants"
-          value={schoolTotals.reduce((s, t) => s + t.applicants, 0).toLocaleString()}
+          title={`Applicants (${yearlyTotals.latest?.year || ''})`}
+          value={yearlyTotals.latest?.applicants.toLocaleString() || '-'}
+          change={yoyChange(yearlyTotals.latest?.applicants, yearlyTotals.prev?.applicants)}
+          subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.applicants.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
         />
         <StatsCard
-          title="Total Admits"
-          value={schoolTotals.reduce((s, t) => s + t.admits, 0).toLocaleString()}
+          title={`Admits (${yearlyTotals.latest?.year || ''})`}
+          value={yearlyTotals.latest?.admits.toLocaleString() || '-'}
+          change={yoyChange(yearlyTotals.latest?.admits, yearlyTotals.prev?.admits)}
+          subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.admits.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
         />
         <StatsCard
-          title="Total Enrolls"
-          value={schoolTotals.reduce((s, t) => s + t.enrolls, 0).toLocaleString()}
+          title={`Enrolls (${yearlyTotals.latest?.year || ''})`}
+          value={yearlyTotals.latest?.enrolls.toLocaleString() || '-'}
+          change={yoyChange(yearlyTotals.latest?.enrolls, yearlyTotals.prev?.enrolls)}
+          subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.enrolls.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
         />
       </SimpleGrid>
 

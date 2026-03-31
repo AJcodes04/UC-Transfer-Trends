@@ -87,6 +87,28 @@ export default function SchoolStats() {
     })).sort((a, b) => a.college.localeCompare(b.college))
   }, [stats, activeColleges])
 
+  const yearlyTotals = useMemo(() => {
+    if (!stats) return { latest: null, prev: null }
+    const byYear = {}
+    stats.forEach((row) => {
+      if (!activeColleges.includes(row.college_school)) return
+      if (!byYear[row.year]) byYear[row.year] = { applicants: 0, admits: 0, enrolls: 0 }
+      byYear[row.year].applicants += row.total_applicants || 0
+      byYear[row.year].admits += row.total_admits || 0
+      byYear[row.year].enrolls += row.total_enrolls || 0
+    })
+    const years = Object.keys(byYear).map(Number).sort((a, b) => b - a)
+    return {
+      latest: years[0] ? { year: years[0], ...byYear[years[0]] } : null,
+      prev: years[1] ? { year: years[1], ...byYear[years[1]] } : null,
+    }
+  }, [stats, activeColleges])
+
+  function yoyChange(latest, prev) {
+    if (!latest || !prev || prev === 0) return null
+    return ((latest - prev) / prev * 100).toFixed(1)
+  }
+
   const validColleges = collegeTotals.filter((c) => c.avgRate !== 'N/A')
   const mostCompetitive = validColleges.length
     ? validColleges.reduce((a, b) => (parseFloat(a.avgRate) < parseFloat(b.avgRate) ? a : b))
@@ -171,8 +193,10 @@ export default function SchoolStats() {
               />
             )}
             <StatsCard
-              title="Total Applicants"
-              value={collegeTotals.reduce((s, c) => s + c.applicants, 0).toLocaleString()}
+              title={`Applicants (${yearlyTotals.latest?.year || ''})`}
+              value={yearlyTotals.latest?.applicants.toLocaleString() || '-'}
+              change={yoyChange(yearlyTotals.latest?.applicants, yearlyTotals.prev?.applicants)}
+              subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.applicants.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
             />
           </SimpleGrid>
 
