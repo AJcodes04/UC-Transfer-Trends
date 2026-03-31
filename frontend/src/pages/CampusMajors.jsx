@@ -1,7 +1,7 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
-  Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton, Group,
+  Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton, Group, Slider,
 } from '@mantine/core'
 import { useCampusMajorStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
@@ -24,6 +24,58 @@ export default function CampusMajors() {
   const navigate = useNavigate()
   const { data: stats, loading, error } = useCampusMajorStats(campus)
   const [yAxis, setYAxis] = useState('admitRate')
+  const [selectedYear, setSelectedYear] = useState(null)
+
+  const availableYears = useMemo(() => {
+    if (!stats) return []
+    return [...new Set(stats.map((s) => s.year))].sort((a, b) => a - b)
+  }, [stats])
+
+  useEffect(() => {
+    if (availableYears.length && selectedYear === null) {
+      setSelectedYear(availableYears[availableYears.length - 1])
+    }
+  }, [availableYears])
+
+  const yearMarks = useMemo(() => {
+    return availableYears.map((y) => ({ value: y, label: String(y) }))
+  }, [availableYears])
+
+  const yearFilteredTotals = useMemo(() => {
+    if (!stats || !selectedYear) return []
+    const filtered = stats.filter((row) => row.year === selectedYear)
+    const totals = {}
+    filtered.forEach((row) => {
+      if (!totals[row.major_name]) {
+        totals[row.major_name] = {
+          applicants: 0, admits: 0, enrolls: 0,
+          rateSum: 0, count: 0,
+          gpaMin: null, gpaMax: null,
+        }
+      }
+      const t = totals[row.major_name]
+      t.applicants += row.total_applicants || 0
+      t.admits += row.total_admits || 0
+      t.enrolls += row.total_enrolls || 0
+      if (row.avg_admit_rate != null) { t.rateSum += row.avg_admit_rate; t.count++ }
+      if (row.avg_admit_gpa_min != null) {
+        t.gpaMin = parseFloat(row.avg_admit_gpa_min)
+        t.gpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+      }
+    })
+    return Object.entries(totals).map(([major, t]) => ({
+      major,
+      applicants: t.applicants,
+      admits: t.admits,
+      enrolls: t.enrolls,
+      admitRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
+      yieldRate: t.admits > 0 ? `${Math.round(t.enrolls / t.admits * 100)}%` : 'N/A',
+      gpaRange: t.gpaMin != null
+        ? `${t.gpaMin.toFixed(2)} - ${t.gpaMax != null ? t.gpaMax.toFixed(2) : '?'}`
+        : 'N/A',
+    })).sort((a, b) => a.major.localeCompare(b.major))
+  }, [stats, selectedYear])
+
   const majorInfo = useMemo(() => {
     if (!stats) return {}
     const info = {}
@@ -202,28 +254,51 @@ export default function CampusMajors() {
           />
 
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
-            <StatsCard title="Majors Offered" value={allMajors.length} />
-            {mostCompetitive && (
-              <StatsCard
-                title="Most Competitive"
-                value={mostCompetitive.major}
-                subtitle={`${mostCompetitive.avgRate}% avg admit rate`}
-              />
-            )}
-            {leastCompetitive && (
-              <StatsCard
-                title="Least Competitive"
-                value={leastCompetitive.major}
-                subtitle={`${leastCompetitive.avgRate}% avg admit rate`}
-              />
-            )}
+            <StatsCard title="Majors Offered" value={yearFilteredTotals.length} />
+            {(() => {
+              const valid = yearFilteredTotals.filter((m) => m.admitRate !== 'N/A')
+              const most = valid.length ? valid.reduce((a, b) => (parseFloat(a.admitRate) < parseFloat(b.admitRate) ? a : b)) : null
+              return most ? (
+                <StatsCard
+                  title="Most Competitive"
+                  value={most.major}
+                  subtitle={`${most.admitRate}% admit rate`}
+                />
+              ) : null
+            })()}
+            {(() => {
+              const valid = yearFilteredTotals.filter((m) => m.admitRate !== 'N/A')
+              const least = valid.length ? valid.reduce((a, b) => (parseFloat(a.admitRate) > parseFloat(b.admitRate) ? a : b)) : null
+              return least ? (
+                <StatsCard
+                  title="Least Competitive"
+                  value={least.major}
+                  subtitle={`${least.admitRate}% admit rate`}
+                />
+              ) : null
+            })()}
             <StatsCard
               title="Total Applicants"
-              value={majorTotals.reduce((s, m) => s + m.applicants, 0).toLocaleString()}
+              value={yearFilteredTotals.reduce((s, m) => s + m.applicants, 0).toLocaleString()}
             />
           </SimpleGrid>
 
-          <Title order={4} mb="sm">By Major</Title>
+          <Group justify="space-between" align="center" mb="sm">
+            <Title order={4}>By Major</Title>
+            <Text size="sm" c="dimmed">{selectedYear || 'All Years'}</Text>
+          </Group>
+          {availableYears.length > 1 && (
+            <Slider
+              value={selectedYear || availableYears[0]}
+              onChange={setSelectedYear}
+              min={availableYears[0]}
+              max={availableYears[availableYears.length - 1]}
+              step={1}
+              marks={yearMarks}
+              mb="xl"
+              styles={{ markLabel: { fontSize: 10 } }}
+            />
+          )}
           <Table striped highlightOnHover stickyHeader stickyHeaderOffset={0}>
             <Table.Thead>
               <Table.Tr>
@@ -231,23 +306,21 @@ export default function CampusMajors() {
                 <Table.Th>Applicants</Table.Th>
                 <Table.Th>Admits</Table.Th>
                 <Table.Th>Enrolls</Table.Th>
-                <Table.Th>Avg Admit Rate</Table.Th>
-                <Table.Th>Latest Admit Rate</Table.Th>
+                <Table.Th>Admit Rate</Table.Th>
                 <Table.Th>Yield Rate</Table.Th>
-                <Table.Th>Latest GPA Range</Table.Th>
+                <Table.Th>GPA Range</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
-              {majorTotals.map((row) => (
+              {yearFilteredTotals.map((row) => (
                 <Table.Tr key={row.major}>
                   <Table.Td>{row.major}</Table.Td>
                   <Table.Td>{row.applicants.toLocaleString()}</Table.Td>
                   <Table.Td>{row.admits.toLocaleString()}</Table.Td>
                   <Table.Td>{row.enrolls.toLocaleString()}</Table.Td>
-                  <Table.Td>{row.avgRate}%</Table.Td>
-                  <Table.Td>{row.latestRate}</Table.Td>
-                  <Table.Td>{row.admits > 0 ? `${Math.round(row.enrolls / row.admits * 100)}%` : 'N/A'}</Table.Td>
-                  <Table.Td>{row.latestGpaRange}</Table.Td>
+                  <Table.Td>{row.admitRate}%</Table.Td>
+                  <Table.Td>{row.yieldRate}</Table.Td>
+                  <Table.Td>{row.gpaRange}</Table.Td>
                 </Table.Tr>
               ))}
             </Table.Tbody>

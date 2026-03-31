@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react'
-import { Title, SimpleGrid, Table, Loader, Alert } from '@mantine/core'
+import { useState, useMemo, useEffect } from 'react'
+import { Title, SimpleGrid, Table, Loader, Alert, Slider, Text, Group } from '@mantine/core'
 import { useGeneralStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
@@ -13,6 +13,7 @@ const Y_AXIS_OPTIONS = [
 export default function GeneralStats() {
   const { data: stats, loading, error } = useGeneralStats()
   const [yAxis, setYAxis] = useState('admitRate')
+  const [selectedYear, setSelectedYear] = useState(null)
 
   const allUCs = useMemo(() => {
     if (!stats) return []
@@ -37,10 +38,26 @@ export default function GeneralStats() {
 
   const chartSeries = allUCs.map((uc) => ({ key: uc, label: uc }))
 
+  const availableYears = useMemo(() => {
+    if (!stats) return []
+    return [...new Set(stats.map((s) => s.year))].sort((a, b) => a - b)
+  }, [stats])
+
+  useEffect(() => {
+    if (availableYears.length && selectedYear === null) {
+      setSelectedYear(availableYears[availableYears.length - 1])
+    }
+  }, [availableYears])
+
+  const yearMarks = useMemo(() => {
+    return availableYears.map((y) => ({ value: y, label: String(y) }))
+  }, [availableYears])
+
   const schoolTotals = useMemo(() => {
     if (!stats) return []
+    const filtered = selectedYear ? stats.filter((row) => row.year === selectedYear) : stats
     const totals = {}
-    stats.forEach((row) => {
+    filtered.forEach((row) => {
       if (!totals[row.campus]) {
         totals[row.campus] = { applicants: 0, admits: 0, enrolls: 0, count: 0, rateSum: 0 }
       }
@@ -60,7 +77,7 @@ export default function GeneralStats() {
       enrolls: t.enrolls,
       avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
     })).sort((a, b) => a.campus.localeCompare(b.campus))
-  }, [stats])
+  }, [stats, selectedYear])
 
   const overallAvg = useMemo(() => {
     if (!schoolTotals.length) return 'N/A'
@@ -132,7 +149,22 @@ export default function GeneralStats() {
         />
       </SimpleGrid>
 
-      <Title order={4} mb="sm">By University</Title>
+      <Group justify="space-between" align="center" mb="sm">
+        <Title order={4}>By University</Title>
+        <Text size="sm" c="dimmed">{selectedYear || 'All Years'}</Text>
+      </Group>
+      {availableYears.length > 1 && (
+        <Slider
+          value={selectedYear || availableYears[0]}
+          onChange={setSelectedYear}
+          min={availableYears[0]}
+          max={availableYears[availableYears.length - 1]}
+          step={1}
+          marks={yearMarks}
+          mb="xl"
+          styles={{ markLabel: { fontSize: 10 } }}
+        />
+      )}
       <Table striped highlightOnHover>
         <Table.Thead>
           <Table.Tr>
@@ -140,7 +172,7 @@ export default function GeneralStats() {
             <Table.Th>Applicants</Table.Th>
             <Table.Th>Admits</Table.Th>
             <Table.Th>Enrolls</Table.Th>
-            <Table.Th>Avg Admit Rate</Table.Th>
+            <Table.Th>Admit Rate</Table.Th>
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>

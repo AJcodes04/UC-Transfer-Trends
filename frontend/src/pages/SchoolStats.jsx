@@ -1,6 +1,6 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton } from '@mantine/core'
+import { Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton, Slider, Group } from '@mantine/core'
 import { useSchoolStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
@@ -23,6 +23,7 @@ export default function SchoolStats() {
   const { data: stats, loading, error } = useSchoolStats(school)
 
   const [selectedColleges, setSelectedColleges] = useState([])
+  const [selectedYear, setSelectedYear] = useState(null)
 
   const prevSchoolRef = useMemo(() => ({ current: school }), [])
   if (prevSchoolRef.current !== school) {
@@ -86,6 +87,55 @@ export default function SchoolStats() {
         : 'N/A',
     })).sort((a, b) => a.college.localeCompare(b.college))
   }, [stats, activeColleges])
+
+  const availableYears = useMemo(() => {
+    if (!stats) return []
+    return [...new Set(stats.map((s) => s.year))].sort((a, b) => a - b)
+  }, [stats])
+
+  useEffect(() => {
+    if (availableYears.length && selectedYear === null) {
+      setSelectedYear(availableYears[availableYears.length - 1])
+    }
+  }, [availableYears])
+
+  const yearMarks = useMemo(() => {
+    return availableYears.map((y) => ({ value: y, label: String(y) }))
+  }, [availableYears])
+
+  const yearFilteredTotals = useMemo(() => {
+    if (!stats || !selectedYear) return collegeTotals
+    const filtered = stats.filter((row) => row.year === selectedYear && activeColleges.includes(row.college_school))
+    const totals = {}
+    filtered.forEach((row) => {
+      if (!totals[row.college_school]) {
+        totals[row.college_school] = {
+          applicants: 0, admits: 0, enrolls: 0,
+          rateSum: 0, count: 0,
+          latestGpaMin: null, latestGpaMax: null,
+        }
+      }
+      const t = totals[row.college_school]
+      t.applicants += row.total_applicants || 0
+      t.admits += row.total_admits || 0
+      t.enrolls += row.total_enrolls || 0
+      if (row.avg_admit_rate != null) { t.rateSum += row.avg_admit_rate; t.count++ }
+      if (row.avg_admit_gpa_min != null) {
+        t.latestGpaMin = parseFloat(row.avg_admit_gpa_min)
+        t.latestGpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+      }
+    })
+    return Object.entries(totals).map(([college, t]) => ({
+      college,
+      applicants: t.applicants,
+      admits: t.admits,
+      enrolls: t.enrolls,
+      avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
+      gpaRange: t.latestGpaMin != null
+        ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'}`
+        : 'N/A',
+    })).sort((a, b) => a.college.localeCompare(b.college))
+  }, [stats, selectedYear, activeColleges, collegeTotals])
 
   const yearlyTotals = useMemo(() => {
     if (!stats) return { latest: null, prev: null }
@@ -200,19 +250,34 @@ export default function SchoolStats() {
             />
           </SimpleGrid>
 
-          <Title order={4} mb="sm">By College / School</Title>
+          <Group justify="space-between" align="center" mb="sm">
+            <Title order={4}>By College / School</Title>
+            <Text size="sm" c="dimmed">{selectedYear || 'All Years'}</Text>
+          </Group>
+          {availableYears.length > 1 && (
+            <Slider
+              value={selectedYear || availableYears[0]}
+              onChange={setSelectedYear}
+              min={availableYears[0]}
+              max={availableYears[availableYears.length - 1]}
+              step={1}
+              marks={yearMarks}
+              mb="xl"
+              styles={{ markLabel: { fontSize: 10 } }}
+            />
+          )}
           <Table striped highlightOnHover>
             <Table.Thead>
               <Table.Tr>
                 <Table.Th>College / School</Table.Th>
                 <Table.Th>Applicants</Table.Th>
                 <Table.Th>Admits</Table.Th>
-                <Table.Th>Avg Admit Rate</Table.Th>
+                <Table.Th>Admit Rate</Table.Th>
                 <Table.Th>GPA Range (25th-75th Percentile)</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
-              {collegeTotals.map((row) => (
+              {yearFilteredTotals.map((row) => (
                 <Table.Tr key={row.college}>
                   <Table.Td>{row.college}</Table.Td>
                   <Table.Td>{row.applicants.toLocaleString()}</Table.Td>

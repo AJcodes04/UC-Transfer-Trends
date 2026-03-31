@@ -1,8 +1,8 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Table, Loader, Alert, Text,
-  Paper, UnstyledButton, Group, Button, Stack, Badge, ActionIcon, TextInput,
+  Paper, UnstyledButton, Group, Button, Stack, Badge, ActionIcon, TextInput, Slider,
 } from '@mantine/core'
 import { IconSearch } from '@tabler/icons-react'
 import { IconStar, IconStarFilled } from '@tabler/icons-react'
@@ -227,6 +227,56 @@ export default function MajorStats() {
 function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error, stats,
   chartData, chartSeries, activeUCs, mostCompetitive, leastCompetitive, uniTotals, yAxis, setYAxis }) {
   const { saveCombo, unsaveCombo, isComboSaved } = useSavedCombos()
+  const [selectedYear, setSelectedYear] = useState(null)
+
+  const availableYears = useMemo(() => {
+    if (!stats) return []
+    return [...new Set(stats.map((s) => s.year))].sort((a, b) => a - b)
+  }, [stats])
+
+  useEffect(() => {
+    if (availableYears.length && selectedYear === null) {
+      setSelectedYear(availableYears[availableYears.length - 1])
+    }
+  }, [availableYears])
+
+  const yearMarks = useMemo(() => {
+    return availableYears.map((y) => ({ value: y, label: String(y) }))
+  }, [availableYears])
+
+  const yearFilteredTotals = useMemo(() => {
+    if (!stats || !selectedYear) return uniTotals
+    const filtered = stats.filter((row) => row.year === selectedYear && activeUCs.includes(row.university))
+    const totals = {}
+    filtered.forEach((row) => {
+      if (!totals[row.university]) {
+        totals[row.university] = {
+          applicants: 0, admits: 0, enrolls: 0,
+          rateSum: 0, count: 0,
+          latestGpaMin: null, latestGpaMax: null,
+        }
+      }
+      const t = totals[row.university]
+      t.applicants += row.total_applicants || 0
+      t.admits += row.total_admits || 0
+      t.enrolls += row.total_enrolls || 0
+      if (row.avg_admit_rate != null) { t.rateSum += row.avg_admit_rate; t.count++ }
+      if (row.avg_admit_gpa_min != null) {
+        t.latestGpaMin = parseFloat(row.avg_admit_gpa_min)
+        t.latestGpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+      }
+    })
+    return Object.entries(totals).map(([uni, t]) => ({
+      university: uni,
+      applicants: t.applicants,
+      admits: t.admits,
+      enrolls: t.enrolls,
+      avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
+      gpaRange: t.latestGpaMin != null
+        ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'}`
+        : 'N/A',
+    })).sort((a, b) => a.university.localeCompare(b.university))
+  }, [stats, selectedYear, activeUCs, uniTotals])
 
   return (
     <>
@@ -331,7 +381,22 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
             })()}
           </SimpleGrid>
 
-          <Title order={4} mb="sm">By University</Title>
+          <Group justify="space-between" align="center" mb="sm">
+            <Title order={4}>By University</Title>
+            <Text size="sm" c="dimmed">{selectedYear || 'All Years'}</Text>
+          </Group>
+          {availableYears.length > 1 && (
+            <Slider
+              value={selectedYear || availableYears[0]}
+              onChange={setSelectedYear}
+              min={availableYears[0]}
+              max={availableYears[availableYears.length - 1]}
+              step={1}
+              marks={yearMarks}
+              mb="xl"
+              styles={{ markLabel: { fontSize: 10 } }}
+            />
+          )}
           <Table striped highlightOnHover>
             <Table.Thead>
               <Table.Tr>
@@ -339,12 +404,12 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
                 <Table.Th>University</Table.Th>
                 <Table.Th>Applicants</Table.Th>
                 <Table.Th>Admits</Table.Th>
-                <Table.Th>Avg Admit Rate</Table.Th>
+                <Table.Th>Admit Rate</Table.Th>
                 <Table.Th>GPA Range (25th-75th Percentile)</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
-              {uniTotals.map((row) => {
+              {yearFilteredTotals.map((row) => {
                 const saved = isComboSaved(decodedMajor, row.university)
                 return (
                   <Table.Tr key={row.university}>
