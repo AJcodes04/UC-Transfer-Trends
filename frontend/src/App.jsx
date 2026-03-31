@@ -53,7 +53,7 @@ export default function App() {
       footer={{ height: 70 }}
       padding="md"
     >
-      <AppShell.Header hiddenFrom="sm" style={{ backgroundColor: '#003262' }}>
+      <AppShell.Header hiddenFrom="sm" style={{ backgroundColor: '#0E4D84' }}>
         <Group h="100%" px="md">
           <Burger opened={opened} onClick={toggle} color="white" size="sm" />
           <Title
@@ -68,7 +68,7 @@ export default function App() {
         </Group>
       </AppShell.Header>
 
-      <AppShell.Navbar p="xs" style={{ backgroundColor: '#003262' }}>
+      <AppShell.Navbar p="xs" style={{ backgroundColor: '#0E4D84' }}>
         <Title
           order={4} c="white" mb="md" px={4}
           style={{ cursor: 'pointer', textDecoration: 'none' }}
@@ -132,12 +132,12 @@ export default function App() {
         </Routes>
       </AppShell.Main>
 
-      <AppShell.Footer pt="sm" pb="md" px="sm" style={{ backgroundColor: '#003262' }}>
+      <AppShell.Footer pt="sm" pb="md" px="sm" style={{ backgroundColor: '#0E4D84' }}>
         <Text ta="center" c="white" size="sm">
           Data sourced from the University of California
         </Text>
         <Text ta="center" c="rgba(255,255,255,0.6)" size="xs">
-          Note: The UC system may not publish all transfer data. Some majors or years may be incomplete or missing.
+          The UC system may not publish all transfer data. Some majors or years may be incomplete or missing.
         </Text>
       </AppShell.Footer>
     </AppShell>

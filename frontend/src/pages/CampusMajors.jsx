@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Table, Loader, Alert, Paper, Image, Text, UnstyledButton, Group,
@@ -23,6 +23,7 @@ export default function CampusMajors() {
   const { campus } = useParams()
   const navigate = useNavigate()
   const { data: stats, loading, error } = useCampusMajorStats(campus)
+  const [yAxis, setYAxis] = useState('admitRate')
   const majorInfo = useMemo(() => {
     if (!stats) return {}
     const info = {}
@@ -57,12 +58,18 @@ export default function CampusMajors() {
     stats.forEach((row) => {
       if (!topSet.has(row.major_name)) return
       if (!byYear[row.year]) byYear[row.year] = { year: row.year }
-      byYear[row.year][row.major_name] = row.avg_admit_rate != null
-        ? Math.round(row.avg_admit_rate * 10) / 10
-        : null
+      if (yAxis === 'gpa') {
+        if (row.avg_admit_gpa_min != null) {
+          byYear[row.year][row.major_name] = parseFloat(row.avg_admit_gpa_min)
+        }
+      } else {
+        byYear[row.year][row.major_name] = row.avg_admit_rate != null
+          ? Math.round(row.avg_admit_rate * 10) / 10
+          : null
+      }
     })
     return Object.values(byYear).sort((a, b) => a.year - b.year)
-  }, [stats, topMajors])
+  }, [stats, topMajors, yAxis])
 
   const chartSeries = topMajors.map((m) => ({ key: m, label: m }))
 
@@ -169,7 +176,14 @@ export default function CampusMajors() {
             data={chartData}
             xKey="year"
             series={chartSeries}
-            yLabel="Avg Admit Rate (%)"
+            yLabel={yAxis === 'gpa' ? 'Lowest GPA (25th percentile)' : 'Avg Admit Rate (%)'}
+            yAxisOptions={[
+              { value: 'admitRate', label: 'Admit Rate (%)' },
+              { value: 'gpa', label: 'Lowest GPA (25th percentile)' },
+            ]}
+            onYAxisChange={setYAxis}
+            yDomain={yAxis === 'gpa' ? [2.4, 4.0] : undefined}
+            tooltipSuffix={yAxis === 'gpa' ? '' : '%'}
           />
 
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
