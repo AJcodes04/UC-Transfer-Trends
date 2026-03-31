@@ -101,6 +101,13 @@ MAJOR_ALIASES = {
         'Film and Media Studies',
         'Film Studies',
     ],
+    'Human Development' : [
+        'Human Developmental Sciences',
+        'Pre-Human Development',
+    ],
+    'History' : [
+        'Pre-History',
+    ],
     'Art': [
         'Art - Studio',
     ],
@@ -127,6 +134,9 @@ MAJOR_ABSORPTIONS = {
     'Animal Sciences':[
         'Animal Science & Management',
         'Animal Biology',
+    ],
+    'Anthropology': [
+        'Biological Anthropology',
     ],
     'Mathematics': [
         'Pre-Mathematics',

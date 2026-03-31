@@ -13,7 +13,7 @@ import {
   useMajorStats,
 } from '../hooks/useApi'
 import { useCourses, useGPA } from '../hooks/useUserData'
-import { buildUserCourseMap, checkRequirementSatisfied, getMatchedCourseKeys } from '../utils/courseMatch'
+import { buildUserCourseMap, checkRequirementSatisfied, getMatchedCourseKeys, computeRequirementStats, parsePathwayGroups, normalizeCourseKey } from '../utils/courseMatch'
 import { UC_COLORS } from '../utils/ucColors'
 
 const UC_LABELS = {
@@ -269,18 +269,41 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
   const majorGPA = useGPA(matchedKeys.size > 0 ? matchedKeys : undefined)
 
   const reqStats = useMemo(() => {
-    if (!agreement?.sections) return { satisfied: 0, total: 0 }
-    let satisfied = 0
-    let total = 0
-    for (const section of agreement.sections) {
-      for (const row of section.rows || []) {
-        total++
-        const status = checkRequirementSatisfied(row.sending_courses, userCourseMap)
-        if (status === 'satisfied') satisfied++
+    return computeRequirementStats(agreement, userCourseMap)
+  }, [agreement, userCourseMap])
+
+  // Build a set of receiving course keys that are in pathway groups,
+  // and a map of which rows should show an "OR" separator before them.
+  const pathwayInfo = useMemo(() => {
+    if (!agreement) return { groupedKeys: new Set(), orBeforeKeys: new Set() }
+    const groups = parsePathwayGroups(agreement.notes)
+    const groupedKeys = new Set()
+    const orBeforeKeys = new Set()
+
+    for (const group of groups) {
+      for (const key of group.receivingKeys) groupedKeys.add(key)
+
+      // Find which rows start a new pathway option within the group.
+      // Walk through all rows in order; when a row's receiving key belongs to
+      // a DIFFERENT pathway than the previous grouped row, mark it with OR.
+      const allRows = (agreement.sections || []).flatMap((s) => s.rows || [])
+      let prevPathwayIdx = -1
+      for (const row of allRows) {
+        const rk = row.receiving_courses?.courses?.[0]
+          ? normalizeCourseKey(row.receiving_courses.courses[0].prefix, row.receiving_courses.courses[0].number)
+          : null
+        if (!rk || !group.receivingKeys.has(rk)) continue
+
+        const pathwayIdx = group.pathways.findIndex((p) => p.includes(rk))
+        if (prevPathwayIdx !== -1 && pathwayIdx !== prevPathwayIdx) {
+          orBeforeKeys.add(rk)
+        }
+        prevPathwayIdx = pathwayIdx
       }
     }
-    return { satisfied, total }
-  }, [agreement, userCourseMap])
+
+    return { groupedKeys, orBeforeKeys }
+  }, [agreement])
 
   const hasCourses = courses.length > 0
   const overallStatus = admitGpaInfo ? gpaStatus(overallGPA, admitGpaInfo.min, admitGpaInfo.max) : null
@@ -422,7 +445,7 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
               </Table.Thead>
               <Table.Tbody>
                 {section.rows.map((row, ri) => (
-                  <CourseRow key={ri} row={row} color={color} userCourseMap={userCourseMap} hasCourses={hasCourses} />
+                  <CourseRow key={ri} row={row} color={color} userCourseMap={userCourseMap} hasCourses={hasCourses} pathwayInfo={pathwayInfo} />
                 ))}
               </Table.Tbody>
             </Table>
@@ -434,10 +457,15 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
 }
 
 
-function CourseRow({ row, color, userCourseMap, hasCourses }) {
+function CourseRow({ row, color, userCourseMap, hasCourses, pathwayInfo }) {
   const receiving = row.receiving_courses
   const sending = row.sending_courses
   const noArticulation = sending.logic === 'NO_ARTICULATION'
+
+  const receivingKey = receiving?.courses?.[0]
+    ? normalizeCourseKey(receiving.courses[0].prefix, receiving.courses[0].number)
+    : null
+  const showOrSeparator = receivingKey && pathwayInfo?.orBeforeKeys?.has(receivingKey)
 
   const status = hasCourses ? checkRequirementSatisfied(sending, userCourseMap) : 'none'
 
@@ -449,7 +477,15 @@ function CourseRow({ row, color, userCourseMap, hasCourses }) {
   }
 
   return (
-    <Table.Tr style={rowStyle}>
+    <>
+      {showOrSeparator && (
+        <Table.Tr>
+          <Table.Td colSpan={3} style={{ textAlign: 'center', padding: '6px 0' }}>
+            <Badge size="sm" variant="light" color="orange" radius="sm">OR</Badge>
+          </Table.Td>
+        </Table.Tr>
+      )}
+      <Table.Tr style={rowStyle}>
       <Table.Td style={{ verticalAlign: 'top' }}>
         <Group gap={6} wrap="nowrap">
           {hasCourses && status === 'satisfied' && (
@@ -478,6 +514,7 @@ function CourseRow({ row, color, userCourseMap, hasCourses }) {
         )}
       </Table.Td>
     </Table.Tr>
+    </>
   )
 }
 

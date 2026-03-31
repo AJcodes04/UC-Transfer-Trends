@@ -1,6 +1,6 @@
 import { Routes, Route, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import {
-  AppShell, NavLink as MantineNavLink, Title, Group, Text, Divider, ScrollArea, Burger,
+  AppShell, NavLink as MantineNavLink, Title, Group, Text, Divider, ScrollArea, Burger, Badge,
 } from '@mantine/core'
 import { useDisclosure, useMediaQuery } from '@mantine/hooks'
 import {
@@ -29,7 +29,7 @@ const NAV_SECTIONS = [
   {
     label: 'Transfer Requirements',
     items: [
-      { label: 'Transfer Requirements', path: '/requirements', icon: IconFileText },
+      { label: 'Transfer Requirements', path: '/requirements', icon: IconFileText, badge: 'Beta' },
     ],
   },
   {
@@ -96,6 +96,9 @@ export default function App() {
                     key={item.path}
                     label={item.label}
                     leftSection={<item.icon size={18} color="white" />}
+                    rightSection={item.badge ? (
+                      <Badge size="xs" variant="light" color="yellow" radius="sm">{item.badge}</Badge>
+                    ) : null}
                     active={isActive}
                     component={NavLink}
                     to={item.path}
