@@ -2,8 +2,9 @@ import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Table, Loader, Alert, Text,
-  Paper, UnstyledButton, Group, Button, Stack, Badge, ActionIcon,
+  Paper, UnstyledButton, Group, Button, Stack, Badge, ActionIcon, TextInput,
 } from '@mantine/core'
+import { IconSearch } from '@tabler/icons-react'
 import { IconStar, IconStarFilled } from '@tabler/icons-react'
 import { useMajorStats, useGroupedMajors } from '../hooks/useApi'
 import { useSavedCombos } from '../hooks/useUserData'
@@ -45,6 +46,7 @@ export default function MajorStats() {
     return []
   }, [groupedMajors, decodedMajor])
 
+  const [searchQuery, setSearchQuery] = useState('')
   const [selectedUCs, setSelectedUCs] = useState([])
   const [yAxis, setYAxis] = useState('admitRate')
 
@@ -119,13 +121,34 @@ export default function MajorStats() {
     ? validUnis.reduce((a, b) => (parseFloat(a.avgRate) > parseFloat(b.avgRate) ? a : b))
     : null
 
+  const filteredByLetter = useMemo(() => {
+    if (!searchQuery.trim()) return groupedByLetter
+    const q = searchQuery.toLowerCase()
+    const filtered = {}
+    for (const [letter, majors] of Object.entries(groupedByLetter)) {
+      const matches = majors.filter((m) => m.name.toLowerCase().includes(q))
+      if (matches.length > 0) filtered[letter] = matches
+    }
+    return filtered
+  }, [groupedByLetter, searchQuery])
+
+  const filteredLetters = Object.keys(filteredByLetter).sort()
+
   if (!decodedMajor) {
     return (
       <>
         <Title order={2} mb="md">By Major</Title>
 
+        <TextInput
+          placeholder="Search majors..."
+          leftSection={<IconSearch size={16} />}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.currentTarget.value)}
+          mb="md"
+        />
+
         <Group gap={6} mb="lg">
-          {letters.map((letter) => (
+          {filteredLetters.map((letter) => (
             <Button
               key={letter}
               size="compact-xs"
@@ -141,11 +164,11 @@ export default function MajorStats() {
         {majorsLoading && <Loader m="xl" />}
 
         <Stack gap="xl">
-          {letters.map((letter) => (
+          {filteredLetters.map((letter) => (
             <div key={letter} id={`letter-${letter}`}>
               <Title order={4} mb="xs" c="blue">{letter}</Title>
               <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }}>
-                {groupedByLetter[letter].map((m) => {
+                {filteredByLetter[letter].map((m) => {
                   const visibleRelated = m.related
                   return (
                   <UnstyledButton key={m.name} onClick={() => navigate(`/major/${encodeURIComponent(m.name)}`)}>
