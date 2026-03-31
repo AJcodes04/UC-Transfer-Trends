@@ -1,26 +1,21 @@
 # UC Transfer Trends
 
-A full-stack web app for exploring University of California transfer admission 
-data across all 9 campuses, 100+ majors, and 13 years (2012–2024).
+A full-stack web app for exploring University of California transfer admission
+data across all 9 campuses, 100+ majors, and 14 years (2012–2025).
 
 ## Overview
 
-UC Transfer Trends helps prospective transfer students and researchers explore 
-how competitive UC admissions are by campus, major, and year. Data is sourced 
-directly from official UC admissions reports and includes applicant counts, 
-admit rates, yield rates, and GPA ranges.
+UC Transfer Trends helps future transfer students and researchers visualize how competitive UC admissions are by campus, major, and year. Data is sourced directly from official UC admissions reports and includes applicant counts, admit rates, yield rates, and GPA ranges.
 
 ## Features
 
-| View | Description |
-|------|-------------|
-| **General Stats** | Admission trends across all 9 campuses over time |
-| **By School** | Breakdown by college/school within a campus (e.g., College of Engineering at UC Berkeley) |
-| **By Major** | Compare how competitive a major is across different UCs |
-| **By Campus** | Explore all majors and their admit rates at a single campus |
+- Look at admission trends by campus, major, and college/school
+- Interactive charts and data tables with admit rates, GPA ranges, and yield rates
+- Upload your unofficial transcript to match completed courses against UC transfer requirements
+- View articulation agreements from community colleges to UCs
+- Save, track, and compare majors you're interested in
 
-
-## Images 
+## Images
 
 **General Transfer Acceptance Rates**
 <img width="1512" height="828" alt="Screenshot 2026-02-23 at 2 18 11 PM" src="https://github.com/user-attachments/assets/bc1fbd86-9f5a-4b98-8d95-e9afdf6eea4c" />
@@ -36,13 +31,15 @@ admit rates, yield rates, and GPA ranges.
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | React, Recharts, Mantine UI |
-| Backend | Django, Django REST Framework |
-| Database | PostgreSQL |
+| Layer      | Technology                        |
+| ---------- | --------------------------------- |
+| Frontend   | React, Vite, Mantine UI, Recharts |
+| Backend    | Django                            |
+| Database   | PostgreSQL                        |
+| Scraper    | Playwright, httpx, Pydantic       |
+| Deployment | Vercel, Render                    |
 
 ## Data Source
 
-Data is sourced from the [Transfers by major | UC Admisisons](https://www.universityofcalifornia.edu/about-us/information-center/transfers-major).
-
+- Admission statistics from [Transfers by major | UC Admissions](https://www.universityofcalifornia.edu/about-us/information-center/transfers-major)
+- Articulation agreements from [ASSIST.org](https://assist.org)
