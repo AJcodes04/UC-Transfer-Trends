@@ -83,6 +83,8 @@ export default function CampusMajors() {
         totals[row.major_name] = {
           applicants: 0, admits: 0, enrolls: 0,
           rateSum: 0, count: 0,
+          latestRateYear: 0, latestRate: null,
+          gpaMinSum: 0, gpaCount: 0,
           latestGpaYear: 0, latestGpaMin: null, latestGpaMax: null,
         }
       }
@@ -90,11 +92,21 @@ export default function CampusMajors() {
       t.applicants += row.total_applicants || 0
       t.admits += row.total_admits || 0
       t.enrolls += row.total_enrolls || 0
-      if (row.avg_admit_rate != null) { t.rateSum += row.avg_admit_rate; t.count++ }
-      if (row.avg_admit_gpa_min != null && row.year > t.latestGpaYear) {
-        t.latestGpaYear = row.year
-        t.latestGpaMin = parseFloat(row.avg_admit_gpa_min)
-        t.latestGpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+      if (row.avg_admit_rate != null) {
+        t.rateSum += row.avg_admit_rate; t.count++
+        if (row.year > t.latestRateYear) {
+          t.latestRateYear = row.year
+          t.latestRate = row.avg_admit_rate
+        }
+      }
+      if (row.avg_admit_gpa_min != null) {
+        t.gpaMinSum += parseFloat(row.avg_admit_gpa_min)
+        t.gpaCount++
+        if (row.year > t.latestGpaYear) {
+          t.latestGpaYear = row.year
+          t.latestGpaMin = parseFloat(row.avg_admit_gpa_min)
+          t.latestGpaMax = row.avg_admit_gpa_max != null ? parseFloat(row.avg_admit_gpa_max) : null
+        }
       }
     })
     return Object.entries(totals).map(([major, t]) => ({
@@ -103,8 +115,10 @@ export default function CampusMajors() {
       admits: t.admits,
       enrolls: t.enrolls,
       avgRate: t.count > 0 ? (t.rateSum / t.count).toFixed(1) : 'N/A',
-      gpaRange: t.latestGpaMin != null
-        ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'} (${t.latestGpaYear})`
+      latestRate: t.latestRate != null ? `${Math.round(t.latestRate * 10) / 10}%` : 'N/A',
+      avgGpa: t.gpaCount > 0 ? (t.gpaMinSum / t.gpaCount).toFixed(2) : 'N/A',
+      latestGpaRange: t.latestGpaMin != null
+        ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'}`
         : 'N/A',
     })).sort((a, b) => a.major.localeCompare(b.major))
   }, [stats, allMajors])
@@ -116,6 +130,7 @@ export default function CampusMajors() {
   const leastCompetitive = validMajors.length
     ? validMajors.reduce((a, b) => (parseFloat(a.avgRate) > parseFloat(b.avgRate) ? a : b))
     : null
+
 
   const campusName = CAMPUSES.find((c) => c.code === campus)?.name || campus
 
@@ -209,14 +224,18 @@ export default function CampusMajors() {
           </SimpleGrid>
 
           <Title order={4} mb="sm">By Major</Title>
-          <Table striped highlightOnHover>
+          <Table striped highlightOnHover stickyHeader stickyHeaderOffset={0}>
             <Table.Thead>
               <Table.Tr>
                 <Table.Th>Major</Table.Th>
                 <Table.Th>Applicants</Table.Th>
                 <Table.Th>Admits</Table.Th>
+                <Table.Th>Enrolls</Table.Th>
                 <Table.Th>Avg Admit Rate</Table.Th>
-                <Table.Th>GPA Range (25th-75th Percentile)</Table.Th>
+                <Table.Th>Latest Admit Rate</Table.Th>
+                <Table.Th>Yield Rate</Table.Th>
+                <Table.Th>Avg GPA (25th)</Table.Th>
+                <Table.Th>Latest GPA Range</Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
@@ -225,8 +244,12 @@ export default function CampusMajors() {
                   <Table.Td>{row.major}</Table.Td>
                   <Table.Td>{row.applicants.toLocaleString()}</Table.Td>
                   <Table.Td>{row.admits.toLocaleString()}</Table.Td>
+                  <Table.Td>{row.enrolls.toLocaleString()}</Table.Td>
                   <Table.Td>{row.avgRate}%</Table.Td>
-                  <Table.Td>{row.gpaRange}</Table.Td>
+                  <Table.Td>{row.latestRate}</Table.Td>
+                  <Table.Td>{row.admits > 0 ? `${Math.round(row.enrolls / row.admits * 100)}%` : 'N/A'}</Table.Td>
+                  <Table.Td>{row.avgGpa}</Table.Td>
+                  <Table.Td>{row.latestGpaRange}</Table.Td>
                 </Table.Tr>
               ))}
             </Table.Tbody>
