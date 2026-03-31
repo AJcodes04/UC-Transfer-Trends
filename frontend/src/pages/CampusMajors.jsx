@@ -234,7 +234,6 @@ export default function CampusMajors() {
                 <Table.Th>Avg Admit Rate</Table.Th>
                 <Table.Th>Latest Admit Rate</Table.Th>
                 <Table.Th>Yield Rate</Table.Th>
-                <Table.Th>Avg GPA (25th)</Table.Th>
                 <Table.Th>Latest GPA Range</Table.Th>
               </Table.Tr>
             </Table.Thead>
@@ -248,7 +247,6 @@ export default function CampusMajors() {
                   <Table.Td>{row.avgRate}%</Table.Td>
                   <Table.Td>{row.latestRate}</Table.Td>
                   <Table.Td>{row.admits > 0 ? `${Math.round(row.enrolls / row.admits * 100)}%` : 'N/A'}</Table.Td>
-                  <Table.Td>{row.avgGpa}</Table.Td>
                   <Table.Td>{row.latestGpaRange}</Table.Td>
                 </Table.Tr>
               ))}
