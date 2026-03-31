@@ -1,12 +1,18 @@
-import { useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { Title, SimpleGrid, Table, Loader, Alert } from '@mantine/core'
 import { useGeneralStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
 import { UC_COLORS } from '../utils/ucColors'
 
+const Y_AXIS_OPTIONS = [
+  { value: 'admitRate', label: 'Admit Rate (%)' },
+  { value: 'gpa', label: 'Lowest GPA (25th percentile)' },
+]
+
 export default function GeneralStats() {
   const { data: stats, loading, error } = useGeneralStats()
+  const [yAxis, setYAxis] = useState('admitRate')
 
   const allUCs = useMemo(() => {
     if (!stats) return []
@@ -18,10 +24,16 @@ export default function GeneralStats() {
     const byYear = {}
     stats.forEach((row) => {
       if (!byYear[row.year]) byYear[row.year] = { year: row.year }
-      byYear[row.year][row.campus] = row.admit_rate
+      if (yAxis === 'gpa') {
+        if (row.admit_gpa_min != null) {
+          byYear[row.year][row.campus] = parseFloat(row.admit_gpa_min)
+        }
+      } else {
+        byYear[row.year][row.campus] = row.admit_rate
+      }
     })
     return Object.values(byYear).sort((a, b) => a.year - b.year)
-  }, [stats])
+  }, [stats, yAxis])
 
   const chartSeries = allUCs.map((uc) => ({ key: uc, label: uc }))
 
@@ -91,7 +103,11 @@ export default function GeneralStats() {
         xKey="year"
         series={chartSeries}
         colorMap={UC_COLORS}
-        yLabel="Admit Rate (%)"
+        yLabel={yAxis === 'gpa' ? 'Lowest GPA (25th percentile)' : 'Admit Rate (%)'}
+        yAxisOptions={Y_AXIS_OPTIONS}
+        onYAxisChange={setYAxis}
+        yDomain={yAxis === 'gpa' ? [2.4, 4.0] : undefined}
+        tooltipSuffix={yAxis === 'gpa' ? '' : '%'}
       />
 
       <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">

@@ -46,6 +46,7 @@ export default function MajorStats() {
   }, [groupedMajors, decodedMajor])
 
   const [selectedUCs, setSelectedUCs] = useState([])
+  const [yAxis, setYAxis] = useState('admitRate')
 
   const allUniversities = useMemo(() => {
     if (!stats) return []
@@ -60,12 +61,18 @@ export default function MajorStats() {
     stats.forEach((row) => {
       if (!activeUCs.includes(row.university)) return
       if (!byYear[row.year]) byYear[row.year] = { year: row.year }
-      byYear[row.year][row.university] = row.avg_admit_rate != null
-        ? Math.round(row.avg_admit_rate * 10) / 10
-        : null
+      if (yAxis === 'gpa') {
+        if (row.avg_admit_gpa_min != null) {
+          byYear[row.year][row.university] = parseFloat(row.avg_admit_gpa_min)
+        }
+      } else {
+        byYear[row.year][row.university] = row.avg_admit_rate != null
+          ? Math.round(row.avg_admit_rate * 10) / 10
+          : null
+      }
     })
     return Object.values(byYear).sort((a, b) => a.year - b.year)
-  }, [stats, activeUCs])
+  }, [stats, activeUCs, yAxis])
 
   const chartSeries = activeUCs.map((u) => ({ key: u, label: u }))
 
@@ -189,13 +196,13 @@ export default function MajorStats() {
       decodedMajor={decodedMajor} navigate={navigate} relatedMajors={relatedMajors}
       loading={loading} error={error} stats={stats} chartData={chartData} chartSeries={chartSeries}
       activeUCs={activeUCs} mostCompetitive={mostCompetitive} leastCompetitive={leastCompetitive}
-      uniTotals={uniTotals}
+      uniTotals={uniTotals} yAxis={yAxis} setYAxis={setYAxis}
     />
   )
 }
 
 function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error, stats,
-  chartData, chartSeries, activeUCs, mostCompetitive, leastCompetitive, uniTotals }) {
+  chartData, chartSeries, activeUCs, mostCompetitive, leastCompetitive, uniTotals, yAxis, setYAxis }) {
   const { saveCombo, unsaveCombo, isComboSaved } = useSavedCombos()
 
   return (
@@ -261,7 +268,14 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
             xKey="year"
             series={chartSeries}
             colorMap={UC_COLORS}
-            yLabel="Avg Admit Rate (%)"
+            yLabel={yAxis === 'gpa' ? 'Lowest GPA (25th percentile)' : 'Avg Admit Rate (%)'}
+            yAxisOptions={[
+              { value: 'admitRate', label: 'Admit Rate (%)' },
+              { value: 'gpa', label: 'Lowest GPA (25th percentile)' },
+            ]}
+            onYAxisChange={setYAxis}
+            yDomain={yAxis === 'gpa' ? [2.4, 4.0] : undefined}
+            tooltipSuffix={yAxis === 'gpa' ? '' : '%'}
           />
 
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">

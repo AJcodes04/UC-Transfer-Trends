@@ -444,6 +444,8 @@ class GeneralStatsView(APIView):
                 enrolls=Sum('enrolls'),
                 admit_rate=Avg('admit_rate'),
                 yield_rate=Avg('yield_rate'),
+                admit_gpa_min=Min('admit_gpa_min'),
+                admit_gpa_max=Max('admit_gpa_max'),
             )
             .order_by('year', 'campus')
         )

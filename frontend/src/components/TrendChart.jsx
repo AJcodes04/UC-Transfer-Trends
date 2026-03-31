@@ -10,9 +10,10 @@ import {
   CartesianGrid,
   Tooltip,
 } from 'recharts'
+import { SegmentedControl } from '@mantine/core'
 import { getUCColor } from '../utils/ucColors'
 
-function PercentTooltip({ active, payload, label }) {
+function ChartTooltip({ active, payload, label, suffix }) {
   if (!active || !payload?.length) return null
   return (
     <div style={{
@@ -27,13 +28,25 @@ function PercentTooltip({ active, payload, label }) {
         .sort((a, b) => (b.value ?? -1) - (a.value ?? -1))
         .map((entry) => (
           <p key={entry.name} style={{ margin: '2px 0', color: entry.color }}>
-            {entry.name}: {entry.value}%
+            {entry.name}: {entry.value}{suffix}
           </p>
         ))}
     </div>
   )
 }
-export default function TrendChart({ data, xKey, series, type = 'line', yLabel, colorMap }) {
+
+export default function TrendChart({
+  data,
+  xKey,
+  series,
+  type = 'line',
+  yLabel,
+  colorMap,
+  yAxisOptions,
+  onYAxisChange,
+  yDomain,
+  tooltipSuffix = '%',
+}) {
   const [selectedKeys, setSelectedKeys] = useState([])
 
   const showAll = selectedKeys.length === 0
@@ -58,13 +71,27 @@ export default function TrendChart({ data, xKey, series, type = 'line', yLabel, 
 
   return (
     <div style={{ position: 'relative' }}>
+      {yAxisOptions && yAxisOptions.length > 1 && (
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 8 }}>
+          <SegmentedControl
+            size="xs"
+            data={yAxisOptions}
+            onChange={onYAxisChange}
+            value={yAxisOptions.find((o) => o.label === yLabel)?.value || yAxisOptions[0].value}
+          />
+        </div>
+      )}
+
       <ResponsiveContainer width="100%" height={350}>
         <ChartComponent data={data} margin={{ top: 5, right: 20, bottom: 5, left: 10 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey={xKey} />
-          <YAxis label={yLabel ? { value: yLabel, angle: -90, position: 'insideLeft' } : undefined} />
+          <YAxis
+            label={yLabel ? { value: yLabel, angle: -90, position: 'insideLeft' } : undefined}
+            domain={yDomain || ['auto', 'auto']}
+          />
           <Tooltip
-            content={<PercentTooltip />}
+            content={<ChartTooltip suffix={tooltipSuffix} />}
             wrapperStyle={{ zIndex: 1000, pointerEvents: 'none' }}
           />
           {series.map((s, i) => {
