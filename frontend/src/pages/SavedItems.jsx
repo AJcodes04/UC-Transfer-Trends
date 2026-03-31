@@ -115,9 +115,9 @@ export default function SavedItems() {
   if (savedCombos.length === 0) {
     return (
       <>
-        <Title order={2} mb="md">Saved Schools</Title>
+        <Title order={2} mb="md">Watchlist</Title>
         <Text c="dimmed" ta="center" mt="xl">
-          No saved items yet. Go to By Major, pick a major, and star the UC campuses you want to compare.
+          Your watchlist is empty. Go to By Major, pick a major, and star the UC campuses you want to track.
         </Text>
       </>
     )
@@ -127,7 +127,7 @@ export default function SavedItems() {
     <>
       <Title order={2} mb="md">Saved Schools</Title>
       <Text c="dimmed" size="sm" mb="lg">
-        Your saved major + school combinations. Each card shows the most recent admit GPA range for that specific major at that school.
+        Your watchlist of major + school combinations. Each card shows the most recent admit GPA range for that specific major at that school.
       </Text>
 
       <SimpleGrid cols={{ base: 1, sm: 3 }} mb="lg">

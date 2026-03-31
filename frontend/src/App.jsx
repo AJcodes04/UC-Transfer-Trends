@@ -7,6 +7,7 @@ import {
   IconChartBar, IconSchool, IconBook, IconBuildingCommunity,
   IconFileText, IconUser, IconBookmark,
 } from '@tabler/icons-react'
+import './nav.css'
 import GeneralStats from './pages/GeneralStats.jsx'
 import SchoolStats from './pages/SchoolStats.jsx'
 import MajorStats from './pages/MajorStats.jsx'
@@ -35,7 +36,7 @@ const NAV_SECTIONS = [
     label: 'User Profile',
     items: [
       { label: 'My Courses', path: '/profile/courses', icon: IconUser },
-      { label: 'Saved Schools', path: '/profile/saved', icon: IconBookmark },
+      { label: 'Watchlist', path: '/profile/saved', icon: IconBookmark },
     ],
   },
 ]
@@ -99,6 +100,7 @@ export default function App() {
                     component={NavLink}
                     to={item.path}
                     onClick={close}
+                    className="navLink"
                     styles={{
                       root: { borderRadius: 6 },
                       label: { color: 'white' },
