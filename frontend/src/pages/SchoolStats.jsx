@@ -227,26 +227,32 @@ export default function SchoolStats() {
           />
 
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
-            <StatsCard title="Colleges / Schools" value={activeColleges.length} />
-            {mostCompetitive && (
-              <StatsCard
-                title="Most Competitive"
-                value={mostCompetitive.college}
-                subtitle={`${mostCompetitive.avgRate}% avg admit rate`}
-              />
-            )}
-            {leastCompetitive && (
-              <StatsCard
-                title="Least Competitive"
-                value={leastCompetitive.college}
-                subtitle={`${leastCompetitive.avgRate}% avg admit rate`}
-              />
-            )}
+            <StatsCard title="Colleges / Schools" value={yearFilteredTotals.length} />
+            {(() => {
+              const valid = yearFilteredTotals.filter((c) => c.avgRate !== 'N/A')
+              const most = valid.length ? valid.reduce((a, b) => (parseFloat(a.avgRate) < parseFloat(b.avgRate) ? a : b)) : null
+              return most ? (
+                <StatsCard
+                  title="Most Competitive"
+                  value={most.college}
+                  subtitle={`${most.avgRate}% admit rate`}
+                />
+              ) : null
+            })()}
+            {(() => {
+              const valid = yearFilteredTotals.filter((c) => c.avgRate !== 'N/A')
+              const least = valid.length ? valid.reduce((a, b) => (parseFloat(a.avgRate) > parseFloat(b.avgRate) ? a : b)) : null
+              return least ? (
+                <StatsCard
+                  title="Least Competitive"
+                  value={least.college}
+                  subtitle={`${least.avgRate}% admit rate`}
+                />
+              ) : null
+            })()}
             <StatsCard
-              title={`Applicants (${yearlyTotals.latest?.year || ''})`}
-              value={yearlyTotals.latest?.applicants.toLocaleString() || '-'}
-              change={yoyChange(yearlyTotals.latest?.applicants, yearlyTotals.prev?.applicants)}
-              subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.applicants.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
+              title="Total Applicants"
+              value={yearFilteredTotals.reduce((s, c) => s + c.applicants, 0).toLocaleString()}
             />
           </SimpleGrid>
 

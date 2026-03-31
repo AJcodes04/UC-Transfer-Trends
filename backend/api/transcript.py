@@ -33,7 +33,20 @@ COURSE_LINE_RE_B = re.compile(
     r'(?P<number>\d{1,4}[A-Z]?)\s+'
     r'(?:CR\s+)'
     r'(?P<title>.+?)\s+'
-    r'(?P<grade>[A-F][+-]?|P|NP|W|I|IP)$',
+    r'(?P<grade>[A-F][+-]?|FW|P|NP|W|I|IP)$',
+)
+
+# Format C: PREFIX NUMBER CR TITLE GRADE UNITS QUALITY_POINTS (Banner/SBCC PDF)
+# Grade appears before units on the same line. Non-greedy title ensures the
+# grade matched is the one immediately preceding the units decimal pattern.
+COURSE_LINE_RE_C = re.compile(
+    r'(?P<prefix>[A-Z]{2,6})\s+'
+    r'(?P<number>\d{1,4}[A-Z]?)\s+'
+    r'CR\s+'
+    r'(?P<title>.+?)'
+    r'(?P<grade>[A-F][+-]?|FW|NP|IP|P|W|I)\s+'
+    r'(?P<units>\d+\.\d{3})\s+'
+    r'\d+\.\d+',
 )
 
 # Standalone units line (e.g. "4.000 10.80")
@@ -69,7 +82,19 @@ class TranscriptUploadView(APIView):
                     text = page.extract_text() or ''
                     lines = text.split('\n')
                     for idx, line in enumerate(lines):
-                        # Try format B first (SBCC-style: grade at end, units on next line)
+                        # Try format C first (Banner PDF: grade before units on same line)
+                        match = COURSE_LINE_RE_C.search(line)
+                        if match:
+                            raw_entries.append({
+                                'prefix': match.group('prefix').upper(),
+                                'number': match.group('number').upper(),
+                                'title': match.group('title').strip(),
+                                'units': float(match.group('units')),
+                                'grade': match.group('grade').upper(),
+                            })
+                            continue
+
+                        # Try format B (SBCC-style: grade at end, units on next line)
                         match = COURSE_LINE_RE_B.search(line.strip())
                         if match:
                             units = 0.0
@@ -103,7 +128,7 @@ class TranscriptUploadView(APIView):
                 'B-': 7, 'B': 8, 'B+': 9,
                 'A-': 10, 'A': 11, 'A+': 12,
                 'NP': -2, 'P': 13,
-                'W': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
+                'W': -3, 'FW': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
             }
 
             best = {}
