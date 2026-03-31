@@ -130,14 +130,6 @@ export default function SavedItems() {
         Your watchlist of major + school combinations. Each card shows the most recent admit GPA range for that specific major at that school.
       </Text>
 
-      <SimpleGrid cols={{ base: 1, sm: 3 }} mb="lg">
-        <StatsCard title="Your GPA" value={userGPA != null ? userGPA.toFixed(2) : '-'} />
-        <StatsCard title="Saved Combos" value={savedCombos.length} />
-        <StatsCard
-          title="Unique Majors"
-          value={uniqueMajors.length}
-        />
-      </SimpleGrid>
 
       {loading && <Loader m="xl" />}
 
