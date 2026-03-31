@@ -62,6 +62,15 @@ export default function TrendChart({
 
   if (!data || data.length === 0) return null
 
+  // Ensure every data point has every series key (null if missing) so connectNulls works
+  const normalizedData = data.map((point) => {
+    const filled = { ...point }
+    for (const s of series) {
+      if (!(s.key in filled)) filled[s.key] = null
+    }
+    return filled
+  })
+
   const ChartComponent = type === 'bar' ? BarChart : LineChart
 
   const seriesColors = series.map((s, i) => ({
@@ -83,7 +92,7 @@ export default function TrendChart({
       )}
 
       <ResponsiveContainer width="100%" height={350}>
-        <ChartComponent data={data} margin={{ top: 5, right: 20, bottom: 5, left: 10 }}>
+        <ChartComponent data={normalizedData} margin={{ top: 5, right: 20, bottom: 5, left: 10 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey={xKey} />
           <YAxis
@@ -117,23 +126,9 @@ export default function TrendChart({
                 dataKey={s.key}
                 name={s.label}
                 stroke={color}
+                connectNulls={true}
                 strokeWidth={2}
-                dot={(dotProps) => {
-                  const { cx, cy, index, value } = dotProps
-                  if (value == null) return null
-                  const prev = data[index - 1]?.[s.key]
-                  const next = data[index + 1]?.[s.key]
-                  if (prev == null || next == null) {
-                    return (
-                      <circle
-                        key={`dot-${s.key}-${index}`}
-                        cx={cx} cy={cy} r={3}
-                        fill={color} stroke="white" strokeWidth={1}
-                      />
-                    )
-                  }
-                  return null
-                }}
+                dot={false}
                 hide={hidden}
               />
             )
