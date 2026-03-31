@@ -4,6 +4,7 @@ import { MantineProvider, createTheme } from '@mantine/core'
 import { BrowserRouter } from 'react-router-dom'
 import '@mantine/core/styles.css'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import App from './App.jsx'
 import { UserDataProvider } from './context/UserDataContext'
 
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
         <UserDataProvider>
           <App />
           <Analytics />
+          <SpeedInsights />
         </UserDataProvider>
       </BrowserRouter>
     </MantineProvider>
