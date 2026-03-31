@@ -317,10 +317,18 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
                 subtitle={`${leastCompetitive.avgRate}% avg admit rate`}
               />
             )}
-            <StatsCard
-              title="Total Applicants"
-              value={uniTotals.reduce((s, u) => s + u.applicants, 0).toLocaleString()}
-            />
+            {(() => {
+              const valid = uniTotals.filter((u) => u.avgRate !== 'N/A')
+              if (!valid.length) return null
+              const avg = (valid.reduce((s, u) => s + parseFloat(u.avgRate), 0) / valid.length).toFixed(1)
+              return (
+                <StatsCard
+                  title="Avg Admit Rate (All UCs)"
+                  value={`${avg}%`}
+                  subtitle={`Across ${valid.length} campus${valid.length > 1 ? 'es' : ''}`}
+                />
+              )
+            })()}
           </SimpleGrid>
 
           <Title order={4} mb="sm">By University</Title>
