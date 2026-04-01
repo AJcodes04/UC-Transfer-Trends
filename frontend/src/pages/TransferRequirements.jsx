@@ -45,6 +45,127 @@ function Linkify({ children }) {
   )
 }
 
+// Common filler words to ignore when matching recommended descriptions to course titles
+const STOP_WORDS = new Set([
+  'a', 'an', 'the', 'of', 'and', 'or', 'with', 'for', 'in', 'to', 'from',
+  'two', 'three', 'one', 'four', 'lab', 'laboratory', 'based', 'semesters',
+  'quarters', 'semester', 'quarter', 'year', 'completion',
+])
+
+// Map full department names (from notes) to abbreviated prefixes (in course data)
+const DEPT_NAME_TO_PREFIX = {
+  'computer science': 'CMPSC',
+  'math': 'MATH',
+  'mathematics': 'MATH',
+  'chemistry': 'CHEM',
+  'physics': 'PHYS',
+  'electrical and computer engineering': 'ECE',
+  'mechanical engineering': 'ME',
+  'chemical engineering': 'CH E',
+}
+
+/**
+ * Parse notes for "STRONGLY RECOMMENDED" courses.
+ * Returns { keywords: string[][], courseCodes: Set<string> }
+ *   - keywords: fuzzy description words (UCLA-style: "Completion of X are STRONGLY RECOMMENDED")
+ *   - courseCodes: exact "PREFIX NUMBER" strings (UCSB-style: note starts with "STRONGLY RECOMMENDED")
+ */
+function parseRecommendedInfo(notes) {
+  const keywords = []
+  const courseCodes = new Set()
+  if (!notes || !notes.length) return { keywords, courseCodes }
+
+  for (const note of notes) {
+    // Pattern 1 (UCLA-style): "Completion of X are/is STRONGLY RECOMMENDED"
+    const beforeMatch = note.match(/(?:completion of|complete)\s+(.+?)\s+(?:are|is)\s+STRONGLY\s+RECOMMENDED/i)
+    if (beforeMatch) {
+      const cleaned = beforeMatch[1].replace(/[\w/]+\s+(?:semesters?|quarters?)\s+(?:of\s+)?/gi, '')
+      const parts = cleaned.split(/,\s*(?:and\s+)?|\s+and\s+/).map((s) => s.trim()).filter(Boolean)
+      for (const part of parts) {
+        const words = part.toLowerCase().split(/\s+/).filter((w) => w.length > 2 && !STOP_WORDS.has(w))
+        if (words.length) keywords.push(words)
+      }
+    }
+
+    // Pattern 2 (UCSB-style): Note starts with "STRONGLY RECOMMENDED"
+    const stripped = note.trim()
+    if (/^STRONGLY\s+RECOMMENDED/i.test(stripped)) {
+      // Extract text after parenthetical disclaimer, up to "Note :" or "Additional"
+      let courseText = stripped
+        .replace(/^STRONGLY\s+RECOMMENDED[^)]*\)\s*/i, '')
+        .replace(/\s*(?:Note\s*:|Additional\s).*/i, '')
+        .trim()
+
+      // Extract abbreviated codes: "PHYS 1, 2, 3, 3L" → PHYS 1, PHYS 2, etc.
+      const abbrRegex = /\b([A-Z]{2,}(?:\s[A-Z]{2,})?)\s+([\dA-Za-z]+(?:(?:,\s*|\s*;\s*)[\dA-Za-z]+)*)/g
+      let m
+      while ((m = abbrRegex.exec(courseText)) !== null) {
+        const prefix = m[1]
+        const nums = m[2].split(/[,;]\s*/).map((n) => n.trim()).filter(Boolean)
+        for (const num of nums) {
+          if (/\d/.test(num)) {
+            courseCodes.add(`${prefix} ${num}`.toUpperCase())
+          }
+        }
+      }
+
+      // Extract full department name codes: "Computer Science 32, 64" → CMPSC 32, CMPSC 64
+      const deptRegex = /([A-Z][a-z]+(?:\s+(?:and\s+)?[A-Z][a-z]+)*)\s+([\dA-Za-z]+(?:(?:,\s*)[\dA-Za-z]+)*)/g
+      while ((m = deptRegex.exec(courseText)) !== null) {
+        const deptName = m[1].toLowerCase()
+        const prefix = DEPT_NAME_TO_PREFIX[deptName]
+        if (!prefix) continue
+        const nums = m[2].split(/,\s*/).map((n) => n.trim()).filter(Boolean)
+        for (const num of nums) {
+          if (/\d/.test(num)) {
+            courseCodes.add(`${prefix} ${num}`.toUpperCase())
+          }
+        }
+      }
+    }
+  }
+
+  return { keywords, courseCodes }
+}
+
+/**
+ * Check if a course row matches any recommended description or course code.
+ */
+function isRowRecommended(row, recommendedInfo) {
+  if (!recommendedInfo) return false
+  const { keywords, courseCodes } = recommendedInfo
+  if (!keywords.length && !courseCodes.size) return false
+
+  const receivingCourses = row.receiving_courses?.courses || []
+
+  // Check exact course code matches against receiving courses
+  if (courseCodes.size > 0) {
+    for (const c of receivingCourses) {
+      const code = `${c.prefix} ${c.number}`.toUpperCase()
+      if (courseCodes.has(code)) return true
+    }
+  }
+
+  // Check fuzzy keyword matches against course titles
+  if (keywords.length > 0) {
+    const titles = [
+      ...receivingCourses.map((c) => (c.title || '').toLowerCase()),
+      ...(row.sending_courses?.courses || []).map((c) => (c.title || '').toLowerCase()),
+      ...receivingCourses.map((c) => `${c.prefix} ${c.number}`.toLowerCase()),
+    ]
+    for (const kws of keywords) {
+      for (const title of titles) {
+        const matched = kws.filter((kw) => title.includes(kw))
+        if (matched.length >= Math.max(1, Math.ceil(kws.length * 0.5))) {
+          return true
+        }
+      }
+    }
+  }
+
+  return false
+}
+
 function ucColor(code) {
   return UC_COLORS[code.toUpperCase()] || '#666'
 }
@@ -293,6 +414,10 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
     return computeRequirementStats(agreement, userCourseMap)
   }, [agreement, userCourseMap])
 
+  const recommendedInfo = useMemo(() => {
+    return parseRecommendedInfo(agreement?.notes)
+  }, [agreement])
+
   const hasCourses = courses.length > 0
   const overallStatus = admitGpaInfo ? gpaStatus(overallGPA, admitGpaInfo.min, admitGpaInfo.max) : null
   const majorStatus = admitGpaInfo ? gpaStatus(majorGPA, admitGpaInfo.min, admitGpaInfo.max) : null
@@ -417,6 +542,7 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
           color={color}
           userCourseMap={userCourseMap}
           hasCourses={hasCourses}
+          recommendedInfo={recommendedInfo}
         />
       ))}
     </>
@@ -431,7 +557,7 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
  * New format: groups with optional labels and multi-option SELECT_ONE groups.
  * Old format: flat rows rendered the same as COMPLETE_ALL single-option groups.
  */
-function SectionDisplay({ section, uc, cc, color, userCourseMap, hasCourses }) {
+function SectionDisplay({ section, uc, cc, color, userCourseMap, hasCourses, recommendedInfo }) {
   const groups = section.groups || []
   const oldRows = section.rows || []
 
@@ -454,6 +580,7 @@ function SectionDisplay({ section, uc, cc, color, userCourseMap, hasCourses }) {
               color={color}
               userCourseMap={userCourseMap}
               hasCourses={hasCourses}
+              recommendedInfo={recommendedInfo}
             />
           ))}
         </Stack>
@@ -484,6 +611,7 @@ function SectionDisplay({ section, uc, cc, color, userCourseMap, hasCourses }) {
                   color={color}
                   userCourseMap={userCourseMap}
                   hasCourses={hasCourses}
+                  recommendedInfo={recommendedInfo}
                 />
               ))}
             </Table.Tbody>
@@ -503,7 +631,7 @@ function SectionDisplay({ section, uc, cc, color, userCourseMap, hasCourses }) {
  *                   each option shown as a sub-table with an OR separator.
  * For SELECT_N:     a table with a "Complete N from the following" header.
  */
-function GroupDisplay({ group, groupIndex, uc, cc, color, userCourseMap, hasCourses }) {
+function GroupDisplay({ group, groupIndex, uc, cc, color, userCourseMap, hasCourses, recommendedInfo }) {
   const logic = group.group_logic || 'COMPLETE_ALL'
   const options = group.options || []
   const label = group.group_label
@@ -577,6 +705,7 @@ function GroupDisplay({ group, groupIndex, uc, cc, color, userCourseMap, hasCour
               hasCourses={hasCourses}
               showHeader={oi === 0}
               optionLabel={option.option_label}
+              recommendedInfo={recommendedInfo}
             />
           </div>
         ))}
@@ -652,6 +781,7 @@ function GroupDisplay({ group, groupIndex, uc, cc, color, userCourseMap, hasCour
                   color={color}
                   userCourseMap={userCourseMap}
                   hasCourses={hasCourses}
+                  recommendedInfo={recommendedInfo}
                 />
               </>
             ))}
@@ -693,6 +823,7 @@ function GroupDisplay({ group, groupIndex, uc, cc, color, userCourseMap, hasCour
               color={color}
               userCourseMap={userCourseMap}
               hasCourses={hasCourses}
+              recommendedInfo={recommendedInfo}
             />
           ))}
         </Table.Tbody>
@@ -707,7 +838,7 @@ function GroupDisplay({ group, groupIndex, uc, cc, color, userCourseMap, hasCour
  *
  * Shows an optional "Option A / Option B" label above the rows.
  */
-function OptionTable({ option, uc, cc, color, userCourseMap, hasCourses, showHeader, optionLabel }) {
+function OptionTable({ option, uc, cc, color, userCourseMap, hasCourses, showHeader, optionLabel, recommendedInfo }) {
   const rows = option.rows || []
 
   return (
@@ -749,6 +880,7 @@ function OptionTable({ option, uc, cc, color, userCourseMap, hasCourses, showHea
               color={color}
               userCourseMap={userCourseMap}
               hasCourses={hasCourses}
+              recommendedInfo={recommendedInfo}
             />
           ))}
         </Table.Tbody>
@@ -758,10 +890,11 @@ function OptionTable({ option, uc, cc, color, userCourseMap, hasCourses, showHea
 }
 
 
-function CourseRow({ row, color, userCourseMap, hasCourses }) {
+function CourseRow({ row, color, userCourseMap, hasCourses, recommendedInfo }) {
   const receiving = row.receiving_courses
   const sending = row.sending_courses
   const noArticulation = sending.logic === 'NO_ARTICULATION'
+  const recommended = recommendedInfo ? isRowRecommended(row, recommendedInfo) : false
 
   const status = hasCourses
     ? (sending.logic === 'NO_ARTICULATION' ? 'none' : (() => {
@@ -796,7 +929,14 @@ function CourseRow({ row, color, userCourseMap, hasCourses }) {
               <IconMinus size={10} />
             </ThemeIcon>
           )}
-          <CourseGroupDisplay group={receiving} accentColor={color} />
+          <div>
+            <CourseGroupDisplay group={receiving} accentColor={color} />
+            {recommended && (
+              <Badge size="xs" variant="light" color="grape" mt={4}>
+                Strongly Recommended
+              </Badge>
+            )}
+          </div>
         </Group>
       </Table.Td>
 

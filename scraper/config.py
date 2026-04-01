@@ -188,6 +188,18 @@ NAVIGATION_TIMEOUT = 30_000   # ms — max wait for page navigation
 SELECTOR_TIMEOUT = 15_000     # ms — max wait for a DOM element to appear
 
 # ---------------------------------------------------------------------------
+# Known academic year IDs (fallback if /api/academicyears returns 400)
+# Sourced from live API responses — academicYear.id field in agreement JSON.
+# ---------------------------------------------------------------------------
+
+KNOWN_YEAR_IDS: dict[str, int] = {
+    "2025-26": 76,
+    "2024-25": 74,  # confirmed from original scrape
+    "2023-24": 73,
+    "2022-23": 72,
+}
+
+# ---------------------------------------------------------------------------
 # assist.org URLs
 # ---------------------------------------------------------------------------
 

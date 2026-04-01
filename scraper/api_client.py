@@ -18,6 +18,8 @@ WHY tenacity: automatic retry with exponential backoff for transient failures.
 """
 
 import asyncio
+import gzip
+import json
 import logging
 from typing import Any
 
@@ -37,6 +39,46 @@ from scraper.config import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def _decompress(data: bytes) -> bytes:
+    """
+    Decompress gzip data if present (identified by magic bytes \x1f\x8b).
+    Returns data unchanged if it's not gzip.
+
+    We only handle gzip here — brotli is excluded from Accept-Encoding so the
+    server won't send it, and zlib/deflate fallbacks were causing garbage output
+    on unrecognised encodings.
+    """
+    if data[:2] == b"\x1f\x8b":
+        try:
+            return gzip.decompress(data)
+        except Exception:
+            pass
+    return data
+
+
+def _safe_decode(data: bytes) -> str:
+    """Decode bytes to str, decompressing first if needed."""
+    return _decompress(data).decode("utf-8", errors="replace")
+
+
+def _parse_response(data: bytes) -> Any:
+    """
+    Parse a JSON response body, handling any compression the server might add
+    without a Content-Encoding header.
+
+    Strategy: try json.loads on raw bytes first (httpx already decompresses
+    when Content-Encoding is set). If that fails due to encoding/decode error,
+    try decompressing manually then parsing.
+    """
+    try:
+        return json.loads(data)
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        decompressed = _decompress(data)
+        if decompressed is not data:   # decompression changed something
+            return json.loads(decompressed)
+        raise
 
 
 class AssistAPIClient:
@@ -60,9 +102,63 @@ class AssistAPIClient:
         self._client = httpx.AsyncClient(
             base_url=ASSIST_API_BASE,
             timeout=httpx.Timeout(15.0),
-            # Mimic a real browser so assist.org doesn't reject us
-            headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"},
+            # follow_redirects so the warmup GET to assist.org/ works properly
+            follow_redirects=True,
+            # Mimic a real browser to pass Cloudflare / Azure ARRAffinity checks.
+            # The ARRAffinity cookie is set by Azure App Service on the first
+            # request to assist.org — subsequent API calls must carry it or the
+            # server returns 400.  httpx stores cookies in the client's jar
+            # automatically, so after the warmup GET below they'll be sent on
+            # every API call without any extra work.
+            headers={
+                "User-Agent": (
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/124.0.0.0 Safari/537.36"
+                ),
+                "Accept": "application/json, text/plain, */*",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Accept-Encoding": "gzip, deflate",
+                "Referer": "https://assist.org/",
+                "Origin": "https://assist.org",
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-origin",
+                "Sec-CH-UA": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+                "Sec-CH-UA-Mobile": "?0",
+                "Sec-CH-UA-Platform": '"macOS"',
+                "Connection": "keep-alive",
+            },
         )
+        # Warmup: fetch the main page so Azure sets the ARRAffinity session
+        # cookie in our client's cookie jar before we make any API calls.
+        # Without this the API returns 400 on every request.
+        #
+        # ASP.NET anti-CSRF double-submit pattern:
+        #   1. Server sets X-XSRF-TOKEN as a cookie on the warmup response.
+        #   2. Client must echo that value back as a *request header* named
+        #      X-XSRF-TOKEN on every subsequent API call.
+        # The cookie alone is not enough — ASP.NET validates the header too.
+        try:
+            warmup = await self._client.get("https://assist.org/")
+            logger.debug(f"Warmup GET assist.org/ → {warmup.status_code} "
+                         f"(cookies: {list(self._client.cookies.keys())})")
+
+            # Extract the XSRF token and inject it as a header.
+            # httpx stores cookies in a CookieJar keyed by (domain, path, name).
+            # We try both "X-XSRF-TOKEN" (set by ASP.NET) and "XSRF-TOKEN"
+            # (set by some Angular apps) — whichever is present.
+            xsrf = (
+                self._client.cookies.get("X-XSRF-TOKEN")
+                or self._client.cookies.get("XSRF-TOKEN")
+            )
+            if xsrf:
+                self._client.headers["X-XSRF-TOKEN"] = xsrf
+                logger.debug(f"Set X-XSRF-TOKEN header ({len(xsrf)} chars)")
+            else:
+                logger.warning("No XSRF token found in warmup cookies — API calls may return 400")
+        except Exception as e:
+            logger.warning(f"Warmup request failed (continuing anyway): {e}")
         return self
 
     async def __aexit__(self, *args: Any) -> None:
@@ -70,7 +166,7 @@ class AssistAPIClient:
             await self._client.aclose()
 
     @retry(
-        retry=retry_if_exception_type((httpx.HTTPStatusError, httpx.TransportError)),
+        retry=retry_if_exception_type((httpx.TransportError,)),
         stop=stop_after_attempt(MAX_RETRIES),
         wait=wait_exponential(multiplier=RETRY_BACKOFF_BASE, min=5, max=60),
     )
@@ -86,6 +182,8 @@ class AssistAPIClient:
         # Polite delay between API calls
         await asyncio.sleep(self._current_delay)
 
+        full_url = str(self._client.base_url).rstrip("/") + path
+        logger.debug(f"GET {full_url}")
         response = await self._client.get(path)
 
         # On 429, wait extra and increase delay for future requests
@@ -95,8 +193,15 @@ class AssistAPIClient:
             await asyncio.sleep(10)  # Extra pause before tenacity retry
             response.raise_for_status()
 
+        if response.status_code >= 400:
+            body_preview = _safe_decode(response.content)
+            logger.error(
+                f"HTTP {response.status_code} from {full_url}\n"
+                f"  Response body: {body_preview[:500]}"
+            )
+
         response.raise_for_status()
-        return response.json()
+        return _parse_response(response.content)
 
     async def get_institutions(self) -> list[dict]:
         """

@@ -1,0 +1,479 @@
+{
+  "sending_institution": "Santa Barbara City College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Latin American Studies/B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-01T23:34:06.953885",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "e0b06f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I A STD",
+                        "number": "1",
+                        "title": "Introduction to International and Area Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "f4b06f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "8A",
+                        "title": "Colonial Latin America",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "133",
+                        "title": "History of Latin America",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "8B",
+                        "title": "Modern Latin America",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "133",
+                        "title": "History of Latin America",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "97E",
+                        "title": "Introduction to Historical Practice: Variable Topics in Latin American History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "09b16f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Economics(Microeconomics)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "101H",
+                        "title": "Microeconomics, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "101",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Principles of Economics(Macroeconomics)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "102H",
+                        "title": "Macroeconomics, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "4",
+                        "title": "Globalization: Regional Development and World Economy",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "105",
+                        "title": "Economic Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "6",
+                        "title": "World Regions: Concepts and Contemporary Issues",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "104",
+                        "title": "World Regional Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "50",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "131",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introductory Sociology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101H",
+                        "title": "Introduction to Sociology, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "101",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "03b16f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "CULTURE AND SOCIETY",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "103",
+                        "title": "Introduction to Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ETHNMUS",
+                        "number": "5",
+                        "title": "Music Around World",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUS",
+                        "number": "118",
+                        "title": "World Music",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "3",
+                        "title": "Cultural Geography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "102",
+                        "title": "Human Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "22",
+                        "title": "Contemporary World History, 1760 to Present ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "108",
+                        "title": "World Civilization, 1550 to Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "dcb06f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "5",
+                        "title": "Intermediate Spanish",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "104",
+                        "title": "Intermediate Spanish II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "7A",
+                        "title": "Introductory Spanish for Heritage Speakers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "146",
+                        "title": "Intermediate Spanish for Native Speakers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Latin American Studies is part of the International & Area Studies program and is designed for students who want to focus their studies on the culture and society of the following sub regions: South America, Central America, Southern Cone, Amazonian, or the Caribbean. Listed below are the lower division preparation courses for the major. To be considered for admission to this major, you should complete the following courses by the end of spring before transfer: One year of college level Spanish or Portuguese or At least one year of high school in which the primary language of instruction was Spanish or Portuguese. Completion of two preparatory courses listed below, and completion of two college foreign language courses is STRONGLY RECOMMENDED . A placement exam is required for all language majors regardless of credits earned in lower division language courses All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https://international.ucla.edu/isba and https://admission.ucla.edu . PLEASE NOTE: The community college courses listed below have been approved to satisfy the preparation requirements for this major UCLA, but they may not be exact equivalents of the UCLA courses listed.",
+    "The AP Exam scores listed below may be used to meet to satisfy major prep: A score of 3 or higher on the AP Human Geography exam can be used in place of the cultural geography course. A score of 3 or higher on the AP World History exam can be used in place of the contemporary world history course. A score of 3 or higher on the AP Comparative Government exam can be used in place of the comparative politics course. A score of 4-5 on the AP Microeconomics exam is equivalent to Econ 1 ( if taken before spring 2021 ) and can be used in place of the microeconomics course. A score of 5 on the AP Microeconomics exam is equivalent to Econ 1 ( if taken after spring 2021 ) and can be used in place of the microeconomics course. A score of 4-5 on the AP Macroeconomics exam is equivalent to Econ 2 ( if taken before spring 2021 ) and can be used in place of the macroeconomics course. A score of 5 on the AP Macroeconomics exam is equivalent to Econ 2 ( if taken after spring 2021 ) and can be used in place of the macroeconomics course. A score of 5 on the AP Spanish Language and Cultures exam is equivalent to SPAN 5 and would fulfill the intermediate level. The IB Exam scores listed below may be used to meet to satisfy major prep: A score of 5 or higher on the IB HL Economics exam can be used in place of the microeconomics course.",
+    "Complete a total of 5 courses over the following areas listed below: 1) Area Studies, 2) International Politics and Markets, 3) International Societies and Cultures"
+  ]
+}

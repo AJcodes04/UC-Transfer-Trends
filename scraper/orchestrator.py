@@ -33,12 +33,33 @@ from scraper.config import (
     CC_INSTITUTIONS,
     UC_INSTITUTIONS,
     OUTPUT_DIR,
+    KNOWN_YEAR_IDS,
 )
 from scraper.manifest import ManifestTracker
 from scraper.models import Agreement
 from scraper.parser import parse_agreement_from_api
 
 logger = logging.getLogger(__name__)
+
+
+def _agreement_has_content(agreement) -> bool:
+    """
+    Return True if the agreement has at least one articulation row.
+    Handles both the new grouped format (sections[].groups[].options[].rows[])
+    and the legacy flat format (sections[].rows[]).
+    """
+    if not agreement.sections:
+        return False
+    for section in agreement.sections:
+        # New format: rows nested inside groups → options
+        for group in section.groups:
+            for option in group.options:
+                if option.rows:
+                    return True
+        # Legacy format: flat rows directly on section
+        if section.rows:
+            return True
+    return False
 
 
 def _slugify(text: str) -> str:
@@ -72,27 +93,44 @@ async def resolve_year_id(target_year: str) -> Optional[int]:
     """
     Look up the numeric year ID for a year string like "2024-25".
 
-    assist.org URLs use numeric IDs (e.g., 75), not year strings.
-    The /api/academicyears endpoint maps FallYear → ID.
+    assist.org URLs use numeric IDs (e.g., 74), not year strings.
+    Tries the /api/academicyears endpoint first; falls back to the
+    hard-coded KNOWN_YEAR_IDS table if the API returns 400.
     """
-    async with AssistAPIClient() as client:
-        years = await client.get_academic_years()
-        for year in years:
-            year_id = year.get("Id", year.get("id"))
-            fall_year = year.get("FallYear", year.get("fallYear"))
-            if fall_year is None or year_id is None:
-                continue
+    # Normalise "2024-25" → also try "2024-2025" variants in fallback
+    # Build a set of candidate keys to check in KNOWN_YEAR_IDS
+    candidates = {target_year}
+    parts = target_year.split("-")
+    if len(parts) == 2 and len(parts[1]) == 2:
+        # "2024-25" → also store as "2024-25" (already there)
+        pass
 
-            try:
-                target_start = int(target_year.split("-")[0])
-            except (ValueError, IndexError):
-                continue
+    # Check hard-coded table first (avoids one round-trip if key matches)
+    if target_year in KNOWN_YEAR_IDS:
+        cached_id = KNOWN_YEAR_IDS[target_year]
+        logger.info(f"Resolved year '{target_year}' to ID {cached_id} (from known table)")
+        return cached_id
 
-            if fall_year == target_start:
-                logger.info(f"Resolved year '{target_year}' to ID {year_id} (FallYear={fall_year})")
-                return year_id
+    # Try the live API
+    try:
+        async with AssistAPIClient() as client:
+            years = await client.get_academic_years()
+            for year in years:
+                year_id = year.get("Id", year.get("id"))
+                fall_year = year.get("FallYear", year.get("fallYear"))
+                if fall_year is None or year_id is None:
+                    continue
+                try:
+                    target_start = int(target_year.split("-")[0])
+                except (ValueError, IndexError):
+                    continue
+                if fall_year == target_start:
+                    logger.info(f"Resolved year '{target_year}' to ID {year_id} (FallYear={fall_year})")
+                    return year_id
+    except Exception as e:
+        logger.warning(f"Could not fetch academic years from API ({e}); checking fallback table")
 
-    logger.error(f"Could not find year ID for '{target_year}'")
+    logger.error(f"Could not find year ID for '{target_year}' (not in API or known table)")
     return None
 
 
@@ -174,9 +212,7 @@ async def _scrape_one_cc(
                     )
 
                     # Check if agreement has actual content
-                    if not agreement.sections or all(
-                        len(s.rows) == 0 for s in agreement.sections
-                    ):
+                    if not _agreement_has_content(agreement):
                         logger.warning(f"    Empty agreement for {major_name}")
                         tracker.mark_skipped(
                             sending_code, uc_code, target_year, major_name,
@@ -193,14 +229,14 @@ async def _scrape_one_cc(
                     counts["success"] += 1
 
                 except Exception as e:
-                    logger.error(f"    Failed to scrape {major_name}: {e}")
+                    logger.error(f"    Failed to scrape {major_name}: {e}", exc_info=True)
                     tracker.mark_failed(
                         sending_code, uc_code, target_year, major_name, str(e)
                     )
                     counts["failed"] += 1
 
         except Exception as e:
-            logger.error(f"Failed to process {uc_code}: {e}")
+            logger.error(f"Failed to process {uc_code}: {e}", exc_info=True)
 
     return counts
 
