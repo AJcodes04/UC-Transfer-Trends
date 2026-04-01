@@ -8,256 +8,397 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COMM ",
-                "number": "1",
-                "title": "Principles of Oral Communication",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "COMM",
-                "number": "131",
-                "title": "Fundamentals of Public Speaking",
-                "units": 3.0
-              },
-              {
-                "prefix": "COMM",
-                "number": "131H",
-                "title": "Fundamentals of Public Speaking, Honors",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM ",
+                        "number": "1",
+                        "title": "Principles of Oral Communication",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "131",
+                        "title": "Fundamentals of Public Speaking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "131H",
+                        "title": "Fundamentals of Public Speaking, Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COMM ",
-                "number": "10",
-                "title": "Introduction to Communication ",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "COMM",
-                "number": "101",
-                "title": "Introduction to Communication",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM ",
+                        "number": "10",
+                        "title": "Introduction to Communication ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "101",
+                        "title": "Introduction to Communication",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ANTHRO",
-                "number": "4",
-                "title": "Culture and Communication",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ANTH",
-                "number": "104",
-                "title": "Language and Culture",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "4",
+                        "title": "Culture and Communication",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "104",
+                        "title": "Language and Culture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LING",
-                "number": "1",
-                "title": "Introduction to Study of Language",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LING",
+                        "number": "1",
+                        "title": "Introduction to Study of Language",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "POL SCI",
-                "number": "40",
-                "title": "Introduction to American Politics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "POLS",
-                "number": "101",
-                "title": "American Government and Politics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "40",
+                        "title": "Introduction to American Politics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "101",
+                        "title": "American Government and Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "1",
-                "title": "Principles of Economics(Microeconomics)",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "101H",
-                "title": "Microeconomics, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "ECON",
-                "number": "101",
-                "title": "Microeconomics",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Economics(Microeconomics)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "101H",
+                        "title": "Microeconomics, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "101",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "5",
-                "title": "Economics for Everyone",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "5",
+                        "title": "Economics for Everyone",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SOCIOL",
-                "number": "1",
-                "title": "Introductory Sociology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "SOC",
-                "number": "101H",
-                "title": "Introduction to Sociology, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "SOC",
-                "number": "101",
-                "title": "Introduction to Sociology",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introductory Sociology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101H",
+                        "title": "Introduction to Sociology, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "101",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSYCH",
-                "number": "10",
-                "title": "Introductory Psychology",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PSY",
-                "number": "100H",
-                "title": "General Psychology, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "PSY",
-                "number": "100",
-                "title": "General Psychology",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "10",
+                        "title": "Introductory Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "100H",
+                        "title": "General Psychology, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "100",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "STATS",
-                "number": "10",
-                "title": "Introduction to Statistical Reasoning",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "117",
-                "title": "Elementary Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "117",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

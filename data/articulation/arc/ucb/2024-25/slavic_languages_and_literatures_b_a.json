@@ -8,228 +8,341 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "2",
-                "title": "Elementary Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "402",
-                "title": "Elementary Russian",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "2",
+                        "title": "Elementary Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "402",
+                        "title": "Elementary Russian",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "3",
-                "title": "Intermediate Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "411",
-                "title": "Intermediate Russian",
-                "units": 4.0
-              },
-              {
-                "prefix": "RUSS",
-                "number": "413",
-                "title": "Russian for Heritage Speakers I",
-                "units": 4.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "3",
+                        "title": "Intermediate Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "411",
+                        "title": "Intermediate Russian",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "RUSS",
+                        "number": "413",
+                        "title": "Russian for Heritage Speakers I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "4",
-                "title": "Intermediate Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "412",
-                "title": "Intermediate Russian",
-                "units": 4.0
-              },
-              {
-                "prefix": "RUSS",
-                "number": "415",
-                "title": "Russian for Heritage Speakers II",
-                "units": 4.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "4",
+                        "title": "Intermediate Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "412",
+                        "title": "Intermediate Russian",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "RUSS",
+                        "number": "415",
+                        "title": "Russian for Heritage Speakers II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "1",
-                "title": "Elementary Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "401",
-                "title": "Elementary Russian",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "1",
+                        "title": "Elementary Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "401",
+                        "title": "Elementary Russian",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "3",
-                "title": "Intermediate Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "411",
-                "title": "Intermediate Russian",
-                "units": 4.0
-              },
-              {
-                "prefix": "RUSS",
-                "number": "413",
-                "title": "Russian for Heritage Speakers I",
-                "units": 4.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "3",
+                        "title": "Intermediate Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "411",
+                        "title": "Intermediate Russian",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "RUSS",
+                        "number": "413",
+                        "title": "Russian for Heritage Speakers I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "1",
-                "title": "Elementary Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "401",
-                "title": "Elementary Russian",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "1",
+                        "title": "Elementary Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "401",
+                        "title": "Elementary Russian",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "4",
-                "title": "Intermediate Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "412",
-                "title": "Intermediate Russian",
-                "units": 4.0
-              },
-              {
-                "prefix": "RUSS",
-                "number": "415",
-                "title": "Russian for Heritage Speakers II",
-                "units": 4.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "4",
+                        "title": "Intermediate Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "412",
+                        "title": "Intermediate Russian",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "RUSS",
+                        "number": "415",
+                        "title": "Russian for Heritage Speakers II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "RUSSIAN",
-                "number": "2",
-                "title": "Elementary Russian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "RUSS",
-                "number": "402",
-                "title": "Elementary Russian",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSSIAN",
+                        "number": "2",
+                        "title": "Elementary Russian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RUSS",
+                        "number": "402",
+                        "title": "Elementary Russian",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu",
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): \u00b7 Two transferable courses in English composition; \u00b7 One transferable course in mathematical concepts and quantitative reasoning; \u00b7 Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu",
     "PREPARATION FOR TRANSFER AT THE JUNIOR LEVEL As East European and Eurasian languages are not offered at California community colleges, the elementary first-year language sequences are started during the student's first Fall semester at Berkeley for the following: Armenian 1A-1B (Introductory Armenian), Bosnian/Croatian/Serbian 27A-B (Introductory BCS), Czech 26A-B (Introductory Czech), Hungarian 1A-B (Introductory Hungarian), Polish 25A-B (Introductory Polish), and Ukrainian 1A-B (Introductory Ukrainian). The required 4-semester language sequence is therefore completed in the two years following admission. In 2024-25, Hungarian, Polish, and Ukrainian language courses in the Slavic Department are available for Intersegmental Cross-enrollment, for students enrolled at any California Community College. Courses are taught via synchronous online instruction. Student eligibility, enrollment requisites, and instructor approval may apply. For more information: https://registrar.berkeley.edu/registration/visitor-and-exchange-programs/ Contact: special_programs@berkeley.edu . Once admitted, students who have a prior background in their proposed target language (Armenian, BCS, Czech, Hungarian, Polish, or Ukrainian) may be required to take a language proficiency test or to consult with the relevant department language program coordinator for placement in the correct language course level. Students who participated in UC Berkeley Slavic Department language courses prior to admission to UC Berkeley may not have to take a proficiency test. Lower-division Russian language courses (equivalent of Russian 1, 2, 3 and 4) must be completed prior to transfer for the Russian Language and Literature track; for the Russian Culture emphasis (the track in Russian/East European/Eurasian Cultures), the equivalent of Russian 1 and 2 is preferred, but otherwise Russian 1, 2, 3, and 4 can be taken upon transfer. Once admitted, students who have a prior background in Russian may be required to take a language proficiency test or to consult with the relevant department language program coordinator for placement in the correct language course level. See the Slavic Department's language placement webpage for more information: http://slavic.berkeley.edu/courses-2/language-placement/ For more information: Undergraduate Student Services Advisor, Slavic Languages and Literatures (510) 642 4661 issaug@berkeley.edu http://slavic.berkeley.edu/",
     "MAJOR TRACK IN RUSSIAN/EAST EUROPEAN/EURASIAN CULTURES The major track in Russian/East European/Eurasian Cultures integrates the study of languages and cultures of a large area: Russia, Eastern/Central Europe and Eurasia. While all majors will be exposed to the knowledge of the whole area, this track allows each student to focus either on one specific cultural region or to combine different regions in their studies (e.g. Russian culture, the cultures of Russia and Caucasus; Balkan cultures; Central European cultures). Each student's program of study must be designed in consultation with and approved by the Major Adviser and will include a language emphasis in one language area as designated below. As East European and Eurasian languages are not offered at California community colleges, the elementary first-year language sequences are started during the student's first fall semester at Berkeley: Armenian 1A-B, BCS 27A-B, Polish 25A-B, Czech 26A-B, Hungarian 1A-1B, or Ukrainian 1A-B. For students emphasizing Russian language for this track, if your community college offers Russian 1 and 2 (Elementary Russian), plan to take it in preparation for transfer; if it is unavailable, you will still be able to complete Russian 1, 2, 3, and 4 once admitted. In summary, the required 4-semester language sequences can be completed in the two years following admission. Once admitted, students who have a prior background in their proposed target language (Armenian, BCS, Czech, Hungarian, Polish, Russian, or Ukrainian) will be required to take a language proficiency test or to consult with the relevant department language program coordinator for placement in the correct language course level and credit toward relevant lower-division language courses will be applied to the specific set of major requirements. Introduction to Russian, East European and Eurasian Cultures (SLAVIC 50), which is a prerequisite for this major and is not offered at community colleges, is taken upon admission to Berkeley."
   ]

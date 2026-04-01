@@ -8,173 +8,272 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "I&C SCI",
-                "number": "31",
-                "title": "Introduction to Programming",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CS",
-                "number": "111",
-                "title": "Fundamentals of Programming 1",
-                "units": 4.0
-              },
-              {
-                "prefix": "CS",
-                "number": "112",
-                "title": "Fundamentals of Programming 2",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "31",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "111",
+                        "title": "Fundamentals of Programming 1",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CS",
+                        "number": "112",
+                        "title": "Fundamentals of Programming 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SOC SCI",
-                "number": "3A",
-                "title": "Computer-Based Research in the Social Sciences",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "3A",
+                        "title": "Computer-Based Research in the Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "POL SCI",
-                "number": "21A",
-                "title": "Introduction to American Government",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "POLS",
-                "number": "103",
-                "title": "American Government",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "21A",
+                        "title": "Introduction to American Government",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "103",
+                        "title": "American Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "POL SCI",
-                "number": "51A",
-                "title": "Introduction to Politics Around the World",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "POLS",
-                "number": "105",
-                "title": "Comparative Politics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "51A",
+                        "title": "Introduction to Politics Around the World",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "105",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "POL SCI",
-                "number": "31A",
-                "title": "Introduction to Political Theory",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "POLS",
-                "number": "110",
-                "title": "Political Theory",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "31A",
+                        "title": "Introduction to Political Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "110",
+                        "title": "Political Theory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "POL SCI",
-                "number": "11A",
-                "title": "Introduction to Political Science: Political Analysis",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "POLS",
-                "number": "101",
-                "title": "Intro to Political Science",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "11A",
+                        "title": "Introduction to Political Science: Political Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "101",
+                        "title": "Intro to Political Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "POL SCI",
-                "number": "41A",
-                "title": "Introduction to International Relations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "POLS",
-                "number": "104",
-                "title": "Introduction to International Relations",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "41A",
+                        "title": "Introduction to International Relations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "104",
+                        "title": "Introduction to International Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

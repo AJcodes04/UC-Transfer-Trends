@@ -8,590 +8,913 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "3",
-                "title": "Organismic and Evolutionary Biology",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIO",
-                "number": "9B",
-                "title": "Ecology, Evolution, and Plant Biology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIO",
-                "number": "9A",
-                "title": "Molecular, Cellular, and Animal Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "3",
+                        "title": "Organismic and Evolutionary Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "9B",
+                        "title": "Ecology, Evolution, and Plant Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "9A",
+                        "title": "Molecular, Cellular, and Animal Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "2",
-                "title": "Multicellular Life",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIO",
-                "number": "9B",
-                "title": "Ecology, Evolution, and Plant Biology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIO",
-                "number": "9A",
-                "title": "Molecular, Cellular, and Animal Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "2",
+                        "title": "Multicellular Life",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "9B",
+                        "title": "Ecology, Evolution, and Plant Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "9A",
+                        "title": "Molecular, Cellular, and Animal Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "1",
-                "title": "The Cell",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIO",
-                "number": "9A",
-                "title": "Molecular, Cellular, and Animal Biology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIO",
-                "number": "9B",
-                "title": "Ecology, Evolution, and Plant Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "1",
+                        "title": "The Cell",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "9A",
+                        "title": "Molecular, Cellular, and Animal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "9B",
+                        "title": "Ecology, Evolution, and Plant Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COGS",
-                "number": "14B",
-                "title": "Introduction to Statistical Analysis",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "12H",
-                "title": "Honors Elementary Statistics",
-                "units": 5.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "12",
-                "title": "Elementary Statistics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "14B",
+                        "title": "Introduction to Statistical Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "12H",
+                        "title": "Honors Elementary Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "12",
+                        "title": "Elementary Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "60",
-                "title": "Introduction to Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "12",
-                "title": "Elementary Statistics",
-                "units": 5.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "12H",
-                "title": "Honors Elementary Statistics",
-                "units": 5.0
-              },
-              {
-                "prefix": "PSYCH",
-                "number": "2A",
-                "title": "Statistics for Behavioral Sciences",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "60",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "12",
+                        "title": "Elementary Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "12H",
+                        "title": "Honors Elementary Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "2A",
+                        "title": "Statistics for Behavioral Sciences",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "HDS",
-                "number": "60",
-                "title": "Introduction to Statistical Analysis",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HDS",
+                        "number": "60",
+                        "title": "Introduction to Statistical Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "6A",
-                "title": "General Chemistry I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "1A",
-                "title": "General Chemistry I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6A",
+                        "title": "General Chemistry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "7L",
-                "title": "Introductory Inorganic Chemistry Laboratory",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "1A",
-                "title": "General Chemistry I",
-                "units": 5.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "1B",
-                "title": "General Chemistry II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "7L",
+                        "title": "Introductory Inorganic Chemistry Laboratory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "6C",
-                "title": "General Chemistry III",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "1B",
-                "title": "General Chemistry II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6C",
+                        "title": "General Chemistry III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "6B",
-                "title": "General Chemistry II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "1B",
-                "title": "General Chemistry II",
-                "units": 5.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "1A",
-                "title": "General Chemistry I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6B",
+                        "title": "General Chemistry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PH",
-                "number": "40",
-                "title": "Introduction to Public Health",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "40",
+                        "title": "Introduction to Public Health",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "26",
-                "title": "Human Physiology",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIO",
-                "number": "5",
-                "title": "Human Physiology",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "26",
+                        "title": "Human Physiology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "5",
+                        "title": "Human Physiology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "41A",
-                "title": "Organic Chemistry I: Structure and Reactivity",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "12A",
-                "title": "Organic Chemistry I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-13",
+          "group_number": 13,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "41A",
+                        "title": "Organic Chemistry I: Structure and Reactivity",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "12A",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "60",
-                "title": "Biology and Diversity",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-14",
+          "group_number": 14,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "60",
+                        "title": "Biology and Diversity",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "22",
-                "title": "Human Nutrition",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "NUTR",
-                "number": "20",
-                "title": "Nutrition",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-15",
+          "group_number": 15,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "22",
+                        "title": "Human Nutrition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NUTR",
+                        "number": "20",
+                        "title": "Nutrition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "41C",
-                "title": "Organic Chemistry III: Synthesis, Reactivity, and Macromolecules",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "12B",
-                "title": "Organic Chemistry II",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-16",
+          "group_number": 16,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "41C",
+                        "title": "Organic Chemistry III: Synthesis, Reactivity, and Macromolecules",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "12B",
+                        "title": "Organic Chemistry II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "41B",
-                "title": "Organic Chemistry II: Reactivity and Synthesis",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "12B",
-                "title": "Organic Chemistry II",
-                "units": 3.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "12A",
-                "title": "Organic Chemistry I",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-17",
+          "group_number": 17,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "41B",
+                        "title": "Organic Chemistry II: Reactivity and Synthesis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "12B",
+                        "title": "Organic Chemistry II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "12A",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "43A",
-                "title": "Organic Chemistry Laboratory",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "12AL",
-                "title": "Organic Chemistry Laboratory I",
-                "units": 2.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-18",
+          "group_number": 18,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "43A",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "12AL",
+                        "title": "Organic Chemistry Laboratory I",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PH",
-                "number": "50",
-                "title": "Primary Care and Public Health",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-19",
+          "group_number": 19,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "50",
+                        "title": "Primary Care and Public Health",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "10A",
-                "title": "Calculus I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "5A",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-20",
+          "group_number": 20,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5A",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "10B",
-                "title": "Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "5B",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-21",
+          "group_number": 21,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5B",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20A",
-                "title": "Calculus for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "5A",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-22",
+          "group_number": 22,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5A",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20B",
-                "title": "Calculus for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "5B",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-23",
+          "group_number": 23,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5B",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
     "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
-    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2023, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep NOTE: Transfer students MUST complete all listed major preparatory courses for this major prior to enrolling at UC San Diego. Public health seeks to improve human health through the development and application of scientific knowledge that helps prevent disease, protects the public from exposure to potential harm, and promotes health throughout communities at the local, national, and global levels. Special Advising Note: We strongly advise students to complete as many of the lower-division courses as possible before entering UCSD. Preparing well for the major helps students move efficiently toward graduation. The Herbert Wertheim School of Public Health and Human Longevity Science offers courses in epidemiology, biostatistics, social and behavioral sciences, environmental and occupational health sciences, and health policy. The epidemiology and biostatistics areas offer courses on the determinants and distribution of disease at the population level with a focus on analyzing and interpreting public health data using statistical methods. The social and behavioral sciences area offers courses for students interested in how behaviors influence disease. The environmental and occupational health sciences area offers courses on the study of environmental and occupational factors, including biological, physical, and chemical factors that affect the health of a workforce and the community. The health policy area emphasizes the structure, process, and outcomes of health services and policies that are commonly used to motivate people to healthier lifestyles. All courses taken for the major, both lower-division and upper-division, must be taken for a letter grade. Students must receive a grade of C– or higher in any course to be counted toward fulfillment of the major requirements. Entry to the Major: All BSPH Majors have Selective Major ( https://students.ucsd.edu/academics/advising/majors-minors/impacted-majors.html ) status. Please see the Public Health Website under Public Health Entry Requirement ( https://ph.ucsd.edu/undergrad/majors/major-entry-requirement.html ) for details. Additional Information: • Undergraduate program in Public Health at UCSD: https://ph.ucsd.edu/undergrad/index.html • Required Transfer Major Preparation: https://ph.ucsd.edu/undergrad/new-prospective-students/transfer-major-preparation.html • The field of Public Health: https://whatispublichealth.org and https://thisispublichealth.org • For specific questions, send an email to publichealth@health.ucsd.edu"
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2023, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep NOTE: Transfer students MUST complete all listed major preparatory courses for this major prior to enrolling at UC San Diego. Public health seeks to improve human health through the development and application of scientific knowledge that helps prevent disease, protects the public from exposure to potential harm, and promotes health throughout communities at the local, national, and global levels. Special Advising Note: We strongly advise students to complete as many of the lower-division courses as possible before entering UCSD. Preparing well for the major helps students move efficiently toward graduation. The Herbert Wertheim School of Public Health and Human Longevity Science offers courses in epidemiology, biostatistics, social and behavioral sciences, environmental and occupational health sciences, and health policy. The epidemiology and biostatistics areas offer courses on the determinants and distribution of disease at the population level with a focus on analyzing and interpreting public health data using statistical methods. The social and behavioral sciences area offers courses for students interested in how behaviors influence disease. The environmental and occupational health sciences area offers courses on the study of environmental and occupational factors, including biological, physical, and chemical factors that affect the health of a workforce and the community. The health policy area emphasizes the structure, process, and outcomes of health services and policies that are commonly used to motivate people to healthier lifestyles. All courses taken for the major, both lower-division and upper-division, must be taken for a letter grade. Students must receive a grade of C\u2013 or higher in any course to be counted toward fulfillment of the major requirements. Entry to the Major: All BSPH Majors have Selective Major ( https://students.ucsd.edu/academics/advising/majors-minors/impacted-majors.html ) status. Please see the Public Health Website under Public Health Entry Requirement ( https://ph.ucsd.edu/undergrad/majors/major-entry-requirement.html ) for details. Additional Information: \u2022 Undergraduate program in Public Health at UCSD: https://ph.ucsd.edu/undergrad/index.html \u2022 Required Transfer Major Preparation: https://ph.ucsd.edu/undergrad/new-prospective-students/transfer-major-preparation.html \u2022 The field of Public Health: https://whatispublichealth.org and https://thisispublichealth.org \u2022 For specific questions, send an email to publichealth@health.ucsd.edu"
   ]
 }

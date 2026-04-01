@@ -8,372 +8,541 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENL",
-                "number": "003",
-                "title": "Introduction to Literature ",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENGWR",
-                "number": "301",
-                "title": "College Composition and Literature",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "481",
-                "title": "Honors College Composition and Literature",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "303",
-                "title": "Argumentative Writing and Critical Thinking Through Literature",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "003",
+                        "title": "Introduction to Literature ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGWR",
+                        "number": "301",
+                        "title": "College Composition and Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "481",
+                        "title": "Honors College Composition and Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "303",
+                        "title": "Argumentative Writing and Critical Thinking Through Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "UWP",
-                "number": "001",
-                "title": "Introduction to Academic Literacies ",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENGWR",
-                "number": "482",
-                "title": "Honors Advanced Composition and Critical Thinking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "302",
-                "title": "Advanced Composition and Critical Thinking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "480",
-                "title": "Honors College Composition",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "300",
-                "title": "College Composition",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UWP",
+                        "number": "001",
+                        "title": "Introduction to Academic Literacies ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGWR",
+                        "number": "482",
+                        "title": "Honors Advanced Composition and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "302",
+                        "title": "Advanced Composition and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "480",
+                        "title": "Honors College Composition",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "300",
+                        "title": "College Composition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LDA",
-                "number": "021",
-                "title": "Landscape Representation I ",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "HORT",
-                "number": "322",
-                "title": "Landscape and Irrigation Graphics and Design",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LDA",
+                        "number": "021",
+                        "title": "Landscape Representation I ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HORT",
+                        "number": "322",
+                        "title": "Landscape and Irrigation Graphics and Design",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BIS",
-                "number": "002B",
-                "title": "Introduction to Biology: Principles of Ecology & Evolution",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "400",
-                "title": "Principles of Biology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "415",
-                "title": "Introduction to Biology: Biodiversity, Evolution, and Ecology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "400",
-                "title": "Principles of Biology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "420",
-                "title": "Principles of Zoology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "410",
-                "title": "Principles of Botany",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002B",
+                        "title": "Introduction to Biology: Principles of Ecology & Evolution",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "400",
+                        "title": "Principles of Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "415",
+                        "title": "Introduction to Biology: Biodiversity, Evolution, and Ecology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "400",
+                        "title": "Principles of Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "420",
+                        "title": "Principles of Zoology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "410",
+                        "title": "Principles of Botany",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CMN",
-                "number": "001",
-                "title": "Introduction to Public Speaking",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "COMM",
-                "number": "301",
-                "title": "Introduction to Public Speaking",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMN",
+                        "number": "001",
+                        "title": "Introduction to Public Speaking",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "301",
+                        "title": "Introduction to Public Speaking",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENH",
-                "number": "006",
-                "title": "Introduction to Environmental Plants ",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "HORT",
-                "number": "305",
-                "title": "Plant Identification-Fall Selections",
-                "units": 3.0
-              },
-              {
-                "prefix": "HORT",
-                "number": "306",
-                "title": "Plant Identification-Spring Selections",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENH",
+                        "number": "006",
+                        "title": "Introduction to Environmental Plants ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HORT",
+                        "number": "305",
+                        "title": "Plant Identification-Fall Selections",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HORT",
+                        "number": "306",
+                        "title": "Plant Identification-Spring Selections",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "GEL",
-                "number": "001",
-                "title": "The Earth",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "GEOL",
-                "number": "300",
-                "title": "Physical Geology",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEL",
+                        "number": "001",
+                        "title": "The Earth",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "300",
+                        "title": "Physical Geology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHY",
-                "number": "010",
-                "title": "Topics in Physics for Nonscientists ",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "310",
-                "title": "Conceptual Physics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "010",
+                        "title": "Topics in Physics for Nonscientists ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "310",
+                        "title": "Conceptual Physics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SSC",
-                "number": "010",
-                "title": "Soils in Our Environment",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "HORT",
-                "number": "302",
-                "title": "Soils, Soil Management, and Plant Nutrition",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SSC",
+                        "number": "010",
+                        "title": "Soils in Our Environment",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HORT",
+                        "number": "302",
+                        "title": "Soils, Soil Management, and Plant Nutrition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHY",
-                "number": "001A",
-                "title": "Principles of Physics ",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "350",
-                "title": "General Physics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "001A",
+                        "title": "Principles of Physics ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "350",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "STA",
-                "number": "013",
-                "title": "Elementary Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "STAT",
-                "number": "480",
-                "title": "Introduction to Probability and Statistics - Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "PSYC",
-                "number": "330",
-                "title": "Introductory Statistics for the Behavioral Sciences",
-                "units": 3.0
-              },
-              {
-                "prefix": "STAT",
-                "number": "300",
-                "title": "Introduction to Probability and Statistics",
-                "units": 4.0
-              },
-              {
-                "prefix": "ECON",
-                "number": "310",
-                "title": "Statistics for Business and Economics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "480",
+                        "title": "Introduction to Probability and Statistics - Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "330",
+                        "title": "Introductory Statistics for the Behavioral Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "300",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "310",
+                        "title": "Statistics for Business and Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MAT",
-                "number": "016A",
-                "title": "Short Calculus",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "400",
-                "title": "Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016A",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "400",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

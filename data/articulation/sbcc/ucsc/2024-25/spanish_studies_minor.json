@@ -8,83 +8,126 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "1",
-                "title": "First-Year Spanish",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "101",
-                "title": "Beginning Spanish I",
-                "units": 5.0
-              },
-              {
-                "prefix": "SPAN",
-                "number": "102",
-                "title": "Beginning Spanish II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "1",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "101",
+                        "title": "Beginning Spanish I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Beginning Spanish II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LING",
-                "number": "50",
-                "title": "Introduction to Linguistics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LING",
+                        "number": "50",
+                        "title": "Introduction to Linguistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "2",
-                "title": "First-Year Spanish",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "102",
-                "title": "Beginning Spanish II",
-                "units": 5.0
-              },
-              {
-                "prefix": "SPAN",
-                "number": "101",
-                "title": "Beginning Spanish I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "2",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Beginning Spanish II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "101",
+                        "title": "Beginning Spanish I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

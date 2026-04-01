@@ -8,443 +8,682 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "8A",
-                "title": "Organic Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "220",
-                "title": "Organic Chemistry",
-                "units": 4.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "210",
-                "title": "Organic Chemistry",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "8A",
+                        "title": "Organic Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "220",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "210",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "8B",
-                "title": "Organic Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "210",
-                "title": "Organic Chemistry",
-                "units": 4.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "220",
-                "title": "Organic Chemistry",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "8B",
+                        "title": "Organic Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "210",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "220",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "20A",
-                "title": "Cell and Molecular Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "110",
-                "title": "General Molecular Cell Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "20A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "110",
+                        "title": "General Molecular Cell Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "19A",
-                "title": " Calculus for Science, Engineering, and Mathematics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "150",
-                "title": "Calculus and Analytic Geometry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Calculus and Analytic Geometry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "19B",
-                "title": "Calculus for Science, Engineering, and Mathematics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "160",
-                "title": "Calculus and Analytic Geometry",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19B",
+                        "title": "Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "160",
+                        "title": "Calculus and Analytic Geometry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AM",
-                "number": "10",
-                "title": "Mathematical Methods for Engineers I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "220",
-                "title": "Linear Algebra",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "10",
+                        "title": "Mathematical Methods for Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "220",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "3A",
-                "title": "General Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "110",
-                "title": "General Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "110",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "3B",
-                "title": "General Chemistry",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "120",
-                "title": "General Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3B",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "3C",
-                "title": "General Chemistry",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "120",
-                "title": "General Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3C",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "4A",
-                "title": "Advanced General Chemistry: Molecular Structure and Reactivity",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "110",
-                "title": "General Chemistry",
-                "units": 5.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "120",
-                "title": "General Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4A",
+                        "title": "Advanced General Chemistry: Molecular Structure and Reactivity",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "110",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "4B",
-                "title": "Advanced General Chemistry: Molecular Structure and Reactivity",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "110",
-                "title": "General Chemistry",
-                "units": 5.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "120",
-                "title": "General Chemistry",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4B",
+                        "title": "Advanced General Chemistry: Molecular Structure and Reactivity",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "110",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "5A",
-                "title": "Introduction to Physics I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "110",
-                "title": "General Physics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5A",
+                        "title": "Introduction to Physics I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "110",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "5B",
-                "title": "Introduction to Physics II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "211",
-                "title": "General Physics",
-                "units": 5.0
-              },
-              {
-                "prefix": "PHYS",
-                "number": "110",
-                "title": "General Physics",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-13",
+          "group_number": 13,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5B",
+                        "title": "Introduction to Physics II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "211",
+                        "title": "General Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "110",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AM",
-                "number": "20",
-                "title": "Mathematical Methods for Engineers II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "230",
-                "title": "Introduction to Ordinary Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-14",
+          "group_number": 14,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "20",
+                        "title": "Mathematical Methods for Engineers II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "230",
+                        "title": "Introduction to Ordinary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CSE",
-                "number": "16",
-                "title": "Applied Discrete Mathematics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CS",
-                "number": "150",
-                "title": "Discrete Structures",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-15",
+          "group_number": 15,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "16",
+                        "title": "Applied Discrete Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "150",
+                        "title": "Discrete Structures",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CSE",
-                "number": "13S",
-                "title": "Computer Systems and C Programming",
-                "units": 7.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-16",
+          "group_number": 16,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "13S",
+                        "title": "Computer Systems and C Programming",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CSE",
-                "number": "30",
-                "title": "Programming Abstractions: Python",
-                "units": 7.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CS",
-                "number": "132",
-                "title": "Data Structures in Python",
-                "units": 3.0
-              },
-              {
-                "prefix": "CS",
-                "number": "131",
-                "title": "Data Structures in Java",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-17",
+          "group_number": 17,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "30",
+                        "title": "Programming Abstractions: Python",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "132",
+                        "title": "Data Structures in Python",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CS",
+                        "number": "131",
+                        "title": "Data Structures in Java",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -452,7 +691,7 @@
   "notes": [
     "Transfer Admission Screening Policy To be considered for admission to the Biomolecular Engineering and Bioinformatics B.S. major, transfer students need to complete the equivalents of eight courses from the following list with a GPA of 2.80 or better in those courses: BME 80G/PHIL 80G: Bioethics in the 21st Century: Science, Business, and Society BIOL 20A: Cell and Molecular Biology MATH 19A: Calculus for Science, Engineering, and Mathematics MATH 19B: Calculus for Science, Engineering, and Mathematics AM 10: Mathematical Methods for Engineers I CHEM 8A: Organic Chemistry CHEM 8B: Organic Chemistry One of the following options (courses may be selected from sections B or C below): CHEM 3A: General Chemistry CHEM 3B: General Chemistry CHEM 3C: General Chemistry OR CHEM 4A: Advanced General Chemistry: Molecular Structure and Reactivity CHEM 4B: Advanced General Chemistry: Molecular Structure and Reactivity It is strongly recommended that community college students complete all required General Chemistry coursework for their intended major at one institution prior to transfer to UC Santa Cruz. Although not required for admission, transfer students are strongly recommended to complete at least ten courses from the above list if they wish to graduate in two years. Students with fewer than 10 transferable courses may find it difficult to complete the major in only two more years. Transferring to Biomolecular Engineering (see section D below) Students transferring into the biomolecular engineering concentration may also count any of the following: PHYS 5A: Introduction to Physics I PHYS 5B: Introduction to Physics II BME 21L: Introduction to Basic Laboratory Techniques AM 20: Mathematical Methods for Engineers II Transferring to Bioinformatics (see section E below) Students transferring into the bioinformatics concentration may also count any of the following: CSE 16: Applied Discrete Mathematics CSE 13S: Computer Systems and C Programming CSE 30: Programming Abstractions: Python Transfer students may use courses articulated to PHIL 22, PHIL 24, or PHIL 28 in place of BME 80G, if these courses are taken prior to registering at UC Santa Cruz. Prospective students are encouraged to prioritize required and recommended major preparation, and may additionally complete courses that articulate to UC Santa Cruz general education requirements as time allows. Please visit the Baskin Engineering Undergraduate Experience website to learn more about this major.",
     "All transfer applicants must satisfy University of California admissions eligibility requirements and campus admission selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website . The UC Santa Cruz Transfer Admission Guarantee (TAG) is a formal agreement that ensures your fall admission to your chosen major, provided you are transferring from a California Community College and meet specific requirements. Visit the UC Santa Cruz TAG webpage for more information.",
-    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the “Recommended Preparation” section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
+    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the \u201cRecommended Preparation\u201d section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
     "The UC Santa Cruz Advanced Placement (AP), International Baccalaureate (IB), and A-Level examination credit policies may be found in the UC Santa Cruz General Catalog . AP, IBH, and A-level exams may or may not satisfy course requirements, depending on the specific exam.",
     "Prior to July 1, 2023, UC Santa Cruz's General Chemistry series was offered as Chemistry 1A, 1B and 1C, with associated laboratories Chemistry 1M and 1N. Starting in the 2023-2024 academic year, this series was replaced by two new distinct series: Chemistry 3A, 3B and 3C, with labs Chemistry 3BL and 3CL; and Chemistry 4A and 4B with labs Chemistry 4AL and 4BL. Prospective transfer students who started working toward the Chemistry 1 series prior to the 2024-2025 academic year may complete equivalent courses as originally approved, and their articulated coursework will fulfill the General Chemistry series screening requirement."
   ]

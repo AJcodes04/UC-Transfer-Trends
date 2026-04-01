@@ -8,78 +8,107 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "60",
-                "title": "Introduction to Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "STAT",
-                "number": "300",
-                "title": "Introduction to Probability and Statistics",
-                "units": 4.0
-              },
-              {
-                "prefix": "ECON",
-                "number": "310",
-                "title": "Statistics for Business and Economics",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSYC",
-                "number": "330",
-                "title": "Introductory Statistics for the Behavioral Sciences",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "60",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "300",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "310",
+                        "title": "Statistics for Business and Economics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "330",
+                        "title": "Introductory Statistics for the Behavioral Sciences",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COGS",
-                "number": "14B",
-                "title": "Introduction to Statistical Analysis",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "310",
-                "title": "Statistics for Business and Economics",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSYC",
-                "number": "330",
-                "title": "Introductory Statistics for the Behavioral Sciences",
-                "units": 3.0
-              },
-              {
-                "prefix": "STAT",
-                "number": "300",
-                "title": "Introduction to Probability and Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "14B",
+                        "title": "Introduction to Statistical Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "310",
+                        "title": "Statistics for Business and Economics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "330",
+                        "title": "Introductory Statistics for the Behavioral Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "300",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

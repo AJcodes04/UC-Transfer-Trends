@@ -8,216 +8,329 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BIOLOGY",
-                "number": "1B",
-                "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "42",
-                "title": "Organismal Biology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "43",
-                "title": "Ecology and Evolution",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "42",
+                        "title": "Organismal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "43",
+                        "title": "Ecology and Evolution",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "53",
-                "title": "Multivariable Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "32",
-                "title": "Analytic Geometry and Calculus III",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "32",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1B",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "54",
-                "title": "Linear Algebra and Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "42",
-                "title": "Linear Algebra",
-                "units": 3.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "40",
-                "title": "Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "42",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "40",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1A",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "30",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "30",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "1B",
-                "title": "General Chemistry",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "2",
-                "title": "General Chemistry II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "2",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYSICS",
-                "number": "7A",
-                "title": "Physics for Scientists and Engineers",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "41",
-                "title": "Physics for Scientists and Engineers I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "41",
+                        "title": "Physics for Scientists and Engineers I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYSICS",
-                "number": "7B",
-                "title": "Physics for Scientists and Engineers",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "42",
-                "title": "Physics for Scientists and Engineers II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "42",
+                        "title": "Physics for Scientists and Engineers II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
     "MINIMUM ADMISSION REQUIREMENTS You must complete all lower-division requirements, with the exception of physics, before transfer. Complete the equivalent of: BIOLOGY 1A, BIOLOGY 1AL, + BIOLOGY 1B CHEMISTRY 1A & CHEMISTRY 1AL (If interested in track 2 of the Biochemistry & Molecular Biology emphasis, Biological Chemistry, you must also complete the equivalent of CHEMISTRY 1B) CHEMISTRY 3A, 3AL, 3B, + 3BL Any two equivalent courses of MATH 1A + MATH 1B + MATH 53 + MATH 54 + MATH 55 NOTE : For students who have Calculus test credit, please note that the MCB major does NOT accept test credit to waive math requirements. If you are able to place out of Math 1A, you may substitute Math 1A with an equivalent course to Stats 2, Stats 20, or Stats W21 to count towards the MCB major Although it is not required for admission, we strongly recommend that you complete one year of calculus-based physics with lab prior to transfer because it may be difficult to enroll in these courses at Berkeley. Complete the equivalent of: PHYSICS 8A + PHYSICS 8B or PHYSICS 7A + PHYSICS 7B Note: PHYSICS 7C is OPTIONAL for this major AP/IB information for the major in Molecular and Cell Biology for transfer students: -Score of 4 or 5 on AP Chemistry satisfies CHEMISTRY 1A/1AL -Score of 4 or 5 on AP Biology satisfies BIOLOGY 1A/1AL + BIOLOGY 1B -Score of 5, 6, or 7 on IB Chemistry satisfies Chemistry 1A/1AL -Score of 5, 6, or 7 on IB Biology satisfies Biology 1B only The Molecular and Cell Biology Undergraduate Office discourages the use of AP, IB, or A-Level credit to waive lower-division courses. Lack of such coursework at the college level could result in poor performance in upper-division MCB courses. In addition, many health-related graduate and professional programs will not accept AP/IB scores in lieu of coursework completed at a college or university. The Molecular and Cell Biology major has five emphases. The lower-division requirements are the same for all major emphases except Track 2 of Biochemistry & Molecular Biology (Biological Chemistry) which additionally requires CHEMISTRY 1B. 1. Biochemistry, Biophysics & Structural Biology Track 1 - Biochemistry & Molecular Biology Track 2 - Biological Chemistry 2. Cell Biology, Development & Physiology Track 1 - Cell & Systems Biology Track 2 - Medical Biology & Physiology 3. Genetics, Genomics, Evolution, & Development Track 1 - Genetics, Genomics, & Development Track 2 - Developmental Genetics 4. Immunology & Molecular Medicine Track 1 - Immunology Track 2 - Infectious Diseases Track 3: Immunology & Molecular Medicine 5. Molecular Therapeutics Track 1 - Molecular Therapeutics Track 2 - Therapeutics and Disease 6. Neurobiology For more information on the major in Molecular and Cell Biology: http://mcb.berkeley.edu/undergrad/",
-    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu"
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): \u00b7 Two transferable courses in English composition; \u00b7 One transferable course in mathematical concepts and quantitative reasoning; \u00b7 Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu"
   ]
 }

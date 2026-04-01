@@ -8,125 +8,182 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ANTHRO",
-                "number": "3",
-                "title": "CULTURE AND SOCIETY",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ANTH",
-                "number": "103",
-                "title": "Introduction to Cultural Anthropology",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "CULTURE AND SOCIETY",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "103",
+                        "title": "Introduction to Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ANTHRO",
-                "number": "2",
-                "title": "Archaeology: Introduction",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ANTH",
-                "number": "102H",
-                "title": "Introduction to Archaeology, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "ANTH",
-                "number": "102",
-                "title": "Introduction to Archaeology",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "2",
+                        "title": "Archaeology: Introduction",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "102H",
+                        "title": "Introduction to Archaeology, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ANTH",
+                        "number": "102",
+                        "title": "Introduction to Archaeology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ANTHRO",
-                "number": "1",
-                "title": "HUMAN EVOLUTION",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "171",
-                "title": "Human Evolution",
-                "units": 3.0
-              },
-              {
-                "prefix": "ANTH",
-                "number": "101H",
-                "title": "Physical Anthropology, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "ANTH",
-                "number": "101",
-                "title": "Physical Anthropology",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "1",
+                        "title": "HUMAN EVOLUTION",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "171",
+                        "title": "Human Evolution",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ANTH",
+                        "number": "101H",
+                        "title": "Physical Anthropology, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ANTH",
+                        "number": "101",
+                        "title": "Physical Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ANTHRO",
-                "number": "4",
-                "title": "Culture and Communication",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ANTH",
-                "number": "104",
-                "title": "Language and Culture",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "4",
+                        "title": "Culture and Communication",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "104",
+                        "title": "Language and Culture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "The Anthropology B.A. major is designed for students interested in an anthropological understanding of human behavior. One of the strengths of anthropology is its cross-cultural “holistic” and integrative approach with many fields, such as biology, history, linguistics, the social sciences, and many of the humanities. Listed below are the lower division preparation courses for the major. To be considered for this major, please complete two or more courses listed below by the end of spring before transfer: One course in Human Evolution, One course in Archaeology, One course in Sociocultural Anthropology, and One course in Culture and Communication. All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https:// anthro.ucla.edu and https:// admission.ucla.edu. PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses."
+    "The Anthropology B.A. major is designed for students interested in an anthropological understanding of human behavior. One of the strengths of anthropology is its cross-cultural \u201cholistic\u201d and integrative approach with many fields, such as biology, history, linguistics, the social sciences, and many of the humanities. Listed below are the lower division preparation courses for the major. To be considered for this major, please complete two or more courses listed below by the end of spring before transfer: One course in Human Evolution, One course in Archaeology, One course in Sociocultural Anthropology, and One course in Culture and Communication. All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https:// anthro.ucla.edu and https:// admission.ucla.edu. PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses."
   ]
 }

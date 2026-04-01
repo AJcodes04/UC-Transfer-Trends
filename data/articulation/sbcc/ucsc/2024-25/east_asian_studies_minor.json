@@ -8,66 +8,95 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "JAPN",
-                "number": "1",
-                "title": "First-Year Japanese",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "JAPN",
-                "number": "101",
-                "title": "Beginning Japanese I",
-                "units": 5.0
-              },
-              {
-                "prefix": "JAPN",
-                "number": "102",
-                "title": "Beginning Japanese II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "1",
+                        "title": "First-Year Japanese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "101",
+                        "title": "Beginning Japanese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "JAPN",
+                        "number": "102",
+                        "title": "Beginning Japanese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHIN",
-                "number": "1",
-                "title": "First-Year Chinese",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHIN",
-                "number": "101",
-                "title": "Beginning Chinese I",
-                "units": 5.0
-              },
-              {
-                "prefix": "CHIN",
-                "number": "102",
-                "title": "Beginning Chinese II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "1",
+                        "title": "First-Year Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "101",
+                        "title": "Beginning Chinese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHIN",
+                        "number": "102",
+                        "title": "Beginning Chinese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

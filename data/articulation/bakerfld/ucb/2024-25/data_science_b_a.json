@@ -8,116 +8,173 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1A",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6A",
-                "title": "Analytic Geometry/Calculus I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6A",
+                        "title": "Analytic Geometry/Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1B",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6B",
-                "title": "Analytic Geometry/Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6B",
+                        "title": "Analytic Geometry/Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "54",
-                "title": "Linear Algebra and Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6E",
-                "title": "Elementary Linear Algebra",
-                "units": 3.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "B6D",
-                "title": "Ordinary Differential Equations",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6E",
+                        "title": "Elementary Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "B6D",
+                        "title": "Ordinary Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COMPSCI",
-                "number": "61B",
-                "title": "Data Structures",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "COMP",
-                "number": "B12",
-                "title": "Programming Concepts and Methodology II",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "61B",
+                        "title": "Data Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMP",
+                        "number": "B12",
+                        "title": "Programming Concepts and Methodology II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
     "COLLEGE ADMISSION REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF COMPUTING, DATA SCIENCE, AND SOCIETY (CDSS) Completion of Cal-GETC/ UC IGETC is not a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. By the end of the spring term preceding fall enrollment at Berkeley, you must complete : The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): Two transferable courses in English composition; One transferable course in mathematical concepts and quantitative reasoning; Four transferable college courses chosen from at least two of the following subject areas: arts and humanities social and behavioral sciences physical and biological sciences AND 2) Major Requirements All required courses as noted by your intended major below. Only applicants who have completed 100% of items 1 and 2 above will be considered for admission. Additional completion of highly recommended courses will serve to strengthen the application. For more information on admission to UC Berkeley : https://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: https://guide.berkeley.edu",
-    "Acceptable exam credit: AP/IB exam scores are only accepted for lower division math requirements for the Data Science major in accordance with Math Department guidelines . ﻿ Data Science does not accept exam credit to meet any other lower division requirements (ie lower division Domain Emphasis)",
-    "DATA SCIENCE is a new field of study that combines computational and inferential reasoning to draw conclusions based on data about some aspect of the real world. Data scientists come from all walks of life, all areas of study, and all backgrounds. They share an appreciation for the practical use of mathematical and scientific thinking and the power of computing to understand and solve problems for business, research, and societal impact. The Data Science Major will equip students to draw sound conclusions from data in context, using knowledge of statistical inference, computational processes, data management strategies, domain knowledge, and theory. Students will learn to carry out analyses of data through the full cycle of the investigative process in scientific and practical contexts. Students will gain understanding of the human and ethical implications of data analysis and integrate that knowledge in designing and carrying out their work. We strongly encourage you to visit our website for prospective transfer students (link listed below) to learn more about preparing for a major in Data Science at UC Berkeley. Also, please reach out to us via the email address below if you have specific questions about your academic path into data science. ﻿For more information on this major: ds-advising@berkeley.edu https://data.berkeley.edu/information-prospective-transfer-students",
-    "All coursework towards the major must be taken for a grade. Required Courses for Admission to the Major MATH 1A & 1B - Calculus I & II MATH 56 - Linear Algebra -or- MATH 54 - Linear Algebra and Differential Equations Data Science does not require full equivalence to Math 54 and will accept just the Linear Algebra course of an articulated Math 54-equivalent series. Highly Recommended for Admission to the Major ﻿DATA/COMPSCI/INFO/STAT/C8 - Foundations of Data Science COMPSCI 61A - The Structure and Interpretation of Computer Programs (preferred) -or- ENGIN 7 - Introduction to Computer Programming for Scientists and Engineers COMPSCI 61B - Data Structures If you see \"Must complete an additional university course after transfer to satisfy this requirement\" below the community college course, then in addition to completing the community college course, you must complete COMPSCI 47B after enrollment at UC Berkeley. Data C8 and COMPSCI 61A are found at only a few California community colleges. Please visit this page to see the specific community colleges offering equivalents to Data C8 and COMPSCI 61A. Data Science transfer students are expected to enroll in these classes during their first semester at Berkeley if not completed prior to transfer. If you can’t complete the highly recommended courses, completion of additional courses in computer science/programming (especially Python), statistics and mathematics can strengthen your application."
+    "Acceptable exam credit: AP/IB exam scores are only accepted for lower division math requirements for the Data Science major in accordance with Math Department guidelines . \ufeff Data Science does not accept exam credit to meet any other lower division requirements (ie lower division Domain Emphasis)",
+    "DATA SCIENCE is a new field of study that combines computational and inferential reasoning to draw conclusions based on data about some aspect of the real world. Data scientists come from all walks of life, all areas of study, and all backgrounds. They share an appreciation for the practical use of mathematical and scientific thinking and the power of computing to understand and solve problems for business, research, and societal impact. The Data Science Major will equip students to draw sound conclusions from data in context, using knowledge of statistical inference, computational processes, data management strategies, domain knowledge, and theory. Students will learn to carry out analyses of data through the full cycle of the investigative process in scientific and practical contexts. Students will gain understanding of the human and ethical implications of data analysis and integrate that knowledge in designing and carrying out their work. We strongly encourage you to visit our website for prospective transfer students (link listed below) to learn more about preparing for a major in Data Science at UC Berkeley. Also, please reach out to us via the email address below if you have specific questions about your academic path into data science. \ufeffFor more information on this major: ds-advising@berkeley.edu https://data.berkeley.edu/information-prospective-transfer-students",
+    "All coursework towards the major must be taken for a grade. Required Courses for Admission to the Major MATH 1A & 1B - Calculus I & II MATH 56 - Linear Algebra -or- MATH 54 - Linear Algebra and Differential Equations Data Science does not require full equivalence to Math 54 and will accept just the Linear Algebra course of an articulated Math 54-equivalent series. Highly Recommended for Admission to the Major \ufeffDATA/COMPSCI/INFO/STAT/C8 - Foundations of Data Science COMPSCI 61A - The Structure and Interpretation of Computer Programs (preferred) -or- ENGIN 7 - Introduction to Computer Programming for Scientists and Engineers COMPSCI 61B - Data Structures If you see \"Must complete an additional university course after transfer to satisfy this requirement\" below the community college course, then in addition to completing the community college course, you must complete COMPSCI 47B after enrollment at UC Berkeley. Data C8 and COMPSCI 61A are found at only a few California community colleges. Please visit this page to see the specific community colleges offering equivalents to Data C8 and COMPSCI 61A. Data Science transfer students are expected to enroll in these classes during their first semester at Berkeley if not completed prior to transfer. If you can\u2019t complete the highly recommended courses, completion of additional courses in computer science/programming (especially Python), statistics and mathematics can strengthen your application."
   ]
 }

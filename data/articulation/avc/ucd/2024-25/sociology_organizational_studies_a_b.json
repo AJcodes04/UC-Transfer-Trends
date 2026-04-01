@@ -8,119 +8,190 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SOC",
-                "number": "007",
-                "title": "Race & Ethnicity",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "SOC",
-                "number": "110",
-                "title": "Ethnic Relations",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "007",
+                        "title": "Race & Ethnicity",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "110",
+                        "title": "Ethnic Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SOC",
-                "number": "004",
-                "title": "Immigration & Opportunity ",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "004",
+                        "title": "Immigration & Opportunity ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SOC",
-                "number": "001",
-                "title": "Introduction to Sociology ",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "SOC",
-                "number": "101",
-                "title": "Introduction to Sociology",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ECN",
-                "number": "001B",
-                "title": "Principles of Macroeconomics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "101",
-                "title": "Principles of Macroeconomics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001B",
+                        "title": "Principles of Macroeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "101",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ECN",
-                "number": "001A",
-                "title": "Principles of Microeconomics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "102",
-                "title": "Principles of Microeconomics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001A",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -130,6 +201,6 @@
     "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
     "Please refer to the Transfer Admissions Requirements for information on admissions to this major.",
     "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
-    "The Organizational Studies (OS) major is designed to provide a broad understanding of the political, social, and economic organizations that make up modern society. Whether thinking about the structure of government bureaucracies, legal systems, economic markets, educational systems, or workplaces, OS offers an interdisciplinary view from which to understand the contemporary world in which complex and formal organizations are ubiquitous. Formal organizations influence how we feel, what we think, and what we can accomplish. As such, the OS major provides both a basic understanding of the field as well as enhances your ability to pursue their more specialized career interests. At the upper division level, you can choose one of four specialized tracks, any one of which will help to better identify and inform your career goals—whether that be in postgraduate education or a specific type of job—and pursue them after graduation. Whether you select the “Business & Society,” “Public Policy & Social Welfare,” “Nonprofit & Social Movement Organizations” or the “Student-Initiated Theme” track, once completed you will have a unique and valuable area of expertise. Students who plan to enroll in graduate programs in business, public policy, public administration, and education are advised to develop proficiencies in statistics and calculus."
+    "The Organizational Studies (OS) major is designed to provide a broad understanding of the political, social, and economic organizations that make up modern society. Whether thinking about the structure of government bureaucracies, legal systems, economic markets, educational systems, or workplaces, OS offers an interdisciplinary view from which to understand the contemporary world in which complex and formal organizations are ubiquitous. Formal organizations influence how we feel, what we think, and what we can accomplish. As such, the OS major provides both a basic understanding of the field as well as enhances your ability to pursue their more specialized career interests. At the upper division level, you can choose one of four specialized tracks, any one of which will help to better identify and inform your career goals\u2014whether that be in postgraduate education or a specific type of job\u2014and pursue them after graduation. Whether you select the \u201cBusiness & Society,\u201d \u201cPublic Policy & Social Welfare,\u201d \u201cNonprofit & Social Movement Organizations\u201d or the \u201cStudent-Initiated Theme\u201d track, once completed you will have a unique and valuable area of expertise. Students who plan to enroll in graduate programs in business, public policy, public administration, and education are advised to develop proficiencies in statistics and calculus."
   ]
 }

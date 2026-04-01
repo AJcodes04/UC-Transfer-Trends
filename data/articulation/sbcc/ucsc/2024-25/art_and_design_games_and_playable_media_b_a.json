@@ -8,359 +8,514 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CMPM",
-                "number": "80K",
-                "title": "Foundations of Video Game Design",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MAT",
-                "number": "145",
-                "title": "Video Game Design",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPM",
+                        "number": "80K",
+                        "title": "Foundations of Video Game Design",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "145",
+                        "title": "Video Game Design",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "THEA",
-                "number": "20",
-                "title": "Introductory Studies in Acting",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "TA",
-                "number": "215",
-                "title": "Fundamentals of Directing",
-                "units": 3.0
-              },
-              {
-                "prefix": "TA",
-                "number": "112",
-                "title": "Intermediate Acting A",
-                "units": 3.0
-              },
-              {
-                "prefix": "TA",
-                "number": "213",
-                "title": "Intermediate Acting B",
-                "units": 3.0
-              },
-              {
-                "prefix": "TA",
-                "number": "214",
-                "title": "Advanced Acting",
-                "units": 3.0
-              },
-              {
-                "prefix": "TA",
-                "number": "111",
-                "title": "Beginning Acting",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THEA",
+                        "number": "20",
+                        "title": "Introductory Studies in Acting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TA",
+                        "number": "215",
+                        "title": "Fundamentals of Directing",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "112",
+                        "title": "Intermediate Acting A",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "213",
+                        "title": "Intermediate Acting B",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "214",
+                        "title": "Advanced Acting",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "111",
+                        "title": "Beginning Acting",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "THEA",
-                "number": "10",
-                "title": "Introduction to Theater Design and Technology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "TA",
-                "number": "120",
-                "title": "Understanding Scenography",
-                "units": 3.0
-              },
-              {
-                "prefix": "TA",
-                "number": "227",
-                "title": "Scenic Design",
-                "units": 3.0
-              },
-              {
-                "prefix": "TA",
-                "number": "121",
-                "title": "Introduction to Stagecraft",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THEA",
+                        "number": "10",
+                        "title": "Introduction to Theater Design and Technology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TA",
+                        "number": "120",
+                        "title": "Understanding Scenography",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "227",
+                        "title": "Scenic Design",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "121",
+                        "title": "Introduction to Stagecraft",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20I",
-                "title": "Introduction to Photography",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHOT",
-                "number": "250",
-                "title": "Fine Art Photography",
-                "units": 3.0
-              },
-              {
-                "prefix": "PHOT",
-                "number": "109",
-                "title": "Introduction to Photography",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20I",
+                        "title": "Introduction to Photography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHOT",
+                        "number": "250",
+                        "title": "Fine Art Photography",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHOT",
+                        "number": "109",
+                        "title": "Introduction to Photography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FILM",
-                "number": "20P",
-                "title": "Introduction to Production Technique",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FP",
-                "number": "170",
-                "title": "Cinematography I",
-                "units": 3.0
-              },
-              {
-                "prefix": "FP",
-                "number": "175",
-                "title": "Film and Video Production I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FILM",
+                        "number": "20P",
+                        "title": "Introduction to Production Technique",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FP",
+                        "number": "170",
+                        "title": "Cinematography I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "FP",
+                        "number": "175",
+                        "title": "Film and Video Production I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ARTG",
-                "number": "50",
-                "title": "Play as a Radical Endeavor",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTG",
+                        "number": "50",
+                        "title": "Play as a Radical Endeavor",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "15",
-                "title": "Introduction to Drawing for the Major",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "122",
-                "title": "Advanced Drawing",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "120",
-                "title": "Fundamentals of Drawing",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "121",
-                "title": "Intermediate Drawing",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "15",
+                        "title": "Introduction to Drawing for the Major",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "122",
+                        "title": "Advanced Drawing",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "120",
+                        "title": "Fundamentals of Drawing",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "121",
+                        "title": "Intermediate Drawing",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20G",
-                "title": "Introduction to Print Media and Drawing",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "192",
-                "title": "Advanced Printmaking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "190",
-                "title": "Introduction to Printmaking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "194",
-                "title": "Intermediate Printmaking: Silkscreen",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "191",
-                "title": "Intermediate Printmaking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "193",
-                "title": "Beginning Printmaking: Silkscreen",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20G",
+                        "title": "Introduction to Print Media and Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "192",
+                        "title": "Advanced Printmaking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "190",
+                        "title": "Introduction to Printmaking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "194",
+                        "title": "Intermediate Printmaking: Silkscreen",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "191",
+                        "title": "Intermediate Printmaking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "193",
+                        "title": "Beginning Printmaking: Silkscreen",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "10D",
-                "title": "2D Foundation",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "140",
-                "title": "Studio Art Foundations (2-D)",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "10D",
+                        "title": "2D Foundation",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "140",
+                        "title": "Studio Art Foundations (2-D)",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "10E",
-                "title": "3D Foundation",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "141",
-                "title": "Studio Art Foundations 3D",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "10E",
+                        "title": "3D Foundation",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "141",
+                        "title": "Studio Art Foundations 3D",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20H",
-                "title": "Introduction to Sculpture and Public Art",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "172",
-                "title": "Advanced Sculpture",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "170",
-                "title": "Introduction to Sculpture",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "171",
-                "title": "Intermediate Sculpture",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20H",
+                        "title": "Introduction to Sculpture and Public Art",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "172",
+                        "title": "Advanced Sculpture",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "170",
+                        "title": "Introduction to Sculpture",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "171",
+                        "title": "Intermediate Sculpture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -368,7 +523,7 @@
   "notes": [
     "All transfer applicants must satisfy University of California admissions eligibility requirements and campus admission selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website . The UC Santa Cruz Transfer Admission Guarantee (TAG) is a formal agreement that ensures your fall admission to your chosen major, provided you are transferring from a California Community College and meet specific requirements. Visit the UC Santa Cruz TAG webpage for more information.",
     "Art & Design: Games + Playable Media B.A. Transfer Admission Screening Policy Transfer students must complete the following three courses, or their articulated equivalents, with a grade of C (2.0) or better in each course by the end of the spring term prior to transferring in the fall: ONE Intro to 2D Concepts course (section A below) ONE Intro to 3D Concepts course (section B below) ONE Art and Design Topics course (section C below) Refer to the \"Required Major Preparation Courses\" section below for lists of courses approved to fulfill these requirements. Strongly Recommended Major Preparation In addition to the required courses listed above, prospective transfer students are strongly advised to complete the Intersegmental General Education Transfer Curriculum (IGETC) , or all UC Santa Cruz general education requirements before matriculation. Transfer students who meet the screening criteria outlined above and fulfill the general education requirements can complete the major within two years after transfer to UC Santa Cruz, as detailed in the Academic Planner section under the \"Requirements and Planners\" tab in the UC Santa Cruz General Catalog . For more information on incorporating IGETC into your academic plan, please consult with your community college counselor. Please visit the Performance, Play & Design website to learn more about this major.",
-    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the “Recommended Preparation” section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
+    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the \u201cRecommended Preparation\u201d section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
     "The UC Santa Cruz Advanced Placement (AP), International Baccalaureate (IB), and A-Level examination credit policies may be found in the UC Santa Cruz General Catalog . AP, IBH, and A-level exams may or may not satisfy course requirements, depending on the specific exam."
   ]
 }

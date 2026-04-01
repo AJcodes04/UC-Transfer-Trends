@@ -79,29 +79,49 @@ export default function GeneralStats() {
     })).sort((a, b) => a.campus.localeCompare(b.campus))
   }, [stats, selectedYear])
 
-  const overallAvg = useMemo(() => {
-    if (!schoolTotals.length) return 'N/A'
-    const valid = schoolTotals.filter((s) => s.avgRate !== 'N/A')
-    if (!valid.length) return 'N/A'
-    const avg = valid.reduce((sum, s) => sum + parseFloat(s.avgRate), 0) / valid.length
-    return avg.toFixed(1) + '%'
-  }, [schoolTotals])
+  const cardYear = selectedYear || (availableYears.length ? availableYears[availableYears.length - 1] : null)
+  const prevCardYear = cardYear ? cardYear - 1 : null
 
-  const yearlyTotals = useMemo(() => {
-    if (!stats) return { latest: null, prev: null }
-    const byYear = {}
-    stats.forEach((row) => {
-      if (!byYear[row.year]) byYear[row.year] = { applicants: 0, admits: 0, enrolls: 0 }
-      byYear[row.year].applicants += row.applicants || 0
-      byYear[row.year].admits += row.admits || 0
-      byYear[row.year].enrolls += row.enrolls || 0
-    })
-    const years = Object.keys(byYear).map(Number).sort((a, b) => b - a)
-    return {
-      latest: years[0] ? { year: years[0], ...byYear[years[0]] } : null,
-      prev: years[1] ? { year: years[1], ...byYear[years[1]] } : null,
+  const overallAvg = useMemo(() => {
+    if (!stats || !cardYear) return { current: 'N/A', prev: 'N/A' }
+    const forYear = (y) => {
+      const rows = stats.filter((r) => r.year === y && r.admit_rate != null)
+      if (!rows.length) return null
+      return (rows.reduce((sum, r) => sum + r.admit_rate, 0) / rows.length).toFixed(1)
     }
-  }, [stats])
+    return { current: forYear(cardYear), prev: forYear(prevCardYear) }
+  }, [stats, cardYear, prevCardYear])
+
+  const mostCompetitive = useMemo(() => {
+    if (!stats || !cardYear) return { current: null, prev: null }
+    const forYear = (y) => {
+      const rows = stats.filter((r) => r.year === y && r.admit_rate != null)
+      if (!rows.length) return null
+      return rows.reduce((best, r) => (!best || r.admit_rate < best.admit_rate ? r : best), null)
+    }
+    return { current: forYear(cardYear), prev: forYear(prevCardYear) }
+  }, [stats, cardYear, prevCardYear])
+
+  const avgGpaRange = useMemo(() => {
+    if (!stats || !cardYear) return null
+    const rows = stats.filter((r) => r.year === cardYear)
+    const mins = rows.filter((r) => r.admit_gpa_min != null).map((r) => parseFloat(r.admit_gpa_min))
+    const maxes = rows.filter((r) => r.admit_gpa_max != null).map((r) => parseFloat(r.admit_gpa_max))
+    if (!mins.length || !maxes.length) return null
+    const avgMin = (mins.reduce((a, b) => a + b, 0) / mins.length).toFixed(2)
+    const avgMax = (maxes.reduce((a, b) => a + b, 0) / maxes.length).toFixed(2)
+    return { min: avgMin, max: avgMax }
+  }, [stats, cardYear])
+
+  const enrollTotals = useMemo(() => {
+    if (!stats || !cardYear) return { current: null, prev: null }
+    const forYear = (y) => {
+      const rows = stats.filter((r) => r.year === y)
+      if (!rows.length) return null
+      return rows.reduce((sum, r) => sum + (r.enrolls || 0), 0)
+    }
+    return { current: forYear(cardYear), prev: forYear(prevCardYear) }
+  }, [stats, cardYear, prevCardYear])
 
   function yoyChange(latest, prev) {
     if (!latest || !prev || prev === 0) return null
@@ -128,24 +148,31 @@ export default function GeneralStats() {
       />
 
       <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
-        <StatsCard title="Overall Avg Admit Rate" value={overallAvg} />
         <StatsCard
-          title={`Applicants (${yearlyTotals.latest?.year || ''})`}
-          value={yearlyTotals.latest?.applicants.toLocaleString() || '-'}
-          change={yoyChange(yearlyTotals.latest?.applicants, yearlyTotals.prev?.applicants)}
-          subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.applicants.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
+          title={`Avg Admit Rate (${cardYear || ''})`}
+          value={overallAvg.current ? `${overallAvg.current}%` : 'N/A'}
+          change={yoyChange(parseFloat(overallAvg.current), parseFloat(overallAvg.prev))}
+          subtitle={overallAvg.prev ? `vs ${overallAvg.prev}% in ${prevCardYear}` : undefined}
         />
         <StatsCard
-          title={`Admits (${yearlyTotals.latest?.year || ''})`}
-          value={yearlyTotals.latest?.admits.toLocaleString() || '-'}
-          change={yoyChange(yearlyTotals.latest?.admits, yearlyTotals.prev?.admits)}
-          subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.admits.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
+          title={`Most Competitive (${cardYear || ''})`}
+          value={mostCompetitive.current ? `${mostCompetitive.current.campus}` : '-'}
+          change={mostCompetitive.current && mostCompetitive.prev
+            ? yoyChange(mostCompetitive.current.admit_rate, mostCompetitive.prev.admit_rate)
+            : null}
+          subtitle={mostCompetitive.current
+            ? `${mostCompetitive.current.admit_rate}% admit rate${mostCompetitive.prev ? ` vs ${mostCompetitive.prev.admit_rate}% in ${prevCardYear}` : ''}`
+            : undefined}
         />
         <StatsCard
-          title={`Enrolls (${yearlyTotals.latest?.year || ''})`}
-          value={yearlyTotals.latest?.enrolls.toLocaleString() || '-'}
-          change={yoyChange(yearlyTotals.latest?.enrolls, yearlyTotals.prev?.enrolls)}
-          subtitle={yearlyTotals.prev ? `vs ${yearlyTotals.prev.enrolls.toLocaleString()} in ${yearlyTotals.prev.year}` : undefined}
+          title={`Avg GPA Range (${cardYear || ''})`}
+          value={avgGpaRange ? `${avgGpaRange.min} – ${avgGpaRange.max}` : 'N/A'}
+        />
+        <StatsCard
+          title={`Enrolls (${cardYear || ''})`}
+          value={enrollTotals.current != null ? enrollTotals.current.toLocaleString() : '-'}
+          change={yoyChange(enrollTotals.current, enrollTotals.prev)}
+          subtitle={enrollTotals.prev != null ? `vs ${enrollTotals.prev.toLocaleString()} in ${prevCardYear}` : undefined}
         />
       </SimpleGrid>
 

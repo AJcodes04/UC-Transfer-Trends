@@ -8,224 +8,337 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "2",
-                "title": "Introduction to Psychological Statistics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "18",
-                "title": "Introduction to Statistics",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "18s",
-                "title": "Introduction to Statistics with Support",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "2",
+                        "title": "Introduction to Psychological Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "18s",
+                        "title": "Introduction to Statistics with Support",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "STAT",
-                "number": "5",
-                "title": "Statistics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "18s",
-                "title": "Introduction to Statistics with Support",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "18",
-                "title": "Introduction to Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "5",
+                        "title": "Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18s",
+                        "title": "Introduction to Statistics with Support",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "18",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "19B",
-                "title": "Calculus for Science, Engineering, and Mathematics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19B",
+                        "title": "Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "11B",
-                "title": "Calculus with Applications",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "11B",
+                        "title": "Calculus with Applications",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AM",
-                "number": "11A",
-                "title": "Mathematical Methods for Economists I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "13s",
-                "title": "Survey of Calculus with Support",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "13",
-                "title": "Survey of Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "11A",
+                        "title": "Mathematical Methods for Economists I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "13s",
+                        "title": "Survey of Calculus with Support",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "13",
+                        "title": "Survey of Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "19A",
-                "title": " Calculus for Science, Engineering, and Mathematics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "30",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "30",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "11A",
-                "title": "Calculus with Applications",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "30",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "11A",
+                        "title": "Calculus with Applications",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "30",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CSE",
-                "number": "30",
-                "title": "Programming Abstractions: Python",
-                "units": 7.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CSCI",
-                "number": "21",
-                "title": "Programming and Algorithms II",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "30",
+                        "title": "Programming Abstractions: Python",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "21",
+                        "title": "Programming and Algorithms II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
     "All transfer applicants must satisfy University of California admissions eligibility requirements and campus admission selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website . The UC Santa Cruz Transfer Admission Guarantee (TAG) is a formal agreement that ensures your fall admission to your chosen major, provided you are transferring from a California Community College and meet specific requirements. Visit the UC Santa Cruz TAG webpage for more information.",
-    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the “Recommended Preparation” section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
+    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the \u201cRecommended Preparation\u201d section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
     "The UC Santa Cruz Advanced Placement (AP), International Baccalaureate (IB), and A-Level examination credit policies may be found in the UC Santa Cruz General Catalog . AP, IBH, and A-level exams may or may not satisfy course requirements, depending on the specific exam.",
-    "Cognitive Science B.S. Transfer Admission Screening Policy Transfer students must complete the following courses, or their articulated equivalents, with a grade of C (2.0) or better in each course, and a cumulative minimum GPA of 2.8 in all required screening courses , by the end of the spring term prior to transferring in the fall: ONE approved math course ONE approved statistics course ﻿ONE approved programming course Refer to the \"Required Major Preparation Courses\" section below for lists of courses approved to fulfill these requirements. AP Exam Score Substitutions The following Advanced Placement (AP) exam scores may be substituted for the required screening courses listed above: AP Calculus AB or BC: Score of 3, 4, or 5 may be substituted for the math course requirement AP Statistics: Score of 4 or 5 may be substituted for the statistics course requirement Strongly Recommended Major Preparation In addition to the required courses listed above, transfer students are strongly advised to additionally complete PSYC 20 – Cognition: Fundamental Theories . Students who do not complete this preparatory courses before transferring will likely need additional quarters of enrollment to complete their degree. Refer to the \"Recommended Preparation\" section below for lists of courses approved to fulfill this requirement. Transfer students are also encouraged to complete the Intersegmental General Education Transfer Curriculum (IGETC) , or all UC Santa Cruz general education requirements before matriculation. For more information on incorporating IGETC into your academic plan, please consult with your community college counselor. Please visit the Psychology website to learn more about this major."
+    "Cognitive Science B.S. Transfer Admission Screening Policy Transfer students must complete the following courses, or their articulated equivalents, with a grade of C (2.0) or better in each course, and a cumulative minimum GPA of 2.8 in all required screening courses , by the end of the spring term prior to transferring in the fall: ONE approved math course ONE approved statistics course \ufeffONE approved programming course Refer to the \"Required Major Preparation Courses\" section below for lists of courses approved to fulfill these requirements. AP Exam Score Substitutions The following Advanced Placement (AP) exam scores may be substituted for the required screening courses listed above: AP Calculus AB or BC: Score of 3, 4, or 5 may be substituted for the math course requirement AP Statistics: Score of 4 or 5 may be substituted for the statistics course requirement Strongly Recommended Major Preparation In addition to the required courses listed above, transfer students are strongly advised to additionally complete PSYC 20 \u2013 Cognition: Fundamental Theories . Students who do not complete this preparatory courses before transferring will likely need additional quarters of enrollment to complete their degree. Refer to the \"Recommended Preparation\" section below for lists of courses approved to fulfill this requirement. Transfer students are also encouraged to complete the Intersegmental General Education Transfer Curriculum (IGETC) , or all UC Santa Cruz general education requirements before matriculation. For more information on incorporating IGETC into your academic plan, please consult with your community college counselor. Please visit the Psychology website to learn more about this major."
   ]
 }

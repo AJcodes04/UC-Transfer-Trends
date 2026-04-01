@@ -8,66 +8,95 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FRENCH",
-                "number": "1C",
-                "title": "Fundamentals of French",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FR",
-                "number": "102",
-                "title": "Beginning French II",
-                "units": 5.0
-              },
-              {
-                "prefix": "FR",
-                "number": "101",
-                "title": "Beginning French I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRENCH",
+                        "number": "1C",
+                        "title": "Fundamentals of French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "102",
+                        "title": "Beginning French II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FR",
+                        "number": "101",
+                        "title": "Beginning French I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FRENCH",
-                "number": "2C",
-                "title": "Intermediate French",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FR",
-                "number": "104",
-                "title": "Intermediate French II",
-                "units": 5.0
-              },
-              {
-                "prefix": "FR",
-                "number": "103",
-                "title": "Intermediate French I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRENCH",
+                        "number": "2C",
+                        "title": "Intermediate French",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "104",
+                        "title": "Intermediate French II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FR",
+                        "number": "103",
+                        "title": "Intermediate French I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

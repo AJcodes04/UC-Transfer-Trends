@@ -14,6 +14,30 @@ from .serializers import TransferDataSerializer
 ARTICULATION_DIR = Path(__file__).resolve().parent.parent.parent / 'data' / 'articulation'
 
 
+def _count_rows(agreement_data: dict) -> int:
+    """
+    Count articulation rows in an agreement JSON, handling both old and new formats.
+
+    Old format: sections[].rows[]  (flat list)
+    New format: sections[].groups[].options[].rows[]  (grouped structure)
+
+    We count the number of unique UC requirement rows so the major list card
+    can show a meaningful "N courses" badge.
+    """
+    count = 0
+    for section in agreement_data.get('sections', []):
+        # New format: groups with options containing rows
+        groups = section.get('groups', [])
+        if groups:
+            for group in groups:
+                for option in group.get('options', []):
+                    count += len(option.get('rows', []))
+        else:
+            # Old format: flat rows list
+            count += len(section.get('rows', []))
+    return count
+
+
 class TransferDataFilter(filters.FilterSet):
     university = filters.CharFilter(field_name='university')
     year = filters.NumberFilter(field_name='year')
@@ -626,7 +650,7 @@ class ArticulationMajorsView(APIView):
         for json_file in sorted(year_dir.glob('*.json')):
             try:
                 data = json.loads(json_file.read_text())
-                row_count = sum(len(s.get('rows', [])) for s in data.get('sections', []))
+                row_count = _count_rows(data)
                 majors.append({
                     'slug': json_file.stem,
                     'name': data.get('major', json_file.stem),

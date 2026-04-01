@@ -8,270 +8,411 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1A",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "30",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "30",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1B",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "53",
-                "title": "Multivariable Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "32",
-                "title": "Analytic Geometry and Calculus III",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "32",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "54",
-                "title": "Linear Algebra and Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "42",
-                "title": "Linear Algebra",
-                "units": 3.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "40",
-                "title": "Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "42",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "40",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYSICS",
-                "number": "7A",
-                "title": "Physics for Scientists and Engineers",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "41",
-                "title": "Physics for Scientists and Engineers I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "41",
+                        "title": "Physics for Scientists and Engineers I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYSICS",
-                "number": "7B",
-                "title": "Physics for Scientists and Engineers",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "42",
-                "title": "Physics for Scientists and Engineers II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "42",
+                        "title": "Physics for Scientists and Engineers II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYSICS",
-                "number": "7C",
-                "title": "Physics for Scientists and Engineers",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "43",
-                "title": "Physics for Scientists and Engineers III",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7C",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "43",
+                        "title": "Physics for Scientists and Engineers III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGLISH",
-                "number": "R1A",
-                "title": "Reading and Composition",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENGL",
-                "number": "3",
-                "title": "Reading and Composition Intensive",
-                "units": 4.0
-              },
-              {
-                "prefix": "ENGL",
-                "number": "2",
-                "title": "Reading and Composition",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "3",
+                        "title": "Reading and Composition Intensive",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "2",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGLISH",
-                "number": "R1B",
-                "title": "Reading and Composition",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENGL",
-                "number": "11",
-                "title": "Communication and Critical Thinking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGL",
-                "number": "4",
-                "title": "Introduction to Literature",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "11",
+                        "title": "Communication and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "4",
+                        "title": "Introduction to Literature",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "1B",
-                "title": "General Chemistry",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "2",
-                "title": "General Chemistry II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "2",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "The Bachelor of Arts (B.A.) Degree in Chemistry is offered by the College of Letters and Science (L&S). The B.A. degree, which requires more humanities and social science courses than the B.S. degree, is intended for students interested in careers in teaching, medicine, or other sciences requiring a basic understanding of chemical processes. IMPORTANT information for students applying for admission to L&S for the fall 2026 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the Prospective Student website for L&S: https://ls.berkeley.edu/prospective-students . By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): Two transferable courses in English composition; One transferable course in mathematical concepts and quantitative reasoning; Four transferable college courses chosen from at least two of the following subject areas: arts and humanities social and behavioral sciences physical and biological sciences AND 2) Major Requirements: Follow the guidance on preparation for this major below. Transfer applicants are expected to complete, at a minimum, coursework equivalent to Berkeley's: ﻿ CHEMISTRY 1A + 1AL + 1B + 3A + 3AL + 3B + 3BL MATH 1A + 1B + 53 PHYSICS 7A The Bachelor of Science (B.S.) Degree in Chemistry is offered by the College of Chemistry. The B.S. degree is intended for students who are primarily interested in careers as professional chemists or desire a thorough grounding in chemistry in preparation for professional or graduate school in chemistry and other disciplines. In addition, there are two concentrations available to Chemistry majors: 1) the Materials Chemistry concentration, intended for students interested in the application of basic chemical principles to the discovery, design, and characterization of materials; and 2) the Computational Chemistry concentration, intended for students interested in the use of high-performance computing, rooted in basic physical and mathematical principles, to solve problems in modern chemistry. Transfer applicants are expected to complete, at a minimum, coursework equivalent to Berkeley's: CHEMISTRY 1A + 1AL + 1B + 3A + 3AL + 3B + 3BL MATH 1A + 1B + 53 PHYSICS 7A ENGLISH R1A + R1B Coursework must be completed by the end of the spring term preceding fall enrollment at Berkeley. IGETC/Cal-GETC is not required. Students who choose to complete the entire IGETC pattern by the end of the spring term preceding fall enrollment at Berkeley may use IGETC to fulfill the Reading and Composition and Language Other Than English (LOTE) Requirements. Students who choose to complete Cal-GETC may use this certification to fulfill the Reading and Composition requirement, however Cal-GETC will not satisfy Language Other than English (LOTE). It is highly recommended that students complete this requirement with directly articulated course work as noted under the Language Other Than English (LOTE) requirement -- See list of approved (FL-Foreign Language) courses below. Lower division courses required for graduation (but not for admission) are also listed in this articulation agreement. Completion of those courses is strongly recommended in order to strengthen one's application. All major courses must be taken for a letter grade. High grades in major courses (B and A grades exclusively) are essential for applicants to be both competitive in the admissions process and to be adequately prepared to continue with junior year coursework at Berkeley. The applicant's personal insight questions are important in the admissions process. The answers are reviewed for evidence of the student's interest in the chosen field and a thoughtful match between the intended major and academic and career objectives. For more information on College of Chemistry policies and degree programs: https://chemistry.berkeley.edu/ugrad/degrees For more information on admission to UC Berkeley: https://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu Additional questions about transferring to the College of Chemistry may be addressed to: Maura Daly, Director of Undergraduate Student Services mdaly@berkeley.edu (510) 643-0550",
+    "The Bachelor of Arts (B.A.) Degree in Chemistry is offered by the College of Letters and Science (L&S). The B.A. degree, which requires more humanities and social science courses than the B.S. degree, is intended for students interested in careers in teaching, medicine, or other sciences requiring a basic understanding of chemical processes. IMPORTANT information for students applying for admission to L&S for the fall 2026 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the Prospective Student website for L&S: https://ls.berkeley.edu/prospective-students . By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): Two transferable courses in English composition; One transferable course in mathematical concepts and quantitative reasoning; Four transferable college courses chosen from at least two of the following subject areas: arts and humanities social and behavioral sciences physical and biological sciences AND 2) Major Requirements: Follow the guidance on preparation for this major below. Transfer applicants are expected to complete, at a minimum, coursework equivalent to Berkeley's: \ufeff CHEMISTRY 1A + 1AL + 1B + 3A + 3AL + 3B + 3BL MATH 1A + 1B + 53 PHYSICS 7A The Bachelor of Science (B.S.) Degree in Chemistry is offered by the College of Chemistry. The B.S. degree is intended for students who are primarily interested in careers as professional chemists or desire a thorough grounding in chemistry in preparation for professional or graduate school in chemistry and other disciplines. In addition, there are two concentrations available to Chemistry majors: 1) the Materials Chemistry concentration, intended for students interested in the application of basic chemical principles to the discovery, design, and characterization of materials; and 2) the Computational Chemistry concentration, intended for students interested in the use of high-performance computing, rooted in basic physical and mathematical principles, to solve problems in modern chemistry. Transfer applicants are expected to complete, at a minimum, coursework equivalent to Berkeley's: CHEMISTRY 1A + 1AL + 1B + 3A + 3AL + 3B + 3BL MATH 1A + 1B + 53 PHYSICS 7A ENGLISH R1A + R1B Coursework must be completed by the end of the spring term preceding fall enrollment at Berkeley. IGETC/Cal-GETC is not required. Students who choose to complete the entire IGETC pattern by the end of the spring term preceding fall enrollment at Berkeley may use IGETC to fulfill the Reading and Composition and Language Other Than English (LOTE) Requirements. Students who choose to complete Cal-GETC may use this certification to fulfill the Reading and Composition requirement, however Cal-GETC will not satisfy Language Other than English (LOTE). It is highly recommended that students complete this requirement with directly articulated course work as noted under the Language Other Than English (LOTE) requirement -- See list of approved (FL-Foreign Language) courses below. Lower division courses required for graduation (but not for admission) are also listed in this articulation agreement. Completion of those courses is strongly recommended in order to strengthen one's application. All major courses must be taken for a letter grade. High grades in major courses (B and A grades exclusively) are essential for applicants to be both competitive in the admissions process and to be adequately prepared to continue with junior year coursework at Berkeley. The applicant's personal insight questions are important in the admissions process. The answers are reviewed for evidence of the student's interest in the chosen field and a thoughtful match between the intended major and academic and career objectives. For more information on College of Chemistry policies and degree programs: https://chemistry.berkeley.edu/ugrad/degrees For more information on admission to UC Berkeley: https://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu Additional questions about transferring to the College of Chemistry may be addressed to: Maura Daly, Director of Undergraduate Student Services mdaly@berkeley.edu (510) 643-0550",
     "MATHEMATICS You may also satisfy this requirement with a score/grade of: 3 or higher on the AP Calculus AB exam satisfies MATH 1A; 3 or 4 on the AP Calculus BC exam satisfies MATH 1A; 5 on the AP Calculus BC exam satisfies MATH 1A + 1B. LANGUAGE OTHER THAN ENGLISH (LOTE) REQUIREMENT 3 or better on the Foreign Language AP Exam READING AND COMPOSITION REQUIREMENT You may also satisfy this requirement with a score/grade of: 4 or 5 on the AP exam in English Language and Composition satisfies ENGLISH R1A; 4 on the AP exam in English Literature and Composition satisfies ENGLISH R1A; 5 on the AP exam in English Literature and Composition satisfies ENGLISH R1A + R1B. See ADDITIONAL REQUIREMENTS section for additional options to satisfy requirements.",
     "CHEMISTRY Chemistry majors who transfer without having covered analytical chemistry are required to take CHEM 105 after transfer. ORGANIC CHEMISTR Y CHEM 12A + 12B (organic chemistry) are required for the Chemistry B.A. and B.S. degrees. Completion of Chem 3A + 3AL + 3B + 3BL, with a mean grade of B or better, will constitute satisfactory completion of Berkeley's Chem 12A + 12B. Students not meeting this requirement may be required to take Chem 12A and/or Chem 12B at Berkeley. MATHEMATICS You may also satisfy this requirement with a score/grade of: 3 or higher on the AP Calculus AB exam satisfies MATH 1A; 3 or 4 on the AP Calculus BC exam satisfies MATH 1A; 5 on the AP Calculus BC exam satisfies MATH 1A + 1B. PHYSICS 7C is not required for the Chemistry major, but it is acceptable toward the 12-Unit Upper Division Chemistry and Allied Subjects Requirement for the Chemistry B.S. degree. BACHELOR OF SCIENCE (B.S.) DEGREE IN CHEMISTRY Information on satisfying the Reading and Composition and Language Other Than English (LOTE) requirements for the Bachelor of Science (B.S.) Degree in Chemistry is listed below. READING AND COMPOSITION REQUIREMENT Coursework equivalent to Berkeley's: English R1A + R1B; or Entire IGETC pattern completed by the end of the spring term preceding fall enrollment at Berkeley. NOTE : You may also satisfy this requirement with a score/grade of: 4 or 5 on the AP exam in English Language and Composition satisfies ENGLISH R1A; 4 on the AP exam in English Literature and Composition satisfies ENGLISH R1A; 5 on the AP exam in English Literature and Composition satisfies ENGLISH R1A + R1B. LANGUAGE OTHER THAN ENGLISH (LOTE) REQUIREMENT The Language Other Than English Requirement may be satisfied after transfer, but it should be satisfied by the end of the student's third (junior) year. To satisfy this Requirement: Complete a course equivalent to the third year of a language other than English in high school with a grade of C- or higher, or the second semester of a language other than English as taught at Berkeley; or Complete the entire IGETC pattern by the end of the spring term preceding fall enrollment at Berkeley; or You may satisfy this Requirement with a score/grade of: 550 on the SAT Subject Test, Language Other Than English, if taken before May 1995; 590 on the SAT II Subject Exam, if taken May 1995 or later; 3 or better on the Foreign Language AP Exam; C or better on the GCE A-level or I/GCSE O-level Exam in a language other than English; 1-5 on the Foreign Service Institute (FSI) or Defense Language Institute (DLI) exam; 5 or better on the International Baccalaureate in the following exams: Language (other than English) acquisition: B Standard Level (SL) B Higher Level (HL) Studies in language (other than English) and literature: A: literature Standard Level (SL) A: literature Higher Level (HL) A: language and literature Standard Level (SL) A: language and literature Higher Level (HL) OR Courses that satisfy the Language Other Than English (LOTE) requirement -- See list of approved (FL-Foreign Language) courses below. (May be taken for a letter grade or pass/no pass)."
   ]

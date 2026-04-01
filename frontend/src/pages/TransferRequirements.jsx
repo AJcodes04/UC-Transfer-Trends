@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Loader, Alert, Text, Paper, UnstyledButton,
-  Group, Badge, Select, Stack, Table, Divider, ThemeIcon, TextInput,
+  Group, Badge, Select, Stack, Table, Divider, ThemeIcon, TextInput, Box,
 } from '@mantine/core'
 import { IconCheck, IconMinus } from '@tabler/icons-react'
 import {
@@ -13,7 +13,14 @@ import {
   useMajorStats,
 } from '../hooks/useApi'
 import { useCourses, useGPA } from '../hooks/useUserData'
-import { buildUserCourseMap, checkRequirementSatisfied, getMatchedCourseKeys, computeRequirementStats, parsePathwayGroups, normalizeCourseKey } from '../utils/courseMatch'
+import {
+  buildUserCourseMap,
+  checkRequirementSatisfied,
+  checkGroupSatisfied,
+  getMatchedCourseKeys,
+  computeRequirementStats,
+  normalizeCourseKey,
+} from '../utils/courseMatch'
 import { UC_COLORS } from '../utils/ucColors'
 
 const UC_LABELS = {
@@ -239,11 +246,9 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
   const overallGPA = useGPA()
   const color = ucColor(uc)
 
-  // Fetch admit GPA range for this major from transfer stats
   const baseMajor = agreement ? stripDegree(agreement.major) : null
   const { data: majorStatsData } = useMajorStats(baseMajor)
 
-  // Find the latest year's GPA range for this UC campus
   const admitGpaInfo = useMemo(() => {
     if (!majorStatsData) return null
     const ucCode = uc.toUpperCase()
@@ -271,39 +276,6 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
   const reqStats = useMemo(() => {
     return computeRequirementStats(agreement, userCourseMap)
   }, [agreement, userCourseMap])
-
-  // Build a set of receiving course keys that are in pathway groups,
-  // and a map of which rows should show an "OR" separator before them.
-  const pathwayInfo = useMemo(() => {
-    if (!agreement) return { groupedKeys: new Set(), orBeforeKeys: new Set() }
-    const groups = parsePathwayGroups(agreement.notes)
-    const groupedKeys = new Set()
-    const orBeforeKeys = new Set()
-
-    for (const group of groups) {
-      for (const key of group.receivingKeys) groupedKeys.add(key)
-
-      // Find which rows start a new pathway option within the group.
-      // Walk through all rows in order; when a row's receiving key belongs to
-      // a DIFFERENT pathway than the previous grouped row, mark it with OR.
-      const allRows = (agreement.sections || []).flatMap((s) => s.rows || [])
-      let prevPathwayIdx = -1
-      for (const row of allRows) {
-        const rk = row.receiving_courses?.courses?.[0]
-          ? normalizeCourseKey(row.receiving_courses.courses[0].prefix, row.receiving_courses.courses[0].number)
-          : null
-        if (!rk || !group.receivingKeys.has(rk)) continue
-
-        const pathwayIdx = group.pathways.findIndex((p) => p.includes(rk))
-        if (prevPathwayIdx !== -1 && pathwayIdx !== prevPathwayIdx) {
-          orBeforeKeys.add(rk)
-        }
-        prevPathwayIdx = pathwayIdx
-      }
-    }
-
-    return { groupedKeys, orBeforeKeys }
-  }, [agreement])
 
   const hasCourses = courses.length > 0
   const overallStatus = admitGpaInfo ? gpaStatus(overallGPA, admitGpaInfo.min, admitGpaInfo.max) : null
@@ -421,53 +393,371 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
       )}
 
       {agreement.sections && agreement.sections.map((section, si) => (
-        <div key={si}>
-          {section.section_title && (
-            <Title order={4} mt="lg" mb="sm">{section.section_title}</Title>
-          )}
-
-          <Paper withBorder radius="md" style={{ overflow: 'hidden' }}>
-            <Table striped highlightOnHover>
-              <Table.Thead>
-                <Table.Tr>
-                  <Table.Th style={{ width: '45%', backgroundColor: `${color}10` }}>
-                    <Text size="xs" fw={700} tt="uppercase">
-                      {UC_LABELS[uc] || uc.toUpperCase()} Course
-                    </Text>
-                  </Table.Th>
-                  <Table.Th style={{ width: '10%' }}></Table.Th>
-                  <Table.Th style={{ width: '45%' }}>
-                    <Text size="xs" fw={700} tt="uppercase">
-                      {cc.toUpperCase()} Course
-                    </Text>
-                  </Table.Th>
-                </Table.Tr>
-              </Table.Thead>
-              <Table.Tbody>
-                {section.rows.map((row, ri) => (
-                  <CourseRow key={ri} row={row} color={color} userCourseMap={userCourseMap} hasCourses={hasCourses} pathwayInfo={pathwayInfo} />
-                ))}
-              </Table.Tbody>
-            </Table>
-          </Paper>
-        </div>
+        <SectionDisplay
+          key={si}
+          section={section}
+          uc={uc}
+          cc={cc}
+          color={color}
+          userCourseMap={userCourseMap}
+          hasCourses={hasCourses}
+        />
       ))}
     </>
   )
 }
 
 
-function CourseRow({ row, color, userCourseMap, hasCourses, pathwayInfo }) {
+/**
+ * SectionDisplay — renders one AgreementSection.
+ *
+ * Handles BOTH the new format (section.groups) and old format (section.rows).
+ * New format: groups with optional labels and multi-option SELECT_ONE groups.
+ * Old format: flat rows rendered the same as COMPLETE_ALL single-option groups.
+ */
+function SectionDisplay({ section, uc, cc, color, userCourseMap, hasCourses }) {
+  const groups = section.groups || []
+  const oldRows = section.rows || []
+
+  return (
+    <div>
+      {section.section_title && (
+        <Title order={4} mt="lg" mb="sm">{section.section_title}</Title>
+      )}
+
+      {groups.length > 0 ? (
+        // ── New format: render each group ──────────────────────────────────
+        <Stack gap="sm">
+          {groups.map((group, gi) => (
+            <GroupDisplay
+              key={group.group_id || gi}
+              group={group}
+              groupIndex={gi}
+              uc={uc}
+              cc={cc}
+              color={color}
+              userCourseMap={userCourseMap}
+              hasCourses={hasCourses}
+            />
+          ))}
+        </Stack>
+      ) : (
+        // ── Old format fallback: flat rows table ───────────────────────────
+        <Paper withBorder radius="md" style={{ overflow: 'hidden' }}>
+          <Table striped highlightOnHover>
+            <Table.Thead>
+              <Table.Tr>
+                <Table.Th style={{ width: '45%', backgroundColor: `${color}10` }}>
+                  <Text size="xs" fw={700} tt="uppercase">
+                    {UC_LABELS[uc] || uc.toUpperCase()} Course
+                  </Text>
+                </Table.Th>
+                <Table.Th style={{ width: '10%' }}></Table.Th>
+                <Table.Th style={{ width: '45%' }}>
+                  <Text size="xs" fw={700} tt="uppercase">
+                    {cc.toUpperCase()} Course
+                  </Text>
+                </Table.Th>
+              </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>
+              {oldRows.map((row, ri) => (
+                <CourseRow
+                  key={ri}
+                  row={row}
+                  color={color}
+                  userCourseMap={userCourseMap}
+                  hasCourses={hasCourses}
+                />
+              ))}
+            </Table.Tbody>
+          </Table>
+        </Paper>
+      )}
+    </div>
+  )
+}
+
+
+/**
+ * GroupDisplay — renders one RequirementGroup.
+ *
+ * For COMPLETE_ALL: a plain table of rows (same as old format).
+ * For SELECT_ONE:   a bordered box with a "Select A or B" header and
+ *                   each option shown as a sub-table with an OR separator.
+ * For SELECT_N:     a table with a "Complete N from the following" header.
+ */
+function GroupDisplay({ group, groupIndex, uc, cc, color, userCourseMap, hasCourses }) {
+  const logic = group.group_logic || 'COMPLETE_ALL'
+  const options = group.options || []
+  const label = group.group_label
+
+  // Compute satisfaction status for the whole group (for visual highlight)
+  const groupStatus = hasCourses ? checkGroupSatisfied(group, userCourseMap) : 'none'
+
+  const groupBorderStyle = {}
+  if (hasCourses && groupStatus === 'satisfied') {
+    groupBorderStyle.borderLeft = '3px solid rgba(64, 192, 87, 0.7)'
+  } else if (hasCourses && groupStatus === 'partial') {
+    groupBorderStyle.borderLeft = '3px solid rgba(255, 212, 59, 0.7)'
+  }
+
+  if (logic === 'SELECT_ONE') {
+    // ── SELECT_ONE: "Select A or B" — show each option as a separate block ──
+    return (
+      <Paper
+        withBorder
+        radius="md"
+        style={{ overflow: 'hidden', ...groupBorderStyle }}
+      >
+        {/* Group header with label */}
+        <Box
+          px="md"
+          py="xs"
+          style={{
+            backgroundColor: `${color}08`,
+            borderBottom: '1px solid var(--mantine-color-gray-2)',
+          }}
+        >
+          <Group gap="xs" align="center">
+            {hasCourses && groupStatus === 'satisfied' && (
+              <ThemeIcon size="xs" color="green" variant="light" radius="xl">
+                <IconCheck size={10} />
+              </ThemeIcon>
+            )}
+            {hasCourses && groupStatus === 'partial' && (
+              <ThemeIcon size="xs" color="yellow" variant="light" radius="xl">
+                <IconMinus size={10} />
+              </ThemeIcon>
+            )}
+            <Text size="xs" fw={700} tt="uppercase" c="dimmed">
+              {label || 'Select one option'}
+            </Text>
+          </Group>
+        </Box>
+
+        {/* Each option with OR separators between them */}
+        {options.map((option, oi) => (
+          <div key={oi}>
+            {oi > 0 && (
+              <Box
+                py="xs"
+                style={{
+                  textAlign: 'center',
+                  borderTop: '1px solid var(--mantine-color-gray-2)',
+                  borderBottom: '1px solid var(--mantine-color-gray-2)',
+                  backgroundColor: 'var(--mantine-color-gray-0)',
+                }}
+              >
+                <Badge size="sm" variant="light" color="orange" radius="sm">OR</Badge>
+              </Box>
+            )}
+            <OptionTable
+              option={option}
+              uc={uc}
+              cc={cc}
+              color={color}
+              userCourseMap={userCourseMap}
+              hasCourses={hasCourses}
+              showHeader={oi === 0}
+              optionLabel={option.option_label}
+            />
+          </div>
+        ))}
+      </Paper>
+    )
+  }
+
+  if (logic === 'SELECT_N') {
+    // ── SELECT_N: "Complete N from the following" — show pool with header ──
+    const allRows = options.flatMap((o) => o.rows || [])
+    return (
+      <Paper
+        withBorder
+        radius="md"
+        style={{ overflow: 'hidden', ...groupBorderStyle }}
+      >
+        {/* Group header */}
+        <Box
+          px="md"
+          py="xs"
+          style={{
+            backgroundColor: `${color}08`,
+            borderBottom: '1px solid var(--mantine-color-gray-2)',
+          }}
+        >
+          <Group gap="xs" align="center">
+            {hasCourses && groupStatus === 'satisfied' && (
+              <ThemeIcon size="xs" color="green" variant="light" radius="xl">
+                <IconCheck size={10} />
+              </ThemeIcon>
+            )}
+            {hasCourses && groupStatus === 'partial' && (
+              <ThemeIcon size="xs" color="yellow" variant="light" radius="xl">
+                <IconMinus size={10} />
+              </ThemeIcon>
+            )}
+            <Text size="xs" fw={700} tt="uppercase" c="dimmed">
+              {label || `Complete ${group.select_n || 1} from the following`}
+            </Text>
+          </Group>
+        </Box>
+
+        {/* Rows with OR separators between them */}
+        <Table>
+          <Table.Thead>
+            <Table.Tr>
+              <Table.Th style={{ width: '45%', backgroundColor: `${color}10` }}>
+                <Text size="xs" fw={700} tt="uppercase">
+                  {UC_LABELS[uc] || uc.toUpperCase()} Course
+                </Text>
+              </Table.Th>
+              <Table.Th style={{ width: '10%' }}></Table.Th>
+              <Table.Th style={{ width: '45%' }}>
+                <Text size="xs" fw={700} tt="uppercase">
+                  {cc.toUpperCase()} Course
+                </Text>
+              </Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+          <Table.Tbody>
+            {allRows.map((row, ri) => (
+              <>
+                {ri > 0 && (
+                  <Table.Tr key={`or-${ri}`}>
+                    <Table.Td colSpan={3} style={{ textAlign: 'center', padding: '4px 0' }}>
+                      <Badge size="xs" variant="light" color="orange" radius="sm">OR</Badge>
+                    </Table.Td>
+                  </Table.Tr>
+                )}
+                <CourseRow
+                  key={ri}
+                  row={row}
+                  color={color}
+                  userCourseMap={userCourseMap}
+                  hasCourses={hasCourses}
+                />
+              </>
+            ))}
+          </Table.Tbody>
+        </Table>
+      </Paper>
+    )
+  }
+
+  // ── COMPLETE_ALL (default) — plain table, no special header needed ──────
+  const allRows = options.flatMap((o) => o.rows || [])
+  return (
+    <Paper
+      withBorder
+      radius="md"
+      style={{ overflow: 'hidden', ...groupBorderStyle }}
+    >
+      <Table striped highlightOnHover>
+        <Table.Thead>
+          <Table.Tr>
+            <Table.Th style={{ width: '45%', backgroundColor: `${color}10` }}>
+              <Text size="xs" fw={700} tt="uppercase">
+                {UC_LABELS[uc] || uc.toUpperCase()} Course
+              </Text>
+            </Table.Th>
+            <Table.Th style={{ width: '10%' }}></Table.Th>
+            <Table.Th style={{ width: '45%' }}>
+              <Text size="xs" fw={700} tt="uppercase">
+                {cc.toUpperCase()} Course
+              </Text>
+            </Table.Th>
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>
+          {allRows.map((row, ri) => (
+            <CourseRow
+              key={ri}
+              row={row}
+              color={color}
+              userCourseMap={userCourseMap}
+              hasCourses={hasCourses}
+            />
+          ))}
+        </Table.Tbody>
+      </Table>
+    </Paper>
+  )
+}
+
+
+/**
+ * OptionTable — renders one pathway option within a SELECT_ONE group.
+ *
+ * Shows an optional "Option A / Option B" label above the rows.
+ */
+function OptionTable({ option, uc, cc, color, userCourseMap, hasCourses, showHeader, optionLabel }) {
+  const rows = option.rows || []
+
+  return (
+    <div>
+      {optionLabel && (
+        <Box
+          px="md"
+          py={4}
+          style={{
+            backgroundColor: `${color}05`,
+          }}
+        >
+          <Text size="xs" c="dimmed" fw={600}>Option {optionLabel}</Text>
+        </Box>
+      )}
+      <Table>
+        {showHeader && (
+          <Table.Thead>
+            <Table.Tr>
+              <Table.Th style={{ width: '45%', backgroundColor: `${color}10` }}>
+                <Text size="xs" fw={700} tt="uppercase">
+                  {UC_LABELS[uc] || uc.toUpperCase()} Course
+                </Text>
+              </Table.Th>
+              <Table.Th style={{ width: '10%' }}></Table.Th>
+              <Table.Th style={{ width: '45%' }}>
+                <Text size="xs" fw={700} tt="uppercase">
+                  {cc.toUpperCase()} Course
+                </Text>
+              </Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+        )}
+        <Table.Tbody>
+          {rows.map((row, ri) => (
+            <CourseRow
+              key={ri}
+              row={row}
+              color={color}
+              userCourseMap={userCourseMap}
+              hasCourses={hasCourses}
+            />
+          ))}
+        </Table.Tbody>
+      </Table>
+    </div>
+  )
+}
+
+
+function CourseRow({ row, color, userCourseMap, hasCourses }) {
   const receiving = row.receiving_courses
   const sending = row.sending_courses
   const noArticulation = sending.logic === 'NO_ARTICULATION'
 
-  const receivingKey = receiving?.courses?.[0]
-    ? normalizeCourseKey(receiving.courses[0].prefix, receiving.courses[0].number)
-    : null
-  const showOrSeparator = receivingKey && pathwayInfo?.orBeforeKeys?.has(receivingKey)
-
-  const status = hasCourses ? checkRequirementSatisfied(sending, userCourseMap) : 'none'
+  const status = hasCourses
+    ? (sending.logic === 'NO_ARTICULATION' ? 'none' : (() => {
+        const matches = (sending.courses || []).filter((c) =>
+          userCourseMap.has(normalizeCourseKey(c.prefix, c.number))
+        )
+        if (matches.length === 0) return 'none'
+        if (sending.logic === 'OR' || sending.logic === 'SINGLE') return 'satisfied'
+        if (matches.length === sending.courses.length) return 'satisfied'
+        return 'partial'
+      })())
+    : 'none'
 
   const rowStyle = {}
   if (hasCourses && status === 'satisfied') {
@@ -477,15 +767,7 @@ function CourseRow({ row, color, userCourseMap, hasCourses, pathwayInfo }) {
   }
 
   return (
-    <>
-      {showOrSeparator && (
-        <Table.Tr>
-          <Table.Td colSpan={3} style={{ textAlign: 'center', padding: '6px 0' }}>
-            <Badge size="sm" variant="light" color="orange" radius="sm">OR</Badge>
-          </Table.Td>
-        </Table.Tr>
-      )}
-      <Table.Tr style={rowStyle}>
+    <Table.Tr style={rowStyle}>
       <Table.Td style={{ verticalAlign: 'top' }}>
         <Group gap={6} wrap="nowrap">
           {hasCourses && status === 'satisfied' && (
@@ -514,7 +796,6 @@ function CourseRow({ row, color, userCourseMap, hasCourses, pathwayInfo }) {
         )}
       </Table.Td>
     </Table.Tr>
-    </>
   )
 }
 

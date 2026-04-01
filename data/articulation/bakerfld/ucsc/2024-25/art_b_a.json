@@ -8,188 +8,273 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20H",
-                "title": "Introduction to Sculpture and Public Art",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "B14",
-                "title": "Sculpture II",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "B13",
-                "title": "Sculpture I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20H",
+                        "title": "Introduction to Sculpture and Public Art",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "B14",
+                        "title": "Sculpture II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "B13",
+                        "title": "Sculpture I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20J",
-                "title": "Introduction to Drawing and Painting",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "B6",
-                "title": "Acrylic Painting I",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "B7",
-                "title": "Acrylic Painting II",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20J",
+                        "title": "Introduction to Drawing and Painting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "B6",
+                        "title": "Acrylic Painting I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "B7",
+                        "title": "Acrylic Painting II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20L",
-                "title": "Introduction to Drawing",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "B2",
-                "title": "Drawing I",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "B3",
-                "title": "Drawing II",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20L",
+                        "title": "Introduction to Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "B2",
+                        "title": "Drawing I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "B3",
+                        "title": "Drawing II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20I",
-                "title": "Introduction to Photography",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "B16",
-                "title": "Digital Photography",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "B46",
-                "title": "Advanced Photography I",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "B17",
-                "title": "Black and White Photography",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20I",
+                        "title": "Introduction to Photography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "B16",
+                        "title": "Digital Photography",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "B46",
+                        "title": "Advanced Photography I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "B17",
+                        "title": "Black and White Photography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "10D",
-                "title": "2D Foundation",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "B4",
-                "title": "Two Dimensional Design",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "10D",
+                        "title": "2D Foundation",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "B4",
+                        "title": "Two Dimensional Design",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "10E",
-                "title": "3D Foundation",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "B5",
-                "title": "Three Dimensional Design",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "10E",
+                        "title": "3D Foundation",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "B5",
+                        "title": "Three Dimensional Design",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "The following transfer screening policy takes effect in fall 2024 and will be mandatory for all transfer students entering UC Santa Cruz fall 2026 and later. Transfer students entering UCSC prior to fall 2026 are encouraged to complete these requirements, but will still be considered for entry into the major if they participate in a portfolio review; see additional information below. Art B.A. Transfer Admission Screening Policy Prospective transfer students planning on majoring in art should complete the following two lower-division courses, or their articulated equivalents, prior to transferring: TWO Foundation courses ART 10D – 2D Foundation ART 10E – 3D Foundation ART 10F – 4D Foundation Students who do not complete two ART 10 equivalent courses before transferring to UC Santa Cruz have the option to undergo a portfolio review, detailed in the section below. Portfolio Review Transfer students who have not completed two ART 10 courses prior to entering UC Santa Cruz and wish to pursue art as a first or second major can participate in a portfolio review to waive this requirement. It is recommended to contact the art advisor about the portfolio review before enrolling in the first quarter. More information about the portfolio review can be found on the Art Department website . Additional Information for Transfer Transfer students are strongly advised to complete up to six preparatory courses listed in the \"Recommended Preparation\" section below. Completing these courses will help ensure timely progress toward degree completion. Students should prioritize required and recommended major preparation courses, and may additionally choose to complete courses that satisfy UC Santa Cruz general education requirements as their time allows. For more information on incorporating general education requirements into your pre-transfer academic plan, please consult with your community college counselor. Transfer students who have completed courses they believe are applicable to the Africa and its Diaspora, Asia and its Diaspora, Europe and the Americas, Mediterranean, Native Americas, and/or Oceania and its Diaspora requirements listed below, but are not included in the articulation agreement, may petition to have these courses apply toward their lower-division Art B.A. requirements. Students should consult with the art advisor about petitioning these courses prior to enrolling in their first quarter. Please visit the Art Department website to learn more about this major.",
+    "The following transfer screening policy takes effect in fall 2024 and will be mandatory for all transfer students entering UC Santa Cruz fall 2026 and later. Transfer students entering UCSC prior to fall 2026 are encouraged to complete these requirements, but will still be considered for entry into the major if they participate in a portfolio review; see additional information below. Art B.A. Transfer Admission Screening Policy Prospective transfer students planning on majoring in art should complete the following two lower-division courses, or their articulated equivalents, prior to transferring: TWO Foundation courses ART 10D \u2013 2D Foundation ART 10E \u2013 3D Foundation ART 10F \u2013 4D Foundation Students who do not complete two ART 10 equivalent courses before transferring to UC Santa Cruz have the option to undergo a portfolio review, detailed in the section below. Portfolio Review Transfer students who have not completed two ART 10 courses prior to entering UC Santa Cruz and wish to pursue art as a first or second major can participate in a portfolio review to waive this requirement. It is recommended to contact the art advisor about the portfolio review before enrolling in the first quarter. More information about the portfolio review can be found on the Art Department website . Additional Information for Transfer Transfer students are strongly advised to complete up to six preparatory courses listed in the \"Recommended Preparation\" section below. Completing these courses will help ensure timely progress toward degree completion. Students should prioritize required and recommended major preparation courses, and may additionally choose to complete courses that satisfy UC Santa Cruz general education requirements as their time allows. For more information on incorporating general education requirements into your pre-transfer academic plan, please consult with your community college counselor. Transfer students who have completed courses they believe are applicable to the Africa and its Diaspora, Asia and its Diaspora, Europe and the Americas, Mediterranean, Native Americas, and/or Oceania and its Diaspora requirements listed below, but are not included in the articulation agreement, may petition to have these courses apply toward their lower-division Art B.A. requirements. Students should consult with the art advisor about petitioning these courses prior to enrolling in their first quarter. Please visit the Art Department website to learn more about this major.",
     "All transfer applicants must satisfy University of California admissions eligibility requirements and campus admission selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website . The UC Santa Cruz Transfer Admission Guarantee (TAG) is a formal agreement that ensures your fall admission to your chosen major, provided you are transferring from a California Community College and meet specific requirements. Visit the UC Santa Cruz TAG webpage for more information.",
-    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the “Recommended Preparation” section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
+    "THIS IS A SCREENING MAJOR. Screening majors require the completion of specific preparatory courses and/or minimum GPA requirements. For detailed information about the screening requirements for this major, please refer to \"Transfer Admission Screening Policy\" below. Additional preparatory coursework listed in the \u201cRecommended Preparation\u201d section are not required for admission, but are strongly recommended. Completion of these courses will help ensure timely progress toward degree completion. More information and a list of screening majors and non-screening majors may be found on the Admissions website.",
     "The UC Santa Cruz Advanced Placement (AP), International Baccalaureate (IB), and A-Level examination credit policies may be found in the UC Santa Cruz General Catalog . AP, IBH, and A-level exams may or may not satisfy course requirements, depending on the specific exam."
   ]
 }

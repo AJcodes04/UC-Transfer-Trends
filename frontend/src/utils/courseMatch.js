@@ -1,3 +1,27 @@
+/**
+ * courseMatch.js — course matching and requirement satisfaction logic
+ *
+ * SCHEMA SUPPORT:
+ *   This file handles BOTH the old and new JSON schemas so the frontend keeps
+ *   working during the re-scrape transition.
+ *
+ *   Old format (pre-rewrite):
+ *     agreement.sections[].rows[]   (flat ArticulationRow list)
+ *
+ *   New format (post-rewrite):
+ *     agreement.sections[].groups[].options[].rows[]
+ *     Each group has: group_logic ("COMPLETE_ALL" | "SELECT_ONE" | "SELECT_N")
+ *                     select_n (int, for SELECT_N)
+ *                     options[].rows[]
+ *
+ * GROUP LOGIC SEMANTICS:
+ *   COMPLETE_ALL  — Every row's sending_courses must be satisfied.
+ *   SELECT_ONE    — Any one complete option (all rows in that option satisfied)
+ *                   counts as satisfied. Example: "Select A or B".
+ *   SELECT_N      — At least select_n rows across the option must be satisfied.
+ *                   Example: "Complete 1 course from the following".
+ */
+
 export function normalizeCourseKey(prefix, number) {
   return `${(prefix || '').trim().toUpperCase()} ${(number || '').trim().toUpperCase()}`
 }
@@ -11,13 +35,18 @@ export function buildUserCourseMap(courses) {
   return map
 }
 
-// Returns "satisfied", "partial", or "none" based on logic type:
-// SINGLE/OR: any match → satisfied. AND: all → satisfied, some → partial.
+/**
+ * Check whether a single sending CourseGroup is satisfied by the user's courses.
+ *
+ * Returns:
+ *   "satisfied" — requirement fully met
+ *   "partial"   — requirement partially met (AND group where some but not all match)
+ *   "none"      — no match
+ */
 export function checkRequirementSatisfied(sendingGroup, userCourseMap) {
   if (!sendingGroup || !sendingGroup.courses || sendingGroup.courses.length === 0) {
     return 'none'
   }
-
   if (sendingGroup.logic === 'NO_ARTICULATION') {
     return 'none'
   }
@@ -33,13 +62,174 @@ export function checkRequirementSatisfied(sendingGroup, userCourseMap) {
     return 'satisfied'
   }
 
+  // AND logic: need all courses
   if (matches.length === sendingGroup.courses.length) return 'satisfied'
   return 'partial'
 }
 
-// Parse notes to find "choose one of the following" pathway groups.
-// Returns array of { receivingKeys: Set<string>, pathways: string[][] }
-// Each pathway is an array of UC receiving course keys forming one option.
+/**
+ * Check whether a single ArticulationRow is satisfied.
+ * (Convenience wrapper around checkRequirementSatisfied.)
+ */
+export function checkRowSatisfied(row, userCourseMap) {
+  return checkRequirementSatisfied(row.sending_courses, userCourseMap)
+}
+
+/**
+ * Determine if a RequirementGroup is satisfied based on its group_logic.
+ *
+ * COMPLETE_ALL: every row across all options must be satisfied.
+ * SELECT_ONE:   any one option where ALL rows are satisfied counts.
+ * SELECT_N:     at least select_n rows (across the option's rows) satisfied.
+ *
+ * Returns "satisfied", "partial", or "none".
+ */
+export function checkGroupSatisfied(group, userCourseMap) {
+  const logic = group.group_logic || 'COMPLETE_ALL'
+  const options = group.options || []
+
+  if (options.length === 0) return 'none'
+
+  if (logic === 'SELECT_ONE') {
+    // Satisfied if any one complete option is fully met
+    let bestPartial = false
+    for (const opt of options) {
+      const rows = opt.rows || []
+      if (rows.length === 0) continue
+      const statuses = rows.map((r) => checkRowSatisfied(r, userCourseMap))
+      const allSatisfied = statuses.every((s) => s === 'satisfied')
+      const anySatisfied = statuses.some((s) => s !== 'none')
+      if (allSatisfied) return 'satisfied'
+      if (anySatisfied) bestPartial = true
+    }
+    return bestPartial ? 'partial' : 'none'
+  }
+
+  if (logic === 'SELECT_N') {
+    // Satisfied if at least select_n rows are satisfied
+    const n = group.select_n || 1
+    const allRows = options.flatMap((o) => o.rows || [])
+    const satisfiedCount = allRows.filter(
+      (r) => checkRowSatisfied(r, userCourseMap) === 'satisfied'
+    ).length
+    if (satisfiedCount >= n) return 'satisfied'
+    if (satisfiedCount > 0) return 'partial'
+    return 'none'
+  }
+
+  // COMPLETE_ALL (default): every row across all options must be satisfied
+  const allRows = options.flatMap((o) => o.rows || [])
+  if (allRows.length === 0) return 'none'
+  const statuses = allRows.map((r) => checkRowSatisfied(r, userCourseMap))
+  if (statuses.every((s) => s === 'satisfied')) return 'satisfied'
+  if (statuses.some((s) => s !== 'none')) return 'partial'
+  return 'none'
+}
+
+/**
+ * Compute total and satisfied requirement counts for an agreement.
+ *
+ * Each RequirementGroup counts as exactly ONE requirement.
+ *
+ * Handles both formats:
+ *   New: sections[].groups[]   — proper group-aware counting
+ *   Old: sections[].rows[]     — each row counted as a separate requirement
+ *                                 (old behaviour preserved for un-re-scraped files)
+ */
+export function computeRequirementStats(agreement, userCourseMap) {
+  if (!agreement?.sections) return { satisfied: 0, total: 0 }
+
+  let satisfied = 0
+  let total = 0
+
+  for (const section of agreement.sections) {
+    const groups = section.groups || []
+
+    if (groups.length > 0) {
+      // ── New format ────────────────────────────────────────────────────
+      for (const group of groups) {
+        // Skip groups with no rows (no articulation data at all)
+        const hasRows = (group.options || []).some((o) => (o.rows || []).length > 0)
+        if (!hasRows) continue
+
+        total++
+        const status = checkGroupSatisfied(group, userCourseMap)
+        if (status === 'satisfied') satisfied++
+      }
+    } else {
+      // ── Old format fallback ───────────────────────────────────────────
+      // Each row in the flat list is its own requirement.
+      for (const row of section.rows || []) {
+        total++
+        if (checkRequirementSatisfied(row.sending_courses, userCourseMap) === 'satisfied') {
+          satisfied++
+        }
+      }
+    }
+  }
+
+  return { satisfied, total }
+}
+
+/**
+ * Get all CC course keys that the user has matched in this agreement.
+ * Used to compute the "Major GPA" from only matched courses.
+ */
+export function getMatchedCourseKeys(agreement, userCourseMap) {
+  const matched = new Set()
+  if (!agreement?.sections) return matched
+
+  for (const section of agreement.sections) {
+    const groups = section.groups || []
+
+    if (groups.length > 0) {
+      // New format
+      for (const group of groups) {
+        for (const option of group.options || []) {
+          for (const row of option.rows || []) {
+            _collectMatchedFromRow(row, userCourseMap, matched)
+          }
+        }
+      }
+    } else {
+      // Old format
+      for (const row of section.rows || []) {
+        _collectMatchedFromRow(row, userCourseMap, matched)
+      }
+    }
+  }
+  return matched
+}
+
+function _collectMatchedFromRow(row, userCourseMap, matched) {
+  const sending = row.sending_courses
+  if (!sending?.courses) return
+  for (const course of sending.courses) {
+    const key = normalizeCourseKey(course.prefix, course.number)
+    if (userCourseMap.has(key)) {
+      matched.add(key)
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// DEPRECATED — kept only for old-format data compatibility
+// ---------------------------------------------------------------------------
+
+/**
+ * @deprecated Use group-aware computeRequirementStats() instead.
+ *
+ * parsePathwayGroups() was a workaround that tried to extract "Select A or B"
+ * grouping by parsing the plain-text notes field. It was fragile and incomplete.
+ * New scraped data has proper group structure in sections[].groups[], making
+ * this function unnecessary.
+ *
+ * It is kept here because:
+ *   1. Old-format JSON files (not yet re-scraped) still have flat rows[].
+ *   2. The old computeRequirementStats() called it.
+ *   3. TransferRequirements.jsx still imports it for old-format fallback.
+ * Once all data is re-scraped, this can be removed.
+ */
 export function parsePathwayGroups(notes) {
   if (!notes?.length) return []
   const fullText = notes.join(' ')
@@ -48,8 +238,6 @@ export function parsePathwayGroups(notes) {
   if (idx === -1) return []
 
   const after = fullText.substring(idx)
-
-  // Find block boundary (next major section)
   const endPatterns = [/Upper.division/i, /All majors/i, /required to undertake/i]
   let blockEnd = after.length
   for (const p of endPatterns) {
@@ -58,17 +246,13 @@ export function parsePathwayGroups(notes) {
   }
   const block = after.substring(0, blockEnd)
 
-  // Split by ":" to find pathway categories
   const segments = block.split(':')
   const allKeys = new Set()
   const pathways = []
 
   for (let i = 1; i < segments.length; i++) {
     const seg = segments[i]
-
-    // Split by ") or (" for sub-options within a category
     const orParts = seg.includes(') or (') ? seg.split(/\)\s*or\s*\(/) : [seg]
-
     for (const part of orParts) {
       const keys = extractCourseKeysFromText(part)
       if (keys.length > 0) {
@@ -89,8 +273,6 @@ function extractCourseKeysFromText(text) {
   while ((m = re.exec(text)) !== null) {
     const prefix = m[1]
     const number = m[2]
-
-    // Handle range: "14A-B" → 14A, 14B
     const rangeMatch = number.match(/^(\d+)([A-Z])-([A-Z])$/)
     if (rangeMatch) {
       const base = rangeMatch[1]
@@ -104,101 +286,4 @@ function extractCourseKeysFromText(text) {
     }
   }
   return keys
-}
-
-// Compute requirement stats with pathway group awareness.
-// "Choose one" pathway groups count as 1 requirement, satisfied if any
-// complete pathway within the group has all its CC equivalents met.
-export function computeRequirementStats(agreement, userCourseMap) {
-  if (!agreement?.sections) return { satisfied: 0, total: 0 }
-
-  const pathwayGroups = parsePathwayGroups(agreement.notes)
-
-  // Set of UC receiving course keys that belong to a pathway group
-  const groupedKeys = new Set()
-  for (const group of pathwayGroups) {
-    for (const key of group.receivingKeys) {
-      groupedKeys.add(key)
-    }
-  }
-
-  // Collect all rows and build receiving key → row lookup
-  const allRows = []
-  for (const section of agreement.sections) {
-    for (const row of section.rows || []) {
-      allRows.push(row)
-    }
-  }
-
-  const rowByReceivingKey = new Map()
-  for (const row of allRows) {
-    if (!row.receiving_courses?.courses) continue
-    for (const c of row.receiving_courses.courses) {
-      const key = normalizeCourseKey(c.prefix, c.number)
-      rowByReceivingKey.set(key, row)
-    }
-  }
-
-  let satisfied = 0
-  let total = 0
-  const processedGroups = new Set()
-
-  for (const row of allRows) {
-    const receivingKey = row.receiving_courses?.courses?.[0]
-      ? normalizeCourseKey(row.receiving_courses.courses[0].prefix, row.receiving_courses.courses[0].number)
-      : null
-
-    if (receivingKey && groupedKeys.has(receivingKey)) {
-      // Find which pathway group this row belongs to
-      const group = pathwayGroups.find((g) => g.receivingKeys.has(receivingKey))
-      if (group && !processedGroups.has(group)) {
-        processedGroups.add(group)
-        total++
-
-        // Check if any pathway option is fully satisfied
-        let groupSatisfied = false
-        for (const pathway of group.pathways) {
-          let allMet = true
-          for (const courseKey of pathway) {
-            const pRow = rowByReceivingKey.get(courseKey)
-            if (!pRow) { allMet = false; break }
-            if (checkRequirementSatisfied(pRow.sending_courses, userCourseMap) !== 'satisfied') {
-              allMet = false; break
-            }
-          }
-          if (allMet) { groupSatisfied = true; break }
-        }
-
-        if (groupSatisfied) satisfied++
-      }
-      continue // skip individual counting for grouped rows
-    }
-
-    // Regular individual requirement
-    total++
-    if (checkRequirementSatisfied(row.sending_courses, userCourseMap) === 'satisfied') {
-      satisfied++
-    }
-  }
-
-  return { satisfied, total }
-}
-
-export function getMatchedCourseKeys(agreement, userCourseMap) {
-  const matched = new Set()
-  if (!agreement?.sections) return matched
-
-  for (const section of agreement.sections) {
-    for (const row of section.rows || []) {
-      const sending = row.sending_courses
-      if (!sending?.courses) continue
-      for (const course of sending.courses) {
-        const key = normalizeCourseKey(course.prefix, course.number)
-        if (userCourseMap.has(key)) {
-          matched.add(key)
-        }
-      }
-    }
-  }
-  return matched
 }

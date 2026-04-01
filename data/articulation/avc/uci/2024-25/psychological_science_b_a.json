@@ -8,137 +8,194 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSCI",
-                "number": "11C",
-                "title": "Psychology Fundamentals",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PSY",
-                "number": "101",
-                "title": "General Psychology",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSY",
-                "number": "101H",
-                "title": "General Psychology Honors",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSY",
-                "number": "230",
-                "title": "Social Psychology",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSY",
-                "number": "234",
-                "title": "Abnormal Psychology",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSCI",
+                        "number": "11C",
+                        "title": "Psychology Fundamentals",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "101",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101H",
+                        "title": "General Psychology Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "230",
+                        "title": "Social Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "234",
+                        "title": "Abnormal Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SOCECOL",
-                "number": "13",
-                "title": "Statistical Analysis in Social Ecology",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "115",
-                "title": "Statistics",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "115H",
-                "title": "Statistics Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "116",
-                "title": "Introduction to Statistics Using R",
-                "units": 4.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCECOL",
+                        "number": "13",
+                        "title": "Statistical Analysis in Social Ecology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "115",
+                        "title": "Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "115H",
+                        "title": "Statistics Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "116",
+                        "title": "Introduction to Statistics Using R",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSCI",
-                "number": "11A",
-                "title": "Psychology Fundamentals",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PSY",
-                "number": "101",
-                "title": "General Psychology",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSY",
-                "number": "101H",
-                "title": "General Psychology Honors",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSY",
-                "number": "201",
-                "title": "Introduction to Physiological Psychology",
-                "units": 3.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSCI",
+                        "number": "11A",
+                        "title": "Psychology Fundamentals",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "101",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101H",
+                        "title": "General Psychology Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "201",
+                        "title": "Introduction to Physiological Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSCI",
-                "number": "11B",
-                "title": "Psychology Fundamentals",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSCI",
+                        "number": "11B",
+                        "title": "Psychology Fundamentals",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

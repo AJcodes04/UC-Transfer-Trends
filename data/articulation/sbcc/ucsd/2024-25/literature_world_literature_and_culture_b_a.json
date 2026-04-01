@@ -8,450 +8,689 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTGM",
-                "number": "2A",
-                "title": "Intermediate German I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "GER",
-                "number": "103",
-                "title": "Intermediate German I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTGM",
+                        "number": "2A",
+                        "title": "Intermediate German I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GER",
+                        "number": "103",
+                        "title": "Intermediate German I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTFR",
-                "number": "2A",
-                "title": "Intermediate French I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FR",
-                "number": "103",
-                "title": "Intermediate French I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTFR",
+                        "number": "2A",
+                        "title": "Intermediate French I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "103",
+                        "title": "Intermediate French I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTIT",
-                "number": "2B",
-                "title": "Intermediate Italian II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ITAL",
-                "number": "104",
-                "title": "Intermediate Italian II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTIT",
+                        "number": "2B",
+                        "title": "Intermediate Italian II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "104",
+                        "title": "Intermediate Italian II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTLA",
-                "number": "1",
-                "title": "Beginning Latin",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "LATN",
-                "number": "101",
-                "title": "Beginning Latin I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTLA",
+                        "number": "1",
+                        "title": "Beginning Latin",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LATN",
+                        "number": "101",
+                        "title": "Beginning Latin I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTFR",
-                "number": "2B",
-                "title": "Intermediate French II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FR",
-                "number": "104",
-                "title": "Intermediate French II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTFR",
+                        "number": "2B",
+                        "title": "Intermediate French II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "104",
+                        "title": "Intermediate French II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTEN",
-                "number": "21",
-                "title": "Introduction to the Literature of the British Isles: Pre 1660",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "221",
-                "title": "Survey of British Literature: 800-1798",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTEN",
+                        "number": "21",
+                        "title": "Introduction to the Literature of the British Isles: Pre 1660",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "221",
+                        "title": "Survey of British Literature: 800-1798",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTGM",
-                "number": "2B",
-                "title": "Intermediate German II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "GER",
-                "number": "104",
-                "title": "Intermediate German II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTGM",
+                        "number": "2B",
+                        "title": "Intermediate German II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GER",
+                        "number": "104",
+                        "title": "Intermediate German II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTEN",
-                "number": "22",
-                "title": "Introduction to the Literature of the British Isles: 1660-1832",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "222H",
-                "title": "Survey of British Literature: 1798-Present, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "221",
-                "title": "Survey of British Literature: 800-1798",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "222",
-                "title": "Survey of British Literature: 1798-Present",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTEN",
+                        "number": "22",
+                        "title": "Introduction to the Literature of the British Isles: 1660-1832",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "222H",
+                        "title": "Survey of British Literature: 1798-Present, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "221",
+                        "title": "Survey of British Literature: 800-1798",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "222",
+                        "title": "Survey of British Literature: 1798-Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTKO",
-                "number": "1B",
-                "title": "Beginning Korean: First Year II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "KOR",
-                "number": "102",
-                "title": "Beginning Korean II",
-                "units": 5.0
-              },
-              {
-                "prefix": "KOR",
-                "number": "101",
-                "title": "Beginning Korean I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTKO",
+                        "number": "1B",
+                        "title": "Beginning Korean: First Year II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "KOR",
+                        "number": "102",
+                        "title": "Beginning Korean II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "KOR",
+                        "number": "101",
+                        "title": "Beginning Korean I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTIT",
-                "number": "2A",
-                "title": "Intermediate Italian I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ITAL",
-                "number": "103",
-                "title": "Intermediate Italian I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTIT",
+                        "number": "2A",
+                        "title": "Intermediate Italian I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "103",
+                        "title": "Intermediate Italian I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTEN",
-                "number": "29",
-                "title": "Introduction to Chicano Literature",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHST",
-                "number": "113",
-                "title": "Introduction to Chicano/Mexican-American Literature",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTEN",
+                        "number": "29",
+                        "title": "Introduction to Chicano Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHST",
+                        "number": "113",
+                        "title": "Introduction to Chicano/Mexican-American Literature",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTKO",
-                "number": "1A",
-                "title": "Beginning Korean: First Year I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "KOR",
-                "number": "101",
-                "title": "Beginning Korean I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTKO",
+                        "number": "1A",
+                        "title": "Beginning Korean: First Year I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "KOR",
+                        "number": "101",
+                        "title": "Beginning Korean I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTEN",
-                "number": "25",
-                "title": "Introduction to the Literature of the United States, Beginnings to 1865",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "225",
-                "title": "American Literature: Pre-Colonization to 1865",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-13",
+          "group_number": 13,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTEN",
+                        "number": "25",
+                        "title": "Introduction to the Literature of the United States, Beginnings to 1865",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "225",
+                        "title": "American Literature: Pre-Colonization to 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTKO",
-                "number": "1C",
-                "title": "Beginning Korean: First Year III",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "KOR",
-                "number": "102",
-                "title": "Beginning Korean II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-14",
+          "group_number": 14,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTKO",
+                        "number": "1C",
+                        "title": "Beginning Korean: First Year III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "KOR",
+                        "number": "102",
+                        "title": "Beginning Korean II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTEN",
-                "number": "26",
-                "title": "Introduction to the Literature of the United States, 1865 to the Present",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "226",
-                "title": "American Literature: 1865 to Present",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "226H",
-                "title": "American Literature, Honors",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-15",
+          "group_number": 15,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTEN",
+                        "number": "26",
+                        "title": "Introduction to the Literature of the United States, 1865 to the Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "226",
+                        "title": "American Literature: 1865 to Present",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "226H",
+                        "title": "American Literature, Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTEN",
-                "number": "27",
-                "title": "Introduction to African American Literature",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BLST",
-                "number": "113",
-                "title": "African-American and Afro-Caribbean Literature in the U.S.",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-16",
+          "group_number": 16,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTEN",
+                        "number": "27",
+                        "title": "Introduction to African American Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BLST",
+                        "number": "113",
+                        "title": "African-American and Afro-Caribbean Literature in the U.S.",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LTEN",
-                "number": "23",
-                "title": "Introduction to the Literature of the British Isles: 1832-Present",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "222H",
-                "title": "Survey of British Literature: 1798-Present, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "222",
-                "title": "Survey of British Literature: 1798-Present",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-17",
+          "group_number": 17,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTEN",
+                        "number": "23",
+                        "title": "Introduction to the Literature of the British Isles: 1832-Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "222H",
+                        "title": "Survey of British Literature: 1798-Present, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "222",
+                        "title": "Survey of British Literature: 1798-Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Special Advising Note: Transfer students are strongly advised to complete as many preparatory courses for their major before enrolling at UC San Diego. Preparing well for the major helps students move efficiently toward graduation . For information about the Department of Literature, including checklists of lower-division and upper-division requirements for all of our majors, descriptions of current courses and current class schedules, please go to: http://literature.ucsd.edu/ . Students electing the World Literature and Culture major can complete the majority of the lower-division requirements at most community colleges in California. A three-quarter lower-division literature sequence is required, and there are many sequence options (see below). As with all of the literature majors offered at UCSD, there is a secondary language and literature requirement (see choices of languages below). This entails required study in a language other than English and the attainment of proficiency in that language through the terminal course in that particular language sequence. For students choosing to concentrate in a foreign language within the major, English literature courses may be used to fulfill the secondary language and literature requirement. For details on the secondary language & literature requirement, please go to http://literature.ucsd.edu/ . Students can prepare for this requirement by taking lower-division courses (enough to reach fluency level, usually one to two years) in American Sign Language, French, German, Greek, Hebrew, Italian, Korean, Latin, Russian, Spanish, or English (for students concentrating on a foreign language within the major requirements). World Literature and Culture majors are required to complete: 1) A three-quarter lower-division sequence. Examples of some options include: LTEN 21, 22, 23 LTEN 25, 26, 27, 28, 29 (any three) LTWL 19A, 19B, 19C LTFR 2A, 2B, 2C LTGM 2A, 2B, 2C LTGK 1, 2, 3 LTIT 2A, 2B, 50 LTKO 2A, 2B, 2C LTLA 1, 2, 3 LTRU 2A, 2B,104A LTSP 2A, 2B, 2C, 2D, 2E 2) The secondary language and literature requirement in the chosen language. ﻿See appropriate lower-division articulated community college courses below.",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Special Advising Note: Transfer students are strongly advised to complete as many preparatory courses for their major before enrolling at UC San Diego. Preparing well for the major helps students move efficiently toward graduation . For information about the Department of Literature, including checklists of lower-division and upper-division requirements for all of our majors, descriptions of current courses and current class schedules, please go to: http://literature.ucsd.edu/ . Students electing the World Literature and Culture major can complete the majority of the lower-division requirements at most community colleges in California. A three-quarter lower-division literature sequence is required, and there are many sequence options (see below). As with all of the literature majors offered at UCSD, there is a secondary language and literature requirement (see choices of languages below). This entails required study in a language other than English and the attainment of proficiency in that language through the terminal course in that particular language sequence. For students choosing to concentrate in a foreign language within the major, English literature courses may be used to fulfill the secondary language and literature requirement. For details on the secondary language & literature requirement, please go to http://literature.ucsd.edu/ . Students can prepare for this requirement by taking lower-division courses (enough to reach fluency level, usually one to two years) in American Sign Language, French, German, Greek, Hebrew, Italian, Korean, Latin, Russian, Spanish, or English (for students concentrating on a foreign language within the major requirements). World Literature and Culture majors are required to complete: 1) A three-quarter lower-division sequence. Examples of some options include: LTEN 21, 22, 23 LTEN 25, 26, 27, 28, 29 (any three) LTWL 19A, 19B, 19C LTFR 2A, 2B, 2C LTGM 2A, 2B, 2C LTGK 1, 2, 3 LTIT 2A, 2B, 50 LTKO 2A, 2B, 2C LTLA 1, 2, 3 LTRU 2A, 2B,104A LTSP 2A, 2B, 2C, 2D, 2E 2) The secondary language and literature requirement in the chosen language. \ufeffSee appropriate lower-division articulated community college courses below.",
     "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf"
   ]
 }

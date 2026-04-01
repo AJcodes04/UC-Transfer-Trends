@@ -8,132 +8,203 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "1",
-                "title": "Principles of Microeconomics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "102",
-                "title": "Principles of Microeconomics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "3",
-                "title": "Principles of Macroeconomics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "101",
-                "title": "Principles of Macroeconomics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "3",
+                        "title": "Principles of Macroeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "101",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20B",
-                "title": "Calculus for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "160",
-                "title": "Calculus and Analytic Geometry",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "160",
+                        "title": "Calculus and Analytic Geometry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20C",
-                "title": "Calculus and Analytic Geometry for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "250",
-                "title": "Calculus and Analytic Geometry",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20C",
+                        "title": "Calculus and Analytic Geometry for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "250",
+                        "title": "Calculus and Analytic Geometry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20A",
-                "title": "Calculus for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "150",
-                "title": "Calculus and Analytic Geometry",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Calculus and Analytic Geometry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2017, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep Special Advising Note: Transfer students must complete the following preparatory courses for their major before enrolling at UC San Diego: lower division economics courses (Microeconomics & Macroeconomics) as well as two required math classes, Math 10A, B or 20A,B. Students are strongly advised to complete the third required math class, Math 10C or 20C, before enrolling at UC San Diego. Students are not able to begin their upper division core economics courses until Math 10C or 20C is complete. Economics is the study of how individuals, organizations, and societies deal with scarcity - the problem that available resources are not sufficient to satisfy everyone's wants. Because scarcity requires choice (frequently referred to as trade-off) among alternative uses of resources, economics involves both study of the technology by which resources are turned into the products people want and study of the preferences through which people choose among alternatives. Further, since society is composed of many individuals and groups, economics involves study of the institutions through which a society can gain the advantages of cooperation and resolve the conflicts due to competing goals. This major is designed to provide a broad understanding of resource-allocation and income-determination mechanisms. Both the development of the tools of economic analysis and their applications to contemporary problems and public policy are stressed. When choosing which mathematics series to take, Math 10A-B-C or Math 20A-B-C, it is important to remember that only Math 20A-B-C allows students access to UC San Diego’s upper division math courses that are recommended as preparation for Ph.D. study in economics and business administration, as well as for graduate studies for professional management degrees, including the MBA. Therefore, while we require economics majors to take Math 10A-B-C, we strongly recommend that economics students take Math 20A-B-C. Economics is a different discipline from business administration. However, there are substantial overlaps. Both disciplines study the behavior of individuals and business firms within the context of market, legal, and other institutions. Economists tend to emphasize the workings of the institutions from the viewpoint of the larger society. Business faculty tend to emphasize the workings of the institutions from the viewpoint of a business enterprise. For more information please visit https://economics.ucsd.edu/undergraduate-program/index.html",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2017, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep Special Advising Note: Transfer students must complete the following preparatory courses for their major before enrolling at UC San Diego: lower division economics courses (Microeconomics & Macroeconomics) as well as two required math classes, Math 10A, B or 20A,B. Students are strongly advised to complete the third required math class, Math 10C or 20C, before enrolling at UC San Diego. Students are not able to begin their upper division core economics courses until Math 10C or 20C is complete. Economics is the study of how individuals, organizations, and societies deal with scarcity - the problem that available resources are not sufficient to satisfy everyone's wants. Because scarcity requires choice (frequently referred to as trade-off) among alternative uses of resources, economics involves both study of the technology by which resources are turned into the products people want and study of the preferences through which people choose among alternatives. Further, since society is composed of many individuals and groups, economics involves study of the institutions through which a society can gain the advantages of cooperation and resolve the conflicts due to competing goals. This major is designed to provide a broad understanding of resource-allocation and income-determination mechanisms. Both the development of the tools of economic analysis and their applications to contemporary problems and public policy are stressed. When choosing which mathematics series to take, Math 10A-B-C or Math 20A-B-C, it is important to remember that only Math 20A-B-C allows students access to UC San Diego\u2019s upper division math courses that are recommended as preparation for Ph.D. study in economics and business administration, as well as for graduate studies for professional management degrees, including the MBA. Therefore, while we require economics majors to take Math 10A-B-C, we strongly recommend that economics students take Math 20A-B-C. Economics is a different discipline from business administration. However, there are substantial overlaps. Both disciplines study the behavior of individuals and business firms within the context of market, legal, and other institutions. Economists tend to emphasize the workings of the institutions from the viewpoint of the larger society. Business faculty tend to emphasize the workings of the institutions from the viewpoint of a business enterprise. For more information please visit https://economics.ucsd.edu/undergraduate-program/index.html",
     "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf"
   ]
 }

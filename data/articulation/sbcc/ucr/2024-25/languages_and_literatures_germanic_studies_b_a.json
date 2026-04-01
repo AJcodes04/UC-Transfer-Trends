@@ -8,36 +8,51 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "GER",
-                "number": "4",
-                "title": "Intermediate German",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "GER",
-                "number": "103",
-                "title": "Intermediate German I",
-                "units": 5.0
-              },
-              {
-                "prefix": "GER",
-                "number": "104",
-                "title": "Intermediate German II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GER",
+                        "number": "4",
+                        "title": "Intermediate German",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GER",
+                        "number": "103",
+                        "title": "Intermediate German I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "GER",
+                        "number": "104",
+                        "title": "Intermediate German II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

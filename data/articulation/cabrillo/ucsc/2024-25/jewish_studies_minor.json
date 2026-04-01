@@ -8,42 +8,57 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "HIS",
-                "number": "70B",
-                "title": "Modern European History, 1815-Present",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "HIST",
-                "number": "4B",
-                "title": "European History Since 1648",
-                "units": 3.0
-              },
-              {
-                "prefix": "HIST",
-                "number": "4BH",
-                "title": "Honors European History Since 1648",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIS",
+                        "number": "70B",
+                        "title": "Modern European History, 1815-Present",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4B",
+                        "title": "European History Since 1648",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "4BH",
+                        "title": "Honors European History Since 1648",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "PREPARATION FOR THE MINOR One of the following core courses: HIS 74 – Introduction to Jewish History and Cultures HIS 74A – Introduction to Middle Eastern and North African Jewish History: Ancient to Early Modern HIS 74B – Introduction to Middle Eastern and North African Jewish History, 1500-2000 HIS 75 – Film and the Holocaust HIS 76 – The Holocaust: A Global Perspective LIT 61J – Introduction to Jewish Literature and Culture Plus up to two lower-division courses, from the core courses listed above or the following electives: HIS 2A – The World to 1500 HIS 2B – The World Since 1500 HIS 70A – Modern European History, 1500-1815 HIS 70B – Modern European History, 1815-present HIS 78 – Modern Authoritarianism in Europe and Beyond MUSC 80I – Music of Modern Israel MUSC 80T – Mizrach: Jewish Music in the Lands of Islam MUSC 80Y – Music, Anti-Semitism, and the Holocaust MUSC 81P – History of Jewish Music Please visit the Jewish Studies website to learn more about this minor.",
+    "PREPARATION FOR THE MINOR One of the following core courses: HIS 74 \u2013 Introduction to Jewish History and Cultures HIS 74A \u2013 Introduction to Middle Eastern and North African Jewish History: Ancient to Early Modern HIS 74B \u2013 Introduction to Middle Eastern and North African Jewish History, 1500-2000 HIS 75 \u2013 Film and the Holocaust HIS 76 \u2013 The Holocaust: A Global Perspective LIT 61J \u2013 Introduction to Jewish Literature and Culture Plus up to two lower-division courses, from the core courses listed above or the following electives: HIS 2A \u2013 The World to 1500 HIS 2B \u2013 The World Since 1500 HIS 70A \u2013 Modern European History, 1500-1815 HIS 70B \u2013 Modern European History, 1815-present HIS 78 \u2013 Modern Authoritarianism in Europe and Beyond MUSC 80I \u2013 Music of Modern Israel MUSC 80T \u2013 Mizrach: Jewish Music in the Lands of Islam MUSC 80Y \u2013 Music, Anti-Semitism, and the Holocaust MUSC 81P \u2013 History of Jewish Music Please visit the Jewish Studies website to learn more about this minor.",
     "UC Santa Cruz students may choose to complete one or more minors, provided they can finish all required coursework within their maximum enrollment terms and allowable credits. While a minor will appear on a student's official transcript, it will not be listed on their diploma. Pursuing a minor is a personal decision that should align with a student's educational and career goals. Students do not apply for minors when submitting their application to UC Santa Cruz. After enrolling, transfer students interested in pursuing a minor should contact the department offering the minor for guidance."
   ]
 }

@@ -8,162 +8,219 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGCOMP",
-                "number": "3",
-                "title": "English Composition, Rhetoric, and Language",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "110H",
-                "title": "Composition and Reading, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "110E",
-                "title": "Composition and Reading, Enhanced",
-                "units": 4.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "110",
-                "title": "Composition and Reading",
-                "units": 4.0
-              }
-            ],
-            "logic": "OR"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGCOMP",
+                        "number": "3",
+                        "title": "English Composition, Rhetoric, and Language",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "110H",
+                        "title": "Composition and Reading, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "110E",
+                        "title": "Composition and Reading, Enhanced",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "110",
+                        "title": "Composition and Reading",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGL",
-                "number": "4W",
-                "title": "Critical Reading and Writing",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "111",
-                "title": "Critical Thinking and Composition Through Literature",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "111H",
-                "title": "Critical Thinking and Composition through Literature, Honors",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "4W",
+                        "title": "Critical Reading and Writing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "111",
+                        "title": "Critical Thinking and Composition Through Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "111H",
+                        "title": "Critical Thinking and Composition through Literature, Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGL",
-                "number": "87",
-                "title": "Topics in American Cultures",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ETHS",
-                "number": "103",
-                "title": "The American Ethnic Cultural Experience",
-                "units": 3.0
-              },
-              {
-                "prefix": "CHST",
-                "number": "113",
-                "title": "Introduction to Chicano/Mexican-American Literature",
-                "units": 3.0
-              },
-              {
-                "prefix": "BLST",
-                "number": "113",
-                "title": "African-American and Afro-Caribbean Literature in the U.S.",
-                "units": 3.0
-              },
-              {
-                "prefix": "TA",
-                "number": "160",
-                "title": "Chicano Theatre",
-                "units": 3.0
-              },
-              {
-                "prefix": "NATA",
-                "number": "113",
-                "title": "The Indian in Literature: Fact and Fiction",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "87",
+                        "title": "Topics in American Cultures",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ETHS",
+                        "number": "103",
+                        "title": "The American Ethnic Cultural Experience",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHST",
+                        "number": "113",
+                        "title": "Introduction to Chicano/Mexican-American Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BLST",
+                        "number": "113",
+                        "title": "African-American and Afro-Caribbean Literature in the U.S.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "160",
+                        "title": "Chicano Theatre",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "NATA",
+                        "number": "113",
+                        "title": "The Indian in Literature: Fact and Fiction",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGL",
-                "number": "11",
-                "title": "Introduction to American Cultures",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENG",
-                "number": "226",
-                "title": "American Literature: 1865 to Present",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "226H",
-                "title": "American Literature, Honors",
-                "units": 4.0
-              },
-              {
-                "prefix": "ENG",
-                "number": "225",
-                "title": "American Literature: Pre-Colonization to 1865",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "11",
+                        "title": "Introduction to American Cultures",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "226",
+                        "title": "American Literature: 1865 to Present",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "226H",
+                        "title": "American Literature, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "225",
+                        "title": "American Literature: Pre-Colonization to 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "The American Literature and Culture major examines “America” through a range of frameworks (local, regional, national, oceanic, hemispheric, global, interracial, multiethnic, and migratory). The major aims to foster self-consciousness about the methods, assumptions, skills and intellectual frameworks that guide our inquiries. In doing so, American Literature and Culture foregrounds the diverse peoples, histories, and ideas of \"America\" - understood as a place, real and imagined. Listed below are the lower division preparation courses for the major. To be considered for the American Literature & Culture major, students must complete the following coursework by the end of spring before transfer: One course in English Composition (Expository Writing), One course in Critical Reading and Writing (Composition and Literature), The equivalent of UCLA's English 11 ( American Cultures), The equivalent of UCLA's English 87 (Topics in American Cultures) and STRONGLY RECOMMENDED: Two years of one foreign language or a combination of courses in foreign language and foreign literature. Please note: Approved CC equivalents with UCLA's English 11 and 87 courses can be found (below) on this major agreement. All courses must be completed for a letter grade. For more information regarding this major and UCLA's selection process, visit https://english.ucla.edu and https:/ / admission.ucla.edu. In addition, the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses.",
+    "The American Literature and Culture major examines \u201cAmerica\u201d through a range of frameworks (local, regional, national, oceanic, hemispheric, global, interracial, multiethnic, and migratory). The major aims to foster self-consciousness about the methods, assumptions, skills and intellectual frameworks that guide our inquiries. In doing so, American Literature and Culture foregrounds the diverse peoples, histories, and ideas of \"America\" - understood as a place, real and imagined. Listed below are the lower division preparation courses for the major. To be considered for the American Literature & Culture major, students must complete the following coursework by the end of spring before transfer: One course in English Composition (Expository Writing), One course in Critical Reading and Writing (Composition and Literature), The equivalent of UCLA's English 11 ( American Cultures), The equivalent of UCLA's English 87 (Topics in American Cultures) and STRONGLY RECOMMENDED: Two years of one foreign language or a combination of courses in foreign language and foreign literature. Please note: Approved CC equivalents with UCLA's English 11 and 87 courses can be found (below) on this major agreement. All courses must be completed for a letter grade. For more information regarding this major and UCLA's selection process, visit https://english.ucla.edu and https:/ / admission.ucla.edu. In addition, the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses.",
     "All American Literature and Cultures majors MUST complete two years of one foreign language or a combination of courses in foreign language and foreign literature in translation. PLEASE NOTE: Transfer students who have satisfied the UCLA College (Letters and Science) foreign language requirement at the high school level through the IGETC program may satisfy the departmental foreign language requirement with 5 foreign literature in translation courses."
   ]
 }

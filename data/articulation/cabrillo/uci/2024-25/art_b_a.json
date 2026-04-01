@@ -8,377 +8,560 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "20A",
-                "title": "Basic Drawing I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "2B",
-                "title": "Drawing and Composition II",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "2A",
-                "title": "Drawing and Composition I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20A",
+                        "title": "Basic Drawing I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "2B",
+                        "title": "Drawing and Composition II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "2A",
+                        "title": "Drawing and Composition I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "30A",
-                "title": "Basic Painting I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "31A",
-                "title": "Painting I",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "31C",
-                "title": "Painting III",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "31B",
-                "title": "Painting II",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "30A",
+                        "title": "Basic Painting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "31A",
+                        "title": "Painting I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "31C",
+                        "title": "Painting III",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "31B",
+                        "title": "Painting II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "40",
-                "title": "Basic Sculpture",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "34B",
-                "title": "Sculpture: Direct Processes II",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "34A",
-                "title": "Sculpture: Direct Processes I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "40",
+                        "title": "Basic Sculpture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "34B",
+                        "title": "Sculpture: Direct Processes II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "34A",
+                        "title": "Sculpture: Direct Processes I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "51",
-                "title": "Basic Ceramic Sculpture",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "72A",
-                "title": "Ceramics Process I",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "6A",
-                "title": "Ceramics Hand Building I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "51",
+                        "title": "Basic Ceramic Sculpture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "72A",
+                        "title": "Ceramics Process I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "6A",
+                        "title": "Ceramics Hand Building I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "65A",
-                "title": "Foundations in Media Design",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "DM",
-                "number": "1",
-                "title": "Introduction to Digital Media",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "65A",
+                        "title": "Foundations in Media Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "DM",
+                        "number": "1",
+                        "title": "Introduction to Digital Media",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "71A",
-                "title": "Introduction to Photography I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AP",
-                "number": "9A",
-                "title": "Black and White Photography I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "71A",
+                        "title": "Introduction to Photography I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AP",
+                        "number": "9A",
+                        "title": "Black and White Photography I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "71B",
-                "title": "Introduction to Photography II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AP",
-                "number": "6",
-                "title": "Introduction to Digital Photography",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "71B",
+                        "title": "Introduction to Photography II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AP",
+                        "number": "6",
+                        "title": "Introduction to Digital Photography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART HIS",
-                "number": "42C",
-                "title": "History of Asian Art: Arts of Japan",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AH",
-                "number": "17",
-                "title": "Art of China, Korea, and Japan",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "42C",
+                        "title": "History of Asian Art: Arts of Japan",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AH",
+                        "number": "17",
+                        "title": "Art of China, Korea, and Japan",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART HIS",
-                "number": "40A",
-                "title": "Ancient Egyptian, Greek, and Roman Art and Architecture",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AH",
-                "number": "20A",
-                "title": "Survey of Art from Prehistoric Through Medieval Periods",
-                "units": 3.0
-              },
-              {
-                "prefix": "AH",
-                "number": "11",
-                "title": "Ancient Art",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "40A",
+                        "title": "Ancient Egyptian, Greek, and Roman Art and Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AH",
+                        "number": "20A",
+                        "title": "Survey of Art from Prehistoric Through Medieval Periods",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AH",
+                        "number": "11",
+                        "title": "Ancient Art",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART HIS",
-                "number": "42B",
-                "title": "History of Asian Art: Arts of China",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AH",
-                "number": "17",
-                "title": "Art of China, Korea, and Japan",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "42B",
+                        "title": "History of Asian Art: Arts of China",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AH",
+                        "number": "17",
+                        "title": "Art of China, Korea, and Japan",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART HIS",
-                "number": "42A",
-                "title": "History of Asian Art: Arts of India",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AH",
-                "number": "17",
-                "title": "Art of China, Korea, and Japan",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "42A",
+                        "title": "History of Asian Art: Arts of India",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AH",
+                        "number": "17",
+                        "title": "Art of China, Korea, and Japan",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART HIS",
-                "number": "40B",
-                "title": "Arts of Europe: Medieval and Renaissance",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AH",
-                "number": "20B",
-                "title": "Survey of Art from the Renaissance to the Present",
-                "units": 3.0
-              },
-              {
-                "prefix": "AH",
-                "number": "20A",
-                "title": "Survey of Art from Prehistoric Through Medieval Periods",
-                "units": 3.0
-              },
-              {
-                "prefix": "AH",
-                "number": "12",
-                "title": "Middle Ages: Art/Mediterranean World and Europe (AD 300-1400)",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "40B",
+                        "title": "Arts of Europe: Medieval and Renaissance",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AH",
+                        "number": "20B",
+                        "title": "Survey of Art from the Renaissance to the Present",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AH",
+                        "number": "20A",
+                        "title": "Survey of Art from Prehistoric Through Medieval Periods",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AH",
+                        "number": "12",
+                        "title": "Middle Ages: Art/Mediterranean World and Europe (AD 300-1400)",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART HIS",
-                "number": "40C",
-                "title": "Early Modern and Modern Art in Europe and America",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "AH",
-                "number": "20B",
-                "title": "Survey of Art from the Renaissance to the Present",
-                "units": 3.0
-              },
-              {
-                "prefix": "AH",
-                "number": "13",
-                "title": "Renaissance to 19th Century",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-13",
+          "group_number": 13,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "40C",
+                        "title": "Early Modern and Modern Art in Europe and America",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AH",
+                        "number": "20B",
+                        "title": "Survey of Art from the Renaissance to the Present",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AH",
+                        "number": "13",
+                        "title": "Renaissance to 19th Century",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "The Department of Art in the Claire Trevor School of the Arts takes a wide-ranging, interdisciplinary view of contemporary art practice. With an emphasis on experimentation and innovation, the Department of Art is viewed as a leader in genres addressing cultural identity and emerging technologies. The Department provides students a solid theoretical and technical foundation from which to approach art making as both process and product. Each student is encouraged to develop an individual, disciplined direction approach to media, materials, and techniques. The curriculum provides studio experiences in drawing, painting, sculpture, photography, digital imaging, video, performance art, and new media. Visiting artists, theorists, curators, and other arts professionals are an integral part of the program. Required for admission: Students must have a cumulative UC transferable GPA of 2.7 and submit a portfolio This major does not participate in the TAG program or Honors to Honors partnership Special Advising Note: Transfers students are strongly encouraged to complete as many preparatory courses as possible for their major before enrolling at UCI to streamline their path to graduation. ﻿For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue"
+    "The Department of Art in the Claire Trevor School of the Arts takes a wide-ranging, interdisciplinary view of contemporary art practice. With an emphasis on experimentation and innovation, the Department of Art is viewed as a leader in genres addressing cultural identity and emerging technologies. The Department provides students a solid theoretical and technical foundation from which to approach art making as both process and product. Each student is encouraged to develop an individual, disciplined direction approach to media, materials, and techniques. The curriculum provides studio experiences in drawing, painting, sculpture, photography, digital imaging, video, performance art, and new media. Visiting artists, theorists, curators, and other arts professionals are an integral part of the program. Required for admission: Students must have a cumulative UC transferable GPA of 2.7 and submit a portfolio This major does not participate in the TAG program or Honors to Honors partnership Special Advising Note: Transfers students are strongly encouraged to complete as many preparatory courses as possible for their major before enrolling at UCI to streamline their path to graduation. \ufeffFor information regarding the AP and IB examination credit policies refer to the UCI General Catalogue"
   ]
 }

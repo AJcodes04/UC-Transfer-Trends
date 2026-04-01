@@ -8,352 +8,549 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AHI",
-                "number": "001D",
-                "title": "Arts of Asia",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "108",
-                "title": "History of Asian Art",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001D",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "108",
+                        "title": "History of Asian Art",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AHI",
-                "number": "005",
-                "title": "Understanding Visual Culture",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "101",
-                "title": "Visual Literacy",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "005",
+                        "title": "Understanding Visual Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "101",
+                        "title": "Visual Literacy",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "005",
-                "title": "Beginning Sculpture",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "170",
-                "title": "Introduction to Sculpture",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "005",
+                        "title": "Beginning Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "170",
+                        "title": "Introduction to Sculpture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "007",
-                "title": "Beginning Painting",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "130",
-                "title": "Integrated Drawing and Painting",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "007",
+                        "title": "Beginning Painting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "130",
+                        "title": "Integrated Drawing and Painting",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "002",
-                "title": "Beginning Drawing",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "120",
-                "title": "Fundamentals of Drawing",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "121",
-                "title": "Intermediate Drawing",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "002",
+                        "title": "Beginning Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "120",
+                        "title": "Fundamentals of Drawing",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "121",
+                        "title": "Intermediate Drawing",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "008",
-                "title": "Beginning Ceramic Sculpture",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "008",
+                        "title": "Beginning Ceramic Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AHI",
-                "number": "001A",
-                "title": "Ancient Mediterranean Art",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "103H",
-                "title": "History of Art, Prehistoric to Gothic, Honors",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "103",
-                "title": "History of Art, Prehistoric to Gothic",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001A",
+                        "title": "Ancient Mediterranean Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "103H",
+                        "title": "History of Art, Prehistoric to Gothic, Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "103",
+                        "title": "History of Art, Prehistoric to Gothic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AHI",
-                "number": "001C",
-                "title": "Baroque to Modern Art",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "104",
-                "title": "History of Art, Renaissance to Modern",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "104H",
-                "title": "History of Art, Renaissance to Modern, Honors",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001C",
+                        "title": "Baroque to Modern Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "104",
+                        "title": "History of Art, Renaissance to Modern",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "104H",
+                        "title": "History of Art, Renaissance to Modern, Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AHI",
-                "number": "001D",
-                "title": "Arts of Asia",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "108",
-                "title": "History of Asian Art",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001D",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "108",
+                        "title": "History of Asian Art",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "AHI",
-                "number": "005",
-                "title": "Understanding Visual Culture",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "101",
-                "title": "Visual Literacy",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "005",
+                        "title": "Understanding Visual Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "101",
+                        "title": "Visual Literacy",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "002",
-                "title": "Beginning Drawing",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "120",
-                "title": "Fundamentals of Drawing",
-                "units": 3.0
-              },
-              {
-                "prefix": "ART",
-                "number": "121",
-                "title": "Intermediate Drawing",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "002",
+                        "title": "Beginning Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "120",
+                        "title": "Fundamentals of Drawing",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "121",
+                        "title": "Intermediate Drawing",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "005",
-                "title": "Beginning Sculpture",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "170",
-                "title": "Introduction to Sculpture",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "005",
+                        "title": "Beginning Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "170",
+                        "title": "Introduction to Sculpture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "007",
-                "title": "Beginning Painting",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "130",
-                "title": "Integrated Drawing and Painting",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-13",
+          "group_number": 13,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "007",
+                        "title": "Beginning Painting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "130",
+                        "title": "Integrated Drawing and Painting",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ART",
-                "number": "008",
-                "title": "Beginning Ceramic Sculpture",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-14",
+          "group_number": 14,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "008",
+                        "title": "Beginning Ceramic Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -364,6 +561,6 @@
     "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
     "A major in Art History develops critical thinking and the integration of research, interpretation and understanding. It provides an excellent liberal arts basis for professions as far ranging as advertising, law, medicine, politics and business. The major prepares students for advanced study in Art History, Architecture, Museum Studies and Cultural Studies. It also serves as the foundation for careers in teaching, arts, administration, museums, galleries, historic preservation, art libraries, publishing, journalism, advertising, art conservation, and art investment. As the world becomes increasingly flooded with images, the critical visual literacy gained through the study of art history becomes more important for a wide variety of careers.",
     "Please refer to the Transfer Admissions Requirements for information on admissions to this major.",
-    "Art History studies the changing visual expression of values, beliefs and experiences across diverse cultures and over time. It provides training in historical, social and aesthetic understanding, critical thinking, scholarly research, and lucid, thoughtful analysis and writing. More than any other discipline art history sharpens its students’ visual acuity and deepens their visual literacy. In so doing, it prepares them to face the increasingly complex visual world we find ourselves in today. The major begins with a series of courses that surveys major landmarks in the history of visual culture, art and architecture in Asia, Europe, and the United States. More advanced lecture courses and seminars focus on particularly important periods and issues. Students are encouraged to personalize their training with internships, independent study, and focused upper division study. Top students considering graduate study are encouraged to engage in more advance study by pursuing a senior honors thesis."
+    "Art History studies the changing visual expression of values, beliefs and experiences across diverse cultures and over time. It provides training in historical, social and aesthetic understanding, critical thinking, scholarly research, and lucid, thoughtful analysis and writing. More than any other discipline art history sharpens its students\u2019 visual acuity and deepens their visual literacy. In so doing, it prepares them to face the increasingly complex visual world we find ourselves in today. The major begins with a series of courses that surveys major landmarks in the history of visual culture, art and architecture in Asia, Europe, and the United States. More advanced lecture courses and seminars focus on particularly important periods and issues. Students are encouraged to personalize their training with internships, independent study, and focused upper division study. Top students considering graduate study are encouraged to engage in more advance study by pursuing a senior honors thesis."
   ]
 }

@@ -8,148 +8,233 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COMPSCI",
-                "number": "70",
-                "title": "Discrete Mathematics and Probability Theory",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "70",
+                        "title": "Discrete Mathematics and Probability Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "DATA",
-                "number": "C88C",
-                "title": "Computational Structures in Data Science",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "DATA",
+                        "number": "C88C",
+                        "title": "Computational Structures in Data Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "STAT",
-                "number": "2",
-                "title": "Introduction to Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B22L",
-                "title": "Elementary Probability and Statistics with Lab",
-                "units": 4.5
-              },
-              {
-                "prefix": "MATH",
-                "number": "B22",
-                "title": "Elementary Probability and Statistics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "2",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B22L",
+                        "title": "Elementary Probability and Statistics with Lab",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "B22",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "16A",
-                "title": "Analytic Geometry and Calculus",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6A",
-                "title": "Analytic Geometry/Calculus I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6A",
+                        "title": "Analytic Geometry/Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1A",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6A",
-                "title": "Analytic Geometry/Calculus I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6A",
+                        "title": "Analytic Geometry/Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHILOS",
-                "number": "25A",
-                "title": "Ancient Philosophy",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHIL",
-                "number": "B18",
-                "title": "History of Ancient Philosophy",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHILOS",
+                        "number": "25A",
+                        "title": "Ancient Philosophy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "B18",
+                        "title": "History of Ancient Philosophy",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu",
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): \u00b7 Two transferable courses in English composition; \u00b7 One transferable course in mathematical concepts and quantitative reasoning; \u00b7 Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu",
     "Fall 2024 Admission For this Major: Transfer students who select this major on their College of Letters and Science (L&S) application and are offered admission to L&S will be directly admitted into this major. If you are interested in this major, it is very important to select this major on your application, and complete as many lower-division major requirements as possible prior to transfer. See details on preparation for this major below. Major Prerequisites : Students must complete three prerequisite courses: 1. Calculus: can be completed with Math 1A, Math 10A, or Math 16A, OR a 3 or above on the AP Calculus AB or the AP Calculus BC Exam. 2. Statistical Thinking: Can be completed with Stat 2, Stat 20, OR Compsci/Info/Stat/Data C8, OR a 3 or above on the AP Stats exam. 3. Computer Programming: Can be completed with ENG 7, DATA C88C, or COMPSCI 61A. A score of 3 or above on the AP Calculus AB or the AP Calculus BC exam satisfies the requirement for MATH 1A or MATH 16A for Cognitive Science. A 3 or above on the AP Stats test can fulfill the requirement labeled \"Statistical Thinking\" above. A \"C\" or better is required in MATH 1A, MATH 10A, MATH 16A, COMPSCI 61A, ENGIN 7, DATA C88C/COMPSCI C88C, COMPSCI/INFO/STAT C8, STAT 2, STAT 20. Major Requirements: Psych C61 OR Psych C64 fulfills the lower division Neuroscience requirement for the Cognitive Science Major. In lieu of MATH 55, this requirement can be satisfied by completing COMPSCI 70 Discrete Mathematics and Probability Theory at Berkeley. Students have the option to fulfill the Philosophy requirement by taking one of the listed lower division classes (PHIL 3, 12A, 25A, 25B or AGRS 36). For more information: MacKenzie Moore Cognitive Science 140 Stephens Hall mackenziemoore@berkeley.edu cogsci.berkeley.edu"
   ]
 }

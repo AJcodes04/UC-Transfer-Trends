@@ -8,418 +8,643 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "6A",
-                "title": "General Chemistry I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "B1A",
-                "title": "General Chemistry I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6A",
+                        "title": "General Chemistry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "B1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "6B",
-                "title": "General Chemistry II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHEM",
-                "number": "B1A",
-                "title": "General Chemistry I",
-                "units": 5.0
-              },
-              {
-                "prefix": "CHEM",
-                "number": "B1B",
-                "title": "General Chemistry and Chemical Analysis",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6B",
+                        "title": "General Chemistry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "B1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "B1B",
+                        "title": "General Chemistry and Chemical Analysis",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "1",
-                "title": "The Cell",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "B3A",
-                "title": "General Biology I",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "B3B",
-                "title": "General Biology II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "1",
+                        "title": "The Cell",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "B3A",
+                        "title": "General Biology I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "B3B",
+                        "title": "General Biology II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "4",
-                "title": "Introductory Biology Lab",
-                "units": 2.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "B3A",
-                "title": "General Biology I",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "B3B",
-                "title": "General Biology II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "4",
+                        "title": "Introductory Biology Lab",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "B3A",
+                        "title": "General Biology I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "B3B",
+                        "title": "General Biology II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BILD",
-                "number": "3",
-                "title": "Organismic and Evolutionary Biology",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "B3B",
-                "title": "General Biology II",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "B3A",
-                "title": "General Biology I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "3",
+                        "title": "Organismic and Evolutionary Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "B3B",
+                        "title": "General Biology II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "B3A",
+                        "title": "General Biology I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "BENG",
-                "number": "1",
-                "title": "Introduction to Bioengineering",
-                "units": 2.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BENG",
+                        "number": "1",
+                        "title": "Introduction to Bioengineering",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CSE",
-                "number": "8A",
-                "title": "Introduction to Programming and Computational Problem Solving I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "COMP",
-                "number": "B11",
-                "title": "Programming Concepts and Methodology I",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "8A",
+                        "title": "Introduction to Programming and Computational Problem Solving I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMP",
+                        "number": "B11",
+                        "title": "Programming Concepts and Methodology I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "18",
-                "title": "Linear Algebra",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6E",
-                "title": "Elementary Linear Algebra",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6E",
+                        "title": "Elementary Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20A",
-                "title": "Calculus for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6A",
-                "title": "Analytic Geometry/Calculus I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6A",
+                        "title": "Analytic Geometry/Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20B",
-                "title": "Calculus for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6B",
-                "title": "Analytic Geometry/Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6B",
+                        "title": "Analytic Geometry/Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20C",
-                "title": "Calculus and Analytic Geometry for Science and Engineering",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6C",
-                "title": "Calculus III",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20C",
+                        "title": "Calculus and Analytic Geometry for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6C",
+                        "title": "Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20D",
-                "title": "Introduction to Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "B6D",
-                "title": "Ordinary Differential Equations",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20D",
+                        "title": "Introduction to Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6D",
+                        "title": "Ordinary Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "20E",
-                "title": "Vector Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-13",
+          "group_number": 13,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20E",
+                        "title": "Vector Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "2A",
-                "title": "Physics - Mechanics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "B4A",
-                "title": "Mechanics and Wave Motion",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-14",
+          "group_number": 14,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2A",
+                        "title": "Physics - Mechanics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "B4A",
+                        "title": "Mechanics and Wave Motion",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "2B",
-                "title": "Physics - Electricity and Magnetism",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "B4B",
-                "title": "Heat, Electricity and Magnetism",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-15",
+          "group_number": 15,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2B",
+                        "title": "Physics - Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "B4B",
+                        "title": "Heat, Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "2C",
-                "title": "Physics - Fluids, Waves, Thermodynamics, and Optics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "B4B",
-                "title": "Heat, Electricity and Magnetism",
-                "units": 4.0
-              },
-              {
-                "prefix": "PHYS",
-                "number": "B4C",
-                "title": "Optics and Modern Physics",
-                "units": 4.0
-              },
-              {
-                "prefix": "PHYS",
-                "number": "B4A",
-                "title": "Mechanics and Wave Motion",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-16",
+          "group_number": 16,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2C",
+                        "title": "Physics - Fluids, Waves, Thermodynamics, and Optics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "B4B",
+                        "title": "Heat, Electricity and Magnetism",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "B4C",
+                        "title": "Optics and Modern Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "B4A",
+                        "title": "Mechanics and Wave Motion",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
     "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
-    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2017, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep General Advice: Transfer students must have completed the following courses in order to be considered for admission to the Bioengineering: Bioinformatics major at UC San Diego. Calculus I-for Science and Engineering (Math. 20A) Calculus II-for Science and Engineering (Math. 20B) Calculus and Analytic Geometry (Math. 20C) Differential Equations (Math. 20D) Calculus-based physics series (Physics 2Aand 2B) Chemistry 6A and 6B Note: An equivalent to UCSD's Chem 7L laboratory course is strongly recommended for students applying to all majors offered by the Department of Bioengineering although it is not considered for screening purposes. Admission Requirements: Prospective transfer students are able to apply for \"direct admission\" into the Bioengineering: Bioinformatics major by indicating their choice on the Undergraduate Admissions Application. Effective Fall 2015, the only way to become a Bioengineering: Bioinformatics major is to be directly admitted from community college as an entering transfer student. Although the actual GPA cutoff depends on the number of openings, at least a 3.2 GPA in the community college transfer courses and a 3.4 GPA in the above screening courses are needed to gain admission. Prospective transfer students who have taken equivalent courses elsewhere (at institutions not appearing on ASSIST), may request to have transfer credit applied toward the department's major requirements by submitting an \"Undergraduate Student Petition\" together with a transcript and catalog course description from the institution where the course(s) were taken. These documents are reviewed for approval by the relevant UCSD department and the Bioengineering Undergraduate Studies Committee. \"Undergraduate Student Petitions\" are available online at http://students.ucsd.edu/my-tritonlink/forms/index.html and in the Student Affairs Office. This degree is accredited by the Accreditation Board for Engineering and Technology (ABET). Recommended Preparation Courses: In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible: ● BILD 1 The Cell ● BILD 3 Organismic and Evolutionary Biology ● BILD 4 Introductory Biology Lab ● CSE 11 Introduction to Programming and Computational Problem-Solving: Accelerated Pace ● CSE 12 Basic Data Structures and Object-Oriented Design ● MATH 18 Linear Algebra ● MATH 20E Vector Calculus Entering credit for the recommended preparation courses will affect enrollment in the following courses: ● BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year – or in Summer Session if offered. ● CSE 21 Mathematics for Algorithms and Systems. Transfer students are recommended to take this course in Fall Quarter of Junior Year, as it is a prerequisite for CSE 100. ● CSE 100 Advanced Data Structures. Transfer students are recommended to take this course in Winter Quarter of Junior Year. Prerequisites include CSE 12 and CSE 21 ● CSE 185 Advanced Bioinformatics Laboratory. Transfer students are recommended to take this course in Spring Quarter of Junior Year. Prerequisites include CSE 11, CSE 12, and BILD 1 and BILD 4. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the BS Bioengineering:Bioinformatics curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioinfo For additional information, please see the Bioengineering Department's Undergraduate Program website at http://be.ucsd.edu/undergrad"
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2017, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep General Advice: Transfer students must have completed the following courses in order to be considered for admission to the Bioengineering: Bioinformatics major at UC San Diego. Calculus I-for Science and Engineering (Math. 20A) Calculus II-for Science and Engineering (Math. 20B) Calculus and Analytic Geometry (Math. 20C) Differential Equations (Math. 20D) Calculus-based physics series (Physics 2Aand 2B) Chemistry 6A and 6B Note: An equivalent to UCSD's Chem 7L laboratory course is strongly recommended for students applying to all majors offered by the Department of Bioengineering although it is not considered for screening purposes. Admission Requirements: Prospective transfer students are able to apply for \"direct admission\" into the Bioengineering: Bioinformatics major by indicating their choice on the Undergraduate Admissions Application. Effective Fall 2015, the only way to become a Bioengineering: Bioinformatics major is to be directly admitted from community college as an entering transfer student. Although the actual GPA cutoff depends on the number of openings, at least a 3.2 GPA in the community college transfer courses and a 3.4 GPA in the above screening courses are needed to gain admission. Prospective transfer students who have taken equivalent courses elsewhere (at institutions not appearing on ASSIST), may request to have transfer credit applied toward the department's major requirements by submitting an \"Undergraduate Student Petition\" together with a transcript and catalog course description from the institution where the course(s) were taken. These documents are reviewed for approval by the relevant UCSD department and the Bioengineering Undergraduate Studies Committee. \"Undergraduate Student Petitions\" are available online at http://students.ucsd.edu/my-tritonlink/forms/index.html and in the Student Affairs Office. This degree is accredited by the Accreditation Board for Engineering and Technology (ABET). Recommended Preparation Courses: In addition to the screening courses, transfer students are advised to take equivalents for as many of the following recommended preparation courses as possible: \u25cf BILD 1 The Cell \u25cf BILD 3 Organismic and Evolutionary Biology \u25cf BILD 4 Introductory Biology Lab \u25cf CSE 11 Introduction to Programming and Computational Problem-Solving: Accelerated Pace \u25cf CSE 12 Basic Data Structures and Object-Oriented Design \u25cf MATH 18 Linear Algebra \u25cf MATH 20E Vector Calculus Entering credit for the recommended preparation courses will affect enrollment in the following courses: \u25cf BENG 100 Introduction to Probability and Statistics. Prerequisites include Math 18. Transfer students are recommended to take this course in Fall Quarter of Junior Year \u2013 or in Summer Session if offered. \u25cf CSE 21 Mathematics for Algorithms and Systems. Transfer students are recommended to take this course in Fall Quarter of Junior Year, as it is a prerequisite for CSE 100. \u25cf CSE 100 Advanced Data Structures. Transfer students are recommended to take this course in Winter Quarter of Junior Year. Prerequisites include CSE 12 and CSE 21 \u25cf CSE 185 Advanced Bioinformatics Laboratory. Transfer students are recommended to take this course in Spring Quarter of Junior Year. Prerequisites include CSE 11, CSE 12, and BILD 1 and BILD 4. Please note that time to degree is affected by credit for lower division STEM courses. Please consult the BS Bioengineering:Bioinformatics curriculum and flowchart at https://bioengineering.ucsd.edu/undergrad/programs/bioinfo For additional information, please see the Bioengineering Department's Undergraduate Program website at http://be.ucsd.edu/undergrad"
   ]
 }

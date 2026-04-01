@@ -8,252 +8,365 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "UGBA",
-                "number": "10X",
-                "title": "Foundations of Business",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BUS",
-                "number": "300",
-                "title": "Introduction to Business",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UGBA",
+                        "number": "10X",
+                        "title": "Foundations of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "300",
+                        "title": "Introduction to Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "1",
-                "title": "Introduction to Economics",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ECON",
-                "number": "304",
-                "title": "Principles of Microeconomics",
-                "units": 3.0
-              },
-              {
-                "prefix": "ECON",
-                "number": "302",
-                "title": "Principles of Macroeconomics",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "304",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "302",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1B",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "420",
-                "title": "Differential Equations",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "401",
-                "title": "Calculus II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "420",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "401",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "16A",
-                "title": "Analytic Geometry and Calculus",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "400",
-                "title": "Calculus I",
-                "units": 5.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "355",
-                "title": "Calculus for Biology and Medicine I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "400",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "355",
+                        "title": "Calculus for Biology and Medicine I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "16B",
-                "title": "Analytic Geometry and Calculus",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "356",
-                "title": "Calculus for Biology and Medicine II",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "401",
-                "title": "Calculus II",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "356",
+                        "title": "Calculus for Biology and Medicine II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "401",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1A",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "400",
-                "title": "Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "400",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGLISH",
-                "number": "R1A",
-                "title": "Reading and Composition",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENGWR",
-                "number": "300",
-                "title": "College Composition",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "480",
-                "title": "Honors College Composition",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGWR",
+                        "number": "300",
+                        "title": "College Composition",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "480",
+                        "title": "Honors College Composition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ENGLISH",
-                "number": "R1B",
-                "title": "Reading and Composition",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ENGWR",
-                "number": "481",
-                "title": "Honors College Composition and Literature",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "302",
-                "title": "Advanced Composition and Critical Thinking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "303",
-                "title": "Argumentative Writing and Critical Thinking Through Literature",
-                "units": 4.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "482",
-                "title": "Honors Advanced Composition and Critical Thinking",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENGWR",
-                "number": "301",
-                "title": "College Composition and Literature",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGWR",
+                        "number": "481",
+                        "title": "Honors College Composition and Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "302",
+                        "title": "Advanced Composition and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "303",
+                        "title": "Argumentative Writing and Critical Thinking Through Literature",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "482",
+                        "title": "Honors Advanced Composition and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGWR",
+                        "number": "301",
+                        "title": "College Composition and Literature",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -262,7 +375,7 @@
     "PRE-ADMISSION ADVISING For information on how to speak to a Haas advisor, please see: https://haas.berkeley.edu/undergrad/admissions/events-and-advising . ENVISION HAAS TRANSFER OUTREACH PROGRAM Envision Haas is an admissions outreach program aiming to provide admissions information to California Community College transfer applicants. Each Envision Haas session includes an admissions info session and transfer student panel. We encourage transfer students to attend a virtual Envision Haas session for more information about Haas and to get any questions answered. Please visit our website for dates and registration information: https://haas.berkeley.edu/undergrad/admissions/events-and-advising",
     "To be considered for admission all prerequisites must be completed by the end of the Spring term prior to starting the Spieker Undergraduate Business Program at Berkeley Haas. Although you are not required to complete prerequisites at the time of application, the admission committee prefers to see as many prerequisites as possible completed by the end of the Fall term prior to starting at Berkeley Haas.",
     "Admission to the Spieker Undergraduate Business Program at UC Berkeley's Haas School of Business is highly competitive. 1) Complete all prerequisite courses (see below) with a letter grade of C- or higher no more than 5 years before starting the business major. Because the admissions process is highly competitive, strong candidates for the business major will earn significantly higher grades than this minimum standard. If you plan to begin Haas in Fall 2025, prerequisites taken before Fall 2020 must be repeated. 2) Complete at least 60 UC-transferable semester units (90 quarter units) by the end of the Spring term prior to your anticipated start at Berkeley Haas. A Summer 2025 course is not considered \"work in progress\" for the Fall 2025 selection process. Haas does not accept the Intersegmental General Education Transfer Curriculum (IGETC) or the California General Education Transfer Curriculum (Cal-GETC). Students should also visit https://haas.berkeley.edu/undergrad/admissions/application-process/transfer-students/ for additional information regarding the admissions process, selection criteria, use of exam credit (AP, IB and GCE A Level), and class profile .",
-    "Step 1: Submit the online UC Application: http://www.universityofcalifornia.edu/apply The online application is available August 1st. The deadline for filing is December 2. To be considered for admission to the business major, you must select the business major as your primary major. Step 2: Submit the required Haas Supplemental Application by January 31st. The application will be available on the MAP@Berkeley website in early January. The Supplemental Application includes the Haas Self Reported Academic Record, an additional essay, activities & awards update, and video interview. Information submitted in the self-reported academic record will be reviewed to confirm eligibility for the major. Students who fail to submit the Haas Supplemental Application or show planned satisfaction of all requirements will be considered ineligible for admission. Visit our Admissions page to learn about what we look for in applicants. Final admission decisions will be available by May 1. HAAS 7-COURSE BREADTH REQUIREMENT - NOT REQUIRED FOR ADMISSION Units earned for prerequisites may not equal the 60 semester (90 quarter) unit minimum required to transfer. If you need to take additional courses to meet the unit requirement, consider taking breadth courses. Breadth is a degree requirement and breadth coursework is not required for admission. Visit our website for additional information about breadth requirements. Haas uses the College of Letters and Science (L&S) Breadth list with exceptions: Business courses cannot be used for breadth. Haas prerequisites cannot be used for breadth. Microeconomics or macroeconomics cannot be used for breadth. To access the breadth list, go to the home page of ASSIST.org . Select a community college from the drop down menu. After selecting a community college, select University of California, Berkeley from the Agreements with Other Institutions drop down menu. (You could have chosen the university campus first and the community college second.) Click on View Agreements. Next, under View Agreements by, select: General Education/Breadth. The agreement will display all general education and breadth requirements for the College of Letters & Science. Please ignore quantitative reasoning and foreign language as these requirements do not apply to Haas applicants. The Seven-Course Breadth list is displayed midway through the document. If there are UC transferable courses offered at your school that are not included on the breadth list, please contact your school's Articulation Officer. The Articulation Officer should submit the course(s) to UC Berkeley’s Articulation Officer for review. If approved, the course(s) will be added to the articulation agreement. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "Step 1: Submit the online UC Application: http://www.universityofcalifornia.edu/apply The online application is available August 1st. The deadline for filing is December 2. To be considered for admission to the business major, you must select the business major as your primary major. Step 2: Submit the required Haas Supplemental Application by January 31st. The application will be available on the MAP@Berkeley website in early January. The Supplemental Application includes the Haas Self Reported Academic Record, an additional essay, activities & awards update, and video interview. Information submitted in the self-reported academic record will be reviewed to confirm eligibility for the major. Students who fail to submit the Haas Supplemental Application or show planned satisfaction of all requirements will be considered ineligible for admission. Visit our Admissions page to learn about what we look for in applicants. Final admission decisions will be available by May 1. HAAS 7-COURSE BREADTH REQUIREMENT - NOT REQUIRED FOR ADMISSION Units earned for prerequisites may not equal the 60 semester (90 quarter) unit minimum required to transfer. If you need to take additional courses to meet the unit requirement, consider taking breadth courses. Breadth is a degree requirement and breadth coursework is not required for admission. Visit our website for additional information about breadth requirements. Haas uses the College of Letters and Science (L&S) Breadth list with exceptions: Business courses cannot be used for breadth. Haas prerequisites cannot be used for breadth. Microeconomics or macroeconomics cannot be used for breadth. To access the breadth list, go to the home page of ASSIST.org . Select a community college from the drop down menu. After selecting a community college, select University of California, Berkeley from the Agreements with Other Institutions drop down menu. (You could have chosen the university campus first and the community college second.) Click on View Agreements. Next, under View Agreements by, select: General Education/Breadth. The agreement will display all general education and breadth requirements for the College of Letters & Science. Please ignore quantitative reasoning and foreign language as these requirements do not apply to Haas applicants. The Seven-Course Breadth list is displayed midway through the document. If there are UC transferable courses offered at your school that are not included on the breadth list, please contact your school's Articulation Officer. The Articulation Officer should submit the course(s) to UC Berkeley\u2019s Articulation Officer for review. If approved, the course(s) will be added to the articulation agreement. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
     "Your academic path at Berkeley Haas will give you the knowledge and understanding of the business landscape and the tools to succeed within it. With our highly customizable degree program (B.S. Business Administration), you will be able to make your experience relevant to your interests and goals. Regardless of the career that you choose for yourself, you will learn the skills necessary to work as part of a team, solve problems, and make an impact. For more information about the business major: https://haas.berkeley.edu/undergrad/"
   ]
 }

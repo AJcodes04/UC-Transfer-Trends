@@ -8,186 +8,285 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31A",
-                "title": "Differential and Integral Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "30",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "30",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31B",
-                "title": "Integration and Infinite Series",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "32A",
-                "title": "Calculus of Several Variables",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "32",
-                "title": "Analytic Geometry and Calculus III",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "32A",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "32",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LIFESCI",
-                "number": "7A",
-                "title": "Cell and Molecular Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "41",
-                "title": "Cell and Molecular Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "41",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LIFESCI",
-                "number": "7B",
-                "title": "Genetics, Evolution, and Ecology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "43",
-                "title": "Ecology and Evolution",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7B",
+                        "title": "Genetics, Evolution, and Ecology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "43",
+                        "title": "Ecology and Evolution",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LIFESCI",
-                "number": "7C",
-                "title": "Physiology and Human Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "41",
-                "title": "Cell and Molecular Biology",
-                "units": 5.0
-              },
-              {
-                "prefix": "BIOL",
-                "number": "42",
-                "title": "Organismal Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7C",
+                        "title": "Physiology and Human Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "41",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "42",
+                        "title": "Organismal Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LIFESCI",
-                "number": "7L",
-                "title": "Introduction to Laboratory and Scientific Methodology",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "BIOL",
-                "number": "41",
-                "title": "Cell and Molecular Biology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7L",
+                        "title": "Introduction to Laboratory and Scientific Methodology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "41",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
     "UCLA's life science majors require the completion of extensive preparatory coursework prior to transfer, therefore, you must be admitted directly into a life science major; you will not be able to change from a non-life science major into a life science major. Students who have placed out of UCLA's Math 31A course based on AP/IB credit may be required to complete UCLA's Math 3C, 32A, or an equivalent course after transfer. The community college statistics course included on this agreement has been approved as a substitute for Statistics 13, however it may not transfer as an exact UCLA equivalent. Students who take Life Sciences 30A & 30B must complete Life Sciences 40 or Statistics 13. UCLA's Chem 153A and 153L are upper division major courses that are recommended, but NOT required for admission into the pre-major. Transfer credit for these courses will be awarded via petition by the major department post transfer.",
-    "The Microbiology, Immunology, and Molecular Genetics (MIMG) major will provide you with the skills needed to tackle an array of societal problems, from human disease to global warming. The microorganisms that form the core of this curriculum, bacteria, eukaryotic parasites, and viruses, are agents of disease, but they also are critical to our health, food system, biotechnology (e.g. biofuels), and the environment. Our immune system controls health and disease, by detection and destruction of microorganisms and cancer cells, and is also a core of the curriculum. To this, our research and curriculum seeks a detailed molecular genetic understanding of both microorganisms and the immune system to address the most pressing questions in the field. In addition to key core courses, the MIMG major emphasizes learning through an authentic research experience. All our students carry out primary research, either by working in a faculty member’s laboratory, or through collaborative research projects in laboratory courses. Through this research experience, we will help you develop skills needed in your future careers, including the ability to present your research in both written and oral forms. Listed below are the lower division preparation courses for the major as well as important details to review. THIS MAJOR IS HIGHLY SELECTIVE. To be considered for this major, you must complete the following courses by the end of spring before transfer: One year of Biology for major with Laboratory, One year of General Chemistry with Laboratory, One year of Calculus, and One semester of Organic Chemistry with Lab. Completion of a second semester of Organic Chemistry or one year of Calculus Based Physics is STRONGLY RECOMMENDED . (If your college does not offer a two semester or a three quarter sequence in calculus based physics, it is recommended that you complete Physics 5ABC at UCLA after transfer). All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https://mimg.ucla.edu and https:// admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation requirements for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed."
+    "The Microbiology, Immunology, and Molecular Genetics (MIMG) major will provide you with the skills needed to tackle an array of societal problems, from human disease to global warming. The microorganisms that form the core of this curriculum, bacteria, eukaryotic parasites, and viruses, are agents of disease, but they also are critical to our health, food system, biotechnology (e.g. biofuels), and the environment. Our immune system controls health and disease, by detection and destruction of microorganisms and cancer cells, and is also a core of the curriculum. To this, our research and curriculum seeks a detailed molecular genetic understanding of both microorganisms and the immune system to address the most pressing questions in the field. In addition to key core courses, the MIMG major emphasizes learning through an authentic research experience. All our students carry out primary research, either by working in a faculty member\u2019s laboratory, or through collaborative research projects in laboratory courses. Through this research experience, we will help you develop skills needed in your future careers, including the ability to present your research in both written and oral forms. Listed below are the lower division preparation courses for the major as well as important details to review. THIS MAJOR IS HIGHLY SELECTIVE. To be considered for this major, you must complete the following courses by the end of spring before transfer: One year of Biology for major with Laboratory, One year of General Chemistry with Laboratory, One year of Calculus, and One semester of Organic Chemistry with Lab. Completion of a second semester of Organic Chemistry or one year of Calculus Based Physics is STRONGLY RECOMMENDED . (If your college does not offer a two semester or a three quarter sequence in calculus based physics, it is recommended that you complete Physics 5ABC at UCLA after transfer). All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https://mimg.ucla.edu and https:// admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation requirements for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed."
   ]
 }

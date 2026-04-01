@@ -8,120 +8,177 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "EART",
-                "number": "10",
-                "title": "Geologic Principles",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ERTH",
-                "number": "111",
-                "title": "Dynamic Earth-Physical Geology",
-                "units": 3.0
-              },
-              {
-                "prefix": "ERTH",
-                "number": "111H",
-                "title": "Dynamic Earth-Physical Geology, Honors",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EART",
+                        "number": "10",
+                        "title": "Geologic Principles",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ERTH",
+                        "number": "111",
+                        "title": "Dynamic Earth-Physical Geology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ERTH",
+                        "number": "111H",
+                        "title": "Dynamic Earth-Physical Geology, Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "EART",
-                "number": "10L",
-                "title": "Geologic Principles Laboratory",
-                "units": 1.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ERTH",
-                "number": "111L",
-                "title": "Dynamic Earth-Physical Geology Laboratory",
-                "units": 1.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EART",
+                        "number": "10L",
+                        "title": "Geologic Principles Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ERTH",
+                        "number": "111L",
+                        "title": "Dynamic Earth-Physical Geology Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "EART",
-                "number": "20",
-                "title": "Environmental Geology",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ERTH",
-                "number": "115",
-                "title": "Environmental Geology",
-                "units": 3.0
-              },
-              {
-                "prefix": "ENVS",
-                "number": "115",
-                "title": "Environmental Geology",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EART",
+                        "number": "20",
+                        "title": "Environmental Geology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ERTH",
+                        "number": "115",
+                        "title": "Environmental Geology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENVS",
+                        "number": "115",
+                        "title": "Environmental Geology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "EART",
-                "number": "20L",
-                "title": "Environmental Geology Laboratory",
-                "units": 1.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ERTH",
-                "number": "115L",
-                "title": "Environmental Geology Laboratory",
-                "units": 1.0
-              },
-              {
-                "prefix": "ENVS",
-                "number": "115L",
-                "title": "Environmental Geology Laboratory",
-                "units": 1.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EART",
+                        "number": "20L",
+                        "title": "Environmental Geology Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ERTH",
+                        "number": "115L",
+                        "title": "Environmental Geology Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "ENVS",
+                        "number": "115L",
+                        "title": "Environmental Geology Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

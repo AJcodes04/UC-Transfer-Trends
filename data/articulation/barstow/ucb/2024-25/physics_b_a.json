@@ -8,164 +8,249 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYSICS",
-                "number": "7A",
-                "title": "Physics for Scientists and Engineers",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "2A",
-                "title": "General Physics I: Mechanics of Solids and Fluids",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2A",
+                        "title": "General Physics I: Mechanics of Solids and Fluids",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PHYSICS",
-                "number": "7B",
-                "title": "Physics for Scientists and Engineers",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PHYS",
-                "number": "2B",
-                "title": "General Physics II: Electricity and Magnetism",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2B",
+                        "title": "General Physics II: Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "54",
-                "title": "Linear Algebra and Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "9",
-                "title": "Ordinary Differential Equation",
-                "units": 3.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "10",
-                "title": "Introduction to Linear Algebra",
-                "units": 3.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9",
+                        "title": "Ordinary Differential Equation",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "10",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1A",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "4A",
-                "title": "Calculus I",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1B",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "4B",
-                "title": "Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "53",
-                "title": "Multivariable Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "4C",
-                "title": "Calculus III",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4C",
+                        "title": "Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
-    "Required lower-division requirements for transfer students: Math 1A, Math 1B, Math 53, Math 54 Physics 7A, 7B, and 7C MATHEMATICS Must complete math courses prior to transferring. Physics major transfer students are expected to have completed all physics and mathematics program prerequisites. Physics 89 (Introduction to Mathematical Physics) at UC Berkeley is strongly recommended during the summer prior to first semester at UCB or post-admission during the first semester at UCB. Students who have not completed Math 54 prior to admission as transfer students will be required to complete Physics 89 instead of Math 54 at UC Berkeley. Those not familiar with the Python programming language are urged to take Physics 77, Data Science 8 or the equivalent. If your course work has not been approved for articulation with the Berkeley equivalent requirements listed above, retain syllabi and reading lists for evaluation by the department and proactively contact a Berkeley physics advisor upon enrollment to check how the missing courses will impact academic planning. For the Physics 7-series equivalent courses, if the entire series is not completed at the same community college, it will be the student’s responsibility to learn the missing topics via Physics 49 once at UC Berkeley. This will ensure adequate foundation for upper division courses. Contact your physics major advisor at UC Berkeley for more information and guidance, once accepted to the program. Once enrolled in UC Berkeley, we recommend that students enroll in the Berkeley Pre-Core Transfer Summer Program in the summer before their first semester at UC Berkeley in order to be better prepared to take on the academic rigor of the physics major by building technical skills and a community of support and resources.",
+    "Required lower-division requirements for transfer students: Math 1A, Math 1B, Math 53, Math 54 Physics 7A, 7B, and 7C MATHEMATICS Must complete math courses prior to transferring. Physics major transfer students are expected to have completed all physics and mathematics program prerequisites. Physics 89 (Introduction to Mathematical Physics) at UC Berkeley is strongly recommended during the summer prior to first semester at UCB or post-admission during the first semester at UCB. Students who have not completed Math 54 prior to admission as transfer students will be required to complete Physics 89 instead of Math 54 at UC Berkeley. Those not familiar with the Python programming language are urged to take Physics 77, Data Science 8 or the equivalent. If your course work has not been approved for articulation with the Berkeley equivalent requirements listed above, retain syllabi and reading lists for evaluation by the department and proactively contact a Berkeley physics advisor upon enrollment to check how the missing courses will impact academic planning. For the Physics 7-series equivalent courses, if the entire series is not completed at the same community college, it will be the student\u2019s responsibility to learn the missing topics via Physics 49 once at UC Berkeley. This will ensure adequate foundation for upper division courses. Contact your physics major advisor at UC Berkeley for more information and guidance, once accepted to the program. Once enrolled in UC Berkeley, we recommend that students enroll in the Berkeley Pre-Core Transfer Summer Program in the summer before their first semester at UC Berkeley in order to be better prepared to take on the academic rigor of the physics major by building technical skills and a community of support and resources.",
     "The Physics Department at UC Berkeley does not accept AP or IB Physics exams for satisfying requirements.",
     "Our undergraduate program aims to provide a broad and solid background in fundamental physics through introductory course work, and then to engage all our majors who are interested in current research with some of the top research groups worldwide. We believe a Physics degree represents strong training for a broad range of careers. Approximately half of our recent graduates have continued to graduate school in Physics and related fields; others have taken jobs in high tech industries or as management consultants, and still others have entered medical school or law school. We aim to help our majors develop strong mathematical and analytical skills, good laboratory skills, effective written and oral communication skills, and of course a solid understanding of the fundamental laws that govern the universe. Learn more about UC Berkeley physics on our website: https://physics.berkeley.edu/academics/undergraduate-degree/the-major-and-minor-program For more information: Location: UC Berkeley Department of Physics, Physics Building, Berkeley, CA 94720-7300 Email: physics-student-services@lists.berkeley.edu",
-    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu"
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. For more information see the New Policies for Transfer Student Applicants website for L&S: https://ls.berkeley.edu/prospective-students/new-policies-transfer-student-applicants By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): \u00b7 Two transferable courses in English composition; \u00b7 One transferable course in mathematical concepts and quantitative reasoning; \u00b7 Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on admission to UC Berkeley : http://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: http://guide.berkeley.edu"
   ]
 }

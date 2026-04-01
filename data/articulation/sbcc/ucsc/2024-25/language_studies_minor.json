@@ -8,353 +8,522 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "CHIN",
-                "number": "1",
-                "title": "First-Year Chinese",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CHIN",
-                "number": "101",
-                "title": "Beginning Chinese I",
-                "units": 5.0
-              },
-              {
-                "prefix": "CHIN",
-                "number": "102",
-                "title": "Beginning Chinese II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "1",
+                        "title": "First-Year Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "101",
+                        "title": "Beginning Chinese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHIN",
+                        "number": "102",
+                        "title": "Beginning Chinese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FREN",
-                "number": "1",
-                "title": "First-Year French",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FR",
-                "number": "101",
-                "title": "Beginning French I",
-                "units": 5.0
-              },
-              {
-                "prefix": "FR",
-                "number": "102",
-                "title": "Beginning French II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "1",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "101",
+                        "title": "Beginning French I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FR",
+                        "number": "102",
+                        "title": "Beginning French II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FREN",
-                "number": "2",
-                "title": "First-Year French",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FR",
-                "number": "102",
-                "title": "Beginning French II",
-                "units": 5.0
-              },
-              {
-                "prefix": "FR",
-                "number": "101",
-                "title": "Beginning French I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "2",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "102",
+                        "title": "Beginning French II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FR",
+                        "number": "101",
+                        "title": "Beginning French I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FREN",
-                "number": "3",
-                "title": "First-Year French",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FR",
-                "number": "104",
-                "title": "Intermediate French II",
-                "units": 5.0
-              },
-              {
-                "prefix": "FR",
-                "number": "103",
-                "title": "Intermediate French I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "3",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "104",
+                        "title": "Intermediate French II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FR",
+                        "number": "103",
+                        "title": "Intermediate French I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "GERM",
-                "number": "1",
-                "title": "First-Year German",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "GER",
-                "number": "102",
-                "title": "Beginning German II",
-                "units": 5.0
-              },
-              {
-                "prefix": "GER",
-                "number": "101",
-                "title": "Beginning German I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GERM",
+                        "number": "1",
+                        "title": "First-Year German",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GER",
+                        "number": "102",
+                        "title": "Beginning German II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "GER",
+                        "number": "101",
+                        "title": "Beginning German I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "GERM",
-                "number": "2",
-                "title": "First-Year German",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "GER",
-                "number": "102",
-                "title": "Beginning German II",
-                "units": 5.0
-              },
-              {
-                "prefix": "GER",
-                "number": "101",
-                "title": "Beginning German I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GERM",
+                        "number": "2",
+                        "title": "First-Year German",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GER",
+                        "number": "102",
+                        "title": "Beginning German II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "GER",
+                        "number": "101",
+                        "title": "Beginning German I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ITAL",
-                "number": "1",
-                "title": "First-Year Italian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ITAL",
-                "number": "102",
-                "title": "Beginning Italian II",
-                "units": 5.0
-              },
-              {
-                "prefix": "ITAL",
-                "number": "101",
-                "title": "Beginning Italian I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-7",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "1",
+                        "title": "First-Year Italian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "102",
+                        "title": "Beginning Italian II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ITAL",
+                        "number": "101",
+                        "title": "Beginning Italian I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "ITAL",
-                "number": "2",
-                "title": "First-Year Italian",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "ITAL",
-                "number": "102",
-                "title": "Beginning Italian II",
-                "units": 5.0
-              },
-              {
-                "prefix": "ITAL",
-                "number": "101",
-                "title": "Beginning Italian I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-8",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "2",
+                        "title": "First-Year Italian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "102",
+                        "title": "Beginning Italian II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ITAL",
+                        "number": "101",
+                        "title": "Beginning Italian I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "JAPN",
-                "number": "1",
-                "title": "First-Year Japanese",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "JAPN",
-                "number": "101",
-                "title": "Beginning Japanese I",
-                "units": 5.0
-              },
-              {
-                "prefix": "JAPN",
-                "number": "102",
-                "title": "Beginning Japanese II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-9",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "1",
+                        "title": "First-Year Japanese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "101",
+                        "title": "Beginning Japanese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "JAPN",
+                        "number": "102",
+                        "title": "Beginning Japanese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "1",
-                "title": "First-Year Spanish",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "101",
-                "title": "Beginning Spanish I",
-                "units": 5.0
-              },
-              {
-                "prefix": "SPAN",
-                "number": "102",
-                "title": "Beginning Spanish II",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-10",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "1",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "101",
+                        "title": "Beginning Spanish I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Beginning Spanish II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "2",
-                "title": "First-Year Spanish",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "SPAN",
-                "number": "102",
-                "title": "Beginning Spanish II",
-                "units": 5.0
-              },
-              {
-                "prefix": "SPAN",
-                "number": "101",
-                "title": "Beginning Spanish I",
-                "units": 5.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-11",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "2",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Beginning Spanish II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "101",
+                        "title": "Beginning Spanish I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "LING",
-                "number": "50",
-                "title": "Introduction to Linguistics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-12",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LING",
+                        "number": "50",
+                        "title": "Introduction to Linguistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

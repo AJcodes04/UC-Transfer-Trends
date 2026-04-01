@@ -8,125 +8,196 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COMPSCI",
-                "number": "61B",
-                "title": "Data Structures",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "CSCI",
-                "number": "21",
-                "title": "Programming and Algorithms II",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "61B",
+                        "title": "Data Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "21",
+                        "title": "Programming and Algorithms II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "COMPSCI",
-                "number": "70",
-                "title": "Discrete Mathematics and Probability Theory",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "70",
+                        "title": "Discrete Mathematics and Probability Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "54",
-                "title": "Linear Algebra and Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "42",
-                "title": "Linear Algebra",
-                "units": 3.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "40",
-                "title": "Differential Equations",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "42",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "40",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1A",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "30",
-                "title": "Analytic Geometry and Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "30",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "1B",
-                "title": "Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "31",
-                "title": "Analytic Geometry and Calculus II",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -134,7 +205,7 @@
   "notes": [
     "COLLEGE ADMISSION REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF COMPUTING, DATA SCIENCE, AND SOCIETY (CDSS) Completion of Cal-GETC/ UC IGETC is not a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. By the end of the spring term preceding fall enrollment at Berkeley, you must complete : The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): Two transferable courses in English composition; One transferable course in mathematical concepts and quantitative reasoning; Four transferable college courses chosen from at least two of the following subject areas: arts and humanities social and behavioral sciences physical and biological sciences AND 2) Major Requirements All required courses as noted by your intended major below. Only applicants who have completed 100% of items 1 and 2 above will be considered for admission. Additional completion of highly recommended courses will serve to strengthen the application. For more information on admission to UC Berkeley : https://admissions.berkeley.edu For specific information on transfer admission to UC Berkeley: https://admissions.berkeley.edu/apply-to-berkeley/transfer-students/transfer-requirements/ For more information on majors at UC Berkeley : Berkeley Academic Guide: https://guide.berkeley.edu",
     "Admission to the Computer Science major in the College of Computing, Data Science, and Society (CDSS) at UC Berkeley is highly competitive. It is important that applicants choose a major carefully, as junior transfers will not be allowed to change their major to Computer Science after the application deadline. At Berkeley, we construe computer science broadly to include the theory of computation, the design and analysis of algorithms, the architecture and logic design of computers, programming languages, compilers, operating systems, scientific computation, computer graphics, databases, artificial intelligence and natural language processing. Our goal is to prepare students both for a possible research career and long-term technical leadership in industry. We must therefore look beyond today's technology and give students the big ideas and the learning skills that will prepare them to teach themselves about tomorrow's technology. Visit the following websites for more information: https://eecs.berkeley.edu/resources/undergrads/cs https://eecs.berkeley.edu/resources/undergrads/cs/transfer-prereqs/faq-4/ https://cdss.berkeley.edu/academics/undergraduate-education General contact information: 349 Soda Hall, UC Berkeley cs-advising@cs.berkeley.edu (510) 664-4436",
-    "Required Courses for Admission MATH 1A, MATH 1B MATH 54 or EECS 16A or MATH 56 Computer Science does not require full equivalence to Math 54 and will accept just the Linear Algebra course of an articulated Math 54-equivalent series. Highly Recommended Courses for Admission COMPSCI 61A, COMPSCI 61B, COMPSCI 61C If the community college course is followed by the note ‘Must complete an additional university course after transfer to satisfy this requirement,’ then, to fully complete this requirement, you will need to take the corresponding course (COMPSCI 47A, 47B, or 47C) at UC Berkeley after you enroll, in addition to completing the community college course. Data structures--even if not officially comparable to Berkeley's COMPSCI 61B; and Java (preferred) or C++ COMPSCI 70 - COMPSCI 70 is offered during the Berkeley Summer session or Concurrent Enrollment. The entire Computer Science 61 series is also offered during the Berkeley Summer session. The department recommends that, when possible, students take one of these courses during the summer session prior to transfer.",
-    "Acceptable exam credit: MATH 1A (Calculus I) can be satisfied with at least a “3” on the AP AB or BC Calculus exam, at least a “5” on the IB Math Higher Level, or at least a \"B\" on A-Level Math ﻿ MATH 1B (Calculus II) can be satisfied with a “5” on the AP BC Calculus exam or at least a \"B\" on A-Level Further Math"
+    "Required Courses for Admission MATH 1A, MATH 1B MATH 54 or EECS 16A or MATH 56 Computer Science does not require full equivalence to Math 54 and will accept just the Linear Algebra course of an articulated Math 54-equivalent series. Highly Recommended Courses for Admission COMPSCI 61A, COMPSCI 61B, COMPSCI 61C If the community college course is followed by the note \u2018Must complete an additional university course after transfer to satisfy this requirement,\u2019 then, to fully complete this requirement, you will need to take the corresponding course (COMPSCI 47A, 47B, or 47C) at UC Berkeley after you enroll, in addition to completing the community college course. Data structures--even if not officially comparable to Berkeley's COMPSCI 61B; and Java (preferred) or C++ COMPSCI 70 - COMPSCI 70 is offered during the Berkeley Summer session or Concurrent Enrollment. The entire Computer Science 61 series is also offered during the Berkeley Summer session. The department recommends that, when possible, students take one of these courses during the summer session prior to transfer.",
+    "Acceptable exam credit: MATH 1A (Calculus I) can be satisfied with at least a \u201c3\u201d on the AP AB or BC Calculus exam, at least a \u201c5\u201d on the IB Math Higher Level, or at least a \"B\" on A-Level Math \ufeff MATH 1B (Calculus II) can be satisfied with a \u201c5\u201d on the AP BC Calculus exam or at least a \"B\" on A-Level Further Math"
   ]
 }

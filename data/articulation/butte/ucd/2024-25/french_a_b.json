@@ -8,84 +8,127 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FRE",
-                "number": "001",
-                "title": "Elementary French",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FREN",
-                "number": "1",
-                "title": "First Semester French",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRE",
+                        "number": "001",
+                        "title": "Elementary French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "1",
+                        "title": "First Semester French",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FRE",
-                "number": "002",
-                "title": "Elementary French ",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FREN",
-                "number": "2",
-                "title": "Second Semester French",
-                "units": 4.0
-              },
-              {
-                "prefix": "FREN",
-                "number": "1",
-                "title": "First Semester French",
-                "units": 4.0
-              }
-            ],
-            "logic": "AND"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRE",
+                        "number": "002",
+                        "title": "Elementary French ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "2",
+                        "title": "Second Semester French",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "FREN",
+                        "number": "1",
+                        "title": "First Semester French",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "FRE",
-                "number": "003",
-                "title": "Elementary French ",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "FREN",
-                "number": "2",
-                "title": "Second Semester French",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRE",
+                        "number": "003",
+                        "title": "Elementary French ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "2",
+                        "title": "Second Semester French",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -94,8 +137,8 @@
     "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
     "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
     "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
-    "Foreign language teachers, a cardiologist, a veterinarian, a naval commander at the Pentagon, a professor of Political Science, lawyers, sales representatives, journalists, a speech pathologist, a law professor, translators, a senior applications programmer, travel agents, independent business owners, a senior museum curator, nurses, financial managers, stock brokers, and an industrial attaché for a French trade commission—all graduated with an A.B. in French from UC Davis. These represent only a small fraction of the career choices documented in a survey of department graduates.",
-    "The major program assures proficiency in all four language skills—speaking, listening, reading, and writing—and acquaints students with the intellectual and cultural contributions of the French-speaking world through the study of its literatures, traditions, and institutions. The department encourages its students to work closely with the academic advisor in designing a major tailored to their needs and interests within the broad requirements prescribed by the program and to avail themselves of the guidance of an excellent teaching faculty. Each year, a substantial number of students with good preparation in French participate in the university's very popular Education Abroad Program, which maintains centers in Bordeaux, Lyon, and Paris.",
+    "Foreign language teachers, a cardiologist, a veterinarian, a naval commander at the Pentagon, a professor of Political Science, lawyers, sales representatives, journalists, a speech pathologist, a law professor, translators, a senior applications programmer, travel agents, independent business owners, a senior museum curator, nurses, financial managers, stock brokers, and an industrial attach\u00e9 for a French trade commission\u2014all graduated with an A.B. in French from UC Davis. These represent only a small fraction of the career choices documented in a survey of department graduates.",
+    "The major program assures proficiency in all four language skills\u2014speaking, listening, reading, and writing\u2014and acquaints students with the intellectual and cultural contributions of the French-speaking world through the study of its literatures, traditions, and institutions. The department encourages its students to work closely with the academic advisor in designing a major tailored to their needs and interests within the broad requirements prescribed by the program and to avail themselves of the guidance of an excellent teaching faculty. Each year, a substantial number of students with good preparation in French participate in the university's very popular Education Abroad Program, which maintains centers in Bordeaux, Lyon, and Paris.",
     "Please refer to the Transfer Admissions Requirements for information on admissions to this major."
   ]
 }

@@ -8,177 +8,262 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "22",
-                "title": "Calculus for Business",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "340",
-                "title": "Calculus for Business and Economics",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Calculus for Business",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "340",
+                        "title": "Calculus for Business and Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "5A",
-                "title": "Principles of Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "375",
-                "title": "Pre-Calculus",
-                "units": 6.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "370",
-                "title": "Pre-Calculus Mathematics",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5A",
+                        "title": "Principles of Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "375",
+                        "title": "Pre-Calculus",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "370",
+                        "title": "Pre-Calculus Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "9A",
-                "title": "First-Year Calculus",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "MATH",
-                "number": "355",
-                "title": "Calculus for Biology and Medicine I",
-                "units": 4.0
-              },
-              {
-                "prefix": "MATH",
-                "number": "400",
-                "title": "Calculus I",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9A",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "355",
+                        "title": "Calculus for Biology and Medicine I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "400",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "11",
-                "title": "Psychological Methods: Statistical Procedures",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "330",
-                "title": "Introductory Statistics for the Behavioral Sciences",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "11",
+                        "title": "Psychological Methods: Statistical Procedures",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "330",
+                        "title": "Introductory Statistics for the Behavioral Sciences",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "2",
-                "title": "Introductory Psychology",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "300",
-                "title": "General Principles",
-                "units": 3.0
-              },
-              {
-                "prefix": "PSYC",
-                "number": "480",
-                "title": "Honors General Principles",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "2",
+                        "title": "Introductory Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "300",
+                        "title": "General Principles",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "480",
+                        "title": "Honors General Principles",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "12",
-                "title": "Psychological Methods: Research Procedures",
-                "units": 6.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "PSYC",
-                "number": "335",
-                "title": "Research Methods in Psychology",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "12",
+                        "title": "Psychological Methods: Research Procedures",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "335",
+                        "title": "Research Methods in Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
   ],
   "notes": [
     "Admission to the Psychology major is selective based on GPA and the student's strength of academic preparation for the major. A minimum GPA of 2.70 is required (This is a baseline GPA for consideration and not a guarantee of admission). All courses must be taken for a letter grade. To earn credit towards UCR Psychology major requirements, courses must be completed a with no grade lower than a \"C-\". Transfer students are strongly encouraged to complete as much lower division preparation as possible prior to transfer, as they are required to complete all lower division requirements within one year of matriculation to UCR. AP Exam - Satisfy Course Requirement Section Mathematics: AB Exam or AB Subscore from BC Exam Minimum score of 3 satisfies MATH 9A or MATH 7A Mathematics: BC Exam Minimum score of 3 satisfies MATH 9A and MATH 9B or MATH 7A and MATH 7B Minimum score of 4 satisfies MATH 9A, MATH 9B, MATH 9C or MATH 7A, MATH 7B, MATH 9C Psychology Exam Minimum score of 4 satisfies PSYC 2 If sending institution offers honors/enhanced/support courses , the articulation for the same course number will be used. For additional information about this major, please visit Psychology . For information about the UC Transfer Admission Guarantee (TAG) program, please visit Transfer Admission Guarantee . IGETC and General Education/Breadth Information In addition to the lower division requirements listed below, students are also encouraged to complete the Intersegmental General Education Transfer Curriculum, \"IGETC\", while attending community college. Although completion of the IGETC is not a UCR admission requirement, it is a good program for students planning to transfer into majors housed in the College of Humanities, Arts and Social Sciences. Information about completing IGETC is available at each community college. Students also have the option of completing the UCR CHASS breadth pattern, you may view the breadth requirements by visiting the 2024-25 Catalog , pages 86-87.",
-    "Complete one Physical Sciences course, such as Chemistry, Physics, Earth Sciences, excluding Cultural Geography. Other acceptable courses include courses approved as a physical science on your community college’s IGETC pattern, and may include courses such as Oceanography, Astronomy, Geology.",
-    "Complete one Biological Sciences course, such as Biology, Botany/Plant Sciences, Entomology. Other acceptable courses include courses approved as a biological science on your community college’s IGETC pattern, and may include courses such as Marine Biology, Microbiology, Anatomy, Physiology.",
-    "Complete two additional courses from the Biological Sciences Requirement and/or Physical Science Requirement section. Additional courses that will satisfy this area are courses approved as a Mathematics course on your community college’s IGETC list (such as Statistics, Finite Math, College Algebra, Discrete Structures). The mathematics course taken to satisfy MATH 4 (or equivalent) above may not be double counted for this area. UC transferable Computer Science courses are also acceptable.",
-    "Effective Fall 2018 - Students must have completed, with a grade of C- or better, a course equivalent to UCR’s MATH 4 or higher to be considered for admission to the major. Courses that articulate as MATH 5A, 9A, or 22 would meet this requirement. Students who complete a UC transferable College Algebra course and a college course in Trigonometry (both with \"C\" grades or better) will be considered to have an acceptable course substitution to UCR's MATH 5A . Trigonometry courses do not carry UC transfer credit, but when taken in conjunction with College Algebra can be used to sufficiently cover content in MATH 5A ."
+    "Complete one Physical Sciences course, such as Chemistry, Physics, Earth Sciences, excluding Cultural Geography. Other acceptable courses include courses approved as a physical science on your community college\u2019s IGETC pattern, and may include courses such as Oceanography, Astronomy, Geology.",
+    "Complete one Biological Sciences course, such as Biology, Botany/Plant Sciences, Entomology. Other acceptable courses include courses approved as a biological science on your community college\u2019s IGETC pattern, and may include courses such as Marine Biology, Microbiology, Anatomy, Physiology.",
+    "Complete two additional courses from the Biological Sciences Requirement and/or Physical Science Requirement section. Additional courses that will satisfy this area are courses approved as a Mathematics course on your community college\u2019s IGETC list (such as Statistics, Finite Math, College Algebra, Discrete Structures). The mathematics course taken to satisfy MATH 4 (or equivalent) above may not be double counted for this area. UC transferable Computer Science courses are also acceptable.",
+    "Effective Fall 2018 - Students must have completed, with a grade of C- or better, a course equivalent to UCR\u2019s MATH 4 or higher to be considered for admission to the major. Courses that articulate as MATH 5A, 9A, or 22 would meet this requirement. Students who complete a UC transferable College Algebra course and a college course in Trigonometry (both with \"C\" grades or better) will be considered to have an acceptable course substitution to UCR's MATH 5A . Trigonometry courses do not carry UC transfer credit, but when taken in conjunction with College Algebra can be used to sufficiently cover content in MATH 5A ."
   ]
 }

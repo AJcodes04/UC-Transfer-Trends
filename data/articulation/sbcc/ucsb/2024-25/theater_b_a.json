@@ -8,149 +8,220 @@
   "sections": [
     {
       "section_title": "Lower Division Major Requirements",
-      "rows": [
+      "rows": [],
+      "groups": [
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "THTR",
-                "number": "1",
-                "title": "Play Analysis",
-                "units": 5.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "TA",
-                "number": "104",
-                "title": "Script Analysis",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THTR",
+                        "number": "1",
+                        "title": "Play Analysis",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TA",
+                        "number": "104",
+                        "title": "Script Analysis",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "THTR",
-                "number": "5",
-                "title": "Introduction to Acting",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "TA",
-                "number": "111",
-                "title": "Beginning Acting",
-                "units": 3.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-2",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THTR",
+                        "number": "5",
+                        "title": "Introduction to Acting",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TA",
+                        "number": "111",
+                        "title": "Beginning Acting",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "THTR",
-                "number": "95",
-                "title": "Introduction to Stage Management",
-                "units": 2.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "TA",
-                "number": "149C",
-                "title": "Stage Manager",
-                "units": 1.5
-              },
-              {
-                "prefix": "TA",
-                "number": "149D",
-                "title": "Production Stage Manager",
-                "units": 2.0
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THTR",
+                        "number": "95",
+                        "title": "Introduction to Stage Management",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TA",
+                        "number": "149C",
+                        "title": "Stage Manager",
+                        "units": 1.5
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "149D",
+                        "title": "Production Stage Manager",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "THTR",
-                "number": "25",
-                "title": "Costume Design",
-                "units": 4.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [],
-            "logic": "NO_ARTICULATION"
-          }
+          "group_id": "migrated-4",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THTR",
+                        "number": "25",
+                        "title": "Costume Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "receiving_courses": {
-            "courses": [
-              {
-                "prefix": "THTR",
-                "number": "49",
-                "title": "Theater Workshop",
-                "units": 1.0
-              }
-            ],
-            "logic": "SINGLE"
-          },
-          "sending_courses": {
-            "courses": [
-              {
-                "prefix": "TA",
-                "number": "142",
-                "title": "Theatre Workshop II",
-                "units": 1.0
-              },
-              {
-                "prefix": "TA",
-                "number": "144",
-                "title": "Theatre Workshop IV",
-                "units": 2.0
-              },
-              {
-                "prefix": "TA",
-                "number": "175",
-                "title": "Summer Theatre Workshop",
-                "units": 1.0
-              },
-              {
-                "prefix": "TA",
-                "number": "143",
-                "title": "Theatre Workshop III",
-                "units": 1.5
-              },
-              {
-                "prefix": "TA",
-                "number": "141",
-                "title": "Theatre Workshop",
-                "units": 0.5
-              }
-            ],
-            "logic": "SINGLE"
-          }
+          "group_id": "migrated-5",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THTR",
+                        "number": "49",
+                        "title": "Theater Workshop",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TA",
+                        "number": "142",
+                        "title": "Theatre Workshop II",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "144",
+                        "title": "Theatre Workshop IV",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "175",
+                        "title": "Summer Theatre Workshop",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "143",
+                        "title": "Theatre Workshop III",
+                        "units": 1.5
+                      },
+                      {
+                        "prefix": "TA",
+                        "number": "141",
+                        "title": "Theatre Workshop",
+                        "units": 0.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
