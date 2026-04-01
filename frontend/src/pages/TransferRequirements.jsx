@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Loader, Alert, Text, Paper, UnstyledButton,
   Group, Badge, Select, Stack, Table, Divider, ThemeIcon, TextInput, Box,
+  Anchor,
 } from '@mantine/core'
 import { IconCheck, IconMinus } from '@tabler/icons-react'
 import {
@@ -27,6 +28,21 @@ const UC_LABELS = {
   ucb: 'UC Berkeley', ucd: 'UC Davis', uci: 'UC Irvine',
   ucla: 'UCLA', ucm: 'UC Merced', ucr: 'UC Riverside',
   ucsb: 'UC Santa Barbara', ucsc: 'UC Santa Cruz', ucsd: 'UC San Diego',
+}
+
+function Linkify({ children }) {
+  if (typeof children !== 'string') return children
+  const parts = children.split(/(https?:\/\/[^\s),]+)/g)
+  if (parts.length === 1) return children
+  return parts.map((part, i) =>
+    /^https?:\/\//.test(part) ? (
+      <Anchor key={i} href={part} target="_blank" rel="noopener noreferrer" size="sm">
+        {part}
+      </Anchor>
+    ) : (
+      part
+    )
+  )
 }
 
 function ucColor(code) {
@@ -386,7 +402,7 @@ function AgreementDetail({ cc, uc, majorSlug, navigate }) {
           <Title order={5} mb="xs">Important Information</Title>
           {agreement.notes.map((note, i) => (
             <Text key={i} size="sm" mb="xs" style={{ lineHeight: 1.6 }}>
-              {note}
+              <Linkify>{note}</Linkify>
             </Text>
           ))}
         </Paper>
