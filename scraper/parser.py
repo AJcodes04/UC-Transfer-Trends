@@ -149,6 +149,7 @@ class _GroupSpec:
     section_specs: list         # List[_SectionSpec]
     position: int               # Position within the Requirements area (for ordering)
     section_title: str          # Nearest preceding RequirementTitle text
+    n_from_area_units: Optional[float] = None  # Unit-based selection: "Complete N units from the following"
 
 
 # ---------------------------------------------------------------------------
@@ -387,6 +388,11 @@ def _parse_template_structure(
             conjunction = instruction.get("conjunction", "And")
             hide_letters = item.get("hideSectionLetters", False)
             position = item.get("position", 0)
+            # NFromArea = "Complete N units from the following" (unit-based pool)
+            instruction_type = instruction.get("type", "")
+            n_from_area_units = None
+            if instruction_type == "NFromArea":
+                n_from_area_units = instruction.get("amount")
 
             # Use the most recently seen title in this area as this group's section title
             section_title = last_requirement_title.get(area, "")
@@ -431,6 +437,7 @@ def _parse_template_structure(
                 section_specs=section_specs,
                 position=position,
                 section_title=section_title,
+                n_from_area_units=n_from_area_units,
             ))
 
     return cell_to_location, group_specs
@@ -478,6 +485,28 @@ def _build_requirement_groups(
     """
     conjunction = group_spec.conjunction.lower()
     section_specs = group_spec.section_specs
+
+    # ── Case: NFromArea — "Complete N units from the following" ───────────
+    # All rows are a pool; student picks enough to reach the unit threshold.
+    if group_spec.n_from_area_units is not None:
+        all_cell_ids = []
+        for ss in section_specs:
+            all_cell_ids.extend(ss.cell_ids_in_order)
+        rows = _collect_rows_from_cells(all_cell_ids, cell_to_row)
+        if not rows:
+            return []
+
+        units = group_spec.n_from_area_units
+        label = f"Complete {units:g} semester units from the following"
+        return [RequirementGroup(
+            group_id=group_spec.group_id,
+            group_number=group_counter_start,
+            group_label=label,
+            group_logic=GroupLogic.SELECT_N,
+            select_n=None,
+            select_units=units,
+            options=[RequirementOption(rows=rows)],
+        )]
 
     # ── Case: SELECT_ONE — sections are alternative pathways ──────────────
     # conjunction=Or means "complete any one of the following sections"

@@ -1,0 +1,533 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Molecular and Cell Biology, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T18:42:32.579832",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "ece26f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Biology for Majors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "1",
+                        "title": "General Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "4H",
+                        "title": "Biology for Majors - Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Biology for Majors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "4H",
+                        "title": "Biology for Majors - Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "e5e26f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "50H",
+                        "title": "General Chemistry I - Honors",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "51H",
+                        "title": "General Chemistry II - Honors",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "50",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "51",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3A",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3AL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "80",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3B",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3BL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "81",
+                        "title": "Organic Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "ebe26f45-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 3,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "51",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Calculus and Analytic Geometry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "52",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "181",
+                        "title": "Calculus and Analytic Geometry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Calculus and Analytic Geometry III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "285",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "260",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "290",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "285",
+                        "title": "Differential Equations and Linear Algebra for Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "55",
+                        "title": "Discrete Mathematics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "190",
+                        "title": "Discrete Mathematics Applied to Computer Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "e9e26f45-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8A",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2AG",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8B",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2BG",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Engineering Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Engineering Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. More information on new polices is available on the L&S Transfer Student Applicants website. By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on L&S General Education requirements: For information on courses that will satisfy L&S General Education (Essential Skills and Seven-Course Breadth) requirements from your community college complete the following steps: Go to \"Search below for articulation agreements: Major, department, and campus-specific general education agreements” Click on the down arrow to select: Academic Year, Institution: UC Berkeley , and Agreements with Other Institutions: (Your CA Community College). Click on “View Agreements”. Under “View Agreement by” select “ General Education/Breadth ”. Click on the “General Education/Breadth” radio button, then click on “View Agreement” Learn more from the UC Berkeley Office of Undergraduate Admission and specifically about transfer admission preparation. Review all available majors at UC Berkeley .",
+    "Fall 2026 Admission for this Major: Transfer students who select this major on their College of Letters and Science (L&S) application and are offered admission to L&S will be directly admitted into this major. If you are interested in this major, it is very important to select this major on your application, and complete as many lower-division major requirements as possible prior to transfer. See details on preparation for this major below. MINIMUM ADMISSION REQUIREMENTS You must complete all lower-division requirements, with the exception of physics, before transfer. Complete the equivalent of: BIOLOGY 1A, BIOLOGY 1AL, + BIOLOGY 1B CHEMISTRY 1A & CHEMISTRY 1AL (If interested in track 2 of the Biochemistry & Molecular Biology emphasis, Biological Chemistry, you must also complete the equivalent of CHEMISTRY 1B) CHEMISTRY 3A, 3AL, 3B, + 3BL Any two equivalent courses of MATH 51 + MATH 52 + MATH 53 + MATH 54 + MATH 55 NOTE : For students who have Calculus test credit, please note that the MCB major does NOT accept test credit to waive math requirements. If you are able to place out of Math 51, you may substitute Math 51 with an equivalent course to Stats 2, Stats 20, or Stats W21 to count towards the MCB major Although it is not required for admission, we strongly recommend that you complete one year of calculus-based physics with lab prior to transfer because it may be difficult to enroll in these courses at Berkeley. Complete the equivalent of: PHYSICS 8A + PHYSICS 8B or PHYSICS 7A + PHYSICS 7B Note: PHYSICS 7C is OPTIONAL for this major AP/IB information for the major in Molecular and Cell Biology for transfer students: -Score of 4 or 5 on AP Chemistry satisfies CHEMISTRY 1A/1AL -Score of 4 or 5 on AP Biology satisfies BIOLOGY 1A/1AL + BIOLOGY 1B -Score of 5, 6, or 7 on IB Chemistry satisfies Chemistry 1A/1AL -Score of 5, 6, or 7 on IB Biology satisfies Biology 1B only The Molecular and Cell Biology Undergraduate Office discourages the use of AP, IB, or A-Level credit to waive lower-division courses. Lack of such coursework at the college level could result in poor performance in upper-division MCB courses. In addition, many health-related graduate and professional programs will not accept AP/IB scores in lieu of coursework completed at a college or university. The Molecular and Cell Biology major has five emphases. The lower-division requirements are the same for all major emphases except Track 2 of Biochemistry & Molecular Biology (Biological Chemistry) which additionally requires CHEMISTRY 1B. 1. Biochemistry, Biophysics & Structural Biology Track 1 - Biochemistry & Molecular Biology Track 2 - Biological Chemistry 2. Cell Biology, Development & Physiology Track 1 - Cell & Systems Biology Track 2 - Medical Biology & Physiology 3. Genetics, Genomics, Evolution, & Development Track 1 - Genetics, Genomics, & Development Track 2 - Developmental Genetics 4. Immunology & Molecular Medicine Track 1 - Immunology Track 2 - Infectious Diseases Track 3: Immunology & Molecular Medicine 5. Molecular Therapeutics Track 1 - Molecular Therapeutics Track 2 - Therapeutics and Disease For more information on the major in Molecular and Cell Biology: http://mcb.berkeley.edu/undergrad/",
+    "NOTE : For students who have Calculus test credit, please note that the MCB major does NOT accept test credit to waive math requirements. If you are able to place out of Math 51, you may substitute Math 51 with an equivalent course to Stats 2, Stats 20, or Stats W21 to count towards the MCB major AP/IB information for the major in Molecular and Cell Biology for transfer students: -Score of 4 or 5 on AP Chemistry satisfies CHEMISTRY 1A/1AL -Score of 4 or 5 on AP Biology satisfies BIOLOGY 1A/1AL + BIOLOGY 1B -Score of 5, 6, or 7 on IB Chemistry satisfies Chemistry 1A/1AL -Score of 5, 6, or 7 on IB Biology satisfies Biology 1B only The Molecular and Cell Biology Undergraduate Office discourages the use of AP, IB, or A-Level credit to waive lower-division courses. Lack of such coursework at the college level could result in poor performance in upper-division MCB courses. In addition, many health-related graduate and professional programs will not accept AP/IB scores in lieu of coursework completed at a college or university."
+  ]
+}

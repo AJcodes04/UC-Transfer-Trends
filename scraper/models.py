@@ -173,6 +173,10 @@ class RequirementGroup(BaseModel):
         default=None,
         description="For SELECT_N groups: how many courses the student must pick"
     )
+    select_units: Optional[float] = Field(
+        default=None,
+        description="For SELECT_N groups with unit-based selection: how many units the student must complete"
+    )
     options: list[RequirementOption] = Field(default_factory=list)
 
 

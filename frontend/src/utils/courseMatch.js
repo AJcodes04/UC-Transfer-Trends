@@ -106,9 +106,32 @@ export function checkGroupSatisfied(group, userCourseMap) {
   }
 
   if (logic === 'SELECT_N') {
-    // Satisfied if at least select_n rows are satisfied
-    const n = group.select_n || 1
     const allRows = options.flatMap((o) => o.rows || [])
+
+    // Unit-based selection: "Complete X semester units from the following"
+    if (group.select_units) {
+      const targetUnits = group.select_units
+      let satisfiedUnits = 0
+      let anySatisfied = false
+      for (const row of allRows) {
+        if (checkRowSatisfied(row, userCourseMap) === 'satisfied') {
+          anySatisfied = true
+          // Sum the receiving (UC) course units for satisfied rows
+          const recv = row.receiving_courses
+          if (recv?.courses) {
+            for (const c of recv.courses) {
+              satisfiedUnits += c.units || 0
+            }
+          }
+        }
+      }
+      if (satisfiedUnits >= targetUnits) return 'satisfied'
+      if (anySatisfied) return 'partial'
+      return 'none'
+    }
+
+    // Course-count selection: "Complete N courses from the following"
+    const n = group.select_n || 1
     const satisfiedCount = allRows.filter(
       (r) => checkRowSatisfied(r, userCourseMap) === 'satisfied'
     ).length
@@ -162,13 +185,9 @@ export function computeRequirementStats(agreement, userCourseMap) {
           total++
           if (checkGroupSatisfied(group, userCourseMap) === 'satisfied') satisfied++
         } else if (logic === 'SELECT_N') {
-          // Must complete N courses — counts as N requirements
-          const n = group.select_n || 1
-          total += n
-          const satisfiedCount = allRows.filter(
-            (r) => checkRowSatisfied(r, userCourseMap) === 'satisfied'
-          ).length
-          satisfied += Math.min(satisfiedCount, n)
+          // Unit-based or course-count pool — counts as 1 requirement
+          total++
+          if (checkGroupSatisfied(group, userCourseMap) === 'satisfied') satisfied++
         } else {
           // COMPLETE_ALL — each row is a required course
           for (const row of allRows) {
