@@ -1,0 +1,688 @@
+{
+  "sending_institution": "Santa Barbara City College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Nursing Science, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T06:42:54.964186",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "17c56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "93",
+                        "title": "DNA to Organisms",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "103",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "156",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "155",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "13c56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "E109",
+                        "title": "Human Physiology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "E112L",
+                        "title": "Physiology Laboratory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BMS",
+                        "number": "108",
+                        "title": "Human Physiology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "14c56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "M122",
+                        "title": "General Microbiology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "M118L",
+                        "title": "Experimental Microbiology Laboratory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BMS",
+                        "number": "127",
+                        "title": "Medical Microbiology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "15c56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "D170",
+                        "title": "Applied Human Anatomy",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BMS",
+                        "number": "107",
+                        "title": "Human Anatomy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "16c56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHILOS",
+                        "number": "4",
+                        "title": "Introduction to Ethics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "101H",
+                        "title": "Introduction to Ethics, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHIL",
+                        "number": "101",
+                        "title": "Introduction to Ethics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "1cc56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "7A",
+                        "title": "Introduction to Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "C1000",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "C1000H",
+                        "title": "Introduction to Psychology - Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "1bc56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "10A",
+                        "title": "Probability and Statistics in Psychology I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "10A",
+                        "title": "Probability and Statistics in the Social Sciences I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "10A",
+                        "title": "Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "150",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "125",
+                        "title": "Introduction to Statistics in Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "8",
+                        "title": "Introduction to Biological Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "150",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "1ec56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "2A",
+                        "title": "Introduction to Sociocultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "103",
+                        "title": "Introduction to Cultural Anthropology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ANTH",
+                        "number": "103H",
+                        "title": "Introduction to Cultural Anthropology, Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "2D",
+                        "title": "Introduction to Language and Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "104",
+                        "title": "Language and Culture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "101H",
+                        "title": "Introduction to Sociology, Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "3",
+                        "title": "Introduction to Social Problems",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "109",
+                        "title": "Social Problems",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "31",
+                        "title": "Introduction to Social Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "175",
+                        "title": "Social Psychology: Psychological Perspective",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "104",
+                        "title": "Social Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "62",
+                        "title": "Marriage and Families",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "103",
+                        "title": "Marriage, Family and Intimacy",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "RECOMMENDED PREPARATION",
+      "groups": [
+        {
+          "group_id": "1dc56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NUR SCI",
+                        "number": "116",
+                        "title": "Human Growth and Development through the Lifespan",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "145",
+                        "title": "Human Development",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NUR SCI",
+                        "number": "50",
+                        "title": "Nutrition Across the Lifespan",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BMS",
+                        "number": "128",
+                        "title": "Human Nutrition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Bachelor of Science degree program in Nursing Science prepares graduates to function as generalists in professional nursing practice and to collaborate with other health care providers in clinics, hospitals, and community health settings. The undergraduate curriculum is designed to provide theory and research-based clinical experiences that integrate critical thinking, compassion, and caring behaviors that build clinical expertise. Students who successfully complete the B.S. degree in Nursing Science are eligible to take the national licensing examination (NCLEX) to become a registered nurse. This major does not participate in the TAG program or Honors to Honors partnership. Required for admission: All applicants must have a cumulative UC transferable GPA of 3.0 or higher and complete the following with grades of B or better: One quarter/semester of foundational biology equivalent to UCI's BIO SCI 93, One year of general chemistry equivalent to UCI's CHEM 1A-B-C, One quarter/semester of genetics equivalent to UCI's BIO SCI 97, One quarter/semester of human physiology with laboratory equivalent to UCI's BIO SCI E109 and BIO SCI E112L or PHRMSCI 120 and PHRMSCI 120L, One quarter/semester of microbiology with laboratory equivalent to UCI's BIO SCI M122 and BIO SCI M118L or BIO SCI M115, One quarter/semester of human anatomy with laboratory equivalent to UCI's BIO SCI D170, One quarter/semester of philosophy equivalent to UCI's PHILOS 4 or PHILOS 5, One quarter/semester of psychology equivalent to UCI's COGS 7A or PSCI 9, One quarter/semester of public health equivalent to UCI's PUBHLTH 1, One quarter/semester of statistics equivalent to UCI's PSYCH 10A or SOC SCI 10A or SOCIOL 10A or STATS 7 or STATS 8, and One quarter/semester of sociology equivalent to UCI's ANTHRO 2A or ANTHRO 2D or ANTHRO 41A or SOC SCI 1A or SOCIOL 1 or SOCIOL 2 or SOCIOL 3 or SOCIOL 31 or SOCIOL 44 or SOCIOL 62 Recommended: ﻿ One quarter/semester of lifespan/developmental psychology equivalent to UCI's NUR SCI 116 One quarter/semester of nutrition equivalent to UCI's NUR SCI 50 Completion of prerequisite courses within the last 5 years"
+  ]
+}

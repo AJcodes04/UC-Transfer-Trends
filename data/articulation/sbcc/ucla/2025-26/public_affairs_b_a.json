@@ -4,14 +4,94 @@
   "major": "Public Affairs/B.A.",
   "academic_year": "2025-26",
   "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
-  "scraped_at": "2026-04-01T23:46:29.777716",
+  "scraped_at": "2026-04-02T04:52:41.456901",
   "sections": [
     {
       "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
       "groups": [
         {
-          "group_id": "82af6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_id": "78af6f45-6887-ef11-8474-000d3a37e3b6",
           "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PUB AFF",
+                        "number": "40",
+                        "title": "Microeconomics for Public Affairs",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Economics(Microeconomics)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "11",
+                        "title": "Microeconomic Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "101",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PUB AFF",
+                        "number": "60",
+                        "title": "Using Data to Learn about Society: Introduction to Empirical Research and Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "82af6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
           "group_label": null,
           "group_logic": "COMPLETE_ALL",
           "select_n": null,
@@ -37,6 +117,96 @@
                         "prefix": "SOC",
                         "number": "109",
                         "title": "Social Problems",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PUB AFF",
+                        "number": "20",
+                        "title": "Power, Politics, and Policy Change",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "POL SCI",
+                        "number": "40",
+                        "title": "Introduction to American Politics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "C1000",
+                        "title": "American Government and Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PUB AFF",
+                        "number": "30",
+                        "title": "Comparative Analysis of Wealth, Policy, and Power",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "POL SCI",
+                        "number": "50",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "131",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PUB AFF",
+                        "number": "50",
+                        "title": "Foundations and Debates in Public Thought",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "POL SCI",
+                        "number": "10",
+                        "title": "Introduction to Political Theory",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "132",
+                        "title": "Political Thinking",
                         "units": 3.0
                       }
                     ],

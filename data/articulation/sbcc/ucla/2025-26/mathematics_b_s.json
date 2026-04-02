@@ -4,7 +4,7 @@
   "major": "Mathematics/B.S.",
   "academic_year": "2025-26",
   "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
-  "scraped_at": "2026-04-01T23:32:38.305064",
+  "scraped_at": "2026-04-02T04:21:32.607667",
   "sections": [
     {
       "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
@@ -353,6 +353,36 @@
                         "number": "205",
                         "title": "Introduction to Logic",
                         "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5B",
+                        "title": "Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5C",
+                        "title": "Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "111",
+                        "title": "Introductory Physics",
+                        "units": 4.0
                       }
                     ],
                     "logic": "SINGLE"

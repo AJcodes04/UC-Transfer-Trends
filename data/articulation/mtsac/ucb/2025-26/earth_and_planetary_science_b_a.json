@@ -1,0 +1,482 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Earth and Planetary Science, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T18:30:10.712589",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "c5b73d49-a0b9-40e1-9edd-019916a1c43d__sec0",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "50H",
+                        "title": "General Chemistry I - Honors",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "51H",
+                        "title": "General Chemistry II - Honors",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "50",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "51",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EPS",
+                        "number": "50",
+                        "title": "The Planet Earth (includes lab)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "1",
+                        "title": "Physical Geology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Biology for Majors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "4H",
+                        "title": "Biology for Majors - Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EPS",
+                        "number": "82",
+                        "title": "Oceans",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "c5b73d49-a0b9-40e1-9edd-019916a1c43d__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "51",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Calculus and Analytic Geometry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "52",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "181",
+                        "title": "Calculus and Analytic Geometry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Calculus and Analytic Geometry III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "285",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "260",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "290",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "285",
+                        "title": "Differential Equations and Linear Algebra for Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Calculus and Analytic Geometry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "181",
+                        "title": "Calculus and Analytic Geometry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "c5b73d49-a0b9-40e1-9edd-019916a1c43d__sec2",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Engineering Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Engineering Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7C",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Engineering Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8A",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2AG",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8B",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2BG",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. More information on new polices is available on the L&S Transfer Student Applicants website. By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on L&S General Education requirements: For information on courses that will satisfy L&S General Education (Essential Skills and Seven-Course Breadth) requirements from your community college complete the following steps: Go to \"Search below for articulation agreements: Major, department, and campus-specific general education agreements” Click on the down arrow to select: Academic Year, Institution: UC Berkeley , and Agreements with Other Institutions: (Your CA Community College). Click on “View Agreements”. Under “View Agreement by” select “ General Education/Breadth ”. Click on the “General Education/Breadth” radio button, then click on “View Agreement” Learn more from the UC Berkeley Office of Undergraduate Admission and specifically about transfer admission preparation. Review all available majors at UC Berkeley .",
+    "Fall 2026 Admission for this Major: Transfer students who select this major on their College of Letters and Science (L&S) application and are offered admission to L&S will be directly admitted into this major. If you are interested in this major, it is very important to select this major on your application, and complete as many lower-division major requirements as possible prior to transfer. See details on preparation for this major below. The Department of Earth and Planetary Science (EPS) offers six undergraduate specializations leading to a B.A. degree in one of the following specializations : - Atmospheric Science; - Environmental Earth Science; - Geology; - Geophysics; - Marine Science; and - Planetary Science. The degree provides quantitative studies of the earth and is an excellent program toward further studies in graduate school or for active roles in environmental decision making, teaching in high schools, and for job opportunities requiring a basic understanding of natural sciences. All specializations require Chemistry 1A & 1AL and EPS 50 Atmospheric Science, Geophysics, and Planetary Science: Math 51 Math 52 Math 53 Math 54 Physics 7A Physics 7B Physics 7C Geology: Math 51 Math 52 Physics 7A Physics 7B Marine Science: Math 51 or Math 16A or Math 10A Math 52 or Math 16B or Math 10B Biology 1B Physics 8A or 7A Physics 8B or 7B EPS 82 Environmental Earth Science: Math 51 or Math 16A or Math 10A Math 52 or Math 16B or Math 10B Biology 1B Physics 8A or 7A Physics 8B or 7B For more information: Anna Atkinson, Undergraduate Major Advisor Department of Earth and Planetary Science epsua@berkeley.edu https://eps.berkeley.edu",
+    "The Department of Earth and Planetary Science accepts the following AP/IB exam scores and A-Level grades as course equivalencies for EPS specializations: AP Calc AB – score of 3, 4, 5 for Math 51 AP Calc BC – score of 3 or 4 for Math 51; score of 5 for Math 52 AP Chem – score of 3, 4 or 5 meets Chem 1A and 1AL; 4 or 5 meets Chem 3A AP Bio – score of 4 or 5 for Biology 1A and 1B IB Math Higher Level (grades 5, 6 or 7) - Math 51 Equivalency A-Level Math (grade of \"B\" or better - Math 51 Equivalency A-Level Further Math (grade of \"B\" or better) - Math 51 & Math 52 Equivalency Please note that each college/department may have different score requirements. Questions? Contact epsua@berkeley.edu"
+  ]
+}

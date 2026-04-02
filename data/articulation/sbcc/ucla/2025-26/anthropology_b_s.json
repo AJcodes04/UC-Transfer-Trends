@@ -4,7 +4,7 @@
   "major": "Anthropology/B.S.",
   "academic_year": "2025-26",
   "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
-  "scraped_at": "2026-04-01T23:43:05.423267",
+  "scraped_at": "2026-04-02T04:45:02.111521",
   "sections": [
     {
       "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
@@ -140,7 +140,7 @@
         {
           "group_id": "82c36f45-6887-ef11-8474-000d3a37e3b6",
           "group_number": 2,
-          "group_label": "Select A or B",
+          "group_label": "Select A, B, or C",
           "group_logic": "SELECT_ONE",
           "select_n": null,
           "options": [
@@ -312,6 +312,41 @@
                   }
                 }
               ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "40",
+                        "title": "Statistics of Biological Systems",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "13",
+                        "title": "Introduction to Statistical Methods for Life and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -464,6 +499,54 @@
                     "courses": [
                       {
                         "prefix": "CHEM",
+                        "number": "20A",
+                        "title": "Chemical Structure",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20B",
+                        "title": "Chemical Energetics and Change",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20L",
+                        "title": "General Chemistry Laboratory",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "30AL",
+                        "title": "General Chemistry Laboratory II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "155",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "156",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
                         "number": "30A",
                         "title": "Organic Chemistry I: Structure and Reactivity",
                         "units": 4.0
@@ -484,6 +567,62 @@
                         "number": "221",
                         "title": "Organic Chemistry Laboratory I",
                         "units": 2.3
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "97c36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5A",
+                        "title": "Physics for Life Sciences Majors: Mechanics and Energy",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5B",
+                        "title": "Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5C",
+                        "title": "Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "111",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "110",
+                        "title": "Introductory Physics",
+                        "units": 4.0
                       }
                     ],
                     "logic": "AND"

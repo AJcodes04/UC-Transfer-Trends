@@ -1,0 +1,252 @@
+{
+  "sending_institution": "Santa Barbara City College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "East Asian Cultures, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T06:37:49.606259",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "1fd86f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHINESE",
+                        "number": "1C",
+                        "title": "Fundamental Mandarin Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "101",
+                        "title": "Beginning Chinese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHIN",
+                        "number": "102",
+                        "title": "Beginning Chinese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHINESE",
+                        "number": "2C",
+                        "title": "Intermediate Mandarin Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "103",
+                        "title": "Intermediate Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPANSE",
+                        "number": "1C",
+                        "title": "Fundamental Japanese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "102",
+                        "title": "Beginning Japanese II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "JAPN",
+                        "number": "101",
+                        "title": "Beginning Japanese I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPANSE",
+                        "number": "2C",
+                        "title": "Intermediate Japanese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "103",
+                        "title": "Intermediate Japanese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "JAPN",
+                        "number": "104",
+                        "title": "Intermediate Japanese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "KOREAN",
+                        "number": "1C",
+                        "title": "Fundamentals of Korean",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "KOR",
+                        "number": "102",
+                        "title": "Beginning Korean II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "KOR",
+                        "number": "101",
+                        "title": "Beginning Korean I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "26d86f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EAS",
+                        "number": "15C",
+                        "title": "Introductory Topics in Chinese Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EAS",
+                        "number": "15J",
+                        "title": "Introductory Topics in Japanese Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EAS",
+                        "number": "15K",
+                        "title": "Introductory Topics in Korean Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Students interested in this major must meet the following requirements. Required for admission : Meet all basic UC admission requirements with a minimum grade of C or better Have a cumulative UC transferable GPA of 2.7 (3.4 for TAG) Recommended for admission : Lower Division Major Preparation Courses Language Other Than English: College-level language other than English coursework through the 4th semester or 6th quarter level. Review the two-year Language other than English school requirement, and prepare accordingly: www.humanities.uci.edu/undergrad/academics/lang.php This is in addition to the UCI General Education Language Other than English requirement. Humanities Core Alternative or Humanities Core: Complete four semesters/six quarters, or a combination thereof, including at least one lower-division course in each of the following four areas: composition, literature, history and philosophy (a course is not required in the area of student's major). To reach the total number of courses required, additional courses approved for UCI General Education Category IV in Humanities disciplines outside the major can be selected; OR Complete a one-year lower-division humanities sequence which deals with problems of concern to the disciplines of history, literature, and philosophy, and which emphasizes the reading and analysis of significant texts For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue. For more information regarding the UC Irvine Transfer Admission Guarantee Program, please visit TAG"
+  ]
+}

@@ -4,14 +4,118 @@
   "major": "Chemical Engineering/ B.S",
   "academic_year": "2025-26",
   "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
-  "scraped_at": "2026-04-01T23:43:19.029750",
+  "scraped_at": "2026-04-02T04:45:32.755017",
   "sections": [
     {
       "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
       "groups": [
         {
-          "group_id": "efc36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_id": "e8c36f45-6887-ef11-8474-000d3a37e3b6",
           "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "20A",
+                        "title": "Chemical Structure",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20B",
+                        "title": "Chemical Energetics and Change",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20L",
+                        "title": "General Chemistry Laboratory",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "30AL",
+                        "title": "General Chemistry Laboratory II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "155",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "156",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "30A",
+                        "title": "Organic Chemistry I: Structure and Reactivity",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "30B",
+                        "title": "Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "211",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "221",
+                        "title": "Organic Chemistry Laboratory I",
+                        "units": 2.3
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "212",
+                        "title": "Organic Chemistry II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "efc36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
           "group_label": null,
           "group_logic": "COMPLETE_ALL",
           "select_n": null,
@@ -168,8 +272,76 @@
           ]
         },
         {
+          "group_id": "f3c36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1B",
+                        "title": "Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1C",
+                        "title": "Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "4AL",
+                        "title": "Physics Laboratory for Scientists and Engineers: Mechanics",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "123",
+                        "title": "Heat, Light and Modern Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "122",
+                        "title": "Electricity and Magnetism",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "121",
+                        "title": "Mechanics of Solids and Fluids",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "group_id": "fac36f45-6887-ef11-8474-000d3a37e3b6",
-          "group_number": 2,
+          "group_number": 4,
           "group_label": null,
           "group_logic": "COMPLETE_ALL",
           "select_n": null,
@@ -219,7 +391,7 @@
         },
         {
           "group_id": "fcc36f45-6887-ef11-8474-000d3a37e3b6",
-          "group_number": 3,
+          "group_number": 5,
           "group_label": null,
           "group_logic": "COMPLETE_ALL",
           "select_n": null,

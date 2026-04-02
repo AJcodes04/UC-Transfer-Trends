@@ -1,0 +1,444 @@
+{
+  "sending_institution": "Santa Barbara City College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Community & Regional Development B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T05:48:44.181641",
+  "sections": [
+    {
+      "section_title": "ECONOMICS",
+      "groups": [
+        {
+          "group_id": "7eb36845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001A",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "101H",
+                        "title": "Microeconomics, Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "101",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001B",
+                        "title": "Principles of Macroeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Macroeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "102H",
+                        "title": "Macroeconomics, Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "82b36845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMN",
+                        "number": "001",
+                        "title": "Introduction to Public Speaking",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "C1000",
+                        "title": "Introduction to Public Speaking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "C1000H",
+                        "title": "Introduction to Public Speaking - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM",
+                        "number": "001",
+                        "title": "Major Works of the Ancient World",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "231",
+                        "title": "World Literature: Ancient Times to 16th Century",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM",
+                        "number": "002",
+                        "title": "Major Works of the Medieval & Early Modern World",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "231",
+                        "title": "World Literature: Ancient Times to 16th Century",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "232",
+                        "title": "World Literature: 17th Century to Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM",
+                        "number": "003",
+                        "title": "Major Works of the Modern World",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "232",
+                        "title": "World Literature: 17th Century to Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "003",
+                        "title": "Introduction to Literature ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "111",
+                        "title": "Critical Thinking and Composition Through Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "111H",
+                        "title": "Critical Thinking and Composition through Literature, Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NAS",
+                        "number": "005",
+                        "title": "Introduction to Native American Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NATA",
+                        "number": "113",
+                        "title": "The Indian in Literature: Fact and Fiction",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UWP",
+                        "number": "001",
+                        "title": "Introduction to Academic Literacies ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000E",
+                        "title": "Academic Reading and Writing",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000H",
+                        "title": "Academic Reading and Writing - Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000",
+                        "title": "Academic Reading and Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SOCIAL SCIENCE",
+      "groups": [
+        {
+          "group_id": "89b36845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANT",
+                        "number": "002",
+                        "title": "Cultural Anthropology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "103",
+                        "title": "Introduction to Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "101H",
+                        "title": "Introduction to Sociology, Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STATISTICS",
+      "groups": [
+        {
+          "group_id": "79b36845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "125",
+                        "title": "Introduction to Statistics in Sociology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "150",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Community & Regional Development major aims to provide a broad comparative understanding of theories, methodologies, and issues relevant to the study of communities and the people in them. The program focuses on the ways that economic, political and socio-cultural forces are transforming the world, countries, regions, and local communities, and helps students organize their knowledge to improve the health, sustainability, prosperity, and equity of communities.. Principal subjects of study within the major are community, regional, and organizational development; social change processes; community and regional research methodologies; the role of class, ethnicity, gender, and race in shaping social life; the impacts of innovation and technology on communities, and the effects of social, economic and political systems on regions. The major is organized flexibly to allow students to develop fields of concentration that meet their learning and career goals and to develop the capacities to grow as leaders in their chosen field.",
+    "Community and Regional Development students are required to complete an internship in their field before graduation. Internships have been arranged with local, county, and state planning units, health departments, schools, housing offices, businesses, and education programs, among others. Community and Regional Development graduates are prepared for occupations in city and regional planning, community development, non-profit leadership, social research, education, program evaluation, organizational and educational consulting, and business and social entrepreneurship organizations. The major also provides effective preparation for graduate or professional study in the social and behavioral sciences or for professional degrees (such as city and regional planning, law, public health, education).",
+    "At the time of TAG submission, this major requires a minimum 3.20 cumulative GPA, with no grade lower than a C to receive a Transfer Admission Guarantee.",
+    "This major is not currently screening for major preparation at the time of admission; however, it is strongly encouraged that you complete as many major preparation courses as possible prior to transfer. Incomplete foundational coursework may delay your ability to graduate on time. Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB ."
+  ]
+}

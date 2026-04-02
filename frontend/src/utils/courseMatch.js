@@ -129,7 +129,10 @@ export function checkGroupSatisfied(group, userCourseMap) {
 /**
  * Compute total and satisfied requirement counts for an agreement.
  *
- * Each RequirementGroup counts as exactly ONE requirement.
+ * Counting strategy per group_logic:
+ *   COMPLETE_ALL — each row is a separate required course, so count rows individually.
+ *   SELECT_ONE   — pick one pathway, counts as 1 requirement.
+ *   SELECT_N     — pick N courses, counts as N requirements.
  *
  * Handles both formats:
  *   New: sections[].groups[]   — proper group-aware counting
@@ -148,13 +151,31 @@ export function computeRequirementStats(agreement, userCourseMap) {
     if (groups.length > 0) {
       // ── New format ────────────────────────────────────────────────────
       for (const group of groups) {
-        // Skip groups with no rows (no articulation data at all)
-        const hasRows = (group.options || []).some((o) => (o.rows || []).length > 0)
-        if (!hasRows) continue
+        const options = group.options || []
+        const allRows = options.flatMap((o) => o.rows || [])
+        if (allRows.length === 0) continue
 
-        total++
-        const status = checkGroupSatisfied(group, userCourseMap)
-        if (status === 'satisfied') satisfied++
+        const logic = group.group_logic || 'COMPLETE_ALL'
+
+        if (logic === 'SELECT_ONE') {
+          // One pathway to choose — counts as 1 requirement
+          total++
+          if (checkGroupSatisfied(group, userCourseMap) === 'satisfied') satisfied++
+        } else if (logic === 'SELECT_N') {
+          // Must complete N courses — counts as N requirements
+          const n = group.select_n || 1
+          total += n
+          const satisfiedCount = allRows.filter(
+            (r) => checkRowSatisfied(r, userCourseMap) === 'satisfied'
+          ).length
+          satisfied += Math.min(satisfiedCount, n)
+        } else {
+          // COMPLETE_ALL — each row is a required course
+          for (const row of allRows) {
+            total++
+            if (checkRowSatisfied(row, userCourseMap) === 'satisfied') satisfied++
+          }
+        }
       }
     } else {
       // ── Old format fallback ───────────────────────────────────────────

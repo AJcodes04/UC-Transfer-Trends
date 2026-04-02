@@ -1,0 +1,383 @@
+{
+  "sending_institution": "Santa Barbara City College",
+  "receiving_institution": "University of California, Merced",
+  "major": "DATA SCIENCE AND COMPUTING, Biology Emphasis, B.S. (Transfer Starting Fall 2026)",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T10:52:11.737341",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "c7c22c41-ef92-40aa-817a-01929c579b9e",
+          "group_number": 1,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "011",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "012",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "131",
+                        "title": "Calculus for Biological Sciences, Social Sciences and Business II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "021",
+                        "title": "Calculus I for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Calculus with Analytic Geometry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "022",
+                        "title": "Calculus II for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "160",
+                        "title": "Calculus with Analytic Geometry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "82fef68b-a6ee-494c-b3b6-01929c579b9f",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "024",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "220",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "210",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "8856eb98-f625-4df3-99ce-01929c579b9f",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "011",
+                        "title": "Introduction to Molecular Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "011L",
+                        "title": "Introduction to Molecular Biology Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "103",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "012",
+                        "title": "Introduction to Organismal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "012L",
+                        "title": "Introduction to Organismal Biology Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "101",
+                        "title": "Plant Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "102",
+                        "title": "Animal Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "d452d5fa-a2d5-49e7-bb21-01929c5a9d34",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000H",
+                        "title": "Academic Reading and Writing - Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000E",
+                        "title": "Academic Reading and Writing",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000",
+                        "title": "Academic Reading and Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "cb703273-95f5-4103-b50a-01929c5a9d35",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "111H",
+                        "title": "Critical Thinking and Composition through Literature, Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "235",
+                        "title": "Argumentation and Debate",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHIL",
+                        "number": "111",
+                        "title": "Critical Thinking and Writing in Philosophy",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "111",
+                        "title": "Critical Thinking and Composition Through Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1001",
+                        "title": "Critical Thinking and Writing",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "What is Data Science and Computing? Nearly every feature of our society has been touched by the accumulation of data at different scales and, as such, data science — the analysis and extraction of knowledge and meaning from data — has become an established field and highly sought-after career. The ability to collect, model and analyze vast volumes of data has transformed scientific, commercial, and humanitarian enterprises and institutions, bringing significant advances such as individualized cancer therapies and facial recognition-based security technologies. However, the abundant use and sharing of data and algorithms raise pressing ethical challenges. The Data Science and Computing Program major and minor inclusively empower UC Merced undergraduates to creatively and ethically apply data science mastery to any scientific domain of study at UC Merced, as well as to the academic, commercial, and humanitarian pursuits of their dreams. Graduates will be prepared to tackle real-world problems with foundational skills and knowledge in communication, ethics, computing, statistics, machine learning and domain applications. Graduates will be prepared to enter careers in technology, public service, academic research, and many other fields where rigorous and ethical analysis of large data sets is crucial to success. The program's curriculum is tailor-made for data scientists, providing the specific core skills and knowledge that are sought after by employers seeking to hire data science graduates. The Data Science and Computing Major includes domain specializations for every major program within the School of Natural Sciences as well as programs in other schools. Students may design their own custom domain specializations. The Data Science and Computing Minor provides a calculus-free path to Data Science education that can be flexibly combined with any other Major on campus.",
+    "Thank you for your interest in UC Merced! For admission to the Data Science and Computing, Biology Emphasis, B.S. major, students must earn an overall transferable GPA of 2.8 or better, and must complete classes articulated with the following UC Merced courses by the end of spring term prior to fall enrollment or by the end of fall term prior to spring enrollment. For Admission purposes all Major Preparation courses require a \"C\" or better. REQUIRED Major Preparation Courses For Transfer: MATH 011 or MATH 21 MATH 012 or MATH 22 MATH 024 or MATH 041 Additional Recommended Major Preparation Courses : Recommended Prior To Transfer: DSC 008 DSC 011 BIO 011 & BIO 011L BIO 012 & BIO 012L MATH 032 AP Exam Score & Course Exemptions An AP Mathematics: Calculus AB score of 4 or 5 exempts Math 021 An AP Mathematics: Calculus BC score of 4 or 5 exempts Math 021 and Math 022 An AP Mathematics: Calculus BC score of 3 exempts MATH 021 An AP Mathematics: Calculus BC Subscore AB score of 3 or higher exempts Math 021 An AP Chemistry score of 5 exempts CHEM 002 & CHEM 002L and CHEM 010 & CHEM 010L An AP Computer Science: Comp Science A score of 5 exempts CSE 022 An AP Physics: Physics C: Mechanics score of 5 exempts PHYS 008 and PHYS 008L UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: A dvance Placement (AP) and International Baccalaureate (IB) Examinations",
+    "Please read the catalog page for more information about the Data Science and Computing, Biology Emphasis, B.S. major . In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC/Cal-GETC 1A - English Composition. WRI 010 is fulfilled by IGETC/Cal-GETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): While general education is not required for admission, it can help speed up your time to graduation once you transfer to UC Merced. We highly recommend reviewing the Transfer Students: Satisfying General Education page in the catalog for a more extensive explanation of the requirements. IGETC/Cal-GETC is acceptable for students planning to transfer into the School of Natural Sciences. Students are encouraged to prioritize as much lower-division major preparation as possible before transferring to ensure a smooth transition and timely progress toward their degree. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu ."
+  ]
+}

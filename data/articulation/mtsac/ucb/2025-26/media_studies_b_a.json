@@ -1,0 +1,293 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Media Studies, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T18:37:41.351789",
+  "sections": [
+    {
+      "section_title": "GROUP I",
+      "groups": [
+        {
+          "group_id": "59e56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7B",
+                        "title": "The United States from Civil War to Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "8H",
+                        "title": "History of the United States from 1865 - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "8",
+                        "title": "History of the United States from 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "GROUP II",
+      "groups": [
+        {
+          "group_id": "5ee56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "1",
+                        "title": "Introduction to American Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "C1000",
+                        "title": "American Government and Politics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "POLS",
+                        "number": "C1000H",
+                        "title": "American Government and Politics - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "GROUP III",
+      "groups": [
+        {
+          "group_id": "5de56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "Introduction to Social and Cultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "5",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUSC",
+                        "number": "1B",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BUSC",
+                        "number": "1A",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BUSC",
+                        "number": "1AH",
+                        "title": "Principles of Macroeconomics - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BUSC",
+                        "number": "1BH",
+                        "title": "Principles of Microeconomics - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "1",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "C1000H",
+                        "title": "Introduction to Psychology - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "C1000",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "GROUP IV",
+      "groups": [
+        {
+          "group_id": "5fe56f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MEDIAST",
+                        "number": "10",
+                        "title": "Introduction to Media Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. More information on new polices is available on the L&S Transfer Student Applicants website. By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on L&S General Education requirements: For information on courses that will satisfy L&S General Education (Essential Skills and Seven-Course Breadth) requirements from your community college complete the following steps: Go to \"Search below for articulation agreements: Major, department, and campus-specific general education agreements” Click on the down arrow to select: Academic Year, Institution: UC Berkeley , and Agreements with Other Institutions: (Your CA Community College). Click on “View Agreements”. Under “View Agreement by” select “ General Education/Breadth ”. Click on the “General Education/Breadth” radio button, then click on “View Agreement” Learn more from the UC Berkeley Office of Undergraduate Admission and specifically about transfer admission preparation. Review all available majors at UC Berkeley .",
+    "Exam credits, including AP scores, cannot be used to satisfy the major prerequisites.",
+    "ONE COURSE FROM EACH OF THE FOLLOWING FOUR GROUPS:",
+    "The Media Studies major integrates perspectives from liberal arts, social sciences, and humanities and offers an interdisciplinary framework to understand the essential role that media plays in economic, social, political, and cultural life. It weds traditions from communication, history, anthropology, sociology, political science, and more with critical theories and cultural studies to analyze the role and meaning of media in our societies. Our emphasis in this major is historical and theoretical, examining media systems, institutions, technologies, policies, and practices. We offer students the analytical tools available to investigate media—old and new, local and global—across the diverse media landscape. The Media Studies major offers three areas of concentration: Digital Studies, Global Cultural Studies, or Media Law and Policy. Declaring the Media Studies Major Admission to UC Berkeley with the stated intent to major in Media Studies does not guarantee acceptance into the major. A major declaration is required after arrival at Berkeley. To be eligible to declare the major, students must 1) complete all four prerequisites; 2) have a C or better in each of the four prerequisites; and 3) have a GPA of 2.0 in the prerequisites and any course that applies to the major course requirements. All courses for the major, including prerequisites, must be taken for a letter grade. Media Studies 10 must be completed at UC Berkeley. Any Media Studies 10 transfer course equivalents completed after summer 2020 will not satisfy the Media Studies 10 requirement. Media Studies 10 is often offered in the summer at UC Berkeley. Summer courses are open to students from other schools. Transfer students are not expected to take Media Studies 10 before applying to UC Berkeley. Exam (i.e. AP/IB) credit cannot be used to satisfy any major requirements. Students must take courses to satisfy major requirements. For more information about the Media Studies major, visit the Media Studies website . We encourage students to read it in its entirety. Declaring the major as early as possible will better ensure that students can graduate on time. For more information: https://mediastudies.ugis.berkeley.edu/ Laura Demir, Student Academic Advisor mediastudies_advising@berkeley.edu Chelsea Prieto, Student Academic Advisor mediastudies_advising@berkeley.edu Josh Jackson, Assistant Director and Faculty Advisor joshjackson@berkeley.edu"
+  ]
+}

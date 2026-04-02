@@ -1,0 +1,94 @@
+{
+  "sending_institution": "Santa Barbara City College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "East Asian Studies Minor",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T07:53:59.364853",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MINOR",
+      "groups": [
+        {
+          "group_id": "6c936f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "1",
+                        "title": "First-Year Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "101",
+                        "title": "Beginning Chinese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHIN",
+                        "number": "102",
+                        "title": "Beginning Chinese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "1",
+                        "title": "First-Year Japanese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "101",
+                        "title": "Beginning Japanese I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "JAPN",
+                        "number": "102",
+                        "title": "Beginning Japanese II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC Santa Cruz students may complete one or more minors, provided they can finish all required coursework within their maximum enrollment terms and credit limits. Minors are recorded on the official transcript but do not appear on the diploma. Pursuing a minor is optional and should align with a student’s academic interests and career goals. Students do not apply for minors as part of their UC Santa Cruz admission application. Transfer students interested in a minor should reach out to the department that offers it for advising during their first quarter of enrollment.",
+    "PREPARATION FOR THE MINOR Transfer students interested in this minor are encouraged to complete the articulated equivalents of TWO of the following courses prior to transfer: ONE of the following: CHIN 1 – First-Year Chinese JAPN 1 – First-Year Japanese ONE of the following: HIS 40A – Early Modern East Asia HIS 40B – The Making of Modern East Asia Refer to the \" Preparation for the Minor \" section below for courses approved to articulate to these requirements. LANGUAGE REQUIREMENT All East Asian Studies minors are expected to gain proficiency in Chinese or Japanese language. Students with prior knowledge of Chinese or Japanese are required to complete a language placement exam to determine which UCSC course of Chinese or Japanese language instruction best suits their skill level. Instructions for the placement exam may be found on the Languages and Applied Linguistics website . Students may also pursue study abroad opportunities as a way of acquiring Chinese or Japanese language instruction. Visit the East Asian Studies website to learn more about this minor. UC Santa Cruz General Catalog: East Asian Studies Minor Program Statement"
+  ]
+}

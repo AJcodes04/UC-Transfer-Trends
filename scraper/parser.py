@@ -646,32 +646,67 @@ def _parse_articulation_entry(entry: dict) -> Optional[ArticulationRow]:
     """
     Parse one entry from the articulations array.
 
-    Each entry maps one UC (receiving) course to zero or more CC (sending) courses.
-    The structure is:
+    TWO formats exist depending on whether the UC side is a single course or a
+    multi-course sequence:
+
+    Single course (art.type != "Series"):
       {
         "templateCellId": "uuid",
         "articulation": {
-          "course": { ... },              ← UC course
-          "sendingArticulation": { ... }  ← CC course options
+          "course": { "prefix": "MATH", "courseNumber": "3A", ... },
+          "sendingArticulation": { ... }
         }
       }
+
+    Series / sequence (art.type == "Series"):
+      {
+        "templateCellId": "uuid",
+        "articulation": {
+          "type": "Series",
+          "series": {
+            "conjunction": "And",
+            "courses": [
+              { "prefix": "CHEM", "courseNumber": "1A", ... },
+              { "prefix": "CHEM", "courseNumber": "1B", ... },
+              ...
+            ]
+          },
+          "sendingArticulation": { ... }
+        }
+      }
+
+    Series entries appear for requirements like "CHEM 1A AND 1B AND 1C" where
+    the entire sequence together satisfies a group.  Without handling this,
+    the whole chemistry / physics group rows are silently dropped.
     """
     art = entry.get("articulation", {})
     if not art:
         return None
 
-    # ── Receiving (UC) course ──────────────────────────────────────────────
-    course_data = art.get("course", {})
-    if not course_data:
-        return None
+    art_type = art.get("type", "")
 
-    receiving_course = Course(
-        prefix=course_data.get("prefix", ""),
-        number=course_data.get("courseNumber", ""),
-        title=course_data.get("courseTitle", ""),
-        units=course_data.get("minUnits"),
-    )
-    receiving = CourseGroup(courses=[receiving_course], logic=CourseLogic.SINGLE)
+    # ── Series: multi-course UC sequence ──────────────────────────────────
+    if art_type == "Series":
+        series = art.get("series", {})
+        series_courses_raw = series.get("courses", []) if isinstance(series, dict) else []
+        receiving_courses = [c for c in (_parse_course(cd) for cd in series_courses_raw) if c]
+        if not receiving_courses:
+            return None
+        logic = CourseLogic.AND if len(receiving_courses) > 1 else CourseLogic.SINGLE
+        receiving = CourseGroup(courses=receiving_courses, logic=logic)
+
+    # ── Single course ──────────────────────────────────────────────────────
+    else:
+        course_data = art.get("course", {})
+        if not course_data:
+            return None
+        receiving_course = Course(
+            prefix=course_data.get("prefix", ""),
+            number=course_data.get("courseNumber", ""),
+            title=course_data.get("courseTitle", ""),
+            units=course_data.get("minUnits"),
+        )
+        receiving = CourseGroup(courses=[receiving_course], logic=CourseLogic.SINGLE)
 
     # ── Sending (CC) courses ───────────────────────────────────────────────
     sending_art = art.get("sendingArticulation", {})

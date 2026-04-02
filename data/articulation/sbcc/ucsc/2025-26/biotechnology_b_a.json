@@ -1,0 +1,247 @@
+{
+  "sending_institution": "Santa Barbara City College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Biotechnology B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T07:57:49.541051",
+  "sections": [
+    {
+      "section_title": "REQUIRED MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "de776f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "20A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "103",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "20",
+                        "title": "Beginning Programming in Python",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "104",
+                        "title": "Introduction to Programming",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "4e12597e-0024-41f5-9918-019a28bd0f41",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "5",
+                        "title": "Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "125",
+                        "title": "Introduction to Statistics in Sociology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "150",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "117A",
+                        "title": "Elementary Statistics A",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "117B",
+                        "title": "Elementary Statistics B",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "7",
+                        "title": "Statistical Methods for the Biological, Environmental, and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "150",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "125",
+                        "title": "Introduction to Statistics in Sociology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "117A",
+                        "title": "Elementary Statistics A",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "117B",
+                        "title": "Elementary Statistics B",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "7L",
+                        "title": "Statistical Methods for the Biological, Environmental, and Health Sciences Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "125",
+                        "title": "Introduction to Statistics in Sociology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "150",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "117A",
+                        "title": "Elementary Statistics A",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "117B",
+                        "title": "Elementary Statistics B",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must meet the University of California admissions eligibility requirements and the campus’s admission selection criteria. All requirements must be completed by the end of the spring term prior to transfer. For more information on UC admissions eligibility and admission to UC Santa Cruz, visit the Admissions website . The UC Santa Cruz Transfer Admission Guarantee (TAG) is a formal agreement that guarantees your fall admission to your chosen major, provided you are transferring from a California Community College and meet specific requirements. Visit the UC Santa Cruz TAG webpage for more information.",
+    "THIS IS A SCREENING MAJOR. Screening majors require completion of specific preparatory coursework and/or a minimum GPA. For details on the specific screening requirements for this major, refer to the \" Transfer Admission Screening Policy \" below. Additional coursework listed under \"Recommended Preparation\" is not required for admission but is strongly recommended to support timely degree completion. For more information, including a list of screening majors and non-screening majors , visit the UCSC Admissions website.",
+    "Some Advanced Placement (AP), International Baccalaureate Higher Level (IBH), and Advanced Level (A-level) exams satisfy UCSC course requirements. UCSC's exam credit policies may be found on the Degree Progress Unit website .",
+    "Transfer Admission Screening Policy Transfer applicants must complete the articulated equivalents of the following courses, each with a grade of C (2.0) or better, no later than the end of the spring term prior to starting at UCSC in the fall: BIOL 20A: Cell and Molecular Biology CSE 20: Beginning Programming in Python STAT 5: Statistics OR STAT 7: Statistical Methods for the Biological, Environmental, and Health Sciences AND STAT 7L: Statistical Methods for the Biological, Environmental, and Health Sciences Laboratory Students with a different introductory programming course can still be accepted. Any course with C-ID COMP 112 or C-ID COMP 122 is acceptable. A course teaching Python is preferred even if it does not match either of these C-IDs. CSE 20 can be waived for students who have already completed an upper-division Python programming course. Visit the Baskin Engineering Undergraduate Experience website to learn more about this major. UC Santa Cruz General Catalog: Biotechnology B.A. Program Statement"
+  ]
+}

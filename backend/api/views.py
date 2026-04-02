@@ -73,6 +73,10 @@ MAJOR_ALIASES = {
     'Asian Studies': [
         'Pre-Asian Studies',
     ],
+    'Applied Mathematics' : [
+        'Pre-Applied Mathematics'
+        'Applied and Computational Mathematics'
+    ],
     'Business Economics': [
         'Pre-Business Economics',
         'Business Management - Economics',
@@ -135,6 +139,10 @@ MAJOR_ALIASES = {
     'Art': [
         'Art - Studio',
     ],
+    'Economics' : [
+        'Pre-Economics',
+        'Bachelor of Science in Economics'
+    ],
     'Linguistics':[
         'Applied Linguistics',
         'Applied Linguistics and Multilingualism',
@@ -149,6 +157,13 @@ MAJOR_ALIASES = {
         'Materials Engineering',
         'Materials Science',
     ],
+    'Marine Science' : [
+        'Marine and Coastal Science',
+    ],
+    'Mathematics' :[
+        'Pre-Mathematics'
+    ]
+
 }
 
 MAJOR_ABSORPTIONS = {
@@ -178,6 +193,7 @@ MAJOR_ABSORPTIONS = {
         'Pre-Applied Mathematics',
         'Applied Mathematics',
         'Applied and Computational Mathematics',
+        'Mathematics Education'
     ],
     'Chemistry': [
         'Chemical Biology',

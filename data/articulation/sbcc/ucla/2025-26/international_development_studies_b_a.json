@@ -4,7 +4,7 @@
   "major": "International Development Studies/B.A.",
   "academic_year": "2025-26",
   "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
-  "scraped_at": "2026-04-01T23:42:31.301963",
+  "scraped_at": "2026-04-02T04:43:45.158645",
   "sections": [
     {
       "section_title": "ECONOMICS, GEOGRAPHY, PUBLIC AFFAIRS",
@@ -217,6 +217,36 @@
                         "number": "115",
                         "title": "Introduction to Social Research",
                         "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "12",
+                        "title": "Introduction to Statistical Methods for Geography and Environmental Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
                       }
                     ],
                     "logic": "SINGLE"

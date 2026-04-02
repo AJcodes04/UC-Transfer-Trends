@@ -4,7 +4,7 @@
   "major": "Civil Engineering, B.S.",
   "academic_year": "2025-26",
   "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
-  "scraped_at": "2026-04-01T23:30:07.020766",
+  "scraped_at": "2026-04-02T04:13:53.928968",
   "sections": [
     {
       "section_title": "REQUIRED COURSES FOR ADMISSION",
@@ -41,6 +41,54 @@
                       }
                     ],
                     "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "101",
+                        "title": "Plant Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "102",
+                        "title": "Animal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "103",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
                   }
                 },
                 {
@@ -234,6 +282,50 @@
               ]
             }
           ]
+        },
+        {
+          "group_id": "70e66f45-6887-ef11-8474-000d3a37e3b6__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "155",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ],
       "rows": []
@@ -243,7 +335,7 @@
       "groups": [
         {
           "group_id": "71e66f45-6887-ef11-8474-000d3a37e3b6__sec1",
-          "group_number": 3,
+          "group_number": 4,
           "group_label": null,
           "group_logic": "COMPLETE_ALL",
           "select_n": null,
@@ -281,7 +373,7 @@
         },
         {
           "group_id": "71e66f45-6887-ef11-8474-000d3a37e3b6__sec2",
-          "group_number": 4,
+          "group_number": 5,
           "group_label": null,
           "group_logic": "COMPLETE_ALL",
           "select_n": null,

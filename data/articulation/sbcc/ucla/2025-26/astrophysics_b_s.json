@@ -4,7 +4,7 @@
   "major": "Astrophysics/B.S.",
   "academic_year": "2025-26",
   "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
-  "scraped_at": "2026-04-01T23:42:51.836057",
+  "scraped_at": "2026-04-02T04:44:31.546170",
   "sections": [
     {
       "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
@@ -199,8 +199,82 @@
           ]
         },
         {
-          "group_id": "56c36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_id": "40c36f45-6887-ef11-8474-000d3a37e3b6",
           "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1B",
+                        "title": "Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1C",
+                        "title": "Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "4AL",
+                        "title": "Physics Laboratory for Scientists and Engineers: Mechanics",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "4BL",
+                        "title": "Physics Laboratory for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "123",
+                        "title": "Heat, Light and Modern Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "122",
+                        "title": "Electricity and Magnetism",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "121",
+                        "title": "Mechanics of Solids and Fluids",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "56c36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
           "group_label": null,
           "group_logic": "COMPLETE_ALL",
           "select_n": null,
