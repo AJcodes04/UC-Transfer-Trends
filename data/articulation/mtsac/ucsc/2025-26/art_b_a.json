@@ -1,0 +1,298 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Art B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T02:03:06.401187",
+  "sections": [
+    {
+      "section_title": "REQUIRED MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "429c6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "10D",
+                        "title": "2D Foundation",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "20",
+                        "title": "Design: Two-Dimensional",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "10E",
+                        "title": "3D Foundation",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "22",
+                        "title": "Design: Three-Dimensional",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "RECOMMENDED PREPARATION",
+      "groups": [
+        {
+          "group_id": "c8746f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 3 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 3.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20G",
+                        "title": "Introduction to Print Media and Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "43A",
+                        "title": "Introduction to Printmaking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "43B",
+                        "title": "Intermediate Printmaking in Intaglio and Relief",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "46A",
+                        "title": "Printmaking: Introduction to Monotype",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "44A",
+                        "title": "Printmaking: Introduction to Lithography I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "45A",
+                        "title": "Printmaking: Introduction to Screenprinting",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "45B",
+                        "title": "Printmaking: Intermediate Screenprinting",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20H",
+                        "title": "Introduction to Sculpture and Public Art",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "40B",
+                        "title": "Sculpture: Intermediate",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "40A",
+                        "title": "Sculpture: Beginning",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "41B",
+                        "title": "Sculpture: Intermediate Life",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "41A",
+                        "title": "Sculpture: Life",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20I",
+                        "title": "Introduction to Photography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHOT",
+                        "number": "10",
+                        "title": "Basic Digital and Film Photography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20J",
+                        "title": "Introduction to Drawing and Painting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "25A",
+                        "title": "Beginning Painting I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "26A",
+                        "title": "Intermediate Painting I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "26B",
+                        "title": "Intermediate Painting II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "25B",
+                        "title": "Beginning Painting II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20L",
+                        "title": "Introduction to Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "15A",
+                        "title": "Drawing: Beginning",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTD",
+                        "number": "15B",
+                        "title": "Drawing: Intermediate",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must meet the University of California admissions eligibility requirements and the campus’s admission selection criteria. All requirements must be completed by the end of the spring term prior to transfer. For more information on UC admissions eligibility and admission to UC Santa Cruz, visit the Admissions website . The UC Santa Cruz Transfer Admission Guarantee (TAG) is a formal agreement that guarantees your fall admission to your chosen major, provided you are transferring from a California Community College and meet specific requirements. Visit the UC Santa Cruz TAG webpage for more information.",
+    "THIS IS A SCREENING MAJOR. Screening majors require completion of specific preparatory coursework and/or a minimum GPA. For details on the specific screening requirements for this major, refer to the \" Transfer Admission Screening Policy \" below. Additional coursework listed under \"Recommended Preparation\" is not required for admission but is strongly recommended to support timely degree completion. For more information, including a list of screening majors and non-screening majors , visit the UCSC Admissions website.",
+    "Some Advanced Placement (AP), International Baccalaureate Higher Level (IBH), and Advanced Level (A-level) exams satisfy UCSC course requirements. UCSC's exam credit policies may be found on the Degree Progress Unit website .",
+    "The following transfer screening policy takes effect in fall 2024 and will be mandatory for all transfer students entering UC Santa Cruz fall 2026 and later. Transfer students entering UCSC prior to fall 2026 are encouraged to complete these requirements, but will still be considered for entry into the major if they participate in a portfolio review; see additional information below. Art B.A. Transfer Admission Screening Policy Prospective transfer students planning on majoring in art should complete the following two lower-division courses, or their articulated equivalents, prior to transferring: TWO Foundation courses ART 10D – 2D Foundation ART 10E – 3D Foundation ART 10F – 4D Foundation Students who do not complete two ART 10 equivalent courses before transferring to UC Santa Cruz have the option to undergo a portfolio review, detailed in the section below. Portfolio Review Transfer students who have not completed two ART 10 courses prior to entering UC Santa Cruz and wish to pursue art as a first or second major can participate in a portfolio review to waive this requirement. It is recommended to contact the art advisor about the portfolio review before enrolling in the first quarter. More information about the portfolio review can be found on the Art Department website . Additional Information for Transfer Transfer students are strongly advised to complete up to six preparatory courses listed in the \"Recommended Preparation\" section below. Completing these courses will help ensure timely progress toward degree completion. Students should prioritize required and recommended major preparation courses, and may additionally choose to complete courses that satisfy UC Santa Cruz general education requirements as their time allows. For more information on incorporating general education requirements into your pre-transfer academic plan, please consult with your community college counselor. Transfer students who have completed courses they believe are applicable to the Africa and its Diaspora, Asia and its Diaspora, Europe and the Americas, Mediterranean, Native Americas, and/or Oceania and its Diaspora requirements listed below, but are not included in the articulation agreement, may petition to have these courses apply toward their lower-division Art B.A. requirements. Students should consult with the art advisor about petitioning these courses prior to enrolling in their first quarter. Please visit the Art Department website to learn more about this major. UC Santa Cruz General Catalog: Art B.A. Program Statement"
+  ]
+}

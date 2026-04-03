@@ -1,0 +1,397 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "American Studies, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-02T23:11:53.928136",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "e3db6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AMERSTD",
+                        "number": "10",
+                        "title": "Introduction to American Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "e9db6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 3 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 3,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHICANO",
+                        "number": "40",
+                        "title": "Introduction to Chicano Literature in English",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIT",
+                        "number": "25",
+                        "title": "Contemporary Mexican American Literature",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHICANO",
+                        "number": "50",
+                        "title": "Introduction to Chicano History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "40",
+                        "title": "History of Mexican Americans",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENV DES",
+                        "number": "1",
+                        "title": "Introduction to Environmental Design",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARCH",
+                        "number": "201",
+                        "title": "Design III - Environmental Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESPM",
+                        "number": "60",
+                        "title": "Environmental Policy, Administration, and Law",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "10",
+                        "title": "Environmental Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ETH STD",
+                        "number": "21AC",
+                        "title": "A Comparative Survey of Racial and Ethnic Groups in the U.S.",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "20",
+                        "title": "Introduction to Race and Ethnicity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "20H",
+                        "title": "Introduction to Race and Ethnicity - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "50AC",
+                        "title": "California",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "30",
+                        "title": "Geography of California",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "70AC",
+                        "title": "The Urban Experience",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "8",
+                        "title": "Urban Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7A",
+                        "title": "The United States from Settlement to Civil War",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "7H",
+                        "title": "History of the United States to 1877 - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "7",
+                        "title": "History of the United States to 1877",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7B",
+                        "title": "The United States from Civil War to Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "8H",
+                        "title": "History of the United States from 1865 - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "8",
+                        "title": "History of the United States from 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MEDIAST",
+                        "number": "10",
+                        "title": "Introduction to Media Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "1",
+                        "title": "Introduction to American Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "C1000",
+                        "title": "American Government and Politics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "POLS",
+                        "number": "C1000H",
+                        "title": "American Government and Politics - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UGBA",
+                        "number": "10X",
+                        "title": "Foundations of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUSM",
+                        "number": "20",
+                        "title": "Principles of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. More information on new polices is available on the L&S Transfer Student Applicants website. By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on L&S General Education requirements: For information on courses that will satisfy L&S General Education (Essential Skills and Seven-Course Breadth) requirements from your community college complete the following steps: Go to \"Search below for articulation agreements: Major, department, and campus-specific general education agreements” Click on the down arrow to select: Academic Year, Institution: UC Berkeley , and Agreements with Other Institutions: (Your CA Community College). Click on “View Agreements”. Under “View Agreement by” select “ General Education/Breadth ”. Click on the “General Education/Breadth” radio button, then click on “View Agreement” Learn more from the UC Berkeley Office of Undergraduate Admission and specifically about transfer admission preparation. Review all available majors at UC Berkeley .",
+    "AP and IB scores cannot be used to satisfy major requirements.",
+    "The group major in American Studies offers students the opportunity to study American society using a broad range of methods from a variety of disciplines in L&S and in the professional schools and colleges. Students who are interested in the American Studies major should: - Review the \"American Studies Student Handbook\" available by mail or from the web site below. - Meet with an adviser to plan your program as soon as you are accepted to UC Berkeley. - Of the four lower division requirements (American Studies 10 plus three courses from the list below), only two need to be completed before applying to the major. - Choose three courses from the list of acceptable courses (with no more than two courses from any one department). - Other lower-division courses beyond those listed in section #2 may be approved on a case-to-case basis by an American Studies faculty advisor. For more information: Laura Spautz, Student Academic Advisor American Studies (510) 642-9320 amerstd@berkeley.edu https://as.ugis.berkeley.edu/"
+  ]
+}

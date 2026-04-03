@@ -1,0 +1,302 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Linguistics and Computer Science/B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T03:51:03.680195",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "a8bd6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "61",
+                        "title": "Introduction to Discrete Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Discrete Mathematics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "22H",
+                        "title": "Discrete Mathematics - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "3ebf6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM SCI",
+                        "number": "31",
+                        "title": "Introduction to Computer Science I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "27",
+                        "title": "Programming in C++ for C/Java Programmers",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22BH",
+                        "title": "Intermediate Programming Methodologies in C++ - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "29",
+                        "title": "Advanced C++ Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM SCI",
+                        "number": "32",
+                        "title": "Introduction to Computer Science II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "22A",
+                        "title": "Beginning Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22BH",
+                        "title": "Intermediate Programming Methodologies in C++ - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "27",
+                        "title": "Programming in C++ for C/Java Programmers",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "29",
+                        "title": "Advanced C++ Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22CH",
+                        "title": "Data Abstraction and Structures - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22C",
+                        "title": "Data Abstraction and Structures",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM SCI",
+                        "number": "33",
+                        "title": "Introduction to Computer Organization",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "21JA",
+                        "title": "Introduction to x86 Processor Assembly Language and Computer Architecture",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Linguistics and Computer Science major combines the basic courses of the general linguistics program with that of computer science, accommodating students who want professional preparation in computer science but do not necessarily have a strong interest in computer systems hardware. The goal of linguistics is the enrichment of knowledge about the nature, grammar, and history of human language. Linguistics is a theoretical discipline, akin to philosophy, anthropology, and cognitive psychology. Listed below are the lower division preparation courses for this major. To be considered for this major, you must complete the following courses by the spring before transfer: One year of college level coursework in the declared language OR At least one year of high school in which the primary language of instruction was the declared language. Completion of an introduction to linguistics course, Calculus I and II, and introduction to computer science I and II are STRONGLY RECOMMENDED . A placement exam for a language offered at UCLA may be taken upon transfer to test out of or make progress toward the major language requirement. All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https://linguistics.ucla.edu and https:// admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses.",
+    "The AP Exam Scores listed below may be used to satisfy the major prep: A score of 5 on the AP Calculus AB exam will satisfy MATH 31A. A score of 4 on the AP Calculus BC exam will satisfy MATH 31A. A score of 5 on the AP Calculus BC exam will satisfy MATH 31A and 31B. The IB Exam Scores listed below may be used to satisfy the major prep: A score of 6 or higher on the IB HL Math Analysis & Approaches exam will satisfy MATH 31A."
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Sustainability Studies, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T02:38:06.954311",
+  "sections": [
+    {
+      "section_title": "STRONGLY RECOMMENDED COURSES",
+      "groups": [
+        {
+          "group_id": "97ec6545-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "1",
+                        "title": "Intro to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "4",
+                        "title": "Methods of Sociological Inquiry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "3",
+                        "title": "Introduction to Research Methods in Psychology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "12",
+                        "title": "Introduction to Research Methods in the Social Sciences",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "5",
+                        "title": "Statistical Analysis",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "10",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "23",
+                        "title": "Introduction to Statistics in Sociology and Social Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "8",
+                        "title": "Statistics for Business",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BUSC",
+                        "number": "17",
+                        "title": "Applied Business Statistics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "11",
+                        "title": "Psychological Methods: Statistical Procedures",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "10",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "8d3f6bba-e0ec-4726-aae8-01936f67d53f",
+          "group_number": 2,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "5C",
+                        "title": "Introductory Evolution and Ecology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Plant and Animal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Biology for Majors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEO",
+                        "number": "2",
+                        "title": "Earth's Climate Through Time",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "30",
+                        "title": "Global Climate Change",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "GEOG",
+                        "number": "1",
+                        "title": "Physical Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEO",
+                        "number": "4",
+                        "title": "Natural Hazards and Disasters",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "10",
+                        "title": "Natural Disasters",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEO",
+                        "number": "9",
+                        "title": "Oceanography",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "OCEA",
+                        "number": "10",
+                        "title": "Introduction to Oceanography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEO",
+                        "number": "11",
+                        "title": "Global Climate Change",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "30",
+                        "title": "Global Climate Change",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENSC",
+                        "number": "1",
+                        "title": "Intro to Environmental Science: Natural Resources",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6",
+                        "title": "Humans and the Environment",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENSC",
+                        "number": "2",
+                        "title": "Intro to Environmental Science: Environmental Quality",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to majors housed in the College of Humanities, Arts and Social Sciences is selective based on GPA in all transferrable coursework, with a minimum GPA of 2.40 (this is a baseline GPA for consideration and not a guarantee of admission). Applicants with 80 semester/120 quarter units or more (e.g. a combination of 4-year and community college course work) are subject to additional screening. Although completion of the course work listed below is not mandatory prior to admission, students are advised to complete as much lower division course preparation as possible prior to transfer. Completion of lower division course work prepares students for upper division work at UCR and helps students move more efficiently towards graduation. If sending institution offers honors/enhanced/support courses , the articulation for the same course number will be used. IGETC/CAL-GETC and General Education/Breadth Information In addition to the lower division requirements listed below, students are also encouraged to complete the IGETC or CAL-GETC while attending community college. Students completing CAL-GETC may have an additional \"Language other than English\" requirement, which can be met with coursework completed at UCR or with applicable transfer credit. Although completion of the IGETC/CAL-GETC is not a UCR admission requirement, it is a good program for students planning to transfer into majors housed in the College of Humanities, Arts and Social Sciences. Information about completing IGETC/CAL-GETC is available at each community college. Students also have the option of completing the UCR CHASS breadth pattern, you may view the breath requirements for by visiting the 2025-26 Catalog , pages 86-87.",
+    "For additional information about this major, please visit Sustainability Studies . For information about the UC Transfer Admissions Guarantee (TAG) program, please visit Transfer Admission Guarantee ."
+  ]
+}

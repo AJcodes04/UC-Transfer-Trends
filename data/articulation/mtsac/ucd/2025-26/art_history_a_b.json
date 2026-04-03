@@ -1,0 +1,706 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Art History A.B.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T00:57:16.672996",
+  "sections": [
+    {
+      "section_title": "PREPARATION COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "a6ccf443-ec73-4b56-a599-01936b2186b2",
+          "group_number": 1,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001A",
+                        "title": "Ancient Mediterranean Art",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "AHI",
+                        "number": "001B",
+                        "title": "Medieval & Renaissance Art",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "AHI",
+                        "number": "001C",
+                        "title": "Baroque to Modern Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "4",
+                        "title": "History of Western Art: Prehistoric Through Gothic",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "5",
+                        "title": "History of Western Art: Renaissance Through Modern",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "4",
+                        "title": "History of Western Art: Prehistoric Through Gothic",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "5H",
+                        "title": "History of Western Art: Renaissance Through Modern - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "4H",
+                        "title": "History of Western Art: Prehistoric Through Gothic - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "5",
+                        "title": "History of Western Art: Renaissance Through Modern",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "4H",
+                        "title": "History of Western Art: Prehistoric Through Gothic - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "5H",
+                        "title": "History of Western Art: Renaissance Through Modern - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001D",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "9",
+                        "title": "History of Asian Art and Architecture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "005",
+                        "title": "Understanding Visual Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTB",
+                        "number": "1",
+                        "title": "Introduction to the Visual Arts and Art History",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "1",
+                        "title": "Introduction to the Visual Arts and Art History",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "025",
+                        "title": "Understanding Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARCH",
+                        "number": "250",
+                        "title": "World Architecture: Prehistory to the Middle Ages",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARCH",
+                        "number": "251",
+                        "title": "World Architecture: Renaissance Through the Contemporary Era",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ART STUDIO COURSES",
+      "groups": [
+        {
+          "group_id": "c82a1282-80e9-4330-adbf-01936b2186b2",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "002",
+                        "title": "Beginning Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "15A",
+                        "title": "Drawing: Beginning",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "005",
+                        "title": "Beginning Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "40B",
+                        "title": "Sculpture: Intermediate",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "40A",
+                        "title": "Sculpture: Beginning",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "007",
+                        "title": "Beginning Painting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "25B",
+                        "title": "Beginning Painting II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "008",
+                        "title": "Beginning Ceramic Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "009",
+                        "title": "Beginning Photography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHOT",
+                        "number": "10",
+                        "title": "Basic Digital and Film Photography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "EMPHASIS IN ARCHITECTURAL HISTORY",
+      "groups": [
+        {
+          "group_id": "4c6110cb-cdae-4622-865b-01936b2186b2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "025",
+                        "title": "Understanding Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARCH",
+                        "number": "250",
+                        "title": "World Architecture: Prehistory to the Middle Ages",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARCH",
+                        "number": "251",
+                        "title": "World Architecture: Renaissance Through the Contemporary Era",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "EMPHASIS IN MUSEUM STUDIES",
+      "groups": [
+        {
+          "group_id": "7bc34949-2488-4e70-b0fc-01936b2186b2",
+          "group_number": 4,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001A",
+                        "title": "Ancient Mediterranean Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "4H",
+                        "title": "History of Western Art: Prehistoric Through Gothic - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "4",
+                        "title": "History of Western Art: Prehistoric Through Gothic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001B",
+                        "title": "Medieval & Renaissance Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001C",
+                        "title": "Baroque to Modern Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "5",
+                        "title": "History of Western Art: Renaissance Through Modern",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "5H",
+                        "title": "History of Western Art: Renaissance Through Modern - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001D",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "9",
+                        "title": "History of Asian Art and Architecture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "005",
+                        "title": "Understanding Visual Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTB",
+                        "number": "1",
+                        "title": "Introduction to the Visual Arts and Art History",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "1",
+                        "title": "Introduction to the Visual Arts and Art History",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "025",
+                        "title": "Understanding Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARCH",
+                        "number": "250",
+                        "title": "World Architecture: Prehistory to the Middle Ages",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARCH",
+                        "number": "251",
+                        "title": "World Architecture: Renaissance Through the Contemporary Era",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "ce326684-64c8-473b-8bbb-01936b2186b2",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "002",
+                        "title": "Beginning Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "15A",
+                        "title": "Drawing: Beginning",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "005",
+                        "title": "Beginning Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "40B",
+                        "title": "Sculpture: Intermediate",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "40A",
+                        "title": "Sculpture: Beginning",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "007",
+                        "title": "Beginning Painting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTD",
+                        "number": "25B",
+                        "title": "Beginning Painting II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "008",
+                        "title": "Beginning Ceramic Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "009",
+                        "title": "Beginning Photography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHOT",
+                        "number": "10",
+                        "title": "Basic Digital and Film Photography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "At the time of TAG submission, this major requires a minimum 3.20 cumulative GPA, with no grade lower than a C to receive a Transfer Admission Guarantee.",
+    "This major is not currently screening for major preparation at the time of admission; however, it is strongly encouraged that you complete as many major preparation courses as possible prior to transfer. Incomplete foundational coursework may delay your ability to graduate on time. Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB .",
+    "Art History studies the changing visual expression of values, beliefs and experiences across diverse cultures and over time. It provides training in historical, social and aesthetic understanding, critical thinking, scholarly research, and lucid, thoughtful analysis and writing. More than any other discipline art history sharpens its students’ visual acuity and deepens their visual literacy. In so doing, it prepares them to face the increasingly complex visual world we find ourselves in today. The major begins with a series of courses that surveys major landmarks in the history of visual culture, art and architecture in Asia, Europe, and the United States. More advanced lecture courses and seminars focus on particularly important periods and issues. Students are encouraged to personalize their training with internships, independent study, and focused upper division study. Top students considering graduate study are encouraged to engage in more advance study by pursuing a senior honors thesis.",
+    "A major in Art History develops critical thinking and the integration of research, interpretation and understanding. It provides an excellent liberal arts basis for professions as far ranging as advertising, law, medicine, politics and business. The major prepares students for advanced study in Art History, Architecture, Museum Studies and Cultural Studies. It also serves as the foundation for careers in teaching, arts, administration, museums, galleries, historic preservation, art libraries, publishing, journalism, advertising, art conservation, and art investment. As the world becomes increasingly flooded with images, the critical visual literacy gained through the study of art history becomes more important for a wide variety of careers."
+  ]
+}

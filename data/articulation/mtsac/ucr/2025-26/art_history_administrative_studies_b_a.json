@@ -1,0 +1,435 @@
+{
+  "sending_institution": "Mount San Antonio College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Art History/Administrative Studies, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T02:41:25.730527",
+  "sections": [
+    {
+      "section_title": "PRE-MODERN ART HISTORY",
+      "groups": [
+        {
+          "group_id": "49337445-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "15",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "9",
+                        "title": "History of Asian Art and Architecture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "17A",
+                        "title": "Western Art: Prehistory to Byzantine",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "4",
+                        "title": "History of Western Art: Prehistoric Through Gothic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "17B",
+                        "title": "Western Art: Early Medieval",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "5",
+                        "title": "History of Western Art: Renaissance Through Modern",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "4",
+                        "title": "History of Western Art: Prehistoric Through Gothic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "27",
+                        "title": "Art of Pre-Columbian America",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "12",
+                        "title": "History of Precolumbian Art and Architecture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "EARLY-MODERN ART HISTORY",
+      "groups": [
+        {
+          "group_id": "07f07145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "15",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "9",
+                        "title": "History of Asian Art and Architecture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "17B",
+                        "title": "Western Art: Early Medieval",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "5",
+                        "title": "History of Western Art: Renaissance Through Modern",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "AHIS",
+                        "number": "4",
+                        "title": "History of Western Art: Prehistoric Through Gothic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "17C",
+                        "title": "Western Art: Baroque to Modern",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "5",
+                        "title": "History of Western Art: Renaissance Through Modern",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MODERN-CONTEMPORARY ART HISTORY",
+      "groups": [
+        {
+          "group_id": "741a7745-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "8",
+                        "title": "MODERN WESTERN VISUAL CULTURE",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "6",
+                        "title": "History of Modern Art",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHS",
+                        "number": "17C",
+                        "title": "Western Art: Baroque to Modern",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHIS",
+                        "number": "5",
+                        "title": "History of Western Art: Renaissance Through Modern",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADMINISTRATIVE STUDIES",
+      "groups": [
+        {
+          "group_id": "92ec6545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "10",
+                        "title": "Introduction to Business",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUSM",
+                        "number": "20",
+                        "title": "Principles of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "20",
+                        "title": "Financial Accounting and Reporting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUSA",
+                        "number": "7",
+                        "title": "Principles of Accounting - Financial",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "8",
+                        "title": "Statistics for Business",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BUSC",
+                        "number": "17",
+                        "title": "Applied Business Statistics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "8",
+                        "title": "Intro to Computing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CISB",
+                        "number": "15",
+                        "title": "Microcomputer Applications",
+                        "units": 3.5
+                      },
+                      {
+                        "prefix": "CISB",
+                        "number": "11",
+                        "title": "Computer Information Systems",
+                        "units": 3.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to majors housed in the College of Humanities, Arts and Social Sciences is selective based on GPA in all transferrable coursework, with a minimum GPA of 2.40 (this is a baseline GPA for consideration and not a guarantee of admission). Applicants with 80 semester/120 quarter units or more (e.g. a combination of 4-year and community college course work) are subject to additional screening. Although completion of the course work listed below is not mandatory prior to admission, students are advised to complete as much lower division course preparation as possible prior to transfer. Completion of lower division course work prepares students for upper division work at UCR and helps students move more efficiently towards graduation. If sending institution offers honors/enhanced/support courses , the articulation for the same course number will be used. IGETC/CAL-GETC and General Education/Breadth Information In addition to the lower division requirements listed below, students are also encouraged to complete the IGETC or CAL-GETC while attending community college. Students completing CAL-GETC may have an additional \"Language other than English\" requirement, which can be met with coursework completed at UCR or with applicable transfer credit. Although completion of the IGETC/CAL-GETC is not a UCR admission requirement, it is a good program for students planning to transfer into majors housed in the College of Humanities, Arts and Social Sciences. Information about completing IGETC/CAL-GETC is available at each community college. Students also have the option of completing the UCR CHASS breadth pattern, you may view the breath requirements for by visiting the 2025-26 Catalog , pages 86-87.",
+    "For additional information about this major, please visit Art History/Administrative Studies . For information about the UC Transfer Admission Guarantee (TAG) program, please visit Transfer Admission Guarantee .",
+    "Complete three Art History courses, one from each of three major areas. Courses that appear in more than one area may only be used once. Although completion of the course work listed below is not mandatory prior to admission, students are advised to complete as much lower division course preparation as possible prior to transfer."
+  ]
+}

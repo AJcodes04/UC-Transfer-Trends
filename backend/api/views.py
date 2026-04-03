@@ -602,6 +602,8 @@ CC_NAMES = {
     'barstow': 'Barstow Community College',
     'butte': 'Butte College',
     'cabrillo': 'Cabrillo College',
+    'dac': 'De Anza College',
+    'mtsac': 'Mt. San Antonio College',
     'sbcc': 'Santa Barbara City College',
 }
 
