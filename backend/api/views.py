@@ -129,6 +129,9 @@ MAJOR_ALIASES = {
         'Film and Media Studies',
         'Film Studies',
     ],
+    "Global Studies" : [
+        "Pre-Global Studies",
+    ],
     'Human Development' : [
         'Human Developmental Sciences',
         'Pre-Human Development',
@@ -162,7 +165,14 @@ MAJOR_ALIASES = {
     ],
     'Mathematics' :[
         'Pre-Mathematics'
-    ]
+    ],
+    "Psychology" : [
+        "Pre-Psychology",
+    ],
+    "Sociology" : [
+        "Pre-Sociology",
+    ],
+    
 
 }
 

@@ -45,7 +45,6 @@ export default function App() {
   const location = useLocation()
   const [opened, { toggle, close }] = useDisclosure()
   const isMobile = useMediaQuery('(max-width: 48em)')
-
   return (
     <AppShell
       header={isMobile ? { height: 60 } : undefined}
@@ -115,6 +114,7 @@ export default function App() {
             </div>
           ))}
         </ScrollArea>
+
       </AppShell.Navbar>
 
       <AppShell.Main>
