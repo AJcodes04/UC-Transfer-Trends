@@ -126,7 +126,10 @@ export default function MajorStats() {
     const q = searchQuery.toLowerCase()
     const filtered = {}
     for (const [letter, majors] of Object.entries(groupedByLetter)) {
-      const matches = majors.filter((m) => m.name.toLowerCase().includes(q))
+      const matches = majors.filter((m) =>
+        m.name.toLowerCase().includes(q) ||
+        (m.related || []).some((r) => r.name.toLowerCase().includes(q))
+      )
       if (matches.length > 0) filtered[letter] = matches
     }
     return filtered
