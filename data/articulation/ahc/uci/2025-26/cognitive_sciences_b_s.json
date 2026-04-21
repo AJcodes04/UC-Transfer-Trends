@@ -1,0 +1,445 @@
+{
+  "sending_institution": "Allan Hancock College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Cognitive Sciences, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-07T16:10:01.048400",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "37da6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "181",
+                        "title": "Calculus 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "182",
+                        "title": "Calculus 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "9B",
+                        "title": "Psychology Fundamentals",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "9C",
+                        "title": "Psychology Fundamentals",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "119",
+                        "title": "Abnormal Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "121",
+                        "title": "Social Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "C1000",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "33da6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3A",
+                        "title": "Basic Physics I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3B",
+                        "title": "Basic Physics II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3C",
+                        "title": "Basic Physics III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "161",
+                        "title": "Engineering Physics 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7C",
+                        "title": "Classical Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7LC",
+                        "title": "Classical Physics Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7D",
+                        "title": "Classical Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7LD",
+                        "title": "Classical Physics Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7E",
+                        "title": "Classical Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "163",
+                        "title": "Engineering Physics 3",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "161",
+                        "title": "Engineering Physics 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introductions to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LPS",
+                        "number": "30",
+                        "title": "Introduction to Symbolic Logic",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "112",
+                        "title": "Logic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2D",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "183",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2E",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "183",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3D",
+                        "title": "Elementary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "39da6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "10A",
+                        "title": "Probability and Statistics in Psychology I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "COGS",
+                        "number": "10B",
+                        "title": "Probability and Statistics in Psychology II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "COGS",
+                        "number": "10C",
+                        "title": "Probability and Statistics in Psychology III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The B.S. in Cognitive Sciences is structured to provide students with a challenging introduction to the broad field of Cognitive Sciences that is strongly grounded in theory and an empirical approach emphasizing experimental/computational methods. To ensure an intellectually coherent experience, students in the major are able to choose courses from areas including: (a) Cognitive Neuroscience; (b) Experimental Psychology–Sensation, Perception, Attention, and Memory; (c) Language Science; and (d) Computational Cognitive Science. In addition, students are required to acquire a background in (a) calculus, (b) statistics, (c) introductory computer programming, and (d) some combination of the natural sciences, logic and philosophy of science, linguistics, or more advanced computer science or mathematics. This major prepares students for a research career in cognitive science, focusing on any of the current dominant approaches of the field. The study of cognition can be approached through cognitive neuroscience, behavioral experiments, language science, computational and mathematical modeling, or any combination of those. The major combines strong technical skills with deep knowledge of at least one of these approaches. The School of Social Sciences recommends that students complete IGETC/Cal-GETC prior to transfer and refer to the list of courses below that will fulfill UCI lower-division major requirements. Required for admission: Must have a cumulative UC transferable GPA of 3.2 (3.4 for TAG) Complete courses in single-variable calculus equivalent to UCI’s MATH 2A and MATH 2B with a grade of B or better Complete courses in psychology equivalent to UCI’s COGS 9A and COGS 9C with grades of B or better. COGS 9B to be completed at UCI Complete 3 semesters or 3 quarters ( 6 courses recommended ) of lower-division science courses in Group 2, sections A, B, and C (below) with grades of B or better. Note: Although some UCI course series span three quarters and are equivalent to two semesters at the community college, students must still complete at least three semesters or three quarters of coursework at the community college to meet this requirement. NOTE : In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue For information regarding the UC Irvine Transfer Admission Guarantee program please visit TAG",
+    "AP Psychology exam DOES NOT meet major prep."
+  ]
+}

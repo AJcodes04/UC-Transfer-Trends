@@ -1,0 +1,480 @@
+{
+  "sending_institution": "Allan Hancock College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Electrical Engineering B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-07T16:31:01.332916",
+  "sections": [
+    {
+      "section_title": "REQUIRED MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "bc926f45-6887-ef11-8474-000d3a37e3b6__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "10",
+                        "title": "Linear Algebra for Engineers",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "21",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "bc926f45-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "24",
+                        "title": "Ordinary Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "bc926f45-6887-ef11-8474-000d3a37e3b6__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5A",
+                        "title": "Introduction to Physics I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "161",
+                        "title": "Engineering Physics 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5L",
+                        "title": "Introduction to Physics I Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "161",
+                        "title": "Engineering Physics 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5B",
+                        "title": "Introduction to Physics II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "162",
+                        "title": "Engineering Physics 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5M",
+                        "title": "Introduction to Physics II Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "162",
+                        "title": "Engineering Physics 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5C",
+                        "title": "Introduction to Physics III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "163",
+                        "title": "Engineering Physics 3",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5N",
+                        "title": "Introduction to Physics Laboratory III",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "163",
+                        "title": "Engineering Physics 3",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "bc926f45-6887-ef11-8474-000d3a37e3b6__sec3",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "181",
+                        "title": "Calculus 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19B",
+                        "title": "Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "182",
+                        "title": "Calculus 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "12",
+                        "title": "Computer Systems and Assembly Language and Lab",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "131",
+                        "title": "Computer Organization",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "RECOMMENDED PREPARATION",
+      "groups": [
+        {
+          "group_id": "be926f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "23A",
+                        "title": "Vector Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "183",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5D",
+                        "title": "Introduction to Physics IV",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "101",
+                        "title": "Introduction to Electronic Circuits",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "170",
+                        "title": "Electric Circuit Analysis",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "101L",
+                        "title": "Introduction to Electronic Circuits Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "171",
+                        "title": "Electric Circuits Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must meet the University of California admissions eligibility requirements and the campus’s admission selection criteria. All requirements must be completed by the end of the spring term prior to transfer. For more information on UC admissions eligibility and admission to UC Santa Cruz, visit the Admissions website . The UC Santa Cruz Transfer Admission Guarantee (TAG) is a formal agreement that guarantees your fall admission to your chosen major, provided you are transferring from a California Community College and meet specific requirements. Visit the UC Santa Cruz TAG webpage for more information.",
+    "THIS IS A SCREENING MAJOR. Screening majors require completion of specific preparatory coursework and/or a minimum GPA. For details on the specific screening requirements for this major, refer to the \" Transfer Admission Screening Policy \" below. Additional coursework listed under \"Recommended Preparation\" is not required for admission but is strongly recommended to support timely degree completion. For more information, including a list of screening majors and non-screening majors , visit the UCSC Admissions website.",
+    "Some Advanced Placement (AP), International Baccalaureate Higher Level (IBH), and Advanced Level (A-level) exams satisfy UCSC course requirements. UCSC's exam credit policies may be found on the Degree Progress Unit website .",
+    "Transfer students who want to pursue the electrical engineering major, must have applied and been admitted to UC Santa Cruz as a proposed electrical engineering major. The following transfer screening policy takes effect in fall 2024 and will be mandatory for all transfer students entering UC Santa Cruz fall 2026 and later. Transfer students entering UCSC prior to fall 2026 are encouraged to complete these requirements, but will still be considered for admission if they fulfill the 2023-2024 admissions screening requirements. The Electrical Engineering B.S. program is accredited by the Engineering Accreditation Commission of ABET, http://www.abet.org . Transfer Admission Screening Policy Transfer applicants must complete the articulated equivalents of the courses listed in the “ Required Major Preparation Courses ” section below. Each course must be completed with a grade of C (2.0) or better, and applicants must earn a minimum cumulative GPA of 2.8 across all required screening courses by the end of the spring term prior to fall enrollment. Strongly Recommended Major Preparation In addition to the required major preparation courses, prospective transfer students are strongly advised to complete the articulated equivalents of the \" Recommended Preparation \" courses listed below. Students who do not complete these preparatory courses prior to transfer may need additional quarters of enrollment to complete their degree. Additional Information for Transfer Students are strongly encouraged to prioritize required and recommended major preparation courses and may additionally complete courses that fulfill UC Santa Cruz general education requirements before transferring as time allows. Visit the Baskin Engineering Undergraduate Experience website to learn more about this major. UC Santa Cruz General Catalog: Electrical Engineering B.S. Program Statement"
+  ]
+}

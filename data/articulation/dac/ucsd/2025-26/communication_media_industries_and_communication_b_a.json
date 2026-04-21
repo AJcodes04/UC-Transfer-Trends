@@ -1,0 +1,440 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "Communication:  Media Industries and Communication B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T04:47:03.317884",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "ffdd7145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTWR",
+                        "number": "8A",
+                        "title": "Writing Fiction",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EWRT",
+                        "number": "40",
+                        "title": "Fiction Writing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTWR",
+                        "number": "8B",
+                        "title": "Writing Poetry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EWRT",
+                        "number": "41",
+                        "title": "Poetry Writing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LTWR",
+                        "number": "8C",
+                        "title": "Writing Nonfiction",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EWRT",
+                        "number": "42",
+                        "title": "Introduction to Creative Nonfiction and Memoir Writing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TDAC",
+                        "number": "1",
+                        "title": "Introduction to Acting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THEA",
+                        "number": "20A",
+                        "title": "Theory and Technique of Acting (Introduction)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TDGE",
+                        "number": "1",
+                        "title": "Introduction to Theatre",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "THEA",
+                        "number": "1",
+                        "title": "Appreciation of Theatre",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "VIS",
+                        "number": "10",
+                        "title": "Computing in the Arts Lecture Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "2H",
+                        "title": "Principles of Microeconomics - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "1",
+                        "title": "Introduction to Cognitive Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "18",
+                        "title": "Introduction to Python",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "40",
+                        "title": "Introduction to Programming in Python",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "6R",
+                        "title": "Introduction to Computer Science and Object-Oriented Programming: Python",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "41A",
+                        "title": "Python Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "8A",
+                        "title": "Introduction to Programming and Computational Problem Solving I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "36A",
+                        "title": "Introduction to Computer Programming Using Java",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "40",
+                        "title": "Introduction to Programming in Python",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22A",
+                        "title": "Beginning Programming Methodologies in C++",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "DSC",
+                        "number": "10",
+                        "title": "Principles of Data Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "11",
+                        "title": "Foundations of Data Science for All",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "14A",
+                        "title": "Introduction to Research Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "2",
+                        "title": "Research Methods in Psychology",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLI",
+                        "number": "5",
+                        "title": "Data Analytics for the Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "60",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "15",
+                        "title": "Statistics and Research Methods in Social Science",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "17",
+                        "title": "Integrated Statistics 2",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000H",
+                        "title": "Introduction to Statistics - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "POLI",
+                        "number": "20",
+                        "title": "Introduction to Statistics for the Behavioral and Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "60",
+                        "title": "Practice of Social Research",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "14",
+                        "title": "The Process of Social Research",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Transfer students are highly encouraged to complete coursework that will satisfy IGETC, partial IGETC, or the General Education requirements for the college that they apply to at UC San Diego. The Bachelor of Arts in Media Industries & Communication offers a curriculum in media literacy, institutional analysis, and skills acquisition. Core courses provide a historical and theoretical background for analyzing an increasingly complex media and communication landscape, with a focus on the inner workings of specific sectors (i.e. film, advertising, internet, tourism, etc.). Electives cover a broad range of topics from film analysis to surveillance culture. Students must also take skills-centered practice-based courses in media production, design, and/or other areas. This major welcomes both aspiring media practitioners (filmmakers, musicians, journalists, etc.) and those who aspire to work in media and culture as marketers, managers, digital specialists, lawyers, executives, policy analysts, HR professionals, and more. ﻿For more information about on the Media Industries and Communication major please visit our website: http://communication.ucsd.edu"
+  ]
+}

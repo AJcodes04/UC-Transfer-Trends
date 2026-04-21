@@ -1,0 +1,382 @@
+{
+  "sending_institution": "Allan Hancock College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Landscape Architecture B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-07T06:28:09.857140",
+  "sections": [
+    {
+      "section_title": "PREPARATION COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "83adc4f2-4a62-47ab-b9a0-0199589fe2a1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002B",
+                        "title": "Introduction to Biology: Principles of Ecology & Evolution",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIS",
+                        "number": "002C",
+                        "title": "Introduction to Biology: Biodiversity & the Tree of Life",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "154",
+                        "title": "General Botany",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "155",
+                        "title": "General Zoology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "09c6d654-650f-4fbc-bfaa-0199589fe2a1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMN",
+                        "number": "001",
+                        "title": "Introduction to Public Speaking",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "C1000",
+                        "title": "Introduction to Public Speaking",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "1fe5bd6c-8530-43c6-b0d2-0199589fe2a1",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "003",
+                        "title": "Introduction to Literature ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UWP",
+                        "number": "001",
+                        "title": "Introduction to Academic Literacies ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000",
+                        "title": "Academic Reading and Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "LANDSCAPE ARCHITECTURE",
+      "groups": [
+        {
+          "group_id": "831dba61-80a3-4747-a232-0199589fe2a1",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LDA",
+                        "number": "021",
+                        "title": "Landscape Representation I ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARCH",
+                        "number": "112",
+                        "title": "Graphics and Design Studio 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ARCH",
+                        "number": "111",
+                        "title": "Graphics and Design Studio 1",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "bd194c36-a591-4fd0-a1f4-0199589fe2a1",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introductions to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "ebdb351d-447a-4bff-ad49-0199589fe2a1",
+          "group_number": 6,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "010",
+                        "title": "Concept of Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "Introductory Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEL",
+                        "number": "001",
+                        "title": "The Earth",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "100",
+                        "title": "Physical Geology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "001A",
+                        "title": "Principles of Physics ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "110",
+                        "title": "Introductory Physics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SSC",
+                        "number": "010",
+                        "title": "Soils in Our Environment",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AG",
+                        "number": "125",
+                        "title": "Soils and Plant Nutrition",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "VEN",
+                        "number": "125",
+                        "title": "Soils and Plant Nutrition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "At the time of TAG submission, Pre-landscape architecture requires a minimum 3.20 cumulative GPA to receive a Transfer Admission Guarantee. Students must submit an e-portfolio application to the landscape architecture department in February after they enroll at UC Davis.",
+    "This major is not currently screening for major preparation at the time of admission; however, it is strongly encouraged that you complete as many major preparation courses as possible prior to transfer. Incomplete foundational coursework may delay your ability to graduate on time. Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB . Students interested in landscape architecture should apply as pre-landscape architecture. While there are no specific major course requirements, a minimum 3.20 GPA is required for TAG eligibility. Students must submit an e-portfolio application to the landscape architecture department in February, after they enroll to UC Davis. Visit the human ecology website or contact the landscape architecture advising office at 530-754-1805 for more information.",
+    "Group 7: In addition to the below major preparation requirements, students must also choose two courses satisfying Social Sciences General Education requirement; which may count toward both GE and the major. Please contact an advisor or visit the major for more information.",
+    "Landscape architecture is the planning and design of land areas where human use requires adaptation or conservation of the environment. Students who study landscape architecture are concerned about the welfare of the environment and the people who use and shape it. They are capable of solving physical problems and are able to visualize and think in terms of spaces and three-dimensional concepts. The program is fully accredited by the Landscape Architecture Accreditation Board (LAAB) which is the only organization professionally sanctioned to grant landscape architectural accreditations in the United States. The program was last reviewed in 2018. The curriculum balances creativity and visual and spatial skills with technological expertise and a thorough background in physical, natural, and social sciences. Students develop proficiency at problem solving relating to design of parks, public spaces, energy-efficient neighborhoods, land reclamation projects, city and regional planning, and landscape planning for wilderness and scenic regions, coastal and riparian environments, and other sensitive land areas. The program stresses a process-oriented approach to design and emphasizes environmental and community values.",
+    "Graduates may find jobs in private landscape architectural firms or public agencies, non-profit organizations, and corporations employing landscape architects. The landscape architecture major provides the student with excellent preparation for graduate school or career development in a wide range of environmental and design-related fields."
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Merced",
+  "major": "GLOBAL ARTS STUDIES, B.A. ",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T09:00:41.946339",
+  "sections": [
+    {
+      "section_title": "RECOMMENDED BUT NOT REQUIRED",
+      "groups": [
+        {
+          "group_id": "7ebfd3e7-82a3-45b9-8ded-0193db77e614",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "002",
+                        "title": "Introduction to Music Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUSI",
+                        "number": "2",
+                        "title": "Music Fundamentals",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "7effc92e-99dd-4953-bad9-0193db77e614",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "007",
+                        "title": "Music in Society",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUSI",
+                        "number": "1A",
+                        "title": "Music Appreciation: Music in Western Cultures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "055A",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "2G",
+                        "title": "History of Art: Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "055C",
+                        "title": "History of European Art and Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "2A",
+                        "title": "History of Art: Europe from Prehistory through Early Christianity",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "2D",
+                        "title": "History of Art: Europe and the United States from Post-Impressionism to the Present",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "2B",
+                        "title": "History of Art: Europe During the Middle Ages and the Renaissance",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "2C",
+                        "title": "History of Art: Europe from the Baroque Period through Impressionism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "231c01bc-12f2-4885-8bf4-0193db77e614",
+          "group_number": 3,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "030C",
+                        "title": "Swing Band",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUSI",
+                        "number": "15A",
+                        "title": "Guitar Ensemble I",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "15B",
+                        "title": "Guitar Ensemble II",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "21",
+                        "title": "Vintage Singers",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "22",
+                        "title": "Early Music Study and Performance",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "31",
+                        "title": "Chamber Orchestra",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "34",
+                        "title": "Jazz Ensemble",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "42",
+                        "title": "Concert Band",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "20",
+                        "title": "De Anza Chorale",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "0a4464e9-bc4c-4ea1-98a6-0193db77e614",
+          "group_number": 4,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "010",
+                        "title": "Drawing I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "4B",
+                        "title": "Intermediate Drawing",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "4C",
+                        "title": "Life Drawing",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "4A",
+                        "title": "Beginning Drawing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "011",
+                        "title": "Painting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "14A",
+                        "title": "Watercolor Painting I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "15A",
+                        "title": "Acrylic Painting I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "16A",
+                        "title": "Oil Painting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "013A",
+                        "title": "Design I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "12",
+                        "title": "Design and Color",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "8",
+                        "title": "Two-Dimensional Design",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "10A",
+                        "title": "Three-Dimensional Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "d68ed2ae-ea20-4422-b88c-0193db77e614",
+          "group_number": 5,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "010",
+                        "title": "Drawing I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "4B",
+                        "title": "Intermediate Drawing",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "4C",
+                        "title": "Life Drawing",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "4A",
+                        "title": "Beginning Drawing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "011",
+                        "title": "Painting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "14A",
+                        "title": "Watercolor Painting I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "15A",
+                        "title": "Acrylic Painting I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "16A",
+                        "title": "Oil Painting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "013A",
+                        "title": "Design I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "12",
+                        "title": "Design and Color",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "8",
+                        "title": "Two-Dimensional Design",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "10A",
+                        "title": "Three-Dimensional Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "030C",
+                        "title": "Swing Band",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUSI",
+                        "number": "15A",
+                        "title": "Guitar Ensemble I",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "15B",
+                        "title": "Guitar Ensemble II",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "21",
+                        "title": "Vintage Singers",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "22",
+                        "title": "Early Music Study and Performance",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "31",
+                        "title": "Chamber Orchestra",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "34",
+                        "title": "Jazz Ensemble",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "42",
+                        "title": "Concert Band",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "MUSI",
+                        "number": "20",
+                        "title": "De Anza Chorale",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "d6185925-de9e-4ef5-971d-0193db77e614",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000",
+                        "title": "Academic Reading and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ESL",
+                        "number": "5",
+                        "title": "Advanced Composition and Reading",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000H",
+                        "title": "Academic Reading and Writing - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "9fefac96-8e10-49d9-9d03-0193db77e614",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "3",
+                        "title": "Critical Thinking and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1C",
+                        "title": "Literature and Composition",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "9H",
+                        "title": "Argumentation: Analysis of Oral and Written Communication - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "9",
+                        "title": "Argumentation: Analysis of Oral and Written Communication",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1B",
+                        "title": "Reading, Writing and Research",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1001",
+                        "title": "Critical Thinking and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1001H",
+                        "title": "Critical Thinking and Writing - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Between the Fall 2025 and Fall 2027 application cycles, the School of Social Sciences, Humanities and Arts will not require transfer students to complete major specific selection criteria to be admitted to this major*. Students wanting to enroll in this major will be admitted using UC Merced's general transfer requirements**. * This only applies to certain SSHA majors. ** The General Transfer Requirements are as f ol lows: Units and GPA Complete 60 semester (90 quarter) units of UC-transferable college credit Earn a minimum grade point average of 2.40 (nonresident: 2.80) in UC-transferable courses Take no more than 14 semester (21 quarter) units as Pass/Not Pass Course Requirements/Subject Requirements Complete the following seven-course pattern, earning a grade of C- or better in each course: Two transferable English composition courses One transferable mathematical concepts and quantitative reasoning course that has a published prerequisite of intermediate algebra Four transferable courses chosen from at least two of the following areas: Arts and Humanities, Behavioral and Social Sciences, Biological and Physical Sciences While major courses are not required for admissions, it is highly recommended to complete as many of the recommended major preparatory courses as possible before transferring to ensure timely progress to degree. Any major courses not completed prior to enrollment at UC Merced must be completed upon enrollment at UC Merced to ensure time to degree and graduation. Recommended, but not Required Prior to Transfer: Complete the following Common Foundations Courses: GASP 002, GASP 003, GASP 004 Complete one course from the following course ranges: GASP 006, GASP 007 or GASP 050-089 Music or Dance Requirement/Ensemble: Complete four units chosen from the following ranges: GASP 025-039 (GASP 125-139 upper division courses can also count) Visual Arts Studio: Complete four units chosen from the following course ranges: GASP 010-029 (GASP 110-129 upper division courses can also count) Studio/Ensemble Elective: Complete four units chosen from the following course ranges: GASP 010-049 (GASP 110-149 upper division courses can also count) Courses in the major must be taken for a letter grade, and specifically may not be taken on a pass/no pass basis unless the course is only offered on a pass/no pass basis. AP Exam Score & Course Exemptions AP Studio Art: Drawing: score of 4 or 5 exempts one (1) course in GASP to count towards one Visual Arts Course for the GASP Major. AP Studio Art: 2-D Design: score of 4 or 5 exempts one (1) course in GASP to count towards one Visual Arts Course for the GASP Major. AP Studio Art: 3-D Design: score of 4 or 5 exempts one (1) course in GASP to count towards one Visual Arts Course for the GASP Major. AP Art History: score of 4 or 5 exempts one (1) course in GASP to count toward one lower division course within the GASP Major. UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: A dvance Placement (AP) and International Baccalaureate (IB) Examinations Please read the catalog page for more information about the Global Arts Studies major. For more questions about admissions, please email: transfer@ucmerced.edu ."
+  ]
+}

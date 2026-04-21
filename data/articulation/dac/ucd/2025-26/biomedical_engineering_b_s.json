@@ -1,0 +1,991 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Biomedical Engineering B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T06:18:20.571655",
+  "sections": [
+    {
+      "section_title": "BIOLOGICAL SCIENCE",
+      "groups": [
+        {
+          "group_id": "deba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002A",
+                        "title": "Introduction to Biology: Essentials of Life on Earth",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6B",
+                        "title": "Cell and Molecular Biology",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "CHEMISTRY",
+      "groups": [
+        {
+          "group_id": "f9ba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "002A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AH",
+                        "title": "General Chemistry I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1BH",
+                        "title": "General Chemistry II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1BH",
+                        "title": "General Chemistry II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AH",
+                        "title": "General Chemistry I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "002C",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1CH",
+                        "title": "General Chemistry III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "c7ba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "118A",
+                        "title": "Organic Chemistry for Health & Life Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "118B",
+                        "title": "Organic Chemistry for Health & Life Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "118C",
+                        "title": "Organic Chemistry for Health & Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "12A",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "12B",
+                        "title": "Organic Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "12C",
+                        "title": "Organic Chemistry III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGINEERING",
+      "groups": [
+        {
+          "group_id": "d9ba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "017",
+                        "title": "Circuits I ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "37",
+                        "title": "Introduction to Circuit Analysis",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MATHEMATICS",
+      "groups": [
+        {
+          "group_id": "04bb6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021C",
+                        "title": "Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MAT",
+                        "number": "021D",
+                        "title": "Vector Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1D",
+                        "title": "Calculus IV",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1DH",
+                        "title": "Calculus IV - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1D",
+                        "title": "Calculus IV",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1DH",
+                        "title": "Calculus IV - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "d2ba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022A",
+                        "title": "Linear Algebra ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2BH",
+                        "title": "Linear Algebra - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022B",
+                        "title": "Differential Equations ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2AH",
+                        "title": "Differential Equations - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "PHYSICS",
+      "groups": [
+        {
+          "group_id": "01bb6f45-6887-ef11-8474-000d3a37e3b6__sec0",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009B",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009C",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "01bb6f45-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 8,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009A",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "COMPOSITION",
+      "groups": [
+        {
+          "group_id": "e8ba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 9,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM",
+                        "number": "004",
+                        "title": "Major Works of the Contemporary World ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "39",
+                        "title": "Contemporary Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "003",
+                        "title": "Introduction to Literature ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EWRT",
+                        "number": "1C",
+                        "title": "Literature and Composition",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1BH",
+                        "title": "Reading, Writing and Research - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1B",
+                        "title": "Reading, Writing and Research",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NAS",
+                        "number": "005",
+                        "title": "Introduction to Native American Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NAIS",
+                        "number": "15",
+                        "title": "Ethnic Studies and Native American Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UWP",
+                        "number": "001",
+                        "title": "Introduction to Academic Literacies ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "9",
+                        "title": "Argumentation: Analysis of Oral and Written Communication",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "9H",
+                        "title": "Argumentation: Analysis of Oral and Written Communication - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1BH",
+                        "title": "Reading, Writing and Research - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000",
+                        "title": "Academic Reading and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1B",
+                        "title": "Reading, Writing and Research",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000H",
+                        "title": "Academic Reading and Writing - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ESL",
+                        "number": "5",
+                        "title": "Advanced Composition and Reading",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ELECTIVES",
+      "groups": [
+        {
+          "group_id": "dbba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002B",
+                        "title": "Introduction to Biology: Principles of Ecology & Evolution",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6C",
+                        "title": "Ecology and Evolution",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6CH",
+                        "title": "Ecology and Evolution - HONORS",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002C",
+                        "title": "Introduction to Biology: Biodiversity & the Tree of Life",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6AH",
+                        "title": "Form and Function in the Biological World - HONORS",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6A",
+                        "title": "Form and Function in the Biological World",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECS",
+                        "number": "032A",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "41A",
+                        "title": "Python Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECS",
+                        "number": "032B",
+                        "title": "Introduction to Data Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "22CH",
+                        "title": "Data Abstraction and Structures - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22C",
+                        "title": "Data Abstraction and Structures",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009D",
+                        "title": "Modern Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4D",
+                        "title": "Physics for Scientists and Engineers: Modern Physics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "d3ba6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 11,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "035",
+                        "title": "Statics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "35",
+                        "title": "Statics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Group 1 and Group 10 : BIS 002ABC series agreements may be applicable to more than one graduation requirement. Please see the Biological Sciences department agreements for a possible applicable BIS 002ABC series articulation agreement, if needed.",
+    "The Biomedical Engineering Bachelor of Science program is accredited by the Engineering Accreditation Commission of ABET under the commission's General Criteria and Program Criteria for Bioengineering and Biomedical and Similarly Named Engineering Programs. Biomedical engineering is an interdisciplinary field of study that integrates knowledge of engineering principles with the biomedical sciences. It is a very diverse field with biomedical engineers working in areas ranging from medical imaging to regenerative medicine. Some major contributions of Biomedical Engineering include the left ventricular assist device (LVAD), artificial joints, hemodialysis, bioengineered skin, coronary stents, computed tomography (CT), and flexible endoscopes. Students who choose biomedical engineering are interested in contributing to human health and quality of life, but do not routinely interact directly with patients, as do physicians. Due to the need to complete additional coursework beyond BME degree requirements, this major is not a primary route for pre-medical studies. The mission of the BS degree program of the Department of Biomedical Engineering is to combine exceptional teaching with state-of-the-art research for the advancement of technologies and computational techniques that meet medical and societal challenges. The educational objectives of our program are that a B.S. degree in Biomedical Engineering should prepare students to: Be successfully engaged in their chosen career through engineering practice, academic or clinical research, healthcare, education, service, or related activities, or through the pursuit of graduate or professional degrees; and Contribute effectively to society through responsible professional practice, fostering of cross-disciplinary collaboration, generation of innovative solutions to problems, and continuous pursuit of knowledge for personal and technological advancement. The biomedical engineering curriculum is designed to provide a solid interdisciplinary foundation in life and physical sciences, mathematics and engineering, while allowing for sufficient flexibility in the upper division requirements to encourage students to explore specializations within the field. Our instructional program is designed to impart knowledge of contemporary issues at the forefront of biomedical engineering research. Employment opportunities exist in industry, hospitals, academic research and teaching institutions, national laboratories, government regulatory agencies, consulting and finance. The major also provides excellent grounding in the skills necessary for graduate-level studies in engineering disciplines and biological sciences, as well as for professional studies in health (medicine, dentistry, optometry, prosthetics), business and law.",
+    "This is a competitive major and is subject to the Selective Major Review process. Students need to take all courses for a letter grade with no grade less than C and complete all major preparatory course requirements by the end of spring term prior to their fall enrollment. All students need to meet a minimum 3.10 GPA cumulative and a 3.20 GPA in major preparation coursework. All majors in the College of Engineering are selective and have additional transfer requirements. Important Information: Complete the courses below: ● Biological Sciences (BIS) 002A ● Chemistry (CHE) 002A/B/C ● Organic Chemistry (CHE) 008A/B or 118A/B ● Engineering (ENG) 006 and 017 ● Mathematics (MAT) 021A/B/C/D ● Mathematics (MAT) 022A/B ● Physics (PHY) 009A/B/C Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB .",
+    "At the time of TAG submission, the College of Engineering requires a minimum 3.50 cumulative GPA and at least a 3.50 GPA across the entire group of courses with no grades less than a C to receive a Transfer Admission Guarantee."
+  ]
+}

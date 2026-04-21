@@ -1,0 +1,355 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Davis",
+  "major": "English A.B.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T05:23:43.645709",
+  "sections": [
+    {
+      "section_title": "PREPARATION COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "52c86f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "003",
+                        "title": "Introduction to Literature ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EWRT",
+                        "number": "1C",
+                        "title": "Literature and Composition",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1BH",
+                        "title": "Reading, Writing and Research - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1B",
+                        "title": "Reading, Writing and Research",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UWP",
+                        "number": "001",
+                        "title": "Introduction to Academic Literacies ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "9",
+                        "title": "Argumentation: Analysis of Oral and Written Communication",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "9H",
+                        "title": "Argumentation: Analysis of Oral and Written Communication - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1BH",
+                        "title": "Reading, Writing and Research - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000",
+                        "title": "Academic Reading and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1B",
+                        "title": "Reading, Writing and Research",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000H",
+                        "title": "Academic Reading and Writing - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ESL",
+                        "number": "5",
+                        "title": "Advanced Composition and Reading",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "4ac86f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "010A",
+                        "title": "Literatures in English I: To 1700 ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "46A",
+                        "title": "Major British Writers (Medieval and Renaissance)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46AH",
+                        "title": "Major British Writers (Medieval and Renaissance) - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "010B",
+                        "title": "Literatures in English II: 1700-1900 ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "46BH",
+                        "title": "Major British Writers (Neo-Classical and Romantic) - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "48A",
+                        "title": "Major American Writers (Colonial and Romantic, 1620-1865)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "48AH",
+                        "title": "Major American Writers (Colonial to Romantic, 1620-1865) - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46B",
+                        "title": "Major British Writers (Neo-Classical and Romantic)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "010C",
+                        "title": "Literatures in English III: 1900 to Present ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "48CH",
+                        "title": "Major American Writers (The Modern Age, 1914-the Present) - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "48C",
+                        "title": "Major American Writers (The Modern Age, 1914 - The Present)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46C",
+                        "title": "Major British Writers (Victorian and Modern)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46CH",
+                        "title": "Major British Writers (Victorian and Modern) - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "4dc86f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "043",
+                        "title": "Introductory Topics in Drama ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "12",
+                        "title": "Introduction to Dramatic Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "044",
+                        "title": "Introductory Topics in Fiction ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "10",
+                        "title": "Introduction to Fiction",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "10H",
+                        "title": "Introduction to Fiction - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "045",
+                        "title": "Introductory Topics in Poetry ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "11",
+                        "title": "Introduction to Poetry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The study of English develops skills in reading analytically and perceptively and in writing clearly and effectively. Students major in English by taking courses in a wide variety of media, genres, topics, and historical periods. All students are introduced to the major by completing 20 units spread over courses in writing, any one of many topics courses, and the gateway series to the English major that covers “Literature in English” from the earliest medieval texts to the present. Students then build their own path through the major depending upon their particular interests, eventually completing 44 more units covering different historical periods, methods of theory and criticism, and thematic focuses. After a shared set of courses, students choose to specialize either in Literary Criticism and Theory or Creative Writing. All majors have the opportunity to work with distinguished writers, critics, scholars, and teachers. English majors learn how to: Write clearly and effectively. Think creatively and analytically. Organize and communicate ideas creatively and efficiently. Analyze and critically evaluate language and other forms of representation. Understand texts within their historical, political, and cultural contexts. Recognize and evaluate various perspectives, through creating or reading fiction, drama, and poetry. Evaluate how fictional and non-fictional narratives structure thought and action. Read long texts closely, analytically, and efficiently. Respond spontaneously with organized, clear statements and ideas.",
+    "Graduates have found the major excellent pre-professional training for careers in teaching, writing, law, medicine, library work, journalism, and more. Many graduates are employed in publishing, marketing, advertising, or the tech sector. Others have worked in local, state, and federal government agencies, as well as in industry. Many have gone on to graduate study in a wide range of fields including English, education, counseling, and more.",
+    "At the time of TAG submission, this major requires a minimum 3.20 cumulative GPA, with no grade lower than a C to receive a Transfer Admission Guarantee.",
+    "This major is not currently screening for major preparation at the time of admission; however, it is strongly encouraged that you complete as many major preparation courses as possible prior to transfer. Incomplete foundational coursework may delay your ability to graduate on time. Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB ."
+  ]
+}

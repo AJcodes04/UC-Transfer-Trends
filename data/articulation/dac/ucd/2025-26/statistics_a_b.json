@@ -1,0 +1,401 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Statistics A.B.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T06:16:01.868146",
+  "sections": [
+    {
+      "section_title": "COMPUTER SCIENCE ENGINEERING",
+      "groups": [
+        {
+          "group_id": "2b36ca28-a9c0-4f6f-b5e3-0199358f756e",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECS",
+                        "number": "032A",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "41A",
+                        "title": "Python Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECS",
+                        "number": "036A",
+                        "title": "Programming & Problem Solving ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "26B",
+                        "title": "Advanced C Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "26A",
+                        "title": "C as a Second Programming Language",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "35A",
+                        "title": "Java Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "27",
+                        "title": "Programming in C++ for C/Java Programmers",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "36A",
+                        "title": "Introduction to Computer Programming Using Java",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22A",
+                        "title": "Beginning Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22BH",
+                        "title": "Intermediate Programming Methodologies in C++ - HONORS",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MATHEMATICS",
+      "groups": [
+        {
+          "group_id": "9069f33d-233f-4108-aa2d-0199358f756e",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021C",
+                        "title": "Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MAT",
+                        "number": "021D",
+                        "title": "Vector Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1D",
+                        "title": "Calculus IV",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1DH",
+                        "title": "Calculus IV - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1D",
+                        "title": "Calculus IV",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1DH",
+                        "title": "Calculus IV - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "6ddca12a-872b-45f1-9e93-0199358f756e",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022A",
+                        "title": "Linear Algebra ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2BH",
+                        "title": "Linear Algebra - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STATISTICS",
+      "groups": [
+        {
+          "group_id": "59bc0c95-641c-434b-86cc-0199358f756e",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "17",
+                        "title": "Integrated Statistics 2",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "15",
+                        "title": "Statistics and Research Methods in Social Science",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "15",
+                        "title": "Statistics and Research Methods in Social Science",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000H",
+                        "title": "Introduction to Statistics - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "POLI",
+                        "number": "20",
+                        "title": "Introduction to Statistics for the Behavioral and Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "At the time of TAG submission, this major requires a minimum 3.20 cumulative GPA, with no grade lower than a C to receive a Transfer Admission Guarantee. Fall, 2026 applicants: At the time of TAG submission, Statistics requires a minimum 3.20 cumulative GPA and at least a 3.00 GPA across the entire group of courses with no grades less than a C to receive a Transfer Admission Guarantee.",
+    "Group 2: Please note the MAT 021ABC series is preferred. Please refer to the major and an advisor. Group 4: Please note STA 032 is preferred. Please refer to the major and an advisor.",
+    "For the current academic year, this major is not currently screening for major preparation at the time of admission; however, it is strongly encouraged that you complete as many major preparation courses as possible prior to transfer. Incomplete foundational coursework may delay your ability to graduate on time. Important note: The Statistics A.B. major will become a Selective Major beginning fall, 2026 This will be a competitive major and subject to the Selective Major Review process. Students will need to take all courses for a letter grade with no grade less than C and complete all major preparatory course requirements by the end of spring term prior to their fall enrollment. All students must meet a 2.8 GPA cumulative GPA for admission. Important Information: Complete the courses below and maintain a 3.0 GPA across the entire group: ● Mathematics (MAT) 017A/B/C or 019A/B/C or 021A/B/C ● Mathematics (MAT) 022A ● One of the following Statistics (STA): ○ 013 ○ 032 Note: The Statistics major has four tracks: Applied (A.B. or B.S.), General (B.S.), Machine Learning (B.S.) and Statistical Data Science (B.S.). Students who pursue the General, Machine Learning or Statistical Data Science tracks are required to take Mathematics 021A/B/C. The 021 series is also recommended for the Applied track. Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB .",
+    "Probability models, statistical methods, and computational techniques are used in a great many fields, including the biological, physical, social, and health sciences, business, and engineering. The wide applicability of statistics is reflected in the strong demand for graduates with statistical training in both the public and private sectors. Employment opportunities include careers in data & policy analysis in government & industry, financial management, quality control, insurance & healthcare industry, actuarial science, engineering, public health, biological and pharmaceutical research, law, and education. Students with an undergraduate degree in statistics have entered advanced studies in statistics, economics, finance, psychology, medicine, business management & analytics, and other professional school programs.",
+    "Statistics enables us to make inferences about entire populations, based on samples extracted from those populations. Statistical methods can be applied to problems from almost every discipline and they are vitally important to researchers in agricultural, biological, environmental, social, engineering, and medical sciences. Statistics majors may receive either a Bachelor of Arts (A.B.) or a Bachelor of Science (B.S.) degree. Both the A.B. and the B.S. programs require theoretical and applied course work and underscore the strong interdependence of statistical theory and the applications and computational aspects of statistics. The B.S. degree program has five tracks: Applied Statistics Track, Computational Statistics Track, General Track, Machine Learning Track, and the Statistical Data Science Track. The A.B. degree program has one track. A.B. in Statistics-Applied Statistics Track emphasizes statistical applications. This track is recommended for students who are interested in applications of statistical techniques to various disciplines, especially the social sciences."
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "sending_institution": "Allan Hancock College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "International Development Studies/B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-06T22:51:53.921488",
+  "sections": [
+    {
+      "section_title": "ECONOMICS, GEOGRAPHY, PUBLIC AFFAIRS",
+      "groups": [
+        {
+          "group_id": "31c36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Economics(Microeconomics)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Principles of Economics: Micro-Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Principles of Economics(Macroeconomics)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "101",
+                        "title": "Principles of Economics: Macro-Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "4",
+                        "title": "Globalization: Regional Development and World Economy",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "METHODOLOGY COURSES",
+      "groups": [
+        {
+          "group_id": "1cc36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "41",
+                        "title": "Probability and Statistics for Economists",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "96W",
+                        "title": "Introduction to Historical Practice",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "20",
+                        "title": "Introduction to Sociological Research Methods",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "12",
+                        "title": "Introduction to Statistical Methods for Geography and Environmental Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SOCIAL SCIENCES/AREA STUDIES",
+      "groups": [
+        {
+          "group_id": "16c36f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Select A, B, C, D, E, or F",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "CULTURE AND SOCIETY",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "102",
+                        "title": "Introduction to Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "D",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "22",
+                        "title": "Contemporary World History, 1760 to Present ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "102",
+                        "title": "World Civilizations since 1500",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "H",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GLBL ST",
+                        "number": "1",
+                        "title": "Introduction to Globalization",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GBST",
+                        "number": "101",
+                        "title": "Introduction to Global Studies",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "J",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "20",
+                        "title": "World Politics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "104",
+                        "title": "Introduction to International Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "50",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "105",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "L",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introductory Sociology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "P",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "3",
+                        "title": "Cultural Geography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "102",
+                        "title": "Human Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "6",
+                        "title": "World Regions: Concepts and Contemporary Issues",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "103",
+                        "title": "World Regional Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The AP Exam Scores listed below may be used to meet the major prep: A score of 3 or higher on the AP Statistics exam can be used in place of the statistics course. A score of 3 or higher on the AP Foreign language exam except Latin can be used in place of the foreign language courses. Note, however, that additional foreign language courses may be required after you transfer to UCLA. A score of 3 or higher on the AP Human Geography exam can be used in place of the cultural geography course. A score of 3 or higher on the AP World History exam can be used in place of the contemporary world history course. A score of 3 or higher on the AP Comparative Government exam can be used in place of the comparative/world politics course. A score of 4-5 on the AP Microeconomics exam is equivalent to Econ 1 ( if taken before spring 2021 ) and can be used in place of the microeconomics course. A score of 5 on the AP Microeconomics exam is equivalent to Econ 1 ( if taken after spring 2021 ) and can be used in place of the microeconomics course. A score of 4-5 on the AP Macroeconomics exam is equivalent to Econ 2 ( if taken before spring 2021 ) and can be used in place of the macroeconomics course. A score of 5 on the AP Macroeconomics exam is equivalent to Econ 2 ( if taken after spring 2021 ) and can be used in place of the macroeconomics course. The IB Exam scores listed below may be used to meet to satisfy major prep: A score of 5 or higher on the IB HL Economics exam can be used in place of Econ 1 course. A score of 5 or higher on the IB HL Social and Cultural Anthropology exam can be used in place of a Cultural Anthropology course. A score of 5 or higher on the IB HL 20th Century World exam can be used in place of a World History course. A score of 5 or higher on the IB HL Global Politics exam can be used in place of a Comparative Politics course.",
+    "Note: Students must complete three courses each from a different category selected from: Anthropology; economics; gender studies; geography; global studies; history; international & area studies; political science; or sociology",
+    "The International Development Studies major allows students to study, analyze, and critically assess the social, political and economic forces that, throughout history, have shaped inequality in the modern world. Engage with debates around the widening patterns of disparities of wealth, power, privilege, and access to social justice that occur in the Global North and Global South. Listed below are the lower division preparation courses for the major. To be considered for this major, you must complete the following courses by the end of the spring before transfer: Complete a minimum of six lower division major preparatory courses (listed below) and Demonstrate proficiency in one modern foreign language equivalent to at least one year at UCLA by the of spring before transferring. Two years are required to graduate. For more information regarding this major and UCLA's transfer selection process, visit https://international.ucla.edu/ids and https:// admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation requirements for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed.",
+    "NOTE: Statistics 12 equivalents included on this agreement have been approved as a substitute to satisfy major prep, but may not be an exact UCLA equivalent.",
+    "Applicants must demonstrate proficiency in one modern foreign language equivalent to at least one year at UCLA to be considered for this major. Two years are required to graduate."
+  ]
+}

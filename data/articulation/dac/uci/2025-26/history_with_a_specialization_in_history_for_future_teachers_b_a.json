@@ -1,0 +1,416 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "History, with a Specialization in History for Future Teachers, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T06:52:33.172328",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "3bd96f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "21A",
+                        "title": "World: Innovations",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HISTORY",
+                        "number": "21B",
+                        "title": "World: Empires and Revolutions",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HISTORY",
+                        "number": "21C",
+                        "title": "World: Wars and Rights",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "3B",
+                        "title": "World History from 750 to 1750 CE",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3A",
+                        "title": "World History from Prehistory to 750 CE",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3C",
+                        "title": "World History from 1750 CE to the Present",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3AH",
+                        "title": "World History from Prehistory to 750 CE - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3BH",
+                        "title": "World History from 750 to 1750 CE - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3CH",
+                        "title": "World History from 1750 CE to the Present - Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "40A",
+                        "title": "Colonial America: New Worlds",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HISTORY",
+                        "number": "40B",
+                        "title": "Nineteenth-Century U.S.: Crisis and Expansion",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HISTORY",
+                        "number": "40C",
+                        "title": "Modern America: Culture and Power",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "History of the United States to Early National Era",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "History of the United States from 1800 to 1900",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17C",
+                        "title": "History of the United States From 1900 to the Present",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17AH",
+                        "title": "History of the United States to Early National Era - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17CH",
+                        "title": "History of the United States From 1900 to the Present - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17BH",
+                        "title": "History of the United States from 1800 to 1900 - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "29d96f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "70C",
+                        "title": "Problems in History: United States",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "33d96f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "70A",
+                        "title": "Problems in History: Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "19B",
+                        "title": "History of Asian Civilization: China and Japan (19th - 21st Centuries)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "19A",
+                        "title": "History of Asian Civilization: China and Japan (to the 19th Century)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "70B",
+                        "title": "Problems in History: Europe",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "6C",
+                        "title": "History of Western Civilization: 1750 C.E. to Present",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "6AH",
+                        "title": "History of Western Civilization: Pre-History to 750 C.E. - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "6B",
+                        "title": "History of Western Civilization: 750 C.E. to 1750 C.E.",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "6BH",
+                        "title": "History of Western Civilization: 750 C.E. to 1750 C.E. - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "6CH",
+                        "title": "History of Western Civilization: 1750 C.E. to Present - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "6A",
+                        "title": "History of Western Civilization: Pre-History to 750 C.E.",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "70D",
+                        "title": "Problems in History: Latin America",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "7A",
+                        "title": "Colonial Latin American History",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "7B",
+                        "title": "Modern Latin American History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "70E",
+                        "title": "Problems in History: Middle East and Africa",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "16B",
+                        "title": "History of Africa From 1800 to the Present",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "16A",
+                        "title": "History of Africa to 1800",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "70F",
+                        "title": "Problems in History: Transregional History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "3AH",
+                        "title": "World History from Prehistory to 750 CE - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3C",
+                        "title": "World History from 1750 CE to the Present",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3CH",
+                        "title": "World History from 1750 CE to the Present - Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3A",
+                        "title": "World History from Prehistory to 750 CE",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3B",
+                        "title": "World History from 750 to 1750 CE",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "3BH",
+                        "title": "World History from 750 to 1750 CE - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Students interested in this major must meet the following requirements. Required for admission : Meet all basic UC admission requirements with a minimum grade of C or better Have a cumulative UC transferable GPA of 2.7 (3.4 for TAG) Recommended for admission : Lower Division Major Preparation Courses Language Other Than English: College-level language other than English coursework through the 4th semester or 6th quarter level. Review the two-year Language other than English school requirement, and prepare accordingly: www.humanities.uci.edu/undergrad/academics/lang.php This is in addition to the UCI General Education Language Other than English requirement. Humanities Core Alternative or Humanities Core: Complete four semesters/six quarters, or a combination thereof, including at least one lower-division course in each of the following four areas: composition, literature, history and philosophy (a course is not required in the area of student's major). To reach the total number of courses required, additional courses approved for UCI General Education Category IV in Humanities disciplines outside the major can be selected; OR Complete a one-year lower-division humanities sequence which deals with problems of concern to the disciplines of history, literature, and philosophy, and which emphasizes the reading and analysis of significant texts For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue. For more information regarding the UC Irvine Transfer Admission Guarantee Program, please visit TAG"
+  ]
+}

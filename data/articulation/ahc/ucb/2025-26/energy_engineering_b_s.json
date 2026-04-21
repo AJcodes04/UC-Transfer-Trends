@@ -1,0 +1,488 @@
+{
+  "sending_institution": "Allan Hancock College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Energy Engineering, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-06T22:32:29.152939",
+  "sections": [
+    {
+      "section_title": "REQUIRED COURSES FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "b4e56f45-6887-ef11-8474-000d3a37e3b6__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "151",
+                        "title": "General Chemistry 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3A",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3AL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "180",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7C",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "162",
+                        "title": "Engineering Physics 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "b4e56f45-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "150",
+                        "title": "General Chemistry 1",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "51",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "181",
+                        "title": "Calculus 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "52",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "182",
+                        "title": "Calculus 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "183",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "161",
+                        "title": "Engineering Physics 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "163",
+                        "title": "Engineering Physics 3",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED COURSES",
+      "groups": [
+        {
+          "group_id": "b3e56f45-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "55",
+                        "title": "Discrete Mathematics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "161",
+                        "title": "Discrete Structures",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "b3e56f45-6887-ef11-8474-000d3a37e3b6__sec2",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "61B",
+                        "title": "Data Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "112",
+                        "title": "Fundamentals of Programming 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EECS",
+                        "number": "16A",
+                        "title": "Designing Information Devices and Systems I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "170",
+                        "title": "Electric Circuit Analysis",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "171",
+                        "title": "Electric Circuits Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT SCI",
+                        "number": "45",
+                        "title": "Properties of Materials",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MAT SCI",
+                        "number": "45L",
+                        "title": "Properties of Materials Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "162",
+                        "title": "Materials Science Lab",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "161",
+                        "title": "Materials Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MEC ENG",
+                        "number": "C85",
+                        "title": "Introduction to Solid Mechanics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "152",
+                        "title": "Statics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "156",
+                        "title": "Strength of Materials",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to the UC Berkeley College of Engineering is highly competitive. Applicants to the Energy Engineering major must complete all required core UCB preparation courses in order to be eligible for admission. Only applicants who have completed 100% of these required courses will be considered for admission. Required courses for admission to the major must be completed by the end of the spring semester prior to fall enrollment. A summer 2026 course is not considered to be \"work in progress\" for the fall 2026 selection process. If a series of courses at a community college is required (e.g., Chemistry 101 + 102 + 103=Chemistry A and B), all the courses in the series must be completed, and must (unless otherwise indicated) be completed at the same community college. Partial completion (e.g., 2 of the 3 required courses) will result in zero credit toward the requirement(s), and the applicant will NOT be considered for admission. The only exception to the series rule is Math 54. If Math 54 is split into two different courses, one covering linear algebra and one covering differential equations, we strongly encourage applicants to take both courses at the same community college; however, the College of Engineering will accept linear algebra from one school and differential equations from a different school. Lower division UC Berkeley courses required for graduation (but not admission) are also listed in the major agreements and are strongly recommended to be taken to strengthen one's application. The more of these courses completed, the stronger the application will be. Required core courses for admission: (all these courses must be completed to be considered for admission) - UCB CHEM 1A/1AL - UCB MATH 51; 52; 53; 54 - UCB PHYSICS 7A; 7B - UCB READING COMPOSITION A; B - One course from: CHEM 1B; CHEM 3A/3AL or PHYSICS 7C Strongly recommended courses: (if your college offers the courses listed below and they are articulated, taking them will strengthen your application) - UCB COMPSCI 61A or ENGIN 7 - UCB MEC ENG 40 or ENGIN 40 - UCB MATH 55 - One from: COMPSCI 61B; EECS 16A; EECS 16B; MAT SCI 45/45L; CIV ENG 11 or CIV ENG 70; MEC ENG C85/CIV ENG C30 Articulation subject to completion of a university course If the above statement is indicated under any of the community college course listed below, you will be required to take an additional course at UC Berkeley in order to complete the requirement. Admission is primarily based on the completeness of the applicant's lower division preparation and the level of academic achievement reflected in the student's grade point average. The UC applicant essay also plays an important role in the selection process at UC Berkeley. The College reviews the essay for evidence of interest in the student's chosen field and a thoughtful match between the academic program and the student's academic and career objectives. The College of Engineering requires six humanities/social science courses, two of which must be reading and composition. The only non-technical admission requirement for the College of Engineering is the coursework equivalent to UC Berkeley's Reading and Composition A and B, which must be taken for a letter grade. The College of Engineering does not recognize the Intersegmental General Education Transfer Curriculum (Cal-GETC/IGETC) and strongly discourages students from following this option due to the number of major-specific technical courses required for engineering transfer admission. NOTE: The Reading and Composition requirements cannot be satisfied by Cal-GETC/IGETC; applicants must complete the specific courses indicated as Reading and Composition A and B equivalents to be considered for admission. Failure to complete the exact courses listed will mean the applicant will NOT be considered for admission. The remaining four humanities/social science requirement courses are not considered for admission purposes but are required for graduation. See http://engineering.berkeley.edu/hss for the College of Engineering humanities/social science breadth requirements and courses. Courses which are three semester units or more that appear in the following categories on the \"General Education/Breadth\" section of assist.org may be used to satisfy two of the remaining four humanities/social science course requirements for the College of Engineering. ARTS AND LITERATURE; HISTORICAL STUDIES; INTERNATIONAL STUDIES; PHILOSOPHY AND VALUES; SOCIAL AND BEHAVIORAL SCIENCES. Additionally, courses that teach a foreign language may be used to satisfy this requirement. SAT/ACT/A-level test scores and letters of recommendation are NOT considered for admission. NOTE: ALL REQUIRED COURSES AND ALL STRONGLY RECOMMENDED COURSES FOR THE MAJOR MUST BE TAKEN FOR A LETTER GRADE. FOR MORE INFORMATION, PLEASE CHECK THE COLLEGE'S WEB SITE FOR THE COLLEGE OF ENGINEERING UNDERGRADUATE GUIDE . For more information: http://engineering.berkeley.edu/admissions/undergraduate-admissions College of Engineering Undergraduate Guide: http://engineering.berkeley.edu/academics/undergraduate-guide For more information on Energy Engineering: http://engineeringscience.berkeley.edu For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: https://undergraduate.catalog.berkeley.edu/",
+    "Some Advanced Placement, International Baccalaureate, and A-Level exams can fulfill requirements in the College of Engineering. For details, please see https://engineering.berkeley.edu/students/undergraduate-guide/exams/ ."
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Art Studio A.B.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T05:16:34.953634",
+  "sections": [
+    {
+      "section_title": "PREPARATION COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "06b66f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 5 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 5.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "002",
+                        "title": "Beginning Drawing",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "4A",
+                        "title": "Beginning Drawing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "005",
+                        "title": "Beginning Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "37B",
+                        "title": "Intermediate Sculpture",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "37A",
+                        "title": "Sculpture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "007",
+                        "title": "Beginning Painting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "14A",
+                        "title": "Watercolor Painting I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "16A",
+                        "title": "Oil Painting I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "15A",
+                        "title": "Acrylic Painting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "008",
+                        "title": "Beginning Ceramic Sculpture",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "009",
+                        "title": "Beginning Photography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHTG",
+                        "number": "1",
+                        "title": "Basic Photography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "012",
+                        "title": "Beginning Video",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "F/TV",
+                        "number": "20",
+                        "title": "Beginning Video Production",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "08b66f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001A",
+                        "title": "Ancient Mediterranean Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "2A",
+                        "title": "History of Art: Europe from Prehistory through Early Christianity",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001B",
+                        "title": "Medieval & Renaissance Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "2B",
+                        "title": "History of Art: Europe During the Middle Ages and the Renaissance",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001C",
+                        "title": "Baroque to Modern Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "2C",
+                        "title": "History of Art: Europe from the Baroque Period through Impressionism",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "2D",
+                        "title": "History of Art: Europe and the United States from Post-Impressionism to the Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "001D",
+                        "title": "Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ASAM",
+                        "number": "40",
+                        "title": "History of Art: Arts of Asia",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTS",
+                        "number": "2G",
+                        "title": "History of Art: Arts of Asia",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "005",
+                        "title": "Understanding Visual Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "1A",
+                        "title": "Introduction to the Visual Arts",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AHI",
+                        "number": "025",
+                        "title": "Understanding Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARTS",
+                        "number": "1B",
+                        "title": "Architecture Past and Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "024",
+                        "title": "Introduction to Experimental Video & Film",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "F/TV",
+                        "number": "45",
+                        "title": "History of Experimental Film/Video",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Art Studio major provides the studio experience necessary for a broad understanding of the practice and interpretation of the visual arts. The Art Studio program is designed to deliver a broad range of hands-on studio practices to the art major. Areas of focus include painting, sculpture, drawing, photography, ceramics, printmaking, and time-based media. Course choices/sequences are determined by the student according to major distribution requirements. Students are encouraged to explore a broad range of disciplines and are expected to take advantage of beginning classes which provide a critical introduction to the research possibilities within the major, across disciplines. In addition to studio classes, students are encouraged to participate in a distinguished visiting artist lecture series, professional practice seminars, student exhibitions/competitions, internships, and benefit from exposure to cultural events and exhibitions in Davis, Sacramento, and the Greater Bay Area.",
+    "Graduates of the Art Studio Program attend prestigious post-baccalaureate and graduate programs in studio art. Alumni often go on to develop professional studio practices. Commitment to the development of one's studio work leads to exhibition opportunities as well as accomplishments in the realm of fellowships, commissions, collaborations, and a host of other professional projects and opportunities. For the student wishing to explore additional arts-related trajectories, in the private or public sector, a studio arts education provides a strong foundation for careers and/or graduate work in K-12 art education, art therapy, arts administration, curatorial studies, set design, architecture, culinary arts, design, film, animation, art criticism/journalism among others.",
+    "At the time of TAG submission, this major requires a minimum 3.20 cumulative GPA, with no grade lower than a C to receive a Transfer Admission Guarantee.",
+    "This major is not currently screening for major preparation at the time of admission; however, it is strongly encouraged that you complete as many major preparation courses as possible prior to transfer. Incomplete foundational coursework may delay your ability to graduate on time. Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB ."
+  ]
+}

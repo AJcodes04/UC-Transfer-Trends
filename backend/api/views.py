@@ -622,10 +622,14 @@ UC_NAMES = {
 
 class ArticulationCollegesView(APIView):
     def get(self, request):
+        all_ucs = set(UC_NAMES.keys())
         colleges = []
         if ARTICULATION_DIR.is_dir():
             for cc_dir in sorted(ARTICULATION_DIR.iterdir()):
                 if cc_dir.is_dir() and not cc_dir.name.startswith('_'):
+                    uc_dirs = {d.name for d in cc_dir.iterdir() if d.is_dir()}
+                    if not all_ucs.issubset(uc_dirs):
+                        continue
                     code = cc_dir.name
                     colleges.append({
                         'code': code,

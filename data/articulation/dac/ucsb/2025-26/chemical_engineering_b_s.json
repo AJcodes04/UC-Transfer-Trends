@@ -1,0 +1,588 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Santa Barbara",
+  "major": "Chemical Engineering, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T06:33:11.644371",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "06ea7145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Calculus with Applications, First Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3B",
+                        "title": "Calculus with Applications, Second Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4A",
+                        "title": "Linear Algebra with Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2BH",
+                        "title": "Linear Algebra - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4B",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2AH",
+                        "title": "Differential Equations - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "18ea7145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7A",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7B",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7C",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7L",
+                        "title": "Physics Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "08ea7145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2AL",
+                        "title": "General Chemistry Lab (Part A)",
+                        "units": 2.5
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2BL",
+                        "title": "General Chemistry Laboratory (Part B)",
+                        "units": 2.5
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AH",
+                        "title": "General Chemistry I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1BH",
+                        "title": "General Chemistry II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1CH",
+                        "title": "General Chemistry III - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED ADVANCED PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "16ea7145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "109A",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "109B",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "12A",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "12B",
+                        "title": "Organic Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6AL",
+                        "title": "Laboratory Methods of Organic Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "6BL",
+                        "title": "Laboratory Methods of Organic Chemistry",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "12C",
+                        "title": "Organic Chemistry III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "12A",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "12B",
+                        "title": "Organic Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "0cea7145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "6A",
+                        "title": "Vector Calculus with Applications, First Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1D",
+                        "title": "Calculus IV",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1DH",
+                        "title": "Calculus IV - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "6B",
+                        "title": "Vector Calculus with Applications, Second Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1DH",
+                        "title": "Calculus IV - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1D",
+                        "title": "Calculus IV",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meeting campus admission selection criteria. Completing the UC transfer admission requirements in English and mathematics by the end of the fall term prior to the fall application quarter makes an applicant more competitive for admission to UCSB. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UCSB, please visit the Admissions website: www.admissions.ucsb.edu This articulation agreement lists course-to-course or sequence-to-sequence substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSB. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA. Completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. Please note that the course \"equivalencies\" do not necessarily apply to UCSB general education. For information concerning satisfaction of UCSB general education requirements, please refer to the General Education/Breadth articulation agreement. Advanced Placement (AP) and International Baccalaureate (IB) exams may or may not be used to meet course requirements, depending on the exam. Please refer to the AP Chart and IB Chart in the UCSB General Catalog for information on how we use AP and IB exams.",
+    "General Education Information : Students should focus on completing major preparation requirements. If time permits, students may also take courses to fulfill either UCSB General Education requirements or IGETC (Intersegmental General Education Transfer Curriculum). Students who will not complete IGETC prior to transfer should refer to the College of Engineering General Education articulation agreement . UCSB's General Education requirements do not need to be completed prior to transfer, but students who choose to follow College of Engineering General Education should complete two to three General Education courses prior to transfer . For more information concerning satisfaction of UCSB General Education requirements, student may also refer to the General Engineering Academic Requirements (GEAR) publication.",
+    "Please visit the department's website to learn more about this major: www.chemengr.ucsb.edu ADMISSION SELECTION CRITERIA : To be admitted to the Chemical Engineering major, all transfer applicants must complete the equivalent of the following REQUIRED courses (in addition to general admission requirements) by the end of spring prior to transfer with no grades lower than \"C\" . Applicants with a major prep GPA of 3.5 or higher are the most competitive for admission. REQUIRED for admission (all of these courses must be completed with no grades lower than \"C\" ) Math 3A, 3B, 4A, 4B Physics 7A, 7B, 7C, 7L Chemistry 1A, 1B, 1C, 2AL, 2BL Engineering 3* *For students who are unable to complete a course articulating with Engineering 3, we will accept a course articulating with Computer Science 8 or 9 or 16 instead of Engineering 3, for admission purposes only. Computer Science 8 or 9 or 16 do not satisfy a major requirement and the student would still need to take Engineering 3 at UCSB if admitted. (See Computer Science \"by Department\" listing for CMPSC 8 or 9 or 16 articulations.) STRONGLY RECOMMENDED advanced preparation courses (all of these courses must be completed with no grades lower than \"C\" ) ﻿ Chemistry 6AL, 6BL, 109A, 109B Math 6A, 6B Note : Students should take as many of the Strongly Recommended courses as possible before transferring in order to make timely progress to graduation. Additional major preparation courses Chemical Engineering 5, 10 Students are encouraged to complete a series (such as general chemistry, organic chemistry, or physics) at a single school to avoid missing content."
+  ]
+}

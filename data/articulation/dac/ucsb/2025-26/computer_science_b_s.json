@@ -1,0 +1,944 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Santa Barbara",
+  "major": "Computer Science, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T06:49:59.906606",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "58f07145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Calculus with Applications, First Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3B",
+                        "title": "Calculus with Applications, Second Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4A",
+                        "title": "Linear Algebra with Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2BH",
+                        "title": "Linear Algebra - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4B",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2AH",
+                        "title": "Differential Equations - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "5af07145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPSC",
+                        "number": "40",
+                        "title": "Foundations of Computer Science",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22H",
+                        "title": "Discrete Mathematics - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Discrete Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPSC",
+                        "number": "24",
+                        "title": "Problem Solving with Computers II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "22C",
+                        "title": "Data Abstraction and Structures",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "29",
+                        "title": "Advanced C++ Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22CH",
+                        "title": "Data Abstraction and Structures - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "29",
+                        "title": "Advanced C++ Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPSC",
+                        "number": "16",
+                        "title": "Problem Solving with Computers I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "26B",
+                        "title": "Advanced C Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "26BH",
+                        "title": "Advanced C Programming - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22BH",
+                        "title": "Intermediate Programming Methodologies in C++ - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "26A",
+                        "title": "C as a Second Programming Language",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED ADVANCED PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "5bf07145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPSC",
+                        "number": "64",
+                        "title": "Computer Organization and Logic Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "21JA",
+                        "title": "Introduction to x86 Processor Assembly Language and Computer Architecture",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "21JB",
+                        "title": "Advanced x86 Processor Assembly Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "5cf07145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "6A",
+                        "title": "Vector Calculus with Applications, First Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus III - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1D",
+                        "title": "Calculus IV",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1DH",
+                        "title": "Calculus IV - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "5df07145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 8 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 8.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "1",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "3",
+                        "title": "Basic Physics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "3L",
+                        "title": "Physics Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "6A",
+                        "title": "Introductory Physics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "6AL",
+                        "title": "Introductory Experimental Physics",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "6B",
+                        "title": "Introductory Physics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "6BL",
+                        "title": "Introductory Experimental Physics",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "6C",
+                        "title": "Introductory Physics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "6CL",
+                        "title": "Introductory Experimental Physics",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2C",
+                        "title": "General Physics III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2B",
+                        "title": "General Physics II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2A",
+                        "title": "General Physics I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7A",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7B",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7C",
+                        "title": "Basic Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7D",
+                        "title": "Basic Physics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4D",
+                        "title": "Physics for Scientists and Engineers: Modern Physics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "7L",
+                        "title": "Physics Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2AL",
+                        "title": "General Chemistry Lab (Part A)",
+                        "units": 2.5
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2BL",
+                        "title": "General Chemistry Laboratory (Part B)",
+                        "units": 2.5
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AH",
+                        "title": "General Chemistry I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1BH",
+                        "title": "General Chemistry II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1CH",
+                        "title": "General Chemistry III - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MCDB",
+                        "number": "1A",
+                        "title": "Introductory Biology I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MCDB",
+                        "number": "1LL",
+                        "title": "Introductory Biology Laboratory I",
+                        "units": 1.5
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6A",
+                        "title": "Form and Function in the Biological World",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6AH",
+                        "title": "Form and Function in the Biological World - HONORS",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6B",
+                        "title": "Cell and Molecular Biology",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6C",
+                        "title": "Ecology and Evolution",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6CH",
+                        "title": "Ecology and Evolution - HONORS",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MCDB",
+                        "number": "1B",
+                        "title": "Introductory Biology II - Physiology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6B",
+                        "title": "Cell and Molecular Biology",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6A",
+                        "title": "Form and Function in the Biological World",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6AH",
+                        "title": "Form and Function in the Biological World - HONORS",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6C",
+                        "title": "Ecology and Evolution",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6CH",
+                        "title": "Ecology and Evolution - HONORS",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "5ff07145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSTAT",
+                        "number": "120A",
+                        "title": "Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meeting campus admission selection criteria. Completing the UC transfer admission requirements in English and mathematics by the end of the fall term prior to the fall application quarter makes an applicant more competitive for admission to UCSB. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UCSB, please visit the Admissions website: www.admissions.ucsb.edu This articulation agreement lists course-to-course or sequence-to-sequence substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSB. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA. Completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. Please note that the course \"equivalencies\" do not necessarily apply to UCSB general education. For information concerning satisfaction of UCSB general education requirements, please refer to the General Education/Breadth articulation agreement. Advanced Placement (AP) and International Baccalaureate (IB) exams may or may not be used to meet course requirements, depending on the exam. Please refer to the AP Chart and IB Chart in the UCSB General Catalog for information on how we use AP and IB exams.",
+    "Please visit the department's website to learn more about this major: www.cs.ucsb.edu ADMISSION SELECTION CRITERIA : To be admitted to the Computer Science major, all transfer applicants must complete the equivalent of the following REQUIRED courses (in addition to general admission requirements) by the end of spring prior to transfer with no grades lower than \"C\". Applicants with a major prep GPA of 3.75 or higher are the most competitive for admission. REQUIRED for admission (all of these courses must be completed with no grades lower than \"C\" ) Math 3A, 3B, 4A, 4B Computer Science 16, 24, 40 STRONGLY RECOMMENDED advanced preparation courses (all of these courses must be completed with no grades lower than \"C\" ) Computer Science 32, 64 Math 6A 12 quarter units (8 semester units) from Science Electives - List B enumerated on the CS website (PHYS 1, 2, 3, 3L, 6A, 6AL, 6B, BL, C, CL, 7A, 7B, 7C, 7D, 7L; CHEM 1A, 1B, 1C, 2AL, 2BL; MCDB 1A, 1B, 1LL) Note : Students should take as many of the Strongly Recommended courses as possible before transferring in order to make timely progress to graduation. Additional major preparation courses PSTAT 120A (this is an upper-division course that is not articulated and would be taken at UCSB)",
+    "General Education Information : Students should focus on completing major preparation requirements. If time permits, students may also take courses to fulfill either UCSB General Education requirements or IGETC (Intersegmental General Education Transfer Curriculum). Students who will not complete IGETC prior to transfer should refer to the College of Engineering General Education articulation agreement . UCSB's General Education requirements do not need to be completed prior to transfer, but students who choose to follow College of Engineering General Education should complete two to three General Education courses prior to transfer . For more information concerning satisfaction of UCSB General Education requirements, student may also refer to the General Engineering Academic Requirements (GEAR) publication."
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Software Engineering, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T07:24:16.441642",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "b4c86f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "31",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "32",
+                        "title": "Programming with Software Libraries",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "33",
+                        "title": "Intermediate Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "40",
+                        "title": "Introduction to Programming in Python",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "41B",
+                        "title": "Advanced Python Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "41A",
+                        "title": "Python Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "12",
+                        "title": "Introductory Calculus for Business and Social Science",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL APPROVED COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "b5c86f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "45C",
+                        "title": "Programming in C/C++ as a Second Language",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "29",
+                        "title": "Advanced C++ Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22A",
+                        "title": "Beginning Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "45J",
+                        "title": "Programming in Java as a Second Language",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "36A",
+                        "title": "Introduction to Computer Programming Using Java",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "36B",
+                        "title": "Intermediate Problem Solving in Java",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "35B",
+                        "title": "Advanced Java Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "35A",
+                        "title": "Java Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "46",
+                        "title": "Data Structure Implementation and Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "22A",
+                        "title": "Beginning Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22C",
+                        "title": "Data Abstraction and Structures",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "6B",
+                        "title": "Boolean Logic and Discrete Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Discrete Mathematics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "22H",
+                        "title": "Discrete Mathematics - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "6D",
+                        "title": "Discrete Mathematics for Computer Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Discrete Mathematics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "22H",
+                        "title": "Discrete Mathematics - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "67",
+                        "title": "Introduction to Probability and Statistics for Computer Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "23",
+                        "title": "Engineering Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "825e3502-6b34-46a9-8dda-0198aef960bf",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2BH",
+                        "title": "Linear Algebra - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to the Donald Bren School of Information and Computer Science is highly competitive. The most important selection criteria are completion of the required preparatory courses and academic performance. This major does not participate in the TAG program Required for admission: Students must have a cumulative GPA of 3.0 and grade of B or higher in all required courses below: One year of computer programming courses* in an object-oriented or higher-level programming language. For example Python, Java, C++, data structures, assembly language and machine organization. Object-oriented or higher-level programming language courses that do not directly articulate to I&C SCI 31-33 can be used to satisfy the admissions requirements. Introduction to computer science courses do not meet this requirement. Two semesters/two quarters of approved first-year Calculus Complete one additional approval transferable course for the major (approved Math or CS course - see below) Additional Approved Courses: One course in advanced data structures One course in machine organization and assembly language (both topics must be covered) One course in software engineering One course in discrete mathematics One course in Boolean algebra One course in linear algebra NOTE: Additional computer science and statistics courses beyond the two required are strongly recommended, particularly those that align with the major of interest. Our first year of object-oriented programming is taught in Python. C++ and Java are used extensively in the curriculum; therefore, transfer students should plan to learn it by studying on their own or by completing related programming courses prior to their first quarter at UCI. Time to degree: Additional courses beyond those required for admission must be taken to fulfill the lower-division degree requirements as many are prerequisites for upper-division courses. For some transfer students, this may mean that it will take longer than two years to complete their degree. NOTE: Courses that are articulated as part of a sequence should not be split between different institutions. Complete entire sequence at same institution prior to transfer. While articulated I&C SCI 31-33 credit is not required for transfer admission, students will need to have I&C SCI 31-33 credit first in order to fulfill degree requirements and move further into the program here at UCI. In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue."
+  ]
+}

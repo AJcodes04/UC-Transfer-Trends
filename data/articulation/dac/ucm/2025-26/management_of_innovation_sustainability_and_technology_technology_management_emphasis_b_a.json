@@ -1,0 +1,420 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Merced",
+  "major": "MANAGEMENT OF INNOVATION, SUSTAINABILITY AND TECHNOLOGY, Technology Management Emphasis, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T09:09:29.257896",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "d3c4a1f2-5f7a-4e60-abd1-019982d9c29c",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "005",
+                        "title": "Preparatory Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31H",
+                        "title": "Precalculus I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "32",
+                        "title": "Precalculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "32H",
+                        "title": "Precalculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Precalculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "32",
+                        "title": "Precalculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "021",
+                        "title": "Calculus I for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "9b5bf322-fdcf-49d4-877d-019982f255a4",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "030",
+                        "title": "Data Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "22C",
+                        "title": "Data Abstraction and Structures",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "dd24eeb8-8535-48f3-96dd-019982d9c29c",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "015",
+                        "title": "Discrete Mathematics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Discrete Mathematics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "22H",
+                        "title": "Discrete Mathematics - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "005",
+                        "title": "Introduction to Business and Finance",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "10",
+                        "title": "Introduction to Business",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "006B",
+                        "title": "Financial Accounting II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "1B",
+                        "title": "Financial Accounting II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "007",
+                        "title": "Managerial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "1C",
+                        "title": "Managerial Accounting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "dc04238a-2a0d-47dd-b023-019982d9c29c",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000",
+                        "title": "Academic Reading and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ESL",
+                        "number": "5",
+                        "title": "Advanced Composition and Reading",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1000H",
+                        "title": "Academic Reading and Writing - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "e49782d9-d19c-4246-882d-019982d9c29c",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "3",
+                        "title": "Critical Thinking and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1C",
+                        "title": "Literature and Composition",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "9H",
+                        "title": "Argumentation: Analysis of Oral and Written Communication - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "9",
+                        "title": "Argumentation: Analysis of Oral and Written Communication",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1B",
+                        "title": "Reading, Writing and Research",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1001",
+                        "title": "Critical Thinking and Writing",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "C1001H",
+                        "title": "Critical Thinking and Writing - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Management of Innovation, Sustainability and Technology (MIST) The undergraduate major in Management of Innovation, Sustainability and Technology (MIST) develops a multidimensional skillset that combines leadership, organizations, entrepreneurship, finance, policy, data analytics, technology management and sustainable innovation. Students gain an integrated understanding of how to design sustainable and equitable solutions by applying teamwork and technology and by balancing people, planet and profit considerations. Graduates of the program acquire applied skills in communication, leadership, operations and planning that can be used across public, private and nonprofit settings. By combining innovation, sustainability and technology, MIST prepares students to recognize entrepreneurial opportunities, develop action plans grounded in ethical and environmental principles and design scalable and equitable solutions for complex challenges such as climate change and the management of social, food and energy systems.",
+    "Thank you for your interest in UC Merced! For admission to the Management of Innovation, Sustainability and Technology, Technology Management Emphasis, B.A. major, students must earn an overall transferable GPA of 2.4 or better, and complete classes articulated with the following UC Merced courses by the end of spring term prior to fall enrollment or by the end of fall term prior to spring enrollment. For Admission purposes all major preparation courses require a \"C\" or better. REQUIRED Major Preparation Courses for Transfer: MATH 005, MATH 011 or MATH 021 Additional Major Preparation Recommended to be completed prior to Transfer: Data Analytics Requirement: MIST 060 or DSA 001 Additional Major Prep: MIST 001, ENGR 096 Emphasis Requirement: CSE 030, ENVE 020 MIST Fundamentals: Complete one of the following: ESS 002, ESS 043, MIST/ESS 011, ENG/EH 001, MIST 040, MIST 050. MIST 070 Elective requirement: Complete four of the following: CSE 015, ECON 005, ECON 006B, ECON 007 (Only lower division options shown) *Please continue to check ASSIST every year as this information is valid for the academic year listed on the top of the agreement. AP Exam Score & Course Exemptions An AP Mathematics: Calculus AB score of 4 or 5 exempts MATH 011 or MATH 021 An AP Mathematics: Calculus BC score of 3 or higher exempts MATH 011 or MATH 021 An AP Mathematics: Calculus BC score of 4 or 5 higher exempts MATH 011 and MATH 012 or MATH 021 and MATH 022 An AP Mathematics: Calculus BC Subscore AB: score of 3 or higher exempts MATH 011 or MATH 021 UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: Advance Placement (AP) and International Baccalaureate (IB) Examinations",
+    "Please read the catalog page for more information about the Management of Innovation, Sustainability and Technology major. In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC/Cal-GETC 1A - English Composition. WRI 010 is fulfilled by IGETC/Cal-GETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): While general education is not required for admission, it can help speed up your time to graduation once you transfer to UC Merced. We highly recommend reviewing the Transfer Students: Satisfying General Education page in the catalog for a more extensive explanation of the requirements. Please note the School of Engineering strongly discourages IGETC, but accepts it; students are encouraged to focus primarily on lower division major preparation and fulfilling UCM minimum admissions requirements. If you elect to complete IGETC, the courses may double count with the major courses listed below. Please visit your Community College Counselor to learn more. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu ."
+  ]
+}

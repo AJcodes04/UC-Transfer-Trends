@@ -1,0 +1,618 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Davis",
+  "major": "American Studies A.B.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T05:22:57.186777",
+  "sections": [
+    {
+      "section_title": "PREPARATION COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "22b66845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AMS",
+                        "number": "004",
+                        "title": "Freshman Seminar",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "25b66845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AAS",
+                        "number": "010",
+                        "title": "African-American Culture & Society",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AFAM",
+                        "number": "10",
+                        "title": "An Introduction to African American Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ASA",
+                        "number": "001",
+                        "title": "Historical Experience of Asian Americans",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ASAM",
+                        "number": "1",
+                        "title": "Asian American Experiences Past to Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHI",
+                        "number": "010",
+                        "title": "Introduction to Chicana/o Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHLX",
+                        "number": "10",
+                        "title": "Introduction to Chicanx and Latinx Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NAS",
+                        "number": "001",
+                        "title": "Introduction to Native American Studies ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NAIS",
+                        "number": "12",
+                        "title": "Ethnic Studies and the Historical Experiences of Native Americans",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "21b66845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANT",
+                        "number": "002",
+                        "title": "Cultural Anthropology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "2H",
+                        "title": "Cultural Anthropology - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ANTH",
+                        "number": "2",
+                        "title": "Cultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GSW",
+                        "number": "050",
+                        "title": "Introduction to Critical Gender Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WMST",
+                        "number": "1",
+                        "title": "Introduction to Women's Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "28b66845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIS",
+                        "number": "017A",
+                        "title": "History of the United States ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17AH",
+                        "title": "History of the United States to Early National Era - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "History of the United States from 1800 to 1900",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17BH",
+                        "title": "History of the United States from 1800 to 1900 - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "History of the United States to Early National Era",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "History of the United States to Early National Era",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "History of the United States from 1800 to 1900",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17BH",
+                        "title": "History of the United States from 1800 to 1900 - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17AH",
+                        "title": "History of the United States to Early National Era - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIS",
+                        "number": "017B",
+                        "title": "History of the United States ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17C",
+                        "title": "History of the United States From 1900 to the Present",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17BH",
+                        "title": "History of the United States from 1800 to 1900 - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17CH",
+                        "title": "History of the United States From 1900 to the Present - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "History of the United States from 1800 to 1900",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17CH",
+                        "title": "History of the United States From 1900 to the Present - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17BH",
+                        "title": "History of the United States from 1800 to 1900 - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "History of the United States from 1800 to 1900",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17C",
+                        "title": "History of the United States From 1900 to the Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIS",
+                        "number": "072B",
+                        "title": "Women & Gender in America, 1865-Present ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WMST",
+                        "number": "9H",
+                        "title": "Women in American History - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "9",
+                        "title": "Women in American History",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "WMST",
+                        "number": "9",
+                        "title": "Women in American History",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "9H",
+                        "title": "Women in American History - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "26b66845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CDM",
+                        "number": "001",
+                        "title": "Introduction to Film Studies ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "F/TV",
+                        "number": "1",
+                        "title": "Introduction to Cinematic Arts",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "F/TV",
+                        "number": "1H",
+                        "title": "Introduction to Cinematic Arts - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "003",
+                        "title": "Introduction to Literature ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EWRT",
+                        "number": "1C",
+                        "title": "Literature and Composition",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1BH",
+                        "title": "Reading, Writing and Research - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "EWRT",
+                        "number": "1B",
+                        "title": "Reading, Writing and Research",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "010A",
+                        "title": "Literatures in English I: To 1700 ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "46A",
+                        "title": "Major British Writers (Medieval and Renaissance)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46AH",
+                        "title": "Major British Writers (Medieval and Renaissance) - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "010B",
+                        "title": "Literatures in English II: 1700-1900 ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "46BH",
+                        "title": "Major British Writers (Neo-Classical and Romantic) - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "48A",
+                        "title": "Major American Writers (Colonial and Romantic, 1620-1865)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "48AH",
+                        "title": "Major American Writers (Colonial to Romantic, 1620-1865) - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46B",
+                        "title": "Major British Writers (Neo-Classical and Romantic)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENL",
+                        "number": "010C",
+                        "title": "Literatures in English III: 1900 to Present ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ELIT",
+                        "number": "48CH",
+                        "title": "Major American Writers (The Modern Age, 1914-the Present) - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "48C",
+                        "title": "Major American Writers (The Modern Age, 1914 - The Present)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46C",
+                        "title": "Major British Writers (Victorian and Modern)",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ELIT",
+                        "number": "46CH",
+                        "title": "Major British Writers (Victorian and Modern) - HONORS",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "As an interdisciplinary major, American Studies offers students the choice of a variety of subject matter and approaches. This flexibility means that graduates are prepared to move into a broad range of career settings. Our alumni have become lawyers, teachers, social workers, urban planners, software engineers, filmmakers, professors, professional writers and comedians, marketing and communications professionals, librarians, museum curators, community organizers, and non-profit staff and leaders.",
+    "American Studies provides an excellent, broad education in the liberal arts. American Studies majors create an emphasis devoted to the close study of social and cultural issues crucial to the practice of American Studies. Advanced work in at least two other departments or programs allows each student to study areas tailored to their own individual education goals. Sample emphases include Youth Education, Social Justice and Social Movements; Popular Culture; Comparative Racial and Ethnic Studies; Nature, Culture and the Environment; Militarism and Incarceration; Queer and Trans Studies; Disability, Health, and Illness; and Food and Culture.",
+    "This major is not currently screening for major preparation at the time of admission; however, it is strongly encouraged that you complete as many major preparation courses as possible prior to transfer. Incomplete foundational coursework may delay your ability to graduate on time. Visit Department agreements as needed Contact your UC Davis Advisor for questions ( Find my advisor ) Note: Advanced Placement (AP) and International Baccalaureate (IB) Examination: AP and IB examination credit policies are detailed in the UC Davis General Catalog . Quick reference charts for AP and IB .",
+    "At the time of TAG submission, this major requires a minimum 3.20 cumulative GPA, with no grade lower than a C to receive a Transfer Admission Guarantee."
+  ]
+}

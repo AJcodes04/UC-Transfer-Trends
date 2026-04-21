@@ -1,0 +1,551 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Business Information Management, B.S.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-03T07:20:17.632005",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "17d96f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "31",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "32",
+                        "title": "Programming with Software Libraries",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "33",
+                        "title": "Intermediate Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "40",
+                        "title": "Introduction to Programming in Python",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "41B",
+                        "title": "Advanced Python Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "41A",
+                        "title": "Python Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1AH",
+                        "title": "Calculus I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "12",
+                        "title": "Introductory Calculus for Business and Social Science",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus II - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "20A",
+                        "title": "Basic Economics I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2H",
+                        "title": "Principles of Microeconomics - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "20B",
+                        "title": "Basic Economics II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1H",
+                        "title": "Principles of Macroeconomics - HONORS",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Macroeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MGMT",
+                        "number": "30A",
+                        "title": "Principles of Accounting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "1A",
+                        "title": "Financial Accounting I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ACCT",
+                        "number": "1B",
+                        "title": "Financial Accounting II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ACCT",
+                        "number": "1AH",
+                        "title": "Financial Accounting I - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ACCT",
+                        "number": "1BH",
+                        "title": "Financial Accounting II - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MGMT",
+                        "number": "30B",
+                        "title": "Principles of Accounting II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "1CH",
+                        "title": "Managerial Accounting - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ACCT",
+                        "number": "1C",
+                        "title": "Managerial Accounting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL APPROVED COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "1dd96f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "45J",
+                        "title": "Programming in Java as a Second Language",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "36A",
+                        "title": "Introduction to Computer Programming Using Java",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "36B",
+                        "title": "Intermediate Problem Solving in Java",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "35B",
+                        "title": "Advanced Java Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "35A",
+                        "title": "Java Programming",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "6D",
+                        "title": "Discrete Mathematics for Computer Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Discrete Mathematics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "22H",
+                        "title": "Discrete Mathematics - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "4bbba0d7-888d-4246-af7e-0198af023817",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2BH",
+                        "title": "Linear Algebra - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "15d96f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000H",
+                        "title": "Introduction to Statistics - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "15",
+                        "title": "Statistics and Research Methods in Social Science",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "POLI",
+                        "number": "20",
+                        "title": "Introduction to Statistics for the Behavioral and Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "8",
+                        "title": "Introduction to Biological Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introduction to Statistics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000H",
+                        "title": "Introduction to Statistics - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "15",
+                        "title": "Statistics and Research Methods in Social Science",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "POLI",
+                        "number": "20",
+                        "title": "Introduction to Statistics for the Behavioral and Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "67",
+                        "title": "Introduction to Probability and Statistics for Computer Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "23",
+                        "title": "Engineering Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The undergraduate Business Information Management major administered by the Donald Bren School of Information and Computer Sciences is a collaborative, interdisciplinary degree program between the Bren School and The Paul Merage School of Business. The program seeks to educate students to understand and then apply the theories and concepts of a broad, integrated curriculum covering computing, informatics, business fundamentals, and analytical decision-making. The major prepares students for a wide variety of careers and life experiences. Business Information Management majors can pursue careers in the for-profit and not-for-profit sectors or can proceed to graduate school in several disciplines, including information systems, computing, economics, business, and law. Admission to this major is highly competitive. The most important selection criteria are completion of the required preparatory courses and academic performance. This major does not participate in the TAG program . Required for admission: Students must have a cumulative UC transferable GPA of 3.0 and a minimum grade of B in all required courses below: One year of computer programming courses in a single object-language. For example Python, Java, or C++. Object-oriented or higher-level programming language courses that do not directly articulate to I&C SCI 31-33 can be used to satisfy the admissions requirements. Introduction to computer science courses do not meet this requirement. Two semesters/two quarters of approved first-year Calculus One year of micro and macroeconomics theory equivalent to UCI's ECON 20A - ECON 20B One year of introductory accounting theory and practice equivalent to UCI's MGMT 30A - MGMT 30B NOTE : The introductory sequence in ICS is offered in Python. The Bren School of ICS strongly encourages all participants to become familiar with this programming language prior to matriculation. Additional computer science courses beyond the two required are strongly recommended, particularly those that align with the major(s) of interest. Java is used extensively in the curriculum; therefore, transfer students should plan to learn it by studying on their own or by completing a Java-related programming course prior to their first quarter at UCI. Courses in Visual Basic, C, and C# are not approved preparation for this major. The Business Information Management major is offered jointly by The Donald Bren School of Information and Computer Sciences and The Paul Merage School of Business. More information is available at https://ics.uci.edu/academics/undergraduate-programs/ or at The Bren School of ICS Undergraduate Student Affairs Office; telephone (949) 824-5156; email: ucounsel@uci.edu. Time to degree: Additional courses beyond those required for admission must be taken to fulfill the lower-division degree requirements as many are prerequisites for upper-division courses. For some transfer students, this may mean that it will take longer than two years to complete their degree. NOTE: Courses that are articulated as part of a sequence should not be split between different institutions. Complete entire sequence at same institution prior to transfer. While articulated I&C SCI 31-33 credit is not required for transfer admission, students will need to have I&C SCI 31-33 credit first in order to fulfill degree requirements and move further into the program here at UCI. Students majoring in Business Information Management may not double major in Business Administration nor minor in Management, Innovation and Entrepreneurship, Informatics, or Information and Computer Science. In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue."
+  ]
+}

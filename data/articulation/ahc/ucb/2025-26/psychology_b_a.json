@@ -1,0 +1,516 @@
+{
+  "sending_institution": "Allan Hancock College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Psychology, B.A.",
+  "academic_year": "2025-26",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-06T22:23:41.923451",
+  "sections": [
+    {
+      "section_title": "GENERAL PSYCHOLOGY",
+      "groups": [
+        {
+          "group_id": "f3dd6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "1",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "C1000",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "BIOLOGICAL SCIENCES",
+      "groups": [
+        {
+          "group_id": "f5dd6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "1",
+                        "title": "Introduction to Biological Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "101",
+                        "title": "Introduction to Biological Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "150",
+                        "title": "Cellular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "155",
+                        "title": "General Zoology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MCELLBI",
+                        "number": "32",
+                        "title": "Introduction to Human Physiology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MCELLBI",
+                        "number": "32L",
+                        "title": "Introduction to Human Physiology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "125",
+                        "title": "Human Physiology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SOCIAL SCIENCE",
+      "groups": [
+        {
+          "group_id": "f7dd6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "Introduction to Social and Cultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "102",
+                        "title": "Introduction to Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LINGUIS",
+                        "number": "5",
+                        "title": "Language and Linguistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "105",
+                        "title": "Language and Culture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "1",
+                        "title": "Introduction to American Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "C1000",
+                        "title": "American Government and Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "2",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "101",
+                        "title": "Intro to Political Science",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "POLS",
+                        "number": "105",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "4",
+                        "title": "Introduction to Political Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "110",
+                        "title": "Political Theory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "QUANTITATIVE",
+      "groups": [
+        {
+          "group_id": "f9dd6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "51",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "181",
+                        "title": "Calculus 1",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "52",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "182",
+                        "title": "Calculus 2",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "184",
+                        "title": "Linear Algebra/Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "55",
+                        "title": "Discrete Mathematics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "161",
+                        "title": "Discrete Structures",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "2",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "C1000",
+                        "title": "Introductions to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "20",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "21",
+                        "title": "Introductory Probability and Statistics for Business",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (Reading & Composition, Quantitative Reasoning, and Foreign Language) or Cal-GETC/IGETC will no longer be a requirement for admission; however, completion of either is strongly recommended prior to enrollment at UC Berkeley to ensure timely degree progress. More information on new polices is available on the L&S Transfer Student Applicants website. By the end of the spring term preceding fall enrollment at Berkeley, you must complete : 1) The 7-course pattern (as found in the UC Transfer Admission Eligibility Courses Menu in ASSIST): · Two transferable courses in English composition; · One transferable course in mathematical concepts and quantitative reasoning; · Four transferable college courses chosen from at least two of the following subject areas: o arts and humanities o social and behavioral sciences o physical and biological sciences AND 2) Major Requirements : Follow the guidance on preparation for this major below. For more information on L&S General Education requirements: For information on courses that will satisfy L&S General Education (Essential Skills and Seven-Course Breadth) requirements from your community college complete the following steps: Go to \"Search below for articulation agreements: Major, department, and campus-specific general education agreements” Click on the down arrow to select: Academic Year, Institution: UC Berkeley , and Agreements with Other Institutions: (Your CA Community College). Click on “View Agreements”. Under “View Agreement by” select “ General Education/Breadth ”. Click on the “General Education/Breadth” radio button, then click on “View Agreement” Learn more from the UC Berkeley Office of Undergraduate Admission and specifically about transfer admission preparation. Review all available majors at UC Berkeley .",
+    "PREPARATION FOR TRANSFER AT THE JUNIOR LEVEL Admission to UC Berkeley with the stated intent to major in Psychology does not guarantee acceptance into the major . A departmental application is required and prerequisites must be met. Completion of Cal-GETC/IGETC certification does not correspond to the completion of the lower-division prerequisites required by the Psychology major. Psychology Major Declaration Requirements for Transfer Students: Please read the following carefully as the application requirements for Psychology have changed for all students, effective Summer 2024 onwards . 1. Minimum of 2.0 Grade Point Average in the lower-division prerequisite courses. 2. Of the five prerequisites, at least four must be satisfied with letter-graded courses taken at the college level. One may be satisfied with an AP or IBHL exam as indicated below. 3. Transfer students must apply to the major no later than the close of the application window of their second semester at UC Berkeley. Major declaration information and forms are available on the UC Berkeley Psychology website. 4. Most transfer students complete the majority of their lower-division prerequisite courses prior to Berkeley. However, transfer students may fulfill the remaining prerequisites during their first semester at UC Berkeley. 5. Students must enroll in Psych 101 \"Research and Data Analysis in Psychology\" during their first semester at UC Berkeley to be eligible to declare the major before their second semester. This class is an upper division course specific to the Psychology major at UC Berkeley and is different from other Psychology research method courses you may have previously taken. Psychology 1 The Psychology 1 requirement may also be satisfied by a score of 4 or better on the AP Psychology exam or a score of 5 or better on the IBHL exam. BIOLOGICAL SCIENCE: One course If enrollment in a lab is optional, the lab is not required for this major. The Biological Science requirement may be satisfied by a score of 4 or 5 in the AP Biology exam or a score of 5 or better on the IBHL exam. SOCIAL SCIENCE: One course The Social Science requirement may be satisfied by a score of 4 or 5 on the AP US Government or Comparative Government exam. QUANTITATIVE: One course The Psychology major does not accept AP or IBHL credits to fulfill any of the Quantitative requirements. PSYCHOLOGY RESEARCH & DATA: One course at UC Berkeley Psych 101 (Research and Data Analysis) must be taken at UC Berkeley the summer before or during the first semester. NOTE : Different options may be available for satisfying certain requirements. Consult with the advisor in the Psychology department. For more information: For more information regarding applying to the major during your first semester at UC Berkeley, please see http://psychology.berkeley.edu or contact an undergraduate adviser at psychsso@berkeley.edu ."
+  ]
+}
