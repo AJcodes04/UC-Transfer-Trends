@@ -1,0 +1,296 @@
+{
+  "sending_institution": "Diablo Valley College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "DRAFT Neuroscience, Lower Division B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T02:50:12.476186",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOSC",
+                        "number": "130",
+                        "title": "Principles of Cellular and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec5",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "192",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "193",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec7",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8A",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "124",
+                        "title": "Calculus Supplement for Physics 120",
+                        "units": 0.5
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "120",
+                        "title": "General College Physics I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8B",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "121",
+                        "title": "General College Physics II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "125",
+                        "title": "Calculus Supplement for Physics 121",
+                        "units": 0.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "130",
+                        "title": "Physics for Engineers and Scientists A: Mechanics and Wave Motion",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "230",
+                        "title": "Physics for Engineers and Scientists B: Heat and Electro-Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "OLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The L&S Essential Skills Requirements: Reading & Composition, Quantitative Reasoning, and Foreign Language; OR 2) IGETC IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (R&C, QR, and FL) or IGETC will no longer be a requirement for admission; however, completion of the Essential Skills requirements is strongly recommended prior to enrollment at UC Berkeley. For more information on minimum UC eligibility requirements for transfer applicants for fall 2025 and beyond, please visit the UC Berkeley transfer requirements page . Major Requirements: See details on preparation for this major below. Primary selection criteria for admission, in general: - completion of L&S Requirements (or IGETC), plus - strength of academic preparation, and - grade point average. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "Required Courses for Admission Biology 1A/1AL Chemistry 1A/1AL Math 1A Math 1B Physics 8A or Physics 7A Physics 8B or Physics 7B Recommended: A data science, statistics, or programming class will provide data and computational literacy that is useful in understanding the scientific process and the computational principles of brain function. Exam Credit Advanced Placement (AP) Exams: AP Calculus AB with a score of 3, 4, or 5 satisfies Math 1A. AP Calculus BC with a score of 3 or 4 satisfies Math 1A. AP Calculus BC with a score of 5 satisfies Math 1A and Math 1B. AP Chemistry with a score of 4 or 5 satisfies Chem 1A/1AL AP Biology with a score of 4 or 5 satisfies Bio 1A/1AL AP Physics C Mechanics with a score of 4 or 5 satisfies Physics 8A AP Physics C Electricity & Magnetism with a score of 5 satisfies Physics 8B International Baccalaureate (IB) Exams: Chemistry with a score of 5 or above satisfies Chem 1A/1AL HL Math Analysis & Approaches with a score of 5, 6, or 7 satisfies Math 1A, score of 7 for Math 1A and Math 1B HL Applications & Interpretation with score of 6 or 7 satisfies Math 10A A-Level Courses: Chemistry with an A satisfies Chem 1A/1AL Biology with an A satisfies Bio 1A/1AL For more information on the Neuroscience major visit our website: neuroscience.berkeley.edu/academics/undergraduate"
+  ]
+}

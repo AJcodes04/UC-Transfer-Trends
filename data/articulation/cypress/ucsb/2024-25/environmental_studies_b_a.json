@@ -1,0 +1,980 @@
+{
+  "sending_institution": "Cypress College",
+  "receiving_institution": "University of California, Santa Barbara",
+  "major": "Environmental Studies, B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T00:30:12.974378",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "9a046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENV S",
+                        "number": "2",
+                        "title": "Introduction to Environmental Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "103 C",
+                        "title": "Environmental Science",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "GEOL",
+                        "number": "190 C",
+                        "title": "Environmental Geology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "9b046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MCDB",
+                        "number": "1A",
+                        "title": "Introductory Biology I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MCDB",
+                        "number": "1LL",
+                        "title": "Introductory Biology Laboratory I",
+                        "units": 1.5
+                      },
+                      {
+                        "prefix": "EEMB",
+                        "number": "2",
+                        "title": "Introductory Biology II - Ecology and Evolution",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "135AC",
+                        "title": "Principles of Biology 1: Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "135BC",
+                        "title": "Principles of Biology 2: Organismal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "276 C",
+                        "title": "Ecology and Physiology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "175 C",
+                        "title": "Evolution and Biodiversity",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "135AC",
+                        "title": "Principles of Biology 1: Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "9c046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Economics-Micro",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "105 C",
+                        "title": "Principles of Economics-MICRO",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "105HC",
+                        "title": "Honors Principles of Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Principles of Economics-Macro",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "100HC",
+                        "title": "Honors Principles of Economics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "100 C",
+                        "title": "Principles of Economics-MACRO",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "9e046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EARTH",
+                        "number": "2",
+                        "title": "Principles of Physical Geology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "100 C",
+                        "title": "Physical Geology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "GEOL",
+                        "number": "101 C",
+                        "title": "Physical Geology Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "GEOL",
+                        "number": "101 C",
+                        "title": "Physical Geology Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "GEOL",
+                        "number": "100HC",
+                        "title": "Honors Physical Geology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EARTH",
+                        "number": "4",
+                        "title": "Introduction to Oceanography",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "130 C",
+                        "title": "Introduction to Oceanography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "3",
+                        "title": "Oceans and Atmosphere",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "140 C",
+                        "title": "Weather and Climate",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "4",
+                        "title": "Land, Water and Life",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "102 C",
+                        "title": "Physical Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "9f046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "4",
+                        "title": "Introduction to Ethics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "160 C",
+                        "title": "Introduction to Ethics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "1",
+                        "title": "Introduction to Political Philosophy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "120 C",
+                        "title": "Political Theory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "a0046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 6,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "2",
+                        "title": "Introductory Cultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "102 HC",
+                        "title": "Honors Cultural Anthropology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ANTH",
+                        "number": "102 C",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "5",
+                        "title": "People, Place and Environment",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "160 C",
+                        "title": "Cultural Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "1",
+                        "title": "Introduction to Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "101 C",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101HC",
+                        "title": "Honors Intro to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "RG ST",
+                        "number": "1",
+                        "title": "Introduction to the Study of Religion",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "101 C",
+                        "title": "Introduction to Religious Studies",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHIL",
+                        "number": "101HC",
+                        "title": "Honors Introduction to Religious Studies",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "101 C",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "101HC",
+                        "title": "Honors Intro to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "a1046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 7,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "6",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "215 C",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "7",
+                        "title": "Introduction to International Relations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "230 C",
+                        "title": "International Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "12",
+                        "title": "American Government and Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "100HC",
+                        "title": "Honors United States Government",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "POSC",
+                        "number": "100 C",
+                        "title": "United States Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "a2046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 8,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSTAT",
+                        "number": "5A",
+                        "title": "Understanding Data",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "126 C",
+                        "title": "Introduction to Probability and Statistics with Technology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "120 C",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "161HC",
+                        "title": "Honors Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "161HC",
+                        "title": "Honors Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "161 C",
+                        "title": "Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "120PC",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "161 C",
+                        "title": "Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "5",
+                        "title": "Statistics for Economics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "62fb6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 9,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Calculus with Applications, First Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150AC",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "34A",
+                        "title": "Calculus for Social and Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "130 C",
+                        "title": "Survey of Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "130PC",
+                        "title": "Survey of Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "a3046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 10,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3B",
+                        "title": "Calculus with Applications, Second Course",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150BC",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "34B",
+                        "title": "Calculus for Social and Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "130PC",
+                        "title": "Survey of Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "130 C",
+                        "title": "Survey of Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "9d046645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 11,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "111 BC",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "111 AC",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENV S",
+                        "number": "15A",
+                        "title": "Environmental Chemistry 1",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENV S",
+                        "number": "15B",
+                        "title": "Environmental Chemistry 2",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENV S",
+                        "number": "15BL",
+                        "title": "Environmental Chemistry Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meeting campus admission selection criteria. Completing the UC transfer admission requirements in English and mathematics by the end of the fall term prior to the fall application quarter makes an applicant more competitive for admission to UCSB. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UCSB, please visit the Admissions website: www.admissions.ucsb.edu This articulation agreement lists course-to-course or sequence-to-sequence substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSB. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. Please note that the course \"equivalencies\" do not necessarily apply to UCSB general education. For information concerning satisfaction of UCSB general education requirements, please refer to the General Education/Breadth articulation agreement. Advanced Placement (AP) and International Baccalaureate (IB) exams may or may not be used to meet course requirements, depending on the exam. Please refer to the AP Chart and IB Chart in the UCSB General Catalog for information on how we use AP and IB exams.",
+    "Please visit the department's website to learn more about this major: www.es.ucsb.edu PREPARATION FOR THE MAJOR: Environmental Studies 1 and 2 and 3 Environmental Studies 40 Environmental Studies 60, or MCDB 1A-1LL plus EEMB 2 One course from: Economics 1, 2, 9; Environmental Studies 30 One course from: Earth Science 2, 4, 20; Geography 3, 4 One course from: Black Studies 4; Environmental Studies 70; Feminist Studies 50; Linguistics 50; Philosophy 4; Political Science 1 One course from: Anthropology 2; Geography 5; Global Studies 1, 2; Psychology 1; Religious Studies 1, 14; Sociology 1 One course from: History 5, 7; Political Science 6, 7, 12 One course from: PSTAT 5A, 5LS; Economics 5 Mathematics 3A or 34A Environmental Studies 25 or Mathematics 3B or 34B Chemistry 1A-1AL-1B or Environmental Studies 15A-15B-15BL (Transfer applicants do not need to complete all Preparation for the Major in order to be admitted, but should complete as much as possible before transferring so they will be prepared to progress in the major at UCSB.)"
+  ]
+}

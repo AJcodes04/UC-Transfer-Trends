@@ -1,0 +1,377 @@
+{
+  "sending_institution": "College of the Canyons",
+  "receiving_institution": "University of California, San Diego",
+  "major": "CSE: Computer Engineering B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T02:24:12.018881",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "11",
+                        "title": "Introduction to Programming and Computational Problem Solving - Accelerated Pace",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPSCI",
+                        "number": "111L",
+                        "title": "Introduction to Algorithms and Programming Lab",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "CMPSCI",
+                        "number": "111",
+                        "title": "Introduction to Computer Algorithms and Programming/JAVA",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "35",
+                        "title": "Introduction to Analog Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "45",
+                        "title": "Circuits and Systems",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "65",
+                        "title": "Components and Circuits Lab",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "214",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "211",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "212",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20C",
+                        "title": "Calculus and Analytic Geometry for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "213",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20D",
+                        "title": "Introduction to Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "215",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2A",
+                        "title": "Physics - Mechanics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSIC",
+                        "number": "220",
+                        "title": "Physics for Scientists and Engineers: Mechanics of Solids and Fluids",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2B",
+                        "title": "Physics - Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSIC",
+                        "number": "221",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2C",
+                        "title": "Physics - Fluids, Waves, Thermodynamics, and Optics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSIC",
+                        "number": "222",
+                        "title": "Physics for Sci and Engrs: Waves, Heat, Optics and Modern Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "12",
+                        "title": "Basic Data Structures and Object-Oriented Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPSCI",
+                        "number": "182",
+                        "title": "Data Structures and Program Design",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CMPSCI",
+                        "number": "182L",
+                        "title": "Data Structures & Program Design Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "20",
+                        "title": "Discrete Mathematics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CMPSCI",
+                        "number": "256",
+                        "title": "Discrete Structures",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2018, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep Effective Fall 2015, the B.S. and B.A. in Computer Science, the B.S. in Computer Engineering, and the B.S. in Computer Science with a specialization in Bioinformatics are impacted for transfer students. Visit cse.ucsd.edu for full information. General advice: Transfer students are advised to complete the following courses for their major before enrolling at UC San Diego. Preparing well for the major helps students move efficiently toward graduation. - Calculus I-for Science and Engineering (Math. 20A) - Calculus II-for Science and Engineering (Math. 20B) - Calculus and Analytic Geometry (Math. 20C) - Differential Equations (Math. 20D) - Linear Algebra (Math. 18) - Mechanics (Physics 2A) - Electricity and Magnetism (Physics 2B) - Fluids, Waves, Thermodynamics, and Optics (Physics 2C) - Highest level of introductory computer programming language course offered at the community college. For example, CSE 3, CSE 6R and 8A may be used to fulfill the lower-division elective requirement; CSE 8B or 11 fulfill other lower-division requirements. Course equivalency: For course equivalencies not listed below, visit the CSE Student Affairs Office, CSE Building (EBU3B, Room 1200) first floor, or email CSEStudent@eng.ucsd.edu. For information not found here, please visit the CSE Undergraduate Program at: https://cse.ucsd.edu/undergraduate"
+  ]
+}

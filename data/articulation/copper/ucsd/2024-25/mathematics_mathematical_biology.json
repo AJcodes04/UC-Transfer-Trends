@@ -1,0 +1,486 @@
+{
+  "sending_institution": "Copper Mountain College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "Mathematics: Mathematical Biology",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T18:24:59.641317",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "002B",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20C",
+                        "title": "Calculus and Analytic Geometry for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "002A",
+                        "title": "Multivariate Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20D",
+                        "title": "Introduction to Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "002C",
+                        "title": "Ordinary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20E",
+                        "title": "Vector Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "15",
+                        "title": "Engineering Computation",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6A",
+                        "title": "General Chemistry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CH",
+                        "number": "001A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6B",
+                        "title": "General Chemistry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CH",
+                        "number": "001A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CH",
+                        "number": "001B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6C",
+                        "title": "General Chemistry III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CH",
+                        "number": "001B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CH",
+                        "number": "001A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2A",
+                        "title": "Physics - Mechanics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "004A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2B",
+                        "title": "Physics - Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "004B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2C",
+                        "title": "Physics - Fluids, Waves, Thermodynamics, and Optics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "004B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PH",
+                        "number": "004A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "1",
+                        "title": "The Cell",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BI",
+                        "number": "005",
+                        "title": "Molecular and Cellular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "2",
+                        "title": "Multicellular Life",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BI",
+                        "number": "005",
+                        "title": "Molecular and Cellular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "4",
+                        "title": "Introductory Biology Lab",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BI",
+                        "number": "005",
+                        "title": "Molecular and Cellular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2024, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep This major is designed to provide a sound grounding in a core set of mathematical, statistical, and computational subjects relevant in solving bioscience and bioengineering problems. NOTE: Students who have taken a vector calculus course at a non-UC college must successfully petition the course for 20E equivalency. Petitions must generally include course syllabus, textbook information and final exam. More information on the petition process for 20E can be found at the following site: https://www.math.ucsd.edu/students/undergraduate/math-20e-equivalency",
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf"
+  ]
+}

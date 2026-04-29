@@ -1,0 +1,453 @@
+{
+  "sending_institution": "Citrus College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Robotics Engineering B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T21:04:10.737981",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "10",
+                        "title": "Mathematical Methods for Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "212",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "21",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "212",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "20",
+                        "title": "Mathematical Methods for Engineers II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "211",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "24",
+                        "title": "Ordinary Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "211",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Calculus with Analytic Geometry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19B",
+                        "title": "Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Calculus with Analytic Geometry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5A",
+                        "title": "Introduction to Physics I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "201",
+                        "title": "Physics A: Mechanics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5L",
+                        "title": "INTRODUCTION TO PHYSICS I LABORATORY",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "201",
+                        "title": "Physics A: Mechanics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5C",
+                        "title": "Introduction to Physics III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "202",
+                        "title": "Physics B: Thermodynamics and Electromagnetism",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5N",
+                        "title": "INTRODUCTION TO PHYSICS LABORATORY III",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "202",
+                        "title": "Physics B: Thermodynamics and Electromagnetism",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED ADVANCED PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "12",
+                        "title": "Computer Systems and Assembly Language and Lab",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "242",
+                        "title": "Computer Architecture and Organization",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "23A",
+                        "title": "Vector Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "210",
+                        "title": "Calculus with Analytic Geometry III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "16",
+                        "title": "APPLIED DISCRETE MATHEMATICS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "252",
+                        "title": "Discrete Structures",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "101",
+                        "title": "Introduction to Electronic Circuits",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECE",
+                        "number": "101L",
+                        "title": "Introduction to Electronic Circuits Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meet campus selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website: https://admissions.ucsc.edu/attend-ucsc/transfer-students . This articulation agreement lists course-to-course, sequence-to-sequence or requirement substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSC. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. UC Santa Cruz Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: UC Santa Cruz AP/IB Chart 2023-2024",
+    "Please visit the department's website to learn more about this major: https://undergrad.soe.ucsc.edu ADMISSION SELECTION CRITERIA To be considered for admission to the Robotics Engineering B.S. major, transfer students must complete the following courses or their equivalents by the end of spring term for students planning to enter in the fall, with a C (2.0) or better in each course and an overall GPA of 2.80 or higher in the courses: MATH 19A: Calculus for Science, Engineering, and Mathematics MATH 19B: Calculus for Science, Engineering, and Mathematics AM 10: Mathematical Methods for Engineers I OR MATH 21: Linear Algebra AM 20: Mathematical Methods for Engineers II OR MATH 24: Ordinary Differential Equations PHYS 5A: Introduction to Physics I AND PHYS 5L: Introduction to Physics I Laboratory PHYS 5C: Introduction to Physics III AND PHYS 5N: Introduction to Physics III Laboratory In addition, the following courses are recommended prior to transfer to ensure timely graduation: CSE 12: Computer Systems and Assembly Language and Lab MATH 23A: Vector Calculus CSE 16: Applied Discrete Mathematics CSE 20: Beginning Programming in Python CSE 30: Programming Abstractions: Python ECE 13: Computer Systems and C Programming Prospective transfer students are encouraged to prioritize required and recommended major preparation prior to transfer, and may additionally complete courses that articulate to UC Santa Cruz general education requirements as time allows. THIS IS A SCREENING MAJOR. For more information on screening major requirements please visit the Admissions website: https://admissions.ucsc.edu/posts/screening-major-selection-criteria"
+  ]
+}

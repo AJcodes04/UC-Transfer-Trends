@@ -1,0 +1,500 @@
+{
+  "sending_institution": "Canada College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Technology and Information Management B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T04:35:31.158937",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Introduction to Calculus of Several Variables",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "253",
+                        "title": "Analytical Geometry and Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "23A",
+                        "title": "Vector Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "253",
+                        "title": "Analytical Geometry and Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "30",
+                        "title": "Multivariate Calculus for Engineers",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "253",
+                        "title": "Analytical Geometry and Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "12",
+                        "title": "Computer Systems and Assembly Language and Lab",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "242",
+                        "title": "Computer Architecture and Assembly Language",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "13S",
+                        "title": "Computer Systems and C Programming",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "250",
+                        "title": "Introduction to Object Oriented Programming: C++",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "16",
+                        "title": "APPLIED DISCRETE MATHEMATICS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "262",
+                        "title": "Discrete Mathematics for Computer Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "30",
+                        "title": "Programming Abstractions: Python",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "252",
+                        "title": "Introduction to Data Structures: C++",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "286",
+                        "title": "Introduction to Data Structures-Java",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "TIM",
+                        "number": "50",
+                        "title": "Business Information Systems",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS.",
+                        "number": "103",
+                        "title": "Introduction to Business Information Systems",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introductory Microeconomics: Resource Allocation and Market Structure",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Principles of Micro Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Introductory Macroeconomics: Aggregate Economic Activity",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "100",
+                        "title": "Principles of Macro Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "10A",
+                        "title": "Economics of Accounting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACTG",
+                        "number": "121",
+                        "title": "Financial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "251",
+                        "title": "Analytical Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19B",
+                        "title": "Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "252",
+                        "title": "Analytical Geometry and Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "10",
+                        "title": "Mathematical Methods for Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "270",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "21",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "270",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "20",
+                        "title": "Mathematical Methods for Engineers II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "275",
+                        "title": "Ordinary Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "24",
+                        "title": "Ordinary Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "275",
+                        "title": "Ordinary Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meet campus selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website: https://admissions.ucsc.edu/attend-ucsc/transfer-students . This articulation agreement lists course-to-course, sequence-to-sequence or requirement substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSC. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. UC Santa Cruz Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: UC Santa Cruz AP/IB Chart 2023-2024",
+    "Please visit the department's website to learn more about this major: https://undergrad.soe.ucsc.edu ADMISSION SELECTION CRITERIA To be considered for admission to the Technology and Information Management B.S. major, transfer students must have completed equivalents of at least six of the following courses with a minimum GPA of 2.40 in the courses attempted (note: all lower-division requirements completed will be counted toward the GPA): CSE 12: Computer Systems and Assembly Language and Lab CSE 13S: Computer Systems and C Programming CSE 16: Applied Discrete Mathematics CSE 30: Programming Abstractions: Python TIM 50: Business Information Systems ECON 1: Introductory Microeconomics: Resource Allocation and Market Structure ECON 2: Introductory Macroeconomics: Aggregate Economic Activity ECON 10A: Economics of Accounting MATH 19A: Calculus for Science, Engineering, and Mathematics MATH 19B: Calculus for Science, Engineering, and Mathematics MATH 22: Introduction to Calculus of Several Variables OR MATH 23A: Vector Calculus OR AM 30: Multivariate Calculus for Engineers Students who wish to graduate in two years are strongly recommended to complete all screening courses except TIM 50, CSE 12, and CSE 13S, as well as most general education requirements before coming to UC Santa Cruz. THIS IS A SCREENING MAJOR. For more information on screening major requirements please visit the Admissions website: https://admissions.ucsc.edu/posts/screening-major-selection-criteria"
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "sending_institution": "Cerritos College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Animal Science B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T02:35:43.313097",
+  "sections": [
+    {
+      "section_title": "BIOLOGICAL SCIENCE",
+      "groups": [
+        {
+          "group_id": "ce066645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002A",
+                        "title": "Introduction to Biology: Essentials of Life on Earth",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "201",
+                        "title": "Principles of Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002B",
+                        "title": "Introduction to Biology: Principles of Ecology & Evolution",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "200",
+                        "title": "Principles of Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002C",
+                        "title": "Introduction to Biology: Biodiversity & the Tree of Life",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "200",
+                        "title": "Principles of Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "CHEMISTRY",
+      "groups": [
+        {
+          "group_id": "d5066645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "002A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002C",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "111",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "112",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "d1066645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "118A",
+                        "title": "Organic Chemistry for Health & Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "211",
+                        "title": "Organic Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "118B",
+                        "title": "Organic Chemistry for Health & Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "212",
+                        "title": "Organic Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "211",
+                        "title": "Organic Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MATHEMATICS",
+      "groups": [
+        {
+          "group_id": "cd066645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016A",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "170",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "116",
+                        "title": "Calculus for Managerial, Biological and Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016B",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "116",
+                        "title": "Calculus for Managerial, Biological and Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "170",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "170",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MAT",
+                        "number": "021C",
+                        "title": "Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MAT",
+                        "number": "021D",
+                        "title": "Vector Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "225",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "A wide range of career opportunities are available to graduates. The primary goal of the major is to prepare students for graduate study leading to the M.S. and Ph.D. degrees; for continued study in a professional school such as veterinary medicine, human medicine, or dentistry; for careers in research, agricultural production, farm and ranch management, or positions in business, sales, financial services, health care, agricultural extension, consulting services, teaching, journalism, or laboratory technology.",
+    "Please refer to the Transfer Admissions Requirements for information on admissions to this major.",
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "The Animal Science major is devoted to the sciences central to understanding biological function of domestic and captive animals, their care, management, and utilization by people for food, fiber, companionship, work, and recreation. Advances in science and technology, and an ever-growing human population, have increased the complexity of issues surrounding the care and management of animals. Specializations within the major allow students to develop a scientific appreciation of animals and their relationship to their environment. Graduates in Animal Science are able to advance the science and technology of animal care and management in an objective and effective manner for the betterment of animals and society. The curriculum provides depth in the biological and physiological sciences and allows students to specialize within the broad field of applied animal science. Study begins with introductory courses in animal science, biology, chemistry, mathematics, and statistics. Students undertake advanced courses in animal behavior, biochemistry, genetics, nutrition, and physiology and the integration of these sciences to animal growth, production, and performance. Students complete the curriculum by choosing a specialization in either an animal science discipline (behavior, biochemistry, genetics, nutrition, or physiology) or in the sciences particular to a class of animals (aquatic, avian, companion and captive, equine, laboratory, livestock and dairy, or poultry)."
+  ]
+}

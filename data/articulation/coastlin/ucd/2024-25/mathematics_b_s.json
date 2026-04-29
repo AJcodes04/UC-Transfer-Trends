@@ -1,0 +1,387 @@
+{
+  "sending_institution": "Coastline Community College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Mathematics B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-24T22:18:23.807258",
+  "sections": [
+    {
+      "section_title": "MATHEMATICS",
+      "groups": [
+        {
+          "group_id": "b9816845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C180",
+                        "title": "Calculus 1",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C185",
+                        "title": "Calculus 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021C",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C185",
+                        "title": "Calculus 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021D",
+                        "title": "Vector Analysis ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C280",
+                        "title": "Calculus 3",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "b7816845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022A",
+                        "title": "Linear Algebra ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C285",
+                        "title": "Introduction to Linear Algebra and Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "108",
+                        "title": "Introduction to Abstract Mathematics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "108",
+                        "title": "Introduction to Abstract Mathematics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "9a816845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022B",
+                        "title": "Differential Equations ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C280",
+                        "title": "Calculus 3",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "C285",
+                        "title": "Introduction to Linear Algebra and Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "PROGRAMMING",
+      "groups": [
+        {
+          "group_id": "b0816845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007A",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C125",
+                        "title": "Algebra Basedl Physics: Electricity and Magnetism",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "C120",
+                        "title": "Algebra Based Physics: Mechanics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009A",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C185",
+                        "title": "Calculus Based Physics: Mechanics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C160",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "D",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009A",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C185",
+                        "title": "Calculus Based Physics: Mechanics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "Group 2 and Group 3 : Please see the Mathematics department agreements for any possible applicable MAT 022AB series articulation agreement.",
+    "This is a competitive major and is subject to the Selective Major Review process. Transfer students are encouraged to complete as many major preparation courses as possible prior to transfer. Please note the courses that are required for admissions in the below agreement. Please refer to the Transfer Admissions Requirements for additional information on admissions to this major.",
+    "Mathematics is the study of abstract structures, space, change, and the interrelations of these concepts. It also is the language of the exact sciences. Students majoring in mathematics may follow a program leading to either the Bachelor of Arts or the Bachelor of Science degree. After completing basic introductory courses such as calculus and linear algebra, students plan an upper division program in consultation with a faculty advisor. Upper division courses include real analysis, probability, modern algebra, as well as a variety of other courses that allow students to further mathematical knowledge and skills that feature their research or career interests. This individualized program can lead to graduate study in pure or applied mathematics, elementary or secondary level teaching, or to other professional goals. It can also reflect a special interest such as computational and applied mathematics, computer science, or statistics, or may be combined with a major in some other field.",
+    "A degree in mathematics provides entry to many careers in industry in addition to teaching. For instance, operations research, data analysis, systems analysis, computing, actuarial work, insurance, and financial services are only a few such careers. Mathematics is also a sound basis for graduate work in a variety of fields, such as law, engineering, and economics."
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "sending_institution": "El Camino College",
+  "receiving_institution": "University of California, Merced",
+  "major": "Environmental Systems Science, Earth and Climate Science Emphasis, B.S. ",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T14:05:09.573491",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "002",
+                        "title": "General Chemistry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "010",
+                        "title": "General Chemistry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "011",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "165",
+                        "title": "Calculus for Business and Social Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "021",
+                        "title": "Calculus I for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Single Variable Calculus and Analytic Geometry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "018",
+                        "title": "Introductory Physics I for Biological Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "018L",
+                        "title": "Introductory Physics I for Biological Sciences Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "3A",
+                        "title": "General Physics with Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "008",
+                        "title": "Introductory Physics I for Physical Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "008L",
+                        "title": "Introductory Physics I for Physical Sciences Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "1B",
+                        "title": "Fluids, Heat and Sound",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "1A",
+                        "title": "Mechanics of Solids",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "022",
+                        "title": "Calculus II for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Single Variable Calculus and Analytic Geometry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "019",
+                        "title": "Introductory Physics II for Biological Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "019L",
+                        "title": "Introductory Physics II for Biological Sciences",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "3B",
+                        "title": "General Physics with Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "009",
+                        "title": "Introductory Physics II for Physical Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "009L",
+                        "title": "Introductory Physics II for Physical Sciences Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "1B",
+                        "title": "Fluids, Heat and Sound",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "1C",
+                        "title": "Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "LOWER DIVISION ENVIRONMENTAL EMPHASIS REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESS",
+                        "number": "001",
+                        "title": "Introduction to Earth Systems Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "7",
+                        "title": "Environmental Science I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "005",
+                        "title": "Concepts & Issues in Biology Today",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "10",
+                        "title": "Fundamentals of Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "012",
+                        "title": "Introduction to Organismal Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "012L",
+                        "title": "Introduction to Organismal Biology Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "110",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "120",
+                        "title": "Ecology Evolution, Diversity, and Physiology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "110H",
+                        "title": "Honors Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "120",
+                        "title": "Ecology Evolution, Diversity, and Physiology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "110",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "120H",
+                        "title": "Honors Ecology, Evolution, Diversity, and Physiology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "110H",
+                        "title": "Honors Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "120H",
+                        "title": "Honors Ecology, Evolution, Diversity, and Physiology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESS",
+                        "number": "015",
+                        "title": "Weather, Climate, and the Environment",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "9",
+                        "title": "Weather and Climate",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESS",
+                        "number": "020",
+                        "title": "Fundamentals of Geology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "1",
+                        "title": "Physical Geology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "GEOL",
+                        "number": "3",
+                        "title": "Physical Geology Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "COMPUTER SCIENCE",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "005",
+                        "title": "Introduction to Computer Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "13",
+                        "title": "Computer Information Systems",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "019",
+                        "title": "Introduction to Computing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "1",
+                        "title": "Problem Solving and Program Design Using C++",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CSCI",
+                        "number": "14",
+                        "title": "Introduction to Programming with Python",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CSCI",
+                        "number": "3",
+                        "title": "Object-Oriented Programming in Java",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "PROBABILITY AND STATISTICS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "018",
+                        "title": "Data Science for Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "010",
+                        "title": "Statistical Inference",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "018",
+                        "title": "Statistics for Scientific Data Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "010",
+                        "title": "Analysis of Psychological Data",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "109A",
+                        "title": "Introduction to Statistics and Data Analysis for Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 10,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "1AH",
+                        "title": "Honors Reading and Composition",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "1B",
+                        "title": "Literature and Composition",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHIL",
+                        "number": "105",
+                        "title": "Critical Thinking and Discourse",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "103H",
+                        "title": "Honors Critical Thinking and Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHIL",
+                        "number": "105H",
+                        "title": "Honors Critical Thinking and Discourse",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "1C",
+                        "title": "Critical Thinking and Composition",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "103",
+                        "title": "Critical Thinking and Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "1CH",
+                        "title": "Honors Critical Thinking and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Environmental Systems Science Major Update Effective Fall 2023, The Environmental Systems Science, B.S. major will require students to choose between the two emphasis tracks below: Earth and Climate Science Emphasis Ecosystem Science Emphasis For admission to the Environmental Systems Science, Earth and Climate Science Emphasis, B.S. major, students must earn an overall transferable GPA of 2.8 or better, and must complete classes articulated with the following UC Merced courses by the end of spring term prior to fall enrollment or by the end of fall term prior to spring enrollment. All major preparation courses require a \"C\" or better. REQUIRED Major Preparation Courses For Transfer: CHEM 002 CHEM 010 MATH 011 or MATH 021 PHYS 018 & PHYS 018L* or PHYS 008 & PHYS 008L * Please scroll below for information about how Algebra/Trigonometry based Physics courses can be accepted for admissions purposes. Additional Major Preparation Courses: Recommended Prior to Transfer: Complete one Biological or Environmental Systems Science Course: ESS 001 or ESS 002 or BIO 005 or BIO 012 (equivalent to BIO 001) Complete one lower division Environmental Systems Science Course: *ESS 010 or *ESS 015 or *ESS 020 or *ESS 034 or ESS 040 or ESS 043 or ESS 050 or ESS 060 or ESS 065 *Indicating courses recommended for the Earth and Climate Science emphasis track. Complete one Computer Science Course: CSE 005 or CSE 019 or MATH 015 Complete the additional Mathematics Requirement: Math 012 or Math 022 Complete one Probability and Statistics Course: BIO 018 or ECON 010 or PSY 010 or MATH 018 or MATH 032 Complete the additional Physics Requirement: PHYS 019 & PHYS 019L or PHYS 009 & PHYS 009L Complete one additional lower-division Natural Sciences or Engineering courses. Relevant courses outside of Natural Sciences or Engineering may be allowed with approval. AP Exam Score & Course Exemptions An AP Biology score of 4 or 5 exempts BIO 005 An AP Chemistry score of 5 exempts CHEM 002 and CHEM 010 An AP Environmental Sciences score of 4 or 5 exempts ESS 001 An AP Mathematics: Calculus AB score of 4 or 5 exempts MATH 011 OR MATH 021 An AP Mathematics: Calculus BC score of 3 exempts MATH 11 OR MATH 021 An AP Mathematics: Calculus BC score of 4 or 5 exempts MATH 011 and MATH 012 OR MATH 021 and MATH 022 An AP Mathematics: Calculus BC Subscore AB score 3 or higher exempts MATH 011 or MATH 021 An AP Physics: Physics C: Mechanics score of 5 exempts PHYS 008 and PHYS 008L or PHYS 018 and PHYS 018L An AP Statistics score of 4 exempts BIO 018 or MATH 018 or PSY 010 An AP Statistics score of 5 exempts ECON 010 UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: Advance Placement (AP) and International Baccalaureate (IB) Examinations",
+    "Effective Spring 2023, the Environmental Systems Science major will accept a one-year sequence of Algebra/Trigonometry-based physics completed at another institution, in addition to calculus-based physics offered at community colleges. Although not a direct course equivalent, the one-year sequence of Algebra/Trigonometry-based physics can be substituted for the major requirements for PHYS 018/018L and PHYS 019/019L. Students who only have one semester of Algebra/Trigonometry-based physics will not meet the prereqs for PHYS 009 and 019 and would have to complete the series at a Community College. For students completing the sequence at a California Community College, courses with C-IDs PHYS 105 and PHYS 110 or PHYS 100 S will be accepted towards the requirement. Students electing to meet the requirement with Algebra/Trigonometry-based physics may be unable to take advanced courses in biophysics and other courses requiring calculus-based physics. Please meet with your Community College Academic Counselor to discuss the Algebra/Trigonometry-based physics course option further.",
+    "Please read the catalog page for more information about the Environmental Systems Science, Earth and Climate Science Emphasis major . In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC 1A - English Composition. WRI 010 is fulfilled by IGETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): While general education is not required for admission, it can help speed up your time to graduation once you transfer to UC Merced. We highly recommend reviewing the Transfer Students: Satisfying General Education page in the catalog for a more extensive explanation of the requirements. Please note the School of Natural Sciences does not recommend IGETC, but accepts it; students are encouraged to focus primarily on lower division major preparation and fulfilling UCM minimum admissions requirements. If you elect to complete IGETC, the courses may double count with the major courses listed below. Please visit your Community College Counselor to learn more. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu ."
+  ]
+}

@@ -14,6 +14,7 @@ export default function TranscriptUpload() {
   const [selected, setSelected] = useState(new Set())
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [remaining, setRemaining] = useState(null)
 
   const handleUpload = async () => {
     if (!file) return
@@ -29,8 +30,11 @@ export default function TranscriptUpload() {
       })
       setParsed(res.data)
       setSelected(new Set(res.data.map((_, i) => i)))
+      const rem = res.headers['x-ratelimit-remaining']
+      if (rem != null) setRemaining(parseInt(rem, 10))
     } catch (err) {
-      setError(err.response?.data?.error || err.message || 'Upload failed')
+      const msg = err.response?.data?.error || err.message || 'Upload failed'
+      setError(msg)
     } finally {
       setLoading(false)
     }
@@ -80,6 +84,12 @@ export default function TranscriptUpload() {
           Parse
         </Button>
       </Group>
+
+      {remaining != null && (
+        <Text size="xs" c="dimmed" mb="xs">
+          {remaining} parse{remaining !== 1 ? 's' : ''} remaining today
+        </Text>
+      )}
 
       {error && <Alert color="red" mb="md">{error}</Alert>}
       {loading && <Loader size="sm" />}

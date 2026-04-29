@@ -1,0 +1,596 @@
+{
+  "sending_institution": "Cuesta College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Marine & Coastal Science B.S. (Marine Environmental Chemistry)",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T23:45:13.884822",
+  "sections": [
+    {
+      "section_title": "BIOLOGICAL SCIENCE",
+      "groups": [
+        {
+          "group_id": "e47d6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002A",
+                        "title": "Introduction to Biology: Essentials of Life on Earth",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "201A",
+                        "title": "Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002B",
+                        "title": "Introduction to Biology: Principles of Ecology & Evolution",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "201B",
+                        "title": "Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002C",
+                        "title": "Introduction to Biology: Biodiversity & the Tree of Life",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "201A",
+                        "title": "Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "201B",
+                        "title": "Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "CHEMISTRY",
+      "groups": [
+        {
+          "group_id": "fd7d6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "002A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002C",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "201A",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "201B",
+                        "title": "General College Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MATHEMATICS",
+      "groups": [
+        {
+          "group_id": "cd7d6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021C",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "283",
+                        "title": "Calculus III: Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016A",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016B",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016C",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "PHYSICS",
+      "groups": [
+        {
+          "group_id": "d57d6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007A",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "205A",
+                        "title": "General Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "205B",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007B",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "205B",
+                        "title": "General Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "205A",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007C",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "205A",
+                        "title": "General Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "205B",
+                        "title": "General Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009A",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208A",
+                        "title": "Principles of Physics 1",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009B",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208A",
+                        "title": "Principles of Physics 1",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "208B",
+                        "title": "Principles of Physics 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009C",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208A",
+                        "title": "Principles of Physics 1",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "208B",
+                        "title": "Principles of Physics 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "ce7d6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEL",
+                        "number": "016",
+                        "title": "The Oceans",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "OCEN",
+                        "number": "210",
+                        "title": "Oceanography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "Group 2, Group 3 and Group 4: Please note that students may be able to meet major requirements with different combinations of courses. Please visit the major for more details and advising.",
+    "The major in Marine & Coastal Science focuses on the interdisciplinary nature of marine sciences by exposing students to core, breadth, and focus area courses in the discipline, in addition to a strong foundation of science preparatory material. The major builds upon UC Davis strengths in marine and coastal sciences, including field-based courses offered at Bodega Marine Laboratory to provide students a unique, interdisciplinary, “hands on” education. Advising is provided by the Department of Earth & Planetary Sciences for interested students. The major begins with introductory courses in mathematics, chemistry, physics, biology, and earth sciences. These are followed by core courses in Marine Science. The major requirements provide focus and breadth, so that each student gains mastery in one area and broad exposure to many facets of Marine & Coastal Science. Focus areas are: (i) Coastal Environmental Processes, (ii) Marine Ecology & Organismal Biology, (iii) Marine Environmental Chemistry, and (iv) Oceans & the Earth System. In this major, students will be exposed to the foundation disciplines within marine science (biology, chemistry, geology, physics) as well as modern issues facing marine and coastal environments; e.g., climate change, pollution, carbon cycling, and conservation. The major requires field experience, independent research or internship, and concludes with a capstone course featuring current research in marine science. These integrative experiences will require students to synthesize the interdisciplinary topics that they have encountered through this degree program. The mastery achieved provides a strong foundation for future careers in academic science, government, policy, and the private sector.",
+    "Please refer to the Transfer Admissions Requirements for information on admissions to this major",
+    "A B.S. in Marine & Coastal Science provides students with knowledge and practical experience needed to pursue careers in marine science (government, private sector, research). The major program includes research and internship experiences as well as field experience to help prepare students for these career paths."
+  ]
+}

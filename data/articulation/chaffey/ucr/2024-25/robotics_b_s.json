@@ -1,0 +1,401 @@
+{
+  "sending_institution": "Chaffey College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Robotics, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T21:41:30.183795",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "c9e67145-6887-ef11-8474-000d3a37e3b6__sec0",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "10A",
+                        "title": "Intro to Computer Science for Science, Mathematics, and Engineering I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "30",
+                        "title": "Engineering Application of Digital Computation",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "10B",
+                        "title": "Intro to Computer Science for Science, Mathematics, and Engineering II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9A",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9B",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9C",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "65A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "65B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "40A",
+                        "title": "General Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "45",
+                        "title": "Physics for Scientists and Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "c9e67145-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 2,
+          "group_label": "Complete 4 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 4,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "10C",
+                        "title": "Intro to Data Structures and Algorithms",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "2",
+                        "title": "Programming Concepts and Methodology II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "61",
+                        "title": "Machine Organization and Assembly Language Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "3",
+                        "title": "Computer Architecture and Organization",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ME",
+                        "number": "10",
+                        "title": "Statics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "50",
+                        "title": "Engineering Statics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "40C",
+                        "title": "General Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "46",
+                        "title": "Physics for Scientists and Engineers II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Applied Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "81",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "46",
+                        "title": "Intro to Ordinary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "85",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED COURSES",
+      "groups": [
+        {
+          "group_id": "0b1f7745-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "75",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ME",
+                        "number": "9",
+                        "title": "Engineering Graphics and Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "26",
+                        "title": "Engineering Graphics and CAD",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "40B",
+                        "title": "General Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "47",
+                        "title": "Physics for Scientists and Engineers III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "45",
+                        "title": "Physics for Scientists and Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All majors in the Bourns College of Engineering are selective, based on academic preparation and GPA in all transferable coursework, with a minimum GPA of 2.80 This is a baseline GPA for consideration and not a guarantee of admission. Prior to transfer, a minimum GPA of at least 2.50 in the calculus sequence and at least one additional sequence. If the sending institution offers honors courses , the articulation for the same course number will be used. For more information regarding this major and UCR's transfer selection process, please visit Bourns College of Engineering General Requirements . For information about the UC Transfer Admission Guarantee (TAG) program, please visit Transfer Admission Guarantee . IGETC and General Education/Breadth Information The Bourns College of Engineering (BCOE) accepts completion of IGETC as satisfying the college's lower division general education/breadth requirements for transfer students. Additional upper division breadth requirements may be required after enrollment in BCOE. Please visit \" GE Areas - Transfer Institution \" for the complete list of required GE/Breadth Articulation Agreement. For more information on BCOE breadth requirements, go to Bourns College of Engineering Breadth Requirements . Prospective applicants are strongly encouraged to focus instead on preparatory course work for the major, such as the mathematics, science and other technical preparatory course work listed below, rather than IGETC. Strong technical preparation is essential for success in the admissions process, and subsequently, in all coursework at BCOE.",
+    "Available FALL 2024 - Robotics B.S. Degree",
+    "AP Exam - Satisfy Course Requirement Section Computer Science: A Exam Minimum score of 4 satisfies CS 10A Mathematics: AB Exam or AB Subscore from BC Exam Minimum score of 3 satisfies MATH 9A or MATH 7A Mathematics: BC Exam Minimum score of 3 satisfies MATH 9A and MATH 9B or MATH 7A and MATH 7B Minimum score of 4 satisfies MATH 9A, MATH 9B, MATH 9C or MATH 7A, MATH 7B, MATH 9C"
+  ]
+}

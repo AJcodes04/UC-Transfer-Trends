@@ -1,0 +1,422 @@
+{
+  "sending_institution": "Contra Costa College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "Anthropology: Biological Anthropology B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-27T17:33:03.389689",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Applied Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20C",
+                        "title": "Calculus and Analytic Geometry for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "290",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6A",
+                        "title": "General Chemistry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6B",
+                        "title": "General Chemistry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "121",
+                        "title": "General College Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "6C",
+                        "title": "General Chemistry III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "121",
+                        "title": "General College Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "60",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "164",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "1",
+                        "title": "The Cell",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOSC",
+                        "number": "147",
+                        "title": "Cell and Molecular Biology",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "BIOSC",
+                        "number": "145",
+                        "title": "Organismal Biology",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "2",
+                        "title": "Multicellular Life",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOSC",
+                        "number": "147",
+                        "title": "Cell and Molecular Biology",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "BIOSC",
+                        "number": "145",
+                        "title": "Organismal Biology",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec4",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "2",
+                        "title": "Human Origins",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "140",
+                        "title": "Introduction to Physical Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec5",
+          "group_number": 6,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "1",
+                        "title": "Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "220",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Special Advising Note: Transfer students are strongly advised to complete as many preparatory courses as soon as possible for their major before enrolling at UC San Diego. Preparing well for the major helps students move efficiently toward graduation. Effective Fall 2019 the UC San Diego Anthropology department will offer a Biological Anthropology B.S. degree. To receive a B.S. degree with a major in Biological Anthropology, students must complete the following courses: Lower Division (10 courses, 40 units) Two courses of general biology (BILD 1, 2) Three courses of general chemistry (Chem 6A, B, C) Three courses of math/stats: Choose two of these courses: Math 10A, B, C or 20A, B, C, and Choose one of these courses: Math 11, Psych 60 One course in Anthropology: ANTH 2 (Human Origins) One course in Anthropology or Psychology or Sociology: ANTH 43 (Introduction to the Biology and Culture of Race) or ANTH 42 (Primates in a Human-Dominated World) or ANTH 5 (The Human Machine: Skeleton Within) or SOCI 70 (Sociology for Pre-medical Students) or PSYC 1 (Psychology)",
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf"
+  ]
+}

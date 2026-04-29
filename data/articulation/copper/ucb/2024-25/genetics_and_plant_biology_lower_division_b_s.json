@@ -1,0 +1,471 @@
+{
+  "sending_institution": "Copper Mountain College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Genetics and Plant Biology, Lower Division B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T04:12:02.842787",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CH",
+                        "number": "001A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3A",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3AL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CH",
+                        "number": "010A",
+                        "title": "Organic Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3B",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3BL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CH",
+                        "number": "010B",
+                        "title": "Organic Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec4",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "005",
+                        "title": "Molecular and Cellular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec6",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec7",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "003A",
+                        "title": "College Composition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "001B",
+                        "title": "Composition and Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "001C",
+                        "title": "Argumentation and Critical Thinking",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "HIGHLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 5,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "2",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "014",
+                        "title": "Statistical Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 6,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "004A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "004B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "ABOUT THE GENETICS & PLANT BIOLOGY MAJOR Genetics and Plant Biology (GPB) combines traditional plant sciences (physiology, biochemistry, morphology) with more recent biological disciplines (molecular genetics and genomics) to study the role of plants in the global environment. The discipline emphasizes the study of plants from the sub-molecular levels to the organismal level. Relevant applications include biotechnology, bioenergy, agriculture, biomedical, food science, bioinformatics, and genetic counseling. For additional information, please contact the Genetics & Plant Biology advisor at pmb.ugrad@berkeley.edu .",
+    "Please Note: Applicants are expected to complete all required coursework by the end of the spring term prior to admission. Majors may allow one course pending in the summer term prior to admission if the major has more than five required courses and at least five courses of the required coursework have been completed; in this case, if a requirement includes both a lecture and lab, the lecture and lab together are treated as one course. Majors which require five or fewer required courses to transfer will not allow required coursework to be completed in the summer prior to admission. Please see the Rausser College of Natural Resources Transfer Applicants page for individual requirements by major. Genetics & Plant Biology applicants may have the opportunity to complete a single required course in the summer term prior to admission. If a requirement includes both a lecture and lab, the lecture and lab together are treated as one course. To ensure full articulation of transfer coursework: if a series of courses at a community college is required (e.g., Chemistry 101 + 102 + 103 = CHEM 1A/1AL + CHEM 1B at UC Berkeley), all of the courses in the series must be completed, and must (unless otherwise indicated) be completed at the same community college. Partial completion of the series (e.g., two of the three required courses) may result in no credit toward the requirement(s), and splitting a series of courses between different community colleges is not guaranteed to satisfy the requirement. Courses taken out of series will be evaluated by college faculty during the transfer admissions process. If you have questions about the articulation of a series for your intended major, please email pmb.ugrad@berkeley.edu . Minimum Admissions Requirements in Genetics & Plant Biology: Equivalent of: ENGLISH R1A and ENGLISH R1B - satisfied by full UC IGETC, or may be satisfied with AP/IB/A-Level exam credit CHEM 1A and CHEM 1AL - may also be satisfied by AP/IB/A-Level exam credit CHEM 3A and CHEM 3AL CHEM 3B and CHEM 3BL BIOLOGY 1A and BIOLOGY 1AL BIOLOGY 1B MATH 16A and MATH 16B; or MATH 1A and MATH 1B; or MATH 10A and MATH 10B - may also be satisfied by AP/IB/A-Level exam credit Highly Recommended (but not required) Prior to Transfer STAT 2, STAT 20, or DATA C8 - may also be satisfied by AP/IB/A-Level exam credit PHYSICS 8A - students pursuing a pre-health curriculum may also be required to complete the second half of physics (PHYSICS 8B at Berkeley) which is not required by the Microbial Biology major 15 units of breadth coursework in the social sciences and humanities - satisfied by full UC IGETC, or may be satisfied with AP/IB/A-Level exam credit",
+    "The Rausser College of Natural Resources (RCNR) admits students directly into one of its nine undergraduate majors as selected by the applicant at the time of application. Because Rausser College does not admit transfer students as undeclared, each individual major has a distinct set of transfer courses required as major preparation before the applicant is minimally eligible for admission. Resources for RCNR transfer applicants: UC Berkeley Office of Undergraduate Admissions Minimum Requirements for Transfer Admission Rausser College of Natural Resources Transfer Applicants page - includes transfer admission guidelines specific to each Rausser College major, as well as additional information on how to submit a competitive application for your intended major Rausser College Major Requirements and Sample Degree Plans Rausser College Advising Staff"
+  ]
+}

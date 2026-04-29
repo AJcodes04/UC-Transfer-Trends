@@ -1,0 +1,217 @@
+{
+  "sending_institution": "Clovis Community College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Data Science, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T03:27:12.934484",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "b3007045-6887-ef11-8474-000d3a37e3b6__sec0",
+          "group_number": 1,
+          "group_label": "Complete 3 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 3,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "11",
+                        "title": "Intro to Discrete Structures",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "26",
+                        "title": "Discrete Mathematics for Computer Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "6",
+                        "title": "Math Analysis III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Applied Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "17",
+                        "title": "Differential Equations and Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "b3007045-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "10A",
+                        "title": "Intro to Computer Science for Science, Mathematics, and Engineering I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "40",
+                        "title": "Programming Concepts and Methodology I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "40",
+                        "title": "Programming for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "10B",
+                        "title": "Intro to Computer Science for Science, Mathematics, and Engineering II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "41",
+                        "title": "Programming Concepts and Methodology II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9A",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9B",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9C",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5B",
+                        "title": "Math Analysis II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "5A",
+                        "title": "Math Analysis I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Update: Effective Winter 2023, the following equivalency to UCR courses must be completed in order to meet selection criteria for this major. The B.S. in Data Science major is an intercollege major offered by the Marlan and Rosemary Bourns College of Engineering and the College of Natural and Agricultural Sciences. A B.S. degree in Data Science is offered by each college. When students declare the major, they choose from which college they wish to have their degree awarded . Students whose degrees are awarded by the Marlan and Rosemary Bourns College of Engineering are advised in and have their records maintained by the BCOE Office of Student Academic Affairs; students whose degrees are awarded by the College of Natural and Agricultural Sciences are advised in and have their records maintained by the CNAS Undergraduate Academic Advising Center. Breadth requirements vary by college; and students must fulfill the breadth requirements of the college they choose. Applicants to majors in the College of Natural and Agricultural Sciences are selected on the basis of academic preparation, as assessed by their GPA and the strength of preparation for their intended major. A GPA of at least 2.70 is required (This is a baseline GPA for consideration and not a guarantee of admission). All majors in the Bourns College of Engineering are selective, based on academic preparation and GPA in all transferable coursework, with a minimum GPA of 2.80 (This is a baseline GPA for consideration and not a guarantee of admission) Prior to transfer, a minimum GPA of at least 2.70 in the calculus sequence and at least 2.50 in one additional sequence. AP Exam - Satisfy Course Requirement Section Computer Science: A Exam Minimum score of 4 satisfies CS 10A Mathematics: AB Exam or AB Subscore from BC Exam Minimum score of 3 satisfies MATH 9A or MATH 7A Mathematics: BC Exam Minimum score of 3 satisfies MATH 9A and MATH 9B or MATH 7A and MATH 7B Minimum score of 4 satisfies MATH 9A, MATH 9B, MATH 9C or MATH 7A, MATH 7B, MATH 9C If the sending institution offers honors courses , the articulation for the same course number will be used. For more information regarding this major and UCR's transfer selection process, please visit Bourns College of Engineering General Requirements . For information about the UC Transfer Admission Guarantee (TAG) program, please visit Transfer Admission Guarantee . IGETC and General Education/Breadth Information The Bourns College of Engineering (BCOE) accepts completion of IGETC as satisfying the college's lower division general education/breadth requirements for transfer students. Additional upper division breadth requirements may be required after enrollment in BCOE. For more information on BCOE breadth requirements, go to Bourns College of Engineering Breadth Requirements . Prospective applicants are strongly encouraged to focus instead on preparatory course work for the major, such as the mathematics, science and other technical preparatory course work listed below, rather than IGETC. Strong technical preparation is essential for success in the admissions process, and subsequently, in all coursework at BCOE. The College of Natural and Agricultural Sciences (CNAS) does not accept IGETC for its majors. Courses taken for IGETC will be applied to the College's breadth pattern as appropriate. Transfer students who wish to supplement their math and science preparation with humanities or social science courses are encouraged to follow the College of Natural and Agricultural Sciences breadth pattern. You may view the breath requirements for College of Natural and Agricultural Sciences by visiting the 2023-24 Catalog , pages 87-89."
+  ]
+}

@@ -1,0 +1,740 @@
+{
+  "sending_institution": "Cerro Coso Community College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Earth System Science, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T20:22:58.304411",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C151",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C152",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C121H",
+                        "title": "Elementary Probability and Statistics: Honors",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "C121",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LC",
+                        "title": "General Chemistry Laboratory",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LD",
+                        "title": "General Chemistry Laboratory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "C111",
+                        "title": "General Inorganic Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "C113",
+                        "title": "General Inorganic Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "C113H",
+                        "title": "General Inorganic Chemistry II: Honors Undergraduate Laboratory Research",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "C111",
+                        "title": "General Inorganic Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3A",
+                        "title": "Basic Physics I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3B",
+                        "title": "Basic Physics II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3LB",
+                        "title": "Basic Physics Laboratory II",
+                        "units": 1.5
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3C",
+                        "title": "Basic Physics III",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "3LC",
+                        "title": "Basic Physics Laboratory III",
+                        "units": 1.5
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C111",
+                        "title": "Mechanics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7C",
+                        "title": "Classical Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7LC",
+                        "title": "Classical Physics Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C111",
+                        "title": "Mechanics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7E",
+                        "title": "Classical Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C211",
+                        "title": "Waves, Optics and Modern Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL APPROVED COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EARTHSS",
+                        "number": "5",
+                        "title": "The Atmosphere",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHSC",
+                        "number": "C131",
+                        "title": "Introduction to Meteorology Lecture",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C121H",
+                        "title": "Elementary Probability and Statistics: Honors",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "C121",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL ELECTIVE COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 6,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2D",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C251",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C257",
+                        "title": "Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3D",
+                        "title": "Elementary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C255",
+                        "title": "Ordinary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 8,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EECS",
+                        "number": "10",
+                        "title": "Computational Methods in Electrical and Computer Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "C252",
+                        "title": "Introduction to Computer Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "53",
+                        "title": "Introduction to C and Numerical Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "C265",
+                        "title": "Introductory C++ Programming",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "93",
+                        "title": "DNA to Organisms",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "C111H",
+                        "title": "General Biology I: Honors",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "C111",
+                        "title": "General Biology I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO SCI",
+                        "number": "94",
+                        "title": "Organisms to Ecosystems",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "C112",
+                        "title": "General Biology II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "C112H",
+                        "title": "General Biology II: Honors",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "51A",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "51LB",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "C221",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "51B",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "51C",
+                        "title": "Organic Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "51LC",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "C221",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "C223H",
+                        "title": "Organic Chemistry II: Honors Undergraduate Laboratory Research",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "C221",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "C223",
+                        "title": "Organic Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Preference will be given to junior-level applicants with the highest grades overall who have satisfactorily completed the following required courses. Required for admission : Students must have a cumulative UC transferable GPA of 3.0 (3.4 for TAG) and a cumulative GPA of 3.0 in required courses One year of single-variable calculus or one semester/quarter of single-variable calculus and one semester/quarter of statistics One year of either general chemistry with laboratory (preferred), or one year of calculus-based physics with laboratory Students may specialize in Atmospheric Science, Oceanography, or Terrestrial Ecosystems. Optional concentration in Geosciences Education with Secondary Teaching Certification. Additional information is available at http://ps.uci.edu/undergraduates . Students planning to pursue a single-subject secondary teaching credential in their major as an undergraduate should consider cross-enrolling into two foundational education courses through UCI DCE before transfer, while still enrolled at their community college, in order to remain eligible to graduate in two years after transfer. For more information about specific courses, the STEM teaching pathway, and cross-enrollment, please contact UCI’s CalTeach Program for more details. Important: Articulation of General Chemistry is based on the completion of the entire year. Students wishing information on course-to-course equivalencies (semester to quarter) should contact the Physical Sciences Student Affairs Office at: pssazot@uci.edu. Students from community colleges that have no articulation for EARTHSS 1 may satisfy this requirement by completing any introductory Geology, Oceanography or Atmospheric Science course offered at their college. NOTE : In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue. For more information regarding the UC Irvine Transfer Admission Guarantee Program, please visit TAG"
+  ]
+}

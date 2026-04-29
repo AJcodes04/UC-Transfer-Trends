@@ -1,0 +1,274 @@
+{
+  "sending_institution": "Bakersfield College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Statistics, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-22T21:41:49.637825",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6A",
+                        "title": "Analytic Geometry/Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6B",
+                        "title": "Analytic Geometry/Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6C",
+                        "title": "Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6E",
+                        "title": "Elementary Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "B6D",
+                        "title": "Ordinary Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "HIGHLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 3,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6C",
+                        "title": "Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6E",
+                        "title": "Elementary Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "B6D",
+                        "title": "Ordinary Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "2",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B22L",
+                        "title": "Elementary Probability and Statistics with Lab",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "B22",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSION REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF COMPUTING, DATA SCIENCE, AND SOCIETY (CDSS) THIS MAJOR IS OFFERED BY THE COLLEGE OF COMPUTING, DATA SCIENCE, AND SOCIETY (CDSS) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The Reading & Composition and Foreign Language Requirement . CDSS will accept the courses approved for these requirements as published on the General Education agreement for the College of Letters and Science; OR IGETC AND 2) Major Requirements All required courses as noted by your intended major. Only applicants who have completed 100% of items 1 and 2 above will be considered for admission. Additional completion of highly recommended courses will serve to strengthen the application. For more information on admission to UC Berkeley: https://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: https://guide.berkeley.edu",
+    "Statisticians help to design data collection plans, analyze data appropriately and interpret and draw conclusions from those analyses. Berkeley’s Statistics major is especially focused on training students in state-of-the-art methods and preparing them to critically engage with the rapidly evolving and proliferating applications of data analysis in science, industry, government and many other domains. Students in the major can expect to learn the fundamentals of probability theory, statistical reasoning and inferential methods, statistical computing, statistical modeling and its limitations; and will develop skills in description, interpretation and exploratory analysis of data by graphical and other means. For more information on this major visit: https://statistics.berkeley.edu/academics/undergrad/prospective General contact information: 367 Evans Hall (Main Office), UC Berkeley stat-ugrad@berkeley.edu (510) 644-5335 or (510) 643-6131",
+    "Required Courses for Admission MATH 1A Calculus I MATH 1B Calculus II One course from: MATH 53 Multivariable Calculus (minimum C) MATH 54 Linear Algebra & Differential Equations (minimum C) Highly Recommended Courses Completing BOTH Math 53 and Math 54 prior to transfer can best prepare a student for the Statistics major. MATH 53 Multivariable Calculus (minimum C) MATH 54 Linear Algebra & Differential Equations (minimum C). One course from: STAT 20 Introduction to Probability and Statistics (minimum C) DATA/COMPSCI/INFO/STAT/C8 Foundations of Data Science (minimum C) If no course articulates to STAT 20 or DATA C8, students preparing for the Statistics major may consider taking STAT 2 - Introduction to Statistics. Most California Community Colleges do not offer an equivalent course to STAT 20 or DATA C8. Taking STAT 2 can be helpful in understanding the discipline and can demonstrate an interest in the field. Because STAT 20 and DATA C8 include additional topics such as programming, causality and machine learning, transfer students are still expected to enroll in STAT 20 or DATA C8 during their first semester at Berkeley if they have not taken the equivalent at their community college. Students must earn a minimum 2.0 Grade Point Average in MATH 1A, MATH 1B, MATH 53, MATH 54 and one from STAT 20 or DATA C8 with no lower than a C in MATH 53, MATH 54, and either STAT 20 or DATA C8.",
+    "The Statistics Department defers to the Mathematics Department’s evaluation of course equivalence to the pre-major math requirements. MATH 1A can be satisfied with a score of 3, 4, or 5 on the AP Calculus AB Exam; or a score of 3 or 4 on the AP Calculus BC Exam. MATH 1B can be satisfied with a score of 5 on the AP Calculus BC Exam. See the Mathematics Department guidelines for A-Level and IB Exam scores needed to waive out of MATH 1A and MATH 1B. A score of 3, 4, or 5 on the AP Statistics Exam can satisfy STAT 2. This does not satisfy the lower division Statistics requirement met by STAT 20 or DATA C8 but can demonstrate an interest in the field."
+  ]
+}

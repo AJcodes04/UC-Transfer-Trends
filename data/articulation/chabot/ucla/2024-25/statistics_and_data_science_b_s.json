@@ -1,0 +1,261 @@
+{
+  "sending_institution": "Chabot College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Statistics and Data Science/B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T17:37:47.705988",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "1",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "2",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "32A",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "3",
+                        "title": "Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "32B",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "3",
+                        "title": "Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "33A",
+                        "title": "Linear Algebra and Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "6",
+                        "title": "Elementary Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "5",
+                        "title": "Introductory Statistics for the Behavioral and Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MTH",
+                        "number": "43",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "12",
+                        "title": "Introduction to Statistical Methods for Geography and Environmental Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "5",
+                        "title": "Introductory Statistics for the Behavioral and Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MTH",
+                        "number": "43",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "13",
+                        "title": "Introduction to Statistical Methods for Life and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "5",
+                        "title": "Introductory Statistics for the Behavioral and Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MTH",
+                        "number": "43",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The community college statistics course included on this agreement has been approved as a substitute for Statistics 12 or 13 which means it may not transfer as an exact UCLA equivalent.",
+    "The Statistics and Data Science major provides a multidisciplinary, integrative environment that prepares students to become innovators in every field, including environmetrics, computational biology, social statistics as well as statistical learning, machine learning, applied statistics, business and education. Listed below are the lower division preparation courses for the major. To be considered for this major you must complete the following coursework by the end of spring before transfer: One and a half years of Calculus through Multivariable, and One introductory course in Statistics course. Only approved statistics courses can satisfy the major requirement (visit https:// assist.org articulation agreement by major). If your school does NOT offer an approved course, you must still complete one transferable statistics course to be considered for this major. All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https:// stat.ucla.edu and https:// admission.ucla.edu . PLEASE NOTE: the courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed.",
+    "The AP Exam scores listed below may be used to satisfy the Statistics major prep: A score of 4 or higher on the AP Statistics exam can be used in place of the statistics course. A score of 5 or higher on the AP Calculus AB exam or 4 on the BC exam is equivalent to Math 31A and can be used in place of the first calculus course. A score of 5 on the AP Calculus BC exam is equivalent to Math 31AB and can be used in place of the first two calculus courses."
+  ]
+}

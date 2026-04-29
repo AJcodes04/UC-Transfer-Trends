@@ -1,0 +1,377 @@
+{
+  "sending_institution": "Columbia College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Assistive Technology Minor",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T01:42:39.892655",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MINOR",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "10",
+                        "title": "Mathematical Methods for Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "26",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "21",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "26",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AM",
+                        "number": "20",
+                        "title": "Mathematical Methods for Engineers II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "28",
+                        "title": "Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "24",
+                        "title": "Ordinary Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "28",
+                        "title": "Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "18B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19B",
+                        "title": "Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "18A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5A",
+                        "title": "Introduction to Physics I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "5L",
+                        "title": "INTRODUCTION TO PHYSICS I LABORATORY",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYCS",
+                        "number": "5A",
+                        "title": "Physics I: Calculus Level",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "5C",
+                        "title": "Introduction to Physics III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "5N",
+                        "title": "INTRODUCTION TO PHYSICS LABORATORY III",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYCS",
+                        "number": "5B",
+                        "title": "Physics II: Calculus Level",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "2B",
+                        "title": "General Chemistry II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2A",
+                        "title": "General Chemistry I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2AL",
+                        "title": "General Chemistry I Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2BL",
+                        "title": "General Chemistry II Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "20A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Cell and Molecular Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOE",
+                        "number": "20B",
+                        "title": "Development and Physiology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6",
+                        "title": "Plant Biology and Ecology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Principles of Evolution and Zoology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC Santa Cruz students have the option to complete one or more minors, provided they complete all of the required coursework for the minor(s). The sponsoring department establishes the course requirements for a minor. The minor involves substantial work in the discipline and requires no fewer than 25 upper-division or graduate credits. The minor appears on the student's official transcript but not on the diploma. Students do not apply for admission into a minor when applying to UC Santa Cruz. If interested in completing a minor, transfer students must contact the department sponsoring the minor after enrolling at UCSC.",
+    "The Assistive Technology minor is designed for students who are interested in helping people with movement disabilities. The emphasis is on designing exoskeletons and robots built on two core cross-disciplinary areas: Mechatronics and Functional Anatomy. This minor cannot be combined with the Assistive Technology: Motor concentration of the former bioengineering major or the Robotics Engineering B.S. major. Please visit the department's website to learn more about this minor: https://engineering.ucsc.edu/departments/electrical-and-computer-engineering/degree-programs/ PREPARATION FOR THE MINOR MATH 19A: Calculus for Science, Engineering, and Mathematics MATH 19B: Calculus for Science, Engineering, and Mathematics PHYS 5A: Introduction to Physics I AND PHYS 5L: Introduction to Physics I Laboratory PHYS 5C: Introduction to Physics III AND PHYS 5N: Introduction to Physics Laboratory III CHEM 1A: General Chemistry BIOL 20A: Cell and Molecular Biology BIOE 20B: Development and Physiology CSE 12: Computer Systems and Assembly Language and Lab ECE 13: Computer Systems and C Programming AM 10: Mathematical Methods for Engineers I OR MATH 21: Linear Algebra AM 20: Mathematical Methods for Engineers II OR MATH 24: Ordinary Differential Equations ECE 101: Introduction to Electronic Circuits AND ECE 101L: Introduction to Electronic Circuits Laboratory"
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "sending_institution": "Compton College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Chemical Engineering, Lower Division B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T04:17:53.571679",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3A",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3AL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3B",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3BL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "101",
+                        "title": "Principles of Biology I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "102",
+                        "title": "Principles of Biology II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "103",
+                        "title": "Fundamentals of Molecular Biology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Single Variable Calculus and Analytic Geometry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Single Variable Calculus and Analytic Geometry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "220",
+                        "title": "Multi-Variable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "270",
+                        "title": "Differential Equations with Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "152",
+                        "title": "Fluids, Heat and Sound",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "150",
+                        "title": "Mechanics of Solids",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "152",
+                        "title": "Fluids, Heat and Sound",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "250",
+                        "title": "Electricity and Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7C",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "252",
+                        "title": "Optics and Modern Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "101",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "101H",
+                        "title": "Honors Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "150",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "152",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The major in Chemical Engineering is offered by the College of Chemistry. It is designed to equip the student for professional work in development, design, and operation of chemical products and processes. It prepares the student for employment in such industries as chemical, petroleum, electrochemical, biochemical, semiconductor, nuclear, aerospace, plastics, food processing, environmental control, or related industries. Transfer applicants are expected to complete, at a minimum, coursework equivalent to Berkeley's: CHEMISTRY 1A + 1AL + 1B MATH 1A + 1B + 53 + 54 PHYSICS 7A + 7B ENGLISH R1A Coursework must be completed by the end of the spring term preceding fall enrollment at Berkeley. IGETC is not required. Students who choose to complete the entire IGETC pattern by the end of the spring term preceding fall enrollment at Berkeley may use IGETC to fulfill the Reading and Composition Requirement. Lower division courses required for graduation (but not for admission) are also listed in this articulation agreement. Completion of those courses is strongly recommended in order to strengthen one's application. All major courses must be taken for a letter grade. High grades in major courses (B and A grades exclusively) are essential for applicants to be both competitive in the admissions process and to be adequately prepared to continue with junior year coursework at Berkeley. The applicant's personal statement is important in the admissions process. The personal statement is reviewed for evidence of the student's interest in the chosen field and a thoughtful match between the intended major and academic and career objectives. For more information on College of Chemistry policies and degree programs: https://chemistry.berkeley.edu/ugrad/degrees For more information on admission to UC Berkeley: https://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu Additional questions about transferring to the College of Chemistry may be addressed to: Maura Daly, Director of Undergraduate Student Services mdaly@berkeley.edu (510) 643-0550",
+    "BIOLOGY You may also satisfy this requirement with a score/grade of: 4 or higher on the AP Biology exam satisfies BIOLOGY 1A & 1AL. MATHEMATICS You may also satisfy this requirement with a score/grade of: 3 or higher on the AP Calculus AB exam satisfies MATH 1A; 3 or 4 on the AP Calculus BC exam satisfies MATH 1A; 5 on the AP Calculus BC exam satisfies MATH 1A + 1B. READING AND COMPOSITION REQUIREMENT You may also satisfy this requirement with a score/grade of: 4 or 5 on the AP exam in English Language and Composition satisfies ENGLISH R1A; 4 on the AP exam in English Literature and Composition satisfies ENGLISH R1A; See ADDITIONAL REQUIREMENTS section for additional options to satisfy requirements.",
+    "BIOLOGY Biology 1A (lecture only) is required for the Chemical Engineering B.S. degree. You may also satisfy this requirement with a score/grade of: 4 or higher on the AP Biology exam satisfies BIOLOGY 1A & 1AL. MATHEMATICS You may also satisfy this requirement with a score/grade of: 3 or higher on the AP Calculus AB exam satisfies MATH 1A; 3 or 4 on the AP Calculus BC exam satisfies MATH 1A; 5 on the AP Calculus BC exam satisfies MATH 1A + 1B. ORGANIC CHEMISTRY WITH LABORATORY CHEM 12A (organic chemistry) is required for the Chemical Engineering B.S. degree. CHEM 12B is not required for the Chemical Engineering major, but it is acceptable in satisfaction of the science elective for the open elective program. Transfer students are encouraged to take the organic chemistry sequence at their institution. Completion of CHEM 3A + 3AL + 3B + 3BL, with a mean grade of B or better, will constitute satisfactory completion of Berkeley's CHEM 12A + 12B. Students not meeting this requirement may be required to take CHEM 12A and/or CHEM 12B at Berkeley. PHYSICS 7C is not required for the Chemical Engineering major, but it is acceptable in satisfaction of the science elective for the open elective program. READING AND COMPOSITION REQUIREMENT Coursework equivalent to Berkeley's: English R1A; or Entire IGETC pattern completed by the end of the spring term preceding fall enrollment at Berkeley. NOTE: You may also satisfy this requirement with a score/grade of: 4 or 5 on the AP exam in either English Language and Composition or English Literature and Composition."
+  ]
+}

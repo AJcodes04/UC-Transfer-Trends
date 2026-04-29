@@ -1,0 +1,789 @@
+{
+  "sending_institution": "Citrus College",
+  "receiving_institution": "University of California, Santa Barbara",
+  "major": "History, B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T19:59:43.077342",
+  "sections": [
+    {
+      "section_title": "AREA A",
+      "groups": [
+        {
+          "group_id": "be506845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Select A, B, C, D, or E",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2A",
+                        "title": "World History",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "2B",
+                        "title": "World History",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "2C",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "103H",
+                        "title": "HIST 103H : History of World Civilization up to 1500 C.E./Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "103",
+                        "title": "History of World Civilization up to 1500 C.E.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104",
+                        "title": "History of World Civilization since 1500",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104H",
+                        "title": "History of World Civilization since 1500-Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4C",
+                        "title": "Modern Europe",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "102",
+                        "title": "Western Civilization 1715 to the Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2B",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "103H",
+                        "title": "HIST 103H : History of World Civilization up to 1500 C.E./Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "103",
+                        "title": "History of World Civilization up to 1500 C.E.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104",
+                        "title": "History of World Civilization since 1500",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104H",
+                        "title": "History of World Civilization since 1500-Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2C",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "104",
+                        "title": "History of World Civilization since 1500",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104H",
+                        "title": "History of World Civilization since 1500-Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "D",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "The American People",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "The American People",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17C",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "108",
+                        "title": "History of the United States from 1877",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "108H",
+                        "title": "History of the United States from 1877 - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "107H",
+                        "title": "History of the United States before 1877 -Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "107",
+                        "title": "History of the United States before 1877",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "E",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2A",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "103",
+                        "title": "History of World Civilization up to 1500 C.E.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "103H",
+                        "title": "HIST 103H : History of World Civilization up to 1500 C.E./Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4C",
+                        "title": "Modern Europe",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "102",
+                        "title": "Western Civilization 1715 to the Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "AREA C",
+      "groups": [
+        {
+          "group_id": "bf506845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "8A",
+                        "title": "Latin American History: Pre-Columbian and Colonial Periods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "56",
+                        "title": "Introduction to Mexican History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "145",
+                        "title": "History of Mexico",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "BREADTH REQUIREMENT PART ONE",
+      "groups": [
+        {
+          "group_id": "c4506845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 3 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 3.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2A",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "103",
+                        "title": "History of World Civilization up to 1500 C.E.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "103H",
+                        "title": "HIST 103H : History of World Civilization up to 1500 C.E./Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2B",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "103H",
+                        "title": "HIST 103H : History of World Civilization up to 1500 C.E./Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "103",
+                        "title": "History of World Civilization up to 1500 C.E.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104",
+                        "title": "History of World Civilization since 1500",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104H",
+                        "title": "History of World Civilization since 1500-Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "107H",
+                        "title": "History of the United States before 1877 -Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "107",
+                        "title": "History of the United States before 1877",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "BREADTH REQUIREMENT PART TWO",
+      "groups": [
+        {
+          "group_id": "c0506845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4C",
+                        "title": "Modern Europe",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "102",
+                        "title": "Western Civilization 1715 to the Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "8A",
+                        "title": "Latin American History: Pre-Columbian and Colonial Periods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "56",
+                        "title": "Introduction to Mexican History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "145",
+                        "title": "History of Mexico",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "107H",
+                        "title": "History of the United States before 1877 -Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "107",
+                        "title": "History of the United States before 1877",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "108",
+                        "title": "History of the United States from 1877",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "108H",
+                        "title": "History of the United States from 1877 - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "107H",
+                        "title": "History of the United States before 1877 -Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "107",
+                        "title": "History of the United States before 1877",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17C",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "108",
+                        "title": "History of the United States from 1877",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "108H",
+                        "title": "History of the United States from 1877 - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2A",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "103",
+                        "title": "History of World Civilization up to 1500 C.E.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "103H",
+                        "title": "HIST 103H : History of World Civilization up to 1500 C.E./Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2B",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "103H",
+                        "title": "HIST 103H : History of World Civilization up to 1500 C.E./Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "103",
+                        "title": "History of World Civilization up to 1500 C.E.",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104",
+                        "title": "History of World Civilization since 1500",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104H",
+                        "title": "History of World Civilization since 1500-Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2C",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "104",
+                        "title": "History of World Civilization since 1500",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "104H",
+                        "title": "History of World Civilization since 1500-Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Breadth Requirement: The breadth requirement may be fulfilled at the lower-division and/or upper-division level, and the same course may fulfill a chronological and regional requirement simultaneously. Articulated community college courses are all lower-division, so only the lower-division options are listed here. There are many upper-division options at UCSB. The breadth requirement can be fulfilled prior to transfer, or it can be partially fulfilled prior to transfer and completed after transfer. Breadth Requirement Part 1 - Three courses focusing before 1800 selected from the following courses: History 2A, 2B, 4A, 4B, 15, 17A, 46A, 49A, 87 Breadth Requirement Part 2 - At least one course in at least four of the following six categories: A. Africa and the Middle East: History 46A, 46B, 46MI, 49A, 49B, 49C B. Asia: History 25, 28, 80, 87, 88 C. Europe: History 4A, 4B, 4C, 15, 20, 22 D. Latin America: History 8A, 8B, 56 E. United States: History 17A, 17B, 17C, 20 F. World History and Comparative History: History 2A, 2B, 2C, 15, 22, 28, 46A, 46B, 49A, 49B, 49C, 74",
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meeting campus admission selection criteria. Completing the UC transfer admission requirements in English and mathematics by the end of the fall term prior to the fall application quarter makes an applicant more competitive for admission to UCSB. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UCSB, please visit the Admissions website: www.admissions.ucsb.edu This articulation agreement lists course-to-course or sequence-to-sequence substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSB. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. Please note that the course \"equivalencies\" do not necessarily apply to UCSB general education. For information concerning satisfaction of UCSB general education requirements, please refer to the General Education/Breadth articulation agreement. Advanced Placement (AP) and International Baccalaureate (IB) exams may or may not be used to meet course requirements, depending on the exam. Please refer to the AP Chart and IB Chart in the UCSB General Catalog for information on how we use AP and IB exams.",
+    "Please visit the department's website to learn more about this major: www.history.ucsb.edu PREPARATION FOR THE MAJOR: A. One of the following three sequences: History 2A (or 4A), 2B, 2C; History 4A (or 2A), 4B, 4C; History 17A, 17B, 17C B. History 9 C. Four lower-division quarter units (one course) selected from any historical field in History (Transfer applicants do not need to complete all Preparation for the Major in order to be admitted, but should complete as much as possible before transferring so they will be prepared to progress in the major at UCSB.)"
+  ]
+}

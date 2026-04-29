@@ -1,0 +1,543 @@
+{
+  "sending_institution": "Columbia College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Anthropology/B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-24T00:34:49.281028",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "1",
+                        "title": "HUMAN EVOLUTION",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "1",
+                        "title": "Biological Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "2",
+                        "title": "Archaeology: Introduction",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "10",
+                        "title": "Archaeology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "CULTURE AND SOCIETY",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "2",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "12",
+                        "title": "Introduction to Statistical Methods for Geography and Environmental Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "12",
+                        "title": "Introduction to Statistical Methods for Geography and Environmental Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "40",
+                        "title": "Statisitics of Biological Systems",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "13",
+                        "title": "Introduction to Statistical Methods for Life and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Cell and Molecular Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7B",
+                        "title": "Genetics, Evolution, and Ecology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6",
+                        "title": "Plant Biology and Ecology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Principles of Evolution and Zoology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7C",
+                        "title": "Physiology and Human Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Principles of Evolution and Zoology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "23L",
+                        "title": "Introduction to Laboratory and Scientific Methodology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Cell and Molecular Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "60",
+                        "title": "Human Physiology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "20A",
+                        "title": "Chemical Structure",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20B",
+                        "title": "Chemical Energetics and Change",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20L",
+                        "title": "General Chemistry Laboratory",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "30AL",
+                        "title": "General Chemistry Laboratory II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "2BL",
+                        "title": "General Chemistry II Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2A",
+                        "title": "General Chemistry I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2B",
+                        "title": "General Chemistry II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2AL",
+                        "title": "General Chemistry I Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "30A",
+                        "title": "Organic Chemistry I: Structure and Reactivity",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4A",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5A",
+                        "title": "Physics for Life Sciences Majors: Mechanics, and Energy",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5B",
+                        "title": "Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5C",
+                        "title": "Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYCS",
+                        "number": "5B",
+                        "title": "Physics II: Calculus Level",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYCS",
+                        "number": "5C",
+                        "title": "Physics III: Calculus Level",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYCS",
+                        "number": "5A",
+                        "title": "Physics I: Calculus Level",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Anthropology B.S. major is designed for students interested in an anthropological understanding of human behavior, through a broad education in anthropology with a solid grounding in basic science. Listed below are the lower division preparation courses for the major. To be considered for this major, a minimum of six preparatory courses listed below must be completed by the end of spring before transfer: One course in Human Evolution, One course in Archaeology, One course in Sociocultural Anthropology, One course in Culture and Communication, One year of General Biology courses for the major, One year of Calculus, One course in Statistics, One year of General Physics with Lab, One year of General Chemistry with Lab, and One Lower Division Organic Chemistry course. All courses must be completed with a letter grade. Effective fall 2023, transfer applicants who were not admitted as a Life science major, cannot switch into the Anthropology B.S. All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https:// anthro.ucla.edu and https:// admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation requirements for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed.",
+    "The Calculus for Life Sciences courses listed below have been approved as substitutes for UCLA's Math 3ABC series through Spring 2019. However, students may be required to complete additional math courses after transfer to satisfy this requirement. The community college statistics course included on this agreement has been approved as a substitute for Statistics 12 which means it may not transfer as an exact UCLA equivalent."
+  ]
+}

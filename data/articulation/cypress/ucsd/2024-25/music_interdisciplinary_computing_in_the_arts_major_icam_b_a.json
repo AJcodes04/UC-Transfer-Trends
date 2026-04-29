@@ -1,0 +1,273 @@
+{
+  "sending_institution": "Cypress College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "Music: Interdisciplinary Computing in the Arts Major (ICAM) B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T23:03:08.184705",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUS",
+                        "number": "2A",
+                        "title": "Basic Musicianship",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUS",
+                        "number": "2B",
+                        "title": "Basic Musicianship",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "8A",
+                        "title": "Introduction to Programming and Computational Problem Solving I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "247 C",
+                        "title": "Python Programming",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "11",
+                        "title": "Introduction to Programming and Computational Problem Solving - Accelerated Pace",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "226 C",
+                        "title": "Java Programming",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150AC",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150BC",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "20",
+                        "title": "Discrete Mathematics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSCI",
+                        "number": "252 C",
+                        "title": "Discrete Structures",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "130 C",
+                        "title": "Survey of Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Special Advising Note: Transfer students are strongly advised to complete as many preparatory courses as soon as possible for their major before enrolling at UC San Diego. Preparing well for the major helps students move efficiently toward graduation. Students who wish to emphasize Music in their upper-division coursework at UCSD will declare their major through the Music Department; students who wish to emphasize Visual Arts in their upper-division coursework at UCSD will declare their major through the Visual Arts Department. The Interdisciplinary Computing and the Arts program in the Departments of Music and Visual Arts draws upon and aims to bring together ideas and paradigms from computer science, art, and cultural theory. It takes for granted that the computer has become a metamedium and that artists working with computers are expected to combine different media forms in their works. All of this makes the program unique among currently existing computer art or design programs which, on the one hand, usually focus on the use of computers for a particular media (for instance, specializing in computer animation or music, or computer design for print) and, on the other hand, do not enter into a serious dialogue with current research in computer science, only teaching the students off-the-shelf-software. The goals of the program are to: (1) prepare the next generation of artists who will be functioning in a computer-mediated culture; (2) give students necessary technical, theoretical and historical backgrounds so they can contribute to the development of new aesthetics for computer media; (3) prepare students to mediate between the worlds of computer science and technology, the arts, and the culture at large by being equally proficient with computing and cultural concepts; and (4) give students sufficient understanding of the trajectories of development in computing so they can anticipate and work with the emerging trends, rather than being locked in particular software currently available on the market. For more information please visit https://music-cms.ucsd.edu/ugrad/index.html"
+  ]
+}

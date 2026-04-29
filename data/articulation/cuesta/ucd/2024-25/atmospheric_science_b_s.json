@@ -1,0 +1,471 @@
+{
+  "sending_institution": "Cuesta College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Atmospheric Science B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T23:47:18.381320",
+  "sections": [
+    {
+      "section_title": "PREPARATION COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "ca656845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "002A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002C",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "201A",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "201B",
+                        "title": "General College Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "db656845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECS",
+                        "number": "032A",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "201",
+                        "title": "Introduction to Computer Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "006",
+                        "title": "Engineering Problem Solving ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "210",
+                        "title": "Computational Methods for Engineers",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "e9656845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021C",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "283",
+                        "title": "Calculus III: Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021D",
+                        "title": "Vector Analysis ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "283",
+                        "title": "Calculus III: Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "d3656845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022A",
+                        "title": "Linear Algebra ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "287",
+                        "title": "Ordinary Differential Equations and Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "c7656845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022B",
+                        "title": "Differential Equations ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "287",
+                        "title": "Ordinary Differential Equations and Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "cd656845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009A",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208A",
+                        "title": "Principles of Physics 1",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009B",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208A",
+                        "title": "Principles of Physics 1",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "208B",
+                        "title": "Principles of Physics 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009C",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208A",
+                        "title": "Principles of Physics 1",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "208B",
+                        "title": "Principles of Physics 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "ec656845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "247",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "Atmospheric science students have participated in internships with the California Air Resources Board, various county Air Pollution Control Districts, the National Weather Service, and performing research. Job opportunities include: national weather services, weather forecasting for broadcast media or private forecasting firms, environmental consulting firms (such as environmental impact reports, wind farm siting), government agencies at all levels from local (air quality districts, planning departments, etc.) to state (Air Resources Board) to national (NOAA), and companies whose operations are impacted by weather (such as airlines, futures markets). About half of our graduates continue their education by seeking an M.S. or Ph.D. degree in atmospheric science or related areas.",
+    "Atmospheric science is the study of the air that surrounds the planet. It includes all weather phenomena and climate including global and regional climate change, the chemistry of trace constituents and cloud and particle formation, interactions between ecosystems and the atmosphere, as well as quantitative studies of climate extremes and severe weather, including droughts, floods, hurricanes and tornadoes. The study of the impacts of human and other biotic activity on the quality of the air we breathe are important topics in the major. Modern atmospheric science is a quantitative science that is reflected in the major's curriculum. In addition to the study of daily weather events, the program deals with fundamental dynamical and physical processes that involve the general circulation of the atmosphere; turbulent mass and energy transfer at the planetary surface as well as within the free atmosphere; the transfer of solar and terrestrial radiation throughout the atmosphere; atmospheric interaction with the biosphere; climate variations; and developments in remote sensing using satellites with modern meteorological instrumentation. In addition, the program has significant expertise in the areas of air quality and its related atmospheric chemistry. As well as providing a broad background in meteorology, the major includes an informal minor area to be chosen from mathematics, computer science, environmental studies, resource management or a physical or biological science.",
+    "Please refer to the Transfer Admissions Requirements for information on admissions to this major."
+  ]
+}

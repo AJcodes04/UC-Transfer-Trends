@@ -1,0 +1,424 @@
+{
+  "sending_institution": "Cerritos College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Business Management Economics B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T05:05:07.438501",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "11A",
+                        "title": "Calculus with Applications",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "170",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "170",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introductory Microeconomics: Resource Allocation and Market Structure",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "202M",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Introductory Macroeconomics: Aggregate Economic Activity",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "201M",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED ADVANCED PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "10A",
+                        "title": "Economics of Accounting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "101",
+                        "title": "Fundamentals of Accounting I",
+                        "units": 3.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "10B",
+                        "title": "Economics of Accounting",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "102",
+                        "title": "Fundamentals of Accounting II",
+                        "units": 3.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19B",
+                        "title": "Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "23A",
+                        "title": "Vector Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "225",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "11B",
+                        "title": "Calculus with Applications",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Introduction to Calculus of Several Variables",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "225",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 5,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "12",
+                        "title": "Computer Systems and Assembly Language and Lab",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "231",
+                        "title": "Computer Organization and Assembly Language Programming",
+                        "units": 3.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "13S",
+                        "title": "Computer Systems and C Programming",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "180",
+                        "title": "Programming in C/C++",
+                        "units": 3.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "30",
+                        "title": "Programming Abstractions: Python",
+                        "units": 7.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "292",
+                        "title": "Data Structures",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meet campus selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website: https://admissions.ucsc.edu/attend-ucsc/transfer-students . This articulation agreement lists course-to-course, sequence-to-sequence or requirement substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSC. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. UC Santa Cruz Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: UC Santa Cruz AP/IB Chart 2023-2024",
+    "Please visit the department's website to learn more about this major: https://economics.ucsc.edu/academics/undergraduate-program/index.html ADMISSION SELECTION CRITERIA To be considered for admission to the Business Management Economics B.A. major, transfer students must complete equivalents of the following courses with a grade of C (2.0) or better in each course, and with a combined overall GPA of 2.80 in the three required courses, by the end of spring term for students planning to enter in the fall: ECON 1: Introductory Microeconomics: Resource Allocation and Market Structure ECON 2: Introductory Macroeconomics: Aggregate Economic Activity One of the following courses: AM 11A/ECON 11A: Mathematical Methods for Economists I OR MATH 11A: Calculus with Applications OR MATH 19A: Calculus for Science, Engineering, and Mathematics In addition, the following courses or their equivalents are strongly recommended prior to transfer to ensure timely graduation: AM 11B/ECON 11B: Mathematical Methods for Economists II OR MATH 22: Introduction to Calculus of Several Variables OR MATH 23A: Vector Calculus ECON 10A: Economics of Accounting ECON 10B: Economics of Accounting Prospective students are encouraged to prioritize required and recommended major preparation, and may additionally complete courses that articulate to UC Santa Cruz general education requirements as time allows. COMPUTER LITERACY REQUIREMENT Although not a requirement for transfer, students may complete the major's computer literacy requirement prior to transfer by completing equivalents of two of the Computer Science and Engineering (CSE) courses from the list below. THIS IS A SCREENING MAJOR. For more information on screening major requirements please visit the Admissions website: https://admissions.ucsc.edu/posts/screening-major-selection-criteria"
+  ]
+}

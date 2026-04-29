@@ -1,0 +1,88 @@
+{
+  "sending_institution": "Contra Costa College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Education (Minor in)",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T07:17:52.129387",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EDUC",
+                        "number": "10",
+                        "title": "Educational Research Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "222",
+                        "title": "Introduction to Research Methods",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "205B",
+                        "title": "Introduction to Research Methods in Psychology with Laboratory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EDUC",
+                        "number": "15",
+                        "title": "Statistics for Education Research",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "164",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The minor in Education is designed to facilitate exploration of a broad range of issues in the field of education. Graduates with the Education minor may be employed in schools, government, private industry, and non-profit organizations. Many graduates will pursue advanced training leading to teaching careers or administrative leadership. NOTE : In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue."
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "sending_institution": "Clovis Community College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Psychology B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T02:44:13.656022",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "2",
+                        "title": "Introduction to Psychological Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "11",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "7",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "5",
+                        "title": "Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "11",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "7",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "7",
+                        "title": "Statistical Methods for the Biological, Environmental, and Health Sciences",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "7L",
+                        "title": "Statistical Methods for the Biological, Environmental, and Health Sciences Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3",
+                        "title": "Precalculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "4B",
+                        "title": "Precalculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "11A",
+                        "title": "Calculus with Applications",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5A",
+                        "title": "Math Analysis I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "19A",
+                        "title": " Calculus for Science, Engineering, and Mathematics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "5A",
+                        "title": "Math Analysis I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "1",
+                        "title": "Introduction to Psychology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "2",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meet campus selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website: https://admissions.ucsc.edu/attend-ucsc/transfer-students . This articulation agreement lists course-to-course, sequence-to-sequence or requirement substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSC. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. UC Santa Cruz Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: UC Santa Cruz AP/IB Chart 2023-2024",
+    "Please visit the department's website to learn more about this major: https://psychology.ucsc.edu ADMISSION SELECTION CRITERIA To be considered for admission to the Psychology B.A. major, transfer students must complete the following courses or their equivalents by the end of spring term for students planning to enter in the fall, with the grades indicated: PSYC 1: Introduction to Psychology with a grade of B- (2.7)* or higher One of the following courses with a grade of B- (2.7) or higher: PSYC 2: Introduction to Psychological Statistics OR STAT 5: Statistics OR STAT 7/7L: Statistical Methods for the Biological, Environmental, and Health Sciences with Laboratory MATH 3: Precalculus with a grade of C (2.0) or better. Please note that an acceptable course in calculus may be used as a substitution of the MATH 3 requirement. Business Calculus is also acceptable. *If a grade of C (2.0) or C+ (2.3) was earned in a course equivalent to PSYC 1, a student must earn a minimum grade of B- (2.7) in a course articulated to UC Santa Cruz's PSYC 10: Introduction to Developmental Psychology or PSYC 20: Cognition: Fundamental Theories. In addition, the following courses are strongly recommended to ensure timely graduation: PSYC 10: Introduction to Developmental Psychology PSYC 20: Cognition: Fundamental Theories AP Exam Score Substitutions An AP Psychology score of 4 or 5 can substitute for PSYC 1 An AP Statistics score of 4 or 5 can substitute for PSYC 2 or STAT 5 An AP Calculus AB or BC score of 3, 4, or 5 can substitute for MATH 3 Prospective students are also encouraged to complete the Intersegmental General Education Transfer Curriculum (IGETC) or all of the UC Santa Cruz general education requirements before matriculation. THIS IS A SCREENING MAJOR. For more information on screening major requirements please visit the Admissions website: https://admissions.ucsc.edu/posts/screening-major-selection-criteria"
+  ]
+}

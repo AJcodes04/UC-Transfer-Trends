@@ -1,0 +1,540 @@
+{
+  "sending_institution": "Diablo Valley College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Climate Science/B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T03:53:51.322513",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "9bea6545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPTNG",
+                        "number": "10A",
+                        "title": "Introduction to Programming",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMSC",
+                        "number": "110",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "COMSC",
+                        "number": "200",
+                        "title": "Object Oriented Programming C++",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "eefd6545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3A",
+                        "title": "Calculus for Life Sciences Students",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3B",
+                        "title": "Calculus for Life Sciences Students",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "3C",
+                        "title": "Ordinary Differential Equations with Linear Algebra for Life Sciences Students",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "192",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "193",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "32A",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "292",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "33B",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "294",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "290d6645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1B",
+                        "title": "Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1C",
+                        "title": "Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "130",
+                        "title": "Physics for Engineers and Scientists A: Mechanics and Wave Motion",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "231",
+                        "title": "Physics for Engineers and Scientists C: Optics and Modern Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "230",
+                        "title": "Physics for Engineers and Scientists B: Heat and Electro-Magnetism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5A",
+                        "title": "Physics for Life Sciences Majors: Mechanics and Energy",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5B",
+                        "title": "Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5C",
+                        "title": "Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "121",
+                        "title": "General College Physics II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "125",
+                        "title": "Calculus Supplement for Physics 121",
+                        "units": 0.5
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "124",
+                        "title": "Calculus Supplement for Physics 120",
+                        "units": 0.5
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "120",
+                        "title": "General College Physics I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "2a0d6645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "20A",
+                        "title": "Chemical Structure",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20B",
+                        "title": "Chemical Energetics and Change",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "121",
+                        "title": "General College Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "21136645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "142L",
+                        "title": "Elementary Statistics with Probability and Support",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "142",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BUS",
+                        "number": "240",
+                        "title": "Business Statistics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "214",
+                        "title": "Introduction to Statistics for Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "12",
+                        "title": "Introduction to Statistical Methods for Geography and Environmental Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "240",
+                        "title": "Business Statistics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "142",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "214",
+                        "title": "Introduction to Statistics for Psychology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "142L",
+                        "title": "Elementary Statistics with Probability and Support",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "13",
+                        "title": "Introduction to Statistical Methods for Life and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "240",
+                        "title": "Business Statistics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "142",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "214",
+                        "title": "Introduction to Statistics for Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Climate Science major will provide students with the scientific understanding they need to assess climate impacts from both human-induced climate change and natural climate variability, as well as finding solutions to manage and mitigate them. It will also provide understanding of the climate system needed to communicate climate information to decision-makers in the public sector, private sector and nongovernmental organizations. Listed below are the lower division preparation information courses for the major. Effective fall 2024 admission and thereafter, you must complete the following preparation courses by the end of spring before transfer: One year of Calculus, One General Chemistry course with Lab, One semester of Calculus Based Physics, and One introductory Statistics course. Completion of one additional semester of Calculus Based Physics with Lab and one course in Programming (preferably Python) is STRONGLY RECOMMENDED . All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https:// atmosci.ucla.edu and https:// admission.ucla.edu. PLEASE NOTE: the community college courses listed below have been approved to satisfy preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed.",
+    "The community college statistics course included on this agreement has been approved as a substitute for Statistics 12 or 13 which means it may not transfer as an exact UCLA equivalent."
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "sending_institution": "College of the Canyons",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Applied Linguistics and Multilingualism B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T05:11:29.772357",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LING",
+                        "number": "50",
+                        "title": "Introduction to Linguistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A, B, C, D, or E",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "1",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "101",
+                        "title": "Elementary Spanish I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Elementary Spanish II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Elementary Spanish II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "101H",
+                        "title": "Elementary Spanish I - Honors",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "2",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "101H",
+                        "title": "Elementary Spanish I - Honors",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Elementary Spanish II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "101",
+                        "title": "Elementary Spanish I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "102",
+                        "title": "Elementary Spanish II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "D",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "1",
+                        "title": "First-Year Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHNESE",
+                        "number": "102",
+                        "title": "Elementary Chinese II - Mandarin",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHNESE",
+                        "number": "101",
+                        "title": "Elementary Chinese I-Mandarin",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "E",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "1",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRNCH",
+                        "number": "102",
+                        "title": "Elementary French II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FRNCH",
+                        "number": "101",
+                        "title": "Elementary French I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "2",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRNCH",
+                        "number": "101",
+                        "title": "Elementary French I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FRNCH",
+                        "number": "102",
+                        "title": "Elementary French II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "3",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRNCH",
+                        "number": "201",
+                        "title": "Intermediate French I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FRNCH",
+                        "number": "202",
+                        "title": "Intermediate French II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "F",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GERM",
+                        "number": "1",
+                        "title": "First-Year German",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GERMAN",
+                        "number": "101",
+                        "title": "Elementary German I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "GERMAN",
+                        "number": "102",
+                        "title": "Elementary German II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GERM",
+                        "number": "2",
+                        "title": "First-Year German",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GERMAN",
+                        "number": "101",
+                        "title": "Elementary German I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "GERMAN",
+                        "number": "102",
+                        "title": "Elementary German II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "G",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "1",
+                        "title": "First-Year Italian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "102",
+                        "title": "Elementary Italian II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ITAL",
+                        "number": "101",
+                        "title": "Elementary Italian I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "2",
+                        "title": "First-Year Italian",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ITAL",
+                        "number": "102",
+                        "title": "Elementary Italian II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ITAL",
+                        "number": "101",
+                        "title": "Elementary Italian I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meet campus selection criteria. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UC Santa Cruz, please visit the Admissions website: https://admissions.ucsc.edu/attend-ucsc/transfer-students . This articulation agreement lists course-to-course, sequence-to-sequence or requirement substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSC. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. UC Santa Cruz Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: UC Santa Cruz AP/IB Chart 2023-2024",
+    "Please visit the department's website to learn more about this major: https://language.ucsc.edu PREPARATION FOR THE MAJOR APLX 80: Introduction to Applied Linguistics LING 50: Introduction to Linguistics Two years of language Students are strongly advised to complete two years of language study in accredited two or four year institutions. While two years of prior language study is strongly advised, transfer students should be able to complete the Applied Linguistics and Multilingualism major in normative time as long as they place into Level 4 (Level 5 for students entering UC Santa Cruz in winter term) upon arrival at UCSC. In addition, transfer students are strongly advised to complete UCSC general education requirements or the Intersegmental General Education Transfer Curriculum (IGETC) prior to enrolling at UC Santa Cruz. THIS IS A NON-SCREENING MAJOR. While completion of specific major courses is not required prior to transfer, students are encouraged to complete as much of the lower-division major preparation as possible as this may affect time to degree. For more information on major requirements please visit the Admissions website: https://admissions.ucsc.edu/posts/non-screening-majors"
+  ]
+}

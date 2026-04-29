@@ -1,0 +1,1052 @@
+{
+  "sending_institution": "Columbia College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Nutrition Science B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-24T22:38:32.427480",
+  "sections": [
+    {
+      "section_title": "BIOLOGICAL SCIENCE",
+      "groups": [
+        {
+          "group_id": "875e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002A",
+                        "title": "Introduction to Biology: Essentials of Life on Earth",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "2",
+                        "title": "Cell and Molecular Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002B",
+                        "title": "Introduction to Biology: Principles of Ecology & Evolution",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Principles of Evolution and Zoology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6",
+                        "title": "Plant Biology and Ecology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIS",
+                        "number": "002C",
+                        "title": "Introduction to Biology: Biodiversity & the Tree of Life",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "4",
+                        "title": "Principles of Evolution and Zoology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6",
+                        "title": "Plant Biology and Ecology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "CHEMISTRY",
+      "groups": [
+        {
+          "group_id": "775e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "002A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002C",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "2A",
+                        "title": "General Chemistry I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2AL",
+                        "title": "General Chemistry I Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2B",
+                        "title": "General Chemistry II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "2BL",
+                        "title": "General Chemistry II Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "805e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "128A",
+                        "title": "Organic Chemistry",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4A",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "128B",
+                        "title": "Organic Chemistry",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4B",
+                        "title": "Organic Chemistry II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "4A",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "129A",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4AL",
+                        "title": "Organic Chemistry I Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "118A",
+                        "title": "Organic Chemistry for Health & Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4A",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "4AL",
+                        "title": "Organic Chemistry I Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "118B",
+                        "title": "Organic Chemistry for Health & Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "4AL",
+                        "title": "Organic Chemistry I Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "4B",
+                        "title": "Organic Chemistry II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "4BL",
+                        "title": "Organic Chemistry II Laboratory",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "4A",
+                        "title": "Organic Chemistry I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "NUTRITION",
+      "groups": [
+        {
+          "group_id": "965e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NUT",
+                        "number": "010",
+                        "title": "Discoveries & Concepts in Nutrition ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "50",
+                        "title": "Nutrition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "RESEARCH METHODS",
+      "groups": [
+        {
+          "group_id": "7d5e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSC",
+                        "number": "041",
+                        "title": "Research Methods in Psychology ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "15",
+                        "title": "Research Methods in Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STATISTICS",
+      "groups": [
+        {
+          "group_id": "835e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "NUTRITIONAL BIOLOGY OPTION",
+      "groups": [
+        {
+          "group_id": "7a5e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 7,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANT",
+                        "number": "002",
+                        "title": "Cultural Anthropology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "2",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSC",
+                        "number": "001",
+                        "title": "General Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "1",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "003",
+                        "title": "Social Problems",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "2",
+                        "title": "American Society: Social Problems and Deviance",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "8c5e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016A",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016B",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "18B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "855e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007A",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYCS",
+                        "number": "4A",
+                        "title": "Introductory Physics I: Trigonometry Level (with Lab)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007B",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYCS",
+                        "number": "4A",
+                        "title": "Introductory Physics I: Trigonometry Level (with Lab)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "NUTRITION IN PUBLIC HEALTH OPTION",
+      "groups": [
+        {
+          "group_id": "9e5e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 10,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANT",
+                        "number": "002",
+                        "title": "Cultural Anthropology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "2",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "003",
+                        "title": "Social Problems",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "2",
+                        "title": "American Society: Social Problems and Deviance",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "945e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 11,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001A",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "11",
+                        "title": "Principles of Economics - Micro",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "745e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 12,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSC",
+                        "number": "001",
+                        "title": "General Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "1",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "895e6845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 13,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001B",
+                        "title": "Principles of Macroeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "10",
+                        "title": "Principles of Economics - Macro",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HDE",
+                        "number": "012",
+                        "title": "Human Sexuality",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "5",
+                        "title": "Human Sexual Behavior",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL",
+                        "number": "001",
+                        "title": "American National Government ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLSC",
+                        "number": "10",
+                        "title": "Constitutional Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL",
+                        "number": "003",
+                        "title": "International Relations ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLSC",
+                        "number": "14",
+                        "title": "International Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL",
+                        "number": "005",
+                        "title": "Contemporary Problems of the American Political System ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLSC",
+                        "number": "12",
+                        "title": "American Political Thought",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Please refer to the Transfer Admissions Requirements for information on admissions to this major.",
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "The study of nutrition encompasses all aspects of the consumption and utilization of food and its constituents. Key areas of study include: the biochemical reactions important to the utilization of nutrients and food constituents; the impact of diet on health and disease; and, nutrition-related policy and public health issues. The nutrition science major includes two options for studying these areas: nutritional biology and nutrition in public health. Nutrition , as it is taught on the Davis campus, is a biological science and requires a complete background in chemistry and biology, along with calculus and physics (nutritional biology option) or economics (nutrition in public health option). These courses are generally completed during the first two years, and along with biochemistry, must be completed before most nutrition classes can be taken. During their junior and senior years, students in the nutritional biology option take additional course work in biochemistry, physiology, and toxicology. Students in the nutrition in public health option take additional course work in social and health-related sciences.",
+    "Both options are excellent preparation for professional or graduate training in medicine, public health, or other health sciences. The nutritional biology option also provides preparation for technical work in nutrition in the animal, food, and pharmaceutical industries. The nutrition in public health option prepares students for jobs in administrative, teaching, or public health/public service positions."
+  ]
+}

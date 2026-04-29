@@ -1,0 +1,267 @@
+{
+  "sending_institution": "Contra Costa College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "Business Economics B.S : Rady School of Management",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T20:57:39.782951",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20C",
+                        "title": "Calculus and Analytic Geometry for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "290",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Applied Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "221",
+                        "title": "Introduction to Microeconomics Principles",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "3",
+                        "title": "Principles of Macroeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "220",
+                        "title": "Introduction to Macroeconomics Principles",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MGT",
+                        "number": "4",
+                        "title": "Financial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "186",
+                        "title": "Principles of Accounting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MGT",
+                        "number": "5",
+                        "title": "Managerial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "187",
+                        "title": "Principles of Accounting II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Effective Fall 2022, major preparation will be required for this major. For details, visit: http://admissions.ucsd.edu/MajorPrep Special Advising Note: Transfer students must complete the following preparatory courses for their major before enrolling at UC San Diego: One lower division economics course (Microeconomics OR Macroeconomics), Financial Accounting, Managerial Accounting as well as two required math classes, Math 10A, B or 20A,B. Students are strongly advised to complete the third required math class, Math 10C or 20C, before enrolling at UC San Diego. Students are not able to begin their upper division core economics courses until Math 10C or 20C is complete. The Business Economics major will train students to operate within firms and to understand how firms operate within markets. Training in core economics disciplines (microeconomics, macroeconomics, econometrics) will teach students how firms interact with markets, how economies function, and how to extract insights from data. Training in core business disciplines (accounting, finance, management, marketing, operations, strategy) will teach students how to perform various functions inside businesses. Electives will deepen students' skillsets after core training is complete. With an understanding of economic fundamentals and functions of businesses, students will graduate with the knowledge required for their first day on the job as well as the skills needed to predict and respond effectively to future changes in their industry, the workplace and the world. When choosing which mathematics series to take, Math 10A-B-C or Math 20A-B-C, it is important to remember that only Math 20A-B-C allows students access to UC San Diego’s upper division math courses that are recommended as preparation for Ph.D. study in economics and business administration, as well as for graduate studies for professional management degrees, including the MBA. Therefore, while we require economics majors to take Math 10A-B-C, we strongly recommend that economics students take Math 20A-B-C. For more information please visit https://economics.ucsd.edu/undergraduate-program/index.html"
+  ]
+}

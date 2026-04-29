@@ -1,0 +1,414 @@
+{
+  "sending_institution": "Cuyamaca College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Civil Engineering, Lower Division B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T22:10:32.602752",
+  "sections": [
+    {
+      "section_title": "REQUIRED COURSES FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "142",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "240",
+                        "title": "Principles of Ecology, Evolution and Organismal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "230",
+                        "title": "Principles of Cellular, Molecular and Evolutionary Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "281",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "285",
+                        "title": "Differential Equations",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "284",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "120",
+                        "title": "College Composition and Reading",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "124",
+                        "title": "Advanced Composition: Critical Reasoning and Writing",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "122",
+                        "title": "Introduction to Literature",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "141",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec4",
+          "group_number": 5,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7B",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "7",
+                        "title": "Introduction to Computer Programming for Scientists and Engineers (MATLAB)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "120",
+                        "title": "Engineering Computer Applications",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to the UC Berkeley College of Engineering is highly competitive. Applicants to the Civil Engineering major must complete all required core UCB preparation courses in order to be eligible for admission. Only applicants who have completed 100% of these required courses will be considered for admission. Required courses for admission to the major must be completed by the end of the spring semester prior to fall enrollment. A summer 2024 course is not considered to be \"work in progress\" for the fall 2024 selection process. If a series of courses at a community college is required (e.g., English 1A + 1B + 103 = English R1A and R1B), all the courses in the series must be completed, and must (unless otherwise indicated) be completed at the same community college. Partial completion (e.g., 2 of the 3 required courses) will result in zero credit toward the requirement(s), and the applicant will NOT be considered for admission. The only exception to the series rule is Math 54. If Math 54 is split into two different courses, one covering linear algebra and one covering differential equations, we strongly encourage applicants to take both courses at the same community college; however, the College of Engineering will accept linear algebra from one school and differential equations from a different school. Lower division UC Berkeley courses required for graduation (but not admission) are also listed in the major agreements and are strongly recommended to be taken to strengthen one's application. The more of these courses completed, the stronger the application will be Required core courses for admission: (all these courses must be completed to be considered for admission) - UCB CHEM 1A - UCB CHEM 1B or BIOLOGY 1B or CIV ENG 70 - UCB MATH 1A; 1B; 53; 54 - UCB PHYSICS 7A; 7B - UCB ENGLISH R1A; R1B Strongly recommended courses: (if your college offers the courses listed below and they are articulated, taking them will strengthen your application) If no articulation, students are strongly encouraged to take a course in statics AND a course in Computer Programming. - UCB CIV ENG 11; C30; 60; 93 - UCB ENGIN 7 - UCB MEC ENG 40 or ENGIN 40 - UCB COMPSCI C8 Admission is primarily based on the completeness of the applicant's lower division preparation and the level of academic achievement reflected in the student's grade point average. The UC applicant essay also plays an important role in the selection process at UC Berkeley. The College reviews the essay for evidence of interest in the student's chosen field and a thoughtful match between the academic program and the student's academic and career objectives. The College of Engineering requires six humanities/social science courses, two of which must be reading and composition. The only non-technical admission requirement for the College of Engineering is the coursework equivalent to UC Berkeley's English R1A and R1B (reading and composition), which must be taken for a letter grade. The College of Engineering does not recognize the Intersegmental General Education Transfer Curriculum (IGETC) and strongly discourages students from following this option due to the number of major-specific technical courses required for engineering transfer admission. NOTE: The English R1A and R1B requirements cannot be satisfied by IGETC; applicants must complete the specific courses indicated as English R1A and R1B equivalents to be considered for admission. Failure to complete the exact courses listed will mean the applicant will NOT be considered for admission. The remaining four humanities/social science requirement courses are not considered for admission purposes but are required for graduation. See http://engineering.berkeley.edu/hss for the College of Engineering humanities/social science breadth requirements and courses. Courses which are three semester units or more that appear in the following categories on the \"General Education/Breadth\" section of assist.org may be used to satisfy two of the remaining four humanities/social science course requirements for the College of Engineering. ARTS AND LITERATURE; HISTORICAL STUDIES; INTERNATIONAL STUDIES; PHILOSOPHY AND VALUES; SOCIAL AND BEHAVIORAL SCIENCES. Additionally, courses that teach a foreign language may be used to satisfy this requirement. SAT/ACT/A-level test scores and letters of recommendation are NOT considered for admission. NOTE: The Physics courses listed on this agreement will only be accepted for students admitted as junior transfers (see definition here ) in the College of Engineering. The College of Engineering will not accept these courses for students admitted as freshmen to UC Berkeley. Students who entered as freshmen should check in with their ESS Adviser regarding what courses will be accepted to satisfy their major requirements before enrolling. NOTE: ALL REQUIRED COURSES AND ALL STRONGLY RECOMMENDED COURSES FOR THE MAJOR MUST BE TAKEN FOR A LETTER GRADE. FOR MORE INFORMATION, PLEASE CHECK THE COLLEGE'S WEB SITE FOR T HE COLLEGE OF ENGINEERING UNDERGRADUATE GUIDE . For more information: http://engineering.berkeley.edu/admissions/undergraduate-admissions College of Engineering Undergraduate Guide: http://engineering.berkeley.edu/academics/undergraduate-guide For more information on Civil Engineering: http://www.ce.berkeley.edu For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: http://guide.berkeley.edu",
+    "Some Advanced Placement, International Baccalaureate, and A-Level exams can fulfill requirements in the College of Engineering. For details, please see https://engineering.berkeley.edu/students/undergraduate-guide/exams/ ."
+  ]
+}

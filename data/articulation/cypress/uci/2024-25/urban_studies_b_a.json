@@ -1,0 +1,283 @@
+{
+  "sending_institution": "Cypress College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Urban Studies, B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T00:40:34.233483",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CRM/LAW",
+                        "number": "C7",
+                        "title": "Introduction to Criminology, Law and Society",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AJ",
+                        "number": "110 C",
+                        "title": "Introduction to Criminal Justice",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "292 C",
+                        "title": "Introduction to Criminology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSCI",
+                        "number": "9",
+                        "title": "Introduction to Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "101HC",
+                        "title": "Honors Intro to Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101 C",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSCI",
+                        "number": "11B",
+                        "title": "Psychology Fundamentals",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSCI",
+                        "number": "11C",
+                        "title": "Psychology Fundamentals",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "251 C",
+                        "title": "Social Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101 C",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "222 C",
+                        "title": "Abnormal Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101 C",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "222 C",
+                        "title": "Abnormal Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101HC",
+                        "title": "Honors Intro to Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "251 C",
+                        "title": "Social Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "101HC",
+                        "title": "Honors Intro to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCECOL",
+                        "number": "10",
+                        "title": "Research Design",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "202 C",
+                        "title": "Research Methods in Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCECOL",
+                        "number": "13",
+                        "title": "Statistical Analysis in Social Ecology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "126 C",
+                        "title": "Introduction to Probability and Statistics with Technology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "161 C",
+                        "title": "Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "161HC",
+                        "title": "Honors Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "120 C",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Urban Studies major is an interdisciplinary program for students who want to learn how to foster more equitable, inclusive, sustainable and livable cities. It integrates theories, analytical tools, and experiences from the fields of planning, policy, and design to investigate the causes, prevalence, and consequences of urban challenges and to develop approaches for addressing them. For transfer student admission, preference will be given to junior-level applicants with the highest grades overall. This major does not require completion of prerequisites for admission as a transfer student. NOTE : In fulfillment of the major preparation below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue. For more information regarding the UC Irvine Transfer Admission Guarantee Program, please visit TAG"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "sending_institution": "Crafton Hills College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Philosophy Minor",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T18:58:22.712778",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MINOR",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "11",
+                        "title": "Introduction to Philosophy",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "101",
+                        "title": "Introduction to Philosophy",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "22",
+                        "title": "Introduction to Ethical Theory",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "105",
+                        "title": "Introduction to Ethics: Moral Values in Today's Society",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHIL",
+                        "number": "105H",
+                        "title": "Introduction to Ethics: Moral Values in Today's Society - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "9",
+                        "title": "Introductory Symbolic Logic",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC Santa Cruz students have the option to complete one or more minors, provided they complete all of the required coursework for the minor(s). The sponsoring department establishes the course requirements for a minor. The minor involves substantial work in the discipline and requires no fewer than 25 upper-division or graduate credits. The minor appears on the student's official transcript but not on the diploma. Students do not apply for admission into a minor when applying to UC Santa Cruz. If interested in completing a minor, transfer students must contact the department sponsoring the minor after enrolling at UCSC.",
+    "Please visit the department's website to learn more about this minor: https://philosophy.ucsc.edu/ PREPARATION FOR THE MINOR PHIL 9: Introductory Symbolic Logic One additional course numbered below PHIL 100A, with the exception of PHIL 8."
+  ]
+}

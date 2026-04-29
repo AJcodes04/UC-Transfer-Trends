@@ -1,0 +1,394 @@
+{
+  "sending_institution": "Chabot College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Language Studies Minor",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T20:48:54.089840",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MINOR",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LING",
+                        "number": "50",
+                        "title": "Introduction to Linguistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "LANGUAGE REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A, B, C, or D",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "1",
+                        "title": "First-Year Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "1B",
+                        "title": "Elementary Chinese",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHIN",
+                        "number": "1A",
+                        "title": "Beginning Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "1",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRNC",
+                        "number": "1B",
+                        "title": "Elementary French",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1A",
+                        "title": "Beginning French",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1B2",
+                        "title": "Elementary French 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1A2",
+                        "title": "Beginning French 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1A1",
+                        "title": "Beginning French 1",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1B1",
+                        "title": "Elementary French 1",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "2",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRNC",
+                        "number": "1A",
+                        "title": "Beginning French",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1B",
+                        "title": "Elementary French",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1A1",
+                        "title": "Beginning French 1",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1B2",
+                        "title": "Elementary French 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1A2",
+                        "title": "Beginning French 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "1B1",
+                        "title": "Elementary French 1",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "3",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FRNC",
+                        "number": "2A",
+                        "title": "Intermediate French",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "FRNC",
+                        "number": "2B",
+                        "title": "Advanced French",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "E",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "1",
+                        "title": "First-Year Japanese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "JAPN",
+                        "number": "1A",
+                        "title": "Beginning Japanese",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "JAPN",
+                        "number": "1B",
+                        "title": "Elementary Japanese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "G",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "1",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPA",
+                        "number": "1B",
+                        "title": "Elementary Spanish",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1A",
+                        "title": "Beginning Spanish",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1A2",
+                        "title": "Beginning Spanish 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1A1",
+                        "title": "Beginning Spanish 1",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1B2",
+                        "title": "Elementary Spanish 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1B1",
+                        "title": "Elementary Spanish 1",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "2",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPA",
+                        "number": "1B",
+                        "title": "Elementary Spanish",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1A",
+                        "title": "Beginning Spanish",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1A2",
+                        "title": "Beginning Spanish 2",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1B1",
+                        "title": "Elementary Spanish 1",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1A1",
+                        "title": "Beginning Spanish 1",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SPA",
+                        "number": "1B2",
+                        "title": "Elementary Spanish 2",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC Santa Cruz students have the option to complete one or more minors, provided they complete all of the required coursework for the minor(s). The sponsoring department establishes the course requirements for a minor. The minor involves substantial work in the discipline and requires no fewer than 25 upper-division or graduate credits. The minor appears on the student's official transcript but not on the diploma. Students do not apply for admission into a minor when applying to UC Santa Cruz. If interested in completing a minor, transfer students must contact the department sponsoring the minor after enrolling at UCSC.",
+    "Please visit the department's website to learn more about this minor: https://linguistics.ucsc.edu/ PREPARATION FOR THE MINOR The minor requires completion of six quarters of language study, or demonstration of an equivalent level of ability, and the following: LING 50: Introduction to Linguistics"
+  ]
+}

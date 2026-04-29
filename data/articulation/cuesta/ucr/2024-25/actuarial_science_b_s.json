@@ -1,0 +1,355 @@
+{
+  "sending_institution": "Cuesta College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Actuarial Science, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T02:19:29.452330",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "316ffc8f-6216-4444-bd52-019501996cc4",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "10",
+                        "title": "Introduction to Business",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "245",
+                        "title": "Introduction to Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "20",
+                        "title": "Financial Accounting and Reporting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "201A",
+                        "title": "Financial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Intro to Macroeconomics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "201A",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "3",
+                        "title": "Intro to Microeconomics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "201B",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "10B",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "283",
+                        "title": "Calculus III: Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31",
+                        "title": "Applied Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "287",
+                        "title": "Ordinary Differential Equations and Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "46",
+                        "title": "Intro to Ordinary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "287",
+                        "title": "Ordinary Differential Equations and Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "508b1af0-13c2-4904-8545-019501996cc5",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "8",
+                        "title": "Statistics for Business",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "247",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "fcdbc99f-80a2-4d75-9f22-019501996cc5",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9A",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9B",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9C",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "HIGHLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "83415406-fddd-4495-8356-0196b595bffd",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "10A",
+                        "title": "Intro to Computer Science for Science, Mathematics, and Engineering I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "231",
+                        "title": "Fundamentals of Computer Science I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "217",
+                        "title": "\"C\" Programming Language",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Available FALL 2025 - Actuarial Science, B.S. Degree The Actuarial Science major is selective based on GPA and the strength of academic preparation for the major. Students are required to: 1) Complete community college courses equivalent to the following 12-13 lower division UCR Business Administration major requirements listed below. 2) Attain a minimum GPA of 2.70 in all UC transferable course work, and a minimum 2.50 GPA in the eleven lower division major prerequisites listed below. (This GPA is a baseline for consideration and not a guarantee of admission.) 3) Complete IGETC/CalGETC or the UCR breadth pattern for the School of Business UCR Breadth pattern. AP Exam - Satisfy Course Requirement Section Economics: Macroeconomics Exam Minimum score of 3 satisfies ECON 2 Economics: Microeconomics Exam Minimum score of 3 satisfies ECON 3 Mathematics: AB Exam or AB Subscore from BC Exam Minimum score of 3 satisfies MATH 9A or MATH 7A Mathematics: BC Exam Minimum score of 3 satisfies MATH 9A and MATH 9B or MATH 7A and MATH 7B Minimum score of 4 satisfies MATH 9A, MATH 9B, MATH 9C or MATH 7A, MATH 7B, MATH 9C Statistics Exam Minimum score of 4 satisfies STAT 8 or STAT 10 If the sending institution offers honors courses , the articulation for the same course number will be used. For more information regarding this major and UCR's transfer selection process, please visit Actuarial Science . For information about the UC Transfer Admission Guarantee (TAG) program, please visit Transfer Admission Guarantee ."
+  ]
+}

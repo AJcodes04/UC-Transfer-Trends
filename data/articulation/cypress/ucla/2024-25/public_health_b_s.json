@@ -1,0 +1,596 @@
+{
+  "sending_institution": "Cypress College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Public Health/B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T22:42:11.536021",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "40",
+                        "title": "Statisitics of Biological Systems",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "13",
+                        "title": "Introduction to Statistical Methods for Life and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "120 C",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "161 C",
+                        "title": "Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "13",
+                        "title": "Introduction to Statistical Methods for Life and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "120 C",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "161 C",
+                        "title": "Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150AC",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "150BC",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "STATS",
+                        "number": "13",
+                        "title": "Introduction to Statistical Methods for Life and Health Sciences",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "120 C",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "161 C",
+                        "title": "Probability and Statistics - Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "135BC",
+                        "title": "Principles of Biology 2: Organismal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "135AC",
+                        "title": "Principles of Biology 1: Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7B",
+                        "title": "Genetics, Evolution, and Ecology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "135BC",
+                        "title": "Principles of Biology 2: Organismal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "135AC",
+                        "title": "Principles of Biology 1: Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7C",
+                        "title": "Physiology and Human Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "135AC",
+                        "title": "Principles of Biology 1: Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "135BC",
+                        "title": "Principles of Biology 2: Organismal Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "23L",
+                        "title": "Introduction to Laboratory and Scientific Methodology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "135AC",
+                        "title": "Principles of Biology 1: Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "20A",
+                        "title": "Chemical Structure",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20B",
+                        "title": "Chemical Energetics and Change",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20L",
+                        "title": "General Chemistry Laboratory",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "30AL",
+                        "title": "General Chemistry Laboratory II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "111 AC",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "111 BC",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "30A",
+                        "title": "Organic Chemistry I: Structure and Reactivity",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "30B",
+                        "title": "Organic Chemistry II: Reactivity, Synthesis, and Spectroscopy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "211BC",
+                        "title": "Organic Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "211 AC",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1B",
+                        "title": "Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1C",
+                        "title": "Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "4AL",
+                        "title": "Physics Laboratory for Scientists and Engineers: Mechanics",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "4BL",
+                        "title": "Physics Laboratory for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "221 C",
+                        "title": "General Physics I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "222 C",
+                        "title": "General Physics II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "223 C",
+                        "title": "General Physics III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5A",
+                        "title": "Physics for Life Sciences Majors: Mechanics, and Energy",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5B",
+                        "title": "Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5C",
+                        "title": "Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "211 C",
+                        "title": "Physics for Life Sciences II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "210 C",
+                        "title": "Physics for Life Sciences I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM ",
+                        "number": "1",
+                        "title": "Principles of Oral Communication",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "100 HC",
+                        "title": "Honors Human Communication",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "100 C",
+                        "title": "Human Communication",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The community college statistics course included on this agreement has been approved as a substitute for Statistics 13 which means it may not transfer as an exact UCLA equivalent.",
+    "The Public Health major is designed for those interested in working to improve health in diverse populations. The major will introduce students to the foundations of scientific and social knowledge relevant to public health. Students learn foundational concepts and approaches regarding health issues and their solutions, explore research methods, learn to think critically about upstream and downstream approaches in the field, and use case studies and problem based learning to define issues, assess populations, implement programs, gather evidence, analyze data, and evaluate efforts. The Public Health BA and Public Health BS differ in the amount of science preparatory coursework required. Listed below are the lower division preparation courses for the major. To be considered for this major, you must complete a MINIMUM OF EIGHT major preparation courses, by the spring before transfer: One year of Biology for Major with Lab, One year of General Chemistry with Lab, One semester of Organic Chemistry with Lab, One year of Calculus, One course in Statistics, Completion of one year of physics for Life Sciences with Lab, one course in principles of Communication or Writing 2, or one course in Cultural Diversity or Health and Society is STRONGLY RECOMMENDED . All courses must be taken for a letter grade. Applicants must have a minimum cumulative 3.2 GPA in all transferable coursework by the end of fall. Students are admitted as Pre-Public Health until all lower division courses are completed. For more information about this major and UCLA's transfer selection process, visit https://ph.ucla.edu and https://admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses."
+  ]
+}

@@ -1,0 +1,590 @@
+{
+  "sending_institution": "Cuyamaca College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Environmental Sciences, Lower Division B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T22:17:50.171202",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "141",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "142",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "3A",
+                        "title": "Chemical Structure and Reactivity",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "3AL",
+                        "title": "Organic Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "231",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec5",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "230",
+                        "title": "Principles of Cellular, Molecular and Evolutionary Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "240",
+                        "title": "Principles of Ecology, Evolution and Organismal Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "240",
+                        "title": "Principles of Ecology, Evolution and Organismal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "230",
+                        "title": "Principles of Cellular, Molecular and Evolutionary Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "240",
+                        "title": "Principles of Ecology, Evolution and Organismal Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "230",
+                        "title": "Principles of Cellular, Molecular and Evolutionary Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec8",
+          "group_number": 5,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec9",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "120",
+                        "title": "College Composition and Reading",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "124",
+                        "title": "Advanced Composition: Critical Reasoning and Writing",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "122",
+                        "title": "Introduction to Literature",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "HIGHLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 7,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "120",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "121",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 8,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8A",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYC",
+                        "number": "130",
+                        "title": "Fundamentals of Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8A",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8B",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYC",
+                        "number": "203",
+                        "title": "Light, Optics, and Modern Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYC",
+                        "number": "201",
+                        "title": "Mechanics and Waves",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYC",
+                        "number": "202",
+                        "title": "Electricity, Magnetism, and Heat",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Please Note: Applicants are expected to complete all required coursework by the end of the spring term prior to admission. Majors may allow one course pending in the summer term prior to admission if the major has more than five required courses and at least five courses of the required coursework have been completed; in this case, if a requirement includes both a lecture and lab, the lecture and lab together are treated as one course. Majors which require five or fewer required courses to transfer will not allow required coursework to be completed in the summer prior to admission. Please see the Rausser College of Natural Resources Transfer Applicants page for individual requirements by major. Environmental Sciences applicants may have the opportunity to complete a single required course in the summer term prior to admission. If a requirement includes both a lecture and lab, the lecture and lab together are treated as one course. To ensure full articulation of transfer coursework: if a series of courses at a community college is required (e.g., Chemistry 101 + 102 + 103 = CHEM 1A/1AL + CHEM 1B at UC Berkeley), all of the courses in the series must be completed, and must (unless otherwise indicated) be completed at the same community college. Partial completion of the series (e.g., two of the three required courses) may result in no credit toward the requirement(s), and splitting a series of courses between different community colleges is not guaranteed to satisfy the requirement. Courses taken out of series will be evaluated by college faculty during the transfer admissions process. If you have questions about the articulation of a series for your intended major, please email envsci.ugrad@berkeley.edu . Minimum Admissions Requirements in Environmental Sciences: Please note that the required chemistry sequence and biology coursework for Environmental Sciences may vary based on the concentration you are pursuing in the major. You can review the chemistry requirements for each Environmental Sciences concentration on this major snapshot . Equivalent of: ENGLISH R1A and ENGLISH R1B - may also be satisfied by full UC IGETC, or may be satisfied with AP/IB/A-Level exam credit CHEM 1A and CHEM 1AL - may also be satisfied by AP/IB/A-Level exam credit CHEM 1B; or CHEM 3A and CHEM 3AL BIOLOGY 1A and BIOLOGY 1AL and BIOLOGY 1B; or BIOLOGY 11, BIOLOGY 11L, and BIOLOGY 1B - Only BIOLOGY 1B may also be satisfied by AP/IB/A-Level exam credit MATH 16A and MATH 16B; or MATH 1A and MATH 1B - may also be satisfied by AP/IB/A-Level exam credit Highly Recommended (but not required) Prior to Transfer Introductory environmental science classes if offered by your institutions Micro-economics; macroeconomics is not required by the major PHYSICS 8A or PHYSICS 7A Breadth course in Social & Behavioral Sciences or International Studies; and breadth course in Arts & Literature, Historical Studies or Philosophy & Values - satisfied by full UC IGETC ESPM Social Science core - satisfied by full UC IGETC ESPM Environmental Science core",
+    "ABOUT THE ENVIRONMENTAL SCIENCES MAJOR The major emphasizes basic science in a rigorous curriculum drawn from a variety of departments including biology, chemistry, mathematics, physics, economics and environmental science. In the junior and senior years, students take electives in their area of interest, as well as courses in statistics, research methodology, and environmental modeling to prepare for the senior research thesis seminar. In the research seminar, each student designs and conducts a research project of his or her own choosing. This year-long course is the capstone of the major. The experience is extremely helpful for students as they prepare for environmental careers or graduate/professional school. For additional information, please contact the Environmental Sciences advisor at envsci.ugrad@berkeley.edu .",
+    "The Rausser College of Natural Resources (RCNR) admits students directly into one of its nine undergraduate majors as selected by the applicant at the time of application. Because Rausser College does not admit transfer students as undeclared, each individual major has a distinct set of transfer courses required as major preparation before the applicant is minimally eligible for admission. Resources for RCNR transfer applicants: UC Berkeley Office of Undergraduate Admissions Minimum Requirements for Transfer Admission Rausser College of Natural Resources Transfer Applicants page - includes transfer admission guidelines specific to each Rausser College major, as well as additional information on how to submit a competitive application for your intended major Rausser College Major Requirements and Sample Degree Plans Rausser College Advising Staff"
+  ]
+}

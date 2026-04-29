@@ -1,0 +1,233 @@
+{
+  "sending_institution": "Chaffey College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Language Studies Minor",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T21:00:35.249849",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MINOR",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LING",
+                        "number": "50",
+                        "title": "Introduction to Linguistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "LANGUAGE REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A, B, or C",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "1",
+                        "title": "First-Year Chinese",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHIN",
+                        "number": "2",
+                        "title": "Elementary Mandarin Chinese II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHIN",
+                        "number": "1",
+                        "title": "Elementary Mandarin Chinese",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "1",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "2",
+                        "title": "Elementary French",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "FR",
+                        "number": "1",
+                        "title": "Elementary French",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FREN",
+                        "number": "2",
+                        "title": "First-Year French",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FR",
+                        "number": "2",
+                        "title": "Elementary French",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "FR",
+                        "number": "1",
+                        "title": "Elementary French",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "G",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "1",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "1",
+                        "title": "Elementary Spanish I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "2",
+                        "title": "Elementary Spanish II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "2",
+                        "title": "First-Year Spanish",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SPAN",
+                        "number": "1",
+                        "title": "Elementary Spanish I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SPAN",
+                        "number": "2",
+                        "title": "Elementary Spanish II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC Santa Cruz students have the option to complete one or more minors, provided they complete all of the required coursework for the minor(s). The sponsoring department establishes the course requirements for a minor. The minor involves substantial work in the discipline and requires no fewer than 25 upper-division or graduate credits. The minor appears on the student's official transcript but not on the diploma. Students do not apply for admission into a minor when applying to UC Santa Cruz. If interested in completing a minor, transfer students must contact the department sponsoring the minor after enrolling at UCSC.",
+    "Please visit the department's website to learn more about this minor: https://linguistics.ucsc.edu/ PREPARATION FOR THE MINOR The minor requires completion of six quarters of language study, or demonstration of an equivalent level of ability, and the following: LING 50: Introduction to Linguistics"
+  ]
+}

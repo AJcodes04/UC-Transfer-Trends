@@ -1,0 +1,458 @@
+{
+  "sending_institution": "Cuyamaca College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Geology B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T00:06:26.279860",
+  "sections": [
+    {
+      "section_title": "CHEMISTRY",
+      "groups": [
+        {
+          "group_id": "42846845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHE",
+                        "number": "002A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHE",
+                        "number": "002C",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "141",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "142",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MATHEMATICS",
+      "groups": [
+        {
+          "group_id": "49846845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016A",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016B",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016C",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022A",
+                        "title": "Linear Algebra ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "284",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "180",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "280",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022A",
+                        "title": "Linear Algebra ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "284",
+                        "title": "Linear Algebra",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "PHYSICS",
+      "groups": [
+        {
+          "group_id": "32846845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009A",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "009B",
+                        "title": "Classical Physics ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007A",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYC",
+                        "number": "130",
+                        "title": "Fundamentals of Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYC",
+                        "number": "131",
+                        "title": "Fundamentals of Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHY",
+                        "number": "007B",
+                        "title": "General Physics ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYC",
+                        "number": "131",
+                        "title": "Fundamentals of Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYC",
+                        "number": "130",
+                        "title": "Fundamentals of Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STATISTICS",
+      "groups": [
+        {
+          "group_id": "51846845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "215",
+                        "title": "Statistics for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "215",
+                        "title": "Statistics for Life Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "160",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "Please refer to the Transfer Admissions Requirements for information on admissions to this major.",
+    "“Civilization exists by geological consent—subject to change without notice.” — Will Durant Geology is the study of the Earth, and in particular its history, structure, and the processes that have molded our planet and its biosphere. Geology involves the origin of continents & ocean basins, earthquakes & volcanoes, variations in global climate, and how these physical changes impact the evolution of life. All of these planetary processes are viewed through the prism of “deep time,” a perspective unique to geologists and one that distinguishes geology from most of the other physical sciences. A significant component of geology is oriented toward the interaction between humans and the Earth. This aspect includes the study of resources such as minerals, oil, and water; identification & mitigation of Earth hazards such as earthquakes, landslides, floods, and volcanic eruptions; identification & mitigation of polluted ground water; land use planning; and the study of ancient & modern climate change. Students interested in becoming professional geologists or continuing their geological studies at the graduate level should choose the Bachelor of Science degree program. The Bachelor of Arts program is for students interested in an interdisciplinary program of study, or who plan to go into pre-college teaching. The upper division electives are not restricted to geology courses but must be chosen to provide a relevant, coherent, and in-depth program of study.",
+    "A degree in Geology provides students with knowledge and practical experience needed to pursue careers in the geosciences (government, private sector, research, teaching). The major program includes flexibility to participate in research, internships, and fieldwork to help prepare students for these career paths. The requirements for a B.S. in Geology satisfy the coursework required for the Professional Geologist licensing process in the State of California."
+  ]
+}

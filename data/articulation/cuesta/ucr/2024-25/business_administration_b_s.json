@@ -1,0 +1,232 @@
+{
+  "sending_institution": "Cuesta College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Business Administration, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T02:13:44.760274",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "22",
+                        "title": "Calculus for Business",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "255",
+                        "title": "Calculus for Business and Management",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9A",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "8",
+                        "title": "Statistics for Business",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "247",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "10",
+                        "title": "Introduction to Business",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "245",
+                        "title": "Introduction to Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "20",
+                        "title": "Financial Accounting and Reporting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ACCT",
+                        "number": "201A",
+                        "title": "Financial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Intro to Macroeconomics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "201A",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "3",
+                        "title": "Intro to Microeconomics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "201B",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Business Administration major is selective based on GPA and the strength of academic preparation for the major. Students are required to: 1) Complete community college courses equivalent to the following six lower division UCR Business Administration major requirements listed below. 2) Attain a minimum GPA of 2.70 in all UC transferable course work, and a minimum 2.50 GPA in the six lower division major prerequisites listed below. (This GPA is a baseline for consideration and not a guarantee of admission.) 3) Complete IGETC/CalGETC or the UCR breadth pattern for the College of Humanities, Arts and Social Sciences. Note: Students who complete a course in Managerial Accounting (usually the second semester of accounting at the community college) prior to transfer will receive subject credit for UCR's upper division course BUS 108 \"Financial Evaluation and Managerial Analysis\", which is a required course for the Business Administration major . Although students who choose to complete a lower division managerial accounting course prior to transfer will not be required to take BUS 108 after transfer, they will still need to attain a minimum number of upper division units at UCR for the Business Administration degree. AP Exam - Satisfy Course Requirement Section Economics: Macroeconomics Exam Minimum score of 3 satisfies ECON 2 Economics: Microeconomics Exam Minimum score of 3 satisfies ECON 3 Mathematics: AB Exam or AB Subscore from BC Exam Minimum score of 3 satisfies MATH 9A or MATH 7A Mathematics: BC Exam Minimum score of 3 satisfies MATH 9A and MATH 9B or MATH 7A and MATH 7B Minimum score of 4 satisfies MATH 9A, MATH 9B, MATH 9C or MATH 7A, MATH 7B, MATH 9C Statistics Exam Minimum score of 4 satisfies STAT 8 If the sending institution offers honors courses , the articulation for the same course number will be used. For further information about the Business Administration major, please visit Business Administration . For information about the UC Transfer Admission Guarantee program, please visit the Transfer Admission Guarantee . Note: A course articulated to UCR's Math 9A (for schools on the semester system), or a series articulated to UCR's Math 9A-9B (for schools on the quarter system) will be accepted in lieu of Math 22 at UCR."
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "sending_institution": "Cerro Coso Community College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Sustainable Environmental Design, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T17:21:46.126576",
+  "sections": [
+    {
+      "section_title": "MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "cb677445-6887-ef11-8474-000d3a37e3b6__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C151",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "C152",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C151",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "cb677445-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "2",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C121",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "cb677445-6887-ef11-8474-000d3a37e3b6__sec2",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C111",
+                        "title": "Mechanics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "cb677445-6887-ef11-8474-000d3a37e3b6__sec3",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C102",
+                        "title": "Macroeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "C103",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C3",
+                        "title": "Introduction to Environmental Economics and Policy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C103",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENVECON",
+                        "number": "C1",
+                        "title": "Introduction to Environmental Economics and Policy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C103",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "READING AND COMPOSITION REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "d8e96545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "C101",
+                        "title": "Freshman Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "C102",
+                        "title": "Critical Thinking Through Literature",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "BREADTH REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "8c397445-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 6,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C102",
+                        "title": "Macroeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "C103",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C3",
+                        "title": "Introduction to Environmental Economics and Policy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C103",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENVECON",
+                        "number": "C1",
+                        "title": "Introduction to Environmental Economics and Policy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C103",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C111",
+                        "title": "Mechanics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "GENERAL EDUCATION/BREADTH REQUIREMENTS All courses required for admission, including General Education/Breadth requirements, must be taken for a letter grade. Course work must be completed by the end of the spring term that precedes fall enrollment at Berkeley. Students may use Advanced Placement (AP), A-Level Exams, and International Baccalaureate (IB) coursework to satisfy certain requirements. View our CED Advising website for more information on High School Exam Credit. The College of Environmental Design (CED) will accept IGETC or Reading and Composition plus 7-Course Breadth to satisfy the General Education Requirements. IGETC certification will fulfill some, but not all, of the lower division admissions requirements for the College of Environmental Design. Students must still complete all of the Lower-Division Major Requirements listed above. IMPORTANT: Students applying to the College of Environmental Design should select breadth courses from the following lists with these caveats: 1. No more than two CED courses (Architecture, Landscape Architecture, Visual Studies, Environmental Design, Urban Studies, and City and Regional Planning) may be used to fulfill CED's breadth requirements. 2. No more than two courses offered by the same department may be used towards the seven breadth requirements. 7 COURSE BREADTH REQUIREMENT Take one course from each of the following seven areas: ARTS AND LITERATURE: Courses that involve significant engagement with arts, literature, or language (excluding language instruction or the acquisition of technical skills), either through practical engagement with works of art or through the creation of art. (see approved course list below) BIOLOGICAL SCIENCE: Take LD ARCH 12 (see approved course list below) HISTORICAL STUDIES: Most courses in the department of History, and other courses that deal primarily with the human events, institutions, and activities of the past. (see approved course list below) INTERNATIONAL STUDIES: An in depth education of political, cultural, artistic and/or socio-economic life centered on both a country or region other than the United States and in the contemporary period. (see approved course list below) PHILOSOPHY AND VALUES: Most courses in the department of Philosophy, plus courses with a major focus on religion, ethics, legal values, or leading philosophical figures. (see approved course list below) PHYSICAL SCIENCE: Take one of the following: PHYSICS 7A or PHYSICS 8A. (see approved course list below) SOCIAL AND BEHAVIORAL SCIENCES: Take one of the following: ECON 1 or ECON 2 or ECON C3/ENVECON C1. (Economics 1, 2, C3 or Envecon C1 will also fulfill the Lower-Division Major Requirement) (see approved course list below) NOTE: A score of 3 or above on the AP Microeconomics or Macroeconomics exam will also satisfy this requirement for the Sustainable Environmental Design major.",
+    "All courses required for admission must be taken for a letter grade. For a competitive application all requirements should be completed by the spring term that precedes fall enrollment. If your college does not offer courses articulated with ENV DES 1 and LD ARCH 12, you should find another school that does. Applicants who are unable to complete ENVDES 1 or LDARCH 12 in the spring term that precedes fall enrollment at UC Berkeley may consider completing the course at UC Berkeley in the summer that precedes fall enrollment. See the CED prospective student website for a list of colleges that offer articulated Environmental Design courses: https://ced.berkeley.edu/admissions/undergraduate-admissions/articulation Before applying, you may also wish to look into taking the mandatory Lower-Division Major Requirements at UC Berkeley during the summer (See http://summer.berkeley.edu ) or via University Extension Concurrent Enrollment if class space is available (See https://extension.berkeley.edu/static/studentservices/concurrent/ ). Some students are able to take one or more of the Lower-Division Major Requirements at UC Berkeley via the Intersegmental Cross-Enrollment program, which allows students who meet certain eligibility criteria AND are enrolled at a California community college to enroll in a maximum of one course per academic term at UC Berkeley on a space-available basis, paying community college fees. See http://registrar.berkeley.edu/how-to-enroll-in classes/visitor-and-exchange-programs Finally, if it is impossible for you to attend a school that offers courses articulated with the mandatory Lower-Division Major Requirements, you may submit comparable courses for evaluation using the \"Evaluation of Transfer Coursework: Prospective Students\" form under Transfer Credit Evaluation & Curriculum Petition on this page: https://ced.berkeley.edu/advising/forms-documents",
+    "This major is offered by the College of Environmental Design (CED). The Sustainable Environmental Design (SED) major recognizes that the emergent field of sustainability is growing rapidly in cross-sector activities from product design and manufacturing to governance and social equity. As the world population grows and urbanizes, the planning and design of systems that produce outcomes that are resilient, resource-efficient, healthy and socially just is profoundly important. The College of Environmental Design, with its long-standing, multidisciplinary focus on innovation and social equity is an ideal setting for an undergraduate major in SED, with a strong focus on systems. The major offers students a critical understanding of the sustainability challenges facing regions in California and around the globe, and equips them with the technical and analytical tools key to solving sustainability problems that affect people, products and places. Graduates have many career paths and fields of graduate study open to them as a function of the diversity of topics and tools they will encounter and engage in SED. Students who complete this major will: Understand the features and functions of systems that drive sustainability challenges. Analyze the relationships between technological systems, systems of governance, and production systems. Identify interactions between sustainability, equity and social justice. Use quantitative analysis to understand the potential of sensors and information dashboards to produce innovation in design and management approaches. Leverage the potential of strategy, policy, business and institutions to adapt to and influence environmental, social and economic trends. Studio Instruction in CED The Sustainable Environmental Design major is not a studio-based major. Students do not have access to Architecture or Landscape Architecture studio courses. If you are interested in studio experience for your undergraduate degree, consider applying to the Architecture or Landscape Architecture programs in CED. MINIMUM ELIGIBILITY REQUIREMENTS FOR ADMISSION For information about admission to the Sustainable Environmental Design major in the College of Environmental Design, see CED's prospective student website: http://ced.berkeley.edu/admissions/undergraduate/transfer-applicants/ -The personal insight questions section on the UC application is important in the selection process at Berkeley. The College reviews the personal insight questions for evidence of the student's interest in the chosen major and a thoughtful match between the academic program and the student's academic and career objectives. -A minimum 3.0 overall UC transferable grade-point average is required for admission consideration. -All courses required for admission, including breadth requirements, must be taken for a letter grade. -For a competitive application course work must be completed by the end of the spring term that precedes fall enrollment at UC Berkeley. -As a community college transfer applicant you must complete, at a minimum, course work identified on ASSIST.org as comparable to the UC Berkeley courses below. LOWER-DIVISION MAJOR REQUIREMENTS 1. Environmental Design 1 a. For a competitive application all requirements should be completed by the spring term that precedes fall enrollment. If your college does not offer courses articulated with Environmental Design 1, you should find another school that does. b. Applicants who are unable to complete ENVDES 1 in the spring term that precedes fall enrollment at UC Berkeley may consider completing the course at UC Berkeley in the summer that precedes fall enrollment 2. Landscape Architecture 12 (this course will also fulfill CED’s Biological Sciences breadth requirement) a. For a competitive application all requirements should be completed by the spring term that precedes fall enrollment. If your college does not offer courses articulated with Landscape Architecture 12, you should find another school that does. b. Applicants who are unable to complete Landscape Architecture 12 in the spring term that precedes fall enrollment at UC Berkeley may consider completing the course at UC Berkeley in the summer that precedes fall enrollment 3. Math 16A or Math 1A 4. Statistics 2, C8, 20, 21 5. Physics 7A or 8A (this course will also fulfill CED’s Physical Sciences breadth requirement) 6. Economics 1, 2, C3, or Envecon C1 (this course will also fulfill CED's Social and Behavioral Sciences breadth requirement) Courses required for the SED major’s LOWER-DIVISION MAJOR REQUIREMENTS may also be used to complete the General Education requirement for admission, this includes CED Breadth or IGETC. For questions about IGETC certification, check with your community college counselor for more information. GENERAL EDUCATION/BREADTH REQUIREMENTS READING AND COMPOSITION (R&C) English R1A English R1B SEVEN-COURSE BREADTH Arts & Literature Biological Science (Landscape Architecture 12 will also fulfill the Lower-Division Major Requirement) Historical Studies International Studies Philosophy and Values Physical Science (Physics 7A or 8A will also fulfill the Lower-Division Major Requirement) Social and Behavioral Sciences (Economics 1, 2, C3 or Envecon C1 will also fulfill the Lower-Division Major Requirement) You must fulfill all of the required Lower-Division Major and General Education/Breadth Requirements outlined above to be considered for admission. If you are using IGETC to fulfill CED's College Requirements, you must have full certification. Partial certification will not complete the requirements. Be sure to check with your community college about the procedures involved in certification of IGETC. The University will require the official certification by the July 1 deadline. If you will not complete IGETC certification, you must follow exactly the articulation agreements between your school and the CED Sustainable Environmental Design major as described on this ASSIST.org website. Regardless of how you complete the General Education/Breadth Requirements, you must also complete the Lower-Division Major Requirements with articulated courses outlined on ASSIST.org For more information on applying to CED: College of Environmental Design Office of Undergraduate Advising 250 Bauer Wurster Hall ced.berkeley.edu/ced/students/undergraduate-advising/ cedadvising@berkeley.edu CED Prospective student website: https://ced.berkeley.edu/admissions/undergraduate-admissions/transfer-eligibility-requirements For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu"
+  ]
+}

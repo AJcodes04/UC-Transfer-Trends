@@ -1,0 +1,695 @@
+{
+  "sending_institution": "De Anza College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Computational and Systems Biology/B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T03:33:07.904918",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "20A",
+                        "title": "Chemical Structure",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20B",
+                        "title": "Chemical Energetics and Change",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "20L",
+                        "title": "General Chemistry Laboratory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry and Qualitative Analysis",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPTNG",
+                        "number": "10A",
+                        "title": "Introduction to Programming(C++)",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22A",
+                        "title": "Beginning Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "27",
+                        "title": "Programming in C++ for C/Java Programmers",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM SCI",
+                        "number": "31",
+                        "title": "Introduction to Computer Science I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "27",
+                        "title": "Programming in C++ for C/Java Programmers",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22A",
+                        "title": "Beginning Programming Methodologies in C++",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22BH",
+                        "title": "Intermediate Programming Methodologies in C++ - HONORS",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "29",
+                        "title": "Advanced C++ Programming",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22B",
+                        "title": "Intermediate Programming Methodologies in C++",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6B",
+                        "title": "Cell and Molecular Biology",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7B",
+                        "title": "Genetics, Evolution, and Ecology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6C",
+                        "title": "Ecology and Evolution",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "6CH",
+                        "title": "Ecology and Evolution - HONORS",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7C",
+                        "title": "Physiology and Human Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "6A",
+                        "title": "Form and Function in the Biological World",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "33A",
+                        "title": "Linear Algebra and Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "33B",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1C",
+                        "title": "Calculus",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1BH",
+                        "title": "Calculus - HONORS",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "1CH",
+                        "title": "Calculus - HONORS",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "33A",
+                        "title": "Linear Algebra and Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "33B",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Differential Equations",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "10",
+                        "title": "Introduction to Statistical Reasoning",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10",
+                        "title": "Introductory Statistics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1B",
+                        "title": "Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1C",
+                        "title": "Physics for Scientists and Engineers: Electrodynamics, Optics, and Special Relativity",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "4A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4B",
+                        "title": "Physics for Scientists and Engineers: Electricity and Magnetism",
+                        "units": 6.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "4C",
+                        "title": "Physics for Scientists and Engineers: Fluids, Waves, Optics and Thermodynamics",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5A",
+                        "title": "Physics for Life Sciences Majors: Mechanics, and Energy",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5B",
+                        "title": "Physics for Life Sciences Majors: Thermodynamics, Fluids, Waves, Light, and Optics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "5C",
+                        "title": "Physics for Life Sciences Majors: Electricity, Magnetism, and Modern Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2C",
+                        "title": "General Introductory Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2B",
+                        "title": "General Introductory Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2A",
+                        "title": "General Introductory Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COM SCI",
+                        "number": "32",
+                        "title": "Introduction to Computer Science II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "22C",
+                        "title": "Data Abstraction and Structures",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "22CH",
+                        "title": "Data Abstraction and Structures - HONORS",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPTNG",
+                        "number": "10B",
+                        "title": "Intermediate Programming(C++)",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "28",
+                        "title": "Object Oriented Analysis and Design",
+                        "units": 4.5
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Computational and Systems Biology major (formerly Cybernetics) is designed for highly motivated students interested in interdisciplinary studies in life sciences, behavioral sciences, and engineering and computer sciences. The major provides foundations in mathematical modeling, information processing, and control and system analysis, with an emphasis on quantitative ideas and methodologies. Mathematical and other analytical skills are essential in the major. To be considered for this major, you must complete the following by the end of spring before transfer: One year of General Chemistry with Lab, One and half years of Calculus through Multivariable, One course in Linear Algebra, One course in Differential Equations, One and a half years of Calculus-based Physics (Mechanics, Electricity, Magnetism, etc), One year of Biology with Lab for the major, One Intro course in Computer Science or Computer Programming, and One Statistics course (equivalent to UCLA's Stats 10 or Life Science 40).. All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https://cs.ucla.edu/C&SB, https://catalog.registrar.ucla.edu/ and https://admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed."
+  ]
+}

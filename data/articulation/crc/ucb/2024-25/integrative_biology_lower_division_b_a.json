@@ -1,0 +1,418 @@
+{
+  "sending_institution": "Cosumnes River College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Integrative Biology, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T22:17:03.440041",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "400",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "401",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "355",
+                        "title": "Calculus for Biology and Medicine I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "356",
+                        "title": "Calculus for Biology and Medicine II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "402",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "410",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "420",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STAT",
+                        "number": "2",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "310",
+                        "title": "Statistics for Business and Economics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "STAT",
+                        "number": "300",
+                        "title": "Introduction to Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "330",
+                        "title": "Introductory Statistics for Behavioral Sciences",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "400",
+                        "title": "Principles of Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "420",
+                        "title": "Principles of Zoology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "410",
+                        "title": "Principles of Botany",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "400",
+                        "title": "Principles of Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "400",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "8A",
+                        "title": "Introductory Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "370",
+                        "title": "Introductory Physics - Mechanics and Thermodynamics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "7A",
+                        "title": "Physics for Scientists and Engineers",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "411",
+                        "title": "Mechanics of Solids and Fluids",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The L&S Essential Skills Requirements: Reading & Composition, Quantitative Reasoning, and Foreign Language; OR 2) IGETC IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (R&C, QR, and FL) or IGETC will no longer be a requirement for admission; however, completion of the Essential Skills requirements is strongly recommended prior to enrollment at UC Berkeley. For more information on minimum UC eligibility requirements for transfer applicants for fall 2025 and beyond, please visit the UC Berkeley transfer requirements page . Major Requirements: See details on preparation for this major below. Primary selection criteria for admission, in general: - completion of L&S Requirements (or IGETC), plus - strength of academic preparation, and - grade point average. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "Required lower-division courses: One of Math 1A, Math 1B, Math 16A, Math 16B, Math 53, Math 54, Math 55, or Stat 2 Biology 1A and 1AL Biology 1B It is Strongly Recommended to complete at least one of the following prior to starting at Berkeley to maintain a balanced upper division course load. Chem 1A and 1AL Physics 8A or Physics 7A Retain all syllabi (including which reference materials and textbooks were used, methods of assessment, learning objectives, and lecture/topic schedules). Unarticulated courses and series must be reviewed by the respective Berkeley department – a course description is insufficient for review. Students must initiate the review process by contacting Integrative Biology academic advisors after admission. A 2.0 combined major GPA is required. All major requirements must be taken for a letter grade. Split series articulations not taken on the same campus are not accepted, even from within the same system. Split series must be reviewed independently. Students are encouraged to take INTEGBI 77A or 77B their first semester for an introduction to the department’s faculty, research, and courses. It’s also a good opportunity to meet students with similar interests and build community.",
+    "Exam credit is not accepted in lieu of required or recommended courses for this major.",
+    "Integrative Biology spans hierarchical levels from molecules to ecosystems, incorporating many diverse disciplines to unravel the complexity of biology. The department embraces discovery-based approaches to student learning, encouraging independent research and scientific community engagement. Students in Integrative Biology choose specialized upper division courses, with help from academic advisors, that match their interests. Course variety includes field-based organismal biology and evolution, quantitative and population genetics and genomics, animal behavior, paleontology, anatomy, and physiology. Integrative Biology’s focus on comparative biology and evolution provides a lens for understanding our interconnected living world. For more information about the full major requirements, sample plans, and student opportunities, visit us at: Web: https://ib.berkeley.edu/undergrad Email: ibusso@berkeley.edu Office: 3060 Valley Life Sciences Building Phone: 510-643-8895"
+  ]
+}

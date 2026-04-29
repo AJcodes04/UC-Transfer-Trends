@@ -1,0 +1,646 @@
+{
+  "sending_institution": "Canada College",
+  "receiving_institution": "University of California, Santa Barbara",
+  "major": "Sociology, B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T03:16:07.778737",
+  "sections": [
+    {
+      "section_title": "AREA A",
+      "groups": [
+        {
+          "group_id": "98126645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "100",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "57fb6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "87",
+                        "title": "Statistical Analysis for Communication",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "200",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSTAT",
+                        "number": "5A",
+                        "title": "Understanding Data",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "200",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "AREA B",
+      "groups": [
+        {
+          "group_id": "50fe6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "2C",
+                        "title": "World History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "106",
+                        "title": "World History II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4C",
+                        "title": "Modern Europe",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "101",
+                        "title": "History of Western Civilization II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "202",
+                        "title": "U.S. History from 1877 to the Present",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "201",
+                        "title": "U.S. History through 1877",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17C",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "202",
+                        "title": "U.S. History from 1877 to the Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "AREA C - SOCIAL SCIENCE BREADTH REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "7d217745-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "2",
+                        "title": "Introductory Cultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "110",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "2",
+                        "title": "Principles of Economics-Macro",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "100",
+                        "title": "Principles of Macro Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENV S",
+                        "number": "2",
+                        "title": "Introduction to Environmental Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENVS",
+                        "number": "115",
+                        "title": "Environmental Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "5",
+                        "title": "People, Place and Environment",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "110",
+                        "title": "Cultural Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "The American People",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "201",
+                        "title": "U.S. History through 1877",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "1",
+                        "title": "Introduction to Political Philosophy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PLSC",
+                        "number": "150",
+                        "title": "Introduction to Political Theory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "6",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PLSC",
+                        "number": "170",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "7",
+                        "title": "Introduction to International Relations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PLSC",
+                        "number": "130",
+                        "title": "Introduction to International Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL S",
+                        "number": "12",
+                        "title": "American Government and Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PLSC",
+                        "number": "210",
+                        "title": "American Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "3",
+                        "title": "Critical Thinking",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "200",
+                        "title": "Introduction to Logic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "4",
+                        "title": "Introduction to Ethics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "240",
+                        "title": "Introduction to Ethics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "1",
+                        "title": "Introduction to Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "100",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "AREA D - DIVERSITY REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "49797445-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BL ST",
+                        "number": "1",
+                        "title": "Introduction to African-American Studies",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BL ST",
+                        "number": "4",
+                        "title": "Critical Introduction to Race and Racism",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "141",
+                        "title": "Ethnicity and Race in Society",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "106",
+                        "title": "Psychology of Prejudice and Discrimination",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "FEMST",
+                        "number": "40",
+                        "title": "Women, Representation, and Cultural Production",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIT.",
+                        "number": "252",
+                        "title": "Women Writers: Multicultural Perspectives",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Please visit the department's website to learn more about this major: www.soc.ucsb.edu PRE-MAJOR INFORMATION Students are admitted initially to Pre-Sociology , not directly to the major. Admission to the full major is contingent upon achievement of a grade point average of at least 2.3 in Area A and Area B courses completed at the University of California. (Only UC grades go into the pre-major GPA. Transfer courses taken outside of UC may satisfy pre-major requirements, but they are not part of the pre-major GPA.) Courses in Areas C and D will not be included in the pre-major GPA computation but must be take for a letter grade and will influence the overall major GPA. Courses in Area A and B must be completed with grades of \"C-\" or higher. Because the criteria are subject to annual review and revision, transfer students should consult the department directly to obtain current information regarding specific additional criteria for admission into the full major. **Admission to the pre-major does not guarantee admission to full major status** PRE-MAJOR REQUIREMENTS Area A . Sociology 1 and one course from CMPSC 5A, Communication 87, PSTAT 5A-ZZ Area B . Two courses from: History 2C, 4C, 8A, 8B, 17B, 17C Area C . Social Science Breadth Requirement : Two courses from the following: Anthropology 2, 7; Economics 2; Environmental Studies 2, 3; Geography 5; History 7, 17A; Political Science 1, 6, 7, 12; Philosophy 3, 4, 6, 7; Psychology 1 Area D . Diversity Requirement : One course from the following: Asian American Studies 1, 2, 7, 8; Black Studies 1, 3, 4, 5, 6, 50; Chicana/o Studies 1A-B-C; Feminist Studies 20, 30, 40, 50, 60, 80 NOTE : If a 2-semester US History series articulates with UCSB's History 17A-B-C series, then that 2-semester series can satisfy History 17A for Area C and also satisfy History 17B and 17C for Area B. (Transfer applicants do not need to complete all of the Pre-Major Requirements in order to be admitted, but should complete as much as possible before transferring so they will be prepared to progress in the major at UCSB.)",
+    "All transfer applicants must satisfy University of California admissions eligibility requirements as well as meeting campus admission selection criteria. Completing the UC transfer admission requirements in English and mathematics by the end of the fall term prior to the fall application quarter makes an applicant more competitive for admission to UCSB. All admission requirements must be completed by the end of spring prior to transfer. For more information on UC admissions eligibility requirements and admission to UCSB, please visit the Admissions website: www.admissions.ucsb.edu This articulation agreement lists course-to-course or sequence-to-sequence substitutions for preparation in the major. Transfer students are strongly encouraged to complete as many major preparatory courses as possible prior to enrolling at UCSB. Completion of all major preparatory courses is not an admissions requirement, but some majors require certain courses to be completed prior to transfer with a specified GPA , and completion or near completion of major preparatory courses will help students move more efficiently toward graduation after transfer. Please note that the course \"equivalencies\" do not necessarily apply to UCSB general education. For information concerning satisfaction of UCSB general education requirements, please refer to the General Education/Breadth articulation agreement. Advanced Placement (AP) and International Baccalaureate (IB) exams may or may not be used to meet course requirements, depending on the exam. Please refer to the AP Chart and IB Chart in the UCSB General Catalog for information on how we use AP and IB exams."
+  ]
+}

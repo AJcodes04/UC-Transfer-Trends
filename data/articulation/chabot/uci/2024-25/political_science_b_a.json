@@ -1,0 +1,218 @@
+{
+  "sending_institution": "Chabot College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Political Science, B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T20:35:17.371596",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "540e7745-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "21A",
+                        "title": "Introduction to American Government",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "1",
+                        "title": "Introduction to American Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "31A",
+                        "title": "Introduction to Political Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "25",
+                        "title": "Introduction to Political Theory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "41A",
+                        "title": "Introduction to International Relations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "30",
+                        "title": "International Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "51A",
+                        "title": "Introduction to Politics Around the World",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "20",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MATHEMATICS REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "a6707445-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "10A",
+                        "title": "Probability and Statistics in the Social Sciences I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "10B",
+                        "title": "Probability and Statistics in the Social Sciences II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "10C",
+                        "title": "Probability and Statistics in the Social Sciences III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "b1e96545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "3A",
+                        "title": "Computer-Based Research in the Social Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "There is no prerequisite coursework required for admission to the Political Science major. The School of Social Sciences recommends that students wishing to transfer to UCI complete IGETC prior to transfer and refer to the list of courses below that will fulfill UCI lower-division major requirements. While not a requirement for admission purposes, all School of Social Sciences majors must satisfy a Mathematics Requirement and a computer education course. For full details, students should refer to the UCI General Catalogue . Students have three options for completing the Mathematics Requirement before enrolling at UCI: 1) One semester of calculus (equivalent to UCI's MATH 2A) and one semester of statistics (equivalent to UCI's STATS 7 or MGMT 7) or 2) Two quarters of calculus (equivalent to UCI's MATH 2A and MATH 2B) and one quarter of statistics (equivalent to UCI's STATS 7 or MGMT 7) or 3) One year of statistics (equivalent to UCI's SOC SCI 10A, 10B and 10C) In addition to the School of Social Sciences Math Requirement, all students are required to take course work equivalent to I&C SCI 31 or SOC SCI 3A. NOTE : In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue. For more information regarding the UC Irvine Transfer Admission Guarantee Program, please visit TAG"
+  ]
+}

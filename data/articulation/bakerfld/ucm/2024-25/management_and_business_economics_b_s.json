@@ -1,0 +1,442 @@
+{
+  "sending_institution": "Bakersfield College",
+  "receiving_institution": "University of California, Merced",
+  "major": "Management and Business Economics, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-22T23:35:14.353049",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "001",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "B1",
+                        "title": "Principles of Economics - Micro",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "B2",
+                        "title": "Principles of Economics - Macro",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "011",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B2",
+                        "title": "Basic Functions and Calculus for Business",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "021",
+                        "title": "Calculus I for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B6A",
+                        "title": "Analytic Geometry/Calculus I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "005",
+                        "title": "Introduction to Business and Finance",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BSAD",
+                        "number": "B20",
+                        "title": "Introduction to Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "010",
+                        "title": "Statistical Inference",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "B22L",
+                        "title": "Elementary Probability and Statistics with Lab",
+                        "units": 4.5
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "B22",
+                        "title": "Elementary Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "005",
+                        "title": "Introduction to Computer Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMP",
+                        "number": "B2",
+                        "title": "Introduction to Computer Information Systems",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ACCOUNTING REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "006A",
+                        "title": "Financial Accounting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BSAD",
+                        "number": "B1",
+                        "title": "Financial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "007",
+                        "title": "Managerial Accounting",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BSAD",
+                        "number": "B2",
+                        "title": "Managerial Accounting",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "B1AL",
+                        "title": "Expository Composition with Supplemental Instruction",
+                        "units": 3.5
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "B1A",
+                        "title": "Expository Composition",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "EMLS",
+                        "number": "B1A",
+                        "title": "Expository Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "B9",
+                        "title": "Critical Thinking and Advanced Composition",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "B3",
+                        "title": "Argumentative Writing and Critical Thinking Through Literature",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "B9",
+                        "title": "Historical Methods: Critical Thinking & Writing in History",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "B2",
+                        "title": "Advanced Composition and Critical Thinking",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "B15",
+                        "title": "Argumentation and Rhetoric",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Please read the catalog page for more information about the Management and Business Economics major. In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC 1A - English Composition. WRI 010 is fulfilled by IGETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): While general education is not required for admission, it can help speed up your time to graduation once you transfer to UC Merced. We highly recommend reviewing the Transfer Students: Satisfying General Education page in the catalog for a more extensive explanation of the requirements. Transfer students are strongly encouraged to complete IGETC in order to prepare for work within the School of Social Sciences, Humanities and Arts (SSHA). IGETC courses may double count with the major courses listed below. Please visit your Community College Counselor to learn more. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu .",
+    "Thank you for your interest in UC Merced! For Admissions to the Management and Business Economics, B.S. major , students must earn an overall transferable GPA of 2.4 or better, and must complete classes articulated with the following UC Merced courses by the end of spring term prior to fall enrollment or by the end of fall term prior to spring enrollment. All Major Preparation courses require a \"C\" or better. REQUIRED: Major Preparation Courses for Transfer: ECON 001 MATH 011 or MATH 021 (Allowable Substitution) Additional Major Preparation Courses: Recommended to be completed prior to Transfer: Complete the following Introductory Economics course: ECON 005 Accounting Requirement: ECON 006A AND complete either ECON 006B OR ECON 007 Complete the following Additional Lower Division courses: CSE 005 and ECON 010 Courses in the major emphasis must be taken for a letter grade and may not be taken on a pass/no pass basis unless the course is only offered on a pass/no pass basis. AP Exam Score & Course Exemptions An AP Computer Science: Comp Science A score of 3 or 4 exempts CSE 005 An AP Economics: Both Macroeconomics And Microeconomics score of 4 or 5 exempts ECON 001 An AP Mathematics: Calculus AB score of 4 or 5 exempts MATH 011 or MATH 021 An AP Mathematics: Calculus BC score of 3 or higher exempts MATH 011 or MATH 021 An AP Mathematics: Calculus BC score of 4 or 5 higher exempts MATH 011 and MATH 012 or MATH 021 and MATH 022 An AP Mathematics: Calculus BC Subscore AB: score of 3 or higher exempts MATH 011 or MATH 021 An AP Statistics score of 5 exempts ECON 010 UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: Advance Placement (AP) and International Baccalaureate (IB) Examinations"
+  ]
+}

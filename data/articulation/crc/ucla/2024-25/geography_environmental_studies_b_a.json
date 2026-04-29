@@ -1,0 +1,104 @@
+{
+  "sending_institution": "Cosumnes River College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Geography/Environmental Studies/B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T22:34:25.872902",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "1",
+                        "title": "Earth's Physical Environment",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "300",
+                        "title": "Physical Geography: Exploring Earth's Environmental Systems",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "GEOG",
+                        "number": "301",
+                        "title": "Physical Geography Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "3",
+                        "title": "Cultural Geography",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "310",
+                        "title": "Human Geography: Exploring Earth's Cultural Landscapes",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The community college statistics course included on this agreement has been approved as a substitute for Statistics 12 course, however it may not tranfer as an exact UCLA equivalent.",
+    "Listed below are the lower division preparation courses for the major. The Geography/Environmental Studies major is intended to develop and deepen your understanding of environmental issues. It emphasizes a system approach to gaining an understanding of major environmental problems facing our society and the world at large. You will gain an understanding of geographical perspectives of human impacts on natural systems, and on the implications of environmental change on local, regional and global human systems. Listed below are the lower division preparation courses for the major. To be considered for this major, you must complete at least two major prep courses by the end of spring before transfer: One course in Physical Geography or Biogeography, One course in Cultural, Economic or World Regions Geography, One course in People and Ecosystems, and One Statistics course. All courses must be taken for a letter grade. For more information regarding this major and UCLA's transfer selection process, visit https://geog.ucla.edu and https:// admission.ucla.edu. PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed."
+  ]
+}

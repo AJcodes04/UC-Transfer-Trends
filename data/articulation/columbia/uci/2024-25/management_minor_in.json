@@ -1,0 +1,353 @@
+{
+  "sending_institution": "Columbia College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Management (Minor in)",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-24T23:26:58.718929",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "720f7745-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "20A",
+                        "title": "Basic Economics I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "11",
+                        "title": "Principles of Economics - Micro",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "7eed7645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "10A",
+                        "title": "Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "10B",
+                        "title": "Probability and Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "10C",
+                        "title": "Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGRCEE",
+                        "number": "11",
+                        "title": "Methods II: Probability and Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "15A",
+                        "title": "Probability and Statistics in Economics I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "15B",
+                        "title": "Probability and Statistics in Economics II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MGMT",
+                        "number": "7",
+                        "title": "Statistics for Business Decision Making",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "8",
+                        "title": "Introduction to Biological Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "10A",
+                        "title": "Probability and Statistics in Psychology I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "10B",
+                        "title": "Probability and Statistics in Psychology II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "10C",
+                        "title": "Probability and Statistics in Psychology III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCECOL",
+                        "number": "13",
+                        "title": "Statistical Analysis in Social Ecology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2",
+                        "title": "Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "10A",
+                        "title": "Probability and Statistics in the Social Sciences I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "10B",
+                        "title": "Probability and Statistics in the Social Sciences II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC SCI",
+                        "number": "10C",
+                        "title": "Probability and Statistics in the Social Sciences III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "f1637445-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MGMT",
+                        "number": "1",
+                        "title": "Introduction to Business and Management",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUSAD",
+                        "number": "20",
+                        "title": "Principles of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Paul Merage School of Business faculty offers an undergraduate minor in Management which consists of seven courses. In addition, prerequisites include one lower-division microeconomics course, and one course or one sequence selected from the statistics courses outlined below. Management 1 serves as a prerequisite, and also counts as one of the seven courses required for the minor. In establishing the undergraduate minor, the faculty anticipated three types of students to be drawn to courses in administration: 1) Students who wish to learn about the management of organizations as a way of preparing for a career in business, 2) Students preparing for careers in other fields that require some knowledge of management, and 3) Students who expect to go on to graduate work in management who wish early guidance and undergraduate work appropriate to this career objective NOTE : Students may not receive both the minor in Management and the minor in Accounting. Students may not receive both the minor in Management and the minor in Innovation and Entrepreneurship. Open to non-Merage School majors only. Preparation for Transfer at the Junior Level Students are eligible to apply for the minor in Management if they have completed all prerequisite courses (including Management 1) with a grade no lower than C (2.0) and have upper-division standing. Completion of the prerequisite courses does not guarantee admission to the minor in Management. Admission is on a competitive basis and students must submit an application, transcripts, and a statement of purpose. Applications are accepted on a quarterly basis. Interested students are encouraged to obtain further information from the Undergraduate Programs Office, SB2 Suite 202; http://www.merage.uci.edu/ . NOTE : In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue."
+  ]
+}

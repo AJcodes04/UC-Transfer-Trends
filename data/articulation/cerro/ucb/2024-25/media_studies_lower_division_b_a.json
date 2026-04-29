@@ -1,0 +1,243 @@
+{
+  "sending_institution": "Cerro Coso Community College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Media Studies, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T17:23:17.358983",
+  "sections": [
+    {
+      "section_title": "GROUP I",
+      "groups": [
+        {
+          "group_id": "a51c7745-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7B",
+                        "title": "The United States from Civil War to Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "C132",
+                        "title": "History of United States from 1877 to Present",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "GROUP II",
+      "groups": [
+        {
+          "group_id": "d9e37145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "1",
+                        "title": "Introduction to American Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLS",
+                        "number": "C101",
+                        "title": "American Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "GROUP III",
+      "groups": [
+        {
+          "group_id": "3ae57645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "Introduction to Social and Cultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "C111",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "C102",
+                        "title": "Macroeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "C103",
+                        "title": "Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "1",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "C101",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "GROUP IV",
+      "groups": [
+        {
+          "group_id": "1ca47645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MEDIAST",
+                        "number": "10",
+                        "title": "Introduction to Media Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The L&S Essential Skills Requirements: Reading & Composition, Quantitative Reasoning, and Foreign Language; OR 2) IGETC IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (R&C, QR, and FL) or IGETC will no longer be a requirement for admission; however, completion of the Essential Skills requirements is strongly recommended prior to enrollment at UC Berkeley. For more information on minimum UC eligibility requirements for transfer applicants for fall 2025 and beyond, please visit the UC Berkeley transfer requirements page . Major Requirements: See details on preparation for this major below. Primary selection criteria for admission, in general: - completion of L&S Requirements (or IGETC), plus - strength of academic preparation, and - grade point average. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "Exam credits, including AP scores, cannot be used to satisfy the major prerequisites.",
+    "The Media Studies major at UC Berkeley integrates perspectives from liberal arts, social sciences, and humanities and offers an interdisciplinary framework to understand the essential role that media plays in economic, social, political, and cultural life. It weds traditions from communication, history, anthropology, sociology, and political science with critical theories and cultural studies to analyze the role and meaning of media in our societies. Our emphasis in this major is historical and theoretical, examining media systems, institutions, technologies, policies, and practices. We offer students the analytical tools available to investigate media—old and new, local and global—from textual to visual and digital cultures, and from TV to film and social media. Applying to the Media Studies Major Admission to UC Berkeley with the stated intend to major in Media Studies does not guarantee acceptance into the major. A departmental application is required after arrival at Berkeley. Transfer students must apply to Media Studies during their first or second semester at UC Berkeley and meet the major application GPA and Media Studies 10 grade requirements. Appeal applications are possible. Having an alternate major option is advised. Students may not apply to the major until they are eligible. Major prerequisite courses must be taken for a letter grade. Media Studies 10 Prerequisite Beginning Fall 2020, all students planning to apply to the Media Studies major at the University of California, Berkeley MUST complete Media Studies 10 at UC Berkeley. Any Media Studies 10 transfer course equivalents completed after summer 2020 will not satisfy the Media Studies 10 requirement. Media Studies 10 must be completed before applying to the major. Media Studies 10 is often offered during the summer at UC Berkeley. Summer courses are open to students from other schools. Transfer students are not expected to take Media Studies 10 before applying to UC Berkeley. For more information: http://mediastudies.ugis.berkeley.edu Laura Demir, Student Academic Advisor mediastudies_advising@berkeley.edu Chelsea Prieto, Student Academic Advisor mediastudies_advising@berkeley.edu Josh Jackson, Assistant Director and Faculty Advisor joshjackson@berkeley.edu",
+    "ONE COURSE FROM EACH OF THE FOLLOWING FOUR GROUPS:"
+  ]
+}

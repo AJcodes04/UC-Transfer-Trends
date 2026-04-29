@@ -1,0 +1,474 @@
+{
+  "sending_institution": "Chabot College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Public Health, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T17:06:29.784662",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION PREREQUISITES",
+      "groups": [
+        {
+          "group_id": "50b37645-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 1,
+          "group_label": "Complete 7 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 7,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1A",
+                        "title": "General Biology Lecture (Cells, Genetics, Animal Form & Function)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1AL",
+                        "title": "General Biology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOS",
+                        "number": "21C",
+                        "title": "Principles of Cell and Molecular Biology",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BIOS",
+                        "number": "21B",
+                        "title": "Principles of Animal Biology and Evolution",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOS",
+                        "number": "21B",
+                        "title": "Principles of Animal Biology and Evolution",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOS",
+                        "number": "21A",
+                        "title": "Principles of Plant Biology and Ecology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOS",
+                        "number": "21C",
+                        "title": "Principles of Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MCELLBI",
+                        "number": "32",
+                        "title": "Introduction to Human Physiology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "MCELLBI",
+                        "number": "32L",
+                        "title": "Introduction to Human Physiology Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOS",
+                        "number": "43",
+                        "title": "Human Physiology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MCELLBI",
+                        "number": "C61",
+                        "title": "Brain, Mind, and Behavior",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "4",
+                        "title": "Brain, Mind and Behavior",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NUSCTX",
+                        "number": "10",
+                        "title": "Introduction to Human Nutrition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NUTR",
+                        "number": "1",
+                        "title": "Introduction to Nutrition Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "e8697445-6887-ef11-8474-000d3a37e3b6__sec1",
+          "group_number": 2,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "1",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "2",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "1",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MTH",
+                        "number": "15",
+                        "title": "Applied Calculus I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MTH",
+                        "number": "2",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MTH",
+                        "number": "16",
+                        "title": "Applied Calculus II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "8f417445-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "1",
+                        "title": "Principles of Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "1",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECN",
+                        "number": "2",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "3",
+                        "title": "Introduction to Social and Cultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "3",
+                        "title": "Social and Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "2",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "20",
+                        "title": "Comparative Politics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "4",
+                        "title": "Introduction to Political Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POSC",
+                        "number": "25",
+                        "title": "Introduction to Political Theory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "1",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "1",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to UC Berkeley with the stated intent to major in Public Health does not guarantee acceptance into the major. A departmental application is required and prerequisites must be met. Public Health Major Declaration Requirements for Transfer Students: Transfer students must apply by the end of their first term in attendance at UC Berkeley. Students may only apply to the major once, no exceptions. The application will require unofficial transcripts, essays, a prerequisite GPA calculation form, and a resume. Admissions requirements and application instructions: Undergraduate Admissions Transfer students must complete all of the lower division prerequisites (mathematics, biology, and social sciences). A minimum grade of \"C-\" is required for any of the prerequisites. It is crucial that all students applying to the public health major have a BACK UP MAJOR since admission into the Public Health major is not guaranteed. In your first year, it is strongly encouraged to enroll in Data C8: Foundations of Data Science. This course is a major requirement, not a prerequisite for the major, however, it will help prepare you for other major course requirements. This is a very technical course, so please plan accordingly. Most transfer students complete the majority of their lower-division prerequisite courses prior to UC Berkeley. However, transfer students may fulfill the remaining requirements during their first semester at UC Berkeley. If you have completed all your prerequisites the Spring before you start your first semester at UC Berkeley, you may be eligible to apply in the May application cycle. For more information about applying to the major during your first semester at UC Berkeley, please see publichealth.berkeley.edu/undergrad or contact an undergraduate advisor at sphug@berkley.edu or Undergraduate Advising . Did you know that we also offer a Global Public Health Summer Minor? There is no application for the summer minor but there is a declaration and completion form. The GPH Summer Minor consists of 5 courses that can be taken within one or two consecutive summers. BIOLOGICAL SCIENCE REQUIREMENT Seven units from the following Biology classes: BIOLOGY 1A (3); BIOLOGY 1B (4); MCELLBI 32 (3); MCELLBI 38 (3); MCELLBI 50 (3); MCELLBI 55 (3); MCELLBI C61 (3); NUSCTX 10 (3). A minimum grade of \"C-\" is required. You cannot split any class series. Lab units do not count towards the seven unit requirement. For example, BIOLOGY 1AL is not required for the major but is usually required with the BIOLOGY 1A lecture. The lab will not be counted for prerequisite units for the public health major. You must complete all courses in a series at the same school. Unless the course equivalents are separately specified, do not assume that a sequence can be divided. If a series of courses at a community college is required (e.g., BIOL 101 and 102 and 103 = BIOLOGY 1A & 1AL), all the courses in the series must be completed, and must be completed at the same community college. MATHEMATICS REQUIREMENT* Two courses from the following (Either MATH 1A + 1B or MATH 10A + 10B or MATH 16A + 16B). A minimum grade of \"C-\" is required. Note: you could potentially mix and match Math A and B courses; course restrictions may apply. SOCIAL SCIENCES REQUIREMENT* Three courses from at least two of the following areas: SOCIOLOGY, ECONOMICS, ANTHROPOLOGY, POLITICAL SCIENCE and PSYCHOLOGY. You cannot split any class series. Please note that credit may NOT be earned with both SOCIOL 1 + SOCIOL 3AC; or PSYCH 1 + PSYCH 2; or ECON 1 + ECON 2 + ECON C3. LOWER DIVISION REQUIREMENTS DATA/COMPSCI/INFO/STAT/C8 - Foundations of Data Science This is a major requirement, not a prerequisite however it is best to take this course earlier. *Advanced Placement (AP) Exam and International Baccalaureate (IB) Exam scores can be used to fulfill Math and Social Sciences requirements. We do not accept AP Exam or IB Exam scores for the Biological Science requirement. More information can be found on our website: Undergraduate Admissions For Public Health advising, you can review “ Undergraduate Advising ”.",
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The L&S Essential Skills Requirements: Reading & Composition, Quantitative Reasoning, and Foreign Language; OR 2) IGETC IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (R&C, QR, and FL) or IGETC will no longer be a requirement for admission; however, completion of the Essential Skills requirements is strongly recommended prior to enrollment at UC Berkeley. For more information on minimum UC eligibility requirements for transfer applicants for fall 2025 and beyond, please visit the UC Berkeley transfer requirements page . Major Requirements: See details on preparation for this major below. Primary selection criteria for admission, in general: - completion of L&S Requirements (or IGETC), plus - strength of academic preparation, and - grade point average. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "Public health seeks to improve human health through the development and application of knowledge that prevents disease, protects the public from harm, and promotes health throughout the state, the nation, and the world. Students in the Public Health, Bachelor of Arts major will develop and apply knowledge from multiple disciplines for the promotion and protection of the health of the human population. Some areas of study that students have focused on are: Biostatistics, Community Health & Human Development, Environmental Health Sciences, Epidemiology, Health Policy & Management, Infectious Diseases, Nutrition, and Maternal, Child, and Adolescent Health."
+  ]
+}

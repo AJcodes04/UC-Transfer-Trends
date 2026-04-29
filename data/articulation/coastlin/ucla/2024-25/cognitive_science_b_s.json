@@ -1,0 +1,312 @@
+{
+  "sending_institution": "Coastline Community College",
+  "receiving_institution": "University of California, Los Angeles",
+  "major": "Cognitive Science/B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-24T00:50:06.182909",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "9fea6545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "20A",
+                        "title": "Chemical Structure",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "C180",
+                        "title": "General Chemistry A",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "10",
+                        "title": "Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C110",
+                        "title": "Conceptual Physics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYSICS",
+                        "number": "1A",
+                        "title": "Physics for Scientists and Engineers: Mechanics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "C185",
+                        "title": "Calculus Based Physics: Mechanics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "effd6545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31A",
+                        "title": "Differential and Integral Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C180",
+                        "title": "Calculus 1",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "31B",
+                        "title": "Integration and Infinite Series",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "C185",
+                        "title": "Calculus 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "2d0d6645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "10",
+                        "title": "Introductory Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "C100",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "2e0d6645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "7A",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "C180",
+                        "title": "Cell and Molecular Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "LIFESCI",
+                        "number": "15",
+                        "title": "Life: Concepts and Issues",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "C100",
+                        "title": "Introduction to Biology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "2f0d6645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHILOS",
+                        "number": "7",
+                        "title": "Introduction to Philosophy of Mind",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "C100",
+                        "title": "Introduction to Philosophy",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Students are advised to complete the Program in Computing courses as soon as possible. Transfer students may complete the equivalent of UCLA's Com Sci 31, 32, 33 and M51A courses to satisfy the programming requirement for Cognitive Science. Completion of the equivalent of UCLA's CS 31 + CS 32 will transfer as Computing 10ABC, while completion of the equivalent of CS 33 or CS M51A can be used to satisfy one of the two additional computing courses needed in addition to Program in Computing 10A .",
+    "The AP Exam Scores listed below may be used to satisfy the Cognitive Science major prep. A score of 5 or higher on the AP Calculus BC exam can be used in place of both calculus courses. A score of 4 on the AP Calculus BC exam can be used in place of the first calculus course. A score of 3 or higher on the AP Physics B or C exam can be used in place of the physics course. A score of 3 or higher on the AP Biology exam can be used in place of the biology course. A score of 3 or higher on the AP Chemistry exam can be used in place of the chemistry course. A score of 4 or higher on the AP Psychology exam can be used in place of the psychology course. The IB Exam Scores listed below may be used to satisfy the Cognitive Science major prep A score of 5 or higher on the IB HL Biology exam can be used in place of the biology course. A score on 5 or higher on the IB HL Chemistry exam can be used in place of the chemistry course. A score on 5 or higher on the IB HL Psychology exam can be used in place of the psychology course. NOTE: The biology requirement may be satisfied with 1 non major intro biology course or 1 major biology course that is equal to Life Science science 7A or is PART of a Life Science 7A equivalency.",
+    "The Cognitive Science major focuses on the study of intelligent systems, both real and artificial. While including a strong foundation in the traditional areas of psychology, the major is interdisciplinary in nature and emphasizes subject matter within cognitive psychology, computer science, mathematics, and related disciplines. Listed below are the lower division preparation courses for the major. Students are classified as Pre-Cognitive Science until all preparation courses are completed at UCLA. Transfer students must be directly admitted as Pre-Cognitive Science in order to major in Cognitive Science. Note: You must be directly admitted in to this major and cannot change into this major after admission to UCLA. To be considered for this major, you should complete the following seven courses by the spring before transfer: One year of Calculus, One course in Introduction to C++, and Four courses from the following: Introductory Psychology Introductory Biology or Biology for the major One course from Introductory Physics, Chemistry or Linguistics Philosophy (Critical Reason, Science of the Mind or Logic) Additional Intermediate Level Computing courses All courses must be taken for a letter grade. Applicants for Fall 2024 and beyond must complete seven courses, including one computing course, by end of spring before transfer. For more information regarding this major and UCLA's selection process, visit https://www.psych.ucla.edu and https:// admission.ucla.edu . PLEASE NOTE: the community college courses listed below have been approved to satisfy the preparation requirements for this major at UCLA, but they may not be exact equivalents of the UCLA courses listed."
+  ]
+}

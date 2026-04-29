@@ -1,0 +1,279 @@
+{
+  "sending_institution": "Contra Costa College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Operations Research and Management Science, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T04:01:03.841445",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "220",
+                        "title": "Introduction to Macroeconomics Principles",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "221",
+                        "title": "Introduction to Microeconomics Principles",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UGBA",
+                        "number": "10",
+                        "title": "Principles of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "109",
+                        "title": "Introduction to Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec3",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "290",
+                        "title": "Analytic Geometry and Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "292",
+                        "title": "Introduction to Differential Equations",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "200",
+                        "title": "Introduction to Linear Algebra",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "7",
+                        "title": "Introduction to Computer Programming for Scientists and Engineers (MATLAB)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "170",
+                        "title": "Programming for Engineering Science - MATLAB",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "DATA",
+                        "number": "C88C",
+                        "title": "Computational Structures in Data Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The L&S Essential Skills Requirements: Reading & Composition, Quantitative Reasoning, and Foreign Language; OR 2) IGETC IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (R&C, QR, and FL) or IGETC will no longer be a requirement for admission; however, completion of the Essential Skills requirements is strongly recommended prior to enrollment at UC Berkeley. For more information on minimum UC eligibility requirements for transfer applicants for fall 2025 and beyond, please visit the UC Berkeley transfer requirements page . Major Requirements: See details on preparation for this major below. Primary selection criteria for admission, in general: - completion of L&S Requirements (or IGETC), plus - strength of academic preparation, and - grade point average. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "ORMS is a high demand major. Required lower-division courses: Math 53, Math 54, Econ 1, 2 or 3C, and UGBA 10 must be completed prior to acceptance to the major and all must be taken for a letter grade. Highly Recommend: Engin 7, Comp Sci 61A, Data C8, and Data C88",
+    "Exam credit is not accepted in lieu of required or recommended courses for this major.",
+    "In the Operations Research and Management Science major (ORMS ), students will develop solid quantitative, model building, and problem-solving skills through core courses in mathematics, statistics, and operations research, and will learn how to apply these skills in solving problems in an area of their choice. Students may design their own concentrations according to their interests, with guidance from their faculty advisor in Industrial Engineering and Operations Research. Such areas might include legal systems (for pre-law students for example), government/political systems, and international economic systems. Admission to Berkeley with the stated intent to major in ORMS does not guarantee acceptance into the major, a departmental application is required. Transfer students must apply to the ORMS major by the end of their first semester at UC Berkeley. Application information can be found at https://ieor.berkeley.edu/academics/ba-orms/ We do not accept applications from graduating seniors or students in their fourth (or later) year of studies, even if it is not the student's first major. Prerequisite Coursework: Prior to transferring to UC Berkeley, students are required to complete the following courses: course equivalents of Math 1A & Math 1B (prerequisites to Math 53 and Math 54) The department strongly recommends that the following courses are also completed prior to transferring to UC Berkeley. Any courses that are not completed prior to transfer must be completed by the end of the student's first term at UC Berkeley. Math 53, Math 54, Econ 1, 2 or 3C, and UGBA 10 All prerequisite courses must be taken for a letter grade. Transfer students must complete their prerequisite courses and apply to the major at the end of the first semester in which they are enrolled at UC Berkeley. UC Summer session prior to the academic year does not count as the first semester. Engin 7, Comp Sci 61A, and Data C8 may be taken after acceptance to the major. Data C88 must be taken at Berkeley. For more information: Student Affairs Officer Department of Operations Research and Industrial Engineering (510) 642-5485 ieor-student-services@berkeley.edu ORMS - UC Berkeley IEOR Department - Industrial Engineering & Operations Research"
+  ]
+}

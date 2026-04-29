@@ -1,0 +1,314 @@
+{
+  "sending_institution": "Compton College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Statistics A.B.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-27T18:30:21.477439",
+  "sections": [
+    {
+      "section_title": "COMPUTER SCIENCE ENGINEERING",
+      "groups": [
+        {
+          "group_id": "60696845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECS",
+                        "number": "036A",
+                        "title": "Programming & Problem Solving ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "MATHEMATICS",
+      "groups": [
+        {
+          "group_id": "59696845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Single Variable Calculus and Analytic Geometry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Single Variable Calculus and Analytic Geometry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "190",
+                        "title": "Single Variable Calculus and Analytic Geometry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "021C",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "220",
+                        "title": "Multi-Variable Calculus",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "191",
+                        "title": "Single Variable Calculus and Analytic Geometry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "C",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016A",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016B",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "016C",
+                        "title": "Short Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "62696845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MAT",
+                        "number": "022A",
+                        "title": "Linear Algebra ",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "270",
+                        "title": "Differential Equations with Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STATISTICS",
+      "groups": [
+        {
+          "group_id": "58696845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STA",
+                        "number": "013",
+                        "title": "Elementary Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "120",
+                        "title": "Introduction to Statistics and Data Analysis for the Behavioral Sciences",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "150H",
+                        "title": "Honors Elementary Statistics with Probability",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "150",
+                        "title": "Elementary Statistics with Probability",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "Group 2: Please note the MAT 021ABC series is preferred. Please refer to the major and an advisor. Group 4: Please note STA 032 is preferred. Please refer to the major and an advisor.",
+    "Statistics enables us to make inferences about entire populations, based on samples extracted from those populations. Statistical methods can be applied to problems from almost every discipline and they are vitally important to researchers in agricultural, biological, environmental, social, engineering, and medical sciences. Statistics majors may receive either a Bachelor of Arts (A.B.) or a Bachelor of Science (B.S.) degree. Both the A.B. and the B.S. programs require theoretical and applied course work and underscore the strong interdependence of statistical theory and the applications and computational aspects of statistics. The B.S. degree program has five tracks: Applied Statistics Track, Computational Statistics Track, General Track, Machine Learning Track, and the Statistical Data Science Track. The A.B. degree program has one track. A.B. in Statistics-Applied Statistics Track emphasizes statistical applications. This track is recommended for students who are interested in applications of statistical techniques to various disciplines, especially the social sciences.",
+    "Probability models, statistical methods, and computational techniques are used in a great many fields, including the biological, physical, social, and health sciences, business, and engineering. The wide applicability of statistics is reflected in the strong demand for graduates with statistical training in both the public and private sectors. Employment opportunities include careers in data & policy analysis in government & industry, financial management, quality control, insurance & healthcare industry, actuarial science, engineering, public health, biological and pharmaceutical research, law, and education. Students with an undergraduate degree in statistics have entered advanced studies in statistics, economics, finance, psychology, medicine, business management & analytics, and other professional school programs.",
+    "Please refer to the Transfer Admissions Requirements for information on admissions to this major."
+  ]
+}

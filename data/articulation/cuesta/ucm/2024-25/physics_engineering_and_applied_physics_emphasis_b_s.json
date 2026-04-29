@@ -1,0 +1,518 @@
+{
+  "sending_institution": "Cuesta College",
+  "receiving_institution": "University of California, Merced",
+  "major": "Physics, Engineering and Applied Physics Emphasis, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T02:23:47.377064",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "008",
+                        "title": "Introductory Physics I for Physical Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "008L",
+                        "title": "Introductory Physics I for Physical Sciences Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208A",
+                        "title": "Principles of Physics 1",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "009",
+                        "title": "Introductory Physics II for Physical Sciences",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "009L",
+                        "title": "Introductory Physics II for Physical Sciences Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208B",
+                        "title": "Principles of Physics 2",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "021",
+                        "title": "Calculus I for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "022",
+                        "title": "Calculus II for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "023",
+                        "title": "Vector Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "283",
+                        "title": "Calculus III: Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "024",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "287",
+                        "title": "Ordinary Differential Equations and Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "010",
+                        "title": "Introductory Physics III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "208C",
+                        "title": "Modern Physics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "002",
+                        "title": "General Chemistry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "201A",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL LOWER DIVISION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "019",
+                        "title": "Introduction to Computing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "217",
+                        "title": "\"C\" Programming Language",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "232",
+                        "title": "Fundamentals of Computer Science II",
+                        "units": 2.0
+                      },
+                      {
+                        "prefix": "CIS",
+                        "number": "231",
+                        "title": "Fundamentals of Computer Science I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ME",
+                        "number": "021",
+                        "title": "Engineering Computing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "217",
+                        "title": "\"C\" Programming Language",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "210",
+                        "title": "Computational Methods for Engineers",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ELECTIVE COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "065",
+                        "title": "Circuit Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "217",
+                        "title": "Circuit Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "057",
+                        "title": "Statics and Dynamics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGR",
+                        "number": "251",
+                        "title": "Engineering Dynamics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGR",
+                        "number": "250",
+                        "title": "Engineering Statics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "201A",
+                        "title": "English Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "201C",
+                        "title": "English Composition: Critical Thinking",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "201B",
+                        "title": "English Composition: Introduction to Literature and Critical Thinking",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Please read the catalog page for more information about the Physics, Engineering and Applied Physics Emphasis major . In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC 1A - English Composition. WRI 010 is fulfilled by IGETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): While general education is not required for admission, it can help speed up your time to graduation once you transfer to UC Merced. We highly recommend reviewing the Transfer Students: Satisfying General Education page in the catalog for a more extensive explanation of the requirements. Please note the School of Natural Sciences does not recommend IGETC, but accepts it; students are encouraged to focus primarily on lower division major preparation and fulfilling UCM minimum admissions requirements. If you elect to complete IGETC, the courses may double count with the major courses listed below. Please visit your Community College Counselor to learn more. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu .",
+    "Thank you for your interest in UC Merced! For admission to the Physics, Engineering and Applied Physics Emphasis , B.S. major, students must earn an overall transferable GPA of 2.8 or better, and must complete classes articulated with the following UC Merced courses by spring prior to fall enrollment or by fall prior to spring enrollment. All major preparation courses requires a \"C\" or better. REQUIRED Major Preparation Courses For Transfer: MATH 021 MATH 022 PHYS 008 & PHYS 008L PHYS 009 & PHYS 009L Additional Major Preparation Courses: Recommended Prior to Transfer: CHEM 002 PHYS 010*, MATH 023**, Math 024**, Math 032 CSE 019 or MATH 050 or ME 021 or BIOE 021 Recommended Free Elective Although not required course for the major, ENGR 065 and ENGR 057 are highly recommended free elective courses. Please refer to the catalog for the Additional Elective Upper Division Course for more information. * PHYS 010 is a prerequisite to PHYS 137 (Quantum Mechanics Core) which is an Upper Division required course. Completing PHYS 010 before transfer can help speed up time to graduation. ** MATH 023 and MATH 024 are prerequisites for upper division course in the major. Completing them before transfer can help speed up time to graduation. AP Exam Score & Course Exemptions An AP Chemistry score of 5 exempts CHEM 002 and CHEM 010 An AP Mathematics: Calculus AB score of 4 or 5 exempts MATH 021 An AP Mathematics: Calculus BC score of 3 exempts MATH 021 An AP Mathematics: Calculus BC score of 4 or 5 exempts MATH 021 and MATH 022 An AP Mathematics: Calculus BC Subscore AB score 3 or higher exempts MATH 021 An AP Physics: Physics C: Mechanics: score 5 exempts PHYS 008 and PHYS 008L UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: Advance Placement (AP) and International Baccalaureate (IB) Examinations"
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "sending_institution": "Chaffey College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Environmental Engineering, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T21:37:01.562070",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LA",
+                        "title": "General Chemistry Lab",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LB",
+                        "title": "General Chemistry Lab",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LC",
+                        "title": "General Chemistry Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "24A",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "24B",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9A",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9B",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9C",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "65A",
+                        "title": "Calculus I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "65B",
+                        "title": "Calculus II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "40A",
+                        "title": "General Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "45",
+                        "title": "Physics for Scientists and Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "5A",
+                        "title": "Intro to Cell and Molecular Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "5LA",
+                        "title": "Intro to Cell and Molecular Biology Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "40",
+                        "title": "Introduction to Cell and Molecular Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "40B",
+                        "title": "General Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "47",
+                        "title": "Physics for Scientists and Engineers III",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "45",
+                        "title": "Physics for Scientists and Engineers I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "40C",
+                        "title": "General Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "46",
+                        "title": "Physics for Scientists and Engineers II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "8A",
+                        "title": "ORGANIC CHEMISTRY",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "8LA",
+                        "title": "ORGANIC CHEMISTRY LABORATORY",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "76A",
+                        "title": "Organic Chemistry I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "8B",
+                        "title": "ORGANIC CHEMISTRY",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "8LB",
+                        "title": "ORGANIC CHEMISTRY LABORATORY",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "76A",
+                        "title": "Organic Chemistry I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "76B",
+                        "title": "Organic Chemistry II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CEE",
+                        "number": "10",
+                        "title": "Introduction to Chemical and Environmental Engineering",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "11",
+                        "title": "Introduction to Engineering",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "10A",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "10B",
+                        "title": "Calculus of Several Variables",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "75",
+                        "title": "Calculus III",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "46",
+                        "title": "Intro to Ordinary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "85",
+                        "title": "Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ME",
+                        "number": "10",
+                        "title": "Statics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGIN",
+                        "number": "50",
+                        "title": "Engineering Statics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "All majors in the Bourns College of Engineering are selective, based on academic preparation and GPA in all transferable coursework, with a minimum GPA of 2.80 This is a baseline GPA for consideration and not a guarantee of admission. Effective Fall 2024 transfer students must complete all Chemistry lab courses in-person to receive articulation to UCR’s equivalent Chemistry lab courses. Completing Chemistry lab courses online will not impact your ability to transfer. Transfer students who complete Chemistry lab courses online will be required to retake the lab courses at UCR. Prior to transfer, a minimum GPA of at least 2.50 in the calculus series and at least one additional series. If the sending institution offers honors courses , the articulation for the same course number will be used. For more information regarding this major and UCR's transfer selection process, please visit Bourns College of Engineering General Requirements . For information about the UC Transfer Admission Guarantee (TAG) program, please visit Transfer Admission Guarantee . IGETC and General Education/Breadth Information The Bourns College of Engineering (BCOE) accepts completion of IGETC as satisfying the college's lower division general education/breadth requirements for transfer students. Additional upper division breadth requirements may be required after enrollment in BCOE. Please visit \" GE Areas - Transfer Institution \" for the complete list of required GE/Breadth Articulation Agreement. For more information on BCOE breadth requirements, go to Bourns College of Engineering Breadth Requirements . Prospective applicants are strongly encouraged to focus instead on preparatory course work for the major, such as the mathematics, science and other technical preparatory course work listed below, rather than IGETC. Strong technical preparation is essential for success in the admissions process, and subsequently, in all coursework at BCOE.",
+    "AP Exam - Satisfy Course Requirement Section Computer Science: A Exam Minimum score of 4 satisfies CS 10A Mathematics: AB Exam or AB Subscore from BC Exam Minimum score of 3 satisfies MATH 9A or MATH 7A Mathematics: BC Exam Minimum score of 3 satisfies MATH 9A and MATH 9B or MATH 7A and MATH 7B Minimum score of 4 satisfies MATH 9A, MATH 9B, MATH 9C or MATH 7A, MATH 7B, MATH 9C"
+  ]
+}

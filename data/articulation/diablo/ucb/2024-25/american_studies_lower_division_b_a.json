@@ -1,0 +1,630 @@
+{
+  "sending_institution": "Diablo Valley College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "American Studies, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T03:02:37.038449",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "6eff6545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AMERSTD",
+                        "number": "10",
+                        "title": "Introduction to American Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "6bfb6f45-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 3 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 3,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "AFRICAM",
+                        "number": "5B",
+                        "title": "African American Life and Culture in the United States",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "128",
+                        "title": "African American Perspective History of the US after 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHRO",
+                        "number": "2",
+                        "title": "Introduction to Archaeology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "125",
+                        "title": "Introduction to Archaeology and Prehistory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ASAMST",
+                        "number": "20A",
+                        "title": "Introduction to the History of Asians in the United States",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "129",
+                        "title": "History of Asians and Pacific Islanders in the United States",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHICANO",
+                        "number": "20",
+                        "title": "Introduction to Chicano Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYCH",
+                        "number": "141",
+                        "title": "Psychology of Latinos/Chicanos in the U.S.",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHICANO",
+                        "number": "40",
+                        "title": "Introduction to Chicano Literature in English",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "167",
+                        "title": "Latin American Literature",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHICANO",
+                        "number": "50",
+                        "title": "Introduction to Chicano History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "125",
+                        "title": "History of the United States: A Mexican American Perspective",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENV DES",
+                        "number": "1",
+                        "title": "People and Environmental Design",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ARCHI",
+                        "number": "120",
+                        "title": "Introduction to Architecture and Environmental Design",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESPM",
+                        "number": "C10",
+                        "title": "Environmental Issues",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOSC",
+                        "number": "170",
+                        "title": "Environmental Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ETH STD",
+                        "number": "10AC",
+                        "title": "A History of Race and Ethnicity in Western North America, 1598-Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "126",
+                        "title": "The American West",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "20",
+                        "title": "Globalization",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "130",
+                        "title": "Cultural Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "50AC",
+                        "title": "California",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "124",
+                        "title": "History of California",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "70AC",
+                        "title": "The Urban Experience",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "131",
+                        "title": "The Urban Community",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7A",
+                        "title": "The United States from Settlement to Civil War",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "120",
+                        "title": "History of the United States before 1865",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "170",
+                        "title": "History of Women in the United States before 1877",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "127",
+                        "title": "African American Perspective History of the US to 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7B",
+                        "title": "The United States from Civil War to Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "129",
+                        "title": "History of Asians and Pacific Islanders in the United States",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "121",
+                        "title": "History of the United States after 1865",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "125",
+                        "title": "History of the United States: A Mexican American Perspective",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "171",
+                        "title": "History of Women in the United States after 1865",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "128",
+                        "title": "African American Perspective History of the US after 1865",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOCSC",
+                        "number": "111",
+                        "title": "Money, Power, and Politics in the United States",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MEDIAST",
+                        "number": "10",
+                        "title": "Introduction to Media Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NATAMST",
+                        "number": "20A",
+                        "title": "Introduction to Native American Studies",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "135",
+                        "title": "Native Americans",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "NATAMST",
+                        "number": "20B",
+                        "title": "Introduction to Native American Studies II: Cultural Practice, Art, and Identity",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PB HLTH",
+                        "number": "14",
+                        "title": "Healthy People: Introduction to Health Promotion",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "124",
+                        "title": "Health and Wellness",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "1",
+                        "title": "Introduction to American Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLSC",
+                        "number": "121",
+                        "title": "Introduction to United States Government",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "POLSC",
+                        "number": "122",
+                        "title": "Latinx Politics and American Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "120",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIOL",
+                        "number": "5",
+                        "title": "Evaluation of Evidence",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCIO",
+                        "number": "123",
+                        "title": "Introduction to Social Research",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UGBA",
+                        "number": "10",
+                        "title": "Principles of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS",
+                        "number": "109",
+                        "title": "Introduction to Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "AP and IB scores cannot be used to satisfy major requirements.",
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The L&S Essential Skills Requirements: Reading & Composition, Quantitative Reasoning, and Foreign Language; OR 2) IGETC IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (R&C, QR, and FL) or IGETC will no longer be a requirement for admission; however, completion of the Essential Skills requirements is strongly recommended prior to enrollment at UC Berkeley. For more information on minimum UC eligibility requirements for transfer applicants for fall 2025 and beyond, please visit the UC Berkeley transfer requirements page . Major Requirements: See details on preparation for this major below. Primary selection criteria for admission, in general: - completion of L&S Requirements (or IGETC), plus - strength of academic preparation, and - grade point average. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "The group major in American Studies offers students the opportunity to study American society using a broad range of methods from a variety of disciplines in L&S and in the professional schools and colleges. Students who are interested in the American Studies major should: - Review the \"American Studies Student Handbook\" available by mail or from the web site below. - Meet with an adviser to plan your program as soon as you are accepted to UC Berkeley. - Of the four lower division requirements (American Studies 10 plus three courses from the list below), only two need to be completed before applying to the major. - Choose three courses from the list of acceptable courses (with no more than two courses from any one department). For more information: Laura Spautz, Student Academic Advisor American Studies (510) 642-9320 amerstd@berkeley.edu http://as.ugis.berkeley.edu/"
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "sending_institution": "Canada College",
+  "receiving_institution": "University of California, Davis",
+  "major": "Sociology - Organizational Studies A.B.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T02:40:19.642750",
+  "sections": [
+    {
+      "section_title": "ECONOMICS",
+      "groups": [
+        {
+          "group_id": "39746845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001A",
+                        "title": "Principles of Microeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Principles of Micro Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECN",
+                        "number": "001B",
+                        "title": "Principles of Macroeconomics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "100",
+                        "title": "Principles of Macro Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SOCIOLOGY",
+      "groups": [
+        {
+          "group_id": "37746845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology ",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "100",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "35746845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "004",
+                        "title": "Immigration & Opportunity ",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "141",
+                        "title": "Ethnicity and Race in Society",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "007",
+                        "title": "Race & Ethnicity",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "141",
+                        "title": "Ethnicity and Race in Society",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "44746845-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "046",
+                        "title": "Introduction to Social Research Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "205",
+                        "title": "Social Science Research Methods",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYC",
+                        "number": "205",
+                        "title": "Social Science Research Methods",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Transfer students are strongly encouraged to work closely with the California Community College counselors for transfer preparation to UC Davis. Transfer students may also contact a UC Davis transfer advisor for assistance. The below agreements should be utilized in conjunction with professional advising.",
+    "Please note that the Department Agreements as published on ASSIST are also important documents and should be referenced in conjunction with the major agreements as needed.",
+    "Please refer to the Transfer Admissions Requirements for information on admissions to this major.",
+    "Guarantee your admission to UC Davis! The UC Davis Transfer Admission Guarantee (TAG) is a written agreement ensuring your admission to UC Davis from any California Community College. Please visit the TAG webpage for more information!",
+    "The Organizational Studies (OS) major is designed to provide a broad understanding of the political, social, and economic organizations that make up modern society. Whether thinking about the structure of government bureaucracies, legal systems, economic markets, educational systems, or workplaces, OS offers an interdisciplinary view from which to understand the contemporary world in which complex and formal organizations are ubiquitous. Formal organizations influence how we feel, what we think, and what we can accomplish. As such, the OS major provides both a basic understanding of the field as well as enhances your ability to pursue their more specialized career interests. At the upper division level, you can choose one of four specialized tracks, any one of which will help to better identify and inform your career goals—whether that be in postgraduate education or a specific type of job—and pursue them after graduation. Whether you select the “Business & Society,” “Public Policy & Social Welfare,” “Nonprofit & Social Movement Organizations” or the “Student-Initiated Theme” track, once completed you will have a unique and valuable area of expertise. Students who plan to enroll in graduate programs in business, public policy, public administration, and education are advised to develop proficiencies in statistics and calculus."
+  ]
+}

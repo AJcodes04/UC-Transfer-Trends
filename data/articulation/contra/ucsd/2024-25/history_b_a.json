@@ -1,0 +1,125 @@
+{
+  "sending_institution": "Contra Costa College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "History B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T21:13:09.109915",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HILD",
+                        "number": "2A",
+                        "title": "United States History",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HILD",
+                        "number": "2B",
+                        "title": "United States History",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "HILD",
+                        "number": "2C",
+                        "title": "United States History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "121",
+                        "title": "History of the United States (1865 - Present)",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "120",
+                        "title": "History of the United States (Colonial - 1865)",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HILD",
+                        "number": "2A",
+                        "title": "United States History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "120",
+                        "title": "History of the United States (Colonial - 1865)",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HILD",
+                        "number": "2C",
+                        "title": "United States History",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "121",
+                        "title": "History of the United States (1865 - Present)",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Special Advising Note: Transfer students are strongly advised to complete as many preparatory courses as soon as possible for their major before enrolling at UC San Diego. Preparing well for the major helps students move efficiently toward graduation. \"Whereas other subjects may make us wiser for next time,\" said the great historian of the Renaissance, Jakob Burckhardt, \"the study of history makes us wiser forever.\" This major is, moreover, an excellent preparation for a number of rewarding careers in university and college teaching and research, law, government, diplomacy, international business, education and even medicine. At the crossroads of the humanities, the arts and the social sciences, history is the study of human experience as it has unfolded over the ages. As an academic discipline it presents a unique gateway both to the richness of our cultural heritage and to the immense variety of world civilizations. Department fields are as follows: Africa, East Asia, Europe, Near East, Latin America, History of Science, and United States history; as well as, the following three thematic fields: Gender and Sexuality; Race, Ethnicity, and Migration; and War, Revolution, and Social Change. For more information, see http://history.ucsd.edu/ Three quarter courses or two semester courses are required for lower division. Courses including World History/Western Civilization that have not been articulated must be approved via petition on an individual basis by the History department upon transfer."
+  ]
+}

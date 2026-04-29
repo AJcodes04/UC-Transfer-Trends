@@ -1,0 +1,59 @@
+{
+  "sending_institution": "Chabot College",
+  "receiving_institution": "University of California, Santa Cruz",
+  "major": "Black Studies Minor",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T21:15:12.029020",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MINOR",
+      "groups": [
+        {
+          "group_id": "bed97645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CRES",
+                        "number": "10",
+                        "title": "Critical Race and Ethnic Studies: An Introduction",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ES",
+                        "number": "1",
+                        "title": "Introduction to Ethnic Studies",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC Santa Cruz students have the option to complete one or more minors, provided they complete all of the required coursework for the minor(s). The sponsoring department establishes the course requirements for a minor. The minor involves substantial work in the discipline and requires no fewer than 25 upper-division or graduate credits. The minor appears on the student's official transcript but not on the diploma. Students do not apply for admission into a minor when applying to UC Santa Cruz. If interested in completing a minor, transfer students must contact the department sponsoring the minor after enrolling at UCSC.",
+    "Please visit the department's website to learn more about this minor: https://cres.ucsc.edu PREPARATION FOR THE MINOR One lower-division core course: CRES 68: Approaches to Black Studies OR CRES 10: Critical Race and Ethnic Studies: An Introduction"
+  ]
+}

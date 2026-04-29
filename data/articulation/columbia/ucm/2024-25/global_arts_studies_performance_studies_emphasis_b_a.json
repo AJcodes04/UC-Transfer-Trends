@@ -1,0 +1,452 @@
+{
+  "sending_institution": "Columbia College",
+  "receiving_institution": "University of California, Merced",
+  "major": "Global Arts Studies, Performance Studies Emphasis, B.A. ",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T03:43:15.741677",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION ELECTIVES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "007",
+                        "title": "Music in Society",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUSIC",
+                        "number": "2",
+                        "title": "Introduction to Music",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "055C",
+                        "title": "History of European Art and Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "12",
+                        "title": "History of Art: Renaissance, Baroque and Modern",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "11",
+                        "title": "History of Art: Ancient and Medieval",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "056",
+                        "title": "Contemporary Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "14",
+                        "title": "Art Appreciation",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "080A",
+                        "title": "Introduction to Drama, Theatre, and Performance",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "DRAMA",
+                        "number": "10",
+                        "title": "Introduction to the Theatre",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL LOWER DIVISION CORE REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "001",
+                        "title": "Introduction to Sociocultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTHR",
+                        "number": "2",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STUDIO/ENSEMBLE REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Complete 8 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 8.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "030C",
+                        "title": "Swing Band",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUSIC",
+                        "number": "60",
+                        "title": "College Choir",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "64",
+                        "title": "Jazz Choir",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "66",
+                        "title": "Columbia College Community Chorus",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "72",
+                        "title": "Jazz Ensemble",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "75",
+                        "title": "Jazz Studies",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "76",
+                        "title": "Community Orchestra",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "78",
+                        "title": "Ensemble: Instrumental Emphasis",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GASP",
+                        "number": "030C",
+                        "title": "Swing Band",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MUSIC",
+                        "number": "60",
+                        "title": "College Choir",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "64",
+                        "title": "Jazz Choir",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "66",
+                        "title": "Columbia College Community Chorus",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "72",
+                        "title": "Jazz Ensemble",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "75",
+                        "title": "Jazz Studies",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "76",
+                        "title": "Community Orchestra",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "MUSIC",
+                        "number": "78",
+                        "title": "Ensemble: Instrumental Emphasis",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "1A",
+                        "title": "Reading and Composition: Beginning",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "1A:E",
+                        "title": "Enhanced Reading and Composition: Beginning",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "2",
+                        "title": "Argumentation and Debate",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "5",
+                        "title": "Introduction to the History and Philosophy of Science",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "1B",
+                        "title": "Advanced Composition and Introduction to Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "1C",
+                        "title": "Advanced Composition and Critical Thinking",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Thank you for your interest in UC Merced! For Admission to the Global Arts Studies, Performance Studies emphasis B.A . major, students must earn an overall transferrable GPA of 2.4 or better, and must complete classes articulated with the following UC Merced courses by the end of spring term prior to fall enrollment or by the end of fall term prior to spring enrollment. All major preparation courses require a \"C\" or better. REQUIRED: Major Preparation Courses for Transfer: At least two UC-Transferable art courses (e.g. film, music, theater, visual art) These courses may also fulfill the \"Additional Major Preparation courses\" listed below. Additional Major Preparation Courses: Recommended to be completed prior to Transfer Complete the following Common Foundations courses: GASP 001 and GASP 002 Complete one course from the following course ranges: GASP 007 or GASP 050-089 Complete Additional Foundations Courses: GASP 006 and ANTH 001 Music or Dance Requirement/Ensemble: Complete eight units chosen from the following ranges: GASP 030-049 (GASP 130-149 upper division courses can also count) Visual Arts Studio: Complete four units chosen from the following course ranges: GASP 030-049 (GASP 130-149 upper division courses can also count) Courses in the major must be taken for a letter grade, and specifically may not be taken on a pass/no pass basis unless the course is only offered on a pass/no pass basis. AP Exam Score & Course Exemptions AP Studio Art: Drawing: score of 4 or 5 exempts one (1) course in GASP to count towards one Visual Arts Course for the GASP Major. AP Studio Art: 2-D Design: score of 4 or 5 exempts one (1) course in GASP to count towards one Visual Arts Course for the GASP Major. AP Studio Art: 3-D Design: score of 4 or 5 exempts one (1) course in GASP to count towards one Visual Arts Course for the GASP Major. AP Art History: score of 4 or 5 exempts one (1) course in GASP to count toward one lower division course within the GASP Major. UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: A dvance Placement (AP) and International Baccalaureate (IB) Examinations",
+    "Please read the catalog page for more information about the Global Arts Studies, Performance Studies Emphasis major. In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC 1A - English Composition. WRI 010 is fulfilled by IGETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): While general education is not required for admission, it can help speed up your time to graduation once you transfer to UC Merced. We highly recommend reviewing the Transfer Students: Satisfying General Education page in the catalog for a more extensive explanation of the requirements. Transfer students are strongly encouraged to complete IGETC in order to prepare for work within the School of Social Sciences, Humanities and Arts (SSHA). IGETC courses may double count with the major courses listed below. Please visit your Community College Counselor to learn more. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu ."
+  ]
+}

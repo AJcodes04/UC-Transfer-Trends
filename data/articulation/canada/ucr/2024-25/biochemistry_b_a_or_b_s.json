@@ -1,0 +1,449 @@
+{
+  "sending_institution": "Canada College",
+  "receiving_institution": "University of California, Riverside",
+  "major": "Biochemistry, B.A. or B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T06:07:37.508600",
+  "sections": [
+    {
+      "section_title": "LOWER DIVISION MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "5A",
+                        "title": "Intro to Cell and Molecular Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIOL",
+                        "number": "5LA",
+                        "title": "Intro to Cell and Molecular Biology Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "230",
+                        "title": "Cell and Molecular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1B",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1C",
+                        "title": "General Chemistry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LA",
+                        "title": "General Chemistry Lab",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LB",
+                        "title": "General Chemistry Lab",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1LC",
+                        "title": "General Chemistry Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "220",
+                        "title": "General Chemistry II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "210",
+                        "title": "General Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "8A",
+                        "title": "ORGANIC CHEMISTRY",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "8B",
+                        "title": "ORGANIC CHEMISTRY",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "8C",
+                        "title": "ORGANIC CHEMISTRY",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "8LA",
+                        "title": "ORGANIC CHEMISTRY LABORATORY",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "8LB",
+                        "title": "ORGANIC CHEMISTRY LABORATORY",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "8LC",
+                        "title": "ORGANIC CHEMISTRY LABORATORY",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "231",
+                        "title": "Organic Chemistry I",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "232",
+                        "title": "Organic Chemistry II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "9A",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "9B",
+                        "title": "First-Year Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "252",
+                        "title": "Analytical Geometry and Calculus II",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "251",
+                        "title": "Analytical Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "7A",
+                        "title": "Calculus for Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "7B",
+                        "title": "Calculus for Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STRONGLY RECOMMENDED COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "40A",
+                        "title": "General Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "40B",
+                        "title": "General Physics",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "40C",
+                        "title": "General Physics",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "260",
+                        "title": "Physics with Calculus II",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "250",
+                        "title": "Physics with Calculus I",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "270",
+                        "title": "Physics with Calculus III",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHYS",
+                        "number": "2A",
+                        "title": "General Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2B",
+                        "title": "General Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2C",
+                        "title": "General Physics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2LA",
+                        "title": "General Physics Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2LB",
+                        "title": "General Physics Laboratory",
+                        "units": 1.0
+                      },
+                      {
+                        "prefix": "PHYS",
+                        "number": "2LC",
+                        "title": "General Physics Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "5B",
+                        "title": "Intro to Organismal Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOL",
+                        "number": "225",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "46",
+                        "title": "Intro to Ordinary Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "275",
+                        "title": "Ordinary Differential Equations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "In addition, complete community college courses comparable to the following UCR sequences in order to meet selection criteria for this major. Courses must be completed with \"C\" grades or better prior to transfer. Mandatory Series Biology BIOL 5A/5LA Chemistry CHEM 1A/LA, CHEM 1B/LB, CHEM 1C/LC Math Math 9A, MATH 9B or MATH 7A, MATH 7B Organic Chemistry CHEM 8A/8LA, CHEM 8B/LB, CHEM 8C/LC AP Exam - Satisfy Course Requirement Section Mathematics: A Exam or AB Subscore from BC Exam Minimum score of 3 satisfies MATH 9A or MATH 7A Mathematics: BC Exam Minimum score of 3 satisfies MATH 9A and MATH 9B or MATH 7A and MATH 7B Minimum score of 4 satisfies MATH 9A, MATH 9B, MATH 9C or MATH 7A, MATH 7B, MATH 9C Physics: C Exam - Mechanics Minimum score of 4 satisfies PHYS 2A and 2LA For additional information about the Biochemistry major, please visit Biochemistry . For information about the UC Transfer Admission Guarantee (TAG) program, please visit Transfer Admission Guarantee .",
+    "Applicants to majors in the College of Natural and Agricultural Sciences are selected on the basis of their academic preparation, as assessed by their GPA and the strength of preparation for their intended major. A GPA of at least 2.70 is required (this is a baseline GPA for consideration and not a guarantee of admission). Courses must be completed with a letter grade, with no grade lower than a \"C\". To be best prepared for upper division course work at UCR, students are advised to complete as many as possible of the lower division major requirements listed below prior to transfer, and to prioritize this course work above completion of breadth/general education courses. Effective Fall 2024 transfer students must complete all Chemistry lab courses in-person to receive articulation to UCR’s equivalent Chemistry lab courses. Completing Chemistry lab courses online will not impact your ability to transfer. Transfer students who complete Chemistry lab courses online will be required to retake the lab courses at UCR. If sending institution offers honors courses , the articulation for the same course number will be used. IGETC and General Education/Breadth Information IGETC is not accepted for majors housed in the College of Natural and Agricultural Sciences. Courses taken for IGETC will be applied to the College's breadth pattern as appropriate. Transfer students who wish to supplement their math and science preparation with humanities or social science courses are encouraged to follow the College of Natural and Agricultural Sciences breadth pattern. You may view the breadth requirements for College of Natural and Agricultural Sciences by visiting the 2023-24 Catalog , pages 87-89."
+  ]
+}

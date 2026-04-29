@@ -1,0 +1,433 @@
+{
+  "sending_institution": "Citrus College",
+  "receiving_institution": "University of California, Merced",
+  "major": "Public Health, B.A. ",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T22:09:58.796957",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "010",
+                        "title": "Analysis of Psychological Data",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "165",
+                        "title": "Introductory Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "018",
+                        "title": "Statistics for Scientific Data Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "165",
+                        "title": "Introductory Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL MAJOR PREPARATION COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "001",
+                        "title": "Introduction to Public Health",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "KIN",
+                        "number": "168",
+                        "title": "Introduction to Public Health",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STATISTICS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "010",
+                        "title": "Introduction to Biostatistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "165",
+                        "title": "Introductory Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "165H",
+                        "title": "Introductory Statistics - Honors",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "PSY",
+                        "number": "103",
+                        "title": "Statistics for the Social and Behavioral Sciences",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "018",
+                        "title": "Statistics for Scientific Data Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "165",
+                        "title": "Introductory Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "010",
+                        "title": "Analysis of Psychological Data",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "165",
+                        "title": "Introductory Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "RECOMMENDED BUT NOT REQUIRED",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "001",
+                        "title": "Introduction to Sociocultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "210",
+                        "title": "Introduction to Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "001",
+                        "title": "Introduction to Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "101",
+                        "title": "Introduction to Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "101",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "101E",
+                        "title": "Reading and Composition, Enhanced",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "101H",
+                        "title": "Reading and Composition - Honors",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 6,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "102",
+                        "title": "Introduction to Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "104H",
+                        "title": "Argumentative Writing and Critical Thinking -Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "103",
+                        "title": "Composition and Critical Thinking - Honors",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "104",
+                        "title": "Argumentative Writing and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "103H",
+                        "title": "Composition and Critical Thinking - Honors",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Thank you for your interest in UC Merced! For Admissions to the Public Health, B.A. major, students must earn an overall transferable GPA of 3.0 or better, and must complete classes articulated with the following UC Merced courses by the end of spring term prior to fall enrollment or by the end of fall term prior to spring enrollment. All Major Preparation courses require a \"C\" or better. REQUIRED: Major Preparation Courses for Transfer: MATH 018* OR PSY 010* (Either of the courses will satisfy the Statistics Requirement for the major preparation courses listed below) IGETC Certification (Please visit your Community College Counselor to learn more about the requirements and process) *Beginning with fall 2025 applicants, courses equivalent to PH 010 will be the only option to meet the Statistics requirement. Strongly recommended , but not required for Admission: The Lower division Core courses in the \"Additional Major Preparation courses\" area (PH 001, PH 005, and BIO 003). PSY 001 and ANTH 001 are not required for the major but are recommended to complete at your Community College to prepare for Upper Division Public Health courses when you transfer to UC Merced. Since IGETC Certification is required for admissions for this major, please consult with your Community College Counselor whether the articulated course for PSY 001 and/or ANTH 001 would count towards an IGETC Area. Additional Major Preparation Courses: Recommended to be completed prior to Transfer: Complete the Lower Division Major Core courses: PH 001 and PH 005 and BIO 003 Complete one Statistics Requirement course: PH 010 OR MATH 018 OR PSY 010 (MATH 018 or PSY 010 also satisfies the Required Major Preparation course for Transfer) Additional Electives (Complete two): Almost all electives are Upper Division courses except for BIO 060 & GEOG 002 (Crosslisted with: HS 002) lower division courses, please refer to the catalog . Department Note: After matriculating to UC Merced, transfer students may not be able to complete this major within four semesters. The coursework required may take a minimum of five semesters. Courses in the major must be taken for a letter grade and may not be taken on a pass/no pass basis unless the course is only offered on a pass/no pass basis. AP Exam Score & Course Exemptions An AP Psychology score of 4 or 5 exempts PSY 001 An AP Statistics score of 4 exempts MATH 018 or PSY 010 UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: A dvance Placement (AP) and International Baccalaureate (IB) Examinations",
+    "Please read the catalog page for more information about the Public Health major. In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC 1A - English Composition. WRI 010 is fulfilled by IGETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): Public Health majors are required to complete IGETC Certification for admissions. Please visit your Community College Counselor to learn more about the IGETC areas & course requirements along with the Certification process. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu ."
+  ]
+}

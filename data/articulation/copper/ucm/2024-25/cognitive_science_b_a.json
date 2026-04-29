@@ -1,0 +1,754 @@
+{
+  "sending_institution": "Copper Mountain College",
+  "receiving_institution": "University of California, Merced",
+  "major": "Cognitive Science, B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T20:04:31.720404",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "001",
+                        "title": "Introduction to Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "001",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "010",
+                        "title": "Analysis of Psychological Data",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "014",
+                        "title": "Statistical Methods",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "003",
+                        "title": "Fundamentals of Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "005",
+                        "title": "Preparatory Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "005",
+                        "title": "Trigonometry",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "010",
+                        "title": "College Algebra for Liberal Arts",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "012",
+                        "title": "Precalculus & Trigonometry",
+                        "units": 6.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "021",
+                        "title": "Calculus I for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "QUANTITATIVE REASONING",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "021",
+                        "title": "Calculus I for Physical Sciences & Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "STATISTICS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "018",
+                        "title": "Data Science for Life Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "003",
+                        "title": "Fundamentals of Statistics",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "MATH",
+                        "number": "014",
+                        "title": "Statistical Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "010",
+                        "title": "Statistical Inference",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "014",
+                        "title": "Statistical Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "010",
+                        "title": "Analysis of Psychological Data",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "014",
+                        "title": "Statistical Methods",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "003",
+                        "title": "Fundamentals of Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "INTRODUCTORY COURSES",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 6,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "001",
+                        "title": "Introduction to Sociocultural Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "002",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "005",
+                        "title": "Introduction to Biological Anthropology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "001",
+                        "title": "Introduction to Physical Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "001",
+                        "title": "Contemporary Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIO",
+                        "number": "001",
+                        "title": "Contemporary Biology",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "BIO",
+                        "number": "001L",
+                        "title": "Contemporary Biology Lab",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "001",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "001",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "002",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "001",
+                        "title": "Introduction to Philosophy",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PHIL",
+                        "number": "006",
+                        "title": "Introduction to Philosophy",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POLI",
+                        "number": "001",
+                        "title": "Introduction to American Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PS",
+                        "number": "001",
+                        "title": "Introduction to Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "001",
+                        "title": "Introduction to Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "001",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "COMPUTING COURSE",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 7,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "005",
+                        "title": "Introduction to Computer Applications",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CIS",
+                        "number": "070A",
+                        "title": "Computer Business Applications for Windows",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CSE",
+                        "number": "019",
+                        "title": "Introduction to Computing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PH",
+                        "number": "005",
+                        "title": "Computer Programming for Scientists and Engineers",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CS",
+                        "number": "089",
+                        "title": "C++ Programming I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 8,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "001",
+                        "title": "Academic Writing",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENG",
+                        "number": "003A",
+                        "title": "College Composition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "SECOND COURSE IN ENGLISH COMPOSITION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 9,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "WRI",
+                        "number": "010",
+                        "title": "College Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SP",
+                        "number": "007",
+                        "title": "Decision-Making and Advocacy",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOC",
+                        "number": "004",
+                        "title": "Sociological Analysis and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "001B",
+                        "title": "Composition and Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENG",
+                        "number": "001C",
+                        "title": "Argumentation and Critical Thinking",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Thank you for your interest in UC Merced! For Admission to the Cognitive Science, B.A. major, students must earn an overall transferrable GPA of 2.4 or better, and must complete classes articulated with the following UC Merced courses by the end of spring term prior to fall enrollment or by the end of fall term prior to spring enrollment. All major preparation courses require a \"C\" or better. REQUIRED : Major Preparation Courses for Transfer: COGS 001 OR PSY 001* PSY 010** MATH 005 OR MATH 011 or MATH 021 (Allowable Substitute) * If PSY 001 is used to meet the Required Major Preparation course for transfer, then COGS 001 will be required at UC Merced. ** PSY 010 also fulfills the Statistical Methods requirement for the major. Additional Major Preparation Courses: Recommended to be Completed Before Transfer: Complete one Quantitative Reasoning Requirement: CSE 015 OR *MATH 011 (MATH 021 is an allowable Substitute) OR PHIL 005 Complete two Introductory courses: ANTH 001, ANTH 005, BIO 001, COGS 005, ECON 001, PHIL 001, POLI 001, **PSY 001 and SOC 001 Complete one introductory computing course: BIOE 021 OR CSE 005 OR CSE 019 * If using MATH 011 or MATH 021 to satisfy the Admissions requirement, the course also fulfills the Quantitative Reasoning Requirement. ** If using PSY 001 to satisfy the Admissions requirement, the course also fulfills one course for the Introductory requirement. *** PSY 010 also fulfills one of the Required Major Preparation Course for Transfer Courses in the major must be taken for a letter grade, and they may not be taken on a pass/no pass basis unless the course is only offered on a pass/no pass basis. AP Exam Score & Course Exemptions An AP Computer Science: Comp Science A score of 3 or 4 exempts CSE 005 An AP Economics: Macroeconomics And Microeconomics score of 4 or 5 exempts ECON 001 An AP Government and Politics: United States score of 4 or 5 exempts POLI 001 An AP Mathematics: Calculus AB score of 3 or higher exempts MATH 005 An AP Mathematics: Calculus AB score of 4 or 5 exempts MATH 011 or MATH 021 An AP Mathematics: Calculus BC score of 3 or higher exempts MATH 011 or MATH 021 An AP Mathematics: Calculus BC score of 4 or 5 exempts MATH 011 and MATH 012 or MATH 021 and MATH 022 An AP Mathematics: Calculus BC Subscore AB of 3 or higher exempts MATH 011 or MATH 021 An AP Psychology score of 4 or 5 exempts PSY 001 An AP Statistics score of 4 exempts BIO 018, PSY 010 An AP Statistics score of 5 exempts ECON 010 UC Merced Advance Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the link below: Advance Placement (AP) and International Baccalaureate (IB) Examinations",
+    "Please read the catalog major page for more information about Cognitive Science . In addition to the Major Selection Criteria, all Upper-Division Transfer applicants must meet minimum University of California admissions requirements . Visit https://admissions.ucmerced.edu/transfer/requirements for more specific UC Merced admissions information. Prior to Transferring to UC Merced, please be advised of the following for Junior Transfers: 1) WRI 001 and WRI 010 are admissions requirements: WRI 001 is fulfilled by IGETC 1A - English Composition. WRI 010 is fulfilled by IGETC 1B - Critical Thinking/English Composition. Please scroll towards the bottom of the agreement to find the articulation for each course. 2) Transfer Admissions Guarantee (TAG): UC Merced is one of the six UC's that offers Transfer Admissions Guarantee. Please visit the TAG website for more information: https://admissions.ucmerced.edu/transfer/tag 3) General Education (GE Requirements): While general education is not required for admission, it can help speed up your time to graduation once you transfer to UC Merced. We highly recommend reviewing the Transfer Students: Satisfying General Education page in the catalog for a more extensive explanation of the requirements. Transfer students are strongly encouraged to complete IGETC in order to prepare for work within the School of Social Sciences, Humanities and Arts (SSHA). IGETC courses may double count with the major courses listed below. Please visit your Community College Counselor to learn more. 4. This agreement displays all lower-division (or Major Preparation) courses required in the major. UC Merced courses on the left, approved (articulated) transfer courses to the right. 5. Changes to this Agreements: Major requirements are subject to change from one academic year to the next. Newly-articulated courses are added on a rolling basis, and articulated courses can be revised. Visit ASSIST every semester for the latest information and consult with an Academic Counselor at your institution on a regular basis. For more questions about admissions, please email: transfer@ucmerced.edu ."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "sending_institution": "Copper Mountain College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Informatics, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T16:18:41.176562",
+  "sections": [
+    {
+      "section_title": "MAJOR PREPARATION COURSES REQUIRED FOR TRANSFER",
+      "groups": [
+        {
+          "group_id": "241b7745-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "31",
+                        "title": "Introduction to Programming",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "32",
+                        "title": "Programming with Software Libraries",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "I&C SCI",
+                        "number": "33",
+                        "title": "Intermediate Programming",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CS",
+                        "number": "089A",
+                        "title": "C++ Programming II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CS",
+                        "number": "089",
+                        "title": "C++ Programming I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "eeff6545-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "014",
+                        "title": "Statistical Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to the Donald Bren School of Information and Computer Science is highly competitive. The most important selection criteria are completion of the required preparatory courses and academic performance. This major does not participate in the TAG program. Required for admission: Students must have a cumulative GPA of 3.0 and grade of B or higher in all required courses below: One year of computer programming courses* in a single object–language (Python, Java, or C++). Object-oriented programming language courses that do not directly articulate to I&C SCI 31-33 can be used to satisfy the admissions requirements. Introduction to computer science courses do not meet this requirement. One college-level mathematics course at a level higher than pre-calculus; courses equivalent to I&C SCI 6B (Boolean Algebra and Logic), Statistics 7 (Basic Statistics) or Statistics 67 (Introduction to Probability and Statistics for Computer Science) are preferred as these courses facilitate scheduling after transfer to UCI. *NOTES: Additional computer science and statistics courses beyond the two required are strongly recommended, particularly those that align with the major of interest. Our first year of object-oriented programming is taught in Python. C++ and Java are used extensively in the curriculum; therefore, transfer students should plan to learn it by studying on their own or by completing related programming courses prior to their first quarter at UCI. Courses in Visual Basic, C, and C# are not approved preparation for this major. Time to degree: Additional courses beyond those required for admission must be taken to fulfill the lower-division degree requirements as many are prerequisites for upper-division courses. For some transfer students, this may mean that it will take longer than two years to complete their degree. NOTE : Courses that are articulated as part of a sequence should not be split between different institutions. Complete entire sequence at same institution prior to transfer. While articulated I&C SCI 31-33 credit is not required for transfer admission, students will need to have I&C SCI 31-33 credit first in order to fulfill degree requirements and move further into the program here at UCI. More information is available at http://www.informatics.uci.edu/ or at the ICS Student Affairs Office; telephone (949) 824-5156; e-mail: ucounsel@uci.edu. In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue."
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "sending_institution": "Cuesta College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Computer Science, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-28T22:16:16.266552",
+  "sections": [
+    {
+      "section_title": "REQUIRED FOR ADMISSION",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec0",
+          "group_number": 1,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "54",
+                        "title": "Linear Algebra and Differential Equations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "287",
+                        "title": "Ordinary Differential Equations and Linear Algebra",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000__sec1",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "HIGHLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "53",
+                        "title": "Multivariable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "283",
+                        "title": "Calculus III: Multivariable Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMPSCI",
+                        "number": "70",
+                        "title": "Discrete Mathematics and Probability Theory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSION REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF COMPUTING, DATA SCIENCE, AND SOCIETY (CDSS) THIS MAJOR IS OFFERED BY THE COLLEGE OF COMPUTING, DATA SCIENCE, AND SOCIETY (CDSS) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The Reading & Composition and Foreign Language Requirement . CDSS will accept the courses approved for these requirements as published on the General Education agreement for the College of Letters and Science; OR IGETC AND 2) Major Requirements All required courses as noted by your intended major. Only applicants who have completed 100% of items 1 and 2 above will be considered for admission. Additional completion of highly recommended courses will serve to strengthen the application. For more information on admission to UC Berkeley: https://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: https://guide.berkeley.edu",
+    "At Berkeley, we construe computer science broadly to include the theory of computation, the design and analysis of algorithms, the architecture and logic design of computers, programming languages, compilers, operating systems, scientific computation, computer graphics, databases, artificial intelligence and natural language processing. Our goal is to prepare students both for a possible research career and long-term technical leadership in industry. We must therefore look beyond today's technology and give students the big ideas and the learning skills that will prepare them to teach themselves about tomorrow's technology. Visit the following websites for more information: https://eecs.berkeley.edu/resources/undergrads/cs https://eecs.berkeley.edu/resources/undergrads/cs/transfer-prereqs/faq General contact information: 349 Soda Hall, UC Berkeley cs-advising@cs.berkeley.edu (510) 664-4436",
+    "Required Courses for Admission MATH 1A, MATH 1B MATH 54 or EECS 16A or MATH 56 Computer Science does not require full equivalence to Math 54 and will accept just the Linear Algebra course of an articulated Math 54-equivalent series. Highly Recommended Courses for Admission COMPSCI 61A, COMPSCI 61B, COMPSCI 61C Data structures--even if not officially comparable to Berkeley's COMPSCI 61B; and Java (preferred) or C++ MATH 53 - optional, lower division course COMPSCI 70 - COMPSCI 70 is offered during the Berkeley Summer session or Concurrent Enrollment. The entire Computer Science 61 series is also offered during the Berkeley Summer session. The department recommends that, when possible, students take one of these courses during the summer session prior to transfer.",
+    "Acceptable exam credit: MATH 1A (Calculus I) can be satisfied with at least a “3” on the AP AB or BC Calculus exam, at least a “5” on the IB Math Higher Level, or at least a \"B\" on A-Level Math ﻿ MATH 1B (Calculus II) can be satisfied with a “5” on the AP BC Calculus exam or at least a \"B\" on A-Level Further Math"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "sending_institution": "Cuesta College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Game Design & Interactive Media, B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T00:56:21.146784",
+  "sections": [
+    {
+      "section_title": "ADDITIONAL APPROVED COURSES FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "f7997645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 6 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 6.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2A",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265A",
+                        "title": "Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "2B",
+                        "title": "Single-Variable Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "265B",
+                        "title": "Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "RECOMMENDED ELECTIVE",
+      "groups": [
+        {
+          "group_id": "23727445-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "STATS",
+                        "number": "7",
+                        "title": "Basic Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "247",
+                        "title": "Introduction to Statistics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Admission to the Donald Bren School of Information and Computer Science is highly competitive. The most important selection criteria are completion of the required preparatory courses and academic performance. This major does not participate in the TAG program. Required for admission: Students must have a cumulative GPA of 3.0 and grade of B or higher in all required courses below: One year of computer programming courses in a single object–language (Python, Java, or C++). Object-oriented programming language courses that do not directly articulate to I&C SCI 31-33 can be used to satisfy the admissions requirements. Introduction to computer science courses do not meet this requirement. All courses must be 3.0 semester/4.0 quarter units Additional Approved Courses : One course in advanced data structures One course in machine organization and assembly language (both topics must be covered) One course in software engineering One course in discrete mathematics One course in Boolean algebra One course in linear algebra One course in visual storytelling One course in creative writing or scriptwriting One course in digital media One course in mass media and society One course in graphic design One course in animation NOTE: Transfer students should plan to learn programming by studying on their own or by completing related programming courses prior to their first quarter at UCI. Time to degree: Additional courses beyond those required for admission must be taken to fulfill the lower-division degree requirements as many are prerequisites for upper-division courses. For some transfer students, this may mean that it will take longer than two years to complete their degree. NOTE : Courses that are articulated as part of a sequence should not be split between different institutions. Complete entire sequence at same institution prior to transfer. While articulated I&C SCI 31-33 credit is not required for transfer admission, students will need to have I&C SCI 31-33 credit first in order to fulfill degree requirements and move further into the program here at UCI. In fulfillment of the requirements below, a single course may be used only once. For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue."
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "sending_institution": "Compton College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "Art: Art History/Criticism B.A. (Visual Arts)",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-27T17:42:52.892890",
+  "sections": [
+    {
+      "section_title": "FOUNDATION LEVEL - REQUIRED COURSEWORK",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "VIS",
+                        "number": "22",
+                        "title": "Formations of Modern Art",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "104",
+                        "title": "History of Western Art - 19th Century to Contemporary Times",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "VIS",
+                        "number": "23",
+                        "title": "Seminar in Art History Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ART HISTORY",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "VIS",
+                        "number": "11",
+                        "title": "Introduction to Visual Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "VIS",
+                        "number": "20",
+                        "title": "Introduction to Art of Europe and America",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "103",
+                        "title": "History of Western Art - Proto-Renaissance to 19th Century",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "102",
+                        "title": "History of Western Art - Prehistoric to Gothic",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Special Advising Note: Transfer students are strongly advised to complete as many preparatory courses as soon as possible for their major before enrolling at UC San Diego. Preparing well for the major helps students move efficiently toward graduation. The major in art history, theory, and criticism is designed both for students who desire a broadly-based education in the humanities and for those who plan to pursue a career in an art-related profession. By combining art historical and critical study, the program promotes in the student an awareness of the cultural traditions which have shaped their intellectual outlook and provides a framework for informed judgment on the crucial issues of meaning and expression in contemporary society. Art History honors available for qualified students. For more information please visit visarts.ucsd.edu ."
+  ]
+}

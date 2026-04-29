@@ -1,0 +1,259 @@
+{
+  "sending_institution": "Cuyamaca College",
+  "receiving_institution": "University of California, Irvine",
+  "major": "Art, B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T00:52:43.528886",
+  "sections": [
+    {
+      "section_title": "PREPARATION FOR THE MAJOR",
+      "groups": [
+        {
+          "group_id": "e1ee7645-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 1,
+          "group_label": "Complete 1 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 1.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "40A",
+                        "title": "Ancient Egyptian, Greek, and Roman Art and Architecture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "140",
+                        "title": "Survey of Western Art I: Prehistory through Middle Ages",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "40B",
+                        "title": "Arts of Europe: Medieval and Renaissance",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "140",
+                        "title": "Survey of Western Art I: Prehistory through Middle Ages",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "141",
+                        "title": "Survey of Western Art II: Renaissance Through Modern",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "40C",
+                        "title": "Early Modern and Modern Art in Europe and America",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "141",
+                        "title": "Survey of Western Art II: Renaissance Through Modern",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "42A",
+                        "title": "History of Asian Art: Arts of India",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "146",
+                        "title": "Asian Art",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "42B",
+                        "title": "History of Asian Art: Arts of China",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "146",
+                        "title": "Asian Art",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART HIS",
+                        "number": "42C",
+                        "title": "History of Asian Art: Arts of Japan",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "146",
+                        "title": "Asian Art",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "b5f27145-6887-ef11-8474-000d3a37e3b6",
+          "group_number": 2,
+          "group_label": "Complete 4 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 4.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "20A",
+                        "title": "Basic Drawing I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "125",
+                        "title": "Drawing II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "124",
+                        "title": "Drawing I",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "30A",
+                        "title": "Basic Painting I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ART",
+                        "number": "121",
+                        "title": "Painting I",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ART",
+                        "number": "220",
+                        "title": "Painting II",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "The Department of Art in the Claire Trevor School of the Arts takes a wide-ranging, interdisciplinary view of contemporary art practice. With an emphasis on experimentation and innovation, the Department of Art is viewed as a leader in genres addressing cultural identity and emerging technologies. The Department provides students a solid theoretical and technical foundation from which to approach art making as both process and product. Each student is encouraged to develop an individual, disciplined direction approach to media, materials, and techniques. The curriculum provides studio experiences in drawing, painting, sculpture, photography, digital imaging, video, performance art, and new media. Visiting artists, theorists, curators, and other arts professionals are an integral part of the program. Required for admission: Students must have a cumulative UC transferable GPA of 2.7 and submit a portfolio This major does not participate in the TAG program or Honors to Honors partnership ﻿For information regarding the AP and IB examination credit policies refer to the UCI General Catalogue"
+  ]
+}

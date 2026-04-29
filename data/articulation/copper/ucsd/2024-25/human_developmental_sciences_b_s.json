@@ -1,0 +1,469 @@
+{
+  "sending_institution": "Copper Mountain College",
+  "receiving_institution": "University of California, San Diego",
+  "major": "Human Developmental Sciences B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-25T21:27:24.490210",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HDS",
+                        "number": "1",
+                        "title": "Introduction to Human Developmental Sciences",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HDS",
+                        "number": "60",
+                        "title": "Introduction to Statistical Analysis",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "2",
+                        "title": "Human Origins",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "001",
+                        "title": "Introduction to Physical Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "1",
+                        "title": "The Cell",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BI",
+                        "number": "005",
+                        "title": "Molecular and Cellular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "2",
+                        "title": "Multicellular Life",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BI",
+                        "number": "005",
+                        "title": "Molecular and Cellular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "3",
+                        "title": "Organismic and Evolutionary Biology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "006",
+                        "title": "Biology of Organisms",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "BI",
+                        "number": "005",
+                        "title": "Molecular and Cellular Biology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BILD",
+                        "number": "26",
+                        "title": "Human Physiology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BI",
+                        "number": "023",
+                        "title": "Human Physiology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 4,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20A",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20B",
+                        "title": "Calculus for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "001B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "20C",
+                        "title": "Calculus and Analytic Geometry for Science and Engineering",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "002A",
+                        "title": "Multivariate Calculus",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 5,
+          "group_label": "Complete 2 semester units from the following",
+          "group_logic": "SELECT_N",
+          "select_n": null,
+          "select_units": 2.0,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "1",
+                        "title": "Introduction to Culture",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "002",
+                        "title": "Cultural Anthropology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "3",
+                        "title": "World Prehistory",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ANTH",
+                        "number": "003",
+                        "title": "Archaeology, An Introduction to Prehistory",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COMM",
+                        "number": "10",
+                        "title": "Introduction to Communication",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "COGS",
+                        "number": "1",
+                        "title": "Introduction to Cognitive Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSYC",
+                        "number": "1",
+                        "title": "Psychology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PSY",
+                        "number": "001",
+                        "title": "General Psychology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOCI",
+                        "number": "1",
+                        "title": "Introduction to Sociology",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "SOC",
+                        "number": "001",
+                        "title": "Introduction to Sociology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "UC San Diego Advanced Placement (AP) and International Baccalaureate (IB) credit policies are detailed in the links below: Advanced Placement (AP) https://www.ucsd.edu/catalog/pdf/APC-chart.pdf International Baccalaureate (IB) https://catalog.ucsd.edu/_files/international-baccalaureate-credits-chart.pdf",
+    "DATED MATERIAL, SUBJECT TO CHANGE. PLEASE CONSULT CURRENT UCSD GENERAL CATALOG FOR ANY ADDITIONAL INFORMATION. Special Advising Note: Transfer students are strongly encouraged to complete as many lower-division preparatory courses as possible prior to enrollment at UC San Diego. The scientific study of human development focuses on issues of growth, development , and behavioral change across the lifespan. The UCSD Human Developmental Sciences Program (HDS) is interdisciplinary, incorporating courses from the Departments of Anthropology, Biology, Cognitive Science, Communication, Ethnic Studies, History, Linguistics, Literature, Psychology, Public Health, Sociology, Education Studies, and Urban Studies and Planning Program. The HDS curriculum is designed to emphasize the integration of information across these different perspectives, with the view that understanding development from any given perspective requires consideration of many contributing factors. Thus, the classes cover a broad spectrum of topics; from brain and perceptual development, to reasoning and problem solving, to social interaction and the evolution of cultural systems. The Human Developmental Sciences Major unifies and coordinates the excellent research and teaching resources currently available on campus across these areas, and profiles a breadth of influences that shape human behavior. For more information visit hdsciences.ucsd.edu . All courses taken to satisfy requirements in any Human Developmental Sciences (HDS) major must be taken for a letter grade. Transfer students should complete all courses comparable to the HDS major preparation courses EXCEPT HDS 1 (which MUST be taken at UCSD) before transferring. Students must complete all transfer courses applicable to the HDS major with a minimum grade of C- or better. The major preparation courses are: HDs 1-Introduction to Human Developmental Sciences One statistics course HDS 60 Two formal skills courses selected from the following: •Option 1: two courses from the MATH 10 or MATH 20 sequence •Option 2: one course from the MATH 10 or MATH 20 sequence, and one computer programming course from the approved list: CSE 7, CSE 8A, CSE 11. At least one course in calculus is required. Two biological science courses selected from: ANTH 2, BILD 1, BILD 2, BILD 3, BILD 12, BILD 20, BILD 26, BILD 38, or COGS 17. Two social sciences courses selected from: ANTH 1, ANTH 3, CAT 1, CAT 2, COMM 10, COGS 1, FMPH 40, FMPH 50, HILD 7A, B, or C (only one allowed), LIGN 4, LIGN 7, LIGN 8, LIGN 101, MMW 121, MMW 122, PSYC 1, PSYC 2, PSYC 3, PSYC 6, PSYC 7, SOCI 1, or SOCI 20. PLEASE NOTE : Transfer courses that have not been articulated on ASSIST may be considered to fulfill HDS requirements, but must be approved via petition on an individual basis by the HDS Program. Those transferable courses that are very similar to UCSD's will be accepted, as well as comparable courses at an equivalent academic level ONLY for the Human Development major."
+  ]
+}

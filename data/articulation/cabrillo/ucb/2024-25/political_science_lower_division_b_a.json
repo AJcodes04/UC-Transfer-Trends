@@ -1,0 +1,464 @@
+{
+  "sending_institution": "Cabrillo College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Political Science, Lower Division B.A.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-22T21:58:59.017214",
+  "sections": [
+    {
+      "section_title": "MAJOR REQUIREMENTS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": "Complete 2 courses from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 2,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "1",
+                        "title": "Introduction to American Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PS",
+                        "number": "1H",
+                        "title": "Honors Introduction to Government",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PS",
+                        "number": "1",
+                        "title": "Introduction to Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "2",
+                        "title": "Introduction to Comparative Politics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PS",
+                        "number": "2",
+                        "title": "Comparative Government",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "5",
+                        "title": "Introduction to International Relations",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "PS",
+                        "number": "3",
+                        "title": "International Relations",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "ADDITIONAL POLITICAL SCIENCE REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Select A or B",
+          "group_logic": "SELECT_ONE",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": "A",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "3",
+                        "title": "Introduction to Empirical Analysis and Quantitative Methods",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            },
+            {
+              "option_label": "B",
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "POL SCI",
+                        "number": "88",
+                        "title": "The Scientific Study of Politics",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [],
+                    "logic": "NO_ARTICULATION"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "HISTORY",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "4A",
+                        "title": "The Ancient Mediterranean World",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4A",
+                        "title": "Survey of Western Civilization to 1648",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "4AH",
+                        "title": "Honors Survey of Western Civilization to 1648",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "4B",
+                        "title": "Medieval Europe",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4A",
+                        "title": "Survey of Western Civilization to 1648",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "4AH",
+                        "title": "Honors Survey of Western Civilization to 1648",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "5",
+                        "title": "European Civilization From the Renaissance to the Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "4BH",
+                        "title": "Honors Survey of Western Civilization--1648 to late 20th Century",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "4B",
+                        "title": "Survey of Western Civilization--1648 to Late 20th Century",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "6A",
+                        "title": "History of China: Origins to the Mongol Conquest",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "19B",
+                        "title": "Introduction to Chinese History",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7A",
+                        "title": "The United States from Settlement to Civil War",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17A",
+                        "title": "United States History to 1865",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17AH",
+                        "title": "Honors United States History to 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "7B",
+                        "title": "The United States from Civil War to Present",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "17B",
+                        "title": "United States History since 1865",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "17BH",
+                        "title": "Honors United States History since 1865",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "8A",
+                        "title": "Becoming Latin America, 1492 to 1824",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "16C",
+                        "title": "History of Mexico",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "8B",
+                        "title": "Modern Latin America",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "16C",
+                        "title": "History of Mexico",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "12",
+                        "title": "The Middle East",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "6",
+                        "title": "History of the Middle East",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HISTORY",
+                        "number": "14",
+                        "title": "Introduction to the History of Japan",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "HIST",
+                        "number": "19C",
+                        "title": "Introduction to Japanese History",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "COLLEGE ADMISSIONS REQUIREMENTS FOR TRANSFER STUDENTS THIS MAJOR IS OFFERED BY THE COLLEGE OF LETTERS AND SCIENCE (L&S) By the end of the spring term preceding fall enrollment at Berkeley, you must complete: 1) The L&S Essential Skills Requirements: Reading & Composition, Quantitative Reasoning, and Foreign Language; OR 2) IGETC IMPORTANT information for students applying for admission to L&S for the fall 2025 application cycle and beyond Completion of Essential Skills requirements (R&C, QR, and FL) or IGETC will no longer be a requirement for admission; however, completion of the Essential Skills requirements is strongly recommended prior to enrollment at UC Berkeley. For more information on minimum UC eligibility requirements for transfer applicants for fall 2025 and beyond, please visit the UC Berkeley transfer requirements page . Major Requirements: See details on preparation for this major below. Primary selection criteria for admission, in general: - completion of L&S Requirements (or IGETC), plus - strength of academic preparation, and - grade point average. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu",
+    "Students must complete any two of the lower-division political science courses from American Politics, Comparative Politics, Political Theory, International Relations, listed below in order to declare the major. One of the courses should be in the students' intended subfield of specialization. The “Additional Political Science Requirement” and “History” requirements do not have to be completed before transferring and are not needed to be eligible to declare the major . All courses must be taken for a letter grade. AP TEST CREDIT AP credit cannot be used to satisfy any major requirements. More information about the Political Science major can be found by clicking on \"Undergraduate Program\" at http://www.polisci.berkeley.edu . Upper-division political science courses are impacted, and restricted to declared majors. Declaring the major as early as possible will better ensure that students can graduate on time. For more information: Efrat Amanda Cidon & Suzanne McDermott Undergraduate Advising Office Political Science Department (510) 642-3770 psadvise@berkeley.edu http://polisci.berkeley.edu"
+  ]
+}

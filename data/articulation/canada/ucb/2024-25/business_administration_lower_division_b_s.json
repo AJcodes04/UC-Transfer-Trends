@@ -1,0 +1,290 @@
+{
+  "sending_institution": "Canada College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Business Administration, Lower Division B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-23T00:06:43.606155",
+  "sections": [
+    {
+      "section_title": "PRINCIPLES OF BUSINESS, ECONOMICS & STATISTICS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "UGBA",
+                        "number": "10",
+                        "title": "Principles of Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BUS.",
+                        "number": "100",
+                        "title": "Introduction to Business",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "100",
+                        "title": "Principles of Macro Economics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "102",
+                        "title": "Principles of Micro Economics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "CALCULUS",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 2,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "251",
+                        "title": "Analytical Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "252",
+                        "title": "Analytical Geometry and Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "241",
+                        "title": "Business Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "243",
+                        "title": "Business Calculus II with Trigonometry",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "READING AND COMPOSITION REQUIREMENT",
+      "groups": [
+        {
+          "group_id": "00000000-0000-0000-0000-000000000000",
+          "group_number": 3,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "100",
+                        "title": "Reading and Composition",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "105",
+                        "title": "Intensive Composition and Reading",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "110",
+                        "title": "Composition, Literature and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "165",
+                        "title": "Advanced Composition",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "PRE-ADMISSION ADVISING For information on how to speak to a Haas advisor, please see: https://haas.berkeley.edu/undergrad/admissions/pre-admission-advising/ . ENVISION HAAS TRANSFER OUTREACH PROGRAM Envision Haas is an admissions outreach program aiming to provide admissions information to California Community College transfer applicants. Each Envision Haas session includes an admissions info session and transfer student panel. We encourage transfer students to attend a virtual Envision Haas session for more information about Haas and to get any questions answered. Please visit our website for dates and registration information: https://haas.berkeley.edu/undergrad/admissions/outreach-admission-events/ HAAS SUMMER PRECORE PROGRAM Transfer students admitted to Haas are invited to participate in our Haas Summer PreCore Program. The program offers two 6- week courses for newly admitted Haas transfer students only. The program helps students refresh skills they need during their two years of classes at Haas and is intended to better prepare students for the rigorous coursework of the fall semester. In addition to preparing students academically, this program also offers weekly workshops with guest speakers on a variety of topics. Additional information regarding the PreCore program will be provided to students admitted to Haas.",
+    "Your academic path at Berkeley Haas will give you the knowledge and understanding of the business landscape and the tools to succeed within it. With our highly customizable degree program (B.S. Business Administration), you will be able to make your experience relevant to your interests and goals. Regardless of the career that you choose for yourself, you will learn the skills necessary to work as part of a team, solve problems, and make an impact. For more information about the business major: https://haas.berkeley.edu/undergrad/",
+    "Admission to the UC Berkeley Haas School of Business Undergraduate Program is highly competitive. 1) Complete all prerequisite courses (see below) with a letter grade of C- or higher no more than 5 years before starting the business major. Because the admissions process is highly competitive, strong candidates for the business major will earn significantly higher grades than this minimum standard. If you plan to begin Haas in Fall 2024, prerequisites taken before Fall 2019 must be repeated. 2) Complete at least 60 UC-transferable semester units (90 quarter units) by the end of the Spring term prior to your anticipated start at Berkeley Haas. A Summer 2024 course is not considered \"work in progress\" for the Fall 2024 selection process. Haas does not accept the Intersegmental General Education Transfer Curriculum (IGETC). Students should also visit http://haas.berkeley.edu/undergrad/admissions/application-process/ for additional information regarding the admissions process, selection criteria, use of credit of AP, IB and GCE A Level, and class profile .",
+    "To be considered for admission all prerequisites must be completed by the end of the Spring term prior to starting at UC Berkeley Haas School of Business. Although you are not required to complete prerequisites at the time of application, the admission committee prefers to see as many prerequisites as possible completed by the end of the Fall term prior to starting at the Haas School.",
+    "Step 1: Submit the online UC Application: http://www.universityofcalifornia.edu/apply The online application is available August 1st. The deadline for filing is November 30. Step 2: Submit the required Haas Supplemental Application by January 31st. The application will be available on the MAP@Berkeley website in early January. The Supplemental Application includes the Haas Self Reported Academic Record, an additional essay, and Activities & awards section. Information submitted in the self-reported academic record will be reviewed to confirm eligibility for the major. Students will also have the option to upload a video interview. Interview questions will be included with the supplemental application. Uploading the video interview is not mandatory but strongly recommended. Students who fail to submit the Haas Supplemental Application or show planned satisfaction of all requirements will be considered ineligible for admission. The UC Application and the Haas Supplemental Application for all eligible students are reviewed thoroughly by Haas and many factors are considered, including performance in prerequisites, grade trends, course load, consistency of academic performance, leadership potential, accomplishments as demonstrated by extracurricular activities, as well as communication and analytical skills. Responses to the UC Personal Insight Questions and the Haas Supplemental essay question are the principal means we have of gaining insight about each applicant, their interests and reasons for applying. Final admission decisions will be available by May 1. HAAS 7-COURSE BREADTH REQUIREMENT - NOT REQUIRED FOR ADMISSION Units earned for prerequisites may not equal the 60 semester (90 quarter) unit minimum required to transfer. If you need to take additional courses to meet the unit requirement, consider taking breadth courses. Breadth is a degree requirement and breadth coursework is not required for admission. Visit our website for additional information about breadth requirements. Haas uses the College of Letters and Science (L&S) Breadth list with exceptions: Business courses cannot be used for breadth. Haas prerequisites cannot be used for breadth. Microeconomics or macroeconomics cannot be used for breadth. To access the breadth list, go to the home page of ASSIST.org . Select a community college from the drop down menu. After selecting a community college, select University of California, Berkeley from the Agreements with Other Institutions drop down menu. (You could have chosen the university campus first and the community college second.) Click on View Agreements. Next, under View Agreements by, select: General Education/Breadth. The agreement will display all general education and breadth requirements for the College of Letters & Science. Please ignore quantitative reasoning and foreign language as these requirements do not apply to Haas applicants. The Seven-Course Breadth list is displayed midway through the document. If there are UC transferable courses offered at your school that are not included on the breadth list, please contact your school's Articulation Officer. The Articulation Officer should submit the course(s) to UC Berkeley’s Articulation Officer for review. If approved, the course(s) will be added to the articulation agreement. For more information on admission to UC Berkeley: http://admissions.berkeley.edu For more information on majors at UC Berkeley: Berkeley Academic Guide: http://guide.berkeley.edu"
+  ]
+}

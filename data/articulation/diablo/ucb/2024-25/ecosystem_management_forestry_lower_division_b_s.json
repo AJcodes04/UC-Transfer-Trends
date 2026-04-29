@@ -1,0 +1,620 @@
+{
+  "sending_institution": "Diablo Valley College",
+  "receiving_institution": "University of California, Berkeley",
+  "major": "Ecosystem Management & Forestry, Lower Division B.S.",
+  "academic_year": "2024-25",
+  "url": "https://assist.org/transfer/results?year=&institution=&agreement=&agreementType=from&view=agreement&viewBy=major",
+  "scraped_at": "2026-04-29T02:51:44.094707",
+  "sections": [
+    {
+      "section_title": "Lower Division Major Requirements",
+      "groups": [
+        {
+          "group_id": "6bf67645-6887-ef11-8474-000d3a37e3b6__sec2",
+          "group_number": 1,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "1A",
+                        "title": "General Chemistry",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "CHEM",
+                        "number": "1AL",
+                        "title": "General Chemistry Laboratory",
+                        "units": 2.0
+                      }
+                    ],
+                    "logic": "AND"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "CHEM",
+                        "number": "120",
+                        "title": "General College Chemistry I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "6bf67645-6887-ef11-8474-000d3a37e3b6__sec4",
+          "group_number": 2,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOLOGY",
+                        "number": "1B",
+                        "title": "General Biology (Plant Form & Function, Ecology, Evolution)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOSC",
+                        "number": "131",
+                        "title": "Principles of Organismal Biology, Evolution, and Ecology",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "6bf67645-6887-ef11-8474-000d3a37e3b6__sec6",
+          "group_number": 3,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16A",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "182",
+                        "title": "Calculus for Management, Life Science, and Social Science I",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "16B",
+                        "title": "Analytic Geometry and Calculus",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "183",
+                        "title": "Calculus for Management, Life Science, and Social Science II",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1A",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "192",
+                        "title": "Analytic Geometry and Calculus I",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "1B",
+                        "title": "Calculus",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "MATH",
+                        "number": "193",
+                        "title": "Analytic Geometry and Calculus II",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "6bf67645-6887-ef11-8474-000d3a37e3b6__sec7",
+          "group_number": 4,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1A",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "122",
+                        "title": "First-Year College Writing and Reading",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "122AM",
+                        "title": "First-Year College English with Support for Multilingual Students",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "122X",
+                        "title": "Year-Long First-Year College Writing and Reading, Part II",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "122M",
+                        "title": "First-Year College Writing and Reading With Support",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "122AL",
+                        "title": "First-Year College English Intensive for Multilingual Students",
+                        "units": 5.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "122L",
+                        "title": "First-Year College Writing and Reading With Additional Support",
+                        "units": 5.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGLISH",
+                        "number": "R1B",
+                        "title": "Reading and Composition",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ENGL",
+                        "number": "123",
+                        "title": "Critical Thinking: Writing about Literature",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "123A",
+                        "title": "Critical Thinking: Writing about Literature for Multilingual Students",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "126",
+                        "title": "Critical Thinking: Writing about Non-Fiction",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ENGL",
+                        "number": "126A",
+                        "title": "Critical Thinking: Writing about Non-Fiction for Multilingual Students",
+                        "units": 4.0
+                      },
+                      {
+                        "prefix": "ARTHS",
+                        "number": "191",
+                        "title": "Critical Thinking in Visual Studies",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "COMM",
+                        "number": "121",
+                        "title": "Persuasion and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "DANCE",
+                        "number": "201",
+                        "title": "Critical Thinking in Western Culture Dance History: 20th Century to Present",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "HIST",
+                        "number": "122",
+                        "title": "Critical Reasoning in History",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "KINES",
+                        "number": "249",
+                        "title": "Gender and Sport: A Critical Thinking Approach",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PHILO",
+                        "number": "130",
+                        "title": "Logic and Critical Thinking",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "PSYCH",
+                        "number": "145",
+                        "title": "Critical Thinking in Psychology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "SOCIO",
+                        "number": "122",
+                        "title": "Critical Thinking About Social and Cultural Issues",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "OR"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    },
+    {
+      "section_title": "HIGHLY RECOMMENDED",
+      "groups": [
+        {
+          "group_id": "adaa7645-6887-ef11-8474-000d3a37e3b6__sec4",
+          "group_number": 5,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "EPS",
+                        "number": "50",
+                        "title": "The Planet Earth (includes lab)",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOL",
+                        "number": "120",
+                        "title": "Physical Geology",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "GEOL",
+                        "number": "122",
+                        "title": "Physical Geology Laboratory",
+                        "units": 1.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "1",
+                        "title": "Global Environmental Change",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "120",
+                        "title": "Physical Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "40",
+                        "title": "Introduction to Earth System Science",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "120",
+                        "title": "Physical Geography",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "adaa7645-6887-ef11-8474-000d3a37e3b6__sec6",
+          "group_number": 6,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "1",
+                        "title": "Introduction to Economics",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ECON",
+                        "number": "221",
+                        "title": "Principles of Microeconomics",
+                        "units": 3.0
+                      },
+                      {
+                        "prefix": "ECON",
+                        "number": "220",
+                        "title": "Principles of Macroeconomics",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "AND"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "adaa7645-6887-ef11-8474-000d3a37e3b6__sec10",
+          "group_number": 7,
+          "group_label": null,
+          "group_logic": "COMPLETE_ALL",
+          "select_n": null,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESPM",
+                        "number": "72",
+                        "title": "Introduction to Geographic Information Systems",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "GEOG",
+                        "number": "125",
+                        "title": "Introduction to Geographic Information Systems (GIS)",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group_id": "adaa7645-6887-ef11-8474-000d3a37e3b6__sec11",
+          "group_number": 8,
+          "group_label": "Complete 1 course from the following",
+          "group_logic": "SELECT_N",
+          "select_n": 1,
+          "select_units": null,
+          "options": [
+            {
+              "option_label": null,
+              "rows": [
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESPM",
+                        "number": "6",
+                        "title": "Environmental Biology",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOSC",
+                        "number": "170",
+                        "title": "Environmental Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                },
+                {
+                  "receiving_courses": {
+                    "courses": [
+                      {
+                        "prefix": "ESPM",
+                        "number": "C10",
+                        "title": "Environmental Issues",
+                        "units": 4.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  },
+                  "sending_courses": {
+                    "courses": [
+                      {
+                        "prefix": "BIOSC",
+                        "number": "170",
+                        "title": "Environmental Science",
+                        "units": 3.0
+                      }
+                    ],
+                    "logic": "SINGLE"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rows": []
+    }
+  ],
+  "notes": [
+    "Please Note: Applicants are expected to complete all required coursework by the end of the spring term prior to admission. Majors may allow one course pending in the summer term prior to admission if the major has more than five required courses and at least five courses of the required coursework have been completed; in this case, if a requirement includes both a lecture and lab, the lecture and lab together are treated as one course. Majors which require five or fewer required courses to transfer will not allow required coursework to be completed in the summer prior to admission. Please see the Rausser College of Natural Resources Transfer Applicants page for individual requirements by major. Ecosystem Management & Forestry applicants may have the opportunity to complete a single required course in the summer term prior to admission. If a requirement includes both a lecture and lab, the lecture and lab together are treated as one course. To ensure full articulation of transfer coursework: if a series of courses at a community college is required (e.g., Chemistry 101 + 102 + 103 = CHEM 1A/1AL + CHEM 1B at UC Berkeley), all of the courses in the series must be completed, and must (unless otherwise indicated) be completed at the same community college. Partial completion of the series (e.g., two of the three required courses) may result in no credit toward the requirement(s), and splitting a series of courses between different community colleges is not guaranteed to satisfy the requirement. Courses taken out of series will be evaluated by college faculty during the transfer admissions process. If you have questions about the articulation of a series for your intended major, please email crs.emf.ugrad@berkeley.edu . Minimum Admissions Requirements in Ecosystem Management & Forestry: Equivalent of: ENGLISH R1A and ENGLISH R1B - satisfied by full UC IGETC, or may be satisfied with AP/IB/A-Level exam credit CHEM 1A and CHEM 1AL - may also be satisfied by AP/IB/A-Level exam credit BIOLOGY 1B - may also be satisfied by AP/IB/A-Level exam credit MATH 16A and MATH 16B; or MATH 1A and MATH 1B - may also be satisfied by AP/IB/A-Level exam credit Highly Recommended (but not required) Prior to Transfer ESPM Environmental Science and ESPM Social Science core courses EPS 50, GEOG 1, or GEOG 40 ECON 1 or ECON 2 (micro-economics and macro-economics) Introductory statistics, environmental science, and geographic information systems (GIS) courses",
+    "ABOUT THE ECOSYSTEM MANAGEMENT & FORESTRY MAJOR Ecosystem Management & Forestry focuses on the conservation and restoration of the earth's natural resources through hands-on study of the ecology, stewardship, and management of forest, woodland, and grassland ecosystems. The program offers an accredited specialization in Forestry and Natural Resource Management. For additional information, please contact the Ecosystem Management & Forestry advisor at crs.emf.ugrad@berkeley.edu ."
+  ]
+}
