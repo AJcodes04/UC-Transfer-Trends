@@ -30,7 +30,9 @@ export default function TranscriptUpload() {
       })
       setParsed(res.data)
       setSelected(new Set(res.data.map((_, i) => i)))
-      const rem = res.headers['x-ratelimit-remaining']
+      const rem = res.headers.get
+        ? res.headers.get('x-ratelimit-remaining')
+        : res.headers['x-ratelimit-remaining']
       if (rem != null) setRemaining(parseInt(rem, 10))
     } catch (err) {
       const msg = err.response?.data?.error || err.message || 'Upload failed'
