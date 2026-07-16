@@ -12,6 +12,10 @@ from .models import TransferData, CampusStats
 from .serializers import TransferDataSerializer
 
 ARTICULATION_DIR = Path(__file__).resolve().parent.parent.parent / 'data' / 'articulation'
+# The scraper writes every major/campus combo it could NOT fetch here. We surface
+# these to users so the major list is transparent about what's missing rather than
+# silently omitting agreements that assist.org failed to return.
+FAILED_SCRAPES_FILE = ARTICULATION_DIR / 'failed_scrapes.json'
 
 
 def _count_rows(agreement_data: dict) -> int:
@@ -621,7 +625,7 @@ CC_NAMES = {
     'chaffey': 'Chaffey College',
     'citrus': 'Citrus College',
     'clovis': 'Clovis Community College',
-    'coastlin': 'Coastline College',
+    'coastlin': 'Coastline Community College',
     'columbia': 'Columbia College',
     'compton': 'Compton College',
     'contra': 'Contra Costa College',
@@ -632,8 +636,93 @@ CC_NAMES = {
     'cuyamaca': 'Cuyamaca College',
     'cypress': 'Cypress College',
     'dac': 'De Anza College',
-    'mtsac': 'Mt. San Antonio College',
+    'desert': 'College of the Desert',
+    'diablo': 'Diablo Valley College',
+    'evergrn': 'Evergreen Valley College',
+    'feather': 'Feather River College',
+    'folsom': 'Folsom Lake College',
+    'foothill': 'Foothill College',
+    'fresno': 'Fresno City College',
+    'fullrton': 'Fullerton College',
+    'gavilan': 'Gavilan College',
+    'glendale': 'Glendale Community College',
+    'gmcc': 'Grossmont College',
+    'gwc': 'Golden West College',
+    'hartnell': 'Hartnell College',
+    'imperial': 'Imperial Valley College',
+    'irvine': 'Irvine Valley College',
+    'krc': 'Reedley College',
+    'lacc': 'Los Angeles City College',
+    'laec': 'East Los Angeles College',
+    'lahc': 'Los Angeles Harbor College',
+    'lamc': 'Los Angeles Mission College',
+    'laney': 'Laney College',
+    'lapc': 'Los Angeles Pierce College',
+    'lasc': 'Los Angeles Southwest College',
+    'lassen': 'Lassen Community College',
+    'latt': 'Los Angeles Trade Technical College',
+    'lavc': 'Los Angeles Valley College',
+    'lawc': 'West Los Angeles College',
+    'lbcc': 'Long Beach City College',
+    'marin': 'College of Marin',
+    'mateo': 'College of San Mateo',
+    'mcc': 'Madera Community College',
+    'medanos': 'Los Medanos College',
+    'mendocin': 'Mendocino College',
+    'merced': 'Merced College',
+    'merritt': 'Merritt College',
+    'mesa': 'San Diego Mesa College',
+    'miracsta': 'MiraCosta College',
+    'miramar': 'San Diego Miramar College',
+    'mission': 'Mission College',
+    'modesto': 'Modesto Junior College',
+    'monterey': 'Monterey Peninsula College',
+    'moorpark': 'Moorpark College',
+    'mtsac': 'Mount San Antonio College',
+    'mtsjc': 'Mt. San Jacinto College',
+    'mvc': 'Moreno Valley College',
+    'napa': 'Napa Valley College',
+    'norco': 'Norco College',
+    'occ': 'Orange Coast College',
+    'ohlone': 'Ohlone College',
+    'oxnard': 'Oxnard College',
+    'palomar': 'Palomar College',
+    'palovrde': 'Palo Verde College',
+    'pasadena': 'Pasadena City College',
+    'porter': 'Porterville College',
+    'positas': 'Las Positas College',
+    'rcc': 'Riverside City College',
+    'redwoods': 'College of the Redwoods',
+    'riohondo': 'Rio Hondo College',
+    'rsc': 'Santa Ana College',
+    'saddlbk': 'Saddleback College',
+    'santiago': 'Santiago Canyon College',
     'sbcc': 'Santa Barbara City College',
+    'sbvc': 'San Bernardino Valley College',
+    'scc': 'Sacramento City College',
+    'sdcc': 'San Diego City College',
+    'sequoias': 'College of the Sequoias',
+    'sfcity': 'City College of San Francisco',
+    'shasta': 'Shasta College',
+    'sierra': 'Sierra College',
+    'siskiyou': 'College of the Siskiyous',
+    'sjcc': 'San Jose City College',
+    'sjdelta': 'San Joaquin Delta College',
+    'skyline': 'Skyline College',
+    'smcc': 'Santa Monica College',
+    'solano': 'Solano Community College',
+    'src': 'Santa Rosa Junior College',
+    'swstrn': 'Southwestern College',
+    'taft': 'Taft College',
+    'tahoe': 'Lake Tahoe Community College',
+    'ventura': 'Ventura College',
+    'vista': 'Berkeley City College',
+    'vvcc': 'Victor Valley College',
+    'wcc': 'Woodland Community College',
+    'whc': 'Coalinga College',
+    'whcl': 'Lemoore College',
+    'wvc': 'West Valley College',
+    'yuba': 'Yuba College',
 }
 
 UC_NAMES = {
@@ -734,3 +823,52 @@ class ArticulationDetailView(APIView):
 
         data = json.loads(json_file.read_text())
         return Response(data)
+
+
+class ArticulationFailedView(APIView):
+    """
+    Return the majors the scraper FAILED to fetch for a given cc -> uc pair.
+
+    Pattern note: this is a read-through of the scraper's failure log, not the
+    database. We keep it as its own endpoint (rather than bolting a second list
+    onto ArticulationMajorsView) so each endpoint stays single-purpose and the
+    frontend cache can store "successful majors" and "failed majors" separately.
+
+    The failure log stores codes UPPERCASE ("ARC", "UCB") while URLs are
+    lowercase ("arc", "ucb"), so we normalize both sides before comparing.
+    """
+
+    def get(self, request, cc_code, uc_code):
+        # Defensive: if the scraper has never recorded a failure, the file may
+        # not exist yet. Treat that as "nothing failed" rather than a 500.
+        if not FAILED_SCRAPES_FILE.exists():
+            return Response([])
+
+        try:
+            entries = json.loads(FAILED_SCRAPES_FILE.read_text())
+        except json.JSONDecodeError:
+            # A malformed log shouldn't take down the majors page.
+            return Response([])
+
+        cc = cc_code.upper()
+        uc = uc_code.upper()
+
+        # Filter to this cc -> uc pair and dedupe on (major, year): the scraper
+        # may log the same major more than once across retry runs, and we only
+        # want to show each failed agreement to the user a single time.
+        seen = set()
+        failed = []
+        for entry in entries:
+            if entry.get('sending_code') != cc or entry.get('receiving_code') != uc:
+                continue
+            key = (entry.get('major'), entry.get('academic_year'))
+            if key in seen:
+                continue
+            seen.add(key)
+            failed.append({
+                'major': entry.get('major'),
+                'academic_year': entry.get('academic_year'),
+            })
+
+        failed.sort(key=lambda e: (e['major'] or '').lower())
+        return Response(failed)

@@ -3,13 +3,16 @@ import { useParams, useNavigate } from 'react-router-dom'
 import {
   Title, SimpleGrid, Loader, Alert, Text, Paper, UnstyledButton,
   Group, Badge, Select, Stack, Table, Divider, ThemeIcon, TextInput, Box,
-  Anchor,
+  Anchor, Collapse, List,
 } from '@mantine/core'
-import { IconCheck, IconMinus } from '@tabler/icons-react'
+import {
+  IconCheck, IconMinus, IconAlertTriangle, IconChevronDown, IconChevronRight,
+} from '@tabler/icons-react'
 import {
   useArticulationColleges,
   useArticulationCampuses,
   useArticulationMajors,
+  useArticulationFailed,
   useArticulationDetail,
   useMajorStats,
 } from '../hooks/useApi'
@@ -290,6 +293,9 @@ function SelectorView({ cc: urlCC, navigate }) {
 
 function MajorList({ cc, uc, navigate }) {
   const { data: majors, loading, error } = useArticulationMajors(cc, uc)
+  // Failed scrapes load independently of the successful major list so a slow or
+  // empty failure log never blocks the main content from rendering.
+  const { data: failed } = useArticulationFailed(cc, uc)
   const [search, setSearch] = useState('')
 
   const filtered = useMemo(() => {
@@ -336,6 +342,10 @@ function MajorList({ cc, uc, navigate }) {
         maw={400}
       />
 
+      {failed && failed.length > 0 && (
+        <FailedMajorsNotice failed={failed} />
+      )}
+
       {loading && <Loader m="xl" />}
       {error && <Alert color="red" title="Error">{error}</Alert>}
 
@@ -373,6 +383,75 @@ function MajorList({ cc, uc, navigate }) {
         <Text c="dimmed" ta="center" mt="xl">No majors found.</Text>
       )}
     </>
+  )
+}
+
+
+/**
+ * FailedMajorsNotice — transparent disclosure of majors we couldn't scrape.
+ *
+ * assist.org rate-limits / times out during long scrapes, so some agreements
+ * are missing from the list above. Rather than hide that, we show exactly which
+ * majors failed for this cc -> uc pair, with a link out to assist.org so users
+ * can still look the agreement up manually.
+ *
+ * The list is collapsed by default to keep the page tidy, since the count in the
+ * header already communicates the important part ("N couldn't be loaded").
+ */
+function FailedMajorsNotice({ failed }) {
+  const [open, setOpen] = useState(false)
+  const ChevronIcon = open ? IconChevronDown : IconChevronRight
+
+  return (
+    <Alert
+      color="yellow"
+      variant="light"
+      radius="md"
+      mb="lg"
+      icon={<IconAlertTriangle size={18} />}
+      title={
+        <UnstyledButton
+          onClick={() => setOpen((o) => !o)}
+          style={{ display: 'flex', alignItems: 'center', gap: 6 }}
+        >
+          <Text fw={600} size="sm">
+            {failed.length} agreement{failed.length !== 1 ? 's' : ''} couldn&apos;t be loaded from assist.org
+          </Text>
+          <ChevronIcon size={16} />
+        </UnstyledButton>
+      }
+    >
+      <Text size="xs" c="dimmed" mb={open ? 'xs' : 0}>
+        These majors failed to import during our last sync and aren&apos;t shown above.
+        You can view them directly on{' '}
+        <Anchor href="https://assist.org" target="_blank" rel="noopener noreferrer" size="xs">
+          assist.org
+        </Anchor>
+        .
+      </Text>
+
+      <Collapse in={open}>
+        <List spacing={4} size="sm" mt="xs" withPadding>
+          {failed.map((f, i) => (
+            <List.Item
+              key={i}
+              icon={
+                <ThemeIcon color="yellow" size="xs" radius="xl" variant="light">
+                  <IconMinus size={10} />
+                </ThemeIcon>
+              }
+            >
+              <Group gap={6} wrap="nowrap">
+                <Text size="sm">{f.major}</Text>
+                {f.academic_year && (
+                  <Badge size="xs" variant="light" color="gray">{f.academic_year}</Badge>
+                )}
+              </Group>
+            </List.Item>
+          ))}
+        </List>
+      </Collapse>
+    </Alert>
   )
 }
 

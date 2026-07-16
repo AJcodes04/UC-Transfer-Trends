@@ -79,7 +79,7 @@ CC_INSTITUTIONS: dict[str, dict] = {
     "HARTNELL": {"id": 123, "name": "Hartnell College"},
     "IMPERIAL": {"id": 107, "name": "Imperial Valley College"},
     "IRVINE":   {"id": 124, "name": "Irvine Valley College"},
-    "KRC":      {"id": 36,  "name": "Kings River College"},
+    "KRC":      {"id": 36,  "name": "Reedley College"},  # renamed from Kings River College
     "LACC":     {"id": 3,   "name": "Los Angeles City College"},
     "LAEC":     {"id": 118, "name": "East Los Angeles College"},
     "LAHC":     {"id": 31,  "name": "Los Angeles Harbor College"},
@@ -122,7 +122,7 @@ CC_INSTITUTIONS: dict[str, dict] = {
     "RCC":      {"id": 78,  "name": "Riverside City College"},
     "REDWOODS": {"id": 83,  "name": "College of the Redwoods"},
     "RIOHONDO": {"id": 64,  "name": "Rio Hondo College"},
-    "RSC":      {"id": 14,  "name": "Rancho Santiago College"},
+    "RSC":      {"id": 14,  "name": "Santa Ana College"},  # renamed from Rancho Santiago College
     "SADDLBK":  {"id": 65,  "name": "Saddleback College"},
     "SANTIAGO":  {"id": 66,  "name": "Santiago Canyon College"},
     "SBCC":     {"id": 92,  "name": "Santa Barbara City College"},
@@ -144,11 +144,11 @@ CC_INSTITUTIONS: dict[str, dict] = {
     "TAFT":     {"id": 119, "name": "Taft College"},
     "TAHOE":    {"id": 40,  "name": "Lake Tahoe Community College"},
     "VENTURA":  {"id": 95,  "name": "Ventura College"},
-    "VISTA":    {"id": 58,  "name": "Vista Community College"},
+    "VISTA":    {"id": 58,  "name": "Berkeley City College"},  # renamed from Vista Community College
     "VVCC":     {"id": 19,  "name": "Victor Valley College"},
     "WCC":      {"id": 147, "name": "Woodland Community College"},
-    "WHC":      {"id": 67,  "name": "West Hills College Coalinga"},
-    "WHCL":     {"id": 146, "name": "West Hills College Lemoore"},
+    "WHC":      {"id": 67,  "name": "Coalinga College"},  # renamed from West Hills College Coalinga
+    "WHCL":     {"id": 146, "name": "Lemoore College"},  # renamed from West Hills College Lemoore
     "WVC":      {"id": 80,  "name": "West Valley College"},
     "YUBA":     {"id": 90,  "name": "Yuba College"},
 }
@@ -175,8 +175,10 @@ UC_INSTITUTIONS: dict[str, dict] = {
 PAGE_DELAY = 2.0
 
 # Delay between API calls (seconds). assist.org returns 429 if we go too fast.
-# 0.5s per request is safe when combined with the semaphore limiting concurrency.
-API_DELAY = 0.5
+# Raised from 0.5 → 1.5 for the failure-recovery passes: the original bulk scrape
+# accumulated ~8k 429s at 0.5s, and those only clear on a re-run that stays under
+# the rate limit. Drop back to 0.5 for normal incremental scrapes if you prefer.
+API_DELAY = 1.5
 
 # Retry settings for failed requests/navigations.
 # Uses exponential backoff: 2s → 4s → 8s

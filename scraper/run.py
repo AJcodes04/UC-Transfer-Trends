@@ -138,6 +138,16 @@ async def cmd_scrape(args: argparse.Namespace) -> None:
     print(f"\nResults: {summary}")
 
 
+async def cmd_export_failures(args: argparse.Namespace) -> None:
+    """Rebuild failed_scrapes.json from the existing manifest (excludes 429s)."""
+    from scraper.manifest import ManifestTracker, FAILURES_PATH
+
+    tracker = ManifestTracker()
+    tracker.load()
+    n = tracker.rebuild_failures_from_manifest()
+    print(f"\nWrote {n} non-429 failures to {FAILURES_PATH}")
+
+
 async def cmd_list_institutions(args: argparse.Namespace) -> None:
     """Fetch and display all institutions from assist.org."""
     from scraper.api_client import AssistAPIClient
@@ -259,6 +269,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="List available academic years",
     )
 
+    # --- export-failures ---
+    subparsers.add_parser(
+        "export-failures",
+        help="Rebuild failed_scrapes.json from the manifest (excludes 429s)",
+    )
+
     return parser
 
 
@@ -274,6 +290,7 @@ def main() -> None:
         "scrape": cmd_scrape,
         "list-institutions": cmd_list_institutions,
         "list-years": cmd_list_years,
+        "export-failures": cmd_export_failures,
     }
 
     cmd_func = commands.get(args.command)

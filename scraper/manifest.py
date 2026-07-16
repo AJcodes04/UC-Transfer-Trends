@@ -28,6 +28,25 @@ logger = logging.getLogger(__name__)
 
 MANIFEST_PATH = OUTPUT_DIR / "manifest.json"
 
+# A curated, human-readable list of "real" scrape failures worth retrying or
+# investigating. We deliberately EXCLUDE transient rate-limit (429) errors here,
+# because those are noise: re-running the scraper retries them automatically and
+# they usually succeed on a calmer pass. This file is the targeted re-scrape
+# worklist — see _is_transient_error() for what we filter out.
+FAILURES_PATH = OUTPUT_DIR / "failed_scrapes.json"
+
+
+def _is_transient_error(error: str) -> bool:
+    """
+    Return True for errors that are transient and self-healing on retry.
+
+    WHY: 429 ("Too Many Requests") means assist.org rate-limited us, not that
+    the agreement is missing or broken. These resolve on a slower re-run, so we
+    keep them out of failed_scrapes.json to avoid drowning the real failures.
+    """
+    err = (error or "").lower()
+    return "429" in err or "too many requests" in err
+
 
 class ManifestTracker:
     """
@@ -68,6 +87,71 @@ class ManifestTracker:
             self._manifest.model_dump_json(indent=2)
         )
 
+    # ------------------------------------------------------------------
+    # Curated failures file (non-429 failures only)
+    #
+    # This is kept SEPARATE from the manifest on purpose. The manifest is the
+    # full source of truth (every success/skip/failure, including 429s). This
+    # file is a small, always-current worklist of real failures you'd actually
+    # want to re-scrape or investigate. We rewrite it on every relevant event so
+    # a major that later succeeds drops off the list automatically.
+    # ------------------------------------------------------------------
+
+    def _load_failures(self) -> list[dict]:
+        """Read the curated failures file, returning [] if it doesn't exist yet."""
+        if not FAILURES_PATH.exists():
+            return []
+        try:
+            return json.loads(FAILURES_PATH.read_text())
+        except Exception as e:
+            logger.warning(f"Failed to read {FAILURES_PATH.name}, starting fresh: {e}")
+            return []
+
+    def _save_failures(self, failures: list[dict]) -> None:
+        FAILURES_PATH.parent.mkdir(parents=True, exist_ok=True)
+        FAILURES_PATH.write_text(json.dumps(failures, indent=2))
+
+    def _same_combo(self, f: dict, sending_code: str, receiving_code: str,
+                    year: str, major: str) -> bool:
+        return (
+            f.get("sending_code") == sending_code
+            and f.get("receiving_code") == receiving_code
+            and f.get("academic_year") == year
+            and f.get("major") == major
+        )
+
+    def _record_failure(self, sending_code: str, receiving_code: str,
+                        year: str, major: str, error: str) -> None:
+        """Add/replace this combo in failed_scrapes.json (skips transient 429s)."""
+        if _is_transient_error(error):
+            return  # 429 noise — manifest still records it, but not here
+        failures = self._load_failures()
+        # Upsert: drop any prior entry for this combo so we don't accumulate dupes
+        failures = [
+            f for f in failures
+            if not self._same_combo(f, sending_code, receiving_code, year, major)
+        ]
+        failures.append({
+            "sending_code": sending_code,
+            "receiving_code": receiving_code,
+            "academic_year": year,
+            "major": major,
+            "error": error,
+            "failed_at": datetime.utcnow().isoformat(),
+        })
+        self._save_failures(failures)
+
+    def _clear_failure(self, sending_code: str, receiving_code: str,
+                       year: str, major: str) -> None:
+        """Remove this combo from failed_scrapes.json once it's resolved."""
+        failures = self._load_failures()
+        kept = [
+            f for f in failures
+            if not self._same_combo(f, sending_code, receiving_code, year, major)
+        ]
+        if len(kept) != len(failures):
+            self._save_failures(kept)
+
     def is_already_scraped(
         self, sending_code: str, receiving_code: str, year: str, major: str
     ) -> bool:
@@ -106,6 +190,8 @@ class ManifestTracker:
             scraped_at=datetime.utcnow(),
         ))
         self.save()
+        # If this combo previously failed, it's now resolved — drop it.
+        self._clear_failure(sending_code, receiving_code, year, major)
 
     def mark_failed(
         self,
@@ -126,6 +212,8 @@ class ManifestTracker:
             scraped_at=datetime.utcnow(),
         ))
         self.save()
+        # Record real (non-429) failures in the curated worklist.
+        self._record_failure(sending_code, receiving_code, year, major, error)
 
     def mark_skipped(
         self,
@@ -146,6 +234,8 @@ class ManifestTracker:
             scraped_at=datetime.utcnow(),
         ))
         self.save()
+        # A skipped (empty/no-articulation) result also resolves any prior failure.
+        self._clear_failure(sending_code, receiving_code, year, major)
 
     def _upsert_entry(self, new_entry: ManifestEntry) -> None:
         """
@@ -165,6 +255,34 @@ class ManifestTracker:
             )
         ]
         self._manifest.entries.append(new_entry)
+
+    def rebuild_failures_from_manifest(self) -> int:
+        """
+        Regenerate failed_scrapes.json from the loaded manifest's current state.
+
+        WHY: the manifest already keeps exactly one entry per (CC, UC, year, major)
+        — retries overwrite prior attempts — so a combo whose final status is
+        FAILED is genuinely unresolved. We collect those (minus transient 429s)
+        into the curated worklist. Use this to bootstrap the file from history
+        without re-running the scraper. Returns the number of failures written.
+        """
+        failures = []
+        for e in self._manifest.entries:
+            if e.status != ScrapeStatus.FAILED:
+                continue
+            if _is_transient_error(e.error or ""):
+                continue
+            failures.append({
+                "sending_code": e.sending_code,
+                "receiving_code": e.receiving_code,
+                "academic_year": e.academic_year,
+                "major": e.major,
+                "error": e.error or "",
+                "failed_at": e.scraped_at.isoformat() if e.scraped_at else None,
+            })
+        self._save_failures(failures)
+        logger.info(f"Wrote {len(failures)} non-429 failures to {FAILURES_PATH.name}")
+        return len(failures)
 
     def summary(self) -> dict[str, int]:
         """Return a count of entries by status."""

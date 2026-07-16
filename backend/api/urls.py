@@ -18,5 +18,8 @@ urlpatterns = [
     path('articulation/colleges/', views.ArticulationCollegesView.as_view(), name='articulation-colleges'),
     path('articulation/<str:cc_code>/campuses/', views.ArticulationUCsView.as_view(), name='articulation-campuses'),
     path('articulation/<str:cc_code>/<str:uc_code>/majors/', views.ArticulationMajorsView.as_view(), name='articulation-majors'),
+    # NOTE: 'failed/' must be listed before the '<major_slug>' catch-all below,
+    # otherwise Django would match "failed" as a major slug and never reach this view.
+    path('articulation/<str:cc_code>/<str:uc_code>/failed/', views.ArticulationFailedView.as_view(), name='articulation-failed'),
     path('articulation/<str:cc_code>/<str:uc_code>/<str:major_slug>/', views.ArticulationDetailView.as_view(), name='articulation-detail'),
 ]

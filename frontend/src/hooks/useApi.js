@@ -90,6 +90,10 @@ export function useArticulationMajors(ccCode, ucCode) {
   return useFetch(ccCode && ucCode ? `/api/articulation/${ccCode}/${ucCode}/majors/` : null)
 }
 
+export function useArticulationFailed(ccCode, ucCode) {
+  return useFetch(ccCode && ucCode ? `/api/articulation/${ccCode}/${ucCode}/failed/` : null)
+}
+
 export function useArticulationDetail(ccCode, ucCode, majorSlug) {
   return useFetch(
     ccCode && ucCode && majorSlug
