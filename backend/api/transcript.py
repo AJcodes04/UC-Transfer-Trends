@@ -7,8 +7,8 @@ extraction. Rate-limited per IP per day (see DAILY_LIMIT).
 import io
 import json
 import logging
-import os
 
+from django.conf import settings
 from django.core.cache import cache
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -31,6 +31,12 @@ logger = logging.getLogger(__name__)
 DAILY_LIMIT = 5
 WINDOW_SECONDS = 86400
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+MAX_PAGES = 30
+MAX_TEXT_CHARS = 150_000
+MODEL = 'claude-haiku-4-5'
+REQUEST_TIMEOUT_SECONDS = 90.0
+
+_client = None
 
 SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, extract every course into a JSON array.
 
@@ -56,6 +62,17 @@ GRADE_RANK = {
     'NP': -2, 'P': 13,
     'W': -3, 'FW': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
 }
+
+
+def _anthropic_client():
+    global _client
+    if _client is None:
+        _client = anthropic.Anthropic(
+            api_key=settings.ANTHROPIC_API_KEY,
+            timeout=REQUEST_TIMEOUT_SECONDS,
+            max_retries=1,
+        )
+    return _client
 
 
 def _get_client_ip(request):
@@ -96,8 +113,7 @@ class TranscriptUploadView(APIView):
         if not HAS_ANTHROPIC:
             return Response({'error': 'anthropic package is not installed.'}, status=500)
 
-        api_key = os.getenv('ANTHROPIC_API_KEY', '')
-        if not api_key:
+        if not settings.ANTHROPIC_API_KEY:
             return Response({'error': 'ANTHROPIC_API_KEY is not configured.'}, status=500)
 
         uploaded = request.FILES.get('file')
@@ -112,15 +128,17 @@ class TranscriptUploadView(APIView):
                 status=429,
             )
         else:
-            response = self._parse(uploaded, api_key)
+            response = self._parse(uploaded)
         response['X-RateLimit-Remaining'] = str(remaining)
         return response
 
-    def _parse(self, uploaded, api_key):
+    def _parse(self, uploaded):
         try:
             pages_text = []
             try:
                 with pdfplumber.open(io.BytesIO(uploaded.read())) as pdf:
+                    if len(pdf.pages) > MAX_PAGES:
+                        return Response({'error': f'PDF has too many pages (max {MAX_PAGES}).'}, status=400)
                     for page in pdf.pages:
                         text = page.extract_text() or ''
                         if text.strip():
@@ -133,16 +151,21 @@ class TranscriptUploadView(APIView):
                 return Response({'error': 'Could not extract any text from the PDF.'}, status=400)
 
             full_text = '\n\n--- PAGE BREAK ---\n\n'.join(pages_text)
+            if len(full_text) > MAX_TEXT_CHARS:
+                return Response({'error': 'Transcript text is too long to parse.'}, status=400)
 
-            client = anthropic.Anthropic(api_key=api_key)
-            message = client.messages.create(
-                model='claude-haiku-4-5-20251001',
-                max_tokens=4096,
+            message = _anthropic_client().messages.create(
+                model=MODEL,
+                max_tokens=16000,
                 system=SYSTEM_PROMPT,
                 messages=[
                     {'role': 'user', 'content': f'Parse this transcript:\n\n{full_text}'}
                 ],
             )
+
+            if message.stop_reason == 'max_tokens':
+                logger.warning('Transcript parse hit max_tokens for %r', uploaded.name)
+                return Response({'error': 'Transcript is too long for the parser.'}, status=500)
 
             response_text = message.content[0].text.strip()
             if response_text.startswith('```'):

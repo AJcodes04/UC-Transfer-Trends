@@ -1,8 +1,7 @@
-import os
 from unittest.mock import patch
 
 from django.core.files.uploadedfile import SimpleUploadedFile
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from rest_framework.test import APIClient
 
 from api.models import TransferData
@@ -405,11 +404,11 @@ class TranscriptRateLimitTests(TestCase):
         from django.core.cache import cache
         cache.clear()
         self.client = APIClient()
-        self.env = patch.dict(os.environ, {'ANTHROPIC_API_KEY': 'test-key'})
-        self.env.start()
+        self.settings_override = override_settings(ANTHROPIC_API_KEY='test-key')
+        self.settings_override.enable()
 
     def tearDown(self):
-        self.env.stop()
+        self.settings_override.disable()
 
     def _pdf(self):
         return SimpleUploadedFile('t.pdf', b'%PDF-1.4 fake', content_type='application/pdf')

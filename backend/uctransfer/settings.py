@@ -99,6 +99,8 @@ REST_FRAMEWORK = {
     ],
 }
 
+ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
