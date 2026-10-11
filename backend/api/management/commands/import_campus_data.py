@@ -1,12 +1,13 @@
-import csv
 import re
-from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
+from django.conf import settings
 from django.core.management.base import BaseCommand
 
 from api.models import CampusStats
-
+from api.services.csv_import import (
+    first_present, parse_gpa_range, parse_int, parse_rate, read_rows, upsert,
+)
 
 UNIQUE_FIELDS = ['campus', 'year']
 UPDATE_FIELDS = [
@@ -14,135 +15,59 @@ UPDATE_FIELDS = [
     'admit_gpa_min', 'admit_gpa_max', 'enroll_gpa_min', 'enroll_gpa_max',
     'admit_rate', 'yield_rate',
 ]
+FILENAME_RE = re.compile(r'^campus-(\d{4})\.csv$')
 
 
 class Command(BaseCommand):
-    # Import campus-level stats from CSV files in data/csv.exports/campusdata
+    help = 'Import campus-level stats from data/csv.exports/campusdata/campus-<year>.csv'
 
     def add_arguments(self, parser):
-        default_dir = str(Path(__file__).resolve().parents[4] / 'data' / 'csv.exports' / 'campusdata')
-        parser.add_argument('--data-dir', default=default_dir)
+        default_dir = settings.BASE_DIR.parent / 'data' / 'csv.exports' / 'campusdata'
+        parser.add_argument('--data-dir', default=str(default_dir))
 
     def handle(self, *args, **options):
         data_dir = Path(options['data_dir'])
-
-        if not data_dir.exists():
-            self.stderr.write(self.style.ERROR(f'Data directory not found: {data_dir}'))
-            return
-
-        csv_files = sorted(data_dir.glob('*.csv'))
+        csv_files = sorted(data_dir.glob('*.csv')) if data_dir.is_dir() else []
         if not csv_files:
             self.stderr.write(self.style.ERROR(f'No CSV files found in {data_dir}'))
             return
 
         self.stdout.write(f'Found {len(csv_files)} CSV files in {data_dir}')
         total_inserted = total_updated = 0
-
         for csv_file in csv_files:
-            year = self.parse_year(csv_file.name)
-            if year is None:
+            match = FILENAME_RE.match(csv_file.name)
+            if not match:
                 self.stderr.write(self.style.WARNING(f'Skipping {csv_file.name}: could not parse year'))
                 continue
-
-            # Last row wins for duplicate keys within a file; Postgres rejects updating the same row twice in one upsert.
-            rows = list({
-                tuple(getattr(r, f) for f in UNIQUE_FIELDS): r
-                for r in self.parse_csv(csv_file, year)
-            }.values())
-            before = CampusStats.objects.count()
-            CampusStats.objects.bulk_create(
-                rows, update_conflicts=True,
-                unique_fields=UNIQUE_FIELDS, update_fields=UPDATE_FIELDS,
-            )
-            inserted = CampusStats.objects.count() - before
-            updated = len(rows) - inserted
+            rows = self.parse_csv(csv_file, int(match.group(1)))
+            inserted, updated = upsert(CampusStats, rows, UNIQUE_FIELDS, UPDATE_FIELDS)
             total_inserted += inserted
             total_updated += updated
             self.stdout.write(f'  {csv_file.name}: {inserted} inserted, {updated} updated')
 
-        self.stdout.write(self.style.SUCCESS(
-            f'Done. {total_inserted} inserted, {total_updated} updated.'
-        ))
-
-    def parse_year(self, filename):
-        # Expected format: campus-2024.csv
-        match = re.match(r'^campus-(\d{4})\.csv$', filename)
-        if not match:
-            return None
-        return int(match.group(1))
+        self.stdout.write(self.style.SUCCESS(f'Done. {total_inserted} inserted, {total_updated} updated.'))
 
     def parse_csv(self, filepath, year):
         rows = []
-        # Try UTF-8 first; fall back to UTF-16 (2025 exports use UTF-16-LE with BOM)
-        try:
-            with open(filepath, newline='', encoding='utf-8') as f:
-                f.read(1)
-            encoding = 'utf-8'
-        except UnicodeDecodeError:
-            encoding = 'utf-16'
-
-        with open(filepath, newline='', encoding=encoding) as f:
-            # Detect delimiter: tab for UTF-16 exports, comma for legacy CSVs
-            sample = f.read(1024)
-            f.seek(0)
-            dialect_delimiter = '\t' if '\t' in sample else ','
-
-            reader = csv.DictReader(f, delimiter=dialect_delimiter)
-            reader.fieldnames = [name.strip() for name in reader.fieldnames]
-
-            for row in reader:
-                row = {k: v.strip() if v else '' for k, v in row.items() if k}
-
-                campus = row.get('Campus', '')
-                if not campus:
-                    continue
-
-                admit_gpa_min, admit_gpa_max = self.parse_gpa_range(row.get('Admit GPA range', ''))
-                enroll_gpa_min, enroll_gpa_max = self.parse_gpa_range(
-                    row.get('Enroll GPA range') or row.get('Enrollee GPA range', '')
-                )
-
-                rows.append(CampusStats(
-                    campus=campus,
-                    year=year,
-                    applicants=self.parse_int(row.get('Applicants', '0')),
-                    admits=self.parse_int(row.get('Admits', '0')),
-                    enrolls=self.parse_int(row.get('Enrolls') or row.get('Enrollees', '0')),
-                    admit_gpa_min=admit_gpa_min,
-                    admit_gpa_max=admit_gpa_max,
-                    enroll_gpa_min=enroll_gpa_min,
-                    enroll_gpa_max=enroll_gpa_max,
-                    admit_rate=self.parse_rate(row.get('Admit rate', '')),
-                    yield_rate=self.parse_rate(row.get('Yield rate', '')),
-                ))
+        for row in read_rows(filepath):
+            campus = row.get('Campus', '')
+            if not campus:
+                continue
+            admit_gpa_min, admit_gpa_max = parse_gpa_range(row.get('Admit GPA range', ''))
+            enroll_gpa_min, enroll_gpa_max = parse_gpa_range(
+                first_present(row, 'Enroll GPA range', 'Enrollee GPA range')
+            )
+            rows.append(CampusStats(
+                campus=campus,
+                year=year,
+                applicants=parse_int(row.get('Applicants')),
+                admits=parse_int(row.get('Admits')),
+                enrolls=parse_int(first_present(row, 'Enrolls', 'Enrollees')),
+                admit_gpa_min=admit_gpa_min,
+                admit_gpa_max=admit_gpa_max,
+                enroll_gpa_min=enroll_gpa_min,
+                enroll_gpa_max=enroll_gpa_max,
+                admit_rate=parse_rate(row.get('Admit rate')),
+                yield_rate=parse_rate(row.get('Yield rate')),
+            ))
         return rows
-
-    def parse_gpa_range(self, value):
-        if not value or value.lower() == 'masked':
-            return None, None
-        parts = value.split('-')
-        if len(parts) != 2:
-            return None, None
-        try:
-            return Decimal(parts[0].strip()), Decimal(parts[1].strip())
-        except (InvalidOperation, ValueError):
-            return None, None
-
-    def parse_rate(self, value):
-        if not value:
-            return None
-        value = value.replace('%', '').strip()
-        if not value:
-            return None
-        try:
-            return int(value)
-        except ValueError:
-            return None
-
-    def parse_int(self, value):
-        if not value:
-            return 0
-        try:
-            return int(value.replace(',', ''))
-        except ValueError:
-            return 0
