@@ -524,3 +524,11 @@ class ArticulationPathSafetyTests(TestCase):
         from api.views import _articulation_dir
         for bad in ('..', 'a/b', 'a b', '.hidden', ''):
             self.assertIsNone(_articulation_dir(bad), bad)
+
+
+class HealthViewTests(TestCase):
+
+    def test_health_ok(self):
+        response = APIClient().get('/api/health/')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data, {'status': 'ok'})

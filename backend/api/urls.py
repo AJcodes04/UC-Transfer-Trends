@@ -3,6 +3,7 @@ from . import views
 from .transcript import TranscriptUploadView
 
 urlpatterns = [
+    path('health/', views.HealthView.as_view(), name='health'),
     path('transcript/upload/', TranscriptUploadView.as_view(), name='transcript-upload'),
 
     path('universities/', views.UniversityListView.as_view(), name='university-list'),

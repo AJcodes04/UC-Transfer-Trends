@@ -6,6 +6,7 @@ from pathlib import Path
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.db import connection
 from django.db.models import (
     Sum, Max, Min, Case, When, Value, CharField, FloatField, ExpressionWrapper,
 )
@@ -53,6 +54,19 @@ class TransferDataFilter(filters.FilterSet):
     class Meta:
         model = TransferData
         fields = ['university', 'year', 'major_name', 'broad_discipline']
+
+
+class HealthView(APIView):
+    throttle_classes = []
+
+    def get(self, request):
+        try:
+            with connection.cursor() as cursor:
+                cursor.execute('SELECT 1')
+        except Exception:
+            logger.exception('Health check: database unreachable')
+            return Response({'status': 'error', 'database': 'unreachable'}, status=503)
+        return Response({'status': 'ok'})
 
 
 class TransferDataListView(generics.ListAPIView):
