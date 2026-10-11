@@ -1,13 +1,12 @@
 """
 Transcript PDF parsing endpoint. Extracts text from uploaded PDFs
 with pdfplumber and sends it to the Claude API for structured course
-extraction. Rate-limited to 3 parses per IP per day.
+extraction. Rate-limited per IP per day (see DAILY_LIMIT).
 """
 
 import io
 import json
 import os
-import time
 
 from django.core.cache import cache
 from rest_framework.views import APIView
@@ -26,8 +25,9 @@ try:
 except ImportError:
     HAS_ANTHROPIC = False
 
-# Rate limit: max parses per IP per day
 DAILY_LIMIT = 5
+WINDOW_SECONDS = 86400
+MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 
 SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, extract every course into a JSON array.
 
@@ -45,6 +45,15 @@ Rules:
 - If the same course appears multiple times (retakes), include all instances — deduplication is handled downstream.
 - Return ONLY the JSON array, no other text or markdown formatting."""
 
+GRADE_RANK = {
+    'F': 0, 'D-': 1, 'D': 2, 'D+': 3,
+    'C-': 4, 'C': 5, 'C+': 6,
+    'B-': 7, 'B': 8, 'B+': 9,
+    'A-': 10, 'A': 11, 'A+': 12,
+    'NP': -2, 'P': 13,
+    'W': -3, 'FW': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
+}
+
 
 def _get_client_ip(request):
     xff = request.META.get('HTTP_X_FORWARDED_FOR')
@@ -54,31 +63,25 @@ def _get_client_ip(request):
 
 
 def _check_rate_limit(ip):
-    """Returns (allowed, remaining, reset_seconds)."""
-    cache_key = f'transcript_ratelimit:{ip}'
-    data = cache.get(cache_key)
+    """Returns (allowed, remaining). The window starts at the IP's first request and expires with the cache key."""
+    key = f'transcript_ratelimit:{ip}'
+    cache.add(key, 0, timeout=WINDOW_SECONDS)
+    try:
+        count = cache.incr(key)
+    except ValueError:
+        cache.set(key, 1, timeout=WINDOW_SECONDS)
+        count = 1
+    return count <= DAILY_LIMIT, max(DAILY_LIMIT - count, 0)
 
-    now = time.time()
-    if data is None:
-        # First request today
-        data = {'count': 1, 'first_request': now}
-        cache.set(cache_key, data, timeout=86400)
-        return True, DAILY_LIMIT - 1
 
-    # Check if 24h window has passed
-    elapsed = now - data['first_request']
-    if elapsed >= 86400:
-        data = {'count': 1, 'first_request': now}
-        cache.set(cache_key, data, timeout=86400)
-        return True, DAILY_LIMIT - 1
-
-    if data['count'] >= DAILY_LIMIT:
-        return False, 0
-
-    data['count'] += 1
-    remaining_ttl = int(86400 - elapsed)
-    cache.set(cache_key, data, timeout=remaining_ttl)
-    return True, DAILY_LIMIT - data['count']
+def _validate_upload(uploaded):
+    if not uploaded:
+        return 'No file uploaded'
+    if not uploaded.name.lower().endswith('.pdf'):
+        return 'Only PDF files are accepted'
+    if uploaded.size > MAX_UPLOAD_BYTES:
+        return 'File too large (max 10MB)'
+    return None
 
 
 class TranscriptUploadView(APIView):
@@ -86,63 +89,44 @@ class TranscriptUploadView(APIView):
 
     def post(self, request):
         if not HAS_PDFPLUMBER:
-            return Response(
-                {'error': 'pdfplumber is not installed.'},
-                status=500,
-            )
-
+            return Response({'error': 'pdfplumber is not installed.'}, status=500)
         if not HAS_ANTHROPIC:
-            return Response(
-                {'error': 'anthropic package is not installed.'},
-                status=500,
-            )
+            return Response({'error': 'anthropic package is not installed.'}, status=500)
 
         api_key = os.getenv('ANTHROPIC_API_KEY', '')
         if not api_key:
-            return Response(
-                {'error': 'ANTHROPIC_API_KEY is not configured.'},
-                status=500,
-            )
-
-        # Rate limit check
-        client_ip = _get_client_ip(request)
-        allowed, remaining = _check_rate_limit(client_ip)
-        if not allowed:
-            return Response(
-                {'error': 'Daily limit reached. You can parse up to 3 transcripts per day. Please try again tomorrow.'},
-                status=429,
-            )
+            return Response({'error': 'ANTHROPIC_API_KEY is not configured.'}, status=500)
 
         uploaded = request.FILES.get('file')
-        if not uploaded:
-            return Response({'error': 'No file uploaded'}, status=400)
+        problem = _validate_upload(uploaded)
+        if problem:
+            return Response({'error': problem}, status=400)
 
-        if not uploaded.name.lower().endswith('.pdf'):
-            return Response({'error': 'Only PDF files are accepted'}, status=400)
+        allowed, remaining = _check_rate_limit(_get_client_ip(request))
+        if not allowed:
+            response = Response(
+                {'error': f'Daily limit reached. You can parse up to {DAILY_LIMIT} transcripts per day. Please try again tomorrow.'},
+                status=429,
+            )
+        else:
+            response = self._parse(uploaded, api_key)
+        response['X-RateLimit-Remaining'] = str(remaining)
+        return response
 
-        if uploaded.size > 10 * 1024 * 1024:
-            return Response({'error': 'File too large (max 10MB)'}, status=400)
-
+    def _parse(self, uploaded, api_key):
         try:
-            # Extract text from PDF
-            pdf_bytes = uploaded.read()
             pages_text = []
-
-            with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            with pdfplumber.open(io.BytesIO(uploaded.read())) as pdf:
                 for page in pdf.pages:
                     text = page.extract_text() or ''
                     if text.strip():
                         pages_text.append(text)
 
             if not pages_text:
-                return Response(
-                    {'error': 'Could not extract any text from the PDF.'},
-                    status=400,
-                )
+                return Response({'error': 'Could not extract any text from the PDF.'}, status=400)
 
             full_text = '\n\n--- PAGE BREAK ---\n\n'.join(pages_text)
 
-            # Send to Claude for parsing
             client = anthropic.Anthropic(api_key=api_key)
             message = client.messages.create(
                 model='claude-haiku-4-5-20251001',
@@ -154,8 +138,6 @@ class TranscriptUploadView(APIView):
             )
 
             response_text = message.content[0].text.strip()
-
-            # Strip markdown code fences if present
             if response_text.startswith('```'):
                 response_text = response_text.split('\n', 1)[1]
                 if response_text.endswith('```'):
@@ -163,14 +145,9 @@ class TranscriptUploadView(APIView):
                 response_text = response_text.strip()
 
             courses = json.loads(response_text)
-
             if not isinstance(courses, list):
-                return Response(
-                    {'error': 'Unexpected response format from parser.'},
-                    status=500,
-                )
+                return Response({'error': 'Unexpected response format from parser.'}, status=500)
 
-            # Normalize fields
             for course in courses:
                 course['prefix'] = str(course.get('prefix', '')).upper().replace(' ', '')
                 course['number'] = str(course.get('number', '')).upper().rstrip('.')
@@ -181,41 +158,19 @@ class TranscriptUploadView(APIView):
                 except (ValueError, TypeError):
                     course['units'] = 0.0
 
-            # Deduplicate: keep best grade per course
-            grade_rank = {
-                'F': 0, 'D-': 1, 'D': 2, 'D+': 3,
-                'C-': 4, 'C': 5, 'C+': 6,
-                'B-': 7, 'B': 8, 'B+': 9,
-                'A-': 10, 'A': 11, 'A+': 12,
-                'NP': -2, 'P': 13,
-                'W': -3, 'FW': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
-            }
-
+            # Retakes: keep the best grade per course.
             best = {}
             for entry in courses:
                 key = f"{entry['prefix']} {entry['number']}"
-                rank = grade_rank.get(entry['grade'], -1)
-                if key not in best or rank > grade_rank.get(best[key]['grade'], -1):
+                rank = GRADE_RANK.get(entry['grade'], -1)
+                if key not in best or rank > GRADE_RANK.get(best[key]['grade'], -1):
                     best[key] = entry
 
-            result = list(best.values())
-
-            response = Response(result)
-            response['X-RateLimit-Remaining'] = str(remaining)
-            return response
+            return Response(list(best.values()))
 
         except json.JSONDecodeError:
-            return Response(
-                {'error': 'Failed to parse response. Please try again.'},
-                status=500,
-            )
+            return Response({'error': 'Failed to parse response. Please try again.'}, status=500)
         except anthropic.APIError as e:
-            return Response(
-                {'error': f'AI service error: {str(e)}'},
-                status=502,
-            )
+            return Response({'error': f'AI service error: {str(e)}'}, status=502)
         except Exception as e:
-            return Response(
-                {'error': f'Failed to parse PDF: {str(e)}'},
-                status=400,
-            )
+            return Response({'error': f'Failed to parse PDF: {str(e)}'}, status=400)
