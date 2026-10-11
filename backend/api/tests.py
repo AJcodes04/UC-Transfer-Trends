@@ -89,16 +89,16 @@ class GroupedMajorListViewTests(TestCase):
         make_transfer_data(university='UCB', major_name='African American Studies', year=2023, applicants=50)
         make_transfer_data(university='UCLA', major_name='African-American Studies', year=2023, applicants=30)
 
-        # ── Discontinued: HIDDEN (short-lived, 3yr span) ─────────
-        make_transfer_data(university='UCB', major_name='Ancient Greek', year=2018, applicants=10)
-        make_transfer_data(university='UCB', major_name='Ancient Greek', year=2017, applicants=10,
+        # ── Discontinued: HIDDEN (last seen 2015, newest data 2023, 3yr span) ──
+        make_transfer_data(university='UCB', major_name='Ancient Greek', year=2015, applicants=10)
+        make_transfer_data(university='UCB', major_name='Ancient Greek', year=2014, applicants=10,
                            college_school='Humanities')
-        make_transfer_data(university='UCB', major_name='Ancient Greek', year=2016, applicants=10,
+        make_transfer_data(university='UCB', major_name='Ancient Greek', year=2013, applicants=10,
                            college_school='Classics')
 
         # ── Discontinued: SHOWN (8yr span, passes history check) ──
-        make_transfer_data(university='UCB', major_name='Latin', year=2018, applicants=15)
-        make_transfer_data(university='UCB', major_name='Latin', year=2011, applicants=10,
+        make_transfer_data(university='UCB', major_name='Latin', year=2015, applicants=15)
+        make_transfer_data(university='UCB', major_name='Latin', year=2008, applicants=10,
                            college_school='Classics')
 
         # ── Standalone major (no sub-majors, no absorption) ───────
@@ -184,12 +184,12 @@ class GroupedMajorListViewTests(TestCase):
     # --- discontinued filter ---
 
     def test_discontinued_short_lived_hidden(self):
-        """Ancient Greek (2016-2018, 3yr span) should be filtered out."""
+        """Ancient Greek (2013-2015, 3yr span, 8 years stale) should be filtered out."""
         response = self.client.get('/api/majors/grouped/')
         self.assertNotIn('Ancient Greek', self._all_group_names(response.data))
 
     def test_discontinued_long_history_shown(self):
-        """Latin (2011-2018, 8yr span) should still appear."""
+        """Latin (2008-2015, 8yr span) should still appear."""
         response = self.client.get('/api/majors/grouped/')
         self.assertIn('Latin', self._all_group_names(response.data))
 
@@ -532,3 +532,30 @@ class HealthViewTests(TestCase):
         response = APIClient().get('/api/health/')
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data, {'status': 'ok'})
+
+
+class GroupMajorsFunctionTests(TestCase):
+    """group_majors is pure: exercise it without the database."""
+
+    def _row(self, name, apps=10, latest=2023, earliest=2023):
+        return {'major_name': name, 'total_apps': apps, 'latest_year': latest, 'earliest_year': earliest}
+
+    def test_cutoff_follows_newest_data_year(self):
+        from api.services.major_grouping import group_majors
+        rows = [self._row('Physics', latest=2030), self._row('Alchemy', latest=2024, earliest=2023)]
+        names = [g['name'] for g in group_majors(rows, [])]
+        self.assertEqual(names, ['Physics'])
+        rows = [self._row('Physics', latest=2028), self._row('Alchemy', latest=2024, earliest=2023)]
+        names = [g['name'] for g in group_majors(rows, [])]
+        self.assertEqual(sorted(names), ['Alchemy', 'Physics'])
+
+    def test_alias_merges_applicants_latest_year_and_campuses(self):
+        from api.services.major_grouping import group_majors
+        rows = [self._row('Economics', apps=100, latest=2022), self._row('Pre-Economics', apps=40, latest=2023)]
+        campus_rows = [{'major_name': 'Economics', 'university': 'UCB'}, {'major_name': 'Pre-Economics', 'university': 'UCLA'}]
+        (econ,) = group_majors(rows, campus_rows)
+        self.assertEqual((econ['total_applicants'], econ['latest_year'], econ['campuses']), (140, 2023, ['UCB', 'UCLA']))
+
+    def test_empty_input(self):
+        from api.services.major_grouping import group_majors
+        self.assertEqual(group_majors([], []), [])
