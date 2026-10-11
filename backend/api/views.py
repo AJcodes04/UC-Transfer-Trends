@@ -774,58 +774,41 @@ class ArticulationUCsView(APIView):
         return Response(campuses)
 
 
+def _agreement_files(cc_code, uc_code):
+    """Map major slug -> newest agreement file across every academic year folder."""
+    uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
+    if not uc_dir.is_dir():
+        return {}
+    files = {}
+    for year_dir in sorted((d for d in uc_dir.iterdir() if d.is_dir()), key=lambda d: d.name):
+        for json_file in year_dir.glob('*.json'):
+            files[json_file.stem] = json_file
+    return files
+
+
 class ArticulationMajorsView(APIView):
     def get(self, request, cc_code, uc_code):
-        uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
-        if not uc_dir.is_dir():
-            return Response([])
-
-        year_dirs = sorted(
-            [d for d in uc_dir.iterdir() if d.is_dir()],
-            key=lambda d: d.name,
-            reverse=True,
-        )
-        if not year_dirs:
-            return Response([])
-
-        year_dir = year_dirs[0]
         majors = []
-        for json_file in sorted(year_dir.glob('*.json')):
+        for slug, json_file in sorted(_agreement_files(cc_code, uc_code).items()):
             try:
                 data = json.loads(json_file.read_text())
-                row_count = _count_rows(data)
-                majors.append({
-                    'slug': json_file.stem,
-                    'name': data.get('major', json_file.stem),
-                    'academic_year': data.get('academic_year', year_dir.name),
-                    'row_count': row_count,
-                })
-            except (json.JSONDecodeError, KeyError):
+            except json.JSONDecodeError:
                 continue
-
+            majors.append({
+                'slug': slug,
+                'name': data.get('major', slug),
+                'academic_year': data.get('academic_year', json_file.parent.name),
+                'row_count': _count_rows(data),
+            })
         return Response(majors)
 
 
 class ArticulationDetailView(APIView):
     def get(self, request, cc_code, uc_code, major_slug):
-        uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
-        if not uc_dir.is_dir():
+        json_file = _agreement_files(cc_code, uc_code).get(major_slug)
+        if json_file is None:
             return Response({'error': 'Not found'}, status=404)
-
-        year_dirs = sorted(
-            [d for d in uc_dir.iterdir() if d.is_dir()],
-            key=lambda d: d.name,
-            reverse=True,
-        )
-        if not year_dirs:
-            return Response({'error': 'Not found'}, status=404)
-
-        json_file = year_dirs[0] / f'{major_slug}.json'
-        if not json_file.exists():
-            return Response({'error': 'Not found'}, status=404)
-
-        data = json.loads(json_file.read_text())
-        return Response(data)
+        return Response(json.loads(json_file.read_text()))
 
 
 class ArticulationFailedView(APIView):
