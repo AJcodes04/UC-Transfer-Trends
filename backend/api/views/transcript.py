@@ -15,7 +15,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
 
+from drf_spectacular.utils import extend_schema
+
 from api.errors import error_response
+from api.serializers import ErrorSerializer, TranscriptCourseSerializer, TranscriptUploadSerializer
 
 import anthropic
 import pdfplumber
@@ -88,27 +91,21 @@ def _check_rate_limit(ip):
     return count <= DAILY_LIMIT, max(DAILY_LIMIT - count, 0)
 
 
-def _validate_upload(uploaded):
-    if not uploaded:
-        return 'No file uploaded'
-    if not uploaded.name.lower().endswith('.pdf'):
-        return 'Only PDF files are accepted'
-    if uploaded.size > MAX_UPLOAD_BYTES:
-        return 'File too large (max 10MB)'
-    return None
-
-
 class TranscriptUploadView(APIView):
     parser_classes = [MultiPartParser]
 
+    @extend_schema(
+        request=TranscriptUploadSerializer,
+        responses={200: TranscriptCourseSerializer(many=True), 400: ErrorSerializer, 429: ErrorSerializer},
+    )
     def post(self, request):
         if not settings.ANTHROPIC_API_KEY:
             return error_response('ANTHROPIC_API_KEY is not configured.', status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        uploaded = request.FILES.get('file')
-        problem = _validate_upload(uploaded)
-        if problem:
-            return error_response(problem, status.HTTP_400_BAD_REQUEST)
+        upload = TranscriptUploadSerializer(data=request.data)
+        if not upload.is_valid():
+            return error_response(str(upload.errors['file'][0]), status.HTTP_400_BAD_REQUEST)
+        uploaded = upload.validated_data['file']
 
         allowed, remaining = _check_rate_limit(_get_client_ip(request))
         if not allowed:
@@ -185,7 +182,7 @@ class TranscriptUploadView(APIView):
                 if key not in best or rank > GRADE_RANK.get(best[key]['grade'], -1):
                     best[key] = entry
 
-            return Response(list(best.values()))
+            return Response(TranscriptCourseSerializer(list(best.values()), many=True).data)
 
         except json.JSONDecodeError:
             logger.warning('Transcript parser returned non-JSON output (stop_reason=%s)', message.stop_reason)

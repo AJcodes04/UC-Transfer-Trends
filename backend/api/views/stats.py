@@ -2,11 +2,16 @@ from django.db.models import (
     Sum, Max, Min, Case, When, Value, CharField, FloatField, ExpressionWrapper,
 )
 from django.db.models.functions import NullIf
+from drf_spectacular.utils import extend_schema
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from api.constants.majors import ALIAS_TO_CANONICAL, MAJOR_ALIASES
 from api.models import CampusStats, TransferData
+from api.serializers import (
+    CampusMajorStatsRowSerializer, CampusStatsRowSerializer,
+    MajorStatsRowSerializer, SchoolStatsRowSerializer,
+)
 
 
 def _weighted_rate(numerator, denominator):
@@ -36,8 +41,9 @@ CANONICAL_MAJOR_NAME = Case(
 
 
 class GeneralStatsView(APIView):
+    @extend_schema(responses=CampusStatsRowSerializer(many=True))
     def get(self, request):
-        stats = (
+        rows = (
             CampusStats.objects
             .values(
                 'year', 'campus', 'applicants', 'admits', 'enrolls',
@@ -45,24 +51,26 @@ class GeneralStatsView(APIView):
             )
             .order_by('year', 'campus')
         )
-        return Response(list(stats))
+        return Response(CampusStatsRowSerializer(rows, many=True).data)
 
 
 class SchoolStatsView(APIView):
+    @extend_schema(responses=SchoolStatsRowSerializer(many=True))
     def get(self, request, school):
-        stats = (
+        rows = (
             TransferData.objects
             .filter(university=school)
             .values('year', 'college_school')
             .annotate(**STAT_AGGREGATES)
             .order_by('year', 'college_school')
         )
-        return Response(list(stats))
+        return Response(SchoolStatsRowSerializer(rows, many=True).data)
 
 
 class CampusMajorStatsView(APIView):
+    @extend_schema(responses=CampusMajorStatsRowSerializer(many=True))
     def get(self, request, campus):
-        stats = (
+        rows = list(
             TransferData.objects
             .filter(university=campus)
             .annotate(display_name=CANONICAL_MAJOR_NAME)
@@ -70,19 +78,19 @@ class CampusMajorStatsView(APIView):
             .annotate(**STAT_AGGREGATES)
             .order_by('year', 'display_name')
         )
-        rows = list(stats)
         for row in rows:
             row['major_name'] = row.pop('display_name')
-        return Response(rows)
+        return Response(CampusMajorStatsRowSerializer(rows, many=True).data)
 
 
 class MajorStatsView(APIView):
+    @extend_schema(responses=MajorStatsRowSerializer(many=True))
     def get(self, request, major):
-        stats = (
+        rows = (
             TransferData.objects
             .filter(major_name__in=[major, *MAJOR_ALIASES.get(major, [])])
             .values('year', 'university')
             .annotate(**STAT_AGGREGATES)
             .order_by('year', 'university')
         )
-        return Response(list(stats))
+        return Response(MajorStatsRowSerializer(rows, many=True).data)

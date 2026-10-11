@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'rest_framework',
     'corsheaders',
+    'drf_spectacular',
     'api',
 ]
 
@@ -83,6 +84,7 @@ TEMPLATES = [
 
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'api.errors.api_exception_handler',
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
@@ -98,6 +100,12 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ],
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'UC Transfer Trends API',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
 
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')

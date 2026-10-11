@@ -1,9 +1,12 @@
 import logging
 
 from django.db import connection
+from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from api.serializers import HealthSerializer
 
 logger = logging.getLogger(__name__)
 
@@ -11,6 +14,7 @@ logger = logging.getLogger(__name__)
 class HealthView(APIView):
     throttle_classes = []
 
+    @extend_schema(responses={200: HealthSerializer, 503: HealthSerializer})
     def get(self, request):
         try:
             with connection.cursor() as cursor:
