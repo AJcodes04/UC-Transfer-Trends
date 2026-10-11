@@ -99,6 +99,22 @@ REST_FRAMEWORK = {
     ],
 }
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {'format': '%(asctime)s %(levelname)s %(name)s: %(message)s'},
+    },
+    'handlers': {
+        'console': {'class': 'logging.StreamHandler', 'formatter': 'standard'},
+    },
+    'root': {'handlers': ['console'], 'level': 'INFO'},
+    'loggers': {
+        'django.request': {'level': 'WARNING', 'propagate': True},
+        'api': {'level': 'DEBUG' if DEBUG else 'INFO', 'propagate': True},
+    },
+}
+
 CORS_EXPOSE_HEADERS = ['X-RateLimit-Remaining']
 
 CORS_ALLOWED_ORIGINS = [

@@ -6,6 +6,7 @@ extraction. Rate-limited per IP per day (see DAILY_LIMIT).
 
 import io
 import json
+import logging
 import os
 
 from django.core.cache import cache
@@ -24,6 +25,8 @@ try:
     HAS_ANTHROPIC = True
 except ImportError:
     HAS_ANTHROPIC = False
+
+logger = logging.getLogger(__name__)
 
 DAILY_LIMIT = 5
 WINDOW_SECONDS = 86400
@@ -116,11 +119,15 @@ class TranscriptUploadView(APIView):
     def _parse(self, uploaded, api_key):
         try:
             pages_text = []
-            with pdfplumber.open(io.BytesIO(uploaded.read())) as pdf:
-                for page in pdf.pages:
-                    text = page.extract_text() or ''
-                    if text.strip():
-                        pages_text.append(text)
+            try:
+                with pdfplumber.open(io.BytesIO(uploaded.read())) as pdf:
+                    for page in pdf.pages:
+                        text = page.extract_text() or ''
+                        if text.strip():
+                            pages_text.append(text)
+            except Exception:
+                logger.warning('Unreadable transcript PDF %r', uploaded.name, exc_info=True)
+                return Response({'error': 'Could not read the PDF file.'}, status=400)
 
             if not pages_text:
                 return Response({'error': 'Could not extract any text from the PDF.'}, status=400)
@@ -169,8 +176,11 @@ class TranscriptUploadView(APIView):
             return Response(list(best.values()))
 
         except json.JSONDecodeError:
+            logger.warning('Transcript parser returned non-JSON output (stop_reason=%s)', message.stop_reason)
             return Response({'error': 'Failed to parse response. Please try again.'}, status=500)
-        except anthropic.APIError as e:
-            return Response({'error': f'AI service error: {str(e)}'}, status=502)
-        except Exception as e:
-            return Response({'error': f'Failed to parse PDF: {str(e)}'}, status=400)
+        except anthropic.APIError:
+            logger.exception('Anthropic API error while parsing transcript')
+            return Response({'error': 'AI service error. Please try again.'}, status=502)
+        except Exception:
+            logger.exception('Unexpected error while parsing transcript')
+            return Response({'error': 'Transcript parsing failed.'}, status=500)

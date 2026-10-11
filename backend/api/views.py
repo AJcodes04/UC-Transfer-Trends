@@ -1,4 +1,5 @@
 import json
+import logging
 import re
 from pathlib import Path
 
@@ -13,6 +14,8 @@ from django_filters import rest_framework as filters
 
 from .models import TransferData, CampusStats
 from .serializers import TransferDataSerializer
+
+logger = logging.getLogger(__name__)
 
 ARTICULATION_DIR = Path(__file__).resolve().parent.parent.parent / 'data' / 'articulation'
 # The scraper writes every major/campus combo it could NOT fetch here. We surface
@@ -780,6 +783,7 @@ class ArticulationMajorsView(APIView):
             try:
                 data = json.loads(json_file.read_text())
             except json.JSONDecodeError:
+                logger.warning('Skipping malformed agreement file %s', json_file)
                 continue
             majors.append({
                 'slug': slug,
