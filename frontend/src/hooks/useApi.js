@@ -46,20 +46,8 @@ function useFetch(url) {
   return { data, loading, error }
 }
 
-export function useUniversities() {
-  return useFetch('/api/universities/')
-}
-
-export function useMajors() {
-  return useFetch('/api/majors/')
-}
-
 export function useGroupedMajors() {
   return useFetch('/api/majors/grouped/')
-}
-
-export function useDisciplines() {
-  return useFetch('/api/disciplines/')
 }
 
 export function useGeneralStats() {
@@ -100,15 +88,4 @@ export function useArticulationDetail(ccCode, ucCode, majorSlug) {
       ? `/api/articulation/${ccCode}/${ucCode}/${majorSlug}/`
       : null
   )
-}
-
-export function useTransferData(filters) {
-  const params = new URLSearchParams()
-  if (filters?.university) params.set('university', filters.university)
-  if (filters?.year) params.set('year', filters.year)
-  if (filters?.major_name) params.set('major_name', filters.major_name)
-  if (filters?.broad_discipline) params.set('broad_discipline', filters.broad_discipline)
-
-  const query = params.toString()
-  return useFetch(query ? `/api/transfer-data/?${query}` : '/api/transfer-data/')
 }

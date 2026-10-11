@@ -29,38 +29,6 @@ def make_transfer_data(**kwargs):
 
 
 # ─────────────────────────────────────────────────────────────────
-# 1. GET /api/majors/  (MajorListView)
-# ─────────────────────────────────────────────────────────────────
-class MajorListViewTests(TestCase):
-
-    def setUp(self):
-        self.client = APIClient()
-        make_transfer_data(university='UCB', major_name='Chemistry', year=2023)
-        make_transfer_data(university='UCLA', major_name='Chemistry', year=2023)
-        make_transfer_data(university='UCB', major_name='Biology', year=2023)
-        make_transfer_data(university='UCD', major_name='Physics', year=2022)
-
-    def test_returns_200(self):
-        response = self.client.get('/api/majors/')
-        self.assertEqual(response.status_code, 200)
-
-    def test_returns_distinct_majors(self):
-        """Chemistry appears at 2 campuses but should only be listed once."""
-        response = self.client.get('/api/majors/')
-        self.assertEqual(len(response.data), 3)
-
-    def test_returns_sorted_alphabetically(self):
-        response = self.client.get('/api/majors/')
-        self.assertEqual(list(response.data), ['Biology', 'Chemistry', 'Physics'])
-
-    def test_empty_database(self):
-        TransferData.objects.all().delete()
-        response = self.client.get('/api/majors/')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(list(response.data), [])
-
-
-# ─────────────────────────────────────────────────────────────────
 # 2. GET /api/majors/grouped/  (GroupedMajorListView)
 # ─────────────────────────────────────────────────────────────────
 class GroupedMajorListViewTests(TestCase):
