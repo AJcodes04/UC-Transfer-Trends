@@ -72,7 +72,7 @@ class GroupedMajorListViewTests(TestCase):
 
         # ── Regex grouping targets ────────────────────────────────
         # " - " delimiter → groups under Chemistry
-        make_transfer_data(university='UCB', major_name='Chemistry - Biochemistry', year=2023, applicants=80)
+        make_transfer_data(university='UCB', major_name='Chemistry - Environmental', year=2023, applicants=80)
         # " (" delimiter → groups under Chemistry
         make_transfer_data(university='UCLA', major_name='Chemistry (Organic)', year=2023, applicants=60)
 
@@ -128,11 +128,11 @@ class GroupedMajorListViewTests(TestCase):
     # --- regex grouping ---
 
     def test_regex_grouping_dash_delimiter(self):
-        """'Chemistry - Biochemistry' should be a specialization under Chemistry."""
+        """'Chemistry - Environmental' should be a specialization under Chemistry."""
         response = self.client.get('/api/majors/grouped/')
         chem = self._find_group(response.data, 'Chemistry')
         self.assertIsNotNone(chem)
-        self.assertIn('Chemistry - Biochemistry', self._related_names(chem))
+        self.assertIn('Chemistry - Environmental', self._related_names(chem))
 
     def test_regex_grouping_paren_delimiter(self):
         """'Chemistry (Organic)' should be a specialization under Chemistry."""
@@ -199,10 +199,10 @@ class GroupedMajorListViewTests(TestCase):
         self.assertEqual(chem['campuses'], ['UCB', 'UCLA'])
 
     def test_campus_badges_specialization(self):
-        """'Chemistry - Biochemistry' is only at UCB."""
+        """'Chemistry - Environmental' is only at UCB."""
         response = self.client.get('/api/majors/grouped/')
         chem = self._find_group(response.data, 'Chemistry')
-        spec = next(r for r in chem['related'] if r['name'] == 'Chemistry - Biochemistry')
+        spec = next(r for r in chem['related'] if r['name'] == 'Chemistry - Environmental')
         self.assertEqual(spec['campuses'], ['UCB'])
 
     def test_campus_badges_alias_merged(self):
