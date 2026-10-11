@@ -470,3 +470,41 @@ class CountRowsTests(TestCase):
         from api.views import _count_rows
         data = {'sections': [{'groups': [self._group('SELECT_N', [3], select_n=1)]}]}
         self.assertEqual(_count_rows(data), 1)
+
+
+class ArticulationFailedViewTests(TestCase):
+
+    def setUp(self):
+        import json, tempfile
+        from pathlib import Path
+        from api import views
+        self.client = APIClient()
+        self.tmp = tempfile.TemporaryDirectory()
+        root = Path(self.tmp.name)
+        (root / 'sbcc' / 'ucb' / '2024-25').mkdir(parents=True)
+        (root / 'sbcc' / 'ucb' / '2024-25' / 'physics_b_a.json').write_text('{}')
+        (root / 'failed_scrapes.json').write_text(json.dumps([
+            {'sending_code': 'SBCC', 'receiving_code': 'UCB', 'academic_year': '2024-25', 'major': 'Physics, B.A.'},
+            {'sending_code': 'SBCC', 'receiving_code': 'UCB', 'academic_year': '2024-25', 'major': 'Celtic Studies, B.A.'},
+            {'sending_code': 'SBCC', 'receiving_code': 'UCB', 'academic_year': '2024-25', 'major': 'Celtic Studies, B.A.'},
+            {'sending_code': 'SBCC', 'receiving_code': 'UCLA', 'academic_year': '2024-25', 'major': 'Art, B.A.'},
+        ]))
+        self.patches = [
+            patch.object(views, 'ARTICULATION_DIR', root),
+            patch.object(views, 'FAILED_SCRAPES_FILE', root / 'failed_scrapes.json'),
+        ]
+        for p in self.patches:
+            p.start()
+
+    def tearDown(self):
+        for p in self.patches:
+            p.stop()
+        self.tmp.cleanup()
+
+    def test_hides_failures_that_were_later_scraped_and_dedupes(self):
+        response = self.client.get('/api/articulation/sbcc/ucb/failed/')
+        self.assertEqual([e['major'] for e in response.data], ['Celtic Studies, B.A.'])
+
+    def test_scopes_to_requested_pair(self):
+        response = self.client.get('/api/articulation/sbcc/ucla/failed/')
+        self.assertEqual([e['major'] for e in response.data], ['Art, B.A.'])

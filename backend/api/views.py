@@ -755,6 +755,12 @@ class ArticulationUCsView(APIView):
         return Response(campuses)
 
 
+def _slugify(text):
+    """Mirror of the scraper's filename slug so failure-log major names can be matched to files."""
+    text = re.sub(r'[&/]+', '_', text.lower().strip())
+    return re.sub(r'[^a-z0-9]+', '_', text).strip('_')
+
+
 def _agreement_files(cc_code, uc_code):
     """Map major slug -> newest agreement file across every academic year folder."""
     uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
@@ -793,49 +799,31 @@ class ArticulationDetailView(APIView):
 
 
 class ArticulationFailedView(APIView):
-    """
-    Return the majors the scraper FAILED to fetch for a given cc -> uc pair.
-
-    Pattern note: this is a read-through of the scraper's failure log, not the
-    database. We keep it as its own endpoint (rather than bolting a second list
-    onto ArticulationMajorsView) so each endpoint stays single-purpose and the
-    frontend cache can store "successful majors" and "failed majors" separately.
-
-    The failure log stores codes UPPERCASE ("ARC", "UCB") while URLs are
-    lowercase ("arc", "ucb"), so we normalize both sides before comparing.
-    """
+    """Majors the scraper failed to fetch for a cc -> uc pair and that still have no agreement file."""
 
     def get(self, request, cc_code, uc_code):
-        # Defensive: if the scraper has never recorded a failure, the file may
-        # not exist yet. Treat that as "nothing failed" rather than a 500.
         if not FAILED_SCRAPES_FILE.exists():
             return Response([])
-
         try:
             entries = json.loads(FAILED_SCRAPES_FILE.read_text())
         except json.JSONDecodeError:
-            # A malformed log shouldn't take down the majors page.
             return Response([])
 
         cc = cc_code.upper()
         uc = uc_code.upper()
+        scraped = set(_agreement_files(cc_code, uc_code))
 
-        # Filter to this cc -> uc pair and dedupe on (major, year): the scraper
-        # may log the same major more than once across retry runs, and we only
-        # want to show each failed agreement to the user a single time.
         seen = set()
         failed = []
         for entry in entries:
             if entry.get('sending_code') != cc or entry.get('receiving_code') != uc:
                 continue
-            key = (entry.get('major'), entry.get('academic_year'))
-            if key in seen:
+            major = entry.get('major') or ''
+            key = (major, entry.get('academic_year'))
+            if key in seen or _slugify(major) in scraped:
                 continue
             seen.add(key)
-            failed.append({
-                'major': entry.get('major'),
-                'academic_year': entry.get('academic_year'),
-            })
+            failed.append({'major': major, 'academic_year': entry.get('academic_year')})
 
-        failed.sort(key=lambda e: (e['major'] or '').lower())
+        failed.sort(key=lambda e: e['major'].lower())
         return Response(failed)
