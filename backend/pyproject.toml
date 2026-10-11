@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 110
+target-version = "py313"
+extend-exclude = ["migrations", "venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["api", "uctransfer"]
+section-order = ["future", "standard-library", "third-party", "django", "first-party", "local-folder"]
+
+[tool.ruff.lint.isort.sections]
+django = ["django", "rest_framework", "drf_spectacular", "corsheaders"]

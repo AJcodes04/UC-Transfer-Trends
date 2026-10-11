@@ -6,7 +6,12 @@ from django.core.management.base import BaseCommand
 
 from api.models import CampusStats
 from api.services.csv_import import (
-    first_present, parse_gpa_range, parse_int, parse_rate, read_rows, upsert,
+    first_present,
+    parse_gpa_range,
+    parse_int,
+    parse_rate,
+    read_rows,
+    upsert,
 )
 
 UNIQUE_FIELDS = ['campus', 'year']

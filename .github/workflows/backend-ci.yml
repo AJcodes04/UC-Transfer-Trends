@@ -1,0 +1,41 @@
+name: Backend CI
+
+on:
+  push:
+    paths: ['backend/**', '.github/workflows/backend-ci.yml']
+  pull_request:
+    paths: ['backend/**', '.github/workflows/backend-ci.yml']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: uc
+          POSTGRES_PASSWORD: uc
+          POSTGRES_DB: uc_transfer
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U uc"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DEBUG: 'False'
+      SECRET_KEY: ci-only-not-secret
+      DATABASE_URL: postgresql://uc:uc@localhost:5432/uc_transfer
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: backend/requirements*.txt
+      - run: pip install -r requirements-dev.txt
+      - run: ruff check .
+      - run: python manage.py test api -v 2

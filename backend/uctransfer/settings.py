@@ -1,6 +1,9 @@
 import os
 from pathlib import Path
+
+import dj_database_url
 from dotenv import load_dotenv
+
 from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,8 +50,6 @@ SECURE_REFERRER_POLICY = 'same-origin'
 CSRF_COOKIE_SECURE = not DEBUG
 
 ROOT_URLCONF = 'uctransfer.urls'
-
-import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(

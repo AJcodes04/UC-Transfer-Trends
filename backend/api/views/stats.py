@@ -1,5 +1,13 @@
 from django.db.models import (
-    Sum, Max, Min, Case, When, Value, CharField, FloatField, ExpressionWrapper,
+    Case,
+    CharField,
+    ExpressionWrapper,
+    FloatField,
+    Max,
+    Min,
+    Sum,
+    Value,
+    When,
 )
 from django.db.models.functions import NullIf
 from drf_spectacular.utils import extend_schema
@@ -9,8 +17,10 @@ from rest_framework.views import APIView
 from api.constants.majors import ALIAS_TO_CANONICAL, MAJOR_ALIASES
 from api.models import CampusStats, TransferData
 from api.serializers import (
-    CampusMajorStatsRowSerializer, CampusStatsRowSerializer,
-    MajorStatsRowSerializer, SchoolStatsRowSerializer,
+    CampusMajorStatsRowSerializer,
+    CampusStatsRowSerializer,
+    MajorStatsRowSerializer,
+    SchoolStatsRowSerializer,
 )
 
 

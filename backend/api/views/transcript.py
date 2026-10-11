@@ -8,20 +8,19 @@ import io
 import json
 import logging
 
+import anthropic
+import pdfplumber
+
 from django.conf import settings
 from django.core.cache import cache
-from rest_framework import status
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.parsers import MultiPartParser
-
 from drf_spectacular.utils import extend_schema
+from rest_framework import status
+from rest_framework.parsers import MultiPartParser
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from api.errors import error_response
 from api.serializers import ErrorSerializer, TranscriptCourseSerializer, TranscriptUploadSerializer
-
-import anthropic
-import pdfplumber
 
 logger = logging.getLogger(__name__)
 
