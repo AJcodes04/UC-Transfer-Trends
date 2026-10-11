@@ -8,6 +8,14 @@ from django.core.management.base import BaseCommand
 from api.models import CampusStats
 
 
+UNIQUE_FIELDS = ['campus', 'year']
+UPDATE_FIELDS = [
+    'applicants', 'admits', 'enrolls',
+    'admit_gpa_min', 'admit_gpa_max', 'enroll_gpa_min', 'enroll_gpa_max',
+    'admit_rate', 'yield_rate',
+]
+
+
 class Command(BaseCommand):
     # Import campus-level stats from CSV files in data/csv.exports/campusdata
 
@@ -28,7 +36,7 @@ class Command(BaseCommand):
             return
 
         self.stdout.write(f'Found {len(csv_files)} CSV files in {data_dir}')
-        total_created = 0
+        total_inserted = total_updated = 0
 
         for csv_file in csv_files:
             year = self.parse_year(csv_file.name)
@@ -36,13 +44,25 @@ class Command(BaseCommand):
                 self.stderr.write(self.style.WARNING(f'Skipping {csv_file.name}: could not parse year'))
                 continue
 
-            rows = self.parse_csv(csv_file, year)
-            created = CampusStats.objects.bulk_create(rows, ignore_conflicts=True)
-            count = len(created)
-            total_created += count
-            self.stdout.write(f'  {csv_file.name}: {count} rows imported')
+            # Last row wins for duplicate keys within a file; Postgres rejects updating the same row twice in one upsert.
+            rows = list({
+                tuple(getattr(r, f) for f in UNIQUE_FIELDS): r
+                for r in self.parse_csv(csv_file, year)
+            }.values())
+            before = CampusStats.objects.count()
+            CampusStats.objects.bulk_create(
+                rows, update_conflicts=True,
+                unique_fields=UNIQUE_FIELDS, update_fields=UPDATE_FIELDS,
+            )
+            inserted = CampusStats.objects.count() - before
+            updated = len(rows) - inserted
+            total_inserted += inserted
+            total_updated += updated
+            self.stdout.write(f'  {csv_file.name}: {inserted} inserted, {updated} updated')
 
-        self.stdout.write(self.style.SUCCESS(f'Done. {total_created} total rows imported.'))
+        self.stdout.write(self.style.SUCCESS(
+            f'Done. {total_inserted} inserted, {total_updated} updated.'
+        ))
 
     def parse_year(self, filename):
         # Expected format: campus-2024.csv
