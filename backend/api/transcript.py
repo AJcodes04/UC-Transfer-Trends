@@ -14,17 +14,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
 
-try:
-    import pdfplumber
-    HAS_PDFPLUMBER = True
-except ImportError:
-    HAS_PDFPLUMBER = False
-
-try:
-    import anthropic
-    HAS_ANTHROPIC = True
-except ImportError:
-    HAS_ANTHROPIC = False
+import anthropic
+import pdfplumber
 
 logger = logging.getLogger(__name__)
 
@@ -108,11 +99,6 @@ class TranscriptUploadView(APIView):
     parser_classes = [MultiPartParser]
 
     def post(self, request):
-        if not HAS_PDFPLUMBER:
-            return Response({'error': 'pdfplumber is not installed.'}, status=500)
-        if not HAS_ANTHROPIC:
-            return Response({'error': 'anthropic package is not installed.'}, status=500)
-
         if not settings.ANTHROPIC_API_KEY:
             return Response({'error': 'ANTHROPIC_API_KEY is not configured.'}, status=500)
 
