@@ -8,7 +8,6 @@ class TransferData(models.Model):
     broad_discipline = models.CharField(max_length=100)
     college_school = models.CharField(max_length=100)
     major_name = models.CharField(max_length=100, db_index=True)
-
     applicants = models.IntegerField(validators=[MinValueValidator(0)])
     admits = models.IntegerField(validators=[MinValueValidator(0)])
     enrolls = models.IntegerField(validators=[MinValueValidator(0)])

@@ -78,8 +78,8 @@ MAJOR_ALIASES = {
         'Pre-Asian Studies',
     ],
     'Applied Mathematics' : [
-        'Pre-Applied Mathematics'
-        'Applied and Computational Mathematics'
+        'Pre-Applied Mathematics',
+        'Applied and Computational Mathematics',
     ],
     'Business Economics': [
         'Pre-Business Economics',
@@ -176,8 +176,15 @@ MAJOR_ALIASES = {
     "Sociology" : [
         "Pre-Sociology",
     ],
-    
+}
 
+# MAJOR_ALIASES is keyed canonical -> aliases, which is the wrong direction for the
+# per-row lookup "what is this name's canonical form?". Invert it once at import so
+# that lookup is a single hash hit instead of a scan over every canonical + alias.
+ALIAS_TO_CANONICAL = {
+    alias: canonical
+    for canonical, aliases in MAJOR_ALIASES.items()
+    for alias in aliases
 }
 
 MAJOR_ABSORPTIONS = {
@@ -424,11 +431,7 @@ class GroupedMajorListView(APIView):
             .values('major_name', 'university')
             .distinct()
         ):
-            name = row['major_name']
-            for canonical, aliases in MAJOR_ALIASES.items():
-                if name in aliases:
-                    name = canonical
-                    break
+            name = ALIAS_TO_CANONICAL.get(row['major_name'], row['major_name'])
             if name in all_names:
                 major_campuses.setdefault(name, set()).add(row['university'])
 
