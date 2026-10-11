@@ -38,4 +38,5 @@ jobs:
           cache-dependency-path: backend/requirements*.txt
       - run: pip install -r requirements-dev.txt
       - run: ruff check .
-      - run: python manage.py test api -v 2
+      - run: coverage run manage.py test api -v 2
+      - run: coverage report

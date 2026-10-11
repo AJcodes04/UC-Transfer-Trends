@@ -27,3 +27,10 @@ class GroupMajorsFunctionTests(TestCase):
     def test_empty_input(self):
         from api.services.major_grouping import group_majors
         self.assertEqual(group_majors([], []), [])
+
+    def test_absorbed_child_is_moved_out_of_its_regex_group(self):
+        from api.services.major_grouping import group_majors
+        rows = [self._row('Mathematics'), self._row('Mathematics - Applied Science'), self._row('Physics')]
+        (math, *_rest) = [g for g in group_majors(rows, []) if g['name'] == 'Mathematics']
+        self.assertEqual([r['name'] for r in math['related']], ['Mathematics - Applied Science'])
+        self.assertNotIn('Mathematics - Applied Science', [g['name'] for g in group_majors(rows, [])])

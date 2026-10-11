@@ -41,3 +41,10 @@ class CsvImportHelperTests(TestCase):
         rows = [CampusStats(campus='UCB', year=2024, applicants=9, admits=2, enrolls=1)]
         self.assertEqual(upsert(CampusStats, rows, ['campus', 'year'], fields), (0, 1))
         self.assertEqual(CampusStats.objects.get(campus='UCB', year=2024).applicants, 9)
+
+    def test_malformed_values_degrade_to_none_or_zero(self):
+        from api.services.csv_import import parse_gpa_range, parse_int, parse_rate
+        self.assertEqual(parse_gpa_range('3.5'), (None, None))
+        self.assertEqual(parse_gpa_range('abc - def'), (None, None))
+        self.assertIsNone(parse_rate('n/a%'))
+        self.assertEqual(parse_int('abc'), 0)

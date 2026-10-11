@@ -19,3 +19,7 @@ class ErrorShapeTests(TestCase):
         response = APIClient().post('/api/health/')
         self.assertEqual(response.status_code, 405)
         self.assertEqual(list(response.data), ['error'])
+
+    def test_non_api_exceptions_are_left_to_django(self):
+        from api.errors import api_exception_handler
+        self.assertIsNone(api_exception_handler(RuntimeError('x'), {}))

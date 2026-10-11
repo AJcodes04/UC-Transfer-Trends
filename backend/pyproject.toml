@@ -13,3 +13,11 @@ section-order = ["future", "standard-library", "third-party", "django", "first-p
 
 [tool.ruff.lint.isort.sections]
 django = ["django", "rest_framework", "drf_spectacular", "corsheaders"]
+
+[tool.coverage.run]
+source = ["api", "uctransfer"]
+omit = ["*/migrations/*", "*/tests/*", "uctransfer/wsgi.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

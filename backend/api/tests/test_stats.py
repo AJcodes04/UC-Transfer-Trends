@@ -1,8 +1,9 @@
+from decimal import Decimal
 
 from django.test import TestCase
 from rest_framework.test import APIClient
 
-from api.tests.factories import make_transfer_data
+from api.tests.factories import make_campus_stats, make_transfer_data
 
 
 class MajorStatsViewTests(TestCase):
@@ -131,3 +132,103 @@ class MajorStatsViewTests(TestCase):
         response = self.client.get('/api/stats/by-major/Chemistry/')
         pairs = [(r['year'], r['university']) for r in response.data]
         self.assertEqual(pairs, sorted(pairs))
+
+    def test_gpa_bounds_are_min_and_max_across_rows(self):
+        make_transfer_data(university='UCD', major_name='Geology', year=2023, college_school='A',
+                           admit_gpa_min=Decimal('3.20'), admit_gpa_max=Decimal('3.80'))
+        make_transfer_data(university='UCD', major_name='Geology', year=2023, college_school='B',
+                           admit_gpa_min=Decimal('3.10'), admit_gpa_max=Decimal('3.95'))
+        row = self.client.get('/api/stats/by-major/Geology/').json()[0]
+        self.assertEqual((row['avg_admit_gpa_min'], row['avg_admit_gpa_max']), (3.1, 3.95))
+
+
+class SchoolStatsViewTests(TestCase):
+
+    def setUp(self):
+        self.client = APIClient()
+        make_transfer_data(university='UCB', year=2023, college_school='College Of Chemistry',
+                           major_name='Chemistry', applicants=100, admits=40, enrolls=20)
+        make_transfer_data(university='UCB', year=2023, college_school='College Of Letters & science',
+                           major_name='Physics', applicants=200, admits=50, enrolls=25)
+        make_transfer_data(university='UCB', year=2023, college_school='College Of Letters & science',
+                           major_name='History', applicants=20, admits=18, enrolls=9)
+        make_transfer_data(university='UCB', year=2022, college_school='College Of Chemistry',
+                           major_name='Chemistry', applicants=90, admits=45, enrolls=30)
+        make_transfer_data(university='UCLA', year=2023, college_school='College Of Letters & science',
+                           major_name='Physics', applicants=999, admits=1, enrolls=1)
+
+    def test_groups_by_year_and_college_for_one_campus(self):
+        rows = self.client.get('/api/stats/by-school/UCB/').data
+        self.assertEqual([(r['year'], r['college_school']) for r in rows], [
+            (2022, 'College Of Chemistry'),
+            (2023, 'College Of Chemistry'),
+            (2023, 'College Of Letters & science'),
+        ])
+
+    def test_totals_and_weighted_rate_within_a_college(self):
+        rows = self.client.get('/api/stats/by-school/UCB/').data
+        ls = next(r for r in rows if r['year'] == 2023 and r['college_school'].startswith('College Of Letters'))
+        self.assertEqual((ls['total_applicants'], ls['total_admits'], ls['total_enrolls']), (220, 68, 34))
+        self.assertAlmostEqual(ls['avg_admit_rate'], 68 / 220 * 100, places=4)
+        self.assertAlmostEqual(ls['avg_yield_rate'], 50.0, places=4)
+
+    def test_unknown_campus_is_empty(self):
+        response = self.client.get('/api/stats/by-school/UCX/')
+        self.assertEqual((response.status_code, response.data), (200, []))
+
+
+class CampusMajorStatsViewTests(TestCase):
+
+    def setUp(self):
+        self.client = APIClient()
+        make_transfer_data(university='UCLA', year=2023, major_name='Economics', college_school='A',
+                           applicants=100, admits=50, enrolls=25)
+        make_transfer_data(university='UCLA', year=2023, major_name='Pre-Economics', college_school='B',
+                           applicants=60, admits=30, enrolls=15)
+        make_transfer_data(university='UCLA', year=2023, major_name='Physics', applicants=10, admits=5, enrolls=1)
+        make_transfer_data(university='UCLA', year=2022, major_name='Physics', applicants=12, admits=6, enrolls=3)
+        make_transfer_data(university='UCB', year=2023, major_name='Economics', applicants=500, admits=5, enrolls=5)
+
+    def test_alias_rows_merge_under_canonical_name(self):
+        rows = self.client.get('/api/stats/campus-majors/UCLA/').data
+        names = sorted(r['major_name'] for r in rows if r['year'] == 2023)
+        self.assertEqual(names, ['Economics', 'Physics'])
+        econ = next(r for r in rows if r['major_name'] == 'Economics')
+        self.assertEqual((econ['total_applicants'], econ['total_admits'], econ['total_enrolls']), (160, 80, 40))
+        self.assertAlmostEqual(econ['avg_admit_rate'], 50.0)
+
+    def test_rows_use_major_name_key_and_are_ordered(self):
+        rows = self.client.get('/api/stats/campus-majors/UCLA/').data
+        self.assertNotIn('display_name', rows[0])
+        self.assertEqual([(r['year'], r['major_name']) for r in rows],
+                         [(2022, 'Physics'), (2023, 'Economics'), (2023, 'Physics')])
+
+    def test_other_campuses_excluded_and_unknown_campus_empty(self):
+        econ = next(r for r in self.client.get('/api/stats/campus-majors/UCLA/').data if r['major_name'] == 'Economics')
+        self.assertEqual(econ['total_applicants'], 160)
+        self.assertEqual(self.client.get('/api/stats/campus-majors/UCX/').data, [])
+
+
+class GeneralStatsViewTests(TestCase):
+
+    def setUp(self):
+        self.client = APIClient()
+        make_campus_stats(campus='UCLA', year=2023, applicants=30000, admits=7000, enrolls=3500,
+                          admit_gpa_min=Decimal('3.50'), admit_gpa_max=Decimal('4.00'))
+        make_campus_stats(campus='UCB', year=2023)
+        make_campus_stats(campus='UCB', year=2022, admit_rate=None, yield_rate=None)
+
+    def test_returns_one_row_per_campus_year_ordered(self):
+        rows = self.client.get('/api/stats/general/').data
+        self.assertEqual([(r['year'], r['campus']) for r in rows], [(2022, 'UCB'), (2023, 'UCB'), (2023, 'UCLA')])
+
+    def test_rows_pass_stored_values_through_with_numeric_gpas(self):
+        rows = self.client.get('/api/stats/general/').json()
+        ucla = next(r for r in rows if r['campus'] == 'UCLA')
+        self.assertEqual(ucla, {
+            'year': 2023, 'campus': 'UCLA', 'applicants': 30000, 'admits': 7000, 'enrolls': 3500,
+            'admit_rate': 50, 'yield_rate': 50, 'admit_gpa_min': 3.5, 'admit_gpa_max': 4.0,
+        })
+        ucb_2022 = next(r for r in rows if r['year'] == 2022)
+        self.assertIsNone(ucb_2022['admit_rate'])
+        self.assertIsNone(ucb_2022['admit_gpa_min'])
