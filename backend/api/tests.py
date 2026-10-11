@@ -508,3 +508,20 @@ class ArticulationFailedViewTests(TestCase):
     def test_scopes_to_requested_pair(self):
         response = self.client.get('/api/articulation/sbcc/ucla/failed/')
         self.assertEqual([e['major'] for e in response.data], ['Art, B.A.'])
+
+
+class ArticulationPathSafetyTests(TestCase):
+
+    def setUp(self):
+        self.client = APIClient()
+
+    def test_dot_dot_codes_are_rejected(self):
+        self.assertEqual(self.client.get('/api/articulation/../campuses/').data, [])
+        self.assertEqual(self.client.get('/api/articulation/../csv.exports/majors/').data, [])
+        self.assertEqual(self.client.get('/api/articulation/../csv.exports/failed/').data, [])
+        self.assertEqual(self.client.get('/api/articulation/../csv.exports/x/').status_code, 404)
+
+    def test_articulation_dir_rejects_non_slug_codes(self):
+        from api.views import _articulation_dir
+        for bad in ('..', 'a/b', 'a b', '.hidden', ''):
+            self.assertIsNone(_articulation_dir(bad), bad)

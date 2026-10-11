@@ -745,9 +745,9 @@ class ArticulationCollegesView(APIView):
 
 class ArticulationUCsView(APIView):
     def get(self, request, cc_code):
-        cc_dir = ARTICULATION_DIR / cc_code.lower()
+        cc_dir = _articulation_dir(cc_code)
         campuses = []
-        if cc_dir.is_dir():
+        if cc_dir is not None:
             for uc_dir in sorted(cc_dir.iterdir()):
                 if uc_dir.is_dir():
                     code = uc_dir.name
@@ -764,10 +764,22 @@ def _slugify(text):
     return re.sub(r'[^a-z0-9]+', '_', text).strip('_')
 
 
+_CODE_RE = re.compile(r'^[a-z0-9_-]+$')
+
+
+def _articulation_dir(*codes):
+    """Join URL codes under ARTICULATION_DIR, or None if any code is not a plain slug or the dir is missing."""
+    codes = [c.lower() for c in codes]
+    if not all(_CODE_RE.match(c) for c in codes):
+        return None
+    path = ARTICULATION_DIR.joinpath(*codes)
+    return path if path.is_dir() else None
+
+
 def _agreement_files(cc_code, uc_code):
     """Map major slug -> newest agreement file across every academic year folder."""
-    uc_dir = ARTICULATION_DIR / cc_code.lower() / uc_code.lower()
-    if not uc_dir.is_dir():
+    uc_dir = _articulation_dir(cc_code, uc_code)
+    if uc_dir is None:
         return {}
     files = {}
     for year_dir in sorted((d for d in uc_dir.iterdir() if d.is_dir()), key=lambda d: d.name):
