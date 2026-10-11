@@ -5,7 +5,10 @@ from pathlib import Path
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.db.models import Sum, Avg, Count, Max, Min, Case, When, Value, CharField
+from django.db.models import (
+    Sum, Max, Min, Case, When, Value, CharField, FloatField, ExpressionWrapper,
+)
+from django.db.models.functions import NullIf
 from django_filters import rest_framework as filters
 
 from .models import TransferData, CampusStats
@@ -493,19 +496,32 @@ class DisciplineListView(APIView):
         return Response(list(disciplines))
 
 
+def _weighted_rate(numerator, denominator):
+    """Percent of summed numerator over summed denominator; null when the denominator is zero."""
+    return ExpressionWrapper(
+        Sum(numerator) * 100.0 / NullIf(Sum(denominator), 0),
+        output_field=FloatField(),
+    )
+
+
+STAT_AGGREGATES = {
+    'total_applicants': Sum('applicants'),
+    'total_admits': Sum('admits'),
+    'total_enrolls': Sum('enrolls'),
+    'avg_admit_rate': _weighted_rate('admits', 'applicants'),
+    'avg_yield_rate': _weighted_rate('enrolls', 'admits'),
+    'avg_admit_gpa_min': Min('admit_gpa_min'),
+    'avg_admit_gpa_max': Max('admit_gpa_max'),
+}
+
+
 class GeneralStatsView(APIView):
     def get(self, request):
         stats = (
             CampusStats.objects
-            .values('year', 'campus')
-            .annotate(
-                applicants=Sum('applicants'),
-                admits=Sum('admits'),
-                enrolls=Sum('enrolls'),
-                admit_rate=Avg('admit_rate'),
-                yield_rate=Avg('yield_rate'),
-                admit_gpa_min=Min('admit_gpa_min'),
-                admit_gpa_max=Max('admit_gpa_max'),
+            .values(
+                'year', 'campus', 'applicants', 'admits', 'enrolls',
+                'admit_rate', 'yield_rate', 'admit_gpa_min', 'admit_gpa_max',
             )
             .order_by('year', 'campus')
         )
@@ -518,15 +534,7 @@ class SchoolStatsView(APIView):
             TransferData.objects
             .filter(university=school)
             .values('year', 'college_school')
-            .annotate(
-                total_applicants=Sum('applicants'),
-                total_admits=Sum('admits'),
-                total_enrolls=Sum('enrolls'),
-                avg_admit_rate=Avg('admit_rate'),
-                avg_yield_rate=Avg('yield_rate'),
-                avg_admit_gpa_min=Min('admit_gpa_min'),
-                avg_admit_gpa_max=Max('admit_gpa_max'),
-            )
+            .annotate(**STAT_AGGREGATES)
             .order_by('year', 'college_school')
         )
         return Response(list(stats))
@@ -558,15 +566,7 @@ class CampusMajorStatsView(APIView):
         stats = list(
             qs
             .values('year', group_field)
-            .annotate(
-                total_applicants=Sum('applicants'),
-                total_admits=Sum('admits'),
-                total_enrolls=Sum('enrolls'),
-                avg_admit_rate=Avg('admit_rate'),
-                avg_yield_rate=Avg('yield_rate'),
-                avg_admit_gpa_min=Min('admit_gpa_min'),
-                avg_admit_gpa_max=Max('admit_gpa_max'),
-            )
+            .annotate(**STAT_AGGREGATES)
             .order_by('year', group_field)
         )
 
@@ -589,15 +589,7 @@ class MajorStatsView(APIView):
             TransferData.objects
             .filter(major_name__in=names)
             .values('year', 'university')
-            .annotate(
-                total_applicants=Sum('applicants'),
-                total_admits=Sum('admits'),
-                total_enrolls=Sum('enrolls'),
-                avg_admit_rate=Avg('admit_rate'),
-                avg_yield_rate=Avg('yield_rate'),
-                avg_admit_gpa_min=Min('admit_gpa_min'),
-                avg_admit_gpa_max=Max('admit_gpa_max'),
-            )
+            .annotate(**STAT_AGGREGATES)
             .order_by('year', 'university')
         )
         return Response(list(stats))

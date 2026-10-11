@@ -319,6 +319,20 @@ class MajorStatsViewTests(TestCase):
         self.assertEqual(rows['UCB']['total_applicants'], 60)
         self.assertEqual(rows['UCLA']['total_applicants'], 40)
 
+    def test_rates_are_weighted_by_volume(self):
+        """UCB 2023 rows: 30/50 and 5/10 admits -> 35/60 = 58.33%, not the row mean of 55%."""
+        response = self.client.get('/api/stats/by-major/African American Studies/')
+        ucb = next(r for r in response.data if r['university'] == 'UCB')
+        self.assertAlmostEqual(ucb['avg_admit_rate'], 58.33, places=2)
+        self.assertAlmostEqual(ucb['avg_yield_rate'], 18 / 35 * 100, places=2)
+
+    def test_zero_applicants_gives_null_rate(self):
+        make_transfer_data(university='UCM', major_name='Ghost', year=2023,
+                           applicants=0, admits=0, enrolls=0, admit_rate=None, yield_rate=None)
+        response = self.client.get('/api/stats/by-major/Ghost/')
+        self.assertIsNone(response.data[0]['avg_admit_rate'])
+        self.assertIsNone(response.data[0]['avg_yield_rate'])
+
     def test_alias_query_by_alias_name(self):
         """Querying by alias name does NOT trigger consolidation.
 
