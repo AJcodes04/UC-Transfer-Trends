@@ -355,3 +355,24 @@ class MajorStatsViewTests(TestCase):
         response = self.client.get('/api/stats/by-major/Chemistry/')
         pairs = [(r['year'], r['university']) for r in response.data]
         self.assertEqual(pairs, sorted(pairs))
+
+
+# ─────────────────────────────────────────────────────────────────
+# 4. Major lookup tables
+# ─────────────────────────────────────────────────────────────────
+class MajorTableTests(TestCase):
+
+    def test_alias_and_absorption_tables_do_not_overlap(self):
+        """A name is either a renamed major (alias) or a distinct grouped major (absorption), never both."""
+        from api.views import MAJOR_ALIASES, MAJOR_ABSORPTIONS
+        aliases = {a for names in MAJOR_ALIASES.values() for a in names}
+        children = {c for names in MAJOR_ABSORPTIONS.values() for c in names}
+        self.assertEqual(aliases & children, set())
+
+    def test_alias_maps_to_single_canonical(self):
+        from api.views import MAJOR_ALIASES
+        seen = {}
+        for canonical, names in MAJOR_ALIASES.items():
+            for name in names:
+                self.assertNotIn(name, seen, f'{name!r} aliased to both {seen.get(name)!r} and {canonical!r}')
+                seen[name] = canonical

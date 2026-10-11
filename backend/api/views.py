@@ -199,7 +199,6 @@ MAJOR_ABSORPTIONS = {
         'Biological Anthropology',
     ],
     'Mathematics': [
-        'Pre-Mathematics',
         'Pre-Mathematics - Computer Science',
         'Pre-Mathematics for Teaching',
         'Pre-Mathematics of Computation',
@@ -211,9 +210,7 @@ MAJOR_ABSORPTIONS = {
         'Mathematics Theory & Computation',
         'Mathematical Analytics and Operations Research',
         'Mathematical Sciences',
-        'Pre-Applied Mathematics',
         'Applied Mathematics',
-        'Applied and Computational Mathematics',
         'Mathematics Education'
     ],
     'Chemistry': [
@@ -233,7 +230,7 @@ MAJOR_ABSORPTIONS = {
         'Electrical Engineering & Computer Sciences & Materials Science and Engineering',
         'Electrical Engineering and Computer Sciences and Nuclear Engineering',
         'Energy Engineering',
-        'Engineering Mathematics',
+        'Engineering Mathematics - Mathematics Science',
     ],
     'Biology': [
         'Molecular & Cell Biology',
@@ -244,7 +241,6 @@ MAJOR_ABSORPTIONS = {
         'Integrative Biology',
         'Evolution, Ecology & Biodiversity',
         'Biochemistry & Cell Biology',
-        'Cell, Molecular, & Developmental Biology',
         'Genetics & Plant Biology',
         'Genetics and Genomics',
         'Global Disease Biology',
@@ -252,7 +248,6 @@ MAJOR_ABSORPTIONS = {
         'Microbiology',
         'Molecular & Medical Microbiology',
         'Molecular Biology',
-        'Molecular, Cell, & Developmental Biology',
         'Plant Biology',
         'Pre Human Biology and Society',
         'Pre-Computational & Systems Biology',
@@ -277,7 +272,6 @@ MAJOR_ABSORPTIONS = {
         'Asian Studies Area II',
         'East Asian Studies',
         'East Asian Cultures',
-        'East Asian Religion, Thought and Culture',
         'East Asian Religion, Thought, and Culture',
         'Asian Humanities',
         'Asian Languages and Linguistics',
@@ -360,7 +354,6 @@ MAJOR_ABSORPTIONS = {
         'Global Economics',
         'Managerial Economics',
         'Quantitative Economics',
-        'Pre-Economics',
         'Economics and Accounting',
     ],
     'Physics': [
