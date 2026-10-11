@@ -22,26 +22,22 @@ FAILED_SCRAPES_FILE = ARTICULATION_DIR / 'failed_scrapes.json'
 
 
 def _count_rows(agreement_data: dict) -> int:
-    """
-    Count articulation rows in an agreement JSON, handling both old and new formats.
-
-    Old format: sections[].rows[]  (flat list)
-    New format: sections[].groups[].options[].rows[]  (grouped structure)
-
-    We count the number of unique UC requirement rows so the major list card
-    can show a meaningful "N courses" badge.
-    """
+    """Number of UC requirements a student must satisfy; alternatives in a choice group count once."""
     count = 0
     for section in agreement_data.get('sections', []):
-        # New format: groups with options containing rows
         groups = section.get('groups', [])
-        if groups:
-            for group in groups:
-                for option in group.get('options', []):
-                    count += len(option.get('rows', []))
-        else:
-            # Old format: flat rows list
+        if not groups:
             count += len(section.get('rows', []))
+            continue
+        for group in groups:
+            option_sizes = [len(o.get('rows', [])) for o in group.get('options', [])]
+            logic = group.get('group_logic')
+            if logic == 'SELECT_ONE':
+                count += max(option_sizes, default=0)
+            elif logic == 'SELECT_N' and group.get('select_n'):
+                count += min(group['select_n'], sum(option_sizes))
+            else:
+                count += sum(option_sizes)
     return count
 
 

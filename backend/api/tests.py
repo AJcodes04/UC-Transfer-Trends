@@ -438,3 +438,35 @@ class TranscriptRateLimitTests(TestCase):
         self.assertEqual(response.status_code, 429)
         self.assertEqual(response['X-RateLimit-Remaining'], '0')
         self.assertIn(str(DAILY_LIMIT), response.data['error'])
+
+
+# ─────────────────────────────────────────────────────────────────
+# 6. Articulation helpers
+# ─────────────────────────────────────────────────────────────────
+class CountRowsTests(TestCase):
+
+    def _group(self, logic, option_sizes, select_n=None):
+        return {
+            'group_logic': logic,
+            'select_n': select_n,
+            'options': [{'rows': [{}] * n} for n in option_sizes],
+        }
+
+    def test_flat_legacy_rows(self):
+        from api.views import _count_rows
+        self.assertEqual(_count_rows({'sections': [{'rows': [{}, {}, {}]}]}), 3)
+
+    def test_complete_all_sums_rows(self):
+        from api.views import _count_rows
+        data = {'sections': [{'groups': [self._group('COMPLETE_ALL', [2]), self._group('COMPLETE_ALL', [1])]}]}
+        self.assertEqual(_count_rows(data), 3)
+
+    def test_select_one_counts_largest_pathway_once(self):
+        from api.views import _count_rows
+        data = {'sections': [{'groups': [self._group('SELECT_ONE', [2, 4, 3])]}]}
+        self.assertEqual(_count_rows(data), 4)
+
+    def test_select_n_counts_n_not_pool_size(self):
+        from api.views import _count_rows
+        data = {'sections': [{'groups': [self._group('SELECT_N', [3], select_n=1)]}]}
+        self.assertEqual(_count_rows(data), 1)
