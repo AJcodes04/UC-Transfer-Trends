@@ -59,9 +59,6 @@ class TransferData(models.Model):
         ]
         indexes = [
             models.Index(fields=['university', 'year']),
-            models.Index(fields=['year', 'major_name']),
-            models.Index(fields=['broad_discipline']),
-            models.Index(fields=['university', 'year', 'major_name']),
         ]
 
     def __str__(self):
