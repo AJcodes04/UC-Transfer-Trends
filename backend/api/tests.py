@@ -381,13 +381,13 @@ class MajorTableTests(TestCase):
 
     def test_alias_and_absorption_tables_do_not_overlap(self):
         """A name is either a renamed major (alias) or a distinct grouped major (absorption), never both."""
-        from api.views import MAJOR_ALIASES, MAJOR_ABSORPTIONS
+        from api.constants.majors import MAJOR_ALIASES, MAJOR_ABSORPTIONS
         aliases = {a for names in MAJOR_ALIASES.values() for a in names}
         children = {c for names in MAJOR_ABSORPTIONS.values() for c in names}
         self.assertEqual(aliases & children, set())
 
     def test_alias_maps_to_single_canonical(self):
-        from api.views import MAJOR_ALIASES
+        from api.constants.majors import MAJOR_ALIASES
         seen = {}
         for canonical, names in MAJOR_ALIASES.items():
             for name in names:
@@ -414,7 +414,7 @@ class TranscriptRateLimitTests(TestCase):
         return SimpleUploadedFile('t.pdf', b'%PDF-1.4 fake', content_type='application/pdf')
 
     def test_limiter_counts_to_limit_then_blocks(self):
-        from api.transcript import DAILY_LIMIT, _check_rate_limit
+        from api.views.transcript import DAILY_LIMIT, _check_rate_limit
         for i in range(DAILY_LIMIT):
             allowed, remaining = _check_rate_limit('1.2.3.4')
             self.assertTrue(allowed)
@@ -431,7 +431,7 @@ class TranscriptRateLimitTests(TestCase):
 
     def test_over_limit_returns_429_with_header_and_limit_in_message(self):
         from django.core.cache import cache
-        from api.transcript import DAILY_LIMIT
+        from api.views.transcript import DAILY_LIMIT
         cache.set('transcript_ratelimit:127.0.0.1', DAILY_LIMIT, timeout=60)
         response = self.client.post('/api/transcript/upload/', {'file': self._pdf()}, format='multipart')
         self.assertEqual(response.status_code, 429)
@@ -452,23 +452,23 @@ class CountRowsTests(TestCase):
         }
 
     def test_flat_legacy_rows(self):
-        from api.views import _count_rows
-        self.assertEqual(_count_rows({'sections': [{'rows': [{}, {}, {}]}]}), 3)
+        from api.services.articulation import count_rows
+        self.assertEqual(count_rows({'sections': [{'rows': [{}, {}, {}]}]}), 3)
 
     def test_complete_all_sums_rows(self):
-        from api.views import _count_rows
+        from api.services.articulation import count_rows
         data = {'sections': [{'groups': [self._group('COMPLETE_ALL', [2]), self._group('COMPLETE_ALL', [1])]}]}
-        self.assertEqual(_count_rows(data), 3)
+        self.assertEqual(count_rows(data), 3)
 
     def test_select_one_counts_largest_pathway_once(self):
-        from api.views import _count_rows
+        from api.services.articulation import count_rows
         data = {'sections': [{'groups': [self._group('SELECT_ONE', [2, 4, 3])]}]}
-        self.assertEqual(_count_rows(data), 4)
+        self.assertEqual(count_rows(data), 4)
 
     def test_select_n_counts_n_not_pool_size(self):
-        from api.views import _count_rows
+        from api.services.articulation import count_rows
         data = {'sections': [{'groups': [self._group('SELECT_N', [3], select_n=1)]}]}
-        self.assertEqual(_count_rows(data), 1)
+        self.assertEqual(count_rows(data), 1)
 
 
 class ArticulationFailedViewTests(TestCase):
@@ -476,7 +476,7 @@ class ArticulationFailedViewTests(TestCase):
     def setUp(self):
         import json, tempfile
         from pathlib import Path
-        from api import views
+        from api.services import articulation
         self.client = APIClient()
         self.tmp = tempfile.TemporaryDirectory()
         root = Path(self.tmp.name)
@@ -489,8 +489,8 @@ class ArticulationFailedViewTests(TestCase):
             {'sending_code': 'SBCC', 'receiving_code': 'UCLA', 'academic_year': '2024-25', 'major': 'Art, B.A.'},
         ]))
         self.patches = [
-            patch.object(views, 'ARTICULATION_DIR', root),
-            patch.object(views, 'FAILED_SCRAPES_FILE', root / 'failed_scrapes.json'),
+            patch.object(articulation, 'ARTICULATION_DIR', root),
+            patch.object(articulation, 'FAILED_SCRAPES_FILE', root / 'failed_scrapes.json'),
         ]
         for p in self.patches:
             p.start()
@@ -521,9 +521,9 @@ class ArticulationPathSafetyTests(TestCase):
         self.assertEqual(self.client.get('/api/articulation/../csv.exports/x/').status_code, 404)
 
     def test_articulation_dir_rejects_non_slug_codes(self):
-        from api.views import _articulation_dir
+        from api.services.articulation import articulation_dir
         for bad in ('..', 'a/b', 'a b', '.hidden', ''):
-            self.assertIsNone(_articulation_dir(bad), bad)
+            self.assertIsNone(articulation_dir(bad), bad)
 
 
 class HealthViewTests(TestCase):
