@@ -5,7 +5,7 @@ from django.db.models.functions import NullIf
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from api.constants.majors import MAJOR_ALIASES
+from api.constants.majors import ALIAS_TO_CANONICAL, MAJOR_ALIASES
 from api.models import CampusStats, TransferData
 
 
@@ -26,6 +26,13 @@ STAT_AGGREGATES = {
     'avg_admit_gpa_min': Min('admit_gpa_min'),
     'avg_admit_gpa_max': Max('admit_gpa_max'),
 }
+
+# SQL CASE mapping every alias to its canonical major; built once, reused per request.
+CANONICAL_MAJOR_NAME = Case(
+    *(When(major_name=alias, then=Value(canonical)) for alias, canonical in ALIAS_TO_CANONICAL.items()),
+    default='major_name',
+    output_field=CharField(),
+)
 
 
 class GeneralStatsView(APIView):
@@ -55,52 +62,25 @@ class SchoolStatsView(APIView):
 
 class CampusMajorStatsView(APIView):
     def get(self, request, campus):
-        # Only merge aliases (same major, different name), not absorptions
-        # (distinct majors grouped for navigation only).
-        whens = []
-        for canonical, aliases in MAJOR_ALIASES.items():
-            for alias in aliases:
-                whens.append(When(major_name=alias, then=Value(canonical)))
-
-        qs = TransferData.objects.filter(university=campus)
-
-        if whens:
-            qs = qs.annotate(
-                display_name=Case(
-                    *whens,
-                    default='major_name',
-                    output_field=CharField(),
-                )
-            )
-            group_field = 'display_name'
-        else:
-            group_field = 'major_name'
-
-        stats = list(
-            qs
-            .values('year', group_field)
+        stats = (
+            TransferData.objects
+            .filter(university=campus)
+            .annotate(display_name=CANONICAL_MAJOR_NAME)
+            .values('year', 'display_name')
             .annotate(**STAT_AGGREGATES)
-            .order_by('year', group_field)
+            .order_by('year', 'display_name')
         )
-
-        if group_field != 'major_name':
-            for row in stats:
-                row['major_name'] = row.pop(group_field)
-
-        return Response(stats)
+        rows = list(stats)
+        for row in rows:
+            row['major_name'] = row.pop('display_name')
+        return Response(rows)
 
 
 class MajorStatsView(APIView):
     def get(self, request, major):
-        names = [major]
-        for canonical, aliases in MAJOR_ALIASES.items():
-            if major == canonical:
-                names.extend(aliases)
-                break
-
         stats = (
             TransferData.objects
-            .filter(major_name__in=names)
+            .filter(major_name__in=[major, *MAJOR_ALIASES.get(major, [])])
             .values('year', 'university')
             .annotate(**STAT_AGGREGATES)
             .order_by('year', 'university')
