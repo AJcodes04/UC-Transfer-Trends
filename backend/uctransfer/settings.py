@@ -82,6 +82,7 @@ TEMPLATES = [
 ]
 
 REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'api.errors.api_exception_handler',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],

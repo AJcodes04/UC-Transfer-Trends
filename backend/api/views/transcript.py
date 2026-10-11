@@ -10,9 +10,12 @@ import logging
 
 from django.conf import settings
 from django.core.cache import cache
+from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
+
+from api.errors import error_response
 
 import anthropic
 import pdfplumber
@@ -100,18 +103,18 @@ class TranscriptUploadView(APIView):
 
     def post(self, request):
         if not settings.ANTHROPIC_API_KEY:
-            return Response({'error': 'ANTHROPIC_API_KEY is not configured.'}, status=500)
+            return error_response('ANTHROPIC_API_KEY is not configured.', status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         uploaded = request.FILES.get('file')
         problem = _validate_upload(uploaded)
         if problem:
-            return Response({'error': problem}, status=400)
+            return error_response(problem, status.HTTP_400_BAD_REQUEST)
 
         allowed, remaining = _check_rate_limit(_get_client_ip(request))
         if not allowed:
-            response = Response(
-                {'error': f'Daily limit reached. You can parse up to {DAILY_LIMIT} transcripts per day. Please try again tomorrow.'},
-                status=429,
+            response = error_response(
+                f'Daily limit reached. You can parse up to {DAILY_LIMIT} transcripts per day. Please try again tomorrow.',
+                status.HTTP_429_TOO_MANY_REQUESTS,
             )
         else:
             response = self._parse(uploaded)
@@ -124,21 +127,21 @@ class TranscriptUploadView(APIView):
             try:
                 with pdfplumber.open(io.BytesIO(uploaded.read())) as pdf:
                     if len(pdf.pages) > MAX_PAGES:
-                        return Response({'error': f'PDF has too many pages (max {MAX_PAGES}).'}, status=400)
+                        return error_response(f'PDF has too many pages (max {MAX_PAGES}).', status.HTTP_400_BAD_REQUEST)
                     for page in pdf.pages:
                         text = page.extract_text() or ''
                         if text.strip():
                             pages_text.append(text)
             except Exception:
                 logger.warning('Unreadable transcript PDF %r', uploaded.name, exc_info=True)
-                return Response({'error': 'Could not read the PDF file.'}, status=400)
+                return error_response('Could not read the PDF file.', status.HTTP_400_BAD_REQUEST)
 
             if not pages_text:
-                return Response({'error': 'Could not extract any text from the PDF.'}, status=400)
+                return error_response('Could not extract any text from the PDF.', status.HTTP_400_BAD_REQUEST)
 
             full_text = '\n\n--- PAGE BREAK ---\n\n'.join(pages_text)
             if len(full_text) > MAX_TEXT_CHARS:
-                return Response({'error': 'Transcript text is too long to parse.'}, status=400)
+                return error_response('Transcript text is too long to parse.', status.HTTP_400_BAD_REQUEST)
 
             message = _anthropic_client().messages.create(
                 model=MODEL,
@@ -151,7 +154,7 @@ class TranscriptUploadView(APIView):
 
             if message.stop_reason == 'max_tokens':
                 logger.warning('Transcript parse hit max_tokens for %r', uploaded.name)
-                return Response({'error': 'Transcript is too long for the parser.'}, status=500)
+                return error_response('Transcript is too long for the parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)
 
             response_text = message.content[0].text.strip()
             if response_text.startswith('```'):
@@ -162,7 +165,7 @@ class TranscriptUploadView(APIView):
 
             courses = json.loads(response_text)
             if not isinstance(courses, list):
-                return Response({'error': 'Unexpected response format from parser.'}, status=500)
+                return error_response('Unexpected response format from parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)
 
             for course in courses:
                 course['prefix'] = str(course.get('prefix', '')).upper().replace(' ', '')
@@ -186,10 +189,10 @@ class TranscriptUploadView(APIView):
 
         except json.JSONDecodeError:
             logger.warning('Transcript parser returned non-JSON output (stop_reason=%s)', message.stop_reason)
-            return Response({'error': 'Failed to parse response. Please try again.'}, status=500)
+            return error_response('Failed to parse response. Please try again.', status.HTTP_500_INTERNAL_SERVER_ERROR)
         except anthropic.APIError:
             logger.exception('Anthropic API error while parsing transcript')
-            return Response({'error': 'AI service error. Please try again.'}, status=502)
+            return error_response('AI service error. Please try again.', status.HTTP_502_BAD_GATEWAY)
         except Exception:
             logger.exception('Unexpected error while parsing transcript')
-            return Response({'error': 'Transcript parsing failed.'}, status=500)
+            return error_response('Transcript parsing failed.', status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -1,3 +1,4 @@
+from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -23,7 +24,7 @@ class ArticulationDetailView(APIView):
     def get(self, request, cc_code, uc_code, major_slug):
         data = articulation.load_agreement(cc_code, uc_code, major_slug)
         if data is None:
-            return Response({'error': 'Not found'}, status=404)
+            raise NotFound('No agreement found for this major.')
         return Response(data)
 
 

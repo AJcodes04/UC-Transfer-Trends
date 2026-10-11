@@ -486,7 +486,9 @@ class ArticulationPathSafetyTests(TestCase):
         self.assertEqual(self.client.get('/api/articulation/../campuses/').data, [])
         self.assertEqual(self.client.get('/api/articulation/../csv.exports/majors/').data, [])
         self.assertEqual(self.client.get('/api/articulation/../csv.exports/failed/').data, [])
-        self.assertEqual(self.client.get('/api/articulation/../csv.exports/x/').status_code, 404)
+        response = self.client.get('/api/articulation/../csv.exports/x/')
+        self.assertEqual(response.status_code, 404)
+        self.assertIn('error', response.data)
 
     def test_articulation_dir_rejects_non_slug_codes(self):
         from api.services.articulation import articulation_dir
@@ -527,3 +529,20 @@ class GroupMajorsFunctionTests(TestCase):
     def test_empty_input(self):
         from api.services.major_grouping import group_majors
         self.assertEqual(group_majors([], []), [])
+
+
+class ErrorShapeTests(TestCase):
+
+    def test_drf_exceptions_render_as_error_key(self):
+        from rest_framework.exceptions import NotFound, Throttled
+        from api.errors import api_exception_handler
+        self.assertEqual(api_exception_handler(NotFound('gone'), {}).data, {'error': 'gone'})
+        response = api_exception_handler(Throttled(wait=7), {})
+        self.assertEqual(response.status_code, 429)
+        self.assertIn('error', response.data)
+        self.assertEqual(response['Retry-After'], '7')
+
+    def test_unknown_route_method_uses_error_key(self):
+        response = APIClient().post('/api/health/')
+        self.assertEqual(response.status_code, 405)
+        self.assertEqual(list(response.data), ['error'])
