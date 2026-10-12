@@ -1,21 +1,9 @@
-from django.db.models import (
-    Case,
-    CharField,
-    ExpressionWrapper,
-    F,
-    FloatField,
-    Max,
-    Min,
-    Sum,
-    Value,
-    When,
-)
-from django.db.models.functions import NullIf
+from django.db.models import ExpressionWrapper, F, FloatField, Max, Min, Q, Sum
+from django.db.models.functions import Coalesce, NullIf
 from drf_spectacular.utils import extend_schema
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from api.constants.majors import ALIAS_TO_CANONICAL, MAJOR_ALIASES
 from api.models import CampusStats, TransferData
 from api.serializers import (
     CampusMajorStatsRowSerializer,
@@ -43,12 +31,8 @@ STAT_AGGREGATES = {
     'avg_admit_gpa_max': Max('admit_gpa_max'),
 }
 
-# SQL CASE mapping every alias to its canonical major; built once, reused per request.
-CANONICAL_MAJOR_NAME = Case(
-    *(When(major_name=alias, then=Value(canonical)) for alias, canonical in ALIAS_TO_CANONICAL.items()),
-    default='major_name',
-    output_field=CharField(),
-)
+# An alias row reports under its canonical major's name.
+CANONICAL_MAJOR_NAME = Coalesce(F('major__canonical__name'), F('major__name'))
 
 
 class GeneralStatsView(APIView):
@@ -82,16 +66,13 @@ class SchoolStatsView(APIView):
 class CampusMajorStatsView(APIView):
     @extend_schema(responses=CampusMajorStatsRowSerializer(many=True))
     def get(self, request, campus):
-        rows = list(
+        rows = (
             TransferData.objects
             .filter(campus__code=campus)
-            .annotate(display_name=CANONICAL_MAJOR_NAME)
-            .values('year', 'display_name')
+            .values('year', major_name=CANONICAL_MAJOR_NAME)
             .annotate(**STAT_AGGREGATES)
-            .order_by('year', 'display_name')
+            .order_by('year', 'major_name')
         )
-        for row in rows:
-            row['major_name'] = row.pop('display_name')
         return Response(CampusMajorStatsRowSerializer(rows, many=True).data)
 
 
@@ -100,7 +81,7 @@ class MajorStatsView(APIView):
     def get(self, request, major):
         rows = (
             TransferData.objects
-            .filter(major_name__in=[major, *MAJOR_ALIASES.get(major, [])])
+            .filter(Q(major__name=major) | Q(major__canonical__name=major))
             .values('year', university=F('campus__code'))
             .annotate(**STAT_AGGREGATES)
             .order_by('year', 'university')

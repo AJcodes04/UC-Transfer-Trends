@@ -41,12 +41,44 @@ class Campus(models.Model):
         return self.code
 
 
+class Major(models.Model):
+    """
+    One row per major spelling found in UC data.
+
+    canonical: set when this spelling is the same major under another name; stats merge into it.
+    parent: set when this major is listed under another one for navigation.
+    """
+    name = models.CharField(max_length=100, unique=True)
+    canonical = models.ForeignKey(
+        'self', null=True, blank=True, on_delete=models.PROTECT, related_name='aliases',
+    )
+    parent = models.ForeignKey(
+        'self', null=True, blank=True, on_delete=models.SET_NULL, related_name='children',
+    )
+
+    class Meta:
+        ordering = ['name']
+        constraints = [
+            models.CheckConstraint(
+                condition=Q(canonical__isnull=True) | Q(parent__isnull=True),
+                name='major_alias_has_no_parent',
+            ),
+        ]
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def canonical_id_or_self(self):
+        return self.canonical_id or self.id
+
+
 class TransferData(models.Model):
     campus = models.ForeignKey(Campus, on_delete=models.PROTECT, related_name='transfer_rows')
     year = models.IntegerField(db_index=True)
     broad_discipline = models.CharField(max_length=100)
     college_school = models.CharField(max_length=100)
-    major_name = models.CharField(max_length=100, db_index=True)
+    major = models.ForeignKey(Major, on_delete=models.PROTECT, related_name='transfer_rows')
     applicants = models.IntegerField()
     admits = models.IntegerField()
     enrolls = models.IntegerField()
@@ -60,12 +92,12 @@ class TransferData(models.Model):
     yield_rate = models.IntegerField(null=True, blank=True)
 
     class Meta:
-        ordering = ['-year', 'campus__code', 'major_name']
+        ordering = ['-year', 'campus__code', 'major__name']
         verbose_name = "Transfer Data"
         verbose_name_plural = "Transfer Data"
         constraints = [
             models.UniqueConstraint(
-                fields=['campus', 'year', 'major_name', 'college_school'],
+                fields=['campus', 'year', 'major', 'college_school'],
                 name='transferdata_unique_campus_year_major_college',
             ),
             *_count_checks('transferdata'),
@@ -75,7 +107,7 @@ class TransferData(models.Model):
         ]
 
     def __str__(self):
-        return f"{self.campus_id} {self.year} - {self.major_name}"
+        return f"{self.campus_id} {self.year} - {self.major_id}"
 
 
 class CampusStats(models.Model):

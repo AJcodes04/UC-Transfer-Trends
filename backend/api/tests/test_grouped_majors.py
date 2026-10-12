@@ -2,6 +2,7 @@
 from django.test import TestCase
 from rest_framework.test import APIClient
 
+from api.services.major_sync import sync_major_groups
 from api.tests.factories import make_transfer_data
 
 
@@ -46,6 +47,8 @@ class GroupedMajorListViewTests(TestCase):
         # ── Standalone major (no sub-majors, no absorption) ───────
         make_transfer_data(university='UCB', major_name='Physics', year=2023, applicants=250)
         make_transfer_data(university='UCLA', major_name='Physics', year=2023, applicants=200)
+
+        sync_major_groups()
 
     # --- helpers ---
 

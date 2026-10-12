@@ -4,7 +4,7 @@ from pathlib import Path
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from api.models import Campus, TransferData
+from api.models import Campus, Major, TransferData
 from api.services.csv_import import (
     first_present,
     parse_gpa_range,
@@ -13,6 +13,7 @@ from api.services.csv_import import (
     read_rows,
     upsert,
 )
+from api.services.major_sync import sync_major_groups
 
 # Words that stay lowercase in title case (unless they're the first word)
 SMALL_WORDS = {'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'nor',
@@ -100,7 +101,7 @@ COLLEGE_SCHOOL_ALIASES = {
 }
 
 
-UNIQUE_FIELDS = ['campus', 'year', 'major_name', 'college_school']
+UNIQUE_FIELDS = ['campus', 'year', 'major', 'college_school']
 UPDATE_FIELDS = [
     'broad_discipline', 'applicants', 'admits', 'enrolls',
     'admit_gpa_min', 'admit_gpa_max', 'enroll_gpa_min', 'enroll_gpa_max',
@@ -124,6 +125,7 @@ class Command(BaseCommand):
             return
 
         self.stdout.write(f'Found {len(csv_files)} CSV files in {data_dir}')
+        self.majors = {m.name: m for m in Major.objects.all()}
         total_inserted = total_updated = 0
         for csv_file in csv_files:
             match = FILENAME_RE.match(csv_file.name)
@@ -141,6 +143,13 @@ class Command(BaseCommand):
             self.stdout.write(f'  {csv_file.name}: {inserted} inserted, {updated} updated')
 
         self.stdout.write(self.style.SUCCESS(f'Done. {total_inserted} inserted, {total_updated} updated.'))
+        aliases, grouped = sync_major_groups()
+        self.stdout.write(f'Majors synced: {aliases} aliases, {grouped} grouped under a parent.')
+
+    def major_for(self, name):
+        if name not in self.majors:
+            self.majors[name] = Major.objects.create(name=name)
+        return self.majors[name]
 
     def parse_csv(self, filepath, campus, year):
         rows = []
@@ -159,7 +168,7 @@ class Command(BaseCommand):
                 year=year,
                 broad_discipline=row.get('Broad discipline', ''),
                 college_school=COLLEGE_SCHOOL_ALIASES.get((campus.code, college_school), college_school),
-                major_name=major_name,
+                major=self.major_for(major_name),
                 applicants=parse_int(row.get('Applicants')),
                 admits=parse_int(row.get('Admits')),
                 enrolls=parse_int(first_present(row, 'Enrolls', 'Enrollees')),

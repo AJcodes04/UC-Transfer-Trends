@@ -66,30 +66,31 @@ class ImportTransferDataTests(TestCase):
     def test_imports_rows_with_normalization(self):
         out, err = run('import_transfer_data', self.dir)
         self.assertEqual(TransferData.objects.count(), 3)
-        chem = TransferData.objects.get(major_name='Chemistry')
+        chem = TransferData.objects.get(major__name='Chemistry')
         self.assertEqual(chem.campus.code, 'UCB')
         self.assertEqual(chem.college_school, 'College Of Letters & science')
         self.assertEqual((chem.applicants, chem.admits, chem.enrolls), (1234, 400, 100))
         self.assertEqual((chem.admit_gpa_min, chem.enroll_gpa_max), (Decimal('3.64'), Decimal('3.90')))
         self.assertEqual((chem.admit_rate, chem.yield_rate), (32, 25))
-        masked = TransferData.objects.get(major_name='Pre-History')
+        masked = TransferData.objects.get(major__name='Pre-History')
         self.assertIsNone(masked.admit_gpa_min)
-        self.assertFalse(TransferData.objects.filter(major_name__icontains='invalid').exists())
+        self.assertFalse(TransferData.objects.filter(major__name__icontains='invalid').exists())
         self.assertIn('UCB-2023.csv: 2 inserted, 0 updated', out)
         self.assertIn('Done. 3 inserted, 0 updated.', out)
+        self.assertIn('Majors synced', out)
         self.assertIn('Skipping bad-name.csv', err)
 
     def test_reads_utf16_tab_exports_with_2025_column_names(self):
         run('import_transfer_data', self.dir)
         bio = TransferData.objects.get(campus__code='UCM', year=2018)
-        self.assertEqual((bio.major_name, bio.enrolls, bio.enroll_gpa_min), ('Biological Sciences', 9, Decimal('3.30')))
+        self.assertEqual((bio.major.name, bio.enrolls, bio.enroll_gpa_min), ('Biological Sciences', 9, Decimal('3.30')))
 
     def test_rerun_updates_changed_rows_instead_of_skipping(self):
         run('import_transfer_data', self.dir)
         path = self.dir / 'UCB-2023.csv'
         path.write_text(path.read_text().replace('"1,234",400', '"1,300",450'), encoding='utf-8')
         out, _ = run('import_transfer_data', self.dir)
-        chem = TransferData.objects.get(major_name='Chemistry')
+        chem = TransferData.objects.get(major__name='Chemistry')
         self.assertEqual((chem.applicants, chem.admits), (1300, 450))
         self.assertEqual(TransferData.objects.count(), 3)
         self.assertIn('Done. 0 inserted, 3 updated.', out)
@@ -98,7 +99,7 @@ class ImportTransferDataTests(TestCase):
         path = self.dir / 'UCB-2023.csv'
         path.write_text(path.read_text() + '\nSciences,Letters & Science,chemistry,7,7,7,,,7%,7%,', encoding='utf-8')
         run('import_transfer_data', self.dir)
-        self.assertEqual(TransferData.objects.get(major_name='Chemistry').applicants, 7)
+        self.assertEqual(TransferData.objects.get(major__name='Chemistry').applicants, 7)
 
     def test_missing_directory_reports_error_without_raising(self):
         out, err = run('import_transfer_data', self.dir / 'nowhere')

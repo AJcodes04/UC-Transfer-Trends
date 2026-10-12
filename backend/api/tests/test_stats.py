@@ -3,6 +3,7 @@ from decimal import Decimal
 from django.test import TestCase
 from rest_framework.test import APIClient
 
+from api.services.major_sync import sync_major_groups
 from api.tests.factories import make_campus_stats, make_transfer_data
 
 
@@ -44,6 +45,7 @@ class MajorStatsViewTests(TestCase):
         # ── Unrelated major (should never leak into other queries) ─
         make_transfer_data(university='UCB', major_name='Physics', year=2023,
                            applicants=200, admits=80, enrolls=40)
+        sync_major_groups()
 
     def test_returns_200(self):
         response = self.client.get('/api/stats/by-major/Chemistry/')
@@ -188,6 +190,7 @@ class CampusMajorStatsViewTests(TestCase):
         make_transfer_data(university='UCLA', year=2023, major_name='Physics', applicants=10, admits=5, enrolls=1)
         make_transfer_data(university='UCLA', year=2022, major_name='Physics', applicants=12, admits=6, enrolls=3)
         make_transfer_data(university='UCB', year=2023, major_name='Economics', applicants=500, admits=5, enrolls=5)
+        sync_major_groups()
 
     def test_alias_rows_merge_under_canonical_name(self):
         rows = self.client.get('/api/stats/campus-majors/UCLA/').data
