@@ -141,11 +141,11 @@ class TranscriptParseTests(TestCase):
     """Drives the full upload path with pdfplumber and the Anthropic client replaced by fakes."""
 
     COURSES = [
-        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': 5, 'grade': 'c'},
-        {'prefix': 'MATH', 'number': '1A', 'title': 'Calculus I', 'units': 5.0, 'grade': 'A'},
-        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 0, 'grade': 'P'},
-        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'W'},
-        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B+'},
+        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': 5, 'grade': 'c', 'needs_review': False},
+        {'prefix': 'MATH', 'number': '1A', 'title': 'Calculus I', 'units': 5.0, 'grade': 'A', 'needs_review': False},
+        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 0, 'grade': 'P', 'needs_review': True},
+        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'W', 'needs_review': False},
+        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B+', 'needs_review': False},
     ]
 
     def setUp(self):
@@ -180,6 +180,7 @@ class TranscriptParseTests(TestCase):
         self.assertEqual(by_key['ENGL 1']['grade'], 'B+')
         self.assertEqual(by_key['PE 022A']['units'], 0.0)
         self.assertEqual(by_key['MATH 1A']['units'], 5.0)
+        self.assertEqual([k for k, c in by_key.items() if c['needs_review']], ['PE 022A'])
         self.assertEqual(response['X-RateLimit-Remaining'], str(DAILY_LIMIT - 1))
 
     def test_detected_institution_is_returned_as_a_college(self):

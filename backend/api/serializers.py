@@ -90,6 +90,7 @@ class TranscriptCourseSerializer(serializers.Serializer):
     title = serializers.CharField(allow_blank=True)
     units = serializers.FloatField()
     grade = serializers.CharField(allow_blank=True)
+    needs_review = serializers.BooleanField()
 
 
 class TranscriptParseSerializer(serializers.Serializer):

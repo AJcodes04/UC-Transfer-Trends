@@ -47,6 +47,7 @@ Each course has exactly these fields:
 - "title": the course title as shown, in title case.
 - "units": the number of units/credits as a number (e.g. 4.5, 5.0).
 - "grade": the letter grade (e.g. "A", "A-", "B+", "W", "P", "NP"). For in-progress courses use "IP".
+- "needs_review": true if any field for this course was unclear or had to be guessed (garbled text, a watermark through the line, an ambiguous grade or unit count); otherwise false.
 
 Rules:
 - Include ALL courses: completed, in-progress, withdrawn, passed, etc.
@@ -62,8 +63,9 @@ COURSE_SCHEMA = {
         'title': {'type': 'string'},
         'units': {'type': 'number'},
         'grade': {'type': 'string'},
+        'needs_review': {'type': 'boolean'},
     },
-    'required': ['prefix', 'number', 'title', 'units', 'grade'],
+    'required': ['prefix', 'number', 'title', 'units', 'grade', 'needs_review'],
     'additionalProperties': False,
 }
 
