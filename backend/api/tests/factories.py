@@ -5,17 +5,22 @@ from unittest.mock import patch
 
 from django.test import TestCase
 
-from api.models import CampusStats, TransferData
+from api.constants.institutions import UC_NAMES
+from api.models import Campus, CampusStats, TransferData
 from api.services import articulation
+
+
+def campus(code='UCB'):
+    return Campus.objects.get_or_create(code=code, defaults={'name': UC_NAMES.get(code.lower(), code)})[0]
 
 
 def make_transfer_data(**kwargs):
     """
     Shortcut to create a TransferData row with sensible defaults.
-    Tests only need to specify the fields they care about.
+    Tests only need to specify the fields they care about; `university` takes a campus code.
     """
+    kwargs['campus'] = campus(kwargs.pop('university', 'UCB'))
     defaults = {
-        'university': 'UCB',
         'year': 2023,
         'broad_discipline': 'Sciences',
         'college_school': 'Letters & Science',
@@ -31,8 +36,9 @@ def make_transfer_data(**kwargs):
 
 
 def make_campus_stats(**kwargs):
+    code = kwargs.pop('campus', 'UCB')
+    kwargs['campus'] = code if isinstance(code, Campus) else campus(code)
     defaults = {
-        'campus': 'UCB',
         'year': 2023,
         'applicants': 1000,
         'admits': 500,

@@ -2,6 +2,7 @@ from django.db.models import (
     Case,
     CharField,
     ExpressionWrapper,
+    F,
     FloatField,
     Max,
     Min,
@@ -56,10 +57,11 @@ class GeneralStatsView(APIView):
         rows = (
             CampusStats.objects
             .values(
-                'year', 'campus', 'applicants', 'admits', 'enrolls',
+                'year', 'applicants', 'admits', 'enrolls',
                 'admit_rate', 'yield_rate', 'admit_gpa_min', 'admit_gpa_max',
+                campus_code=F('campus__code'),
             )
-            .order_by('year', 'campus')
+            .order_by('year', 'campus__code')
         )
         return Response(CampusStatsRowSerializer(rows, many=True).data)
 
@@ -69,7 +71,7 @@ class SchoolStatsView(APIView):
     def get(self, request, school):
         rows = (
             TransferData.objects
-            .filter(university=school)
+            .filter(campus__code=school)
             .values('year', 'college_school')
             .annotate(**STAT_AGGREGATES)
             .order_by('year', 'college_school')
@@ -82,7 +84,7 @@ class CampusMajorStatsView(APIView):
     def get(self, request, campus):
         rows = list(
             TransferData.objects
-            .filter(university=campus)
+            .filter(campus__code=campus)
             .annotate(display_name=CANONICAL_MAJOR_NAME)
             .values('year', 'display_name')
             .annotate(**STAT_AGGREGATES)
@@ -99,7 +101,7 @@ class MajorStatsView(APIView):
         rows = (
             TransferData.objects
             .filter(major_name__in=[major, *MAJOR_ALIASES.get(major, [])])
-            .values('year', 'university')
+            .values('year', university=F('campus__code'))
             .annotate(**STAT_AGGREGATES)
             .order_by('year', 'university')
         )

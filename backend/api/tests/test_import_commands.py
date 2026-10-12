@@ -67,7 +67,7 @@ class ImportTransferDataTests(TestCase):
         out, err = run('import_transfer_data', self.dir)
         self.assertEqual(TransferData.objects.count(), 3)
         chem = TransferData.objects.get(major_name='Chemistry')
-        self.assertEqual(chem.university, 'UCB')
+        self.assertEqual(chem.campus.code, 'UCB')
         self.assertEqual(chem.college_school, 'College Of Letters & science')
         self.assertEqual((chem.applicants, chem.admits, chem.enrolls), (1234, 400, 100))
         self.assertEqual((chem.admit_gpa_min, chem.enroll_gpa_max), (Decimal('3.64'), Decimal('3.90')))
@@ -81,7 +81,7 @@ class ImportTransferDataTests(TestCase):
 
     def test_reads_utf16_tab_exports_with_2025_column_names(self):
         run('import_transfer_data', self.dir)
-        bio = TransferData.objects.get(university='UCM', year=2018)
+        bio = TransferData.objects.get(campus__code='UCM', year=2018)
         self.assertEqual((bio.major_name, bio.enrolls, bio.enroll_gpa_min), ('Biological Sciences', 9, Decimal('3.30')))
 
     def test_rerun_updates_changed_rows_instead_of_skipping(self):
@@ -125,9 +125,9 @@ class ImportCampusDataTests(TestCase):
     def test_imports_and_is_idempotent(self):
         out, err = run('import_campus_data', self.dir)
         self.assertEqual(CampusStats.objects.count(), 2)
-        ucb = CampusStats.objects.get(campus='UCB', year=2024)
+        ucb = CampusStats.objects.get(campus__code='UCB', year=2024)
         self.assertEqual((ucb.applicants, ucb.admit_gpa_max, ucb.admit_rate), (20000, Decimal('3.98'), 25))
-        self.assertIsNone(CampusStats.objects.get(campus='UCLA').admit_gpa_min)
+        self.assertIsNone(CampusStats.objects.get(campus__code='UCLA').admit_gpa_min)
         self.assertIn('Skipping UCB-2024.csv', err)
         self.assertIn('Done. 2 inserted, 0 updated.', out)
         out, _ = run('import_campus_data', self.dir)

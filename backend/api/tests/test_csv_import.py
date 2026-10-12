@@ -1,6 +1,8 @@
 
 from django.test import TestCase
 
+from api.tests.factories import campus
+
 
 class CsvImportHelperTests(TestCase):
 
@@ -34,13 +36,14 @@ class CsvImportHelperTests(TestCase):
         from api.models import CampusStats
         from api.services.csv_import import upsert
         fields = ['applicants', 'admits', 'enrolls']
-        rows = [CampusStats(campus='UCB', year=2024, applicants=1, admits=1, enrolls=1),
-                CampusStats(campus='UCB', year=2024, applicants=5, admits=2, enrolls=1)]
+        ucb = campus('UCB')
+        rows = [CampusStats(campus=ucb, year=2024, applicants=1, admits=1, enrolls=1),
+                CampusStats(campus=ucb, year=2024, applicants=5, admits=2, enrolls=1)]
         self.assertEqual(upsert(CampusStats, rows, ['campus', 'year'], fields), (1, 0))
-        self.assertEqual(CampusStats.objects.get(campus='UCB', year=2024).applicants, 5)
-        rows = [CampusStats(campus='UCB', year=2024, applicants=9, admits=2, enrolls=1)]
+        self.assertEqual(CampusStats.objects.get(campus=ucb, year=2024).applicants, 5)
+        rows = [CampusStats(campus=ucb, year=2024, applicants=9, admits=2, enrolls=1)]
         self.assertEqual(upsert(CampusStats, rows, ['campus', 'year'], fields), (0, 1))
-        self.assertEqual(CampusStats.objects.get(campus='UCB', year=2024).applicants, 9)
+        self.assertEqual(CampusStats.objects.get(campus=ucb, year=2024).applicants, 9)
 
     def test_malformed_values_degrade_to_none_or_zero(self):
         from api.services.csv_import import parse_gpa_range, parse_int, parse_rate

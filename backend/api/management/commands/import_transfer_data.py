@@ -4,7 +4,7 @@ from pathlib import Path
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from api.models import TransferData
+from api.models import Campus, TransferData
 from api.services.csv_import import (
     first_present,
     parse_gpa_range,
@@ -100,7 +100,7 @@ COLLEGE_SCHOOL_ALIASES = {
 }
 
 
-UNIQUE_FIELDS = ['university', 'year', 'major_name', 'college_school']
+UNIQUE_FIELDS = ['campus', 'year', 'major_name', 'college_school']
 UPDATE_FIELDS = [
     'broad_discipline', 'applicants', 'admits', 'enrolls',
     'admit_gpa_min', 'admit_gpa_max', 'enroll_gpa_min', 'enroll_gpa_max',
@@ -130,7 +130,11 @@ class Command(BaseCommand):
             if not match:
                 self.stderr.write(self.style.WARNING(f'Skipping {csv_file.name}: could not parse filename'))
                 continue
-            rows = self.parse_csv(csv_file, match.group(1), int(match.group(2)))
+            campus = Campus.objects.filter(code=match.group(1)).first()
+            if campus is None:
+                self.stderr.write(self.style.WARNING(f'Skipping {csv_file.name}: unknown campus {match.group(1)}'))
+                continue
+            rows = self.parse_csv(csv_file, campus, int(match.group(2)))
             inserted, updated = upsert(TransferData, rows, UNIQUE_FIELDS, UPDATE_FIELDS)
             total_inserted += inserted
             total_updated += updated
@@ -151,10 +155,10 @@ class Command(BaseCommand):
             )
             college_school = row.get('College/School', '')
             rows.append(TransferData(
-                university=campus,
+                campus=campus,
                 year=year,
                 broad_discipline=row.get('Broad discipline', ''),
-                college_school=COLLEGE_SCHOOL_ALIASES.get((campus, college_school), college_school),
+                college_school=COLLEGE_SCHOOL_ALIASES.get((campus.code, college_school), college_school),
                 major_name=major_name,
                 applicants=parse_int(row.get('Applicants')),
                 admits=parse_int(row.get('Admits')),

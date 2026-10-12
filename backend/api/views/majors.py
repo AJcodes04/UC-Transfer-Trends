@@ -1,4 +1,4 @@
-from django.db.models import Max, Min, Sum
+from django.db.models import F, Max, Min, Sum
 from drf_spectacular.utils import extend_schema
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -20,6 +20,6 @@ class GroupedMajorListView(APIView):
                 earliest_year=Min('year'),
             )
         )
-        campus_rows = TransferData.objects.values('major_name', 'university').distinct()
+        campus_rows = TransferData.objects.values('major_name', university=F('campus__code')).distinct()
         groups = group_majors(major_rows, campus_rows)
         return Response(GroupedMajorSerializer(groups, many=True).data)

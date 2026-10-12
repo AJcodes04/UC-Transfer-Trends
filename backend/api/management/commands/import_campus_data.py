@@ -4,7 +4,7 @@ from pathlib import Path
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from api.models import CampusStats
+from api.models import Campus, CampusStats
 from api.services.csv_import import (
     first_present,
     parse_gpa_range,
@@ -54,9 +54,14 @@ class Command(BaseCommand):
 
     def parse_csv(self, filepath, year):
         rows = []
+        campuses = {c.code: c for c in Campus.objects.all()}
         for row in read_rows(filepath):
-            campus = row.get('Campus', '')
-            if not campus:
+            code = row.get('Campus', '')
+            if not code:
+                continue
+            campus = campuses.get(code)
+            if campus is None:
+                self.stderr.write(self.style.WARNING(f'Skipping unknown campus {code!r} in {filepath.name}'))
                 continue
             admit_gpa_min, admit_gpa_max = parse_gpa_range(row.get('Admit GPA range', ''))
             enroll_gpa_min, enroll_gpa_max = parse_gpa_range(

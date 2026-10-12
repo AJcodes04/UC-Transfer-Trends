@@ -28,8 +28,21 @@ def _count_checks(prefix):
     ]
 
 
+class Campus(models.Model):
+    """A UC campus. `code` is the short form used in UC exports and URLs, e.g. 'UCB'."""
+    code = models.CharField(max_length=10, unique=True)
+    name = models.CharField(max_length=100)
+
+    class Meta:
+        ordering = ['code']
+        verbose_name_plural = 'Campuses'
+
+    def __str__(self):
+        return self.code
+
+
 class TransferData(models.Model):
-    university = models.CharField(max_length=10, db_index=True)
+    campus = models.ForeignKey(Campus, on_delete=models.PROTECT, related_name='transfer_rows')
     year = models.IntegerField(db_index=True)
     broad_discipline = models.CharField(max_length=100)
     college_school = models.CharField(max_length=100)
@@ -47,27 +60,27 @@ class TransferData(models.Model):
     yield_rate = models.IntegerField(null=True, blank=True)
 
     class Meta:
-        ordering = ['-year', 'university', 'major_name']
+        ordering = ['-year', 'campus__code', 'major_name']
         verbose_name = "Transfer Data"
         verbose_name_plural = "Transfer Data"
         constraints = [
             models.UniqueConstraint(
-                fields=['university', 'year', 'major_name', 'college_school'],
+                fields=['campus', 'year', 'major_name', 'college_school'],
                 name='transferdata_unique_campus_year_major_college',
             ),
             *_count_checks('transferdata'),
         ]
         indexes = [
-            models.Index(fields=['university', 'year']),
+            models.Index(fields=['campus', 'year'], name='transferdata_campus_year_idx'),
         ]
 
     def __str__(self):
-        return f"{self.university} {self.year} - {self.major_name}"
+        return f"{self.campus_id} {self.year} - {self.major_name}"
 
 
 class CampusStats(models.Model):
     """Pre-computed campus-level admission stats from official UC data."""
-    campus = models.CharField(max_length=10, db_index=True)
+    campus = models.ForeignKey(Campus, on_delete=models.PROTECT, related_name='yearly_stats')
     year = models.IntegerField(db_index=True)
 
     applicants = models.IntegerField()
@@ -83,7 +96,7 @@ class CampusStats(models.Model):
     yield_rate = models.IntegerField(null=True, blank=True)
 
     class Meta:
-        ordering = ['-year', 'campus']
+        ordering = ['-year', 'campus__code']
         verbose_name = "Campus Stats"
         verbose_name_plural = "Campus Stats"
         constraints = [
@@ -92,4 +105,4 @@ class CampusStats(models.Model):
         ]
 
     def __str__(self):
-        return f"{self.campus} {self.year}"
+        return f"{self.campus_id} {self.year}"

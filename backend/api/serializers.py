@@ -20,7 +20,7 @@ class HealthSerializer(serializers.Serializer):
 
 class CampusStatsRowSerializer(serializers.Serializer):
     year = serializers.IntegerField()
-    campus = serializers.CharField()
+    campus = serializers.CharField(source='campus_code')
     applicants = serializers.IntegerField()
     admits = serializers.IntegerField()
     enrolls = serializers.IntegerField()
