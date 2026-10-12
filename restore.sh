@@ -1,6 +1,6 @@
 #!/bin/bash
 # Replace the Render production database with ~/Desktop/uc_transfer.dump (made by ./dump.sh).
-set -o errexit
+set -o errexit -o pipefail -o nounset
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$DIR/.render.env"
@@ -38,6 +38,12 @@ END \$\$;
 
 echo "Step 2: Restoring dump..."
 # pg_dump 17 emits SET transaction_timeout, which Render's older Postgres rejects.
-"$PGBIN/pg_restore" -f - "$DUMP_FILE" | grep -v transaction_timeout | "$PGBIN/psql" "$DB_URL"
+"$PGBIN/pg_restore" -f - "$DUMP_FILE" | grep -v '^SET transaction_timeout' | "$PGBIN/psql" -v ON_ERROR_STOP=1 "$DB_URL"
 
-echo "Done! Previous production data is saved at $BACKUP_FILE"
+echo "Step 3: Verifying..."
+rows=$("$PGBIN/psql" "$DB_URL" -Atc "SELECT count(*) FROM api_transferdata")
+if [ "${rows:-0}" -eq 0 ]; then
+  echo "Restore finished but api_transferdata is empty. Previous data is in $BACKUP_FILE"
+  exit 1
+fi
+echo "Done! api_transferdata has $rows rows. Previous production data is saved at $BACKUP_FILE"
