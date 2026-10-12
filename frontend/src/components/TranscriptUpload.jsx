@@ -3,14 +3,16 @@ import {
   FileInput, Button, Table, Alert, Loader, Group, Text, Paper, Checkbox, Stack,
 } from '@mantine/core'
 import axios from 'axios'
-import { useCourses } from '../hooks/useUserData'
+import { useCollege, useCourses } from '../hooks/useUserData'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
 
 export default function TranscriptUpload() {
   const { addCourses } = useCourses()
+  const { setCollege } = useCollege()
   const [file, setFile] = useState(null)
   const [parsed, setParsed] = useState(null)
+  const [detected, setDetected] = useState(null)
   const [selected, setSelected] = useState(new Set())
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -28,8 +30,9 @@ export default function TranscriptUpload() {
       const res = await axios.post(`${API_BASE}/api/transcript/upload/`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
-      setParsed(res.data)
-      setSelected(new Set(res.data.map((_, i) => i)))
+      setParsed(res.data.courses)
+      setDetected(res.data.college)
+      setSelected(new Set(res.data.courses.map((_, i) => i)))
       const rem = res.headers.get
         ? res.headers.get('x-ratelimit-remaining')
         : res.headers['x-ratelimit-remaining']
@@ -64,6 +67,7 @@ export default function TranscriptUpload() {
       .filter((_, i) => selected.has(i))
       .map((c) => ({ ...c, source: 'transcript' }))
     addCourses(toAdd)
+    if (detected) setCollege(detected)
     setParsed(null)
     setFile(null)
     setSelected(new Set())
@@ -99,7 +103,8 @@ export default function TranscriptUpload() {
       {parsed && parsed.length > 0 && (
         <Stack gap="sm">
           <Text size="sm" c="dimmed">
-            Found {parsed.length} course{parsed.length !== 1 ? 's' : ''}. Review and confirm which to add.
+            Found {parsed.length} course{parsed.length !== 1 ? 's' : ''}
+            {detected ? ` from ${detected.name}` : ''}. Review and confirm which to add.
           </Text>
 
           <Table striped highlightOnHover>

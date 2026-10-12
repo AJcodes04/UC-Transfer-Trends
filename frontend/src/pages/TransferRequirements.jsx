@@ -16,7 +16,7 @@ import {
   useArticulationDetail,
   useMajorStats,
 } from '../hooks/useApi'
-import { useCourses, useGPA } from '../hooks/useUserData'
+import { useCollege, useCourses, useGPA } from '../hooks/useUserData'
 import {
   buildUserCourseMap,
   checkRequirementSatisfied,
@@ -212,7 +212,8 @@ export default function TransferRequirements() {
 
 function SelectorView({ cc: urlCC, navigate }) {
   const { data: colleges, loading: colLoading } = useArticulationColleges()
-  const [selectedCC, setSelectedCC] = useState(urlCC || null)
+  const { college } = useCollege()
+  const [selectedCC, setSelectedCC] = useState(urlCC || college?.code || null)
   const { data: campuses, loading: ucLoading } = useArticulationCampuses(selectedCC)
 
   const ccOptions = useMemo(() =>
@@ -243,6 +244,7 @@ function SelectorView({ cc: urlCC, navigate }) {
           searchable
           clearable
           allowDeselect={false}
+          description={!urlCC && college && selectedCC === college.code ? 'Detected from your transcript' : undefined}
           mb="lg"
           maw={400}
         />
