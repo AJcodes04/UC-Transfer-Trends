@@ -37,6 +37,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.http.ConditionalGetMiddleware',
+    'api.middleware.ApiCacheHeadersMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -110,6 +112,7 @@ SPECTACULAR_SETTINGS = {
 }
 
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
+API_CACHE_MAX_AGE = int(os.getenv('API_CACHE_MAX_AGE', '3600'))
 
 LOGGING = {
     'version': 1,
