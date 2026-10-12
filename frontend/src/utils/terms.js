@@ -1,3 +1,5 @@
+import { calculateGPA } from './gpa'
+import { transferableUnits } from './grades'
 export const SEASONS = ['Winter', 'Spring', 'Summer', 'Fall']
 
 export const SEASON_COLORS = { Winter: 'blue', Spring: 'yellow', Summer: 'orange', Fall: 'red' }
@@ -55,4 +57,21 @@ export function fromEditForm(form) {
     grade: form.grade,
     term: formatTerm(form.season, form.year),
   }
+}
+
+export function termTrend(courses) {
+  const seen = []
+  return groupByTerm(courses)
+    .filter((g) => g.season)
+    .map((g) => {
+      seen.push(...g.courses)
+      return {
+        term: g.term,
+        season: g.season,
+        termGPA: calculateGPA(g.courses),
+        cumulativeGPA: calculateGPA(seen),
+        termUnits: transferableUnits(g.courses),
+        cumulativeUnits: transferableUnits(seen),
+      }
+    })
 }

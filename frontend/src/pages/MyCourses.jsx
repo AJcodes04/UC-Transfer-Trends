@@ -8,13 +8,12 @@ import TranscriptUpload from '../components/TranscriptUpload'
 import CollegeSelect from '../components/CollegeSelect'
 import MajorSelect from '../components/MajorSelect'
 import CourseHistoryTable from '../components/CourseHistoryTable'
+import GpaTrendChart from '../components/GpaTrendChart'
 import { useCourses, useGPA } from '../hooks/useUserData'
-import { SEASONS, formatTerm } from '../utils/terms'
-import { GRADE_OPTIONS } from '../utils/grades'
+import { SEASONS, formatTerm, termTrend } from '../utils/terms'
+import { GRADE_OPTIONS, NON_TRANSFERABLE, NOT_COMPLETED } from '../utils/grades'
 
 const TRANSFER_UNIT_TARGET = 60
-const NON_TRANSFERABLE = new Set(['F', 'NP', 'W', 'I', 'IP', 'NC'])
-const NOT_COMPLETED = new Set(['IP', 'W', 'I'])
 
 const EMPTY_FORM = { prefix: '', number: '', title: '', units: 3, grade: null, season: null, year: '' }
 
@@ -37,6 +36,8 @@ export default function MyCourses() {
     }
     return { units, completed }
   }, [courses])
+
+  const trend = useMemo(() => termTrend(courses).filter((t) => t.cumulativeGPA != null), [courses])
 
   const setField = (field) => (value) => {
     setForm((f) => ({ ...f, [field]: value }))
@@ -94,6 +95,13 @@ export default function MyCourses() {
         </StatsCard>
         <StatsCard title="Courses completed" value={stats.completed} />
       </SimpleGrid>
+
+      {trend.length >= 2 && (
+        <Paper withBorder p="md" radius="md" mb="lg">
+          <Text fw={600} mb="sm">GPA trend</Text>
+          <GpaTrendChart data={trend} />
+        </Paper>
+      )}
 
       <Paper withBorder p="md" radius="md" mb="lg">
         <Group justify="space-between" mb="md">
