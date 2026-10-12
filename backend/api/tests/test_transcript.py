@@ -15,6 +15,7 @@ from api.views.transcript import (
     MAX_PAGES,
     MAX_TEXT_CHARS,
     MODEL,
+    OUTPUT_SCHEMA,
     SYSTEM_PROMPT,
     _check_rate_limit,
     _get_client_ip,
@@ -108,9 +109,9 @@ class TranscriptParseTests(TestCase):
     """Drives the full upload path with pdfplumber and the Anthropic client replaced by fakes."""
 
     COURSES = [
-        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': '5', 'grade': 'c'},
+        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': 5, 'grade': 'c'},
         {'prefix': 'MATH', 'number': '1A', 'title': 'Calculus I', 'units': 5.0, 'grade': 'A'},
-        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 'n/a', 'grade': 'P'},
+        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 0, 'grade': 'P'},
         {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'W'},
         {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B+'},
     ]
@@ -126,7 +127,7 @@ class TranscriptParseTests(TestCase):
         self._request_logger.setLevel(logging.CRITICAL)
         self.pdf_open = patch('api.views.transcript.pdfplumber.open', return_value=fake_pdf(['MATH 1A  A\n', 'ENGL 1  B+'])).start()
         self.model = MagicMock()
-        self.model.messages.create.return_value = fake_message(json.dumps(self.COURSES))
+        self.model.messages.create.return_value = fake_message(json.dumps({'courses': self.COURSES}))
         patch('api.views.transcript._anthropic_client', return_value=self.model).start()
 
     def tearDown(self):
@@ -153,16 +154,11 @@ class TranscriptParseTests(TestCase):
         kwargs = self.model.messages.create.call_args.kwargs
         self.assertEqual(kwargs['model'], MODEL)
         self.assertEqual(kwargs['system'], SYSTEM_PROMPT)
+        self.assertEqual(kwargs['output_config'], {'format': {'type': 'json_schema', 'schema': OUTPUT_SCHEMA}})
         content = kwargs['messages'][0]['content']
         self.assertIn('MATH 1A', content)
         self.assertIn('--- PAGE BREAK ---', content)
         self.assertIn('ENGL 1', content)
-
-    def test_strips_markdown_code_fences(self):
-        self.model.messages.create.return_value = fake_message('```json\n' + json.dumps(self.COURSES[:1]) + '\n```')
-        response = self._post()
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data[0]['prefix'], 'MATH')
 
     def test_quota_decrements_across_successful_parses(self):
         first = self._post()
@@ -170,10 +166,10 @@ class TranscriptParseTests(TestCase):
         self.assertEqual((first['X-RateLimit-Remaining'], second['X-RateLimit-Remaining']),
                          (str(DAILY_LIMIT - 1), str(DAILY_LIMIT - 2)))
 
-    def test_non_list_json_is_a_server_error(self):
+    def test_empty_transcript_returns_empty_list(self):
         self.model.messages.create.return_value = fake_message('{"courses": []}')
         response = self._post()
-        self.assertEqual((response.status_code, response.data['error']), (500, 'Unexpected response format from parser.'))
+        self.assertEqual((response.status_code, response.data), (200, []))
 
     def test_invalid_json_is_logged_and_a_server_error(self):
         self.model.messages.create.return_value = fake_message('not json at all')

@@ -34,9 +34,9 @@ REQUEST_TIMEOUT_SECONDS = 90.0
 
 _client = None
 
-SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, extract every course into a JSON array.
+SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, extract every course.
 
-Each course object must have exactly these fields:
+Each course has exactly these fields:
 - "prefix": the department/subject code in uppercase (e.g. "CIS", "MATH", "PE"). If the prefix has a space like "P E", collapse it to "PE".
 - "number": the course number including any letter suffix, in uppercase (e.g. "022A", "001B", "21JA"). Strip any trailing periods.
 - "title": the course title as shown, in title case.
@@ -47,8 +47,27 @@ Rules:
 - Include ALL courses: completed, in-progress, withdrawn, passed, etc.
 - Do NOT include summary lines (GPA, total units, etc.), institution headers, or non-course text.
 - The transcript text may have watermark artifacts (random single letters scattered in the text). Ignore them.
-- If the same course appears multiple times (retakes), include all instances — deduplication is handled downstream.
-- Return ONLY the JSON array, no other text or markdown formatting."""
+- If the same course appears multiple times (retakes), include all instances — deduplication is handled downstream."""
+
+COURSE_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'prefix': {'type': 'string'},
+        'number': {'type': 'string'},
+        'title': {'type': 'string'},
+        'units': {'type': 'number'},
+        'grade': {'type': 'string'},
+    },
+    'required': ['prefix', 'number', 'title', 'units', 'grade'],
+    'additionalProperties': False,
+}
+
+OUTPUT_SCHEMA = {
+    'type': 'object',
+    'properties': {'courses': {'type': 'array', 'items': COURSE_SCHEMA}},
+    'required': ['courses'],
+    'additionalProperties': False,
+}
 
 GRADE_RANK = {
     'F': 0, 'D-': 1, 'D': 2, 'D+': 3,
@@ -146,32 +165,20 @@ class TranscriptUploadView(APIView):
                 messages=[
                     {'role': 'user', 'content': f'Parse this transcript:\n\n{full_text}'}
                 ],
+                output_config={'format': {'type': 'json_schema', 'schema': OUTPUT_SCHEMA}},
             )
 
             if message.stop_reason == 'max_tokens':
                 logger.warning('Transcript parse hit max_tokens for %r', uploaded.name)
                 return error_response('Transcript is too long for the parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-            response_text = message.content[0].text.strip()
-            if response_text.startswith('```'):
-                response_text = response_text.split('\n', 1)[1]
-                if response_text.endswith('```'):
-                    response_text = response_text[:-3]
-                response_text = response_text.strip()
-
-            courses = json.loads(response_text)
-            if not isinstance(courses, list):
-                return error_response('Unexpected response format from parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)
+            courses = json.loads(message.content[0].text)['courses']
 
             for course in courses:
-                course['prefix'] = str(course.get('prefix', '')).upper().replace(' ', '')
-                course['number'] = str(course.get('number', '')).upper().rstrip('.')
-                course['title'] = str(course.get('title', ''))
-                course['grade'] = str(course.get('grade', '')).upper()
-                try:
-                    course['units'] = float(course.get('units', 0))
-                except (ValueError, TypeError):
-                    course['units'] = 0.0
+                course['prefix'] = course['prefix'].upper().replace(' ', '')
+                course['number'] = course['number'].upper().rstrip('.')
+                course['grade'] = course['grade'].upper()
+                course['units'] = float(course['units'])
 
             # Retakes: keep the best grade per course.
             best = {}
