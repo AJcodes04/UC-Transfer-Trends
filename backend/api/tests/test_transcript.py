@@ -1,3 +1,4 @@
+import base64
 import json
 import logging
 from unittest.mock import MagicMock, patch
@@ -246,11 +247,15 @@ class TranscriptParseTests(TestCase):
         self.assertEqual((response.status_code, response.data['error']), (400, 'Could not read the PDF file.'))
         self.model.messages.create.assert_not_called()
 
-    def test_pdf_without_text_is_a_client_error(self):
+    def test_pdf_without_text_is_sent_as_a_document(self):
         self.pdf_open.return_value = fake_pdf(['', '   ', None])
         response = self._post()
-        self.assertEqual(response.status_code, 400)
-        self.model.messages.create.assert_not_called()
+        self.assertEqual(response.status_code, 200)
+        content = self.model.messages.create.call_args.kwargs['messages'][0]['content']
+        self.assertEqual(content[0]['type'], 'document')
+        self.assertEqual(content[0]['source']['media_type'], 'application/pdf')
+        self.assertEqual(base64.b64decode(content[0]['source']['data']), b'%PDF-1.4 fake')
+        self.assertEqual(content[1], {'type': 'text', 'text': 'Parse this transcript.'})
 
     def test_too_many_pages_rejected_before_model_call(self):
         self.pdf_open.return_value = fake_pdf(['x'] * (MAX_PAGES + 1))

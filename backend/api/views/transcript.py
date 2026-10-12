@@ -1,9 +1,11 @@
 """
 Transcript PDF parsing endpoint. Extracts text from uploaded PDFs
 with pdfplumber and sends it to the Claude API for structured course
-extraction. Rate-limited per IP per day (see DAILY_LIMIT).
+extraction; scanned PDFs with no text layer are sent as the PDF itself.
+Rate-limited per IP per day (see DAILY_LIMIT).
 """
 
+import base64
 import io
 import json
 import logging
@@ -35,7 +37,7 @@ REQUEST_TIMEOUT_SECONDS = 90.0
 
 _client = None
 
-SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, report the institution and extract every course.
+SYSTEM_PROMPT = """You are a transcript parser. Given a community college transcript, either as extracted text or as the PDF itself, report the institution and extract every course.
 
 "institution" is the name of the community college printed in the transcript header (e.g. "De Anza College"), or an empty string if none is shown.
 
@@ -83,6 +85,17 @@ GRADE_RANK = {
     'NP': -2, 'P': 13,
     'W': -3, 'FW': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
 }
+
+
+def _user_content(pages_text, pdf_bytes):
+    """Extracted text when the PDF has a text layer; otherwise the PDF itself so scans can be read."""
+    if pages_text:
+        return 'Parse this transcript:\n\n' + '\n\n--- PAGE BREAK ---\n\n'.join(pages_text)
+    return [
+        {'type': 'document', 'source': {'type': 'base64', 'media_type': 'application/pdf',
+                                        'data': base64.b64encode(pdf_bytes).decode()}},
+        {'type': 'text', 'text': 'Parse this transcript.'},
+    ]
 
 
 def _anthropic_client():
@@ -145,8 +158,9 @@ class TranscriptUploadView(APIView):
     def _parse(self, uploaded):
         try:
             pages_text = []
+            pdf_bytes = uploaded.read()
             try:
-                with pdfplumber.open(io.BytesIO(uploaded.read())) as pdf:
+                with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
                     if len(pdf.pages) > MAX_PAGES:
                         return error_response(f'PDF has too many pages (max {MAX_PAGES}).', status.HTTP_400_BAD_REQUEST)
                     for page in pdf.pages:
@@ -157,20 +171,14 @@ class TranscriptUploadView(APIView):
                 logger.warning('Unreadable transcript PDF %r', uploaded.name, exc_info=True)
                 return error_response('Could not read the PDF file.', status.HTTP_400_BAD_REQUEST)
 
-            if not pages_text:
-                return error_response('Could not extract any text from the PDF.', status.HTTP_400_BAD_REQUEST)
-
-            full_text = '\n\n--- PAGE BREAK ---\n\n'.join(pages_text)
-            if len(full_text) > MAX_TEXT_CHARS:
+            if sum(len(t) for t in pages_text) > MAX_TEXT_CHARS:
                 return error_response('Transcript text is too long to parse.', status.HTTP_400_BAD_REQUEST)
 
             message = _anthropic_client().messages.create(
                 model=MODEL,
                 max_tokens=16000,
                 system=SYSTEM_PROMPT,
-                messages=[
-                    {'role': 'user', 'content': f'Parse this transcript:\n\n{full_text}'}
-                ],
+                messages=[{'role': 'user', 'content': _user_content(pages_text, pdf_bytes)}],
                 output_config={'format': {'type': 'json_schema', 'schema': OUTPUT_SCHEMA}},
             )
 
