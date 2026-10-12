@@ -201,11 +201,17 @@ class ArticulationEndpointTests(ArticulationDirTestCase):
         self.assertEqual([m['slug'] for m in majors], ['failed', 'physics_b_a'])
         detail = self.client.get('/api/articulation/sbcc/ucb/physics_b_a/')
         self.assertEqual(detail.status_code, 200)
-        self.assertEqual(detail.data['major'], 'Physics, B.A.')
+        self.assertEqual(detail.json()['major'], 'Physics, B.A.')
 
     def test_failed_route_wins_over_a_major_slug_named_failed(self):
         response = self.client.get('/api/articulation/sbcc/ucb/failed/')
         self.assertEqual(response.data, [{'major': 'Art, B.A.', 'academic_year': '2024-25'}])
+
+    def test_detail_streams_the_file_bytes_as_json(self):
+        path = self.write('sbcc', 'ucb', '2025-26', 'art_b_a', agreement('Art, B.A.', '2025-26'))
+        response = self.client.get('/api/articulation/sbcc/ucb/art_b_a/')
+        self.assertEqual(response['Content-Type'], 'application/json')
+        self.assertEqual(response.content, path.read_bytes())
 
     def test_unknown_major_is_404_with_error_key(self):
         response = self.client.get('/api/articulation/sbcc/ucb/nope/')

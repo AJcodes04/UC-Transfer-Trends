@@ -131,9 +131,14 @@ def _build_majors(cc_code, uc_code):
     return majors
 
 
+def agreement_path(cc_code, uc_code, major_slug):
+    """Path of the newest agreement file for the slug, or None."""
+    return agreement_files(cc_code, uc_code).get(major_slug)
+
+
 def load_agreement(cc_code, uc_code, major_slug):
     """Parsed agreement JSON, or None when no file exists for the slug."""
-    json_file = agreement_files(cc_code, uc_code).get(major_slug)
+    json_file = agreement_path(cc_code, uc_code, major_slug)
     if json_file is None:
         return None
     return json.loads(json_file.read_text())

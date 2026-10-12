@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema
 from rest_framework.exceptions import NotFound
@@ -34,10 +35,11 @@ class ArticulationMajorsView(APIView):
 class ArticulationDetailView(APIView):
     @extend_schema(responses={200: OpenApiTypes.OBJECT, 404: ErrorSerializer})
     def get(self, request, cc_code, uc_code, major_slug):
-        data = articulation.load_agreement(cc_code, uc_code, major_slug)
-        if data is None:
+        path = articulation.agreement_path(cc_code, uc_code, major_slug)
+        if path is None:
             raise NotFound('No agreement found for this major.')
-        return Response(data)
+        # The scraper already wrote valid JSON; send the bytes instead of parsing and re-serializing.
+        return HttpResponse(path.read_bytes(), content_type='application/json')
 
 
 class ArticulationFailedView(APIView):
