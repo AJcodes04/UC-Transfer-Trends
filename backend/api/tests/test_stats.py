@@ -14,33 +14,26 @@ class MajorStatsViewTests(TestCase):
 
         # ── Standard major across years and campuses ──────────────
         make_transfer_data(university='UCB', major_name='Chemistry', year=2023,
-                           applicants=100, admits=40, enrolls=20,
-                           admit_rate=40, yield_rate=50)
+                           applicants=100, admits=40, enrolls=20)
         make_transfer_data(university='UCB', major_name='Chemistry', year=2022,
                            applicants=90, admits=35, enrolls=18,
-                           admit_rate=39, yield_rate=51,
                            college_school='Chemistry Dept')
         make_transfer_data(university='UCLA', major_name='Chemistry', year=2023,
-                           applicants=120, admits=50, enrolls=25,
-                           admit_rate=42, yield_rate=50)
+                           applicants=120, admits=50, enrolls=25)
 
         # ── Alias pair ────────────────────────────────────────────
         make_transfer_data(university='UCB', major_name='African American Studies', year=2023,
-                           applicants=50, admits=30, enrolls=15,
-                           admit_rate=60, yield_rate=50)
+                           applicants=50, admits=30, enrolls=15)
         make_transfer_data(university='UCLA', major_name='African-American Studies', year=2023,
-                           applicants=40, admits=20, enrolls=10,
-                           admit_rate=50, yield_rate=50)
+                           applicants=40, admits=20, enrolls=10)
         # Alias at same campus as canonical — different college_school for uniqueness
         make_transfer_data(university='UCB', major_name='African-American Studies', year=2023,
                            applicants=10, admits=5, enrolls=3,
-                           admit_rate=50, yield_rate=60,
                            college_school='Social Sciences')
 
         # ── Major with slash in name ─────────────────────────────────
         make_transfer_data(university='UCI', major_name='Chicana/0 Studies', year=2023,
-                           applicants=30, admits=15, enrolls=8,
-                           admit_rate=50, yield_rate=53)
+                           applicants=30, admits=15, enrolls=8)
 
         # ── Unrelated major (should never leak into other queries) ─
         make_transfer_data(university='UCB', major_name='Physics', year=2023,
@@ -93,7 +86,7 @@ class MajorStatsViewTests(TestCase):
 
     def test_zero_applicants_gives_null_rate(self):
         make_transfer_data(university='UCM', major_name='Ghost', year=2023,
-                           applicants=0, admits=0, enrolls=0, admit_rate=None, yield_rate=None)
+                           applicants=0, admits=0, enrolls=0)
         response = self.client.get('/api/stats/by-major/Ghost/')
         self.assertIsNone(response.data[0]['avg_admit_rate'])
         self.assertIsNone(response.data[0]['avg_yield_rate'])

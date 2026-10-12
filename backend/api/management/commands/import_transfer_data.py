@@ -9,7 +9,6 @@ from api.services.csv_import import (
     first_present,
     parse_gpa_range,
     parse_int,
-    parse_rate,
     read_rows,
     upsert,
 )
@@ -105,7 +104,6 @@ UNIQUE_FIELDS = ['campus', 'year', 'major', 'college_school']
 UPDATE_FIELDS = [
     'broad_discipline', 'applicants', 'admits', 'enrolls',
     'admit_gpa_min', 'admit_gpa_max', 'enroll_gpa_min', 'enroll_gpa_max',
-    'admit_rate', 'yield_rate',
 ]
 FILENAME_RE = re.compile(r'^([A-Z]+)-(\d{4})\.csv$')
 
@@ -176,7 +174,5 @@ class Command(BaseCommand):
                 admit_gpa_max=admit_gpa_max,
                 enroll_gpa_min=enroll_gpa_min,
                 enroll_gpa_max=enroll_gpa_max,
-                admit_rate=parse_rate(row.get('Admit rate')),
-                yield_rate=parse_rate(row.get('Yield rate')),
             ))
         return rows

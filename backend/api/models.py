@@ -8,14 +8,6 @@ def _count_checks(prefix):
         models.CheckConstraint(condition=Q(admits__gte=0), name=f'{prefix}_admits_nonneg'),
         models.CheckConstraint(condition=Q(enrolls__gte=0), name=f'{prefix}_enrolls_nonneg'),
         models.CheckConstraint(
-            condition=Q(admit_rate__isnull=True) | Q(admit_rate__range=(0, 100)),
-            name=f'{prefix}_admit_rate_pct',
-        ),
-        models.CheckConstraint(
-            condition=Q(yield_rate__isnull=True) | Q(yield_rate__range=(0, 100)),
-            name=f'{prefix}_yield_rate_pct',
-        ),
-        models.CheckConstraint(
             condition=Q(admit_gpa_min__isnull=True) | Q(admit_gpa_max__isnull=True)
             | Q(admit_gpa_min__lte=F('admit_gpa_max')),
             name=f'{prefix}_admit_gpa_ordered',
@@ -24,6 +16,19 @@ def _count_checks(prefix):
             condition=Q(enroll_gpa_min__isnull=True) | Q(enroll_gpa_max__isnull=True)
             | Q(enroll_gpa_min__lte=F('enroll_gpa_max')),
             name=f'{prefix}_enroll_gpa_ordered',
+        ),
+    ]
+
+
+def _rate_checks(prefix):
+    return [
+        models.CheckConstraint(
+            condition=Q(admit_rate__isnull=True) | Q(admit_rate__range=(0, 100)),
+            name=f'{prefix}_admit_rate_pct',
+        ),
+        models.CheckConstraint(
+            condition=Q(yield_rate__isnull=True) | Q(yield_rate__range=(0, 100)),
+            name=f'{prefix}_yield_rate_pct',
         ),
     ]
 
@@ -88,9 +93,6 @@ class TransferData(models.Model):
     enroll_gpa_min = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
     enroll_gpa_max = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
 
-    admit_rate = models.IntegerField(null=True, blank=True)
-    yield_rate = models.IntegerField(null=True, blank=True)
-
     class Meta:
         ordering = ['-year', 'campus__code', 'major__name']
         verbose_name = "Transfer Data"
@@ -134,6 +136,7 @@ class CampusStats(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['campus', 'year'], name='campusstats_unique_campus_year'),
             *_count_checks('campusstats'),
+            *_rate_checks('campusstats'),
         ]
 
     def __str__(self):

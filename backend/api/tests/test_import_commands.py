@@ -71,7 +71,6 @@ class ImportTransferDataTests(TestCase):
         self.assertEqual(chem.college_school, 'College Of Letters & science')
         self.assertEqual((chem.applicants, chem.admits, chem.enrolls), (1234, 400, 100))
         self.assertEqual((chem.admit_gpa_min, chem.enroll_gpa_max), (Decimal('3.64'), Decimal('3.90')))
-        self.assertEqual((chem.admit_rate, chem.yield_rate), (32, 25))
         masked = TransferData.objects.get(major__name='Pre-History')
         self.assertIsNone(masked.admit_gpa_min)
         self.assertFalse(TransferData.objects.filter(major__name__icontains='invalid').exists())

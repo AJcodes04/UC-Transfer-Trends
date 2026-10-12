@@ -32,8 +32,6 @@ def make_transfer_data(**kwargs):
         'applicants': 100,
         'admits': 50,
         'enrolls': 25,
-        'admit_rate': 50,
-        'yield_rate': 50,
     }
     defaults.update(kwargs)
     return TransferData.objects.create(**defaults)
