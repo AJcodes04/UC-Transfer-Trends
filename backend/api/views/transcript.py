@@ -184,6 +184,10 @@ class TranscriptUploadView(APIView):
                 output_config={'format': {'type': 'json_schema', 'schema': OUTPUT_SCHEMA}},
             )
 
+            logger.info(
+                'Transcript parse: mode=%s input_tokens=%s output_tokens=%s stop_reason=%s',
+                'text' if pages_text else 'pdf', message.usage.input_tokens, message.usage.output_tokens, message.stop_reason,
+            )
             if message.stop_reason == 'max_tokens':
                 logger.warning('Transcript parse hit max_tokens for %r', uploaded.name)
                 return error_response('Transcript is too long for the parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)

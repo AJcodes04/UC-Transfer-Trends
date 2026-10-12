@@ -1,6 +1,7 @@
 import base64
 import json
 import logging
+from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
 import anthropic
@@ -51,6 +52,7 @@ def fake_message(text, stop_reason='end_turn'):
     message = MagicMock()
     message.stop_reason = stop_reason
     message.content = [MagicMock(text=text)]
+    message.usage = SimpleNamespace(input_tokens=1200, output_tokens=340)
     return message
 
 
@@ -182,6 +184,11 @@ class TranscriptParseTests(TestCase):
         self.assertEqual(by_key['MATH 1A']['units'], 5.0)
         self.assertEqual([k for k, c in by_key.items() if c['needs_review']], ['PE 022A'])
         self.assertEqual(response['X-RateLimit-Remaining'], str(DAILY_LIMIT - 1))
+
+    def test_token_usage_is_logged_per_parse(self):
+        with self.assertLogs('api.views.transcript', level='INFO') as logs:
+            self._post()
+        self.assertIn('mode=text input_tokens=1200 output_tokens=340 stop_reason=end_turn', logs.output[0])
 
     def test_detected_institution_is_returned_as_a_college(self):
         response = self._post()
