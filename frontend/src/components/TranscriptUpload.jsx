@@ -67,7 +67,7 @@ export default function TranscriptUpload() {
       .filter((_, i) => selected.has(i))
       .map((c) => ({ ...c, source: 'transcript' }))
     addCourses(toAdd)
-    if (detected) setCollege({ ...detected, source: 'transcript' })
+    if (detected) setCollege(detected)
     setParsed(null)
     setFile(null)
     setSelected(new Set())

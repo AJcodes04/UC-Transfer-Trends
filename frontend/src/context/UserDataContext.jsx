@@ -3,6 +3,7 @@ import { createContext, useState, useEffect, useCallback } from 'react'
 const COURSES_KEY = 'uc_transfer_courses'
 const SAVED_COMBOS_KEY = 'uc_transfer_saved_combos'
 const COLLEGE_KEY = 'uc_transfer_college'
+const MAJOR_KEY = 'uc_transfer_major'
 
 function readStorage(key, fallback) {
   try {
@@ -53,6 +54,12 @@ export function UserDataProvider({ children }) {
     localStorage.setItem(COLLEGE_KEY, JSON.stringify(college))
   }, [college])
 
+  const [major, setMajor] = useState(() => readStorage(MAJOR_KEY, null))
+
+  useEffect(() => {
+    localStorage.setItem(MAJOR_KEY, JSON.stringify(major))
+  }, [major])
+
   const [savedCombos, setSavedCombos] = useState(() => readStorage(SAVED_COMBOS_KEY, []))
 
   useEffect(() => {
@@ -84,6 +91,7 @@ export function UserDataProvider({ children }) {
   const value = {
     courses, addCourse, removeCourse, updateCourse, clearCourses, addCourses,
     college, setCollege,
+    major, setMajor,
     savedCombos, saveCombo, unsaveCombo, isComboSaved,
   }
 

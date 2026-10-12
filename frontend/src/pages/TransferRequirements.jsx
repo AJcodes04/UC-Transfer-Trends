@@ -244,7 +244,14 @@ function SelectorView({ cc: urlCC, navigate }) {
           searchable
           clearable
           allowDeselect={false}
-          description={!urlCC && college && selectedCC === college.code ? (college.source === 'transcript' ? 'Detected from your transcript' : 'Your college from My Courses') : undefined}
+          renderOption={({ option }) => (
+            <Group justify="space-between" wrap="nowrap" style={{ flex: 1 }}>
+              <span>{option.label}</span>
+              {college?.code === option.value && (
+                <Badge size="xs" variant="light" color="blue">My college</Badge>
+              )}
+            </Group>
+          )}
           mb="lg"
           maw={400}
         />
