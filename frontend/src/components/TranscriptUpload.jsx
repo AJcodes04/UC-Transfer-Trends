@@ -1,8 +1,12 @@
-import { useState } from 'react'
-import { Button, Table, Alert, Group, Text, Checkbox, Stack, Badge } from '@mantine/core'
+import { useState, Fragment } from 'react'
+import { Button, Table, Alert, Group, Text, Checkbox, Stack, Badge, ActionIcon } from '@mantine/core'
+import { IconEdit, IconCheck, IconX } from '@tabler/icons-react'
 import axios from 'axios'
 import { useCollege, useCourses } from '../hooks/useUserData'
+import { groupByTerm, toEditForm, fromEditForm } from '../utils/terms'
 import FileDropzone from './FileDropzone'
+import TermHeaderRow from './TermHeaderRow'
+import CourseEditCells from './CourseEditCells'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
 
@@ -16,6 +20,8 @@ export default function TranscriptUpload() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [remaining, setRemaining] = useState(null)
+  const [editingIndex, setEditingIndex] = useState(null)
+  const [form, setForm] = useState({})
 
   const handleFile = async (picked) => {
     setFile(picked)
@@ -63,16 +69,25 @@ export default function TranscriptUpload() {
 
   const reviewCount = parsed ? parsed.filter((c) => c.needs_review).length : 0
 
+  const saveEdit = () => {
+    setParsed((prev) => prev.map((c, i) => (i === editingIndex ? { ...c, ...fromEditForm(form), needs_review: false } : c)))
+    setSelected((prev) => new Set(prev).add(editingIndex))
+    setEditingIndex(null)
+  }
+
   const reset = () => {
     setParsed(null)
     setFile(null)
     setSelected(new Set())
+    setEditingIndex(null)
   }
+
+  const groups = parsed ? groupByTerm(parsed.map((c, i) => ({ ...c, i }))) : []
 
   const handleConfirm = () => {
     const toAdd = parsed
       .filter((_, i) => selected.has(i))
-      .map(({ prefix, number, title, units, grade }) => ({ prefix, number, title, units, grade, source: 'transcript' }))
+      .map(({ prefix, number, title, units, grade, term }) => ({ prefix, number, title, units, grade, term: term || '', source: 'transcript' }))
     addCourses(toAdd)
     if (detected) setCollege(detected)
     reset()
@@ -107,8 +122,8 @@ export default function TranscriptUpload() {
             </Alert>
           )}
 
-          <Table.ScrollContainer minWidth={560}>
-            <Table striped highlightOnHover>
+          <Table.ScrollContainer minWidth={700}>
+            <Table highlightOnHover>
               <Table.Thead>
                 <Table.Tr>
                   <Table.Th>
@@ -124,33 +139,68 @@ export default function TranscriptUpload() {
                   <Table.Th>Units</Table.Th>
                   <Table.Th>Grade</Table.Th>
                   <Table.Th />
+                  <Table.Th />
                 </Table.Tr>
               </Table.Thead>
               <Table.Tbody>
-                {parsed.map((course, i) => (
-                  <Table.Tr key={i} bg={course.needs_review ? 'var(--mantine-color-yellow-light)' : undefined}>
-                    <Table.Td>
-                      <Checkbox
-                        aria-label={`Add ${course.prefix} ${course.number}`}
-                        checked={selected.has(i)}
-                        onChange={() => toggleRow(i)}
-                      />
-                    </Table.Td>
-                    <Table.Td>{course.prefix} {course.number}</Table.Td>
-                    <Table.Td>{course.title || '-'}</Table.Td>
-                    <Table.Td>{course.units}</Table.Td>
-                    <Table.Td>{course.grade}</Table.Td>
-                    <Table.Td>
-                      {course.needs_review && <Badge color="yellow" variant="light">Check</Badge>}
-                    </Table.Td>
-                  </Table.Tr>
+                {groups.map((group) => (
+                  <Fragment key={group.term || 'unassigned'}>
+                    <TermHeaderRow group={group} colSpan={7} />
+                    {group.courses.map((course) => {
+                      const i = course.i
+                      return (
+                        <Table.Tr key={i} bg={course.needs_review ? 'var(--mantine-color-yellow-light)' : undefined}>
+                          <Table.Td>
+                            <Checkbox
+                              aria-label={`Add ${course.prefix} ${course.number}`}
+                              checked={selected.has(i)}
+                              onChange={() => toggleRow(i)}
+                            />
+                          </Table.Td>
+                          {editingIndex === i ? (
+                            <>
+                              <CourseEditCells form={form} onChange={setForm} />
+                              <Table.Td>
+                                <Group gap={4} wrap="nowrap">
+                                  <ActionIcon size="sm" color="green" variant="subtle" aria-label="Save changes" onClick={saveEdit}>
+                                    <IconCheck size={14} />
+                                  </ActionIcon>
+                                  <ActionIcon size="sm" color="gray" variant="subtle" aria-label="Cancel editing" onClick={() => setEditingIndex(null)}>
+                                    <IconX size={14} />
+                                  </ActionIcon>
+                                </Group>
+                              </Table.Td>
+                            </>
+                          ) : (
+                            <>
+                              <Table.Td fw={600} style={{ whiteSpace: 'nowrap' }}>{course.prefix} {course.number}</Table.Td>
+                              <Table.Td>{course.title || '-'}</Table.Td>
+                              <Table.Td>{course.units}</Table.Td>
+                              <Table.Td>{course.grade === 'IP' ? 'In progress' : course.grade}</Table.Td>
+                              <Table.Td>
+                                {course.needs_review && <Badge color="yellow" variant="light">Check</Badge>}
+                              </Table.Td>
+                              <Table.Td>
+                                <ActionIcon
+                                  size="sm" variant="subtle" aria-label={`Edit ${course.prefix} ${course.number}`}
+                                  onClick={() => { setEditingIndex(i); setForm(toEditForm(course)) }}
+                                >
+                                  <IconEdit size={14} />
+                                </ActionIcon>
+                              </Table.Td>
+                            </>
+                          )}
+                        </Table.Tr>
+                      )
+                    })}
+                  </Fragment>
                 ))}
               </Table.Tbody>
             </Table>
           </Table.ScrollContainer>
 
           <Group>
-            <Button onClick={handleConfirm} disabled={selected.size === 0}>
+            <Button onClick={handleConfirm} disabled={selected.size === 0 || editingIndex !== null}>
               Add {selected.size} course{selected.size !== 1 ? 's' : ''}
             </Button>
             <Button variant="subtle" color="gray" onClick={reset}>

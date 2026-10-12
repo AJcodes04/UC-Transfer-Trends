@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useMemo, useState } from 'react'
 import {
   Title, Text, SimpleGrid, TextInput, NumberInput, Select, Button,
   Group, Paper, Modal, Stack, SegmentedControl, Progress, Box,
@@ -9,18 +9,14 @@ import CollegeSelect from '../components/CollegeSelect'
 import MajorSelect from '../components/MajorSelect'
 import CourseHistoryTable from '../components/CourseHistoryTable'
 import { useCourses, useGPA } from '../hooks/useUserData'
-
-const GRADE_OPTIONS = [
-  'A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-',
-  'D+', 'D', 'D-', 'F', 'P', 'NP',
-  { value: 'IP', label: 'In progress' },
-]
+import { SEASONS, formatTerm } from '../utils/terms'
+import { GRADE_OPTIONS } from '../utils/grades'
 
 const TRANSFER_UNIT_TARGET = 60
 const NON_TRANSFERABLE = new Set(['F', 'NP', 'W', 'I', 'IP', 'NC'])
 const NOT_COMPLETED = new Set(['IP', 'W', 'I'])
 
-const EMPTY_FORM = { prefix: '', number: '', title: '', units: 3, grade: null }
+const EMPTY_FORM = { prefix: '', number: '', title: '', units: 3, grade: null, season: null, year: '' }
 
 export default function MyCourses() {
   const { courses, addCourse, removeCourse, updateCourse, clearCourses } = useCourses()
@@ -30,7 +26,6 @@ export default function MyCourses() {
   const [form, setForm] = useState(EMPTY_FORM)
   const [errors, setErrors] = useState({})
   const [clearOpen, setClearOpen] = useState(false)
-  const addCardRef = useRef(null)
 
   const stats = useMemo(() => {
     let units = 0
@@ -54,6 +49,8 @@ export default function MyCourses() {
     if (!form.prefix.trim()) next.prefix = 'Enter a prefix'
     if (!form.number.trim()) next.number = 'Enter a number'
     if (!form.grade) next.grade = 'Pick a grade'
+    if (!form.season) next.season = 'Pick a season'
+    if (!form.year) next.year = 'Enter a year'
     if (Object.keys(next).length > 0) { setErrors(next); return }
 
     addCourse({
@@ -62,15 +59,11 @@ export default function MyCourses() {
       title: form.title.trim(),
       units: form.units || 0,
       grade: form.grade,
+      term: formatTerm(form.season, form.year),
       source: 'manual',
     })
     setForm(EMPTY_FORM)
     setErrors({})
-  }
-
-  const goToUpload = () => {
-    setMode('upload')
-    addCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   const unitPercent = Math.min(100, (stats.units / TRANSFER_UNIT_TARGET) * 100)
@@ -102,7 +95,7 @@ export default function MyCourses() {
         <StatsCard title="Courses completed" value={stats.completed} />
       </SimpleGrid>
 
-      <Paper withBorder p="md" radius="md" mb="lg" ref={addCardRef}>
+      <Paper withBorder p="md" radius="md" mb="lg">
         <Group justify="space-between" mb="md">
           <Text fw={600}>Add courses</Text>
           <SegmentedControl
@@ -120,7 +113,7 @@ export default function MyCourses() {
           <TranscriptUpload />
         ) : (
           <form onSubmit={handleSubmit} noValidate>
-            <SimpleGrid cols={{ base: 1, sm: 2, md: 5 }} spacing="sm">
+            <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
               <TextInput
                 label="Prefix"
                 placeholder="e.g. MATH"
@@ -161,6 +154,27 @@ export default function MyCourses() {
                 error={errors.grade}
                 required
               />
+              <Select
+                label="Season"
+                placeholder="Select"
+                data={SEASONS}
+                value={form.season}
+                onChange={setField('season')}
+                error={errors.season}
+                required
+              />
+              <NumberInput
+                label="Year"
+                placeholder="e.g. 2024"
+                value={form.year}
+                onChange={setField('year')}
+                error={errors.year}
+                min={1990}
+                max={2100}
+                allowDecimal={false}
+                hideControls
+                required
+              />
             </SimpleGrid>
             <Group justify="flex-end" mt="md">
               <Button type="submit">Add course</Button>
@@ -182,7 +196,6 @@ export default function MyCourses() {
         {courses.length > 0 ? (
           <CourseHistoryTable
             courses={courses}
-            gradeOptions={GRADE_OPTIONS}
             onUpdate={updateCourse}
             onRemove={removeCourse}
           />
@@ -190,9 +203,8 @@ export default function MyCourses() {
           <Stack align="center" gap="xs" py="xl">
             <Text fw={600}>No courses yet</Text>
             <Text size="sm" c="dimmed" ta="center">
-              Upload a transcript or enter courses manually to start tracking your progress.
+              Courses you add will show up here.
             </Text>
-            <Button mt="xs" onClick={goToUpload}>Upload transcript</Button>
           </Stack>
         )}
       </Paper>
