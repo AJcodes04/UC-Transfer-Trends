@@ -92,6 +92,11 @@ class TranscriptCourseSerializer(serializers.Serializer):
     grade = serializers.CharField(allow_blank=True)
 
 
+class TranscriptParseSerializer(serializers.Serializer):
+    college = InstitutionSerializer(allow_null=True)
+    courses = TranscriptCourseSerializer(many=True)
+
+
 class TranscriptUploadSerializer(serializers.Serializer):
     file = serializers.FileField()
 

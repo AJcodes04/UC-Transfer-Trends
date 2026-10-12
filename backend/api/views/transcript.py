@@ -20,7 +20,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from api.errors import error_response
-from api.serializers import ErrorSerializer, TranscriptCourseSerializer, TranscriptUploadSerializer
+from api.serializers import ErrorSerializer, TranscriptParseSerializer, TranscriptUploadSerializer
+from api.services.transcript import match_college
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +35,9 @@ REQUEST_TIMEOUT_SECONDS = 90.0
 
 _client = None
 
-SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, extract every course.
+SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, report the institution and extract every course.
+
+"institution" is the name of the community college printed in the transcript header (e.g. "De Anza College"), or an empty string if none is shown.
 
 Each course has exactly these fields:
 - "prefix": the department/subject code in uppercase (e.g. "CIS", "MATH", "PE"). If the prefix has a space like "P E", collapse it to "PE".
@@ -64,8 +67,11 @@ COURSE_SCHEMA = {
 
 OUTPUT_SCHEMA = {
     'type': 'object',
-    'properties': {'courses': {'type': 'array', 'items': COURSE_SCHEMA}},
-    'required': ['courses'],
+    'properties': {
+        'institution': {'type': 'string'},
+        'courses': {'type': 'array', 'items': COURSE_SCHEMA},
+    },
+    'required': ['institution', 'courses'],
     'additionalProperties': False,
 }
 
@@ -114,7 +120,7 @@ class TranscriptUploadView(APIView):
 
     @extend_schema(
         request=TranscriptUploadSerializer,
-        responses={200: TranscriptCourseSerializer(many=True), 400: ErrorSerializer, 429: ErrorSerializer},
+        responses={200: TranscriptParseSerializer, 400: ErrorSerializer, 429: ErrorSerializer},
     )
     def post(self, request):
         if not settings.ANTHROPIC_API_KEY:
@@ -172,7 +178,8 @@ class TranscriptUploadView(APIView):
                 logger.warning('Transcript parse hit max_tokens for %r', uploaded.name)
                 return error_response('Transcript is too long for the parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-            courses = json.loads(message.content[0].text)['courses']
+            parsed = json.loads(message.content[0].text)
+            courses = parsed['courses']
 
             for course in courses:
                 course['prefix'] = course['prefix'].upper().replace(' ', '')
@@ -188,7 +195,8 @@ class TranscriptUploadView(APIView):
                 if key not in best or rank > GRADE_RANK.get(best[key]['grade'], -1):
                     best[key] = entry
 
-            return Response(TranscriptCourseSerializer(list(best.values()), many=True).data)
+            result = {'college': match_college(parsed['institution']), 'courses': list(best.values())}
+            return Response(TranscriptParseSerializer(result).data)
 
         except json.JSONDecodeError:
             logger.warning('Transcript parser returned non-JSON output (stop_reason=%s)', message.stop_reason)
