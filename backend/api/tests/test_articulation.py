@@ -1,4 +1,5 @@
 from unittest import skipUnless
+from unittest.mock import patch
 
 from django.test import TestCase
 from rest_framework.test import APIClient
@@ -231,3 +232,28 @@ class RealDataSmokeTests(TestCase):
         for cc in list_colleges():
             for campus in list_campuses(cc['code']):
                 self.assertIn(campus['code'], UC_NAMES, cc['code'])
+
+
+class ListingCacheTests(ArticulationDirTestCase):
+
+    def test_majors_list_is_cached_until_the_folder_changes(self):
+        self.write('sbcc', 'ucb', '2024-25', 'physics_b_a', agreement('Physics, B.A.'))
+        self.assertEqual([m['slug'] for m in list_majors('sbcc', 'ucb')], ['physics_b_a'])
+        with patch('api.services.articulation._build_majors') as build:
+            list_majors('sbcc', 'ucb')
+            build.assert_not_called()
+        self.write('sbcc', 'ucb', '2025-26', 'history_b_a', agreement('History, B.A.', '2025-26'))
+        self.assertEqual([m['slug'] for m in list_majors('sbcc', 'ucb')], ['history_b_a', 'physics_b_a'])
+
+    def test_colleges_list_refreshes_when_a_campus_folder_appears(self):
+        for uc in ALL_UCS[:-1]:
+            (self.root / 'sbcc' / uc).mkdir(parents=True)
+        self.assertEqual(list_colleges(), [])
+        (self.root / 'sbcc' / ALL_UCS[-1]).mkdir()
+        self.assertEqual([c['code'] for c in list_colleges()], ['sbcc'])
+
+    def test_failed_list_refreshes_when_the_log_is_rewritten(self):
+        self.write_failed([{'sending_code': 'SBCC', 'receiving_code': 'UCB', 'academic_year': '2024-25', 'major': 'Art, B.A.'}])
+        self.assertEqual([e['major'] for e in list_failed('sbcc', 'ucb')], ['Art, B.A.'])
+        self.write_failed([])
+        self.assertEqual(list_failed('sbcc', 'ucb'), [])

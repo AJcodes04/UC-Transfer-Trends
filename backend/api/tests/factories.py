@@ -3,6 +3,7 @@ import tempfile
 from pathlib import Path
 from unittest.mock import patch
 
+from django.core.cache import cache
 from django.test import TestCase
 
 from api.constants.institutions import UC_NAMES
@@ -74,6 +75,7 @@ class ArticulationDirTestCase(TestCase):
 
     def setUp(self):
         super().setUp()
+        cache.clear()
         self._tmp = tempfile.TemporaryDirectory()
         self.root = Path(self._tmp.name)
         self._patches = [

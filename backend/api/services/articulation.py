@@ -5,6 +5,8 @@ import logging
 import re
 from pathlib import Path
 
+from django.core.cache import cache
+
 from api.constants.institutions import CC_NAMES, UC_NAMES
 
 logger = logging.getLogger(__name__)
@@ -13,6 +15,16 @@ ARTICULATION_DIR = Path(__file__).resolve().parents[3] / 'data' / 'articulation'
 FAILED_SCRAPES_FILE = ARTICULATION_DIR / 'failed_scrapes.json'
 
 _CODE_RE = re.compile(r'^[a-z0-9_-]+$')
+CACHE_SECONDS = 3600
+
+
+def _stamp(*paths):
+    """Key fragment that changes when any listed directory gains or loses an entry, or a file is rewritten."""
+    return '-'.join(str(p.stat().st_mtime_ns) for p in paths if p.exists())
+
+
+def _year_dirs(uc_dir):
+    return sorted((d for d in uc_dir.iterdir() if d.is_dir()), key=lambda d: d.name)
 
 
 def slugify(text):
@@ -36,7 +48,7 @@ def agreement_files(cc_code, uc_code):
     if uc_dir is None:
         return {}
     files = {}
-    for year_dir in sorted((d for d in uc_dir.iterdir() if d.is_dir()), key=lambda d: d.name):
+    for year_dir in _year_dirs(uc_dir):
         for json_file in year_dir.glob('*.json'):
             files[json_file.stem] = json_file
     return files
@@ -64,10 +76,16 @@ def count_rows(agreement_data):
 
 def list_colleges():
     """Community colleges whose folder holds every UC campus, i.e. fully scraped."""
+    if not ARTICULATION_DIR.is_dir():
+        return []
+    cc_dirs = [d for d in ARTICULATION_DIR.iterdir() if d.is_dir()]
+    key = f'art:colleges:{_stamp(ARTICULATION_DIR, *cc_dirs)}'
+    return cache.get_or_set(key, _build_colleges, CACHE_SECONDS)
+
+
+def _build_colleges():
     all_ucs = set(UC_NAMES)
     colleges = []
-    if not ARTICULATION_DIR.is_dir():
-        return colleges
     for cc_dir in sorted(ARTICULATION_DIR.iterdir()):
         if not cc_dir.is_dir() or cc_dir.name.startswith('_'):
             continue
@@ -81,13 +99,22 @@ def list_campuses(cc_code):
     cc_dir = articulation_dir(cc_code)
     if cc_dir is None:
         return []
-    return [
+    key = f'art:campuses:{cc_dir.name}:{_stamp(cc_dir)}'
+    return cache.get_or_set(key, lambda: [
         {'code': d.name, 'name': UC_NAMES.get(d.name, d.name.upper())}
         for d in sorted(cc_dir.iterdir()) if d.is_dir()
-    ]
+    ], CACHE_SECONDS)
 
 
 def list_majors(cc_code, uc_code):
+    uc_dir = articulation_dir(cc_code, uc_code)
+    if uc_dir is None:
+        return []
+    key = f'art:majors:{uc_dir.parent.name}:{uc_dir.name}:{_stamp(uc_dir, *_year_dirs(uc_dir))}'
+    return cache.get_or_set(key, lambda: _build_majors(cc_code, uc_code), CACHE_SECONDS)
+
+
+def _build_majors(cc_code, uc_code):
     majors = []
     for slug, json_file in sorted(agreement_files(cc_code, uc_code).items()):
         try:
@@ -116,6 +143,13 @@ def list_failed(cc_code, uc_code):
     """Majors the scraper failed to fetch for a cc -> uc pair and that still have no agreement file."""
     if not FAILED_SCRAPES_FILE.exists():
         return []
+    uc_dir = articulation_dir(cc_code, uc_code)
+    year_dirs = _year_dirs(uc_dir) if uc_dir else []
+    key = f'art:failed:{cc_code.lower()}:{uc_code.lower()}:{_stamp(FAILED_SCRAPES_FILE, *year_dirs)}'
+    return cache.get_or_set(key, lambda: _build_failed(cc_code, uc_code), CACHE_SECONDS)
+
+
+def _build_failed(cc_code, uc_code):
     try:
         entries = json.loads(FAILED_SCRAPES_FILE.read_text())
     except json.JSONDecodeError:
