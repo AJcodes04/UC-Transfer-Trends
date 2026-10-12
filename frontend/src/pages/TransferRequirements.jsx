@@ -244,7 +244,7 @@ function SelectorView({ cc: urlCC, navigate }) {
           searchable
           clearable
           allowDeselect={false}
-          description={!urlCC && college && selectedCC === college.code ? 'Detected from your transcript' : undefined}
+          description={!urlCC && college && selectedCC === college.code ? (college.source === 'transcript' ? 'Detected from your transcript' : 'Your college from My Courses') : undefined}
           mb="lg"
           maw={400}
         />

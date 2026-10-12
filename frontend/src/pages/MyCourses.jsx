@@ -6,6 +6,7 @@ import {
 import { IconTrash, IconEdit, IconCheck, IconX } from '@tabler/icons-react'
 import StatsCard from '../components/StatsCard'
 import TranscriptUpload from '../components/TranscriptUpload'
+import CollegeCard from '../components/CollegeCard'
 import { useCourses, useGPA } from '../hooks/useUserData'
 
 const GRADE_OPTIONS = [
@@ -73,6 +74,8 @@ export default function MyCourses() {
       <Text c="dimmed" size="sm" mb="lg">
         Track your completed courses for transfer planning. Add manually or upload a transcript.
       </Text>
+
+      <CollegeCard />
 
       <SimpleGrid cols={{ base: 1, sm: 3 }} mb="lg">
         <StatsCard title="Overall GPA" value={gpa != null ? gpa.toFixed(2) : '-'} />
