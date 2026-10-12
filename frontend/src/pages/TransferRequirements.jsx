@@ -16,7 +16,7 @@ import {
   useArticulationDetail,
   useMajorStats,
 } from '../hooks/useApi'
-import { useCourses, useGPA } from '../hooks/useUserData'
+import { useCollege, useCourses, useGPA } from '../hooks/useUserData'
 import {
   buildUserCourseMap,
   checkRequirementSatisfied,
@@ -212,7 +212,8 @@ export default function TransferRequirements() {
 
 function SelectorView({ cc: urlCC, navigate }) {
   const { data: colleges, loading: colLoading } = useArticulationColleges()
-  const [selectedCC, setSelectedCC] = useState(urlCC || null)
+  const { college } = useCollege()
+  const [selectedCC, setSelectedCC] = useState(urlCC || college?.code || null)
   const { data: campuses, loading: ucLoading } = useArticulationCampuses(selectedCC)
 
   const ccOptions = useMemo(() =>
@@ -243,6 +244,14 @@ function SelectorView({ cc: urlCC, navigate }) {
           searchable
           clearable
           allowDeselect={false}
+          renderOption={({ option }) => (
+            <Group justify="space-between" wrap="nowrap" style={{ flex: 1 }}>
+              <span>{option.label}</span>
+              {college?.code === option.value && (
+                <Badge size="xs" variant="light" color="blue">My college</Badge>
+              )}
+            </Group>
+          )}
           mb="lg"
           maw={400}
         />

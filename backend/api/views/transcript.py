@@ -1,9 +1,11 @@
 """
 Transcript PDF parsing endpoint. Extracts text from uploaded PDFs
 with pdfplumber and sends it to the Claude API for structured course
-extraction. Rate-limited per IP per day (see DAILY_LIMIT).
+extraction; scanned PDFs with no text layer are sent as the PDF itself.
+Rate-limited per IP per day (see DAILY_LIMIT).
 """
 
+import base64
 import io
 import json
 import logging
@@ -20,7 +22,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from api.errors import error_response
-from api.serializers import ErrorSerializer, TranscriptCourseSerializer, TranscriptUploadSerializer
+from api.serializers import ErrorSerializer, TranscriptParseSerializer, TranscriptUploadSerializer
+from api.services.transcript import match_college
 
 logger = logging.getLogger(__name__)
 
@@ -34,21 +37,47 @@ REQUEST_TIMEOUT_SECONDS = 90.0
 
 _client = None
 
-SYSTEM_PROMPT = """You are a transcript parser. Given the raw text extracted from a community college transcript PDF, extract every course into a JSON array.
+SYSTEM_PROMPT = """You are a transcript parser. Given a community college transcript, either as extracted text or as the PDF itself, report the institution and extract every course.
 
-Each course object must have exactly these fields:
+"institution" is the name of the community college printed in the transcript header (e.g. "De Anza College"), or an empty string if none is shown.
+
+Each course has exactly these fields:
 - "prefix": the department/subject code in uppercase (e.g. "CIS", "MATH", "PE"). If the prefix has a space like "P E", collapse it to "PE".
 - "number": the course number including any letter suffix, in uppercase (e.g. "022A", "001B", "21JA"). Strip any trailing periods.
 - "title": the course title as shown, in title case.
 - "units": the number of units/credits as a number (e.g. 4.5, 5.0).
 - "grade": the letter grade (e.g. "A", "A-", "B+", "W", "P", "NP"). For in-progress courses use "IP".
+- "needs_review": true if any field for this course was unclear or had to be guessed (garbled text, a watermark through the line, an ambiguous grade or unit count); otherwise false.
 
 Rules:
 - Include ALL courses: completed, in-progress, withdrawn, passed, etc.
 - Do NOT include summary lines (GPA, total units, etc.), institution headers, or non-course text.
 - The transcript text may have watermark artifacts (random single letters scattered in the text). Ignore them.
-- If the same course appears multiple times (retakes), include all instances — deduplication is handled downstream.
-- Return ONLY the JSON array, no other text or markdown formatting."""
+- If the same course appears multiple times (retakes), include all instances — deduplication is handled downstream."""
+
+COURSE_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'prefix': {'type': 'string'},
+        'number': {'type': 'string'},
+        'title': {'type': 'string'},
+        'units': {'type': 'number'},
+        'grade': {'type': 'string'},
+        'needs_review': {'type': 'boolean'},
+    },
+    'required': ['prefix', 'number', 'title', 'units', 'grade', 'needs_review'],
+    'additionalProperties': False,
+}
+
+OUTPUT_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'institution': {'type': 'string'},
+        'courses': {'type': 'array', 'items': COURSE_SCHEMA},
+    },
+    'required': ['institution', 'courses'],
+    'additionalProperties': False,
+}
 
 GRADE_RANK = {
     'F': 0, 'D-': 1, 'D': 2, 'D+': 3,
@@ -58,6 +87,17 @@ GRADE_RANK = {
     'NP': -2, 'P': 13,
     'W': -3, 'FW': -3, 'I': -4, 'IP': -5, 'NC': -2, 'CR': 13,
 }
+
+
+def _user_content(pages_text, pdf_bytes):
+    """Extracted text when the PDF has a text layer; otherwise the PDF itself so scans can be read."""
+    if pages_text:
+        return 'Parse this transcript:\n\n' + '\n\n--- PAGE BREAK ---\n\n'.join(pages_text)
+    return [
+        {'type': 'document', 'source': {'type': 'base64', 'media_type': 'application/pdf',
+                                        'data': base64.b64encode(pdf_bytes).decode()}},
+        {'type': 'text', 'text': 'Parse this transcript.'},
+    ]
 
 
 def _anthropic_client():
@@ -95,7 +135,7 @@ class TranscriptUploadView(APIView):
 
     @extend_schema(
         request=TranscriptUploadSerializer,
-        responses={200: TranscriptCourseSerializer(many=True), 400: ErrorSerializer, 429: ErrorSerializer},
+        responses={200: TranscriptParseSerializer, 400: ErrorSerializer, 429: ErrorSerializer},
     )
     def post(self, request):
         if not settings.ANTHROPIC_API_KEY:
@@ -120,8 +160,9 @@ class TranscriptUploadView(APIView):
     def _parse(self, uploaded):
         try:
             pages_text = []
+            pdf_bytes = uploaded.read()
             try:
-                with pdfplumber.open(io.BytesIO(uploaded.read())) as pdf:
+                with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
                     if len(pdf.pages) > MAX_PAGES:
                         return error_response(f'PDF has too many pages (max {MAX_PAGES}).', status.HTTP_400_BAD_REQUEST)
                     for page in pdf.pages:
@@ -132,46 +173,33 @@ class TranscriptUploadView(APIView):
                 logger.warning('Unreadable transcript PDF %r', uploaded.name, exc_info=True)
                 return error_response('Could not read the PDF file.', status.HTTP_400_BAD_REQUEST)
 
-            if not pages_text:
-                return error_response('Could not extract any text from the PDF.', status.HTTP_400_BAD_REQUEST)
-
-            full_text = '\n\n--- PAGE BREAK ---\n\n'.join(pages_text)
-            if len(full_text) > MAX_TEXT_CHARS:
+            if sum(len(t) for t in pages_text) > MAX_TEXT_CHARS:
                 return error_response('Transcript text is too long to parse.', status.HTTP_400_BAD_REQUEST)
 
             message = _anthropic_client().messages.create(
                 model=MODEL,
                 max_tokens=16000,
                 system=SYSTEM_PROMPT,
-                messages=[
-                    {'role': 'user', 'content': f'Parse this transcript:\n\n{full_text}'}
-                ],
+                messages=[{'role': 'user', 'content': _user_content(pages_text, pdf_bytes)}],
+                output_config={'format': {'type': 'json_schema', 'schema': OUTPUT_SCHEMA}},
             )
 
+            logger.info(
+                'Transcript parse: mode=%s input_tokens=%s output_tokens=%s stop_reason=%s',
+                'text' if pages_text else 'pdf', message.usage.input_tokens, message.usage.output_tokens, message.stop_reason,
+            )
             if message.stop_reason == 'max_tokens':
                 logger.warning('Transcript parse hit max_tokens for %r', uploaded.name)
                 return error_response('Transcript is too long for the parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-            response_text = message.content[0].text.strip()
-            if response_text.startswith('```'):
-                response_text = response_text.split('\n', 1)[1]
-                if response_text.endswith('```'):
-                    response_text = response_text[:-3]
-                response_text = response_text.strip()
-
-            courses = json.loads(response_text)
-            if not isinstance(courses, list):
-                return error_response('Unexpected response format from parser.', status.HTTP_500_INTERNAL_SERVER_ERROR)
+            parsed = json.loads(message.content[0].text)
+            courses = parsed['courses']
 
             for course in courses:
-                course['prefix'] = str(course.get('prefix', '')).upper().replace(' ', '')
-                course['number'] = str(course.get('number', '')).upper().rstrip('.')
-                course['title'] = str(course.get('title', ''))
-                course['grade'] = str(course.get('grade', '')).upper()
-                try:
-                    course['units'] = float(course.get('units', 0))
-                except (ValueError, TypeError):
-                    course['units'] = 0.0
+                course['prefix'] = course['prefix'].upper().replace(' ', '')
+                course['number'] = course['number'].upper().rstrip('.')
+                course['grade'] = course['grade'].upper()
+                course['units'] = float(course['units'])
 
             # Retakes: keep the best grade per course.
             best = {}
@@ -181,7 +209,8 @@ class TranscriptUploadView(APIView):
                 if key not in best or rank > GRADE_RANK.get(best[key]['grade'], -1):
                     best[key] = entry
 
-            return Response(TranscriptCourseSerializer(list(best.values()), many=True).data)
+            result = {'college': match_college(parsed['institution']), 'courses': list(best.values())}
+            return Response(TranscriptParseSerializer(result).data)
 
         except json.JSONDecodeError:
             logger.warning('Transcript parser returned non-JSON output (stop_reason=%s)', message.stop_reason)

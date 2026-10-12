@@ -9,6 +9,20 @@ export function useCourses() {
   return { courses, addCourse, removeCourse, updateCourse, clearCourses, addCourses }
 }
 
+export function useCollege() {
+  const ctx = useContext(UserDataContext)
+  if (!ctx) throw new Error('useCollege must be used within UserDataProvider')
+  const { college, setCollege } = ctx
+  return { college, setCollege }
+}
+
+export function useMajor() {
+  const ctx = useContext(UserDataContext)
+  if (!ctx) throw new Error('useMajor must be used within UserDataProvider')
+  const { major, setMajor } = ctx
+  return { major, setMajor }
+}
+
 export function useSavedCombos() {
   const ctx = useContext(UserDataContext)
   if (!ctx) throw new Error('useSavedCombos must be used within UserDataProvider')

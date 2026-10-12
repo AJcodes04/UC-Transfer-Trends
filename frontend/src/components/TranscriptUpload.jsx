@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import {
-  FileInput, Button, Table, Alert, Loader, Group, Text, Paper, Checkbox, Stack,
+  FileInput, Button, Table, Alert, Loader, Group, Text, Paper, Checkbox, Stack, Badge,
 } from '@mantine/core'
 import axios from 'axios'
-import { useCourses } from '../hooks/useUserData'
+import { useCollege, useCourses } from '../hooks/useUserData'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
 
 export default function TranscriptUpload() {
   const { addCourses } = useCourses()
+  const { setCollege } = useCollege()
   const [file, setFile] = useState(null)
   const [parsed, setParsed] = useState(null)
+  const [detected, setDetected] = useState(null)
   const [selected, setSelected] = useState(new Set())
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -28,8 +30,9 @@ export default function TranscriptUpload() {
       const res = await axios.post(`${API_BASE}/api/transcript/upload/`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
-      setParsed(res.data)
-      setSelected(new Set(res.data.map((_, i) => i)))
+      setParsed(res.data.courses)
+      setDetected(res.data.college)
+      setSelected(new Set(res.data.courses.flatMap((c, i) => (c.needs_review ? [] : [i]))))
       const rem = res.headers.get
         ? res.headers.get('x-ratelimit-remaining')
         : res.headers['x-ratelimit-remaining']
@@ -59,11 +62,14 @@ export default function TranscriptUpload() {
     }
   }
 
+  const reviewCount = parsed ? parsed.filter((c) => c.needs_review).length : 0
+
   const handleConfirm = () => {
     const toAdd = parsed
       .filter((_, i) => selected.has(i))
-      .map((c) => ({ ...c, source: 'transcript' }))
+      .map(({ prefix, number, title, units, grade }) => ({ prefix, number, title, units, grade, source: 'transcript' }))
     addCourses(toAdd)
+    if (detected) setCollege(detected)
     setParsed(null)
     setFile(null)
     setSelected(new Set())
@@ -99,8 +105,14 @@ export default function TranscriptUpload() {
       {parsed && parsed.length > 0 && (
         <Stack gap="sm">
           <Text size="sm" c="dimmed">
-            Found {parsed.length} course{parsed.length !== 1 ? 's' : ''}. Review and confirm which to add.
+            Found {parsed.length} course{parsed.length !== 1 ? 's' : ''}
+            {detected ? ` from ${detected.name}` : ''}. Review and confirm which to add.
           </Text>
+          {reviewCount > 0 && (
+            <Alert color="yellow" py="xs">
+              {reviewCount} course{reviewCount !== 1 ? 's were' : ' was'} hard to read and {reviewCount !== 1 ? 'are' : 'is'} unchecked. Check the details before adding.
+            </Alert>
+          )}
 
           <Table striped highlightOnHover>
             <Table.Thead>
@@ -117,11 +129,12 @@ export default function TranscriptUpload() {
                 <Table.Th>Title</Table.Th>
                 <Table.Th>Units</Table.Th>
                 <Table.Th>Grade</Table.Th>
+                <Table.Th />
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
               {parsed.map((course, i) => (
-                <Table.Tr key={i}>
+                <Table.Tr key={i} bg={course.needs_review ? 'var(--mantine-color-yellow-light)' : undefined}>
                   <Table.Td>
                     <Checkbox checked={selected.has(i)} onChange={() => toggleRow(i)} />
                   </Table.Td>
@@ -130,6 +143,9 @@ export default function TranscriptUpload() {
                   <Table.Td>{course.title || '-'}</Table.Td>
                   <Table.Td>{course.units}</Table.Td>
                   <Table.Td>{course.grade}</Table.Td>
+                  <Table.Td>
+                    {course.needs_review && <Badge color="yellow" variant="light">Check</Badge>}
+                  </Table.Td>
                 </Table.Tr>
               ))}
             </Table.Tbody>

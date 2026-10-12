@@ -1,5 +1,7 @@
+import base64
 import json
 import logging
+from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
 import anthropic
@@ -10,17 +12,28 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import RequestFactory, TestCase, override_settings
 from rest_framework.test import APIClient
 
+from api.services.transcript import match_college
 from api.views.transcript import (
     DAILY_LIMIT,
     MAX_PAGES,
     MAX_TEXT_CHARS,
     MODEL,
+    OUTPUT_SCHEMA,
     SYSTEM_PROMPT,
     _check_rate_limit,
     _get_client_ip,
 )
 
 UPLOAD_URL = '/api/transcript/upload/'
+
+COLLEGES = [
+    {'code': 'dac', 'name': 'De Anza College'},
+    {'code': 'foothill', 'name': 'Foothill College'},
+    {'code': 'lacc', 'name': 'Los Angeles City College'},
+    {'code': 'lavc', 'name': 'Los Angeles Valley College'},
+    {'code': 'canada', 'name': 'Cañada College'},
+    {'code': 'mtsjc', 'name': 'Mt. San Jacinto College'},
+]
 
 
 def pdf_file(name='t.pdf'):
@@ -39,7 +52,29 @@ def fake_message(text, stop_reason='end_turn'):
     message = MagicMock()
     message.stop_reason = stop_reason
     message.content = [MagicMock(text=text)]
+    message.usage = SimpleNamespace(input_tokens=1200, output_tokens=340)
     return message
+
+
+@patch('api.services.transcript.list_colleges', return_value=COLLEGES)
+class CollegeMatchTests(TestCase):
+    def test_exact_name_ignoring_case_and_filler_words(self, _):
+        self.assertEqual(match_college('DE ANZA COMMUNITY COLLEGE')['code'], 'dac')
+
+    def test_accents_and_abbreviations_are_normalized(self, _):
+        self.assertEqual(match_college('Canada College')['code'], 'canada')
+        self.assertEqual(match_college('Mount San Jacinto College')['code'], 'mtsjc')
+
+    def test_name_embedded_in_longer_header(self, _):
+        self.assertEqual(match_college('Los Angeles Valley College Official Transcript')['code'], 'lavc')
+
+    def test_ambiguous_header_matches_nothing(self, _):
+        self.assertIsNone(match_college('Foothill-De Anza Community College District'))
+
+    def test_unknown_or_empty_matches_nothing(self, _):
+        self.assertIsNone(match_college('Harvard University'))
+        self.assertIsNone(match_college(''))
+        self.assertIsNone(match_college('College'))
 
 
 class ClientIpTests(TestCase):
@@ -108,11 +143,11 @@ class TranscriptParseTests(TestCase):
     """Drives the full upload path with pdfplumber and the Anthropic client replaced by fakes."""
 
     COURSES = [
-        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': '5', 'grade': 'c'},
-        {'prefix': 'MATH', 'number': '1A', 'title': 'Calculus I', 'units': 5.0, 'grade': 'A'},
-        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 'n/a', 'grade': 'P'},
-        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'W'},
-        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B+'},
+        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': 5, 'grade': 'c', 'needs_review': False},
+        {'prefix': 'MATH', 'number': '1A', 'title': 'Calculus I', 'units': 5.0, 'grade': 'A', 'needs_review': False},
+        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 0, 'grade': 'P', 'needs_review': True},
+        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'W', 'needs_review': False},
+        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B+', 'needs_review': False},
     ]
 
     def setUp(self):
@@ -126,8 +161,9 @@ class TranscriptParseTests(TestCase):
         self._request_logger.setLevel(logging.CRITICAL)
         self.pdf_open = patch('api.views.transcript.pdfplumber.open', return_value=fake_pdf(['MATH 1A  A\n', 'ENGL 1  B+'])).start()
         self.model = MagicMock()
-        self.model.messages.create.return_value = fake_message(json.dumps(self.COURSES))
+        self.model.messages.create.return_value = fake_message(json.dumps({'institution': 'De Anza College', 'courses': self.COURSES}))
         patch('api.views.transcript._anthropic_client', return_value=self.model).start()
+        patch('api.services.transcript.list_colleges', return_value=COLLEGES).start()
 
     def tearDown(self):
         patch.stopall()
@@ -140,29 +176,39 @@ class TranscriptParseTests(TestCase):
     def test_success_normalizes_and_keeps_best_grade_per_course(self):
         response = self._post()
         self.assertEqual(response.status_code, 200)
-        by_key = {f"{c['prefix']} {c['number']}": c for c in response.data}
+        by_key = {f"{c['prefix']} {c['number']}": c for c in response.data['courses']}
         self.assertEqual(set(by_key), {'MATH 1A', 'PE 022A', 'ENGL 1'})
         self.assertEqual(by_key['MATH 1A']['grade'], 'A')
         self.assertEqual(by_key['ENGL 1']['grade'], 'B+')
         self.assertEqual(by_key['PE 022A']['units'], 0.0)
         self.assertEqual(by_key['MATH 1A']['units'], 5.0)
+        self.assertEqual([k for k, c in by_key.items() if c['needs_review']], ['PE 022A'])
         self.assertEqual(response['X-RateLimit-Remaining'], str(DAILY_LIMIT - 1))
+
+    def test_token_usage_is_logged_per_parse(self):
+        with self.assertLogs('api.views.transcript', level='INFO') as logs:
+            self._post()
+        self.assertIn('mode=text input_tokens=1200 output_tokens=340 stop_reason=end_turn', logs.output[0])
+
+    def test_detected_institution_is_returned_as_a_college(self):
+        response = self._post()
+        self.assertEqual(response.data['college'], {'code': 'dac', 'name': 'De Anza College'})
+
+    def test_unknown_institution_gives_null_college(self):
+        self.model.messages.create.return_value = fake_message('{"institution": "Some Other School", "courses": []}')
+        response = self._post()
+        self.assertEqual((response.status_code, response.data), (200, {'college': None, 'courses': []}))
 
     def test_sends_joined_pages_with_system_prompt_to_configured_model(self):
         self._post()
         kwargs = self.model.messages.create.call_args.kwargs
         self.assertEqual(kwargs['model'], MODEL)
         self.assertEqual(kwargs['system'], SYSTEM_PROMPT)
+        self.assertEqual(kwargs['output_config'], {'format': {'type': 'json_schema', 'schema': OUTPUT_SCHEMA}})
         content = kwargs['messages'][0]['content']
         self.assertIn('MATH 1A', content)
         self.assertIn('--- PAGE BREAK ---', content)
         self.assertIn('ENGL 1', content)
-
-    def test_strips_markdown_code_fences(self):
-        self.model.messages.create.return_value = fake_message('```json\n' + json.dumps(self.COURSES[:1]) + '\n```')
-        response = self._post()
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data[0]['prefix'], 'MATH')
 
     def test_quota_decrements_across_successful_parses(self):
         first = self._post()
@@ -170,10 +216,10 @@ class TranscriptParseTests(TestCase):
         self.assertEqual((first['X-RateLimit-Remaining'], second['X-RateLimit-Remaining']),
                          (str(DAILY_LIMIT - 1), str(DAILY_LIMIT - 2)))
 
-    def test_non_list_json_is_a_server_error(self):
-        self.model.messages.create.return_value = fake_message('{"courses": []}')
+    def test_empty_transcript_returns_no_courses(self):
+        self.model.messages.create.return_value = fake_message('{"institution": "", "courses": []}')
         response = self._post()
-        self.assertEqual((response.status_code, response.data['error']), (500, 'Unexpected response format from parser.'))
+        self.assertEqual((response.status_code, response.data), (200, {'college': None, 'courses': []}))
 
     def test_invalid_json_is_logged_and_a_server_error(self):
         self.model.messages.create.return_value = fake_message('not json at all')
@@ -209,11 +255,15 @@ class TranscriptParseTests(TestCase):
         self.assertEqual((response.status_code, response.data['error']), (400, 'Could not read the PDF file.'))
         self.model.messages.create.assert_not_called()
 
-    def test_pdf_without_text_is_a_client_error(self):
+    def test_pdf_without_text_is_sent_as_a_document(self):
         self.pdf_open.return_value = fake_pdf(['', '   ', None])
         response = self._post()
-        self.assertEqual(response.status_code, 400)
-        self.model.messages.create.assert_not_called()
+        self.assertEqual(response.status_code, 200)
+        content = self.model.messages.create.call_args.kwargs['messages'][0]['content']
+        self.assertEqual(content[0]['type'], 'document')
+        self.assertEqual(content[0]['source']['media_type'], 'application/pdf')
+        self.assertEqual(base64.b64decode(content[0]['source']['data']), b'%PDF-1.4 fake')
+        self.assertEqual(content[1], {'type': 'text', 'text': 'Parse this transcript.'})
 
     def test_too_many_pages_rejected_before_model_call(self):
         self.pdf_open.return_value = fake_pdf(['x'] * (MAX_PAGES + 1))

@@ -7,7 +7,7 @@ import {
 import { IconSearch } from '@tabler/icons-react'
 import { IconStar, IconStarFilled } from '@tabler/icons-react'
 import { useMajorStats, useGroupedMajors } from '../hooks/useApi'
-import { useSavedCombos } from '../hooks/useUserData'
+import { useMajor, useSavedCombos } from '../hooks/useUserData'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
 import { UC_COLORS } from '../utils/ucColors'
@@ -16,7 +16,26 @@ export default function MajorStats() {
   const { '*': splatParam } = useParams()
   const navigate = useNavigate()
   const { data: groupedMajors, loading: majorsLoading } = useGroupedMajors()
+  const { major: savedMajor } = useMajor()
   const decodedMajor = splatParam ? decodeURIComponent(splatParam) : null
+
+  // The saved major as a card plus its name-related majors: specializations if it is a base
+  // major, otherwise its parent and sibling specializations.
+  const myMajor = useMemo(() => {
+    if (!groupedMajors || !savedMajor) return null
+    const group = groupedMajors.find((g) => g.name === savedMajor)
+    if (group) return { card: group, related: group.related }
+    const parent = groupedMajors.find((g) => g.related.some((r) => r.name === savedMajor))
+    if (!parent) return null
+    const self = parent.related.find((r) => r.name === savedMajor)
+    return {
+      card: { ...self, related: [] },
+      related: [
+        { name: parent.name, campuses: parent.campuses, latest_year: parent.latest_year },
+        ...parent.related.filter((r) => r.name !== savedMajor),
+      ],
+    }
+  }, [groupedMajors, savedMajor])
   const { data: stats, loading, error } = useMajorStats(decodedMajor)
   const groupedByLetter = useMemo(() => {
     if (!groupedMajors) return {}
@@ -166,49 +185,46 @@ export default function MajorStats() {
 
         {majorsLoading && <Loader m="xl" />}
 
+        {myMajor && !searchQuery.trim() && (
+          <Paper withBorder p="md" radius="md" mb="xl">
+            <Title order={4} mb="xs">My Major</Title>
+            <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }} mb={myMajor.related.length ? 'md' : 0}>
+              <MajorTile
+                major={myMajor.card}
+                badge="My major"
+                onClick={() => navigate(`/major/${encodeURIComponent(myMajor.card.name)}`)}
+              />
+            </SimpleGrid>
+            {myMajor.related.length > 0 && (
+              <>
+                <Text size="sm" fw={500} c="dimmed" mb="xs">Related majors</Text>
+                <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }}>
+                  {myMajor.related.map((r) => (
+                    <MajorTile
+                      key={r.name}
+                      major={r}
+                      onClick={() => navigate(`/major/${encodeURIComponent(r.name)}`)}
+                    />
+                  ))}
+                </SimpleGrid>
+              </>
+            )}
+          </Paper>
+        )}
+
         <Stack gap="xl">
           {filteredLetters.map((letter) => (
             <div key={letter} id={`letter-${letter}`}>
               <Title order={4} mb="xs" c="blue">{letter}</Title>
               <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }}>
-                {filteredByLetter[letter].map((m) => {
-                  const visibleRelated = m.related
-                  return (
-                  <UnstyledButton key={m.name} onClick={() => navigate(`/major/${encodeURIComponent(m.name)}`)}>
-                    <Paper
-                      withBorder
-                      p="sm"
-                      radius="md"
-                      style={{ cursor: 'pointer', transition: 'box-shadow 150ms' }}
-                      onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)' }}
-                      onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '' }}
-                    >
-                      <Text size="sm" fw={500}>{m.name}</Text>
-                      {visibleRelated.length > 0 && (
-                        <Text size="xs" c="dimmed" mb={4}>+{visibleRelated.length} specialization{visibleRelated.length > 1 ? 's' : ''}</Text>
-                      )}
-                      {m.campuses && m.campuses.length > 0 && (
-                        <Group gap={4} mt={4}>
-                          {m.campuses.map((c) => (
-                            <Badge
-                              key={c}
-                              size="xs"
-                              variant="light"
-                              style={{
-                                color: UC_COLORS[c] || '#666',
-                                borderColor: UC_COLORS[c] || '#666',
-                                backgroundColor: `${UC_COLORS[c] || '#666'}15`,
-                              }}
-                            >
-                              {c}
-                            </Badge>
-                          ))}
-                        </Group>
-                      )}
-                    </Paper>
-                  </UnstyledButton>
-                  )
-                })}
+                {filteredByLetter[letter].map((m) => (
+                  <MajorTile
+                    key={m.name}
+                    major={m}
+                    badge={m.name === savedMajor ? 'My major' : undefined}
+                    onClick={() => navigate(`/major/${encodeURIComponent(m.name)}`)}
+                  />
+                ))}
               </SimpleGrid>
             </div>
           ))}
@@ -226,6 +242,49 @@ export default function MajorStats() {
     />
   )
 }
+
+function MajorTile({ major, badge, onClick }) {
+  const related = major.related || []
+  return (
+    <UnstyledButton onClick={onClick}>
+      <Paper
+        withBorder
+        p="sm"
+        radius="md"
+        style={{ cursor: 'pointer', transition: 'box-shadow 150ms', height: '100%' }}
+        onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)' }}
+        onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '' }}
+      >
+        <Group justify="space-between" wrap="nowrap" align="flex-start">
+          <Text size="sm" fw={500}>{major.name}</Text>
+          {badge && <Badge size="xs" color="blue" variant="filled">{badge}</Badge>}
+        </Group>
+        {related.length > 0 && (
+          <Text size="xs" c="dimmed" mb={4}>+{related.length} specialization{related.length > 1 ? 's' : ''}</Text>
+        )}
+        {major.campuses && major.campuses.length > 0 && (
+          <Group gap={4} mt={4}>
+            {major.campuses.map((c) => (
+              <Badge
+                key={c}
+                size="xs"
+                variant="light"
+                style={{
+                  color: UC_COLORS[c] || '#666',
+                  borderColor: UC_COLORS[c] || '#666',
+                  backgroundColor: `${UC_COLORS[c] || '#666'}15`,
+                }}
+              >
+                {c}
+              </Badge>
+            ))}
+          </Group>
+        )}
+      </Paper>
+    </UnstyledButton>
+  )
+}
+
 
 function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error, stats,
   chartData, chartSeries, activeUCs, mostCompetitive, leastCompetitive, uniTotals, yAxis, setYAxis }) {
