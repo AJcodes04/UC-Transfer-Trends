@@ -66,10 +66,13 @@ DATABASES = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+REDIS_URL = os.getenv('REDIS_URL')
 CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-    }
+    'default': (
+        {'BACKEND': 'django.core.cache.backends.redis.RedisCache', 'LOCATION': REDIS_URL}
+        if REDIS_URL
+        else {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'}
+    )
 }
 
 TEMPLATES = [
