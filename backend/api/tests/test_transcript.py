@@ -143,11 +143,11 @@ class TranscriptParseTests(TestCase):
     """Drives the full upload path with pdfplumber and the Anthropic client replaced by fakes."""
 
     COURSES = [
-        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': 5, 'grade': 'c', 'needs_review': False},
-        {'prefix': 'MATH', 'number': '1A', 'title': 'Calculus I', 'units': 5.0, 'grade': 'A', 'needs_review': False},
-        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 0, 'grade': 'P', 'needs_review': True},
-        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'W', 'needs_review': False},
-        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B+', 'needs_review': False},
+        {'prefix': 'math', 'number': '1a.', 'title': 'Calculus I', 'units': 5, 'grade': 'c', 'term': 'fall 2023', 'needs_review': False},
+        {'prefix': 'MATH', 'number': '1A', 'title': 'Calculus I', 'units': 5.0, 'grade': 'A', 'term': 'Spring 2024', 'needs_review': False},
+        {'prefix': 'P E', 'number': '022a', 'title': 'Yoga', 'units': 0, 'grade': 'P', 'term': 'SU 2024', 'needs_review': True},
+        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'W', 'term': '', 'needs_review': False},
+        {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B+', 'term': 'Fall 2024', 'needs_review': False},
     ]
 
     def setUp(self):
@@ -183,6 +183,16 @@ class TranscriptParseTests(TestCase):
         self.assertEqual(by_key['PE 022A']['units'], 0.0)
         self.assertEqual(by_key['MATH 1A']['units'], 5.0)
         self.assertEqual([k for k, c in by_key.items() if c['needs_review']], ['PE 022A'])
+        self.assertEqual(by_key['MATH 1A']['term'], 'Spring 2024')
+        self.assertEqual(by_key['PE 022A']['term'], 'Summer 2024')
+        self.assertEqual(by_key['ENGL 1']['term'], 'Fall 2024')
+
+    def test_term_without_a_recognizable_season_is_blank(self):
+        self.model.messages.create.return_value = fake_message(json.dumps({'institution': '', 'courses': [
+            {'prefix': 'ENGL', 'number': '1', 'title': 'Composition', 'units': 4, 'grade': 'B', 'term': 'Term 3', 'needs_review': False},
+        ]}))
+        response = self._post()
+        self.assertEqual(response.data['courses'][0]['term'], '')
         self.assertEqual(response['X-RateLimit-Remaining'], str(DAILY_LIMIT - 1))
 
     def test_token_usage_is_logged_per_parse(self):

@@ -1,9 +1,12 @@
-import { useState } from 'react'
-import {
-  FileInput, Button, Table, Alert, Loader, Group, Text, Paper, Checkbox, Stack, Badge,
-} from '@mantine/core'
+import { useState, Fragment } from 'react'
+import { Button, Table, Alert, Group, Text, Checkbox, Stack, Badge, ActionIcon } from '@mantine/core'
+import { IconEdit, IconCheck, IconX } from '@tabler/icons-react'
 import axios from 'axios'
 import { useCollege, useCourses } from '../hooks/useUserData'
+import { groupByTerm, toEditForm, fromEditForm } from '../utils/terms'
+import FileDropzone from './FileDropzone'
+import TermHeaderRow from './TermHeaderRow'
+import CourseEditCells from './CourseEditCells'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
 
@@ -17,16 +20,18 @@ export default function TranscriptUpload() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [remaining, setRemaining] = useState(null)
+  const [editingIndex, setEditingIndex] = useState(null)
+  const [form, setForm] = useState({})
 
-  const handleUpload = async () => {
-    if (!file) return
+  const handleFile = async (picked) => {
+    setFile(picked)
     setLoading(true)
     setError(null)
     setParsed(null)
 
     try {
       const formData = new FormData()
-      formData.append('file', file)
+      formData.append('file', picked)
       const res = await axios.post(`${API_BASE}/api/transcript/upload/`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
@@ -64,43 +69,46 @@ export default function TranscriptUpload() {
 
   const reviewCount = parsed ? parsed.filter((c) => c.needs_review).length : 0
 
-  const handleConfirm = () => {
-    const toAdd = parsed
-      .filter((_, i) => selected.has(i))
-      .map(({ prefix, number, title, units, grade }) => ({ prefix, number, title, units, grade, source: 'transcript' }))
-    addCourses(toAdd)
-    if (detected) setCollege(detected)
+  const saveEdit = () => {
+    setParsed((prev) => prev.map((c, i) => (i === editingIndex ? { ...c, ...fromEditForm(form), needs_review: false } : c)))
+    setSelected((prev) => new Set(prev).add(editingIndex))
+    setEditingIndex(null)
+  }
+
+  const reset = () => {
     setParsed(null)
     setFile(null)
     setSelected(new Set())
+    setEditingIndex(null)
+  }
+
+  const groups = parsed ? groupByTerm(parsed.map((c, i) => ({ ...c, i }))) : []
+
+  const handleConfirm = () => {
+    const toAdd = parsed
+      .filter((_, i) => selected.has(i))
+      .map(({ prefix, number, title, units, grade, term }) => ({ prefix, number, title, units, grade, term: term || '', source: 'transcript' }))
+    addCourses(toAdd)
+    if (detected) setCollege(detected)
+    reset()
   }
 
   return (
-    <Paper withBorder p="md" radius="md">
-      <Text fw={600} mb="sm">Upload Transcript (PDF)</Text>
-
-      <Group align="flex-end" mb="md">
-        <FileInput
-          label="Select PDF file"
-          placeholder="Choose file..."
-          accept="application/pdf"
-          value={file}
-          onChange={setFile}
-          style={{ flex: 1 }}
-        />
-        <Button onClick={handleUpload} disabled={!file} loading={loading}>
-          Parse
-        </Button>
-      </Group>
+    <Stack gap="sm">
+      <FileDropzone
+        onFile={handleFile}
+        loading={loading}
+        fileName={file?.name}
+        hint={file ? 'Drop another PDF or click to replace it' : undefined}
+      />
 
       {remaining != null && (
-        <Text size="xs" c="dimmed" mb="xs">
+        <Text size="xs" c="dimmed">
           {remaining} parse{remaining !== 1 ? 's' : ''} remaining today
         </Text>
       )}
 
-      {error && <Alert color="red" mb="md">{error}</Alert>}
-      {loading && <Loader size="sm" />}
+      {error && <Alert color="red">{error}</Alert>}
 
       {parsed && parsed.length > 0 && (
         <Stack gap="sm">
@@ -114,48 +122,88 @@ export default function TranscriptUpload() {
             </Alert>
           )}
 
-          <Table striped highlightOnHover>
-            <Table.Thead>
-              <Table.Tr>
-                <Table.Th>
-                  <Checkbox
-                    checked={selected.size === parsed.length}
-                    indeterminate={selected.size > 0 && selected.size < parsed.length}
-                    onChange={toggleAll}
-                  />
-                </Table.Th>
-                <Table.Th>Prefix</Table.Th>
-                <Table.Th>Number</Table.Th>
-                <Table.Th>Title</Table.Th>
-                <Table.Th>Units</Table.Th>
-                <Table.Th>Grade</Table.Th>
-                <Table.Th />
-              </Table.Tr>
-            </Table.Thead>
-            <Table.Tbody>
-              {parsed.map((course, i) => (
-                <Table.Tr key={i} bg={course.needs_review ? 'var(--mantine-color-yellow-light)' : undefined}>
-                  <Table.Td>
-                    <Checkbox checked={selected.has(i)} onChange={() => toggleRow(i)} />
-                  </Table.Td>
-                  <Table.Td>{course.prefix}</Table.Td>
-                  <Table.Td>{course.number}</Table.Td>
-                  <Table.Td>{course.title || '-'}</Table.Td>
-                  <Table.Td>{course.units}</Table.Td>
-                  <Table.Td>{course.grade}</Table.Td>
-                  <Table.Td>
-                    {course.needs_review && <Badge color="yellow" variant="light">Check</Badge>}
-                  </Table.Td>
+          <Table.ScrollContainer minWidth={700}>
+            <Table highlightOnHover>
+              <Table.Thead>
+                <Table.Tr>
+                  <Table.Th>
+                    <Checkbox
+                      aria-label="Select all parsed courses"
+                      checked={selected.size === parsed.length}
+                      indeterminate={selected.size > 0 && selected.size < parsed.length}
+                      onChange={toggleAll}
+                    />
+                  </Table.Th>
+                  <Table.Th>Course</Table.Th>
+                  <Table.Th>Title</Table.Th>
+                  <Table.Th>Units</Table.Th>
+                  <Table.Th>Grade</Table.Th>
+                  <Table.Th />
+                  <Table.Th />
                 </Table.Tr>
-              ))}
-            </Table.Tbody>
-          </Table>
+              </Table.Thead>
+              <Table.Tbody>
+                {groups.map((group) => (
+                  <Fragment key={group.term || 'unassigned'}>
+                    <TermHeaderRow group={group} colSpan={7} />
+                    {group.courses.map((course) => {
+                      const i = course.i
+                      return (
+                        <Table.Tr key={i} bg={course.needs_review ? 'var(--mantine-color-yellow-light)' : undefined}>
+                          <Table.Td>
+                            <Checkbox
+                              aria-label={`Add ${course.prefix} ${course.number}`}
+                              checked={selected.has(i)}
+                              onChange={() => toggleRow(i)}
+                            />
+                          </Table.Td>
+                          {editingIndex === i ? (
+                            <>
+                              <CourseEditCells form={form} onChange={setForm} />
+                              <Table.Td>
+                                <Group gap={4} wrap="nowrap">
+                                  <ActionIcon size="sm" color="green" variant="subtle" aria-label="Save changes" onClick={saveEdit}>
+                                    <IconCheck size={14} />
+                                  </ActionIcon>
+                                  <ActionIcon size="sm" color="gray" variant="subtle" aria-label="Cancel editing" onClick={() => setEditingIndex(null)}>
+                                    <IconX size={14} />
+                                  </ActionIcon>
+                                </Group>
+                              </Table.Td>
+                            </>
+                          ) : (
+                            <>
+                              <Table.Td fw={600} style={{ whiteSpace: 'nowrap' }}>{course.prefix} {course.number}</Table.Td>
+                              <Table.Td>{course.title || '-'}</Table.Td>
+                              <Table.Td>{course.units}</Table.Td>
+                              <Table.Td>{course.grade === 'IP' ? 'In progress' : course.grade}</Table.Td>
+                              <Table.Td>
+                                {course.needs_review && <Badge color="yellow" variant="light">Check</Badge>}
+                              </Table.Td>
+                              <Table.Td>
+                                <ActionIcon
+                                  size="sm" variant="subtle" aria-label={`Edit ${course.prefix} ${course.number}`}
+                                  onClick={() => { setEditingIndex(i); setForm(toEditForm(course)) }}
+                                >
+                                  <IconEdit size={14} />
+                                </ActionIcon>
+                              </Table.Td>
+                            </>
+                          )}
+                        </Table.Tr>
+                      )
+                    })}
+                  </Fragment>
+                ))}
+              </Table.Tbody>
+            </Table>
+          </Table.ScrollContainer>
 
           <Group>
-            <Button onClick={handleConfirm} disabled={selected.size === 0}>
-              Add {selected.size} Course{selected.size !== 1 ? 's' : ''}
+            <Button onClick={handleConfirm} disabled={selected.size === 0 || editingIndex !== null}>
+              Add {selected.size} course{selected.size !== 1 ? 's' : ''}
             </Button>
-            <Button variant="subtle" color="gray" onClick={() => { setParsed(null); setFile(null) }}>
+            <Button variant="subtle" color="gray" onClick={reset}>
               Cancel
             </Button>
           </Group>
@@ -165,6 +213,6 @@ export default function TranscriptUpload() {
       {parsed && parsed.length === 0 && (
         <Alert color="yellow">No courses could be parsed from this PDF.</Alert>
       )}
-    </Paper>
+    </Stack>
   )
 }

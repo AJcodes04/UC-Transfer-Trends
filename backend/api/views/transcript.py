@@ -23,7 +23,7 @@ from rest_framework.views import APIView
 
 from api.errors import error_response
 from api.serializers import ErrorSerializer, TranscriptParseSerializer, TranscriptUploadSerializer
-from api.services.transcript import match_college
+from api.services.transcript import match_college, normalize_term
 
 logger = logging.getLogger(__name__)
 
@@ -47,6 +47,7 @@ Each course has exactly these fields:
 - "title": the course title as shown, in title case.
 - "units": the number of units/credits as a number (e.g. 4.5, 5.0).
 - "grade": the letter grade (e.g. "A", "A-", "B+", "W", "P", "NP"). For in-progress courses use "IP".
+- "term": the term the course was taken in, as "<Season> <Year>" where Season is one of Winter, Spring, Summer, Fall (e.g. "Fall 2024"). Terms are usually printed as headers above a group of courses; every course under a header belongs to that term. Use an empty string if no term is shown.
 - "needs_review": true if any field for this course was unclear or had to be guessed (garbled text, a watermark through the line, an ambiguous grade or unit count); otherwise false.
 
 Rules:
@@ -63,9 +64,10 @@ COURSE_SCHEMA = {
         'title': {'type': 'string'},
         'units': {'type': 'number'},
         'grade': {'type': 'string'},
+        'term': {'type': 'string'},
         'needs_review': {'type': 'boolean'},
     },
-    'required': ['prefix', 'number', 'title', 'units', 'grade', 'needs_review'],
+    'required': ['prefix', 'number', 'title', 'units', 'grade', 'term', 'needs_review'],
     'additionalProperties': False,
 }
 
@@ -200,6 +202,7 @@ class TranscriptUploadView(APIView):
                 course['number'] = course['number'].upper().rstrip('.')
                 course['grade'] = course['grade'].upper()
                 course['units'] = float(course['units'])
+                course['term'] = normalize_term(course.get('term', ''))
 
             # Retakes: keep the best grade per course.
             best = {}

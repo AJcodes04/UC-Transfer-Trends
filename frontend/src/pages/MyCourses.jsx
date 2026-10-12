@@ -1,248 +1,228 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import {
-  Title, Text, SimpleGrid, Table, TextInput, NumberInput, Select, Button,
-  Group, ActionIcon, Paper, Modal, Stack,
+  Title, Text, SimpleGrid, TextInput, NumberInput, Select, Button,
+  Group, Paper, Modal, Stack, SegmentedControl, Progress, Box,
 } from '@mantine/core'
-import { IconTrash, IconEdit, IconCheck, IconX } from '@tabler/icons-react'
 import StatsCard from '../components/StatsCard'
 import TranscriptUpload from '../components/TranscriptUpload'
-import CollegeCard from '../components/CollegeCard'
-import MajorCard from '../components/MajorCard'
+import CollegeSelect from '../components/CollegeSelect'
+import MajorSelect from '../components/MajorSelect'
+import CourseHistoryTable from '../components/CourseHistoryTable'
+import GpaTrendChart from '../components/GpaTrendChart'
 import { useCourses, useGPA } from '../hooks/useUserData'
+import { SEASONS, formatTerm, termTrend } from '../utils/terms'
+import { GRADE_OPTIONS, NON_TRANSFERABLE, NOT_COMPLETED } from '../utils/grades'
 
-const GRADE_OPTIONS = [
-  'A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-',
-  'D+', 'D', 'D-', 'F', 'P', 'NP',
-]
+const TRANSFER_UNIT_TARGET = 60
+
+const EMPTY_FORM = { prefix: '', number: '', title: '', units: 3, grade: null, season: null, year: '' }
 
 export default function MyCourses() {
   const { courses, addCourse, removeCourse, updateCourse, clearCourses } = useCourses()
   const gpa = useGPA()
 
-  const [prefix, setPrefix] = useState('')
-  const [number, setNumber] = useState('')
-  const [title, setTitle] = useState('')
-  const [units, setUnits] = useState(3)
-  const [grade, setGrade] = useState(null)
-
-  const [editingId, setEditingId] = useState(null)
-  const [editForm, setEditForm] = useState({})
-
+  const [mode, setMode] = useState('upload')
+  const [form, setForm] = useState(EMPTY_FORM)
+  const [errors, setErrors] = useState({})
   const [clearOpen, setClearOpen] = useState(false)
 
-  const handleAdd = () => {
-    if (!prefix.trim() || !number.trim() || !grade) return
+  const stats = useMemo(() => {
+    let units = 0
+    let completed = 0
+    for (const c of courses) {
+      const grade = (c.grade || '').trim().toUpperCase()
+      if (!NON_TRANSFERABLE.has(grade)) units += parseFloat(c.units) || 0
+      if (!NOT_COMPLETED.has(grade)) completed++
+    }
+    return { units, completed }
+  }, [courses])
+
+  const trend = useMemo(() => termTrend(courses).filter((t) => t.cumulativeGPA != null), [courses])
+
+  const setField = (field) => (value) => {
+    setForm((f) => ({ ...f, [field]: value }))
+    if (errors[field]) setErrors((e) => ({ ...e, [field]: undefined }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const next = {}
+    if (!form.prefix.trim()) next.prefix = 'Enter a prefix'
+    if (!form.number.trim()) next.number = 'Enter a number'
+    if (!form.grade) next.grade = 'Pick a grade'
+    if (!form.season) next.season = 'Pick a season'
+    if (!form.year) next.year = 'Enter a year'
+    if (Object.keys(next).length > 0) { setErrors(next); return }
+
     addCourse({
-      prefix: prefix.trim().toUpperCase(),
-      number: number.trim(),
-      title: title.trim(),
-      units: units || 0,
-      grade,
+      prefix: form.prefix.trim().toUpperCase(),
+      number: form.number.trim(),
+      title: form.title.trim(),
+      units: form.units || 0,
+      grade: form.grade,
+      term: formatTerm(form.season, form.year),
       source: 'manual',
     })
-    setPrefix('')
-    setNumber('')
-    setTitle('')
-    setUnits(3)
-    setGrade(null)
+    setForm(EMPTY_FORM)
+    setErrors({})
   }
 
-  const startEdit = (course) => {
-    setEditingId(course.id)
-    setEditForm({
-      prefix: course.prefix,
-      number: course.number,
-      title: course.title || '',
-      units: course.units,
-      grade: course.grade,
-    })
-  }
-
-  const saveEdit = () => {
-    updateCourse(editingId, {
-      prefix: editForm.prefix.trim().toUpperCase(),
-      number: editForm.number.trim(),
-      title: editForm.title.trim(),
-      units: editForm.units,
-      grade: editForm.grade,
-    })
-    setEditingId(null)
-  }
+  const unitPercent = Math.min(100, (stats.units / TRANSFER_UNIT_TARGET) * 100)
 
   return (
     <>
-      <Title order={2} mb="md">My Courses</Title>
-      <Text c="dimmed" size="sm" mb="lg">
-        Track your completed courses for transfer planning. Add manually or upload a transcript.
-      </Text>
-
-      <SimpleGrid cols={{ base: 1, md: 2 }} mb="lg">
-        <CollegeCard />
-        <MajorCard />
-      </SimpleGrid>
+      <Group justify="space-between" align="flex-end" mb="md" gap="md">
+        <Box>
+          <Title order={2}>My Courses</Title>
+          <Text c="dimmed" size="sm" mt={4}>
+            Track your completed courses for transfer planning.
+          </Text>
+        </Box>
+        <Group gap="sm" align="flex-end">
+          <CollegeSelect size="sm" w={260} />
+          <MajorSelect size="sm" w={260} />
+        </Group>
+      </Group>
 
       <SimpleGrid cols={{ base: 1, sm: 3 }} mb="lg">
-        <StatsCard title="Overall GPA" value={gpa != null ? gpa.toFixed(2) : '-'} />
-        <StatsCard title="Total Courses" value={courses.length} />
         <StatsCard
-          title="Total Units"
-          value={courses.reduce((sum, c) => sum + (parseFloat(c.units) || 0), 0).toFixed(1)}
+          title="Overall GPA"
+          value={gpa != null ? gpa.toFixed(2) : '—'}
+          subtitle={gpa == null ? 'Calculated once you add graded courses' : undefined}
         />
+        <StatsCard title="Transferable units" value={`${stats.units} / ${TRANSFER_UNIT_TARGET}`}>
+          <Progress value={unitPercent} size="sm" mt="sm" aria-label="Transferable units progress" />
+        </StatsCard>
+        <StatsCard title="Courses completed" value={stats.completed} />
       </SimpleGrid>
 
+      {trend.length >= 2 && (
+        <Paper withBorder p="md" radius="md" mb="lg">
+          <Text fw={600} mb="sm">GPA trend</Text>
+          <GpaTrendChart data={trend} />
+        </Paper>
+      )}
+
       <Paper withBorder p="md" radius="md" mb="lg">
-        <Text fw={600} mb="sm">Add Course</Text>
-        <Group align="flex-end" grow>
-          <TextInput
-            label="Prefix"
-            placeholder="e.g. MATH"
-            value={prefix}
-            onChange={(e) => setPrefix(e.currentTarget.value)}
-            required
+        <Group justify="space-between" mb="md">
+          <Text fw={600}>Add courses</Text>
+          <SegmentedControl
+            size="xs"
+            value={mode}
+            onChange={setMode}
+            data={[
+              { value: 'upload', label: 'Upload transcript' },
+              { value: 'manual', label: 'Enter manually' },
+            ]}
           />
-          <TextInput
-            label="Number"
-            placeholder="e.g. 101"
-            value={number}
-            onChange={(e) => setNumber(e.currentTarget.value)}
-            required
-          />
-          <TextInput
-            label="Title"
-            placeholder="(optional)"
-            value={title}
-            onChange={(e) => setTitle(e.currentTarget.value)}
-          />
-          <NumberInput
-            label="Units"
-            value={units}
-            onChange={setUnits}
-            min={0}
-            max={10}
-            step={0.5}
-            required
-          />
-          <Select
-            label="Grade"
-            placeholder="Select"
-            data={GRADE_OPTIONS}
-            value={grade}
-            onChange={setGrade}
-            required
-          />
-          <Button onClick={handleAdd} disabled={!prefix.trim() || !number.trim() || !grade}>
-            Add
-          </Button>
         </Group>
+
+        {mode === 'upload' ? (
+          <TranscriptUpload />
+        ) : (
+          <form onSubmit={handleSubmit} noValidate>
+            <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
+              <TextInput
+                label="Prefix"
+                placeholder="e.g. MATH"
+                value={form.prefix}
+                onChange={(e) => setField('prefix')(e.currentTarget.value)}
+                error={errors.prefix}
+                required
+              />
+              <TextInput
+                label="Number"
+                placeholder="e.g. 101"
+                value={form.number}
+                onChange={(e) => setField('number')(e.currentTarget.value)}
+                error={errors.number}
+                required
+              />
+              <TextInput
+                label="Title"
+                placeholder="Optional"
+                value={form.title}
+                onChange={(e) => setField('title')(e.currentTarget.value)}
+              />
+              <NumberInput
+                label="Units"
+                value={form.units}
+                onChange={setField('units')}
+                min={0}
+                max={10}
+                step={0.5}
+                required
+              />
+              <Select
+                label="Grade"
+                placeholder="Select"
+                data={GRADE_OPTIONS}
+                value={form.grade}
+                onChange={setField('grade')}
+                error={errors.grade}
+                required
+              />
+              <Select
+                label="Season"
+                placeholder="Select"
+                data={SEASONS}
+                value={form.season}
+                onChange={setField('season')}
+                error={errors.season}
+                required
+              />
+              <NumberInput
+                label="Year"
+                placeholder="e.g. 2024"
+                value={form.year}
+                onChange={setField('year')}
+                error={errors.year}
+                min={1990}
+                max={2100}
+                allowDecimal={false}
+                hideControls
+                required
+              />
+            </SimpleGrid>
+            <Group justify="flex-end" mt="md">
+              <Button type="submit">Add course</Button>
+            </Group>
+          </form>
+        )}
       </Paper>
 
-      <div style={{ marginBottom: '1.5rem' }}>
-        <TranscriptUpload />
-      </div>
-
-      {courses.length > 0 && (
-        <>
-          <Group justify="space-between" mb="sm">
-            <Title order={4}>Course List</Title>
+      <Paper withBorder p="md" radius="md">
+        <Group justify="space-between" mb="sm">
+          <Text fw={600}>Course history</Text>
+          {courses.length > 0 && (
             <Button variant="subtle" color="red" size="xs" onClick={() => setClearOpen(true)}>
-              Clear All
+              Clear all
             </Button>
-          </Group>
+          )}
+        </Group>
 
-          <Paper withBorder radius="md" style={{ overflow: 'hidden' }}>
-            <Table striped highlightOnHover>
-              <Table.Thead>
-                <Table.Tr>
-                  <Table.Th>Prefix</Table.Th>
-                  <Table.Th>Number</Table.Th>
-                  <Table.Th>Title</Table.Th>
-                  <Table.Th>Units</Table.Th>
-                  <Table.Th>Grade</Table.Th>
-                  <Table.Th>Source</Table.Th>
-                  <Table.Th></Table.Th>
-                </Table.Tr>
-              </Table.Thead>
-              <Table.Tbody>
-                {courses.map((course) => (
-                  <Table.Tr key={course.id}>
-                    {editingId === course.id ? (
-                      <>
-                        <Table.Td>
-                          <TextInput
-                            size="xs" value={editForm.prefix}
-                            onChange={(e) => setEditForm({ ...editForm, prefix: e.currentTarget.value })}
-                          />
-                        </Table.Td>
-                        <Table.Td>
-                          <TextInput
-                            size="xs" value={editForm.number}
-                            onChange={(e) => setEditForm({ ...editForm, number: e.currentTarget.value })}
-                          />
-                        </Table.Td>
-                        <Table.Td>
-                          <TextInput
-                            size="xs" value={editForm.title}
-                            onChange={(e) => setEditForm({ ...editForm, title: e.currentTarget.value })}
-                          />
-                        </Table.Td>
-                        <Table.Td>
-                          <NumberInput size="xs" value={editForm.units} onChange={(v) => setEditForm({ ...editForm, units: v })} />
-                        </Table.Td>
-                        <Table.Td>
-                          <Select size="xs" data={GRADE_OPTIONS} value={editForm.grade} onChange={(v) => setEditForm({ ...editForm, grade: v })} />
-                        </Table.Td>
-                        <Table.Td>{course.source || '-'}</Table.Td>
-                        <Table.Td>
-                          <Group gap={4}>
-                            <ActionIcon size="sm" color="green" variant="subtle" onClick={saveEdit}>
-                              <IconCheck size={14} />
-                            </ActionIcon>
-                            <ActionIcon size="sm" color="gray" variant="subtle" onClick={() => setEditingId(null)}>
-                              <IconX size={14} />
-                            </ActionIcon>
-                          </Group>
-                        </Table.Td>
-                      </>
-                    ) : (
-                      <>
-                        <Table.Td>{course.prefix}</Table.Td>
-                        <Table.Td>{course.number}</Table.Td>
-                        <Table.Td>{course.title || '-'}</Table.Td>
-                        <Table.Td>{course.units}</Table.Td>
-                        <Table.Td>{course.grade}</Table.Td>
-                        <Table.Td>{course.source || '-'}</Table.Td>
-                        <Table.Td>
-                          <Group gap={4}>
-                            <ActionIcon size="sm" variant="subtle" onClick={() => startEdit(course)}>
-                              <IconEdit size={14} />
-                            </ActionIcon>
-                            <ActionIcon size="sm" color="red" variant="subtle" onClick={() => removeCourse(course.id)}>
-                              <IconTrash size={14} />
-                            </ActionIcon>
-                          </Group>
-                        </Table.Td>
-                      </>
-                    )}
-                  </Table.Tr>
-                ))}
-              </Table.Tbody>
-            </Table>
-          </Paper>
-        </>
-      )}
+        {courses.length > 0 ? (
+          <CourseHistoryTable
+            courses={courses}
+            onUpdate={updateCourse}
+            onRemove={removeCourse}
+          />
+        ) : (
+          <Stack align="center" gap="xs" py="xl">
+            <Text fw={600}>No courses yet</Text>
+            <Text size="sm" c="dimmed" ta="center">
+              Courses you add will show up here.
+            </Text>
+          </Stack>
+        )}
+      </Paper>
 
-      {courses.length === 0 && (
-        <Text c="dimmed" ta="center" mt="xl">
-          No courses added yet. Use the form above or upload a transcript to get started.
-        </Text>
-      )}
-
-      <Modal opened={clearOpen} onClose={() => setClearOpen(false)} title="Clear All Courses?" centered>
+      <Modal opened={clearOpen} onClose={() => setClearOpen(false)} title="Clear all courses?" centered>
         <Stack>
           <Text size="sm">This will remove all {courses.length} courses. This cannot be undone.</Text>
           <Group justify="flex-end">
             <Button variant="default" onClick={() => setClearOpen(false)}>Cancel</Button>
-            <Button color="red" onClick={() => { clearCourses(); setClearOpen(false) }}>Clear All</Button>
+            <Button color="red" onClick={() => { clearCourses(); setClearOpen(false) }}>Clear all</Button>
           </Group>
         </Stack>
       </Modal>
