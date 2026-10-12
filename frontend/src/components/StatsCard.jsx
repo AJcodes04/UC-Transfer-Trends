@@ -1,6 +1,6 @@
 import { Paper, Text, Group } from '@mantine/core'
 
-export default function StatsCard({ title, value, subtitle, change }) {
+export default function StatsCard({ title, value, subtitle, change, children }) {
   const changeNum = change != null ? parseFloat(change) : null
   const color = changeNum > 0 ? '#2f9e44' : changeNum < 0 ? '#e03131' : '#868e96'
   const triangle = changeNum > 0 ? '▲' : changeNum < 0 ? '▼' : ''
@@ -25,6 +25,7 @@ export default function StatsCard({ title, value, subtitle, change }) {
           {subtitle}
         </Text>
       )}
+      {children}
     </Paper>
   )
 }
