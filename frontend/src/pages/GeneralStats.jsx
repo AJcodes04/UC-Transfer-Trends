@@ -4,6 +4,7 @@ import { useGeneralStats } from '../hooks/useApi'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
 import { UC_COLORS } from '../utils/ucColors'
+import { computeCardStats, formatDelta } from '../utils/cardStats'
 
 const Y_AXIS_OPTIONS = [
   { value: 'admitRate', label: 'Admit Rate (%)' },
@@ -89,15 +90,13 @@ export default function GeneralStats() {
   const cardYear = selectedYear || (availableYears.length ? availableYears[availableYears.length - 1] : null)
   const prevCardYear = cardYear ? cardYear - 1 : null
 
-  const overallAvg = useMemo(() => {
-    if (!stats || !cardYear) return { current: 'N/A', prev: 'N/A' }
-    const forYear = (y) => {
-      const rows = activeStats.filter((r) => r.year === y && r.admit_rate != null)
-      if (!rows.length) return null
-      return (rows.reduce((sum, r) => sum + r.admit_rate, 0) / rows.length).toFixed(1)
-    }
-    return { current: forYear(cardYear), prev: forYear(prevCardYear) }
-  }, [stats, activeStats, cardYear, prevCardYear])
+  const cards = useMemo(() => computeCardStats(
+    activeStats.map((r) => ({
+      year: r.year, applicants: r.applicants, admits: r.admits, enrolls: r.enrolls,
+      gpaMin: r.admit_gpa_min != null ? parseFloat(r.admit_gpa_min) : null,
+    })),
+    cardYear,
+  ), [activeStats, cardYear])
 
   const mostCompetitive = useMemo(() => {
     if (!stats || !cardYear) return { current: null, prev: null }
@@ -109,31 +108,9 @@ export default function GeneralStats() {
     return { current: forYear(cardYear), prev: forYear(prevCardYear) }
   }, [stats, activeStats, cardYear, prevCardYear])
 
-  const avgGpaRange = useMemo(() => {
-    if (!stats || !cardYear) return null
-    const rows = activeStats.filter((r) => r.year === cardYear)
-    const mins = rows.filter((r) => r.admit_gpa_min != null).map((r) => parseFloat(r.admit_gpa_min))
-    const maxes = rows.filter((r) => r.admit_gpa_max != null).map((r) => parseFloat(r.admit_gpa_max))
-    if (!mins.length || !maxes.length) return null
-    const avgMin = (mins.reduce((a, b) => a + b, 0) / mins.length).toFixed(2)
-    const avgMax = (maxes.reduce((a, b) => a + b, 0) / maxes.length).toFixed(2)
-    return { min: avgMin, max: avgMax }
-  }, [stats, activeStats, cardYear])
-
-  const enrollTotals = useMemo(() => {
-    if (!stats || !cardYear) return { current: null, prev: null }
-    const forYear = (y) => {
-      const rows = activeStats.filter((r) => r.year === y)
-      if (!rows.length) return null
-      return rows.reduce((sum, r) => sum + (r.enrolls || 0), 0)
-    }
-    return { current: forYear(cardYear), prev: forYear(prevCardYear) }
-  }, [stats, activeStats, cardYear, prevCardYear])
-
-  function yoyChange(latest, prev) {
-    if (!latest || !prev || prev === 0) return null
-    return ((latest - prev) / prev * 100).toFixed(1)
-  }
+  const pct = (v) => `${v.toFixed(1)}%`
+  const gpa = (v) => v.toFixed(2)
+  const perSeat = (v) => `${v.toFixed(1)}:1`
 
   if (loading) return <Loader m="xl" />
   if (error) return <Alert color="red" title="Error">{error}</Alert>
@@ -156,34 +133,55 @@ export default function GeneralStats() {
         onSelectedKeysChange={setSelectedUCs}
       />
 
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
-        <StatsCard
-          title={`Avg Admit Rate (${cardYear || ''})`}
-          value={overallAvg.current ? `${overallAvg.current}%` : 'N/A'}
-          change={yoyChange(parseFloat(overallAvg.current), parseFloat(overallAvg.prev))}
-          subtitle={overallAvg.prev ? `vs ${overallAvg.prev}% in ${prevCardYear}` : undefined}
-        />
-        <StatsCard
-          title={`Most Competitive (${cardYear || ''})`}
-          value={mostCompetitive.current ? `${mostCompetitive.current.campus}` : '-'}
-          change={mostCompetitive.current && mostCompetitive.prev
-            ? yoyChange(mostCompetitive.current.admit_rate, mostCompetitive.prev.admit_rate)
-            : null}
-          subtitle={mostCompetitive.current
-            ? `${mostCompetitive.current.admit_rate}% admit rate${mostCompetitive.prev ? ` vs ${mostCompetitive.prev.admit_rate}% in ${prevCardYear}` : ''}`
-            : undefined}
-        />
-        <StatsCard
-          title={`Avg GPA Range (${cardYear || ''})`}
-          value={avgGpaRange ? `${avgGpaRange.min} – ${avgGpaRange.max}` : 'N/A'}
-        />
-        <StatsCard
-          title={`Enrolls (${cardYear || ''})`}
-          value={enrollTotals.current != null ? enrollTotals.current.toLocaleString() : '-'}
-          change={yoyChange(enrollTotals.current, enrollTotals.prev)}
-          subtitle={enrollTotals.prev != null ? `vs ${enrollTotals.prev.toLocaleString()} in ${prevCardYear}` : undefined}
-        />
-      </SimpleGrid>
+      {cards && (
+        <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 5 }} mt="lg" mb="lg">
+          <StatsCard
+            title={`Admit rate (${cardYear})`}
+            value={cards.admitRate.value != null ? pct(cards.admitRate.value) : 'N/A'}
+            change={formatDelta(cards.admitRate.delta)}
+            changeUnit=" pt"
+            subtitle={`vs ${prevCardYear}`}
+            trend={cards.admitRate.series}
+            trendFormat={pct}
+          />
+          <StatsCard
+            title={`${cards.lookback}-year trend`}
+            value={cards.direction || 'N/A'}
+            change={formatDelta(cards.admitRate.lookbackDelta)}
+            changeUnit=" pt"
+            subtitle={`Admit rate since ${cardYear - cards.lookback}`}
+          />
+          <StatsCard
+            title={`GPA floor (${cardYear})`}
+            value={cards.gpaFloor.value != null ? gpa(cards.gpaFloor.value) : 'N/A'}
+            change={formatDelta(cards.gpaFloor.lookbackDelta, 2)}
+            changeUnit=""
+            goodDirection="down"
+            subtitle={`25th percentile, vs ${cardYear - cards.lookback}`}
+            trend={cards.gpaFloor.series}
+            trendFormat={gpa}
+          />
+          <StatsCard
+            title={`Applicants per seat (${cardYear})`}
+            value={cards.perSeat.value != null ? perSeat(cards.perSeat.value) : 'N/A'}
+            change={formatDelta(cards.perSeat.delta)}
+            changeUnit=""
+            goodDirection="down"
+            subtitle={`vs ${prevCardYear}`}
+            trend={cards.perSeat.series}
+            trendFormat={perSeat}
+          />
+          <StatsCard
+            title={`Most competitive (${cardYear})`}
+            value={mostCompetitive.current ? mostCompetitive.current.campus : '-'}
+            change={mostCompetitive.current && mostCompetitive.prev
+              ? formatDelta(mostCompetitive.current.admit_rate - mostCompetitive.prev.admit_rate, 0)
+              : null}
+            changeUnit=" pt"
+            subtitle={mostCompetitive.current ? `${mostCompetitive.current.admit_rate}% admit rate` : undefined}
+          />
+        </SimpleGrid>
+      )}
 
       <Group justify="space-between" align="center" mb="sm">
         <Title order={4}>By University</Title>
