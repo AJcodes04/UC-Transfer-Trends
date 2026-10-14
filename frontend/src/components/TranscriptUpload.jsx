@@ -10,7 +10,7 @@ import CourseEditCells from './CourseEditCells'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
 
-export default function TranscriptUpload() {
+export default function TranscriptUpload({ onAdded }) {
   const { addCourses } = useCourses()
   const { setCollege } = useCollege()
   const [file, setFile] = useState(null)
@@ -91,6 +91,7 @@ export default function TranscriptUpload() {
     addCourses(toAdd)
     if (detected) setCollege(detected)
     reset()
+    onAdded?.()
   }
 
   return (
