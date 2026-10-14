@@ -2,6 +2,10 @@ import {
   ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts'
 import { Group, Text, Paper, Stack } from '@mantine/core'
+import { useReducedMotion } from '@mantine/hooks'
+
+const DRAW_DURATION = 2200
+const TERM_DRAW_DELAY = 350
 
 const SERIES = [
   { key: 'cumulativeGPA', label: 'Cumulative GPA', color: 'var(--mantine-color-uc-blue-6)' },
@@ -39,6 +43,13 @@ function TrendTooltip({ active, payload }) {
 }
 
 export default function GpaTrendChart({ data }) {
+  const reducedMotion = useReducedMotion(undefined, { getInitialValueInEffect: false })
+  const draw = {
+    isAnimationActive: !reducedMotion,
+    animationDuration: DRAW_DURATION,
+    animationEasing: 'ease-out',
+  }
+
   const values = data.flatMap((d) => [d.termGPA, d.cumulativeGPA]).filter((v) => v != null)
   const floor = Math.max(0, Math.floor((Math.min(...values) - 0.25) * 2) / 2)
 
@@ -71,13 +82,15 @@ export default function GpaTrendChart({ data }) {
             type="monotone" dataKey="termGPA" name="Term GPA"
             stroke={SERIES[1].color} strokeWidth={2} strokeDasharray="4 3"
             dot={{ r: 4, strokeWidth: 2, fill: 'var(--mantine-color-body)' }}
-            activeDot={{ r: 6 }} connectNulls isAnimationActive={false}
+            activeDot={{ r: 6 }} connectNulls
+            {...draw} animationBegin={TERM_DRAW_DELAY}
           />
           <Line
             type="monotone" dataKey="cumulativeGPA" name="Cumulative GPA"
             stroke={SERIES[0].color} strokeWidth={2}
             dot={{ r: 4, strokeWidth: 2, fill: 'var(--mantine-color-body)' }}
-            activeDot={{ r: 6 }} connectNulls isAnimationActive={false}
+            activeDot={{ r: 6 }} connectNulls
+            {...draw} animationBegin={0}
           />
         </LineChart>
       </ResponsiveContainer>

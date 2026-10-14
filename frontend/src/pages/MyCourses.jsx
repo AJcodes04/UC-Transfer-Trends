@@ -1,9 +1,12 @@
 import { useMemo, useState } from 'react'
 import {
   Title, Text, SimpleGrid, TextInput, NumberInput, Select, Button,
-  Group, Paper, Modal, Stack, SegmentedControl, Progress, Box,
+  Group, Paper, Modal, Stack, SegmentedControl, Box,
 } from '@mantine/core'
+import { useReducedMotion } from '@mantine/hooks'
 import StatsCard from '../components/StatsCard'
+import CountUp from '../components/CountUp'
+import TransferUnitsCard from '../components/TransferUnitsCard'
 import TranscriptUpload from '../components/TranscriptUpload'
 import CollegeSelect from '../components/CollegeSelect'
 import MajorSelect from '../components/MajorSelect'
@@ -39,6 +42,12 @@ export default function MyCourses() {
 
   const trend = useMemo(() => termTrend(courses).filter((t) => t.cumulativeGPA != null), [courses])
 
+  const reducedMotion = useReducedMotion(undefined, { getInitialValueInEffect: false })
+
+  const scrollToStats = () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' })
+  }
+
   const setField = (field) => (value) => {
     setForm((f) => ({ ...f, [field]: value }))
     if (errors[field]) setErrors((e) => ({ ...e, [field]: undefined }))
@@ -67,8 +76,6 @@ export default function MyCourses() {
     setErrors({})
   }
 
-  const unitPercent = Math.min(100, (stats.units / TRANSFER_UNIT_TARGET) * 100)
-
   return (
     <>
       <Group justify="space-between" align="flex-end" mb="md" gap="md">
@@ -87,13 +94,11 @@ export default function MyCourses() {
       <SimpleGrid cols={{ base: 1, sm: 3 }} mb="lg">
         <StatsCard
           title="Overall GPA"
-          value={gpa != null ? gpa.toFixed(2) : '—'}
+          value={gpa != null ? <CountUp value={gpa} decimals={2} /> : '—'}
           subtitle={gpa == null ? 'Calculated once you add graded courses' : undefined}
         />
-        <StatsCard title="Transferable units" value={`${stats.units} / ${TRANSFER_UNIT_TARGET}`}>
-          <Progress value={unitPercent} size="sm" mt="sm" aria-label="Transferable units progress" />
-        </StatsCard>
-        <StatsCard title="Courses completed" value={stats.completed} />
+        <TransferUnitsCard units={stats.units} target={TRANSFER_UNIT_TARGET} />
+        <StatsCard title="Courses completed" value={<CountUp value={stats.completed} />} />
       </SimpleGrid>
 
       {trend.length >= 2 && (
@@ -118,7 +123,7 @@ export default function MyCourses() {
         </Group>
 
         {mode === 'upload' ? (
-          <TranscriptUpload />
+          <TranscriptUpload onAdded={scrollToStats} />
         ) : (
           <form onSubmit={handleSubmit} noValidate>
             <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="sm">
