@@ -80,7 +80,6 @@ export default function MajorStats() {
     if (!stats) return []
     const byYear = {}
     stats.forEach((row) => {
-      if (!activeUCs.includes(row.university)) return
       if (!byYear[row.year]) byYear[row.year] = { year: row.year }
       if (yAxis === 'gpa') {
         if (row.avg_admit_gpa_min != null) {
@@ -93,9 +92,9 @@ export default function MajorStats() {
       }
     })
     return Object.values(byYear).sort((a, b) => a.year - b.year)
-  }, [stats, activeUCs, yAxis])
+  }, [stats, yAxis])
 
-  const chartSeries = activeUCs.map((u) => ({ key: u, label: u }))
+  const chartSeries = allUniversities.map((u) => ({ key: u, label: u }))
 
   const uniTotals = useMemo(() => {
     if (!stats) return []
@@ -237,7 +236,7 @@ export default function MajorStats() {
     <MajorDetailView
       decodedMajor={decodedMajor} navigate={navigate} relatedMajors={relatedMajors}
       loading={loading} error={error} stats={stats} chartData={chartData} chartSeries={chartSeries}
-      activeUCs={activeUCs} mostCompetitive={mostCompetitive} leastCompetitive={leastCompetitive}
+      activeUCs={activeUCs} selectedUCs={selectedUCs} setSelectedUCs={setSelectedUCs} mostCompetitive={mostCompetitive} leastCompetitive={leastCompetitive}
       uniTotals={uniTotals} yAxis={yAxis} setYAxis={setYAxis}
     />
   )
@@ -287,7 +286,7 @@ function MajorTile({ major, badge, onClick }) {
 
 
 function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error, stats,
-  chartData, chartSeries, activeUCs, mostCompetitive, leastCompetitive, uniTotals, yAxis, setYAxis }) {
+  chartData, chartSeries, activeUCs, selectedUCs, setSelectedUCs, mostCompetitive, leastCompetitive, uniTotals, yAxis, setYAxis }) {
   const { saveCombo, unsaveCombo, isComboSaved } = useSavedCombos()
   const [selectedYear, setSelectedYear] = useState(null)
 
@@ -307,8 +306,8 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
   }, [availableYears])
 
   const yearFilteredTotals = useMemo(() => {
-    if (!stats || !selectedYear) return uniTotals
-    const filtered = stats.filter((row) => row.year === selectedYear && activeUCs.includes(row.university))
+    if (!stats) return []
+    const filtered = stats.filter((row) => !selectedYear || row.year === selectedYear)
     const totals = {}
     filtered.forEach((row) => {
       if (!totals[row.university]) {
@@ -338,7 +337,7 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
         ? `${t.latestGpaMin.toFixed(2)} - ${t.latestGpaMax != null ? t.latestGpaMax.toFixed(2) : '?'}`
         : 'N/A',
     })).sort((a, b) => a.university.localeCompare(b.university))
-  }, [stats, selectedYear, activeUCs, uniTotals])
+  }, [stats, selectedYear])
 
   return (
     <>
@@ -411,6 +410,8 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
             onYAxisChange={setYAxis}
             yDomain={yAxis === 'gpa' ? [2.4, 4.0] : undefined}
             tooltipSuffix={yAxis === 'gpa' ? '' : '%'}
+            selectedKeys={selectedUCs}
+            onSelectedKeysChange={setSelectedUCs}
           />
 
           <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
@@ -435,7 +436,7 @@ function MajorDetailView({ decodedMajor, navigate, relatedMajors, loading, error
               const avg = (valid.reduce((s, u) => s + parseFloat(u.avgRate), 0) / valid.length).toFixed(1)
               return (
                 <StatsCard
-                  title="Avg Admit Rate (All UCs)"
+                  title={selectedUCs.length ? 'Avg Admit Rate (Selected)' : 'Avg Admit Rate (All UCs)'}
                   value={`${avg}%`}
                   subtitle={`Across ${valid.length} campus${valid.length > 1 ? 'es' : ''}`}
                 />

@@ -46,19 +46,25 @@ export default function TrendChart({
   onYAxisChange,
   yDomain,
   tooltipSuffix = '%',
+  selectedKeys: controlledKeys,
+  onSelectedKeysChange,
 }) {
-  const [selectedKeys, setSelectedKeys] = useState([])
+  const [internalKeys, setInternalKeys] = useState([])
+  const selectedKeys = controlledKeys ?? internalKeys
+
+  const setSelectedKeys = useCallback((next) => {
+    setInternalKeys(next)
+    onSelectedKeysChange?.(next)
+  }, [onSelectedKeysChange])
 
   const showAll = selectedKeys.length === 0
 
   const toggleKey = useCallback((key) => {
-    setSelectedKeys((prev) => {
-      if (prev.includes(key)) {
-        return prev.filter((k) => k !== key)
-      }
-      return [...prev, key]
-    })
-  }, [])
+    const next = selectedKeys.includes(key)
+      ? selectedKeys.filter((k) => k !== key)
+      : [...selectedKeys, key]
+    setSelectedKeys(next)
+  }, [selectedKeys, setSelectedKeys])
 
   if (!data || data.length === 0) return null
 

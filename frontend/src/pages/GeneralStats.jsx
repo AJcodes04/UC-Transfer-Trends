@@ -14,11 +14,18 @@ export default function GeneralStats() {
   const { data: stats, loading, error } = useGeneralStats()
   const [yAxis, setYAxis] = useState('admitRate')
   const [selectedYear, setSelectedYear] = useState(null)
+  const [selectedUCs, setSelectedUCs] = useState([])
 
   const allUCs = useMemo(() => {
     if (!stats) return []
     return [...new Set(stats.map((s) => s.campus))].sort()
   }, [stats])
+
+  const activeUCs = selectedUCs.length > 0 ? selectedUCs : allUCs
+  const activeStats = useMemo(
+    () => (stats || []).filter((r) => activeUCs.includes(r.campus)),
+    [stats, activeUCs],
+  )
 
   const chartData = useMemo(() => {
     if (!stats) return []
@@ -85,43 +92,43 @@ export default function GeneralStats() {
   const overallAvg = useMemo(() => {
     if (!stats || !cardYear) return { current: 'N/A', prev: 'N/A' }
     const forYear = (y) => {
-      const rows = stats.filter((r) => r.year === y && r.admit_rate != null)
+      const rows = activeStats.filter((r) => r.year === y && r.admit_rate != null)
       if (!rows.length) return null
       return (rows.reduce((sum, r) => sum + r.admit_rate, 0) / rows.length).toFixed(1)
     }
     return { current: forYear(cardYear), prev: forYear(prevCardYear) }
-  }, [stats, cardYear, prevCardYear])
+  }, [stats, activeStats, cardYear, prevCardYear])
 
   const mostCompetitive = useMemo(() => {
     if (!stats || !cardYear) return { current: null, prev: null }
     const forYear = (y) => {
-      const rows = stats.filter((r) => r.year === y && r.admit_rate != null)
+      const rows = activeStats.filter((r) => r.year === y && r.admit_rate != null)
       if (!rows.length) return null
       return rows.reduce((best, r) => (!best || r.admit_rate < best.admit_rate ? r : best), null)
     }
     return { current: forYear(cardYear), prev: forYear(prevCardYear) }
-  }, [stats, cardYear, prevCardYear])
+  }, [stats, activeStats, cardYear, prevCardYear])
 
   const avgGpaRange = useMemo(() => {
     if (!stats || !cardYear) return null
-    const rows = stats.filter((r) => r.year === cardYear)
+    const rows = activeStats.filter((r) => r.year === cardYear)
     const mins = rows.filter((r) => r.admit_gpa_min != null).map((r) => parseFloat(r.admit_gpa_min))
     const maxes = rows.filter((r) => r.admit_gpa_max != null).map((r) => parseFloat(r.admit_gpa_max))
     if (!mins.length || !maxes.length) return null
     const avgMin = (mins.reduce((a, b) => a + b, 0) / mins.length).toFixed(2)
     const avgMax = (maxes.reduce((a, b) => a + b, 0) / maxes.length).toFixed(2)
     return { min: avgMin, max: avgMax }
-  }, [stats, cardYear])
+  }, [stats, activeStats, cardYear])
 
   const enrollTotals = useMemo(() => {
     if (!stats || !cardYear) return { current: null, prev: null }
     const forYear = (y) => {
-      const rows = stats.filter((r) => r.year === y)
+      const rows = activeStats.filter((r) => r.year === y)
       if (!rows.length) return null
       return rows.reduce((sum, r) => sum + (r.enrolls || 0), 0)
     }
     return { current: forYear(cardYear), prev: forYear(prevCardYear) }
-  }, [stats, cardYear, prevCardYear])
+  }, [stats, activeStats, cardYear, prevCardYear])
 
   function yoyChange(latest, prev) {
     if (!latest || !prev || prev === 0) return null
@@ -145,6 +152,8 @@ export default function GeneralStats() {
         onYAxisChange={setYAxis}
         yDomain={yAxis === 'gpa' ? [2.4, 4.0] : undefined}
         tooltipSuffix={yAxis === 'gpa' ? '' : '%'}
+        selectedKeys={selectedUCs}
+        onSelectedKeysChange={setSelectedUCs}
       />
 
       <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} mt="lg" mb="lg">
