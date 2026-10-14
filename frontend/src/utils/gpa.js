@@ -26,3 +26,13 @@ export function calculateGPA(courses) {
 }
 
 export { GRADE_POINTS, EXCLUDED_GRADES }
+
+export function gradedUnits(courses) {
+  let total = 0
+  for (const course of courses) {
+    const grade = (course.grade || '').trim().toUpperCase()
+    if (EXCLUDED_GRADES.has(grade) || !(grade in GRADE_POINTS)) continue
+    total += Math.max(0, parseFloat(course.units) || 0)
+  }
+  return total
+}

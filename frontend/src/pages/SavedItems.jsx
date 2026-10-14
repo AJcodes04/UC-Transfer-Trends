@@ -1,20 +1,29 @@
 import { useState, useMemo, useEffect } from 'react'
 import {
   Title, Text, SimpleGrid, Paper, Group, Badge, ActionIcon,
-  Stack, Loader, Table, Divider,
+  Stack, Loader, Table, Divider, NumberInput,
 } from '@mantine/core'
 import { IconX } from '@tabler/icons-react'
 import axios from 'axios'
-import { useSavedCombos, useGPA } from '../hooks/useUserData'
+import { useSavedCombos, useGPA, useCourses } from '../hooks/useUserData'
+import { gradedUnits } from '../utils/gpa'
+import { transferableUnits } from '../utils/grades'
+import { gpaPercentile, admitTier, gpaNeeded, ordinal } from '../utils/admitEstimate'
 
 const API_BASE = import.meta.env.VITE_API_URL || ''
+const TRANSFER_UNIT_TARGET = 60
 import { UC_COLORS } from '../utils/ucColors'
 import StatsCard from '../components/StatsCard'
 import TrendChart from '../components/TrendChart'
 
 export default function SavedItems() {
   const { savedCombos, unsaveCombo } = useSavedCombos()
+  const { courses } = useCourses()
   const userGPA = useGPA()
+  const unitsDone = useMemo(() => gradedUnits(courses), [courses])
+  const defaultRemaining = Math.max(0, TRANSFER_UNIT_TARGET - transferableUnits(courses))
+  const [remainingUnits, setRemainingUnits] = useState(defaultRemaining)
+  useEffect(() => { setRemainingUnits(defaultRemaining) }, [defaultRemaining])
 
   const uniqueMajors = useMemo(
     () => [...new Set(savedCombos.map((c) => c.major))],
@@ -66,10 +75,19 @@ export default function SavedItems() {
       const avgRate = rates.length > 0
         ? (rates.reduce((s, r) => s + r.avg_admit_rate, 0) / rates.length).toFixed(1)
         : null
+      const latestRate = recentRows.find((r) => r.avg_admit_rate != null)?.avg_admit_rate ?? null
 
-      return { ...combo, hasData: true, gpaMin, gpaMax, gpaYear: maxYear, totalApps, totalAdmits, avgRate }
+      const percentile = gpaPercentile(userGPA, gpaMin, gpaMax)
+      const tier = admitTier(percentile, latestRate ?? (avgRate != null ? parseFloat(avgRate) : null))
+      const needMin = gpaNeeded(userGPA, unitsDone, remainingUnits, gpaMin)
+      const needMax = gpaNeeded(userGPA, unitsDone, remainingUnits, gpaMax)
+
+      return {
+        ...combo, hasData: true, gpaMin, gpaMax, gpaYear: maxYear, totalApps, totalAdmits, avgRate,
+        percentile, tier, needMin, needMax,
+      }
     })
-  }, [savedCombos, statsByMajor])
+  }, [savedCombos, statsByMajor, userGPA, unitsDone, remainingUnits])
 
   const { chartData, chartSeries } = useMemo(() => {
     if (savedCombos.length === 0) return { chartData: [], chartSeries: [] }
@@ -103,14 +121,15 @@ export default function SavedItems() {
     return map
   }, [chartSeries])
 
-  function gpaStatus(gpaMin, gpaMax) {
-    if (userGPA == null || gpaMin == null) return null
-    if (userGPA >= gpaMax) return 'above'
-    if (userGPA >= gpaMin) return 'within'
-    return 'below'
+  const tierColor = { reach: 'red', match: 'yellow', likely: 'green' }
+  const tierLabel = { reach: 'Reach', match: 'Match', likely: 'Likely' }
+
+  function neededText(need) {
+    if (need == null) return '—'
+    if (need > 4.0) return 'Out of reach'
+    if (need <= 0) return 'Already there'
+    return need.toFixed(2)
   }
-  const statusColor = { above: 'green', within: 'yellow', below: 'red' }
-  const statusLabel = { above: 'Above', within: 'Within', below: 'Below' }
 
   if (savedCombos.length === 0) {
     return (
@@ -135,7 +154,6 @@ export default function SavedItems() {
 
       <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} mb="lg">
         {comboData.map((combo) => {
-          const status = gpaStatus(combo.gpaMin, combo.gpaMax)
           const color = UC_COLORS[combo.school] || '#666'
           return (
             <Paper key={combo.id} withBorder p="md" radius="md" style={{ borderLeft: `4px solid ${color}` }}>
@@ -161,17 +179,23 @@ export default function SavedItems() {
                   ) : (
                     <Text size="xs" c="dimmed">GPA data unavailable</Text>
                   )}
-                  {userGPA != null && status && (
+                  {userGPA != null && combo.tier && (
                     <Group gap={6}>
                       <Text size="xs">Your GPA: {userGPA.toFixed(2)}</Text>
-                      <Badge size="xs" variant="light" color={statusColor[status]}>
-                        {statusLabel[status]}
+                      <Badge size="xs" variant="light" color={tierColor[combo.tier]}>
+                        {tierLabel[combo.tier]}
                       </Badge>
+                      <Text size="xs" c="dimmed">~{ordinal(combo.percentile)} percentile of admits (est.)</Text>
                     </Group>
                   )}
                   <Text size="xs" c="dimmed">
                     Avg Admit Rate: {combo.avgRate != null ? `${combo.avgRate}%` : 'N/A'}
                   </Text>
+                  {combo.gpaMin != null && remainingUnits > 0 && (
+                    <Text size="xs" c="dimmed">
+                      GPA needed in next {remainingUnits} units: {neededText(combo.needMin)} for 25th · {neededText(combo.needMax)} for 75th
+                    </Text>
+                  )}
                 </Stack>
               )}
             </Paper>
@@ -189,8 +213,23 @@ export default function SavedItems() {
                   <Text size="lg" fw={700}>{userGPA.toFixed(2)}</Text>
                 </div>
                 <Divider orientation="vertical" />
+                <div>
+                  <Text size="xs" c="dimmed" tt="uppercase" fw={700}>Graded units</Text>
+                  <Text size="lg" fw={700}>{unitsDone}</Text>
+                </div>
+                <Divider orientation="vertical" />
+                <NumberInput
+                  label="Units remaining"
+                  value={remainingUnits}
+                  onChange={(v) => setRemainingUnits(Number(v) || 0)}
+                  min={0}
+                  max={120}
+                  step={1}
+                  w={140}
+                  size="xs"
+                />
                 <Text size="sm" c="dimmed">
-                  GPA ranges below are per-school, per-major from the most recent year of data.
+                  Percentile and tier are estimates from the 25th–75th admit GPA band, assuming a normal spread.
                 </Text>
               </Group>
             </Paper>
@@ -219,12 +258,13 @@ export default function SavedItems() {
                     <Table.Th>Admits</Table.Th>
                     <Table.Th>Avg Admit Rate</Table.Th>
                     <Table.Th>GPA Range 25th-75th Percentile (Latest)</Table.Th>
-                    {userGPA != null && <Table.Th>Your GPA</Table.Th>}
+                    {userGPA != null && <Table.Th>Est. Percentile</Table.Th>}
+                    {userGPA != null && <Table.Th>Tier</Table.Th>}
+                    {userGPA != null && remainingUnits > 0 && <Table.Th>GPA Needed (25th / 75th)</Table.Th>}
                   </Table.Tr>
                 </Table.Thead>
                 <Table.Tbody>
                   {comboData.filter((c) => c.hasData).map((combo) => {
-                    const status = gpaStatus(combo.gpaMin, combo.gpaMax)
                     return (
                       <Table.Tr key={combo.id}>
                         <Table.Td fw={500}>{combo.major}</Table.Td>
@@ -238,12 +278,20 @@ export default function SavedItems() {
                             : 'N/A'}
                         </Table.Td>
                         {userGPA != null && (
+                          <Table.Td>{combo.percentile != null ? ordinal(combo.percentile) : '-'}</Table.Td>
+                        )}
+                        {userGPA != null && (
                           <Table.Td>
-                            {status ? (
-                              <Badge size="sm" variant="light" color={statusColor[status]}>
-                                {statusLabel[status]}
+                            {combo.tier ? (
+                              <Badge size="sm" variant="light" color={tierColor[combo.tier]}>
+                                {tierLabel[combo.tier]}
                               </Badge>
                             ) : '-'}
+                          </Table.Td>
+                        )}
+                        {userGPA != null && remainingUnits > 0 && (
+                          <Table.Td>
+                            {combo.gpaMin != null ? `${neededText(combo.needMin)} / ${neededText(combo.needMax)}` : '-'}
                           </Table.Td>
                         )}
                       </Table.Tr>
